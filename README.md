@@ -1,0 +1,1070 @@
+# ElsheiekhHMS
+
+Enterprise Hospital Management System built with **.NET 10, ASP.NET Core, Blazor, Entity Framework Core, SQL Server, and ASP.NET Core Identity**.
+
+> **Current development stage:** Phase 02 — Core Foundation  
+> **Phase 01:** ✅ Complete  
+> **Phase 02 Setup:** ✅ Complete and verified  
+> **Next action:** Final Phase 02 review/checkpoint, then Phase 03 — Domain Entities
+
+---
+
+# 1. Project Purpose
+
+ElsheiekhHMS is being developed as a professional, modular Hospital Management System rather than a collection of Blazor CRUD pages.
+
+The backend architecture is being established before substantial UI development.
+
+The intended application flow is:
+
+```text
+Blazor
+   ↓
+Application Layer
+   ↓
+Validation / Authorization
+   ↓
+Business Rules
+   ↓
+Core Domain
+   ↓
+Infrastructure
+   ↓
+Entity Framework Core
+   ↓
+SQL Server
+```
+
+Business logic must not be placed directly inside Blazor components.
+
+---
+
+# 2. Technology Stack
+
+Planned technology stack:
+
+```text
+Language                 C#
+Framework                .NET 10
+Frontend                 Blazor
+Backend                  ASP.NET Core
+ORM                      Entity Framework Core
+Database                 SQL Server
+Authentication           ASP.NET Core Identity
+Dependency Injection     Microsoft.Extensions.DependencyInjection
+Logging                  ILogger<T>
+Testing                  xUnit
+Version Control          Git / GitHub
+```
+
+Some technologies listed above intentionally have **not been installed yet** because development is being completed phase by phase.
+
+For example, EF Core, SQL Server integration, and Identity belong to later phases.
+
+---
+
+# 3. Solution Architecture
+
+The solution currently contains exactly five projects:
+
+```text
+ElsheiekhHMS/
+│
+├── ElsheiekhHMS.Core/
+│
+├── ElsheiekhHMS.Application/
+│
+├── ElsheiekhHMS.Infrastructure/
+│
+├── ElsheiekhHMS.Web/
+│
+└── ElsheiekhHMS.Tests/
+```
+
+All projects target:
+
+```text
+net10.0
+```
+
+---
+
+# 4. Dependency Direction
+
+The required dependency architecture is:
+
+```text
+ElsheiekhHMS.Web
+        │
+        ├──────────────► ElsheiekhHMS.Infrastructure
+        │                         │
+        ▼                         │
+ElsheiekhHMS.Application ◄────────┘
+        │
+        ▼
+ElsheiekhHMS.Core
+```
+
+Actual project rules:
+
+```text
+Core
+└── No project dependencies
+
+Application
+└── Core
+
+Infrastructure
+├── Application
+└── Core
+
+Web
+├── Application
+└── Infrastructure
+
+Tests
+├── Core
+├── Application
+└── Infrastructure
+```
+
+## Critical Architecture Rule
+
+`ElsheiekhHMS.Core` must never depend on:
+
+```text
+Application
+Infrastructure
+Web
+Blazor
+ASP.NET Core
+Entity Framework Core
+SQL Server
+ASP.NET Core Identity
+```
+
+Core represents the domain foundation and must remain independent of persistence and presentation technologies.
+
+---
+
+# 5. Project Responsibilities
+
+## ElsheiekhHMS.Core
+
+Contains the fundamental domain model and domain rules.
+
+Eventually includes:
+
+```text
+Entities
+Enums
+Domain exceptions
+Domain abstractions
+Domain constants
+Common base types
+Business rules
+```
+
+Core does **not** contain:
+
+```text
+DbContext
+EF Core configuration
+SQL queries
+Blazor components
+HTTP logic
+Identity implementation
+Infrastructure services
+```
+
+---
+
+## ElsheiekhHMS.Application
+
+Coordinates application use cases.
+
+Eventually contains:
+
+```text
+DTOs
+Application services
+Service interfaces
+Validation
+Mappings
+Query models
+Pagination models
+Application workflows
+```
+
+Application depends on Core but does not depend on Web.
+
+---
+
+## ElsheiekhHMS.Infrastructure
+
+Implements technical concerns.
+
+Eventually contains:
+
+```text
+EF Core
+SQL Server
+ApplicationDbContext
+Entity configurations
+Repositories where justified
+Identity
+File storage
+Notifications
+Background processing
+Persistence
+Database migrations
+Seed/bootstrap logic
+```
+
+---
+
+## ElsheiekhHMS.Web
+
+The Blazor presentation layer and application composition root.
+
+Eventually contains:
+
+```text
+Blazor components
+Pages
+Layouts
+Navigation
+Forms
+Tables
+Dashboards
+Presentation services
+Static assets
+```
+
+Web should call the Application layer rather than contain HMS business rules.
+
+---
+
+## ElsheiekhHMS.Tests
+
+Contains automated tests.
+
+Planned areas:
+
+```text
+Unit/
+Integration/
+Helpers/
+```
+
+Testing will expand as each development phase introduces real behavior.
+
+---
+
+# 6. Development Roadmap
+
+The project follows a strict phased development process.
+
+```text
+PHASE 01
+Solution & Architecture
+        │
+        ▼
+PHASE 02
+Core Foundation
+        │
+        ▼
+PHASE 03
+Domain Entities
+        │
+        ▼
+PHASE 04
+EF Core & Database
+        │
+        ▼
+PHASE 05
+Identity & Security
+        │
+        ▼
+PHASE 06
+DTOs & Validation
+        │
+        ▼
+PHASE 07
+Application Services
+        │
+        ▼
+PHASE 08
+Business Workflows
+        │
+        ▼
+PHASE 09
+Enterprise Infrastructure
+        │
+        ▼
+PHASE 10
+Testing & Hardening
+        │
+        ▼
+PHASE 11
+Backend Review
+        │
+        ▼
+PHASE 12
+Blazor UI
+```
+
+Do not skip phases without reviewing the architectural impact.
+
+---
+
+# 7. Phase Status
+
+| Phase | Description | Status |
+|---|---|---|
+| 01 | Solution & Architecture | ✅ Complete |
+| 02 | Core Foundation | 🟡 Setup complete / final review pending |
+| 03 | Domain Entities | ⏳ Not started |
+| 04 | EF Core & Database | ⏳ Not started |
+| 05 | Identity & Security | ⏳ Not started |
+| 06 | DTOs & Validation | ⏳ Not started |
+| 07 | Application Services | ⏳ Not started |
+| 08 | Business Workflows | ⏳ Not started |
+| 09 | Enterprise Infrastructure | ⏳ Not started |
+| 10 | Testing & Hardening | ⏳ Not started |
+| 11 | Backend Review | ⏳ Not started |
+| 12 | Blazor UI | ⏳ Not started |
+
+---
+
+# 8. Phase 01 — Solution & Architecture
+
+**Status: ✅ COMPLETE**
+
+Phase 01 established the architectural foundation.
+
+Completed:
+
+```text
+[✓] .NET 10 solution
+[✓] Five-project architecture
+[✓] Core project
+[✓] Application project
+[✓] Infrastructure project
+[✓] Web project
+[✓] Tests project
+
+[✓] Correct project references
+[✓] Core independence
+[✓] No circular dependencies
+
+[✓] Application DI boundary
+[✓] Infrastructure DI boundary
+[✓] Web composition root
+
+[✓] Initial folder architecture
+[✓] Health-check foundation
+[✓] .gitignore
+[✓] Git repository hygiene
+
+[✓] dotnet restore
+[✓] dotnet build
+[✓] Web startup
+[✓] Blazor HTTP response
+[✓] /health endpoint
+```
+
+Final independent Phase 01 audit passed all architectural checks.
+
+---
+
+# 9. Phase 02 — Core Foundation
+
+**Status: 🟡 SETUP COMPLETE AND PASSING**
+
+Phase 02 establishes reusable Core foundations before HMS entities are introduced.
+
+The setup was performed using:
+
+```text
+phase02-setup.ps1
+```
+
+The setup completed successfully.
+
+Build and verification checks passed.
+
+---
+
+## Current Core Foundation
+
+```text
+ElsheiekhHMS.Core/
+│
+├── Common/
+│   ├── BaseEntity.cs
+│   ├── AuditableEntity.cs
+│   └── SoftDeletableEntity.cs
+│
+├── Exceptions/
+│   ├── DomainException.cs
+│   ├── BusinessRuleException.cs
+│   └── DomainValidationException.cs
+│
+├── Interfaces/
+│   └── IHasConcurrencyToken.cs
+│
+├── Constants/
+├── Entities/
+└── Enums/
+```
+
+---
+
+# 10. Base Entity Hierarchy
+
+Current inheritance:
+
+```text
+BaseEntity
+     │
+     ▼
+AuditableEntity
+     │
+     ▼
+SoftDeletableEntity
+```
+
+## BaseEntity
+
+Provides the fundamental entity identifier.
+
+Conceptually:
+
+```csharp
+public abstract class BaseEntity
+{
+    public int Id { get; protected set; }
+}
+```
+
+It intentionally contains no EF Core attributes.
+
+---
+
+## AuditableEntity
+
+Adds audit information such as:
+
+```text
+CreatedAt
+CreatedBy
+UpdatedAt
+UpdatedBy
+```
+
+Timestamps use `DateTimeOffset`.
+
+The Core layer does not determine the current user and does not depend on ASP.NET Core Identity.
+
+Audit values will later be populated by the appropriate application/infrastructure mechanism.
+
+---
+
+## SoftDeletableEntity
+
+Adds:
+
+```text
+IsDeleted
+DeletedAt
+DeletedBy
+```
+
+This provides a foundation for entities that should be archived rather than physically deleted.
+
+Not every entity must automatically inherit this class.
+
+EF Core global query filters have intentionally **not** been implemented yet.
+
+They belong to the database/persistence phase.
+
+---
+
+# 11. Concurrency Foundation
+
+Phase 02 currently contains:
+
+```text
+IHasConcurrencyToken
+```
+
+with a concurrency token concept based on:
+
+```text
+RowVersion
+```
+
+Concurrency is intentionally **opt-in**.
+
+Do not make every entity implement this interface.
+
+During Phase 03, determine which aggregates genuinely require optimistic concurrency.
+
+Likely candidates may eventually include records where simultaneous edits could cause significant conflicts.
+
+The actual EF Core/SQL Server concurrency configuration belongs to Phase 04.
+
+Core must not use EF-specific attributes such as:
+
+```text
+[Timestamp]
+```
+
+---
+
+# 12. Domain Exception Foundation
+
+Current hierarchy:
+
+```text
+System.Exception
+       │
+       ▼
+DomainException
+       │
+       ├── BusinessRuleException
+       │
+       └── DomainValidationException
+```
+
+These exceptions remain domain-oriented.
+
+Core must not introduce HTTP concepts such as:
+
+```text
+HTTP status codes
+ProblemDetails
+BadRequest
+NotFoundResult
+IActionResult
+```
+
+HTTP/application exception handling belongs outside Core.
+
+---
+
+# 13. Phase 02 Tests
+
+Phase 02 introduced actual Core foundation tests.
+
+Current test areas include:
+
+```text
+ElsheiekhHMS.Tests/
+└── Unit/
+    └── Domain/
+        ├── Common/
+        │   ├── BaseEntityTests.cs
+        │   ├── AuditableEntityTests.cs
+        │   └── SoftDeletableEntityTests.cs
+        │
+        └── Exceptions/
+            └── DomainExceptionTests.cs
+```
+
+The Phase 02 setup verified that tests are actually discovered and executed.
+
+---
+
+# 14. Things Intentionally NOT Implemented Yet
+
+The following are intentionally postponed.
+
+## Phase 03+
+
+No HMS domain entities yet:
+
+```text
+Patient
+Employee
+Doctor
+Nurse
+Department
+Specialty
+Appointment
+Encounter
+Diagnosis
+Admission
+Ward
+Room
+Bed
+Medication
+Prescription
+LabOrder
+Invoice
+Payment
+Insurance
+```
+
+## Phase 04+
+
+No persistence implementation yet:
+
+```text
+ApplicationDbContext
+EF Core
+SQL Server provider
+Entity configurations
+Migrations
+Database seed
+Global query filters
+SQL Server rowversion configuration
+```
+
+## Phase 05+
+
+No authentication/authorization implementation yet:
+
+```text
+ApplicationUser
+ASP.NET Core Identity
+Roles
+Permissions
+Authorization policies
+```
+
+This is intentional.
+
+Do not treat these as missing Phase 02 work.
+
+---
+
+# 15. Architecture Rules Going Forward
+
+Every future phase must preserve these rules.
+
+### Rule 1 — Core remains independent
+
+Never introduce Infrastructure, Web, EF Core, Blazor, or ASP.NET dependencies into Core.
+
+### Rule 2 — UI is not the business layer
+
+Avoid:
+
+```text
+Blazor Component
+      ↓
+Business Logic
+      ↓
+DbContext
+```
+
+Target:
+
+```text
+Blazor Component
+      ↓
+Application Service
+      ↓
+Domain / Business Rules
+      ↓
+Infrastructure
+```
+
+### Rule 3 — Do not expose EF entities directly to UI
+
+Application DTOs will be introduced later.
+
+### Rule 4 — Backend rules are authoritative
+
+UI validation can improve user experience, but important business rules must be enforced by the backend.
+
+### Rule 5 — Avoid speculative abstractions
+
+Do not create interfaces, repositories, services, base classes, or patterns merely because they sound "enterprise."
+
+Create them when they solve an actual architectural problem.
+
+### Rule 6 — Avoid giant entities and services
+
+Keep modules cohesive and responsibilities clear.
+
+### Rule 7 — Important hospital history should not disappear
+
+Clinical, financial, admission, audit, and other important historical records will require carefully designed archival/deletion rules.
+
+### Rule 8 — Use async database operations
+
+Once persistence is introduced, database operations should use asynchronous APIs and cancellation tokens where appropriate.
+
+### Rule 9 — Security is backend-enforced
+
+Hiding a button in Blazor is not authorization.
+
+The backend must independently enforce permissions.
+
+### Rule 10 — Every phase must pass verification
+
+Do not continue simply because code compiles.
+
+Review architecture, tests, dependencies, and phase boundaries before proceeding.
+
+---
+
+# 16. HMS Modules Planned
+
+The backend is eventually expected to support:
+
+```text
+Patient Management
+
+Staff Management
+
+Departments & Specialties
+
+Appointment Management
+
+Clinical / Encounter Management
+
+Diagnosis Management
+
+Admission Management
+
+Ward / Room / Bed Management
+
+Laboratory Management
+
+Medication Management
+
+Pharmacy Management
+
+Prescription Management
+
+Billing
+
+Payments
+
+Insurance
+
+Documents
+
+Notifications
+
+Users
+
+Roles
+
+Permissions
+
+Audit Logs
+
+System Settings
+
+Reporting
+
+Dashboard Data
+```
+
+These should evolve as modules rather than becoming one giant CRUD system.
+
+---
+
+# 17. Current Development Position
+
+When opening this repository after a break, read this section first.
+
+```text
+LAST COMPLETED PHASE:
+Phase 01 — Solution & Architecture
+
+CURRENT PHASE:
+Phase 02 — Core Foundation
+
+CURRENT STATUS:
+Phase 02 setup executed successfully.
+Core foundation files created.
+Build passed.
+Tests passed.
+Architecture guards passed.
+
+NEXT ACTION:
+Perform/finalize the Phase 02 architecture audit.
+
+IF PHASE 02 AUDIT PASSES:
+Create the Phase 02 Git checkpoint.
+
+THEN:
+Begin Phase 03 — Domain Entities.
+```
+
+---
+
+# 18. How to Resume Development
+
+When returning to the project, first open a terminal at the repository root.
+
+Expected location:
+
+```powershell
+C:\Projects\ElsheiekhHMS
+```
+
+Check Git:
+
+```powershell
+git status
+git log --oneline -5
+```
+
+Check the solution:
+
+```powershell
+dotnet sln list
+```
+
+Verify build:
+
+```powershell
+dotnet restore
+dotnet build --no-restore
+```
+
+Run tests:
+
+```powershell
+dotnet test --no-build
+```
+
+If everything passes, read:
+
+```text
+Section 17 — Current Development Position
+```
+
+and continue from the listed **NEXT ACTION**.
+
+---
+
+# 19. Standard Resume Checklist
+
+Before continuing development after a long break:
+
+```text
+[ ] Read README.md
+
+[ ] Check Current Development Position
+
+[ ] Run git status
+
+[ ] Review latest Git commits
+
+[ ] Confirm correct branch
+
+[ ] Run dotnet sln list
+
+[ ] Run dotnet restore
+
+[ ] Run dotnet build --no-restore
+
+[ ] Run dotnet test --no-build
+
+[ ] Verify current phase
+
+[ ] Review architecture rules
+
+[ ] Continue only from NEXT ACTION
+```
+
+If the build or tests fail, resolve the existing problem before starting the next phase.
+
+---
+
+# 20. Git Checkpoint Strategy
+
+Each completed phase should have a clear Git checkpoint.
+
+Suggested commit style:
+
+```text
+chore: complete Phase 01 solution architecture
+
+feat: complete Phase 02 core foundation
+
+feat: complete Phase 03 domain model
+
+feat: complete Phase 04 persistence foundation
+
+feat: complete Phase 05 identity and authorization
+```
+
+Before committing:
+
+```powershell
+git status
+git diff
+git diff --cached
+```
+
+Then:
+
+```powershell
+git add .
+git diff --cached
+git commit -m "..."
+```
+
+Never commit secrets.
+
+Never blindly commit:
+
+```text
+bin/
+obj/
+.vs/
+TestResults/
+```
+
+---
+
+# 21. Phase Completion Process
+
+Every phase follows approximately:
+
+```text
+PLAN
+  ↓
+SETUP
+  ↓
+IMPLEMENT
+  ↓
+BUILD
+  ↓
+TEST
+  ↓
+ARCHITECTURE AUDIT
+  ↓
+FIX FINDINGS
+  ↓
+FINAL VERIFICATION
+  ↓
+GIT CHECKPOINT
+  ↓
+UPDATE README
+  ↓
+NEXT PHASE
+```
+
+A setup script succeeding does not automatically mean the phase is complete.
+
+---
+
+# 22. Phase 03 Preview
+
+Phase 03 will introduce the actual HMS domain model.
+
+Expected major areas include:
+
+```text
+Patient
+Staff
+Departments
+Appointments
+Clinical Encounters
+Admissions
+Laboratory
+Pharmacy
+Billing
+Payments
+Insurance
+Documents
+```
+
+However, Phase 03 should **not generate every entity blindly in one operation**.
+
+Domain modeling should proceed in logical groups with relationships and ownership carefully reviewed.
+
+Before implementation, determine:
+
+```text
+Aggregate boundaries
+Entity responsibilities
+Inheritance
+Relationships
+Required vs optional data
+Lifecycle
+Status enums
+Business invariants
+Deletion/archive behavior
+Concurrency requirements
+Navigation relationships
+```
+
+EF Core configuration still belongs primarily to Phase 04.
+
+---
+
+# 23. Definition of Backend Ready
+
+Substantial Blazor UI work should not begin until the backend foundation includes:
+
+```text
+Architecture
+Core domain
+Domain entities
+Database
+Identity
+Authorization
+DTOs
+Validation
+Application services
+Business workflows
+Transactions
+Auditing
+Concurrency
+Pagination
+Search/filtering
+Exception handling
+Logging
+Configuration
+File architecture
+Notifications
+Reporting
+Security
+Tests
+```
+
+The goal is for future Blazor components to remain relatively simple:
+
+```csharp
+var result = await PatientService.CreateAsync(model);
+```
+
+rather than implementing the HMS inside Razor components.
+
+---
+
+# 24. Development Principle
+
+> **The frontend should interact with the application.  
+> The frontend should not become the application.**
+
+ElsheiekhHMS is being developed backend-first so that Blazor becomes a clean presentation layer over a tested, secure, maintainable HMS architecture.
+
+---
+
+# 25. README Maintenance Rule
+
+This README is part of the development workflow.
+
+At the end of every phase:
+
+1. Update the phase status table.
+2. Update **Current Development Position**.
+3. Record important architectural decisions.
+4. Record intentionally postponed work.
+5. Update the **NEXT ACTION**.
+6. Verify commands still match the repository.
+7. Commit the README with the phase checkpoint.
+
+This ensures development can resume even after a long interruption.
