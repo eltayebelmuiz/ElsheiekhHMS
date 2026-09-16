@@ -1,0 +1,92 @@
+# ==============================================================================
+# GIT COMMAND REFERENCE SHEET
+# ==============================================================================
+
+# 1. INITIAL SETUP & REPOSITORY CREATION
+# ------------------------------------------------------------------------------
+git init -b main
+# Purpose: Initializes a new local Git repository with the default branch named 'main'.
+
+git remote add origin https://github.com/eltayebelmuiz/jua-website.git
+# Purpose: Links your local repository to a remote GitHub repository named 'origin'.
+
+git remote -v
+# Purpose: Displays all configured remote repository URLs (both fetch and push).
+
+
+# 2. CHECKING STATUS & LOGS
+# ------------------------------------------------------------------------------
+git status
+# Purpose: Displays the state of the working directory and staging area (untracked/modified files).
+
+git log --oneline
+# Purpose: Shows a concise summary of your commit history (hash and commit message).
+
+git log origin/main..HEAD
+# Purpose: Lists local commits that have NOT yet been pushed to the remote repository.
+
+git log origin/main -n 1
+# Purpose: Shows the single most recent commit that exists on the remote branch.
+
+
+# 3. BRANCH MANAGEMENT
+# ------------------------------------------------------------------------------
+git branch
+# Purpose: Lists all local branches in the repository (an asterisk * highlights the active branch).
+
+git branch -a
+# Purpose: Lists all branches, including remote tracking branches (e.g., origin/main).
+
+git branch -M main
+# Purpose: Renames the current local branch to 'main'.
+
+
+# 4. FETCHING & PULLING REMOTE CHANGES (e.g., README created on GitHub)
+# ------------------------------------------------------------------------------
+git pull origin main
+# Purpose: Downloads and automatically merges updates from GitHub (like a web-created README) into your local branch.
+
+git fetch origin
+# Purpose: Downloads remote changes without merging them into your working files immediately.
+
+
+# 5. SAVING & COMMITTING CHANGES
+# ------------------------------------------------------------------------------
+git add .
+# Purpose: Stages all modified, new, and deleted files in the current directory for commit.
+
+git add <file-name>
+# Purpose: Stages a single specific file for commit (e.g., git add index.html).
+
+git commit -m "Your commit message here"
+# Purpose: Saves the staged snapshot to the local repository history with a description.
+
+
+# 6. PUSHING TO GITHUB
+# ------------------------------------------------------------------------------
+git push
+# Purpose: Pushes local commits to the configured remote branch (short form when upstream tracking is set).
+
+git push -u origin main
+# Purpose: Pushes local 'main' branch commits to GitHub and sets 'origin/main' as default upstream tracking.
+
+git push origin master
+# Purpose: Pushes local commits specifically to a remote branch named 'master'.
+
+git push -u origin main --force
+# Purpose: Overwrites the remote repository with local history (use with caution during total resets).
+
+git push origin --delete master
+# Purpose: Deletes the 'master' branch on the remote GitHub repository.
+
+
+# 7. RESETTING & CLEANING
+# ------------------------------------------------------------------------------
+git reset --hard origin/main
+# Purpose: Resets local branch and files to match the remote branch state exactly (discards local changes).
+
+git clean -fd
+# Purpose: Forces the removal of untracked files (-f) and directories (-d) from the working directory.
+
+Remove-Item -Recurse -Force .git
+# Purpose (PowerShell): Deletes the hidden .git folder to completely remove Git tracking from a project.
