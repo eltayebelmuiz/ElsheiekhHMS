@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="ElsheiekhHMS.Application/ElsheiekhHMS.Application.csproj" />
+  <Project Path="ElsheiekhHMS.Core/ElsheiekhHMS.Core.csproj" />
+  <Project Path="ElsheiekhHMS.Infrastructure/ElsheiekhHMS.Infrastructure.csproj" />
+  <Project Path="ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj" />
+  <Project Path="ElsheiekhHMS.Web/ElsheiekhHMS.Web.csproj" />
+</Solution>
