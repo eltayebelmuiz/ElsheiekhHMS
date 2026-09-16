@@ -6,6 +6,12 @@
 # dotenv files
 .env
 
+# Local secrets and production configuration
+appsettings.Production.json
+appsettings.Secrets.json
+secrets.json
+*.p12
+
 # User-specific files
 *.rsuser
 *.suo

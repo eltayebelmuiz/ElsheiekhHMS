@@ -1,10 +1,19 @@
+using ElsheiekhHMS.Application;
+using ElsheiekhHMS.Infrastructure;
 using ElsheiekhHMS.Web.Components;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+// Application layers.
+builder.Services.AddApplication();
+builder.Services.AddInfrastructure(builder.Configuration);
+
+// Blazor.
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
+
+// Basic application health check.
+builder.Services.AddHealthChecks();
 
 var app = builder.Build();
 
@@ -21,6 +30,8 @@ app.UseHttpsRedirection();
 app.UseAntiforgery();
 
 app.MapStaticAssets();
+app.MapHealthChecks("/health");
+
 app.MapRazorComponents<App>()
     .AddInteractiveServerRenderMode();
 
