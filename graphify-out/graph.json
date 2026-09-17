@@ -1,0 +1,4382 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "id": "elsheiekhhms_application_applicationserviceextensions_elsheiekhhms_application_applicationserviceextensions",
+      "label": "ApplicationServiceExtensions",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 0,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "ElsheiekhHMS.Application",
+        "scope_chain": [
+          "s49"
+        ]
+      },
+      "norm_label": "applicationserviceextensions",
+      "source_file": "ElsheiekhHMS.Application/ApplicationServiceExtensions.cs",
+      "source_location": "L13"
+    },
+    {
+      "id": "elsheiekhhms_infrastructure_infrastructureserviceextensions_elsheiekhhms_infrastructure_infrastructureserviceextensions",
+      "label": "InfrastructureServiceExtensions",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 0,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "ElsheiekhHMS.Infrastructure",
+        "scope_chain": [
+          "s91"
+        ]
+      },
+      "norm_label": "infrastructureserviceextensions",
+      "source_file": "ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs",
+      "source_location": "L14"
+    },
+    {
+      "id": "elsheiekhhms_core_interfaces_ihasconcurrencytoken_elsheiekhhms_core_interfaces_ihasconcurrencytoken",
+      "label": "IHasConcurrencyToken",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 11,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "ElsheiekhHMS.Core.Interfaces",
+        "scope_chain": [
+          "s0"
+        ]
+      },
+      "norm_label": "ihasconcurrencytoken",
+      "source_file": "ElsheiekhHMS.Core/Interfaces/IHasConcurrencyToken.cs",
+      "source_location": "L7"
+    },
+    {
+      "id": "elsheiekhhms_core_exceptions_businessruleexception_elsheiekhhms_core_exceptions_businessruleexception",
+      "label": "BusinessRuleException",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 3,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "ElsheiekhHMS.Core.Exceptions",
+        "scope_chain": [
+          "s0"
+        ]
+      },
+      "norm_label": "businessruleexception",
+      "source_file": "ElsheiekhHMS.Core/Exceptions/BusinessRuleException.cs",
+      "source_location": "L4"
+    },
+    {
+      "id": "elsheiekhhms_core_exceptions_domainexception_elsheiekhhms_core_exceptions_domainexception",
+      "label": "DomainException",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 3,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "ElsheiekhHMS.Core.Exceptions",
+        "scope_chain": [
+          "s0"
+        ]
+      },
+      "norm_label": "domainexception",
+      "source_file": "ElsheiekhHMS.Core/Exceptions/DomainException.cs",
+      "source_location": "L3"
+    },
+    {
+      "id": "elsheiekhhms_core_exceptions_domainvalidationexception_elsheiekhhms_core_exceptions_domainvalidationexception",
+      "label": "DomainValidationException",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 3,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "ElsheiekhHMS.Core.Exceptions",
+        "scope_chain": [
+          "s0"
+        ]
+      },
+      "norm_label": "domainvalidationexception",
+      "source_file": "ElsheiekhHMS.Core/Exceptions/DomainValidationException.cs",
+      "source_location": "L4"
+    },
+    {
+      "id": "elsheiekhhms_tests_unit_domain_exceptions_domainexceptiontests_elsheiekhhms_tests_unit_domain_exceptions_domainexceptiontests",
+      "label": "DomainExceptionTests",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 3,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "ElsheiekhHMS.Tests.Unit.Domain.Exceptions",
+        "scope_chain": [
+          "s50"
+        ]
+      },
+      "norm_label": "domainexceptiontests",
+      "source_file": "ElsheiekhHMS.Tests/Unit/Domain/Exceptions/DomainExceptionTests.cs",
+      "source_location": "L6"
+    },
+    {
+      "id": "elsheiekhhms_core_common_baseentity_elsheiekhhms_core_common_baseentity",
+      "label": "BaseEntity",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 4,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "ElsheiekhHMS.Core.Common",
+        "scope_chain": [
+          "s0"
+        ]
+      },
+      "norm_label": "baseentity",
+      "source_file": "ElsheiekhHMS.Core/Common/BaseEntity.cs",
+      "source_location": "L3"
+    },
+    {
+      "id": "elsheiekhhms_tests_unit_domain_common_baseentitytests_elsheiekhhms_tests_unit_domain_common_baseentitytests",
+      "label": "BaseEntityTests",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 4,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "ElsheiekhHMS.Tests.Unit.Domain.Common",
+        "scope_chain": [
+          "s46"
+        ]
+      },
+      "norm_label": "baseentitytests",
+      "source_file": "ElsheiekhHMS.Tests/Unit/Domain/Common/BaseEntityTests.cs",
+      "source_location": "L6"
+    },
+    {
+      "id": "elsheiekhhms_tests_unit_domain_common_baseentitytests_elsheiekhhms_tests_unit_domain_common_testentity",
+      "label": "TestEntity",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 4,
+      "file_type": "code",
+      "metadata": {
+        "is_nested_type": true,
+        "namespace": "ElsheiekhHMS.Tests.Unit.Domain.Common",
+        "scope_chain": [
+          "s46"
+        ]
+      },
+      "norm_label": "testentity",
+      "source_file": "ElsheiekhHMS.Tests/Unit/Domain/Common/BaseEntityTests.cs",
+      "source_location": "L15"
+    },
+    {
+      "id": "elsheiekhhms_core_common_auditableentity_elsheiekhhms_core_common_auditableentity",
+      "label": "AuditableEntity",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 5,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "ElsheiekhHMS.Core.Common",
+        "scope_chain": [
+          "s0"
+        ]
+      },
+      "norm_label": "auditableentity",
+      "source_file": "ElsheiekhHMS.Core/Common/AuditableEntity.cs",
+      "source_location": "L3"
+    },
+    {
+      "id": "elsheiekhhms_tests_unit_domain_common_auditableentitytests_elsheiekhhms_tests_unit_domain_common_auditableentitytests",
+      "label": "AuditableEntityTests",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 5,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "ElsheiekhHMS.Tests.Unit.Domain.Common",
+        "scope_chain": [
+          "s46"
+        ]
+      },
+      "norm_label": "auditableentitytests",
+      "source_file": "ElsheiekhHMS.Tests/Unit/Domain/Common/AuditableEntityTests.cs",
+      "source_location": "L6"
+    },
+    {
+      "id": "elsheiekhhms_tests_unit_domain_common_auditableentitytests_elsheiekhhms_tests_unit_domain_common_testentity",
+      "label": "TestEntity",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 5,
+      "file_type": "code",
+      "metadata": {
+        "is_nested_type": true,
+        "namespace": "ElsheiekhHMS.Tests.Unit.Domain.Common",
+        "scope_chain": [
+          "s46"
+        ]
+      },
+      "norm_label": "testentity",
+      "source_file": "ElsheiekhHMS.Tests/Unit/Domain/Common/AuditableEntityTests.cs",
+      "source_location": "L28"
+    },
+    {
+      "id": "elsheiekhhms_core_common_softdeletableentity_elsheiekhhms_core_common_softdeletableentity",
+      "label": "SoftDeletableEntity",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 7,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "ElsheiekhHMS.Core.Common",
+        "scope_chain": [
+          "s0"
+        ]
+      },
+      "norm_label": "softdeletableentity",
+      "source_file": "ElsheiekhHMS.Core/Common/SoftDeletableEntity.cs",
+      "source_location": "L3"
+    },
+    {
+      "id": "elsheiekhhms_tests_unit_domain_common_softdeletableentitytests_elsheiekhhms_tests_unit_domain_common_softdeletableentitytests",
+      "label": "SoftDeletableEntityTests",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 7,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "ElsheiekhHMS.Tests.Unit.Domain.Common",
+        "scope_chain": [
+          "s46"
+        ]
+      },
+      "norm_label": "softdeletableentitytests",
+      "source_file": "ElsheiekhHMS.Tests/Unit/Domain/Common/SoftDeletableEntityTests.cs",
+      "source_location": "L6"
+    },
+    {
+      "id": "elsheiekhhms_tests_unit_domain_common_softdeletableentitytests_elsheiekhhms_tests_unit_domain_common_testentity",
+      "label": "TestEntity",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 7,
+      "file_type": "code",
+      "metadata": {
+        "is_nested_type": true,
+        "namespace": "ElsheiekhHMS.Tests.Unit.Domain.Common",
+        "scope_chain": [
+          "s46"
+        ]
+      },
+      "norm_label": "testentity",
+      "source_file": "ElsheiekhHMS.Tests/Unit/Domain/Common/SoftDeletableEntityTests.cs",
+      "source_location": "L18"
+    },
+    {
+      "id": "elsheiekhhms_application_applicationserviceextensions_elsheiekhhms_application_applicationserviceextensions_addapplication",
+      "label": ".AddApplication()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "ElsheiekhHMS.Application",
+        "scope_chain": [
+          "s49"
+        ]
+      },
+      "norm_label": ".addapplication()",
+      "source_file": "ElsheiekhHMS.Application/ApplicationServiceExtensions.cs",
+      "source_location": "L15"
+    },
+    {
+      "id": "elsheiekhhms_infrastructure_infrastructureserviceextensions_elsheiekhhms_infrastructure_infrastructureserviceextensions_addinfrastructure",
+      "label": ".AddInfrastructure()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 0,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "ElsheiekhHMS.Infrastructure",
+        "scope_chain": [
+          "s91"
+        ]
+      },
+      "norm_label": ".addinfrastructure()",
+      "source_file": "ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs",
+      "source_location": "L16"
+    },
+    {
+      "id": "elsheiekhhms_tests_unit_domain_exceptions_domainexceptiontests_elsheiekhhms_tests_unit_domain_exceptions_domainexceptiontests_exceptions_preserve_message",
+      "label": ".Exceptions_preserve_message()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 3,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "ElsheiekhHMS.Tests.Unit.Domain.Exceptions",
+        "scope_chain": [
+          "s50"
+        ],
+        "unresolved_calls": [
+          {
+            "callee": "Equal",
+            "receiver_type": "Assert",
+            "lang": "csharp",
+            "line": "L21"
+          },
+          {
+            "callee": "Null",
+            "receiver_type": "Assert",
+            "lang": "csharp",
+            "line": "L22"
+          }
+        ]
+      },
+      "norm_label": ".exceptions_preserve_message()",
+      "source_file": "ElsheiekhHMS.Tests/Unit/Domain/Exceptions/DomainExceptionTests.cs",
+      "source_location": "L8"
+    },
+    {
+      "id": "elsheiekhhms_tests_unit_domain_exceptions_domainexceptiontests_elsheiekhhms_tests_unit_domain_exceptions_domainexceptiontests_exceptions_preserve_original_cause",
+      "label": ".Exceptions_preserve_original_cause()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 3,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "ElsheiekhHMS.Tests.Unit.Domain.Exceptions",
+        "scope_chain": [
+          "s50"
+        ],
+        "unresolved_calls": [
+          {
+            "callee": "Equal",
+            "receiver_type": "Assert",
+            "lang": "csharp",
+            "line": "L39"
+          },
+          {
+            "callee": "Same",
+            "receiver_type": "Assert",
+            "lang": "csharp",
+            "line": "L40"
+          }
+        ]
+      },
+      "norm_label": ".exceptions_preserve_original_cause()",
+      "source_file": "ElsheiekhHMS.Tests/Unit/Domain/Exceptions/DomainExceptionTests.cs",
+      "source_location": "L25"
+    },
+    {
+      "id": "elsheiekhhms_tests_unit_domain_common_baseentitytests_elsheiekhhms_tests_unit_domain_common_baseentitytests_derived_entity_can_assign_integer_identity",
+      "label": ".Derived_entity_can_assign_integer_identity()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 4,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "ElsheiekhHMS.Tests.Unit.Domain.Common",
+        "scope_chain": [
+          "s46"
+        ],
+        "unresolved_calls": [
+          {
+            "callee": "Equal",
+            "receiver_type": "Assert",
+            "lang": "csharp",
+            "line": "L12"
+          }
+        ]
+      },
+      "norm_label": ".derived_entity_can_assign_integer_identity()",
+      "source_file": "ElsheiekhHMS.Tests/Unit/Domain/Common/BaseEntityTests.cs",
+      "source_location": "L8"
+    },
+    {
+      "id": "elsheiekhhms_tests_unit_domain_common_auditableentitytests_elsheiekhhms_tests_unit_domain_common_auditableentitytests_creation_metadata_preserves_supplied_utc_time_and_identifier",
+      "label": ".Creation_metadata_preserves_supplied_utc_time_and_identifier()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 5,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "ElsheiekhHMS.Tests.Unit.Domain.Common",
+        "scope_chain": [
+          "s46"
+        ],
+        "unresolved_calls": [
+          {
+            "callee": "Equal",
+            "receiver_type": "Assert",
+            "lang": "csharp",
+            "line": "L22"
+          },
+          {
+            "callee": "Null",
+            "receiver_type": "Assert",
+            "lang": "csharp",
+            "line": "L25"
+          }
+        ]
+      },
+      "norm_label": ".creation_metadata_preserves_supplied_utc_time_and_identifier()",
+      "source_file": "ElsheiekhHMS.Tests/Unit/Domain/Common/AuditableEntityTests.cs",
+      "source_location": "L17"
+    },
+    {
+      "id": "elsheiekhhms_tests_unit_domain_common_auditableentitytests_elsheiekhhms_tests_unit_domain_common_auditableentitytests_new_entity_has_no_update_or_user_metadata",
+      "label": ".New_entity_has_no_update_or_user_metadata()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 5,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "ElsheiekhHMS.Tests.Unit.Domain.Common",
+        "scope_chain": [
+          "s46"
+        ],
+        "unresolved_calls": [
+          {
+            "callee": "Null",
+            "receiver_type": "Assert",
+            "lang": "csharp",
+            "line": "L12"
+          }
+        ]
+      },
+      "norm_label": ".new_entity_has_no_update_or_user_metadata()",
+      "source_file": "ElsheiekhHMS.Tests/Unit/Domain/Common/AuditableEntityTests.cs",
+      "source_location": "L8"
+    },
+    {
+      "id": "elsheiekhhms_tests_unit_domain_common_softdeletableentitytests_elsheiekhhms_tests_unit_domain_common_softdeletableentitytests_new_entity_is_active_without_deletion_metadata",
+      "label": ".New_entity_is_active_without_deletion_metadata()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 7,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "ElsheiekhHMS.Tests.Unit.Domain.Common",
+        "scope_chain": [
+          "s46"
+        ],
+        "unresolved_calls": [
+          {
+            "callee": "False",
+            "receiver_type": "Assert",
+            "lang": "csharp",
+            "line": "L12"
+          },
+          {
+            "callee": "Null",
+            "receiver_type": "Assert",
+            "lang": "csharp",
+            "line": "L13"
+          }
+        ]
+      },
+      "norm_label": ".new_entity_is_active_without_deletion_metadata()",
+      "source_file": "ElsheiekhHMS.Tests/Unit/Domain/Common/SoftDeletableEntityTests.cs",
+      "source_location": "L8"
+    },
+    {
+      "id": "elsheiekhhms_web_components_layout_reconnectmodal_razor_handlereconnectstatechanged",
+      "label": "handleReconnectStateChanged()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 8,
+      "file_type": "code",
+      "norm_label": "handlereconnectstatechanged()",
+      "source_file": "ElsheiekhHMS.Web/Components/Layout/ReconnectModal.razor.js",
+      "source_location": "L11"
+    },
+    {
+      "id": "elsheiekhhms_web_components_layout_reconnectmodal_razor_resume",
+      "label": "resume()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 8,
+      "file_type": "code",
+      "norm_label": "resume()",
+      "source_file": "ElsheiekhHMS.Web/Components/Layout/ReconnectModal.razor.js",
+      "source_location": "L48"
+    },
+    {
+      "id": "elsheiekhhms_web_components_layout_reconnectmodal_razor_retry",
+      "label": "retry()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 8,
+      "file_type": "code",
+      "norm_label": "retry()",
+      "source_file": "ElsheiekhHMS.Web/Components/Layout/ReconnectModal.razor.js",
+      "source_location": "L23"
+    },
+    {
+      "id": "elsheiekhhms_web_components_layout_reconnectmodal_razor_retrywhendocumentbecomesvisible",
+      "label": "retryWhenDocumentBecomesVisible()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 8,
+      "file_type": "code",
+      "norm_label": "retrywhendocumentbecomesvisible()",
+      "source_file": "ElsheiekhHMS.Web/Components/Layout/ReconnectModal.razor.js",
+      "source_location": "L59"
+    },
+    {
+      "id": "csharp_namespace:445f2ad739c775ae",
+      "label": "ElsheiekhHMS.Application",
+      "_origin": "ast",
+      "community": 0,
+      "file_type": "code",
+      "metadata": {
+        "kind": "csharp_namespace",
+        "namespace": "ElsheiekhHMS.Application"
+      },
+      "norm_label": "elsheiekhhms.application",
+      "source_file": "ElsheiekhHMS.Application/ApplicationServiceExtensions.cs",
+      "source_location": "L3",
+      "type": "namespace"
+    },
+    {
+      "id": "csharp_namespace:62c43e1281140a6f",
+      "label": "ElsheiekhHMS.Infrastructure",
+      "_origin": "ast",
+      "community": 0,
+      "file_type": "code",
+      "metadata": {
+        "kind": "csharp_namespace",
+        "namespace": "ElsheiekhHMS.Infrastructure"
+      },
+      "norm_label": "elsheiekhhms.infrastructure",
+      "source_file": "ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs",
+      "source_location": "L4",
+      "type": "namespace"
+    },
+    {
+      "id": "elsheiekhhms_application_applicationserviceextensions",
+      "label": "ApplicationServiceExtensions.cs",
+      "_origin": "ast",
+      "community": 0,
+      "file_type": "code",
+      "norm_label": "applicationserviceextensions.cs",
+      "source_file": "ElsheiekhHMS.Application/ApplicationServiceExtensions.cs",
+      "source_location": "L1"
+    },
+    {
+      "id": "elsheiekhhms_application_applicationserviceextensions_cs_iservicecollection",
+      "label": "IServiceCollection",
+      "_origin": "ast",
+      "community": 0,
+      "file_type": "code",
+      "norm_label": "iservicecollection",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "elsheiekhhms_infrastructure_infrastructureserviceextensions",
+      "label": "InfrastructureServiceExtensions.cs",
+      "_origin": "ast",
+      "community": 0,
+      "file_type": "code",
+      "norm_label": "infrastructureserviceextensions.cs",
+      "source_file": "ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs",
+      "source_location": "L1"
+    },
+    {
+      "id": "elsheiekhhms_infrastructure_infrastructureserviceextensions_cs_iservicecollection",
+      "label": "IServiceCollection",
+      "_origin": "ast",
+      "community": 0,
+      "file_type": "code",
+      "norm_label": "iservicecollection",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "elsheiekhhms_web",
+      "label": "ElsheiekhHMS.Web",
+      "_origin": "ast",
+      "community": 0,
+      "file_type": "code",
+      "norm_label": "elsheiekhhms.web",
+      "source_file": "ElsheiekhHMS.Web/Components/_Imports.razor",
+      "source_location": "L9"
+    },
+    {
+      "id": "elsheiekhhms_web_components",
+      "label": "ElsheiekhHMS.Web.Components",
+      "_origin": "ast",
+      "community": 0,
+      "file_type": "code",
+      "norm_label": "elsheiekhhms.web.components",
+      "source_file": "ElsheiekhHMS.Web/Components/_Imports.razor",
+      "source_location": "L10"
+    },
+    {
+      "id": "elsheiekhhms_web_components_imports",
+      "label": "_Imports.razor",
+      "_origin": "ast",
+      "community": 0,
+      "file_type": "code",
+      "norm_label": "_imports.razor",
+      "source_file": "ElsheiekhHMS.Web/Components/_Imports.razor",
+      "source_location": null
+    },
+    {
+      "id": "elsheiekhhms_web_components_layout",
+      "label": "ElsheiekhHMS.Web.Components.Layout",
+      "_origin": "ast",
+      "community": 0,
+      "file_type": "code",
+      "norm_label": "elsheiekhhms.web.components.layout",
+      "source_file": "ElsheiekhHMS.Web/Components/_Imports.razor",
+      "source_location": "L11"
+    },
+    {
+      "id": "elsheiekhhms_web_program",
+      "label": "Program.cs",
+      "_origin": "ast",
+      "community": 0,
+      "file_type": "code",
+      "norm_label": "program.cs",
+      "source_file": "ElsheiekhHMS.Web/Program.cs",
+      "source_location": "L1"
+    },
+    {
+      "id": "iconfiguration",
+      "label": "IConfiguration",
+      "_origin": "ast",
+      "community": 0,
+      "file_type": "code",
+      "norm_label": "iconfiguration",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "microsoft_aspnetcore_components_forms",
+      "label": "Microsoft.AspNetCore.Components.Forms",
+      "_origin": "ast",
+      "community": 0,
+      "file_type": "code",
+      "norm_label": "microsoft.aspnetcore.components.forms",
+      "source_file": "ElsheiekhHMS.Web/Components/_Imports.razor",
+      "source_location": "L3"
+    },
+    {
+      "id": "microsoft_aspnetcore_components_routing",
+      "label": "Microsoft.AspNetCore.Components.Routing",
+      "_origin": "ast",
+      "community": 0,
+      "file_type": "code",
+      "norm_label": "microsoft.aspnetcore.components.routing",
+      "source_file": "ElsheiekhHMS.Web/Components/_Imports.razor",
+      "source_location": "L4"
+    },
+    {
+      "id": "microsoft_aspnetcore_components_web",
+      "label": "Microsoft.AspNetCore.Components.Web",
+      "_origin": "ast",
+      "community": 0,
+      "file_type": "code",
+      "norm_label": "microsoft.aspnetcore.components.web",
+      "source_file": "ElsheiekhHMS.Web/Components/_Imports.razor",
+      "source_location": "L5"
+    },
+    {
+      "id": "microsoft_aspnetcore_components_web_rendermode",
+      "label": "Microsoft.AspNetCore.Components.Web.RenderMode",
+      "_origin": "ast",
+      "community": 0,
+      "file_type": "code",
+      "norm_label": "microsoft.aspnetcore.components.web.rendermode",
+      "source_file": "ElsheiekhHMS.Web/Components/_Imports.razor",
+      "source_location": "L6"
+    },
+    {
+      "id": "microsoft_aspnetcore_components_web_virtualization",
+      "label": "Microsoft.AspNetCore.Components.Web.Virtualization",
+      "_origin": "ast",
+      "community": 0,
+      "file_type": "code",
+      "norm_label": "microsoft.aspnetcore.components.web.virtualization",
+      "source_file": "ElsheiekhHMS.Web/Components/_Imports.razor",
+      "source_location": "L7"
+    },
+    {
+      "id": "microsoft_jsinterop",
+      "label": "Microsoft.JSInterop",
+      "_origin": "ast",
+      "community": 0,
+      "file_type": "code",
+      "norm_label": "microsoft.jsinterop",
+      "source_file": "ElsheiekhHMS.Web/Components/_Imports.razor",
+      "source_location": "L8"
+    },
+    {
+      "id": "system_net_http_json",
+      "label": "System.Net.Http.Json",
+      "_origin": "ast",
+      "community": 0,
+      "file_type": "code",
+      "norm_label": "system.net.http.json",
+      "source_file": "ElsheiekhHMS.Web/Components/_Imports.razor",
+      "source_location": "L2"
+    },
+    {
+      "id": "elsheiekhhms",
+      "label": "ElsheiekhHMS.slnx",
+      "_origin": "ast",
+      "community": 1,
+      "file_type": "code",
+      "norm_label": "elsheiekhhms.slnx",
+      "source_file": "ElsheiekhHMS.slnx",
+      "source_location": null
+    },
+    {
+      "id": "elsheiekhhms_application_elsheiekhhms_application",
+      "label": "ElsheiekhHMS.Application",
+      "_origin": "ast",
+      "community": 1,
+      "file_type": "code",
+      "norm_label": "elsheiekhhms.application",
+      "source_file": "ElsheiekhHMS.Application/ElsheiekhHMS.Application.csproj",
+      "source_location": null
+    },
+    {
+      "id": "elsheiekhhms_application_elsheiekhhms_application_csproj_nuget_microsoft_extensions_dependencyinjection_abstractions",
+      "label": "Microsoft.Extensions.DependencyInjection.Abstractions (10.0.12)",
+      "_origin": "ast",
+      "community": 1,
+      "file_type": "code",
+      "norm_label": "microsoft.extensions.dependencyinjection.abstractions (10.0.12)",
+      "source_file": "ElsheiekhHMS.Application/ElsheiekhHMS.Application.csproj",
+      "source_location": null
+    },
+    {
+      "id": "elsheiekhhms_core_elsheiekhhms_core",
+      "label": "ElsheiekhHMS.Core",
+      "_origin": "ast",
+      "community": 1,
+      "file_type": "code",
+      "norm_label": "elsheiekhhms.core",
+      "source_file": "ElsheiekhHMS.Core/ElsheiekhHMS.Core.csproj",
+      "source_location": null
+    },
+    {
+      "id": "elsheiekhhms_infrastructure_elsheiekhhms_infrastructure",
+      "label": "ElsheiekhHMS.Infrastructure",
+      "_origin": "ast",
+      "community": 1,
+      "file_type": "code",
+      "norm_label": "elsheiekhhms.infrastructure",
+      "source_file": "ElsheiekhHMS.Infrastructure/ElsheiekhHMS.Infrastructure.csproj",
+      "source_location": null
+    },
+    {
+      "id": "elsheiekhhms_infrastructure_elsheiekhhms_infrastructure_csproj_nuget_microsoft_extensions_dependencyinjection_abstractions",
+      "label": "Microsoft.Extensions.DependencyInjection.Abstractions (10.0.12)",
+      "_origin": "ast",
+      "community": 1,
+      "file_type": "code",
+      "norm_label": "microsoft.extensions.dependencyinjection.abstractions (10.0.12)",
+      "source_file": "ElsheiekhHMS.Infrastructure/ElsheiekhHMS.Infrastructure.csproj",
+      "source_location": null
+    },
+    {
+      "id": "elsheiekhhms_tests_elsheiekhhms_tests",
+      "label": "ElsheiekhHMS.Tests",
+      "_origin": "ast",
+      "community": 1,
+      "file_type": "code",
+      "norm_label": "elsheiekhhms.tests",
+      "source_file": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
+      "source_location": null
+    },
+    {
+      "id": "elsheiekhhms_web_elsheiekhhms_web",
+      "label": "ElsheiekhHMS.Web",
+      "_origin": "ast",
+      "community": 1,
+      "file_type": "code",
+      "norm_label": "elsheiekhhms.web",
+      "source_file": "ElsheiekhHMS.Web/ElsheiekhHMS.Web.csproj",
+      "source_location": null
+    },
+    {
+      "id": "nuget_coverlet_collector",
+      "label": "coverlet.collector (6.0.4)",
+      "_origin": "ast",
+      "community": 1,
+      "file_type": "code",
+      "norm_label": "coverlet.collector (6.0.4)",
+      "source_file": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
+      "source_location": null
+    },
+    {
+      "id": "nuget_microsoft_extensions_configuration_abstractions",
+      "label": "Microsoft.Extensions.Configuration.Abstractions (10.0.12)",
+      "_origin": "ast",
+      "community": 1,
+      "file_type": "code",
+      "norm_label": "microsoft.extensions.configuration.abstractions (10.0.12)",
+      "source_file": "ElsheiekhHMS.Infrastructure/ElsheiekhHMS.Infrastructure.csproj",
+      "source_location": null
+    },
+    {
+      "id": "nuget_microsoft_net_test_sdk",
+      "label": "Microsoft.NET.Test.Sdk (17.14.1)",
+      "_origin": "ast",
+      "community": 1,
+      "file_type": "code",
+      "norm_label": "microsoft.net.test.sdk (17.14.1)",
+      "source_file": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
+      "source_location": null
+    },
+    {
+      "id": "nuget_xunit",
+      "label": "xunit (2.9.3)",
+      "_origin": "ast",
+      "community": 1,
+      "file_type": "code",
+      "norm_label": "xunit (2.9.3)",
+      "source_file": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
+      "source_location": null
+    },
+    {
+      "id": "nuget_xunit_runner_visualstudio",
+      "label": "xunit.runner.visualstudio (3.1.4)",
+      "_origin": "ast",
+      "community": 1,
+      "file_type": "code",
+      "norm_label": "xunit.runner.visualstudio (3.1.4)",
+      "source_file": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
+      "source_location": null
+    },
+    {
+      "id": "elsheiekhhms_core_elsheiekhhms_core_csproj_sdk_microsoft_net_sdk",
+      "label": "Microsoft.NET.Sdk",
+      "_origin": "ast",
+      "community": 1,
+      "file_type": "concept",
+      "norm_label": "microsoft.net.sdk",
+      "source_file": "ElsheiekhHMS.Core/ElsheiekhHMS.Core.csproj",
+      "source_location": null
+    },
+    {
+      "id": "elsheiekhhms_web_elsheiekhhms_web_csproj_framework_net10_0",
+      "label": "net10.0",
+      "_origin": "ast",
+      "community": 1,
+      "file_type": "concept",
+      "norm_label": "net10.0",
+      "source_file": "ElsheiekhHMS.Web/ElsheiekhHMS.Web.csproj",
+      "source_location": null
+    },
+    {
+      "id": "sdk_microsoft_net_sdk_web",
+      "label": "Microsoft.NET.Sdk.Web",
+      "_origin": "ast",
+      "community": 1,
+      "file_type": "concept",
+      "norm_label": "microsoft.net.sdk.web",
+      "source_file": "ElsheiekhHMS.Web/ElsheiekhHMS.Web.csproj",
+      "source_location": null
+    },
+    {
+      "id": "elsheiekhhms_web_components_routes",
+      "label": "Routes.razor",
+      "_origin": "ast",
+      "community": 10,
+      "file_type": "code",
+      "norm_label": "routes.razor",
+      "source_file": "ElsheiekhHMS.Web/Components/Routes.razor",
+      "source_location": null
+    },
+    {
+      "id": "focusonnavigate",
+      "label": "FocusOnNavigate",
+      "_origin": "ast",
+      "community": 10,
+      "file_type": "code",
+      "norm_label": "focusonnavigate",
+      "source_file": "ElsheiekhHMS.Web/Components/Routes.razor",
+      "source_location": "L4"
+    },
+    {
+      "id": "found",
+      "label": "Found",
+      "_origin": "ast",
+      "community": 10,
+      "file_type": "code",
+      "norm_label": "found",
+      "source_file": "ElsheiekhHMS.Web/Components/Routes.razor",
+      "source_location": "L2"
+    },
+    {
+      "id": "router",
+      "label": "Router",
+      "_origin": "ast",
+      "community": 10,
+      "file_type": "code",
+      "norm_label": "router",
+      "source_file": "ElsheiekhHMS.Web/Components/Routes.razor",
+      "source_location": "L1"
+    },
+    {
+      "id": "routeview",
+      "label": "RouteView",
+      "_origin": "ast",
+      "community": 10,
+      "file_type": "code",
+      "norm_label": "routeview",
+      "source_file": "ElsheiekhHMS.Web/Components/Routes.razor",
+      "source_location": "L3"
+    },
+    {
+      "id": "csharp_namespace:798fee7d7dc1564a",
+      "label": "ElsheiekhHMS.Core.Interfaces",
+      "_origin": "ast",
+      "community": 11,
+      "file_type": "code",
+      "metadata": {
+        "kind": "csharp_namespace",
+        "namespace": "ElsheiekhHMS.Core.Interfaces"
+      },
+      "norm_label": "elsheiekhhms.core.interfaces",
+      "source_file": "ElsheiekhHMS.Core/Interfaces/IHasConcurrencyToken.cs",
+      "source_location": "L1",
+      "type": "namespace"
+    },
+    {
+      "id": "elsheiekhhms_core_interfaces_ihasconcurrencytoken",
+      "label": "IHasConcurrencyToken.cs",
+      "_origin": "ast",
+      "community": 11,
+      "file_type": "code",
+      "norm_label": "ihasconcurrencytoken.cs",
+      "source_file": "ElsheiekhHMS.Core/Interfaces/IHasConcurrencyToken.cs",
+      "source_location": "L1"
+    },
+    {
+      "id": "elsheiekhhms_core_interfaces_ihasconcurrencytoken_elsheiekhhms_core_interfaces_ihasconcurrencytoken_rowversion",
+      "label": "RowVersion",
+      "_origin": "ast",
+      "community": 11,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "ElsheiekhHMS.Core.Interfaces",
+        "scope_chain": [
+          "s0"
+        ]
+      },
+      "norm_label": "rowversion",
+      "source_file": "ElsheiekhHMS.Core/Interfaces/IHasConcurrencyToken.cs",
+      "source_location": "L9"
+    },
+    {
+      "id": "elsheiekhhms_web_components_pages_error",
+      "label": "Error.razor",
+      "_origin": "ast",
+      "community": 12,
+      "file_type": "code",
+      "norm_label": "error.razor",
+      "source_file": "ElsheiekhHMS.Web/Components/Pages/Error.razor",
+      "source_location": null
+    },
+    {
+      "id": "elsheiekhhms_web_components_pages_error_oninitialized",
+      "label": "OnInitialized",
+      "_origin": "ast",
+      "community": 12,
+      "file_type": "code",
+      "norm_label": "oninitialized",
+      "source_file": "ElsheiekhHMS.Web/Components/Pages/Error.razor",
+      "source_location": "L34"
+    },
+    {
+      "id": "elsheiekhhms_web_components_pages_error_razor_pagetitle",
+      "label": "PageTitle",
+      "_origin": "ast",
+      "community": 12,
+      "file_type": "code",
+      "norm_label": "pagetitle",
+      "source_file": "ElsheiekhHMS.Web/Components/Pages/Error.razor",
+      "source_location": "L4"
+    },
+    {
+      "id": "system_diagnostics",
+      "label": "System.Diagnostics",
+      "_origin": "ast",
+      "community": 12,
+      "file_type": "code",
+      "norm_label": "system.diagnostics",
+      "source_file": "ElsheiekhHMS.Web/Components/Pages/Error.razor",
+      "source_location": "L2"
+    },
+    {
+      "id": "elsheiekhhms_web_components_pages_counter",
+      "label": "Counter.razor",
+      "_origin": "ast",
+      "community": 13,
+      "file_type": "code",
+      "norm_label": "counter.razor",
+      "source_file": "ElsheiekhHMS.Web/Components/Pages/Counter.razor",
+      "source_location": null
+    },
+    {
+      "id": "elsheiekhhms_web_components_pages_counter_incrementcount",
+      "label": "IncrementCount",
+      "_origin": "ast",
+      "community": 13,
+      "file_type": "code",
+      "norm_label": "incrementcount",
+      "source_file": "ElsheiekhHMS.Web/Components/Pages/Counter.razor",
+      "source_location": "L15"
+    },
+    {
+      "id": "elsheiekhhms_web_components_pages_counter_razor_pagetitle",
+      "label": "PageTitle",
+      "_origin": "ast",
+      "community": 13,
+      "file_type": "code",
+      "norm_label": "pagetitle",
+      "source_file": "ElsheiekhHMS.Web/Components/Pages/Counter.razor",
+      "source_location": "L4"
+    },
+    {
+      "id": "elsheiekhhms_web_components_pages_weather",
+      "label": "Weather.razor",
+      "_origin": "ast",
+      "community": 14,
+      "file_type": "code",
+      "norm_label": "weather.razor",
+      "source_file": "ElsheiekhHMS.Web/Components/Pages/Weather.razor",
+      "source_location": null
+    },
+    {
+      "id": "elsheiekhhms_web_components_pages_weather_oninitializedasync",
+      "label": "OnInitializedAsync",
+      "_origin": "ast",
+      "community": 14,
+      "file_type": "code",
+      "norm_label": "oninitializedasync",
+      "source_file": "ElsheiekhHMS.Web/Components/Pages/Weather.razor",
+      "source_location": "L42"
+    },
+    {
+      "id": "elsheiekhhms_web_components_pages_weather_razor_pagetitle",
+      "label": "PageTitle",
+      "_origin": "ast",
+      "community": 14,
+      "file_type": "code",
+      "norm_label": "pagetitle",
+      "source_file": "ElsheiekhHMS.Web/Components/Pages/Weather.razor",
+      "source_location": "L4"
+    },
+    {
+      "id": "elsheiekhhms_web_components_layout_mainlayout",
+      "label": "MainLayout.razor",
+      "_origin": "ast",
+      "community": 15,
+      "file_type": "code",
+      "norm_label": "mainlayout.razor",
+      "source_file": "ElsheiekhHMS.Web/Components/Layout/MainLayout.razor",
+      "source_location": null
+    },
+    {
+      "id": "navmenu",
+      "label": "NavMenu",
+      "_origin": "ast",
+      "community": 15,
+      "file_type": "code",
+      "norm_label": "navmenu",
+      "source_file": "ElsheiekhHMS.Web/Components/Layout/MainLayout.razor",
+      "source_location": "L5"
+    },
+    {
+      "id": "elsheiekhhms_web_components_layout_navmenu",
+      "label": "NavMenu.razor",
+      "_origin": "ast",
+      "community": 16,
+      "file_type": "code",
+      "norm_label": "navmenu.razor",
+      "source_file": "ElsheiekhHMS.Web/Components/Layout/NavMenu.razor",
+      "source_location": null
+    },
+    {
+      "id": "navlink",
+      "label": "NavLink",
+      "_origin": "ast",
+      "community": 16,
+      "file_type": "code",
+      "norm_label": "navlink",
+      "source_file": "ElsheiekhHMS.Web/Components/Layout/NavMenu.razor",
+      "source_location": "L12"
+    },
+    {
+      "id": "elsheiekhhms_web_components_pages_home",
+      "label": "Home.razor",
+      "_origin": "ast",
+      "community": 17,
+      "file_type": "code",
+      "norm_label": "home.razor",
+      "source_file": "ElsheiekhHMS.Web/Components/Pages/Home.razor",
+      "source_location": null
+    },
+    {
+      "id": "elsheiekhhms_web_components_pages_home_razor_pagetitle",
+      "label": "PageTitle",
+      "_origin": "ast",
+      "community": 17,
+      "file_type": "code",
+      "norm_label": "pagetitle",
+      "source_file": "ElsheiekhHMS.Web/Components/Pages/Home.razor",
+      "source_location": "L3"
+    },
+    {
+      "id": "elsheiekhhms_web_components_layout_reconnectmodal",
+      "label": "ReconnectModal.razor",
+      "_origin": "ast",
+      "community": 18,
+      "file_type": "code",
+      "norm_label": "reconnectmodal.razor",
+      "source_file": "ElsheiekhHMS.Web/Components/Layout/ReconnectModal.razor",
+      "source_location": null
+    },
+    {
+      "id": "elsheiekhhms_web_components_pages_notfound",
+      "label": "NotFound.razor",
+      "_origin": "ast",
+      "community": 19,
+      "file_type": "code",
+      "norm_label": "notfound.razor",
+      "source_file": "ElsheiekhHMS.Web/Components/Pages/NotFound.razor",
+      "source_location": null
+    },
+    {
+      "id": "elsheiekhhms_web_properties_launchsettings",
+      "label": "launchSettings.json",
+      "_origin": "ast",
+      "community": 2,
+      "file_type": "code",
+      "norm_label": "launchsettings.json",
+      "source_file": "ElsheiekhHMS.Web/Properties/launchSettings.json",
+      "source_location": "L1"
+    },
+    {
+      "id": "elsheiekhhms_web_properties_launchsettings_environmentvariables_aspnetcore_environment",
+      "label": "ASPNETCORE_ENVIRONMENT",
+      "_origin": "ast",
+      "community": 2,
+      "file_type": "code",
+      "norm_label": "aspnetcore_environment",
+      "source_file": "ElsheiekhHMS.Web/Properties/launchSettings.json",
+      "source_location": "L10"
+    },
+    {
+      "id": "elsheiekhhms_web_properties_launchsettings_http_applicationurl",
+      "label": "applicationUrl",
+      "_origin": "ast",
+      "community": 2,
+      "file_type": "code",
+      "norm_label": "applicationurl",
+      "source_file": "ElsheiekhHMS.Web/Properties/launchSettings.json",
+      "source_location": "L8"
+    },
+    {
+      "id": "elsheiekhhms_web_properties_launchsettings_http_commandname",
+      "label": "commandName",
+      "_origin": "ast",
+      "community": 2,
+      "file_type": "code",
+      "norm_label": "commandname",
+      "source_file": "ElsheiekhHMS.Web/Properties/launchSettings.json",
+      "source_location": "L5"
+    },
+    {
+      "id": "elsheiekhhms_web_properties_launchsettings_http_dotnetrunmessages",
+      "label": "dotnetRunMessages",
+      "_origin": "ast",
+      "community": 2,
+      "file_type": "code",
+      "norm_label": "dotnetrunmessages",
+      "source_file": "ElsheiekhHMS.Web/Properties/launchSettings.json",
+      "source_location": "L6"
+    },
+    {
+      "id": "elsheiekhhms_web_properties_launchsettings_http_environmentvariables",
+      "label": "environmentVariables",
+      "_origin": "ast",
+      "community": 2,
+      "file_type": "code",
+      "norm_label": "environmentvariables",
+      "source_file": "ElsheiekhHMS.Web/Properties/launchSettings.json",
+      "source_location": "L9"
+    },
+    {
+      "id": "elsheiekhhms_web_properties_launchsettings_http_launchbrowser",
+      "label": "launchBrowser",
+      "_origin": "ast",
+      "community": 2,
+      "file_type": "code",
+      "norm_label": "launchbrowser",
+      "source_file": "ElsheiekhHMS.Web/Properties/launchSettings.json",
+      "source_location": "L7"
+    },
+    {
+      "id": "elsheiekhhms_web_properties_launchsettings_https_applicationurl",
+      "label": "applicationUrl",
+      "_origin": "ast",
+      "community": 2,
+      "file_type": "code",
+      "norm_label": "applicationurl",
+      "source_file": "ElsheiekhHMS.Web/Properties/launchSettings.json",
+      "source_location": "L17"
+    },
+    {
+      "id": "elsheiekhhms_web_properties_launchsettings_https_commandname",
+      "label": "commandName",
+      "_origin": "ast",
+      "community": 2,
+      "file_type": "code",
+      "norm_label": "commandname",
+      "source_file": "ElsheiekhHMS.Web/Properties/launchSettings.json",
+      "source_location": "L14"
+    },
+    {
+      "id": "elsheiekhhms_web_properties_launchsettings_https_dotnetrunmessages",
+      "label": "dotnetRunMessages",
+      "_origin": "ast",
+      "community": 2,
+      "file_type": "code",
+      "norm_label": "dotnetrunmessages",
+      "source_file": "ElsheiekhHMS.Web/Properties/launchSettings.json",
+      "source_location": "L15"
+    },
+    {
+      "id": "elsheiekhhms_web_properties_launchsettings_https_environmentvariables",
+      "label": "environmentVariables",
+      "_origin": "ast",
+      "community": 2,
+      "file_type": "code",
+      "norm_label": "environmentvariables",
+      "source_file": "ElsheiekhHMS.Web/Properties/launchSettings.json",
+      "source_location": "L18"
+    },
+    {
+      "id": "elsheiekhhms_web_properties_launchsettings_https_launchbrowser",
+      "label": "launchBrowser",
+      "_origin": "ast",
+      "community": 2,
+      "file_type": "code",
+      "norm_label": "launchbrowser",
+      "source_file": "ElsheiekhHMS.Web/Properties/launchSettings.json",
+      "source_location": "L16"
+    },
+    {
+      "id": "elsheiekhhms_web_properties_launchsettings_profiles",
+      "label": "profiles",
+      "_origin": "ast",
+      "community": 2,
+      "file_type": "code",
+      "norm_label": "profiles",
+      "source_file": "ElsheiekhHMS.Web/Properties/launchSettings.json",
+      "source_location": "L3"
+    },
+    {
+      "id": "elsheiekhhms_web_properties_launchsettings_profiles_http",
+      "label": "http",
+      "_origin": "ast",
+      "community": 2,
+      "file_type": "code",
+      "norm_label": "http",
+      "source_file": "ElsheiekhHMS.Web/Properties/launchSettings.json",
+      "source_location": "L4"
+    },
+    {
+      "id": "elsheiekhhms_web_properties_launchsettings_profiles_https",
+      "label": "https",
+      "_origin": "ast",
+      "community": 2,
+      "file_type": "code",
+      "norm_label": "https",
+      "source_file": "ElsheiekhHMS.Web/Properties/launchSettings.json",
+      "source_location": "L13"
+    },
+    {
+      "id": "elsheiekhhms_web_properties_launchsettings_schema",
+      "label": "$schema",
+      "_origin": "ast",
+      "community": 2,
+      "file_type": "code",
+      "norm_label": "$schema",
+      "source_file": "ElsheiekhHMS.Web/Properties/launchSettings.json",
+      "source_location": "L2"
+    },
+    {
+      "id": "phase01_setup",
+      "label": "phase01-setup.ps1",
+      "_origin": "ast",
+      "community": 20,
+      "file_type": "code",
+      "norm_label": "phase01-setup.ps1",
+      "source_file": "phase01-setup.ps1",
+      "source_location": "L1"
+    },
+    {
+      "id": "csharp_namespace:67c6625fb7964389",
+      "label": "ElsheiekhHMS.Tests.Unit.Domain.Exceptions",
+      "_origin": "ast",
+      "community": 3,
+      "file_type": "code",
+      "metadata": {
+        "kind": "csharp_namespace",
+        "namespace": "ElsheiekhHMS.Tests.Unit.Domain.Exceptions"
+      },
+      "norm_label": "elsheiekhhms.tests.unit.domain.exceptions",
+      "source_file": "ElsheiekhHMS.Tests/Unit/Domain/Exceptions/DomainExceptionTests.cs",
+      "source_location": "L4",
+      "type": "namespace"
+    },
+    {
+      "id": "csharp_namespace:77bc4792baee6799",
+      "label": "ElsheiekhHMS.Core.Exceptions",
+      "_origin": "ast",
+      "community": 3,
+      "file_type": "code",
+      "metadata": {
+        "kind": "csharp_namespace",
+        "namespace": "ElsheiekhHMS.Core.Exceptions"
+      },
+      "norm_label": "elsheiekhhms.core.exceptions",
+      "source_file": "ElsheiekhHMS.Core/Exceptions/BusinessRuleException.cs",
+      "source_location": "L1",
+      "type": "namespace"
+    },
+    {
+      "id": "elsheiekhhms_core_exceptions_businessruleexception",
+      "label": "BusinessRuleException.cs",
+      "_origin": "ast",
+      "community": 3,
+      "file_type": "code",
+      "norm_label": "businessruleexception.cs",
+      "source_file": "ElsheiekhHMS.Core/Exceptions/BusinessRuleException.cs",
+      "source_location": "L1"
+    },
+    {
+      "id": "elsheiekhhms_core_exceptions_domainexception",
+      "label": "DomainException.cs",
+      "_origin": "ast",
+      "community": 3,
+      "file_type": "code",
+      "norm_label": "domainexception.cs",
+      "source_file": "ElsheiekhHMS.Core/Exceptions/DomainException.cs",
+      "source_location": "L1"
+    },
+    {
+      "id": "elsheiekhhms_core_exceptions_domainvalidationexception",
+      "label": "DomainValidationException.cs",
+      "_origin": "ast",
+      "community": 3,
+      "file_type": "code",
+      "norm_label": "domainvalidationexception.cs",
+      "source_file": "ElsheiekhHMS.Core/Exceptions/DomainValidationException.cs",
+      "source_location": "L1"
+    },
+    {
+      "id": "elsheiekhhms_tests_unit_domain_exceptions_domainexceptiontests",
+      "label": "DomainExceptionTests.cs",
+      "_origin": "ast",
+      "community": 3,
+      "file_type": "code",
+      "norm_label": "domainexceptiontests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Unit/Domain/Exceptions/DomainExceptionTests.cs",
+      "source_location": "L1"
+    },
+    {
+      "id": "exception",
+      "label": "Exception",
+      "_origin": "ast",
+      "community": 3,
+      "file_type": "code",
+      "norm_label": "exception",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "inlinedata",
+      "label": "InlineData",
+      "_origin": "ast",
+      "community": 3,
+      "file_type": "code",
+      "norm_label": "inlinedata",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "theory",
+      "label": "Theory",
+      "_origin": "ast",
+      "community": 3,
+      "file_type": "code",
+      "norm_label": "theory",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "csharp_namespace:3e45288a4abf34b9",
+      "label": "ElsheiekhHMS.Tests.Unit.Domain.Common",
+      "_origin": "ast",
+      "community": 4,
+      "file_type": "code",
+      "metadata": {
+        "kind": "csharp_namespace",
+        "namespace": "ElsheiekhHMS.Tests.Unit.Domain.Common"
+      },
+      "norm_label": "elsheiekhhms.tests.unit.domain.common",
+      "source_file": "ElsheiekhHMS.Tests/Unit/Domain/Common/AuditableEntityTests.cs",
+      "source_location": "L4",
+      "type": "namespace"
+    },
+    {
+      "id": "csharp_namespace:849a5ff7b4e439b6",
+      "label": "ElsheiekhHMS.Core.Common",
+      "_origin": "ast",
+      "community": 4,
+      "file_type": "code",
+      "metadata": {
+        "kind": "csharp_namespace",
+        "namespace": "ElsheiekhHMS.Core.Common"
+      },
+      "norm_label": "elsheiekhhms.core.common",
+      "source_file": "ElsheiekhHMS.Core/Common/AuditableEntity.cs",
+      "source_location": "L1",
+      "type": "namespace"
+    },
+    {
+      "id": "elsheiekhhms_core_common_baseentity",
+      "label": "BaseEntity.cs",
+      "_origin": "ast",
+      "community": 4,
+      "file_type": "code",
+      "norm_label": "baseentity.cs",
+      "source_file": "ElsheiekhHMS.Core/Common/BaseEntity.cs",
+      "source_location": "L1"
+    },
+    {
+      "id": "elsheiekhhms_core_common_baseentity_elsheiekhhms_core_common_baseentity_id",
+      "label": "Id",
+      "_origin": "ast",
+      "community": 4,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "ElsheiekhHMS.Core.Common",
+        "scope_chain": [
+          "s0"
+        ]
+      },
+      "norm_label": "id",
+      "source_file": "ElsheiekhHMS.Core/Common/BaseEntity.cs",
+      "source_location": "L5"
+    },
+    {
+      "id": "elsheiekhhms_tests_unit_domain_common_auditableentitytests",
+      "label": "AuditableEntityTests.cs",
+      "_origin": "ast",
+      "community": 4,
+      "file_type": "code",
+      "norm_label": "auditableentitytests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Unit/Domain/Common/AuditableEntityTests.cs",
+      "source_location": "L1"
+    },
+    {
+      "id": "elsheiekhhms_tests_unit_domain_common_baseentitytests",
+      "label": "BaseEntityTests.cs",
+      "_origin": "ast",
+      "community": 4,
+      "file_type": "code",
+      "norm_label": "baseentitytests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Unit/Domain/Common/BaseEntityTests.cs",
+      "source_location": "L1"
+    },
+    {
+      "id": "elsheiekhhms_tests_unit_domain_common_baseentitytests_cs_fact",
+      "label": "Fact",
+      "_origin": "ast",
+      "community": 4,
+      "file_type": "code",
+      "norm_label": "fact",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "elsheiekhhms_tests_unit_domain_common_softdeletableentitytests",
+      "label": "SoftDeletableEntityTests.cs",
+      "_origin": "ast",
+      "community": 4,
+      "file_type": "code",
+      "norm_label": "softdeletableentitytests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Unit/Domain/Common/SoftDeletableEntityTests.cs",
+      "source_location": "L1"
+    },
+    {
+      "id": "elsheiekhhms_core_common_auditableentity",
+      "label": "AuditableEntity.cs",
+      "_origin": "ast",
+      "community": 5,
+      "file_type": "code",
+      "norm_label": "auditableentity.cs",
+      "source_file": "ElsheiekhHMS.Core/Common/AuditableEntity.cs",
+      "source_location": "L1"
+    },
+    {
+      "id": "elsheiekhhms_core_common_auditableentity_cs_datetimeoffset",
+      "label": "DateTimeOffset",
+      "_origin": "ast",
+      "community": 5,
+      "file_type": "code",
+      "norm_label": "datetimeoffset",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "elsheiekhhms_core_common_auditableentity_elsheiekhhms_core_common_auditableentity_createdat",
+      "label": "CreatedAt",
+      "_origin": "ast",
+      "community": 5,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "ElsheiekhHMS.Core.Common",
+        "scope_chain": [
+          "s0"
+        ]
+      },
+      "norm_label": "createdat",
+      "source_file": "ElsheiekhHMS.Core/Common/AuditableEntity.cs",
+      "source_location": "L6"
+    },
+    {
+      "id": "elsheiekhhms_core_common_auditableentity_elsheiekhhms_core_common_auditableentity_createdby",
+      "label": "CreatedBy",
+      "_origin": "ast",
+      "community": 5,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "ElsheiekhHMS.Core.Common",
+        "scope_chain": [
+          "s0"
+        ]
+      },
+      "norm_label": "createdby",
+      "source_file": "ElsheiekhHMS.Core/Common/AuditableEntity.cs",
+      "source_location": "L7"
+    },
+    {
+      "id": "elsheiekhhms_core_common_auditableentity_elsheiekhhms_core_common_auditableentity_updatedat",
+      "label": "UpdatedAt",
+      "_origin": "ast",
+      "community": 5,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "ElsheiekhHMS.Core.Common",
+        "scope_chain": [
+          "s0"
+        ]
+      },
+      "norm_label": "updatedat",
+      "source_file": "ElsheiekhHMS.Core/Common/AuditableEntity.cs",
+      "source_location": "L8"
+    },
+    {
+      "id": "elsheiekhhms_core_common_auditableentity_elsheiekhhms_core_common_auditableentity_updatedby",
+      "label": "UpdatedBy",
+      "_origin": "ast",
+      "community": 5,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "ElsheiekhHMS.Core.Common",
+        "scope_chain": [
+          "s0"
+        ]
+      },
+      "norm_label": "updatedby",
+      "source_file": "ElsheiekhHMS.Core/Common/AuditableEntity.cs",
+      "source_location": "L9"
+    },
+    {
+      "id": "elsheiekhhms_tests_unit_domain_common_auditableentitytests_cs_fact",
+      "label": "Fact",
+      "_origin": "ast",
+      "community": 5,
+      "file_type": "code",
+      "norm_label": "fact",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "phase02_setup",
+      "label": "phase02-setup.ps1",
+      "_origin": "ast",
+      "community": 6,
+      "file_type": "code",
+      "norm_label": "phase02-setup.ps1",
+      "source_file": "phase02-setup.ps1",
+      "source_location": "L1"
+    },
+    {
+      "id": "phase02_setup_assert_architecture",
+      "label": "Assert-Architecture()",
+      "_origin": "ast",
+      "community": 6,
+      "file_type": "code",
+      "norm_label": "assert-architecture()",
+      "source_file": "phase02-setup.ps1",
+      "source_location": "L88"
+    },
+    {
+      "id": "phase02_setup_ensure_directory",
+      "label": "Ensure-Directory()",
+      "_origin": "ast",
+      "community": 6,
+      "file_type": "code",
+      "norm_label": "ensure-directory()",
+      "source_file": "phase02-setup.ps1",
+      "source_location": "L163"
+    },
+    {
+      "id": "phase02_setup_ensure_file",
+      "label": "Ensure-File()",
+      "_origin": "ast",
+      "community": 6,
+      "file_type": "code",
+      "norm_label": "ensure-file()",
+      "source_file": "phase02-setup.ps1",
+      "source_location": "L172"
+    },
+    {
+      "id": "phase02_setup_get_contenthash",
+      "label": "Get-ContentHash()",
+      "_origin": "ast",
+      "community": 6,
+      "file_type": "code",
+      "norm_label": "get-contenthash()",
+      "source_file": "phase02-setup.ps1",
+      "source_location": "L139"
+    },
+    {
+      "id": "phase02_setup_get_filestate",
+      "label": "Get-FileState()",
+      "_origin": "ast",
+      "community": 6,
+      "file_type": "code",
+      "norm_label": "get-filestate()",
+      "source_file": "phase02-setup.ps1",
+      "source_location": "L149"
+    },
+    {
+      "id": "phase02_setup_get_safepath",
+      "label": "Get-SafePath()",
+      "_origin": "ast",
+      "community": 6,
+      "file_type": "code",
+      "norm_label": "get-safepath()",
+      "source_file": "phase02-setup.ps1",
+      "source_location": "L43"
+    },
+    {
+      "id": "phase02_setup_get_workspacefiles",
+      "label": "Get-WorkspaceFiles()",
+      "_origin": "ast",
+      "community": 6,
+      "file_type": "code",
+      "norm_label": "get-workspacefiles()",
+      "source_file": "phase02-setup.ps1",
+      "source_location": "L65"
+    },
+    {
+      "id": "phase02_setup_invoke_dotnet",
+      "label": "Invoke-DotNet()",
+      "_origin": "ast",
+      "community": 6,
+      "file_type": "code",
+      "norm_label": "invoke-dotnet()",
+      "source_file": "phase02-setup.ps1",
+      "source_location": "L127"
+    },
+    {
+      "id": "phase02_setup_normalize_text",
+      "label": "Normalize-Text()",
+      "_origin": "ast",
+      "community": 6,
+      "file_type": "code",
+      "norm_label": "normalize-text()",
+      "source_file": "phase02-setup.ps1",
+      "source_location": "L134"
+    },
+    {
+      "id": "phase02_setup_read_project",
+      "label": "Read-Project()",
+      "_origin": "ast",
+      "community": 6,
+      "file_type": "code",
+      "norm_label": "read-project()",
+      "source_file": "phase02-setup.ps1",
+      "source_location": "L79"
+    },
+    {
+      "id": "phase02_setup_write_step",
+      "label": "Write-Step()",
+      "_origin": "ast",
+      "community": 6,
+      "file_type": "code",
+      "norm_label": "write-step()",
+      "source_file": "phase02-setup.ps1",
+      "source_location": "L31"
+    },
+    {
+      "id": "elsheiekhhms_core_common_softdeletableentity",
+      "label": "SoftDeletableEntity.cs",
+      "_origin": "ast",
+      "community": 7,
+      "file_type": "code",
+      "norm_label": "softdeletableentity.cs",
+      "source_file": "ElsheiekhHMS.Core/Common/SoftDeletableEntity.cs",
+      "source_location": "L1"
+    },
+    {
+      "id": "elsheiekhhms_core_common_softdeletableentity_cs_datetimeoffset",
+      "label": "DateTimeOffset",
+      "_origin": "ast",
+      "community": 7,
+      "file_type": "code",
+      "norm_label": "datetimeoffset",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "elsheiekhhms_core_common_softdeletableentity_elsheiekhhms_core_common_softdeletableentity_deletedat",
+      "label": "DeletedAt",
+      "_origin": "ast",
+      "community": 7,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "ElsheiekhHMS.Core.Common",
+        "scope_chain": [
+          "s0"
+        ]
+      },
+      "norm_label": "deletedat",
+      "source_file": "ElsheiekhHMS.Core/Common/SoftDeletableEntity.cs",
+      "source_location": "L7"
+    },
+    {
+      "id": "elsheiekhhms_core_common_softdeletableentity_elsheiekhhms_core_common_softdeletableentity_deletedby",
+      "label": "DeletedBy",
+      "_origin": "ast",
+      "community": 7,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "ElsheiekhHMS.Core.Common",
+        "scope_chain": [
+          "s0"
+        ]
+      },
+      "norm_label": "deletedby",
+      "source_file": "ElsheiekhHMS.Core/Common/SoftDeletableEntity.cs",
+      "source_location": "L8"
+    },
+    {
+      "id": "elsheiekhhms_core_common_softdeletableentity_elsheiekhhms_core_common_softdeletableentity_isdeleted",
+      "label": "IsDeleted",
+      "_origin": "ast",
+      "community": 7,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "ElsheiekhHMS.Core.Common",
+        "scope_chain": [
+          "s0"
+        ]
+      },
+      "norm_label": "isdeleted",
+      "source_file": "ElsheiekhHMS.Core/Common/SoftDeletableEntity.cs",
+      "source_location": "L6"
+    },
+    {
+      "id": "elsheiekhhms_tests_unit_domain_common_softdeletableentitytests_cs_fact",
+      "label": "Fact",
+      "_origin": "ast",
+      "community": 7,
+      "file_type": "code",
+      "norm_label": "fact",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "elsheiekhhms_web_components_layout_reconnectmodal_razor",
+      "label": "ReconnectModal.razor.js",
+      "_origin": "ast",
+      "community": 8,
+      "file_type": "code",
+      "norm_label": "reconnectmodal.razor.js",
+      "source_file": "ElsheiekhHMS.Web/Components/Layout/ReconnectModal.razor.js",
+      "source_location": "L1"
+    },
+    {
+      "id": "elsheiekhhms_web_components_layout_reconnectmodal_razor_reconnectmodal",
+      "label": "reconnectModal",
+      "_origin": "ast",
+      "community": 8,
+      "file_type": "code",
+      "norm_label": "reconnectmodal",
+      "source_file": "ElsheiekhHMS.Web/Components/Layout/ReconnectModal.razor.js",
+      "source_location": "L2"
+    },
+    {
+      "id": "elsheiekhhms_web_components_layout_reconnectmodal_razor_resumebutton",
+      "label": "resumeButton",
+      "_origin": "ast",
+      "community": 8,
+      "file_type": "code",
+      "norm_label": "resumebutton",
+      "source_file": "ElsheiekhHMS.Web/Components/Layout/ReconnectModal.razor.js",
+      "source_location": "L8"
+    },
+    {
+      "id": "elsheiekhhms_web_components_layout_reconnectmodal_razor_retrybutton",
+      "label": "retryButton",
+      "_origin": "ast",
+      "community": 8,
+      "file_type": "code",
+      "norm_label": "retrybutton",
+      "source_file": "ElsheiekhHMS.Web/Components/Layout/ReconnectModal.razor.js",
+      "source_location": "L5"
+    },
+    {
+      "id": "elsheiekhhms_web_components_app",
+      "label": "App.razor",
+      "_origin": "ast",
+      "community": 9,
+      "file_type": "code",
+      "norm_label": "app.razor",
+      "source_file": "ElsheiekhHMS.Web/Components/App.razor",
+      "source_location": null
+    },
+    {
+      "id": "headoutlet",
+      "label": "HeadOutlet",
+      "_origin": "ast",
+      "community": 9,
+      "file_type": "code",
+      "norm_label": "headoutlet",
+      "source_file": "ElsheiekhHMS.Web/Components/App.razor",
+      "source_location": "L14"
+    },
+    {
+      "id": "importmap",
+      "label": "ImportMap",
+      "_origin": "ast",
+      "community": 9,
+      "file_type": "code",
+      "norm_label": "importmap",
+      "source_file": "ElsheiekhHMS.Web/Components/App.razor",
+      "source_location": "L12"
+    },
+    {
+      "id": "reconnectmodal",
+      "label": "ReconnectModal",
+      "_origin": "ast",
+      "community": 9,
+      "file_type": "code",
+      "norm_label": "reconnectmodal",
+      "source_file": "ElsheiekhHMS.Web/Components/App.razor",
+      "source_location": "L19"
+    },
+    {
+      "id": "resourcepreloader",
+      "label": "ResourcePreloader",
+      "_origin": "ast",
+      "community": 9,
+      "file_type": "code",
+      "norm_label": "resourcepreloader",
+      "source_file": "ElsheiekhHMS.Web/Components/App.razor",
+      "source_location": "L8"
+    },
+    {
+      "id": "routes",
+      "label": "Routes",
+      "_origin": "ast",
+      "community": 9,
+      "file_type": "code",
+      "norm_label": "routes",
+      "source_file": "ElsheiekhHMS.Web/Components/App.razor",
+      "source_location": "L18"
+    },
+    {
+      "id": "microsoft_extensions_configuration",
+      "label": "microsoft_extensions_configuration",
+      "_origin": "semantic",
+      "community": 0,
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "microsoft_extensions_configuration",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "microsoft_extensions_dependencyinjection",
+      "label": "microsoft_extensions_dependencyinjection",
+      "_origin": "semantic",
+      "community": 0,
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "microsoft_extensions_dependencyinjection",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "xunit",
+      "label": "xunit",
+      "_origin": "semantic",
+      "community": 4,
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "xunit",
+      "source_file": "",
+      "type": "external"
+    }
+  ],
+  "links": [
+    {
+      "source": "elsheiekhhms_web_components_layout_reconnectmodal_razor_retrywhendocumentbecomesvisible",
+      "target": "elsheiekhhms_web_components_layout_reconnectmodal_razor_retry",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 0.85,
+      "context": "call",
+      "source_file": "ElsheiekhHMS.Web/Components/Layout/ReconnectModal.razor.js",
+      "source_location": "L61",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_tests_unit_domain_common_auditableentitytests_elsheiekhhms_tests_unit_domain_common_auditableentitytests_creation_metadata_preserves_supplied_utc_time_and_identifier",
+      "target": "elsheiekhhms_tests_unit_domain_common_auditableentitytests_cs_fact",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "attribute",
+      "metadata": {
+        "ref_token": "Fact"
+      },
+      "source_file": "ElsheiekhHMS.Tests/Unit/Domain/Common/AuditableEntityTests.cs",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_tests_unit_domain_common_auditableentitytests_elsheiekhhms_tests_unit_domain_common_auditableentitytests_new_entity_has_no_update_or_user_metadata",
+      "target": "elsheiekhhms_tests_unit_domain_common_auditableentitytests_cs_fact",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "attribute",
+      "metadata": {
+        "ref_token": "Fact"
+      },
+      "source_file": "ElsheiekhHMS.Tests/Unit/Domain/Common/AuditableEntityTests.cs",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_tests_unit_domain_common_baseentitytests_elsheiekhhms_tests_unit_domain_common_baseentitytests_derived_entity_can_assign_integer_identity",
+      "target": "elsheiekhhms_tests_unit_domain_common_baseentitytests_cs_fact",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "attribute",
+      "metadata": {
+        "ref_token": "Fact"
+      },
+      "source_file": "ElsheiekhHMS.Tests/Unit/Domain/Common/BaseEntityTests.cs",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_tests_unit_domain_common_softdeletableentitytests_elsheiekhhms_tests_unit_domain_common_softdeletableentitytests_new_entity_is_active_without_deletion_metadata",
+      "target": "elsheiekhhms_tests_unit_domain_common_softdeletableentitytests_cs_fact",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "attribute",
+      "metadata": {
+        "ref_token": "Fact"
+      },
+      "source_file": "ElsheiekhHMS.Tests/Unit/Domain/Common/SoftDeletableEntityTests.cs",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_tests_unit_domain_exceptions_domainexceptiontests_elsheiekhhms_tests_unit_domain_exceptions_domainexceptiontests_exceptions_preserve_message",
+      "target": "inlinedata",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "attribute",
+      "metadata": {
+        "ref_token": "InlineData"
+      },
+      "source_file": "ElsheiekhHMS.Tests/Unit/Domain/Exceptions/DomainExceptionTests.cs",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_tests_unit_domain_exceptions_domainexceptiontests_elsheiekhhms_tests_unit_domain_exceptions_domainexceptiontests_exceptions_preserve_original_cause",
+      "target": "inlinedata",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "attribute",
+      "metadata": {
+        "ref_token": "InlineData"
+      },
+      "source_file": "ElsheiekhHMS.Tests/Unit/Domain/Exceptions/DomainExceptionTests.cs",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_tests_unit_domain_exceptions_domainexceptiontests_elsheiekhhms_tests_unit_domain_exceptions_domainexceptiontests_exceptions_preserve_message",
+      "target": "theory",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "attribute",
+      "metadata": {
+        "ref_token": "Theory"
+      },
+      "source_file": "ElsheiekhHMS.Tests/Unit/Domain/Exceptions/DomainExceptionTests.cs",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_tests_unit_domain_exceptions_domainexceptiontests_elsheiekhhms_tests_unit_domain_exceptions_domainexceptiontests_exceptions_preserve_original_cause",
+      "target": "theory",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "attribute",
+      "metadata": {
+        "ref_token": "Theory"
+      },
+      "source_file": "ElsheiekhHMS.Tests/Unit/Domain/Exceptions/DomainExceptionTests.cs",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_tests_unit_domain_common_auditableentitytests_elsheiekhhms_tests_unit_domain_common_auditableentitytests_creation_metadata_preserves_supplied_utc_time_and_identifier",
+      "target": "elsheiekhhms_tests_unit_domain_common_auditableentitytests_elsheiekhhms_tests_unit_domain_common_testentity",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "ElsheiekhHMS.Tests/Unit/Domain/Common/AuditableEntityTests.cs",
+      "source_location": "L21",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_tests_unit_domain_common_auditableentitytests_elsheiekhhms_tests_unit_domain_common_auditableentitytests_new_entity_has_no_update_or_user_metadata",
+      "target": "elsheiekhhms_tests_unit_domain_common_auditableentitytests_elsheiekhhms_tests_unit_domain_common_testentity",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "ElsheiekhHMS.Tests/Unit/Domain/Common/AuditableEntityTests.cs",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_tests_unit_domain_common_baseentitytests_elsheiekhhms_tests_unit_domain_common_baseentitytests_derived_entity_can_assign_integer_identity",
+      "target": "elsheiekhhms_tests_unit_domain_common_baseentitytests_elsheiekhhms_tests_unit_domain_common_testentity",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "ElsheiekhHMS.Tests/Unit/Domain/Common/BaseEntityTests.cs",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_tests_unit_domain_common_softdeletableentitytests_elsheiekhhms_tests_unit_domain_common_softdeletableentitytests_new_entity_is_active_without_deletion_metadata",
+      "target": "elsheiekhhms_tests_unit_domain_common_softdeletableentitytests_elsheiekhhms_tests_unit_domain_common_testentity",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "ElsheiekhHMS.Tests/Unit/Domain/Common/SoftDeletableEntityTests.cs",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_core_common_auditableentity_elsheiekhhms_core_common_auditableentity",
+      "target": "elsheiekhhms_core_common_auditableentity_cs_datetimeoffset",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "metadata": {
+        "ref_token": "DateTimeOffset"
+      },
+      "source_file": "ElsheiekhHMS.Core/Common/AuditableEntity.cs",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_core_common_softdeletableentity_elsheiekhhms_core_common_softdeletableentity",
+      "target": "elsheiekhhms_core_common_softdeletableentity_cs_datetimeoffset",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "metadata": {
+        "ref_token": "DateTimeOffset"
+      },
+      "source_file": "ElsheiekhHMS.Core/Common/SoftDeletableEntity.cs",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_core_common_auditableentity_elsheiekhhms_core_common_auditableentity",
+      "target": "elsheiekhhms_core_common_auditableentity_elsheiekhhms_core_common_auditableentity_createdat",
+      "relation": "defines",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "ElsheiekhHMS.Core/Common/AuditableEntity.cs",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_core_common_auditableentity_elsheiekhhms_core_common_auditableentity",
+      "target": "elsheiekhhms_core_common_auditableentity_elsheiekhhms_core_common_auditableentity_createdby",
+      "relation": "defines",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "ElsheiekhHMS.Core/Common/AuditableEntity.cs",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_core_common_auditableentity_elsheiekhhms_core_common_auditableentity",
+      "target": "elsheiekhhms_core_common_auditableentity_elsheiekhhms_core_common_auditableentity_updatedat",
+      "relation": "defines",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "ElsheiekhHMS.Core/Common/AuditableEntity.cs",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_core_common_auditableentity_elsheiekhhms_core_common_auditableentity",
+      "target": "elsheiekhhms_core_common_auditableentity_elsheiekhhms_core_common_auditableentity_updatedby",
+      "relation": "defines",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "ElsheiekhHMS.Core/Common/AuditableEntity.cs",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_core_common_baseentity_elsheiekhhms_core_common_baseentity",
+      "target": "elsheiekhhms_core_common_baseentity_elsheiekhhms_core_common_baseentity_id",
+      "relation": "defines",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "ElsheiekhHMS.Core/Common/BaseEntity.cs",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_core_common_softdeletableentity_elsheiekhhms_core_common_softdeletableentity",
+      "target": "elsheiekhhms_core_common_softdeletableentity_elsheiekhhms_core_common_softdeletableentity_isdeleted",
+      "relation": "defines",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "ElsheiekhHMS.Core/Common/SoftDeletableEntity.cs",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_core_common_softdeletableentity_elsheiekhhms_core_common_softdeletableentity",
+      "target": "elsheiekhhms_core_common_softdeletableentity_elsheiekhhms_core_common_softdeletableentity_deletedat",
+      "relation": "defines",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "ElsheiekhHMS.Core/Common/SoftDeletableEntity.cs",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_core_common_softdeletableentity_elsheiekhhms_core_common_softdeletableentity",
+      "target": "elsheiekhhms_core_common_softdeletableentity_elsheiekhhms_core_common_softdeletableentity_deletedby",
+      "relation": "defines",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "ElsheiekhHMS.Core/Common/SoftDeletableEntity.cs",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_core_interfaces_ihasconcurrencytoken_elsheiekhhms_core_interfaces_ihasconcurrencytoken",
+      "target": "elsheiekhhms_core_interfaces_ihasconcurrencytoken_elsheiekhhms_core_interfaces_ihasconcurrencytoken_rowversion",
+      "relation": "defines",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "ElsheiekhHMS.Core/Interfaces/IHasConcurrencyToken.cs",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_web_program",
+      "target": "csharp_namespace:445f2ad739c775ae",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "ElsheiekhHMS.Application",
+        "scope_kind": "file"
+      },
+      "source_file": "ElsheiekhHMS.Web/Program.cs",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_tests_unit_domain_common_auditableentitytests",
+      "target": "csharp_namespace:849a5ff7b4e439b6",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "ElsheiekhHMS.Core.Common",
+        "scope_kind": "file"
+      },
+      "source_file": "ElsheiekhHMS.Tests/Unit/Domain/Common/AuditableEntityTests.cs",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_tests_unit_domain_common_baseentitytests",
+      "target": "csharp_namespace:849a5ff7b4e439b6",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "ElsheiekhHMS.Core.Common",
+        "scope_kind": "file"
+      },
+      "source_file": "ElsheiekhHMS.Tests/Unit/Domain/Common/BaseEntityTests.cs",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_tests_unit_domain_common_softdeletableentitytests",
+      "target": "csharp_namespace:849a5ff7b4e439b6",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "ElsheiekhHMS.Core.Common",
+        "scope_kind": "file"
+      },
+      "source_file": "ElsheiekhHMS.Tests/Unit/Domain/Common/SoftDeletableEntityTests.cs",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_tests_unit_domain_exceptions_domainexceptiontests",
+      "target": "csharp_namespace:77bc4792baee6799",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "ElsheiekhHMS.Core.Exceptions",
+        "scope_kind": "file"
+      },
+      "source_file": "ElsheiekhHMS.Tests/Unit/Domain/Exceptions/DomainExceptionTests.cs",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_web_program",
+      "target": "csharp_namespace:62c43e1281140a6f",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "ElsheiekhHMS.Infrastructure",
+        "scope_kind": "file"
+      },
+      "source_file": "ElsheiekhHMS.Web/Program.cs",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_web_components_imports",
+      "target": "elsheiekhhms_web",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "ElsheiekhHMS.Web",
+        "scope_kind": "file"
+      },
+      "source_file": "ElsheiekhHMS.Web/Components/_Imports.razor",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_web_components_imports",
+      "target": "elsheiekhhms_web_components",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "ElsheiekhHMS.Web.Components",
+        "scope_kind": "file"
+      },
+      "source_file": "ElsheiekhHMS.Web/Components/_Imports.razor",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_web_program",
+      "target": "elsheiekhhms_web_components",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "ElsheiekhHMS.Web.Components",
+        "scope_kind": "file"
+      },
+      "source_file": "ElsheiekhHMS.Web/Program.cs",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_web_components_imports",
+      "target": "elsheiekhhms_web_components_layout",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "ElsheiekhHMS.Web.Components.Layout",
+        "scope_kind": "file"
+      },
+      "source_file": "ElsheiekhHMS.Web/Components/_Imports.razor",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_web_components_imports",
+      "target": "microsoft_aspnetcore_components_forms",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "Microsoft.AspNetCore.Components.Forms",
+        "scope_kind": "file"
+      },
+      "source_file": "ElsheiekhHMS.Web/Components/_Imports.razor",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_web_components_imports",
+      "target": "microsoft_aspnetcore_components_routing",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "Microsoft.AspNetCore.Components.Routing",
+        "scope_kind": "file"
+      },
+      "source_file": "ElsheiekhHMS.Web/Components/_Imports.razor",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_web_components_imports",
+      "target": "microsoft_aspnetcore_components_web",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "Microsoft.AspNetCore.Components.Web",
+        "scope_kind": "file"
+      },
+      "source_file": "ElsheiekhHMS.Web/Components/_Imports.razor",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_web_components_imports",
+      "target": "microsoft_aspnetcore_components_web_rendermode",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "using_kind": "static",
+        "target_fqn": "Microsoft.AspNetCore.Components.Web.RenderMode",
+        "scope_kind": "file"
+      },
+      "source_file": "ElsheiekhHMS.Web/Components/_Imports.razor",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_web_components_imports",
+      "target": "microsoft_aspnetcore_components_web_virtualization",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "Microsoft.AspNetCore.Components.Web.Virtualization",
+        "scope_kind": "file"
+      },
+      "source_file": "ElsheiekhHMS.Web/Components/_Imports.razor",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_infrastructure_infrastructureserviceextensions",
+      "target": "microsoft_extensions_configuration",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "Microsoft.Extensions.Configuration",
+        "scope_kind": "file"
+      },
+      "source_file": "ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_application_applicationserviceextensions",
+      "target": "microsoft_extensions_dependencyinjection",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "Microsoft.Extensions.DependencyInjection",
+        "scope_kind": "file"
+      },
+      "source_file": "ElsheiekhHMS.Application/ApplicationServiceExtensions.cs",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_infrastructure_infrastructureserviceextensions",
+      "target": "microsoft_extensions_dependencyinjection",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "Microsoft.Extensions.DependencyInjection",
+        "scope_kind": "file"
+      },
+      "source_file": "ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_web_components_imports",
+      "target": "microsoft_jsinterop",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "Microsoft.JSInterop",
+        "scope_kind": "file"
+      },
+      "source_file": "ElsheiekhHMS.Web/Components/_Imports.razor",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_web_components_pages_error",
+      "target": "system_diagnostics",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "System.Diagnostics",
+        "scope_kind": "file"
+      },
+      "source_file": "ElsheiekhHMS.Web/Components/Pages/Error.razor",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_web_components_imports",
+      "target": "system_net_http_json",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "System.Net.Http.Json",
+        "scope_kind": "file"
+      },
+      "source_file": "ElsheiekhHMS.Web/Components/_Imports.razor",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_tests_unit_domain_common_auditableentitytests",
+      "target": "xunit",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "Xunit",
+        "scope_kind": "file"
+      },
+      "source_file": "ElsheiekhHMS.Tests/Unit/Domain/Common/AuditableEntityTests.cs",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_tests_unit_domain_common_baseentitytests",
+      "target": "xunit",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "Xunit",
+        "scope_kind": "file"
+      },
+      "source_file": "ElsheiekhHMS.Tests/Unit/Domain/Common/BaseEntityTests.cs",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_tests_unit_domain_common_softdeletableentitytests",
+      "target": "xunit",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "Xunit",
+        "scope_kind": "file"
+      },
+      "source_file": "ElsheiekhHMS.Tests/Unit/Domain/Common/SoftDeletableEntityTests.cs",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_tests_unit_domain_exceptions_domainexceptiontests",
+      "target": "xunit",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "Xunit",
+        "scope_kind": "file"
+      },
+      "source_file": "ElsheiekhHMS.Tests/Unit/Domain/Exceptions/DomainExceptionTests.cs",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_infrastructure_infrastructureserviceextensions_elsheiekhhms_infrastructure_infrastructureserviceextensions_addinfrastructure",
+      "target": "iconfiguration",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "parameter_type",
+      "metadata": {
+        "ref_token": "IConfiguration"
+      },
+      "source_file": "ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_application_applicationserviceextensions_elsheiekhhms_application_applicationserviceextensions_addapplication",
+      "target": "elsheiekhhms_application_applicationserviceextensions_cs_iservicecollection",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "return_type",
+      "metadata": {
+        "ref_token": "IServiceCollection"
+      },
+      "source_file": "ElsheiekhHMS.Application/ApplicationServiceExtensions.cs",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_infrastructure_infrastructureserviceextensions_elsheiekhhms_infrastructure_infrastructureserviceextensions_addinfrastructure",
+      "target": "elsheiekhhms_infrastructure_infrastructureserviceextensions_cs_iservicecollection",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "return_type",
+      "metadata": {
+        "ref_token": "IServiceCollection"
+      },
+      "source_file": "ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_core_common_softdeletableentity_elsheiekhhms_core_common_softdeletableentity",
+      "target": "elsheiekhhms_core_common_auditableentity_elsheiekhhms_core_common_auditableentity",
+      "relation": "inherits",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "metadata": {
+        "ref_token": "AuditableEntity"
+      },
+      "source_file": "ElsheiekhHMS.Core/Common/SoftDeletableEntity.cs",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_tests_unit_domain_common_auditableentitytests_elsheiekhhms_tests_unit_domain_common_testentity",
+      "target": "elsheiekhhms_core_common_auditableentity_elsheiekhhms_core_common_auditableentity",
+      "relation": "inherits",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "metadata": {
+        "ref_token": "AuditableEntity"
+      },
+      "source_file": "ElsheiekhHMS.Tests/Unit/Domain/Common/AuditableEntityTests.cs",
+      "source_location": "L28",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_core_common_auditableentity_elsheiekhhms_core_common_auditableentity",
+      "target": "elsheiekhhms_core_common_baseentity_elsheiekhhms_core_common_baseentity",
+      "relation": "inherits",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "metadata": {
+        "ref_token": "BaseEntity"
+      },
+      "source_file": "ElsheiekhHMS.Core/Common/AuditableEntity.cs",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_tests_unit_domain_common_baseentitytests_elsheiekhhms_tests_unit_domain_common_testentity",
+      "target": "elsheiekhhms_core_common_baseentity_elsheiekhhms_core_common_baseentity",
+      "relation": "inherits",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "metadata": {
+        "ref_token": "BaseEntity"
+      },
+      "source_file": "ElsheiekhHMS.Tests/Unit/Domain/Common/BaseEntityTests.cs",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_core_exceptions_businessruleexception_elsheiekhhms_core_exceptions_businessruleexception",
+      "target": "elsheiekhhms_core_exceptions_domainexception_elsheiekhhms_core_exceptions_domainexception",
+      "relation": "inherits",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "metadata": {
+        "ref_token": "DomainException"
+      },
+      "source_file": "ElsheiekhHMS.Core/Exceptions/BusinessRuleException.cs",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_core_exceptions_domainvalidationexception_elsheiekhhms_core_exceptions_domainvalidationexception",
+      "target": "elsheiekhhms_core_exceptions_domainexception_elsheiekhhms_core_exceptions_domainexception",
+      "relation": "inherits",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "metadata": {
+        "ref_token": "DomainException"
+      },
+      "source_file": "ElsheiekhHMS.Core/Exceptions/DomainValidationException.cs",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_core_exceptions_domainexception_elsheiekhhms_core_exceptions_domainexception",
+      "target": "exception",
+      "relation": "inherits",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "metadata": {
+        "ref_token": "Exception"
+      },
+      "source_file": "ElsheiekhHMS.Core/Exceptions/DomainException.cs",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_tests_unit_domain_common_softdeletableentitytests_elsheiekhhms_tests_unit_domain_common_testentity",
+      "target": "elsheiekhhms_core_common_softdeletableentity_elsheiekhhms_core_common_softdeletableentity",
+      "relation": "inherits",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "metadata": {
+        "ref_token": "SoftDeletableEntity"
+      },
+      "source_file": "ElsheiekhHMS.Tests/Unit/Domain/Common/SoftDeletableEntityTests.cs",
+      "source_location": "L18",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_web_components_app",
+      "target": "importmap",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ElsheiekhHMS.Web/Components/App.razor",
+      "source_location": "L12",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_web_components_app",
+      "target": "headoutlet",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ElsheiekhHMS.Web/Components/App.razor",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_web_components_app",
+      "target": "routes",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ElsheiekhHMS.Web/Components/App.razor",
+      "source_location": "L18",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_web_components_app",
+      "target": "reconnectmodal",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ElsheiekhHMS.Web/Components/App.razor",
+      "source_location": "L19",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_web_components_app",
+      "target": "resourcepreloader",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ElsheiekhHMS.Web/Components/App.razor",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_web_components_layout_mainlayout",
+      "target": "navmenu",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ElsheiekhHMS.Web/Components/Layout/MainLayout.razor",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_web_components_layout_navmenu",
+      "target": "navlink",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ElsheiekhHMS.Web/Components/Layout/NavMenu.razor",
+      "source_location": "L24",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_web_components_pages_counter",
+      "target": "elsheiekhhms_web_components_pages_counter_razor_pagetitle",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ElsheiekhHMS.Web/Components/Pages/Counter.razor",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_web_components_pages_error",
+      "target": "elsheiekhhms_web_components_pages_error_razor_pagetitle",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ElsheiekhHMS.Web/Components/Pages/Error.razor",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_web_components_pages_home",
+      "target": "elsheiekhhms_web_components_pages_home_razor_pagetitle",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ElsheiekhHMS.Web/Components/Pages/Home.razor",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_web_components_pages_weather",
+      "target": "elsheiekhhms_web_components_pages_weather_razor_pagetitle",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ElsheiekhHMS.Web/Components/Pages/Weather.razor",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_web_components_routes",
+      "target": "router",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ElsheiekhHMS.Web/Components/Routes.razor",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_web_components_routes",
+      "target": "found",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ElsheiekhHMS.Web/Components/Routes.razor",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_web_components_routes",
+      "target": "routeview",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ElsheiekhHMS.Web/Components/Routes.razor",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_web_components_routes",
+      "target": "focusonnavigate",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ElsheiekhHMS.Web/Components/Routes.razor",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "phase02_setup_assert_architecture",
+      "target": "phase02_setup_write_step",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "phase02-setup.ps1",
+      "source_location": "L124",
+      "weight": 1.0
+    },
+    {
+      "source": "phase02_setup_assert_architecture",
+      "target": "phase02_setup_get_workspacefiles",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "phase02-setup.ps1",
+      "source_location": "L89",
+      "weight": 1.0
+    },
+    {
+      "source": "phase02_setup_assert_architecture",
+      "target": "phase02_setup_read_project",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "phase02-setup.ps1",
+      "source_location": "L92",
+      "weight": 1.0
+    },
+    {
+      "source": "phase02_setup_assert_architecture",
+      "target": "phase02_setup_get_safepath",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "phase02-setup.ps1",
+      "source_location": "L98",
+      "weight": 1.0
+    },
+    {
+      "source": "phase02_setup_ensure_directory",
+      "target": "phase02_setup_get_safepath",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "phase02-setup.ps1",
+      "source_location": "L165",
+      "weight": 1.0
+    },
+    {
+      "source": "phase02_setup_ensure_directory",
+      "target": "phase02_setup_write_step",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "phase02-setup.ps1",
+      "source_location": "L169",
+      "weight": 1.0
+    },
+    {
+      "source": "phase02_setup_ensure_file",
+      "target": "phase02_setup_get_filestate",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "phase02-setup.ps1",
+      "source_location": "L174",
+      "weight": 1.0
+    },
+    {
+      "source": "phase02_setup_ensure_file",
+      "target": "phase02_setup_write_step",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "phase02-setup.ps1",
+      "source_location": "L176",
+      "weight": 1.0
+    },
+    {
+      "source": "phase02_setup_ensure_file",
+      "target": "phase02_setup_get_safepath",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "phase02-setup.ps1",
+      "source_location": "L180",
+      "weight": 1.0
+    },
+    {
+      "source": "phase02_setup_get_filestate",
+      "target": "phase02_setup_get_safepath",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "phase02-setup.ps1",
+      "source_location": "L151",
+      "weight": 1.0
+    },
+    {
+      "source": "phase02_setup_get_filestate",
+      "target": "phase02_setup_normalize_text",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "phase02-setup.ps1",
+      "source_location": "L159",
+      "weight": 1.0
+    },
+    {
+      "source": "phase02_setup_invoke_dotnet",
+      "target": "phase02_setup_write_step",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "phase02-setup.ps1",
+      "source_location": "L129",
+      "weight": 1.0
+    },
+    {
+      "source": "phase02_setup_read_project",
+      "target": "phase02_setup_get_safepath",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "phase02-setup.ps1",
+      "source_location": "L81",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms",
+      "target": "elsheiekhhms_application_elsheiekhhms_application",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ElsheiekhHMS.slnx",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms",
+      "target": "elsheiekhhms_core_elsheiekhhms_core",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ElsheiekhHMS.slnx",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms",
+      "target": "elsheiekhhms_infrastructure_elsheiekhhms_infrastructure",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ElsheiekhHMS.slnx",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms",
+      "target": "elsheiekhhms_tests_elsheiekhhms_tests",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ElsheiekhHMS.slnx",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms",
+      "target": "elsheiekhhms_web_elsheiekhhms_web",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ElsheiekhHMS.slnx",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_application_applicationserviceextensions",
+      "target": "elsheiekhhms_application_applicationserviceextensions_elsheiekhhms_application_applicationserviceextensions",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ElsheiekhHMS.Application/ApplicationServiceExtensions.cs",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_application_applicationserviceextensions",
+      "target": "csharp_namespace:445f2ad739c775ae",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ElsheiekhHMS.Application/ApplicationServiceExtensions.cs",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_core_common_auditableentity",
+      "target": "csharp_namespace:849a5ff7b4e439b6",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ElsheiekhHMS.Core/Common/AuditableEntity.cs",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_core_common_auditableentity",
+      "target": "elsheiekhhms_core_common_auditableentity_elsheiekhhms_core_common_auditableentity",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ElsheiekhHMS.Core/Common/AuditableEntity.cs",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_core_common_baseentity",
+      "target": "csharp_namespace:849a5ff7b4e439b6",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ElsheiekhHMS.Core/Common/BaseEntity.cs",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_core_common_baseentity",
+      "target": "elsheiekhhms_core_common_baseentity_elsheiekhhms_core_common_baseentity",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ElsheiekhHMS.Core/Common/BaseEntity.cs",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_core_common_softdeletableentity",
+      "target": "csharp_namespace:849a5ff7b4e439b6",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ElsheiekhHMS.Core/Common/SoftDeletableEntity.cs",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_core_common_softdeletableentity",
+      "target": "elsheiekhhms_core_common_softdeletableentity_elsheiekhhms_core_common_softdeletableentity",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ElsheiekhHMS.Core/Common/SoftDeletableEntity.cs",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_core_exceptions_businessruleexception",
+      "target": "csharp_namespace:77bc4792baee6799",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ElsheiekhHMS.Core/Exceptions/BusinessRuleException.cs",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_core_exceptions_businessruleexception",
+      "target": "elsheiekhhms_core_exceptions_businessruleexception_elsheiekhhms_core_exceptions_businessruleexception",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ElsheiekhHMS.Core/Exceptions/BusinessRuleException.cs",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_core_exceptions_domainexception",
+      "target": "csharp_namespace:77bc4792baee6799",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ElsheiekhHMS.Core/Exceptions/DomainException.cs",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_core_exceptions_domainexception",
+      "target": "elsheiekhhms_core_exceptions_domainexception_elsheiekhhms_core_exceptions_domainexception",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ElsheiekhHMS.Core/Exceptions/DomainException.cs",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_core_exceptions_domainvalidationexception",
+      "target": "csharp_namespace:77bc4792baee6799",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ElsheiekhHMS.Core/Exceptions/DomainValidationException.cs",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_core_exceptions_domainvalidationexception",
+      "target": "elsheiekhhms_core_exceptions_domainvalidationexception_elsheiekhhms_core_exceptions_domainvalidationexception",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ElsheiekhHMS.Core/Exceptions/DomainValidationException.cs",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_core_interfaces_ihasconcurrencytoken",
+      "target": "csharp_namespace:798fee7d7dc1564a",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ElsheiekhHMS.Core/Interfaces/IHasConcurrencyToken.cs",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_core_interfaces_ihasconcurrencytoken",
+      "target": "elsheiekhhms_core_interfaces_ihasconcurrencytoken_elsheiekhhms_core_interfaces_ihasconcurrencytoken",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ElsheiekhHMS.Core/Interfaces/IHasConcurrencyToken.cs",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_infrastructure_infrastructureserviceextensions",
+      "target": "elsheiekhhms_infrastructure_infrastructureserviceextensions_elsheiekhhms_infrastructure_infrastructureserviceextensions",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_infrastructure_infrastructureserviceextensions",
+      "target": "csharp_namespace:62c43e1281140a6f",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_tests_unit_domain_common_auditableentitytests",
+      "target": "csharp_namespace:3e45288a4abf34b9",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ElsheiekhHMS.Tests/Unit/Domain/Common/AuditableEntityTests.cs",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_tests_unit_domain_common_auditableentitytests",
+      "target": "elsheiekhhms_tests_unit_domain_common_auditableentitytests_elsheiekhhms_tests_unit_domain_common_auditableentitytests",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ElsheiekhHMS.Tests/Unit/Domain/Common/AuditableEntityTests.cs",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_tests_unit_domain_common_auditableentitytests_elsheiekhhms_tests_unit_domain_common_auditableentitytests",
+      "target": "elsheiekhhms_tests_unit_domain_common_auditableentitytests_elsheiekhhms_tests_unit_domain_common_testentity",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ElsheiekhHMS.Tests/Unit/Domain/Common/AuditableEntityTests.cs",
+      "source_location": "L28",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_tests_unit_domain_common_baseentitytests",
+      "target": "csharp_namespace:3e45288a4abf34b9",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ElsheiekhHMS.Tests/Unit/Domain/Common/BaseEntityTests.cs",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_tests_unit_domain_common_baseentitytests",
+      "target": "elsheiekhhms_tests_unit_domain_common_baseentitytests_elsheiekhhms_tests_unit_domain_common_baseentitytests",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ElsheiekhHMS.Tests/Unit/Domain/Common/BaseEntityTests.cs",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_tests_unit_domain_common_baseentitytests_elsheiekhhms_tests_unit_domain_common_baseentitytests",
+      "target": "elsheiekhhms_tests_unit_domain_common_baseentitytests_elsheiekhhms_tests_unit_domain_common_testentity",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ElsheiekhHMS.Tests/Unit/Domain/Common/BaseEntityTests.cs",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_tests_unit_domain_common_softdeletableentitytests",
+      "target": "csharp_namespace:3e45288a4abf34b9",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ElsheiekhHMS.Tests/Unit/Domain/Common/SoftDeletableEntityTests.cs",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_tests_unit_domain_common_softdeletableentitytests",
+      "target": "elsheiekhhms_tests_unit_domain_common_softdeletableentitytests_elsheiekhhms_tests_unit_domain_common_softdeletableentitytests",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ElsheiekhHMS.Tests/Unit/Domain/Common/SoftDeletableEntityTests.cs",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_tests_unit_domain_common_softdeletableentitytests_elsheiekhhms_tests_unit_domain_common_softdeletableentitytests",
+      "target": "elsheiekhhms_tests_unit_domain_common_softdeletableentitytests_elsheiekhhms_tests_unit_domain_common_testentity",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ElsheiekhHMS.Tests/Unit/Domain/Common/SoftDeletableEntityTests.cs",
+      "source_location": "L18",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_tests_unit_domain_exceptions_domainexceptiontests",
+      "target": "csharp_namespace:67c6625fb7964389",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ElsheiekhHMS.Tests/Unit/Domain/Exceptions/DomainExceptionTests.cs",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_tests_unit_domain_exceptions_domainexceptiontests",
+      "target": "elsheiekhhms_tests_unit_domain_exceptions_domainexceptiontests_elsheiekhhms_tests_unit_domain_exceptions_domainexceptiontests",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ElsheiekhHMS.Tests/Unit/Domain/Exceptions/DomainExceptionTests.cs",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_web_components_layout_reconnectmodal_razor",
+      "target": "elsheiekhhms_web_components_layout_reconnectmodal_razor_reconnectmodal",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ElsheiekhHMS.Web/Components/Layout/ReconnectModal.razor.js",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_web_components_layout_reconnectmodal_razor",
+      "target": "elsheiekhhms_web_components_layout_reconnectmodal_razor_retrybutton",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ElsheiekhHMS.Web/Components/Layout/ReconnectModal.razor.js",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_web_components_layout_reconnectmodal_razor",
+      "target": "elsheiekhhms_web_components_layout_reconnectmodal_razor_retrywhendocumentbecomesvisible",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ElsheiekhHMS.Web/Components/Layout/ReconnectModal.razor.js",
+      "source_location": "L59",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_web_components_layout_reconnectmodal_razor",
+      "target": "elsheiekhhms_web_components_layout_reconnectmodal_razor_resumebutton",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ElsheiekhHMS.Web/Components/Layout/ReconnectModal.razor.js",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_web_components_pages_counter",
+      "target": "elsheiekhhms_web_components_pages_counter_incrementcount",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ElsheiekhHMS.Web/Components/Pages/Counter.razor",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_web_components_pages_error",
+      "target": "elsheiekhhms_web_components_pages_error_oninitialized",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ElsheiekhHMS.Web/Components/Pages/Error.razor",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_web_components_pages_weather",
+      "target": "elsheiekhhms_web_components_pages_weather_oninitializedasync",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ElsheiekhHMS.Web/Components/Pages/Weather.razor",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_web_properties_launchsettings",
+      "target": "elsheiekhhms_web_properties_launchsettings_schema",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ElsheiekhHMS.Web/Properties/launchSettings.json",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_web_properties_launchsettings",
+      "target": "elsheiekhhms_web_properties_launchsettings_profiles",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ElsheiekhHMS.Web/Properties/launchSettings.json",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_web_properties_launchsettings_http_environmentvariables",
+      "target": "elsheiekhhms_web_properties_launchsettings_environmentvariables_aspnetcore_environment",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ElsheiekhHMS.Web/Properties/launchSettings.json",
+      "source_location": "L10",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_web_properties_launchsettings_https_environmentvariables",
+      "target": "elsheiekhhms_web_properties_launchsettings_environmentvariables_aspnetcore_environment",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ElsheiekhHMS.Web/Properties/launchSettings.json",
+      "source_location": "L19",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_web_properties_launchsettings_profiles",
+      "target": "elsheiekhhms_web_properties_launchsettings_profiles_https",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ElsheiekhHMS.Web/Properties/launchSettings.json",
+      "source_location": "L13",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_web_properties_launchsettings_profiles",
+      "target": "elsheiekhhms_web_properties_launchsettings_profiles_http",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ElsheiekhHMS.Web/Properties/launchSettings.json",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_web_properties_launchsettings_profiles_http",
+      "target": "elsheiekhhms_web_properties_launchsettings_http_commandname",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ElsheiekhHMS.Web/Properties/launchSettings.json",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_web_properties_launchsettings_profiles_http",
+      "target": "elsheiekhhms_web_properties_launchsettings_http_dotnetrunmessages",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ElsheiekhHMS.Web/Properties/launchSettings.json",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_web_properties_launchsettings_profiles_http",
+      "target": "elsheiekhhms_web_properties_launchsettings_http_launchbrowser",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ElsheiekhHMS.Web/Properties/launchSettings.json",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_web_properties_launchsettings_profiles_http",
+      "target": "elsheiekhhms_web_properties_launchsettings_http_applicationurl",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ElsheiekhHMS.Web/Properties/launchSettings.json",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_web_properties_launchsettings_profiles_http",
+      "target": "elsheiekhhms_web_properties_launchsettings_http_environmentvariables",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ElsheiekhHMS.Web/Properties/launchSettings.json",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_web_properties_launchsettings_profiles_https",
+      "target": "elsheiekhhms_web_properties_launchsettings_https_commandname",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ElsheiekhHMS.Web/Properties/launchSettings.json",
+      "source_location": "L14",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_web_properties_launchsettings_profiles_https",
+      "target": "elsheiekhhms_web_properties_launchsettings_https_dotnetrunmessages",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ElsheiekhHMS.Web/Properties/launchSettings.json",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_web_properties_launchsettings_profiles_https",
+      "target": "elsheiekhhms_web_properties_launchsettings_https_launchbrowser",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ElsheiekhHMS.Web/Properties/launchSettings.json",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_web_properties_launchsettings_profiles_https",
+      "target": "elsheiekhhms_web_properties_launchsettings_https_applicationurl",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ElsheiekhHMS.Web/Properties/launchSettings.json",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_web_properties_launchsettings_profiles_https",
+      "target": "elsheiekhhms_web_properties_launchsettings_https_environmentvariables",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ElsheiekhHMS.Web/Properties/launchSettings.json",
+      "source_location": "L18",
+      "weight": 1.0
+    },
+    {
+      "source": "phase02_setup",
+      "target": "phase02_setup_invoke_dotnet",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "phase02-setup.ps1",
+      "source_location": "L127",
+      "weight": 1.0
+    },
+    {
+      "source": "phase02_setup",
+      "target": "phase02_setup_normalize_text",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "phase02-setup.ps1",
+      "source_location": "L134",
+      "weight": 1.0
+    },
+    {
+      "source": "phase02_setup",
+      "target": "phase02_setup_get_contenthash",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "phase02-setup.ps1",
+      "source_location": "L139",
+      "weight": 1.0
+    },
+    {
+      "source": "phase02_setup",
+      "target": "phase02_setup_get_filestate",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "phase02-setup.ps1",
+      "source_location": "L149",
+      "weight": 1.0
+    },
+    {
+      "source": "phase02_setup",
+      "target": "phase02_setup_ensure_directory",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "phase02-setup.ps1",
+      "source_location": "L163",
+      "weight": 1.0
+    },
+    {
+      "source": "phase02_setup",
+      "target": "phase02_setup_ensure_file",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "phase02-setup.ps1",
+      "source_location": "L172",
+      "weight": 1.0
+    },
+    {
+      "source": "phase02_setup",
+      "target": "phase02_setup_write_step",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "phase02-setup.ps1",
+      "source_location": "L31",
+      "weight": 1.0
+    },
+    {
+      "source": "phase02_setup",
+      "target": "phase02_setup_get_safepath",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "phase02-setup.ps1",
+      "source_location": "L43",
+      "weight": 1.0
+    },
+    {
+      "source": "phase02_setup",
+      "target": "phase02_setup_get_workspacefiles",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "phase02-setup.ps1",
+      "source_location": "L65",
+      "weight": 1.0
+    },
+    {
+      "source": "phase02_setup",
+      "target": "phase02_setup_read_project",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "phase02-setup.ps1",
+      "source_location": "L79",
+      "weight": 1.0
+    },
+    {
+      "source": "phase02_setup",
+      "target": "phase02_setup_assert_architecture",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "phase02-setup.ps1",
+      "source_location": "L88",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_application_elsheiekhhms_application",
+      "target": "elsheiekhhms_application_elsheiekhhms_application_csproj_nuget_microsoft_extensions_dependencyinjection_abstractions",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ElsheiekhHMS.Application/ElsheiekhHMS.Application.csproj",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_application_elsheiekhhms_application",
+      "target": "elsheiekhhms_core_elsheiekhhms_core",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ElsheiekhHMS.Application/ElsheiekhHMS.Application.csproj",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_infrastructure_elsheiekhhms_infrastructure",
+      "target": "elsheiekhhms_application_elsheiekhhms_application",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ElsheiekhHMS.Infrastructure/ElsheiekhHMS.Infrastructure.csproj",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_infrastructure_elsheiekhhms_infrastructure",
+      "target": "elsheiekhhms_core_elsheiekhhms_core",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ElsheiekhHMS.Infrastructure/ElsheiekhHMS.Infrastructure.csproj",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_infrastructure_elsheiekhhms_infrastructure",
+      "target": "elsheiekhhms_infrastructure_elsheiekhhms_infrastructure_csproj_nuget_microsoft_extensions_dependencyinjection_abstractions",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ElsheiekhHMS.Infrastructure/ElsheiekhHMS.Infrastructure.csproj",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_infrastructure_elsheiekhhms_infrastructure",
+      "target": "nuget_microsoft_extensions_configuration_abstractions",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ElsheiekhHMS.Infrastructure/ElsheiekhHMS.Infrastructure.csproj",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_tests_elsheiekhhms_tests",
+      "target": "elsheiekhhms_application_elsheiekhhms_application",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_tests_elsheiekhhms_tests",
+      "target": "elsheiekhhms_core_elsheiekhhms_core",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_tests_elsheiekhhms_tests",
+      "target": "elsheiekhhms_infrastructure_elsheiekhhms_infrastructure",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_tests_elsheiekhhms_tests",
+      "target": "nuget_coverlet_collector",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_tests_elsheiekhhms_tests",
+      "target": "nuget_microsoft_net_test_sdk",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_tests_elsheiekhhms_tests",
+      "target": "nuget_xunit",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_tests_elsheiekhhms_tests",
+      "target": "nuget_xunit_runner_visualstudio",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_web_elsheiekhhms_web",
+      "target": "elsheiekhhms_application_elsheiekhhms_application",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ElsheiekhHMS.Web/ElsheiekhHMS.Web.csproj",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_web_elsheiekhhms_web",
+      "target": "elsheiekhhms_infrastructure_elsheiekhhms_infrastructure",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ElsheiekhHMS.Web/ElsheiekhHMS.Web.csproj",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_application_applicationserviceextensions_elsheiekhhms_application_applicationserviceextensions",
+      "target": "elsheiekhhms_application_applicationserviceextensions_elsheiekhhms_application_applicationserviceextensions_addapplication",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ElsheiekhHMS.Application/ApplicationServiceExtensions.cs",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_infrastructure_infrastructureserviceextensions_elsheiekhhms_infrastructure_infrastructureserviceextensions",
+      "target": "elsheiekhhms_infrastructure_infrastructureserviceextensions_elsheiekhhms_infrastructure_infrastructureserviceextensions_addinfrastructure",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs",
+      "source_location": "L16",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_tests_unit_domain_common_auditableentitytests_elsheiekhhms_tests_unit_domain_common_auditableentitytests",
+      "target": "elsheiekhhms_tests_unit_domain_common_auditableentitytests_elsheiekhhms_tests_unit_domain_common_auditableentitytests_creation_metadata_preserves_supplied_utc_time_and_identifier",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ElsheiekhHMS.Tests/Unit/Domain/Common/AuditableEntityTests.cs",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_tests_unit_domain_common_auditableentitytests_elsheiekhhms_tests_unit_domain_common_auditableentitytests",
+      "target": "elsheiekhhms_tests_unit_domain_common_auditableentitytests_elsheiekhhms_tests_unit_domain_common_auditableentitytests_new_entity_has_no_update_or_user_metadata",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ElsheiekhHMS.Tests/Unit/Domain/Common/AuditableEntityTests.cs",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_tests_unit_domain_common_baseentitytests_elsheiekhhms_tests_unit_domain_common_baseentitytests",
+      "target": "elsheiekhhms_tests_unit_domain_common_baseentitytests_elsheiekhhms_tests_unit_domain_common_baseentitytests_derived_entity_can_assign_integer_identity",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ElsheiekhHMS.Tests/Unit/Domain/Common/BaseEntityTests.cs",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_tests_unit_domain_common_softdeletableentitytests_elsheiekhhms_tests_unit_domain_common_softdeletableentitytests",
+      "target": "elsheiekhhms_tests_unit_domain_common_softdeletableentitytests_elsheiekhhms_tests_unit_domain_common_softdeletableentitytests_new_entity_is_active_without_deletion_metadata",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ElsheiekhHMS.Tests/Unit/Domain/Common/SoftDeletableEntityTests.cs",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_tests_unit_domain_exceptions_domainexceptiontests_elsheiekhhms_tests_unit_domain_exceptions_domainexceptiontests",
+      "target": "elsheiekhhms_tests_unit_domain_exceptions_domainexceptiontests_elsheiekhhms_tests_unit_domain_exceptions_domainexceptiontests_exceptions_preserve_original_cause",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ElsheiekhHMS.Tests/Unit/Domain/Exceptions/DomainExceptionTests.cs",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_tests_unit_domain_exceptions_domainexceptiontests_elsheiekhhms_tests_unit_domain_exceptions_domainexceptiontests",
+      "target": "elsheiekhhms_tests_unit_domain_exceptions_domainexceptiontests_elsheiekhhms_tests_unit_domain_exceptions_domainexceptiontests_exceptions_preserve_message",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ElsheiekhHMS.Tests/Unit/Domain/Exceptions/DomainExceptionTests.cs",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_application_elsheiekhhms_application",
+      "target": "elsheiekhhms_core_elsheiekhhms_core_csproj_sdk_microsoft_net_sdk",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ElsheiekhHMS.Application/ElsheiekhHMS.Application.csproj",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_application_elsheiekhhms_application",
+      "target": "elsheiekhhms_web_elsheiekhhms_web_csproj_framework_net10_0",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ElsheiekhHMS.Application/ElsheiekhHMS.Application.csproj",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_core_elsheiekhhms_core",
+      "target": "elsheiekhhms_core_elsheiekhhms_core_csproj_sdk_microsoft_net_sdk",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ElsheiekhHMS.Core/ElsheiekhHMS.Core.csproj",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_core_elsheiekhhms_core",
+      "target": "elsheiekhhms_web_elsheiekhhms_web_csproj_framework_net10_0",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ElsheiekhHMS.Core/ElsheiekhHMS.Core.csproj",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_infrastructure_elsheiekhhms_infrastructure",
+      "target": "elsheiekhhms_core_elsheiekhhms_core_csproj_sdk_microsoft_net_sdk",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ElsheiekhHMS.Infrastructure/ElsheiekhHMS.Infrastructure.csproj",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_infrastructure_elsheiekhhms_infrastructure",
+      "target": "elsheiekhhms_web_elsheiekhhms_web_csproj_framework_net10_0",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ElsheiekhHMS.Infrastructure/ElsheiekhHMS.Infrastructure.csproj",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_tests_elsheiekhhms_tests",
+      "target": "elsheiekhhms_core_elsheiekhhms_core_csproj_sdk_microsoft_net_sdk",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_tests_elsheiekhhms_tests",
+      "target": "elsheiekhhms_web_elsheiekhhms_web_csproj_framework_net10_0",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_web_elsheiekhhms_web",
+      "target": "elsheiekhhms_web_elsheiekhhms_web_csproj_framework_net10_0",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ElsheiekhHMS.Web/ElsheiekhHMS.Web.csproj",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_web_elsheiekhhms_web",
+      "target": "sdk_microsoft_net_sdk_web",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ElsheiekhHMS.Web/ElsheiekhHMS.Web.csproj",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_web_components_layout_reconnectmodal_razor",
+      "target": "elsheiekhhms_web_components_layout_reconnectmodal_razor_handlereconnectstatechanged",
+      "relation": "indirect_call",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "context": "argument",
+      "source_file": "ElsheiekhHMS.Web/Components/Layout/ReconnectModal.razor.js",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_web_components_layout_reconnectmodal_razor",
+      "target": "elsheiekhhms_web_components_layout_reconnectmodal_razor_retry",
+      "relation": "indirect_call",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "context": "argument",
+      "source_file": "ElsheiekhHMS.Web/Components/Layout/ReconnectModal.razor.js",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_web_components_layout_reconnectmodal_razor",
+      "target": "elsheiekhhms_web_components_layout_reconnectmodal_razor_resume",
+      "relation": "indirect_call",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "context": "argument",
+      "source_file": "ElsheiekhHMS.Web/Components/Layout/ReconnectModal.razor.js",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_web_components_layout_reconnectmodal_razor_handlereconnectstatechanged",
+      "target": "elsheiekhhms_web_components_layout_reconnectmodal_razor_retrywhendocumentbecomesvisible",
+      "relation": "indirect_call",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "context": "argument",
+      "source_file": "ElsheiekhHMS.Web/Components/Layout/ReconnectModal.razor.js",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_tests_unit_domain_exceptions_domainexceptiontests_elsheiekhhms_tests_unit_domain_exceptions_domainexceptiontests_exceptions_preserve_message",
+      "target": "elsheiekhhms_core_exceptions_businessruleexception_elsheiekhhms_core_exceptions_businessruleexception",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "context": "call",
+      "source_file": "ElsheiekhHMS.Tests/Unit/Domain/Exceptions/DomainExceptionTests.cs",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_tests_unit_domain_exceptions_domainexceptiontests_elsheiekhhms_tests_unit_domain_exceptions_domainexceptiontests_exceptions_preserve_message",
+      "target": "elsheiekhhms_core_exceptions_domainvalidationexception_elsheiekhhms_core_exceptions_domainvalidationexception",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "context": "call",
+      "source_file": "ElsheiekhHMS.Tests/Unit/Domain/Exceptions/DomainExceptionTests.cs",
+      "source_location": "L18",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_tests_unit_domain_exceptions_domainexceptiontests_elsheiekhhms_tests_unit_domain_exceptions_domainexceptiontests_exceptions_preserve_message",
+      "target": "elsheiekhhms_core_exceptions_domainexception_elsheiekhhms_core_exceptions_domainexception",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "context": "call",
+      "source_file": "ElsheiekhHMS.Tests/Unit/Domain/Exceptions/DomainExceptionTests.cs",
+      "source_location": "L19",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_tests_unit_domain_exceptions_domainexceptiontests_elsheiekhhms_tests_unit_domain_exceptions_domainexceptiontests_exceptions_preserve_original_cause",
+      "target": "elsheiekhhms_core_exceptions_businessruleexception_elsheiekhhms_core_exceptions_businessruleexception",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "context": "call",
+      "source_file": "ElsheiekhHMS.Tests/Unit/Domain/Exceptions/DomainExceptionTests.cs",
+      "source_location": "L35",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_tests_unit_domain_exceptions_domainexceptiontests_elsheiekhhms_tests_unit_domain_exceptions_domainexceptiontests_exceptions_preserve_original_cause",
+      "target": "elsheiekhhms_core_exceptions_domainvalidationexception_elsheiekhhms_core_exceptions_domainvalidationexception",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "context": "call",
+      "source_file": "ElsheiekhHMS.Tests/Unit/Domain/Exceptions/DomainExceptionTests.cs",
+      "source_location": "L36",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_tests_unit_domain_exceptions_domainexceptiontests_elsheiekhhms_tests_unit_domain_exceptions_domainexceptiontests_exceptions_preserve_original_cause",
+      "target": "elsheiekhhms_core_exceptions_domainexception_elsheiekhhms_core_exceptions_domainexception",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "INFERRED",
+      "confidence_score": 0.85,
+      "context": "call",
+      "source_file": "ElsheiekhHMS.Tests/Unit/Domain/Exceptions/DomainExceptionTests.cs",
+      "source_location": "L37",
+      "weight": 1.0
+    }
+  ],
+  "hyperedges": [],
+  "built_at_commit": "01fbf3f947effcbc078838c1935c7645894683f9"
+}

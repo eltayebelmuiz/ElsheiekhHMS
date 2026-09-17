@@ -1,0 +1,158 @@
+{
+  "communities": {
+    "0": [
+      "csharp_namespace:77bc4792baee6799",
+      "exception",
+      "exceptions_businessruleexception",
+      "exceptions_businessruleexception_elsheiekhhms_core_exceptions_businessruleexception",
+      "exceptions_domainexception",
+      "exceptions_domainexception_elsheiekhhms_core_exceptions_domainexception",
+      "exceptions_domainvalidationexception",
+      "exceptions_domainvalidationexception_elsheiekhhms_core_exceptions_domainvalidationexception"
+    ],
+    "1": [
+      "common_auditableentity",
+      "common_baseentity",
+      "common_baseentity_elsheiekhhms_core_common_baseentity",
+      "common_baseentity_elsheiekhhms_core_common_baseentity_id",
+      "common_softdeletableentity",
+      "csharp_namespace:849a5ff7b4e439b6"
+    ],
+    "2": [
+      "common_auditableentity_cs_datetimeoffset",
+      "common_auditableentity_elsheiekhhms_core_common_auditableentity",
+      "common_auditableentity_elsheiekhhms_core_common_auditableentity_createdat",
+      "common_auditableentity_elsheiekhhms_core_common_auditableentity_createdby",
+      "common_auditableentity_elsheiekhhms_core_common_auditableentity_updatedat",
+      "common_auditableentity_elsheiekhhms_core_common_auditableentity_updatedby"
+    ],
+    "3": [
+      "common_softdeletableentity_cs_datetimeoffset",
+      "common_softdeletableentity_elsheiekhhms_core_common_softdeletableentity",
+      "common_softdeletableentity_elsheiekhhms_core_common_softdeletableentity_deletedat",
+      "common_softdeletableentity_elsheiekhhms_core_common_softdeletableentity_deletedby",
+      "common_softdeletableentity_elsheiekhhms_core_common_softdeletableentity_isdeleted"
+    ],
+    "4": [
+      "csharp_namespace:798fee7d7dc1564a",
+      "interfaces_ihasconcurrencytoken",
+      "interfaces_ihasconcurrencytoken_elsheiekhhms_core_interfaces_ihasconcurrencytoken",
+      "interfaces_ihasconcurrencytoken_elsheiekhhms_core_interfaces_ihasconcurrencytoken_rowversion"
+    ],
+    "5": [
+      "elsheiekhhms_core",
+      "framework_net10_0",
+      "sdk_microsoft_net_sdk"
+    ]
+  },
+  "cohesion": {
+    "0": 0.32142857142857145,
+    "1": 0.3333333333333333,
+    "2": 0.3333333333333333,
+    "3": 0.4,
+    "4": 0.5,
+    "5": 0.6666666666666666
+  },
+  "gods": [
+    {
+      "id": "common_auditableentity_elsheiekhhms_core_common_auditableentity",
+      "label": "AuditableEntity",
+      "degree": 8
+    },
+    {
+      "id": "common_softdeletableentity_elsheiekhhms_core_common_softdeletableentity",
+      "label": "SoftDeletableEntity",
+      "degree": 6
+    },
+    {
+      "id": "exceptions_domainexception_elsheiekhhms_core_exceptions_domainexception",
+      "label": "DomainException",
+      "degree": 4
+    },
+    {
+      "id": "common_baseentity_elsheiekhhms_core_common_baseentity",
+      "label": "BaseEntity",
+      "degree": 3
+    },
+    {
+      "id": "csharp_namespace:77bc4792baee6799",
+      "label": "ElsheiekhHMS.Core.Exceptions",
+      "degree": 3
+    },
+    {
+      "id": "csharp_namespace:849a5ff7b4e439b6",
+      "label": "ElsheiekhHMS.Core.Common",
+      "degree": 3
+    },
+    {
+      "id": "exceptions_businessruleexception_elsheiekhhms_core_exceptions_businessruleexception",
+      "label": "BusinessRuleException",
+      "degree": 2
+    },
+    {
+      "id": "exceptions_domainvalidationexception_elsheiekhhms_core_exceptions_domainvalidationexception",
+      "label": "DomainValidationException",
+      "degree": 2
+    },
+    {
+      "id": "interfaces_ihasconcurrencytoken_elsheiekhhms_core_interfaces_ihasconcurrencytoken",
+      "label": "IHasConcurrencyToken",
+      "degree": 2
+    },
+    {
+      "id": "common_baseentity_elsheiekhhms_core_common_baseentity_id",
+      "label": "Id",
+      "degree": 1
+    }
+  ],
+  "surprises": [
+    {
+      "source": "AuditableEntity",
+      "target": "BaseEntity",
+      "source_files": [
+        "Common/AuditableEntity.cs",
+        "Common/BaseEntity.cs"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "inherits",
+      "why": "bridges separate communities"
+    },
+    {
+      "source": "SoftDeletableEntity",
+      "target": "AuditableEntity",
+      "source_files": [
+        "Common/SoftDeletableEntity.cs",
+        "Common/AuditableEntity.cs"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "inherits",
+      "why": "bridges separate communities"
+    },
+    {
+      "source": "BusinessRuleException",
+      "target": "DomainException",
+      "source_files": [
+        "Exceptions/BusinessRuleException.cs",
+        "Exceptions/DomainException.cs"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "inherits",
+      "why": "cross-file semantic connection"
+    },
+    {
+      "source": "DomainValidationException",
+      "target": "DomainException",
+      "source_files": [
+        "Exceptions/DomainValidationException.cs",
+        "Exceptions/DomainException.cs"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "inherits",
+      "why": "cross-file semantic connection"
+    }
+  ],
+  "tokens": {
+    "input": 0,
+    "output": 0
+  }
+}

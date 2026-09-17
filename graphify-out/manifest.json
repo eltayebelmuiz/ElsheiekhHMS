@@ -1,0 +1,230 @@
+{
+  ".codex/hooks.json": {
+    "mtime": 1789641170.237023,
+    "seen": 1789642779.9301214,
+    "ast_hash": "5ebef3dd159986e465ab65e4014107ec",
+    "semantic_hash": "5ebef3dd159986e465ab65e4014107ec"
+  },
+  "ElsheiekhHMS.Application/ApplicationServiceExtensions.cs": {
+    "mtime": 1789572884.2208552,
+    "seen": 1789642779.9301264,
+    "ast_hash": "5c5684cd8300d5125a7d5a4dcc472343",
+    "semantic_hash": "5c5684cd8300d5125a7d5a4dcc472343"
+  },
+  "ElsheiekhHMS.Application/ElsheiekhHMS.Application.csproj": {
+    "mtime": 1789574365.885683,
+    "seen": 1789642779.9301283,
+    "ast_hash": "ee7fd4f2698d7de01c37d81b8c2c627b",
+    "semantic_hash": "ee7fd4f2698d7de01c37d81b8c2c627b"
+  },
+  "ElsheiekhHMS.Core/Common/AuditableEntity.cs": {
+    "mtime": 1789579684.5361938,
+    "seen": 1789642779.9301293,
+    "ast_hash": "f6671bf101c0d113a03c223f604c067d",
+    "semantic_hash": "f6671bf101c0d113a03c223f604c067d"
+  },
+  "ElsheiekhHMS.Core/Common/BaseEntity.cs": {
+    "mtime": 1789579684.5287495,
+    "seen": 1789642779.9301307,
+    "ast_hash": "bab634339c629fc7b1bde906e2b89810",
+    "semantic_hash": "bab634339c629fc7b1bde906e2b89810"
+  },
+  "ElsheiekhHMS.Core/Common/SoftDeletableEntity.cs": {
+    "mtime": 1789579684.5462143,
+    "seen": 1789642779.930132,
+    "ast_hash": "3f04eb1c69d800f304a2f2a842546ed9",
+    "semantic_hash": "3f04eb1c69d800f304a2f2a842546ed9"
+  },
+  "ElsheiekhHMS.Core/ElsheiekhHMS.Core.csproj": {
+    "mtime": 1789573135.4720652,
+    "seen": 1789642779.930133,
+    "ast_hash": "46b0780bd56312ea2d1bab391f179e89",
+    "semantic_hash": "46b0780bd56312ea2d1bab391f179e89"
+  },
+  "ElsheiekhHMS.Core/Exceptions/BusinessRuleException.cs": {
+    "mtime": 1789579684.5750976,
+    "seen": 1789642779.930134,
+    "ast_hash": "d4586093bfbcb4697e9204336ec2aa5d",
+    "semantic_hash": "d4586093bfbcb4697e9204336ec2aa5d"
+  },
+  "ElsheiekhHMS.Core/Exceptions/DomainException.cs": {
+    "mtime": 1789579684.5656557,
+    "seen": 1789642779.9301348,
+    "ast_hash": "14b18aabd4449e3132b7edd4ab850982",
+    "semantic_hash": "14b18aabd4449e3132b7edd4ab850982"
+  },
+  "ElsheiekhHMS.Core/Exceptions/DomainValidationException.cs": {
+    "mtime": 1789579684.5820203,
+    "seen": 1789642779.9301357,
+    "ast_hash": "709e2cdf573838c899473592eda8f02b",
+    "semantic_hash": "709e2cdf573838c899473592eda8f02b"
+  },
+  "ElsheiekhHMS.Core/Interfaces/IHasConcurrencyToken.cs": {
+    "mtime": 1789579684.5555644,
+    "seen": 1789642779.9301367,
+    "ast_hash": "d86c1704a4b485ee6860e37fcc999ad9",
+    "semantic_hash": "d86c1704a4b485ee6860e37fcc999ad9"
+  },
+  "ElsheiekhHMS.Infrastructure/ElsheiekhHMS.Infrastructure.csproj": {
+    "mtime": 1789574532.6018367,
+    "seen": 1789642779.9301379,
+    "ast_hash": "3d2ab0b714325b0a615344b9ba37e598",
+    "semantic_hash": "3d2ab0b714325b0a615344b9ba37e598"
+  },
+  "ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs": {
+    "mtime": 1789572884.2977228,
+    "seen": 1789642779.9301388,
+    "ast_hash": "0ab3fcecde08d5a1e9e4c609578389ab",
+    "semantic_hash": "0ab3fcecde08d5a1e9e4c609578389ab"
+  },
+  "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj": {
+    "mtime": 1789574246.2053552,
+    "seen": 1789642779.93014,
+    "ast_hash": "e07fb5dc176d11813a37a4bd94e704c0",
+    "semantic_hash": "e07fb5dc176d11813a37a4bd94e704c0"
+  },
+  "ElsheiekhHMS.Tests/Unit/Domain/Common/AuditableEntityTests.cs": {
+    "mtime": 1789579684.6012104,
+    "seen": 1789642779.9301407,
+    "ast_hash": "64fc9c4c0dd3a8f8ef646da1f2fc79f7",
+    "semantic_hash": "64fc9c4c0dd3a8f8ef646da1f2fc79f7"
+  },
+  "ElsheiekhHMS.Tests/Unit/Domain/Common/BaseEntityTests.cs": {
+    "mtime": 1789579684.5921948,
+    "seen": 1789642779.9301417,
+    "ast_hash": "f839758af25bd953c34f111ad193258c",
+    "semantic_hash": "f839758af25bd953c34f111ad193258c"
+  },
+  "ElsheiekhHMS.Tests/Unit/Domain/Common/SoftDeletableEntityTests.cs": {
+    "mtime": 1789579684.613904,
+    "seen": 1789642779.9301426,
+    "ast_hash": "a75b859f888e2a367b44ef08d6fb2536",
+    "semantic_hash": "a75b859f888e2a367b44ef08d6fb2536"
+  },
+  "ElsheiekhHMS.Tests/Unit/Domain/Exceptions/DomainExceptionTests.cs": {
+    "mtime": 1789579684.6267626,
+    "seen": 1789642779.9301438,
+    "ast_hash": "7590dccf7418992551297882b3f598e2",
+    "semantic_hash": "7590dccf7418992551297882b3f598e2"
+  },
+  "ElsheiekhHMS.Web/Components/App.razor": {
+    "mtime": 1789573184.305998,
+    "seen": 1789642779.9301445,
+    "ast_hash": "1a35dede0edcf3208cce59233eb43b63",
+    "semantic_hash": "1a35dede0edcf3208cce59233eb43b63"
+  },
+  "ElsheiekhHMS.Web/Components/Layout/MainLayout.razor": {
+    "mtime": 1789573184.803504,
+    "seen": 1789642779.9301455,
+    "ast_hash": "75c29fc34d23b44674da8967cc116287",
+    "semantic_hash": "75c29fc34d23b44674da8967cc116287"
+  },
+  "ElsheiekhHMS.Web/Components/Layout/NavMenu.razor": {
+    "mtime": 1789573184.8297067,
+    "seen": 1789642779.9301465,
+    "ast_hash": "1b9bafd4b05621e9c5191d57d8500c7b",
+    "semantic_hash": "1b9bafd4b05621e9c5191d57d8500c7b"
+  },
+  "ElsheiekhHMS.Web/Components/Layout/ReconnectModal.razor": {
+    "mtime": 1789573184.8372219,
+    "seen": 1789642779.9301474,
+    "ast_hash": "2f2378bed0d87a86800610190fd1da17",
+    "semantic_hash": "2f2378bed0d87a86800610190fd1da17"
+  },
+  "ElsheiekhHMS.Web/Components/Layout/ReconnectModal.razor.js": {
+    "mtime": 1789573184.845351,
+    "seen": 1789642779.9301488,
+    "ast_hash": "bdc7a0873231c569cd31aa85311186a3",
+    "semantic_hash": "bdc7a0873231c569cd31aa85311186a3"
+  },
+  "ElsheiekhHMS.Web/Components/Pages/Counter.razor": {
+    "mtime": 1789573184.1264594,
+    "seen": 1789642779.9301498,
+    "ast_hash": "e6ee184864dfca49bd187e288e7461bb",
+    "semantic_hash": "e6ee184864dfca49bd187e288e7461bb"
+  },
+  "ElsheiekhHMS.Web/Components/Pages/Error.razor": {
+    "mtime": 1789573184.133496,
+    "seen": 1789642779.930151,
+    "ast_hash": "895aa385b310af50d09fd583be83b251",
+    "semantic_hash": "895aa385b310af50d09fd583be83b251"
+  },
+  "ElsheiekhHMS.Web/Components/Pages/Home.razor": {
+    "mtime": 1789573184.133496,
+    "seen": 1789642779.930152,
+    "ast_hash": "2f5e8a5cde22b2d4d82154b7b0ed5197",
+    "semantic_hash": "2f5e8a5cde22b2d4d82154b7b0ed5197"
+  },
+  "ElsheiekhHMS.Web/Components/Pages/NotFound.razor": {
+    "mtime": 1789573184.1450014,
+    "seen": 1789642779.930153,
+    "ast_hash": "b43132764687de5710f24e46d3d3f7ff",
+    "semantic_hash": "b43132764687de5710f24e46d3d3f7ff"
+  },
+  "ElsheiekhHMS.Web/Components/Pages/Weather.razor": {
+    "mtime": 1789573184.157654,
+    "seen": 1789642779.9301538,
+    "ast_hash": "d17c2cc3403b4f8af37bb74024c4ec75",
+    "semantic_hash": "d17c2cc3403b4f8af37bb74024c4ec75"
+  },
+  "ElsheiekhHMS.Web/Components/Routes.razor": {
+    "mtime": 1789573184.3220532,
+    "seen": 1789642779.9301548,
+    "ast_hash": "e7369bc27ad40e65009faaaa1e965d93",
+    "semantic_hash": "e7369bc27ad40e65009faaaa1e965d93"
+  },
+  "ElsheiekhHMS.Web/Components/_Imports.razor": {
+    "mtime": 1789573184.3291728,
+    "seen": 1789642779.9301558,
+    "ast_hash": "61c232f743cb1d1e8111059a43c06e62",
+    "semantic_hash": "61c232f743cb1d1e8111059a43c06e62"
+  },
+  "ElsheiekhHMS.Web/ElsheiekhHMS.Web.csproj": {
+    "mtime": 1789574237.4910407,
+    "seen": 1789642779.9301565,
+    "ast_hash": "b386dd112be2e4a377b42c88f169a6ef",
+    "semantic_hash": "b386dd112be2e4a377b42c88f169a6ef"
+  },
+  "ElsheiekhHMS.Web/Program.cs": {
+    "mtime": 1789577428.4260879,
+    "seen": 1789642779.9301577,
+    "ast_hash": "97fadc9d1fb533f2635bb7f2516919c6",
+    "semantic_hash": "97fadc9d1fb533f2635bb7f2516919c6"
+  },
+  "ElsheiekhHMS.Web/Properties/launchSettings.json": {
+    "mtime": 1789573184.1775627,
+    "seen": 1789642779.9301586,
+    "ast_hash": "6b6340a0ce0d6dea28a6bd981e6114c2",
+    "semantic_hash": "6b6340a0ce0d6dea28a6bd981e6114c2"
+  },
+  "ElsheiekhHMS.Web/appsettings.Development.json": {
+    "mtime": 1789573184.2277083,
+    "seen": 1789642779.9301596,
+    "ast_hash": "804b473502a4c415cf75db61c56c32aa",
+    "semantic_hash": "804b473502a4c415cf75db61c56c32aa"
+  },
+  "ElsheiekhHMS.Web/appsettings.json": {
+    "mtime": 1789573184.2338243,
+    "seen": 1789642779.9301603,
+    "ast_hash": "f7e65dde4e5533740a0d57ac9355c0e8",
+    "semantic_hash": "f7e65dde4e5533740a0d57ac9355c0e8"
+  },
+  "ElsheiekhHMS.slnx": {
+    "mtime": 1789574198.8856776,
+    "seen": 1789642779.9301615,
+    "ast_hash": "8725dbd5c5a83c99d874355268fcb11c",
+    "semantic_hash": "8725dbd5c5a83c99d874355268fcb11c"
+  },
+  "phase01-setup.ps1": {
+    "mtime": 1789581373.9565673,
+    "seen": 1789642779.9301622,
+    "ast_hash": "9c7906256bf81427cd44af99b3ae96c6",
+    "semantic_hash": "9c7906256bf81427cd44af99b3ae96c6"
+  },
+  "phase02-setup.ps1": {
+    "mtime": 1789579674.9103537,
+    "seen": 1789642779.9301631,
+    "ast_hash": "c3254f90b840333bf919451259eeaed9",
+    "semantic_hash": "c3254f90b840333bf919451259eeaed9"
+  }
+}

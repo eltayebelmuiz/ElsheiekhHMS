@@ -1,0 +1,121 @@
+{
+  "communities": {
+    "0": [
+      "elsheiekhhms_tests",
+      "ext_elsheiekhhms_application_elsheiekhhms_application_csproj",
+      "ext_elsheiekhhms_core_elsheiekhhms_core_csproj",
+      "ext_elsheiekhhms_infrastructure_elsheiekhhms_infrastructure_csproj",
+      "framework_net10_0",
+      "nuget_coverlet_collector",
+      "nuget_microsoft_net_test_sdk",
+      "nuget_xunit",
+      "nuget_xunit_runner_visualstudio",
+      "sdk_microsoft_net_sdk"
+    ],
+    "1": [
+      "csharp_namespace:67c6625fb7964389",
+      "elsheiekhhms_core_exceptions",
+      "inlinedata",
+      "theory",
+      "unit_domain_exceptions_domainexceptiontests",
+      "unit_domain_exceptions_domainexceptiontests_elsheiekhhms_tests_unit_domain_exceptions_domainexceptiontests",
+      "unit_domain_exceptions_domainexceptiontests_elsheiekhhms_tests_unit_domain_exceptions_domainexceptiontests_exceptions_preserve_message",
+      "unit_domain_exceptions_domainexceptiontests_elsheiekhhms_tests_unit_domain_exceptions_domainexceptiontests_exceptions_preserve_original_cause"
+    ],
+    "2": [
+      "auditableentity",
+      "unit_domain_common_auditableentitytests_cs_fact",
+      "unit_domain_common_auditableentitytests_elsheiekhhms_tests_unit_domain_common_auditableentitytests",
+      "unit_domain_common_auditableentitytests_elsheiekhhms_tests_unit_domain_common_auditableentitytests_creation_metadata_preserves_supplied_utc_time_and_identifier",
+      "unit_domain_common_auditableentitytests_elsheiekhhms_tests_unit_domain_common_auditableentitytests_new_entity_has_no_update_or_user_metadata",
+      "unit_domain_common_auditableentitytests_elsheiekhhms_tests_unit_domain_common_testentity"
+    ],
+    "3": [
+      "csharp_namespace:3e45288a4abf34b9",
+      "elsheiekhhms_core_common",
+      "unit_domain_common_auditableentitytests",
+      "unit_domain_common_baseentitytests",
+      "unit_domain_common_softdeletableentitytests",
+      "xunit"
+    ],
+    "4": [
+      "baseentity",
+      "unit_domain_common_baseentitytests_cs_fact",
+      "unit_domain_common_baseentitytests_elsheiekhhms_tests_unit_domain_common_baseentitytests",
+      "unit_domain_common_baseentitytests_elsheiekhhms_tests_unit_domain_common_baseentitytests_derived_entity_can_assign_integer_identity",
+      "unit_domain_common_baseentitytests_elsheiekhhms_tests_unit_domain_common_testentity"
+    ],
+    "5": [
+      "softdeletableentity",
+      "unit_domain_common_softdeletableentitytests_cs_fact",
+      "unit_domain_common_softdeletableentitytests_elsheiekhhms_tests_unit_domain_common_softdeletableentitytests",
+      "unit_domain_common_softdeletableentitytests_elsheiekhhms_tests_unit_domain_common_softdeletableentitytests_new_entity_is_active_without_deletion_metadata",
+      "unit_domain_common_softdeletableentitytests_elsheiekhhms_tests_unit_domain_common_testentity"
+    ]
+  },
+  "cohesion": {
+    "0": 0.2,
+    "1": 0.32142857142857145,
+    "2": 0.5333333333333333,
+    "3": 0.6,
+    "4": 0.5,
+    "5": 0.5
+  },
+  "gods": [
+    {
+      "id": "unit_domain_common_auditableentitytests_elsheiekhhms_tests_unit_domain_common_auditableentitytests",
+      "label": "AuditableEntityTests",
+      "degree": 4
+    },
+    {
+      "id": "unit_domain_common_auditableentitytests_elsheiekhhms_tests_unit_domain_common_testentity",
+      "label": "TestEntity",
+      "degree": 4
+    },
+    {
+      "id": "csharp_namespace:3e45288a4abf34b9",
+      "label": "ElsheiekhHMS.Tests.Unit.Domain.Common",
+      "degree": 3
+    },
+    {
+      "id": "unit_domain_common_baseentitytests_elsheiekhhms_tests_unit_domain_common_baseentitytests",
+      "label": "BaseEntityTests",
+      "degree": 3
+    },
+    {
+      "id": "unit_domain_common_baseentitytests_elsheiekhhms_tests_unit_domain_common_testentity",
+      "label": "TestEntity",
+      "degree": 3
+    },
+    {
+      "id": "unit_domain_common_softdeletableentitytests_elsheiekhhms_tests_unit_domain_common_softdeletableentitytests",
+      "label": "SoftDeletableEntityTests",
+      "degree": 3
+    },
+    {
+      "id": "unit_domain_common_softdeletableentitytests_elsheiekhhms_tests_unit_domain_common_testentity",
+      "label": "TestEntity",
+      "degree": 3
+    },
+    {
+      "id": "unit_domain_exceptions_domainexceptiontests_elsheiekhhms_tests_unit_domain_exceptions_domainexceptiontests",
+      "label": "DomainExceptionTests",
+      "degree": 3
+    },
+    {
+      "id": "framework_net10_0",
+      "label": "net10.0",
+      "degree": 1
+    },
+    {
+      "id": "nuget_coverlet_collector",
+      "label": "coverlet.collector (6.0.4)",
+      "degree": 1
+    }
+  ],
+  "surprises": [],
+  "tokens": {
+    "input": 0,
+    "output": 0
+  }
+}

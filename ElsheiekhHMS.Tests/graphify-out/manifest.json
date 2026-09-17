@@ -1,0 +1,32 @@
+{
+  "ElsheiekhHMS.Tests.csproj": {
+    "mtime": 1789574246.2053552,
+    "seen": 1789642038.5632083,
+    "ast_hash": "e07fb5dc176d11813a37a4bd94e704c0",
+    "semantic_hash": "e07fb5dc176d11813a37a4bd94e704c0"
+  },
+  "Unit/Domain/Common/AuditableEntityTests.cs": {
+    "mtime": 1789579684.6012104,
+    "seen": 1789642038.563215,
+    "ast_hash": "64fc9c4c0dd3a8f8ef646da1f2fc79f7",
+    "semantic_hash": "64fc9c4c0dd3a8f8ef646da1f2fc79f7"
+  },
+  "Unit/Domain/Common/BaseEntityTests.cs": {
+    "mtime": 1789579684.5921948,
+    "seen": 1789642038.5632184,
+    "ast_hash": "f839758af25bd953c34f111ad193258c",
+    "semantic_hash": "f839758af25bd953c34f111ad193258c"
+  },
+  "Unit/Domain/Common/SoftDeletableEntityTests.cs": {
+    "mtime": 1789579684.613904,
+    "seen": 1789642038.5632205,
+    "ast_hash": "a75b859f888e2a367b44ef08d6fb2536",
+    "semantic_hash": "a75b859f888e2a367b44ef08d6fb2536"
+  },
+  "Unit/Domain/Exceptions/DomainExceptionTests.cs": {
+    "mtime": 1789579684.6267626,
+    "seen": 1789642038.5632226,
+    "ast_hash": "7590dccf7418992551297882b3f598e2",
+    "semantic_hash": "7590dccf7418992551297882b3f598e2"
+  }
+}

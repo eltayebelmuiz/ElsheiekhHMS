@@ -1,0 +1,1217 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "id": "unit_domain_exceptions_domainexceptiontests_elsheiekhhms_tests_unit_domain_exceptions_domainexceptiontests",
+      "label": "DomainExceptionTests",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 1,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "ElsheiekhHMS.Tests.Unit.Domain.Exceptions",
+        "scope_chain": [
+          "s50"
+        ]
+      },
+      "norm_label": "domainexceptiontests",
+      "source_file": "Unit/Domain/Exceptions/DomainExceptionTests.cs",
+      "source_location": "L6"
+    },
+    {
+      "id": "unit_domain_common_auditableentitytests_elsheiekhhms_tests_unit_domain_common_auditableentitytests",
+      "label": "AuditableEntityTests",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 2,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "ElsheiekhHMS.Tests.Unit.Domain.Common",
+        "scope_chain": [
+          "s46"
+        ]
+      },
+      "norm_label": "auditableentitytests",
+      "source_file": "Unit/Domain/Common/AuditableEntityTests.cs",
+      "source_location": "L6"
+    },
+    {
+      "id": "unit_domain_common_auditableentitytests_elsheiekhhms_tests_unit_domain_common_testentity",
+      "label": "TestEntity",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 2,
+      "file_type": "code",
+      "metadata": {
+        "is_nested_type": true,
+        "namespace": "ElsheiekhHMS.Tests.Unit.Domain.Common",
+        "scope_chain": [
+          "s46"
+        ]
+      },
+      "norm_label": "testentity",
+      "source_file": "Unit/Domain/Common/AuditableEntityTests.cs",
+      "source_location": "L28"
+    },
+    {
+      "id": "unit_domain_common_baseentitytests_elsheiekhhms_tests_unit_domain_common_baseentitytests",
+      "label": "BaseEntityTests",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 4,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "ElsheiekhHMS.Tests.Unit.Domain.Common",
+        "scope_chain": [
+          "s46"
+        ]
+      },
+      "norm_label": "baseentitytests",
+      "source_file": "Unit/Domain/Common/BaseEntityTests.cs",
+      "source_location": "L6"
+    },
+    {
+      "id": "unit_domain_common_baseentitytests_elsheiekhhms_tests_unit_domain_common_testentity",
+      "label": "TestEntity",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 4,
+      "file_type": "code",
+      "metadata": {
+        "is_nested_type": true,
+        "namespace": "ElsheiekhHMS.Tests.Unit.Domain.Common",
+        "scope_chain": [
+          "s46"
+        ]
+      },
+      "norm_label": "testentity",
+      "source_file": "Unit/Domain/Common/BaseEntityTests.cs",
+      "source_location": "L15"
+    },
+    {
+      "id": "unit_domain_common_softdeletableentitytests_elsheiekhhms_tests_unit_domain_common_softdeletableentitytests",
+      "label": "SoftDeletableEntityTests",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 5,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "ElsheiekhHMS.Tests.Unit.Domain.Common",
+        "scope_chain": [
+          "s46"
+        ]
+      },
+      "norm_label": "softdeletableentitytests",
+      "source_file": "Unit/Domain/Common/SoftDeletableEntityTests.cs",
+      "source_location": "L6"
+    },
+    {
+      "id": "unit_domain_common_softdeletableentitytests_elsheiekhhms_tests_unit_domain_common_testentity",
+      "label": "TestEntity",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 5,
+      "file_type": "code",
+      "metadata": {
+        "is_nested_type": true,
+        "namespace": "ElsheiekhHMS.Tests.Unit.Domain.Common",
+        "scope_chain": [
+          "s46"
+        ]
+      },
+      "norm_label": "testentity",
+      "source_file": "Unit/Domain/Common/SoftDeletableEntityTests.cs",
+      "source_location": "L18"
+    },
+    {
+      "id": "unit_domain_exceptions_domainexceptiontests_elsheiekhhms_tests_unit_domain_exceptions_domainexceptiontests_exceptions_preserve_message",
+      "label": ".Exceptions_preserve_message()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 1,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "ElsheiekhHMS.Tests.Unit.Domain.Exceptions",
+        "scope_chain": [
+          "s50"
+        ],
+        "unresolved_calls": [
+          {
+            "callee": "Equal",
+            "receiver_type": "Assert",
+            "lang": "csharp",
+            "line": "L21"
+          },
+          {
+            "callee": "Null",
+            "receiver_type": "Assert",
+            "lang": "csharp",
+            "line": "L22"
+          }
+        ]
+      },
+      "norm_label": ".exceptions_preserve_message()",
+      "source_file": "Unit/Domain/Exceptions/DomainExceptionTests.cs",
+      "source_location": "L8"
+    },
+    {
+      "id": "unit_domain_exceptions_domainexceptiontests_elsheiekhhms_tests_unit_domain_exceptions_domainexceptiontests_exceptions_preserve_original_cause",
+      "label": ".Exceptions_preserve_original_cause()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 1,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "ElsheiekhHMS.Tests.Unit.Domain.Exceptions",
+        "scope_chain": [
+          "s50"
+        ],
+        "unresolved_calls": [
+          {
+            "callee": "Equal",
+            "receiver_type": "Assert",
+            "lang": "csharp",
+            "line": "L39"
+          },
+          {
+            "callee": "Same",
+            "receiver_type": "Assert",
+            "lang": "csharp",
+            "line": "L40"
+          }
+        ]
+      },
+      "norm_label": ".exceptions_preserve_original_cause()",
+      "source_file": "Unit/Domain/Exceptions/DomainExceptionTests.cs",
+      "source_location": "L25"
+    },
+    {
+      "id": "unit_domain_common_auditableentitytests_elsheiekhhms_tests_unit_domain_common_auditableentitytests_creation_metadata_preserves_supplied_utc_time_and_identifier",
+      "label": ".Creation_metadata_preserves_supplied_utc_time_and_identifier()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 2,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "ElsheiekhHMS.Tests.Unit.Domain.Common",
+        "scope_chain": [
+          "s46"
+        ],
+        "unresolved_calls": [
+          {
+            "callee": "Equal",
+            "receiver_type": "Assert",
+            "lang": "csharp",
+            "line": "L22"
+          },
+          {
+            "callee": "Null",
+            "receiver_type": "Assert",
+            "lang": "csharp",
+            "line": "L25"
+          }
+        ]
+      },
+      "norm_label": ".creation_metadata_preserves_supplied_utc_time_and_identifier()",
+      "source_file": "Unit/Domain/Common/AuditableEntityTests.cs",
+      "source_location": "L17"
+    },
+    {
+      "id": "unit_domain_common_auditableentitytests_elsheiekhhms_tests_unit_domain_common_auditableentitytests_new_entity_has_no_update_or_user_metadata",
+      "label": ".New_entity_has_no_update_or_user_metadata()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 2,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "ElsheiekhHMS.Tests.Unit.Domain.Common",
+        "scope_chain": [
+          "s46"
+        ],
+        "unresolved_calls": [
+          {
+            "callee": "Null",
+            "receiver_type": "Assert",
+            "lang": "csharp",
+            "line": "L12"
+          }
+        ]
+      },
+      "norm_label": ".new_entity_has_no_update_or_user_metadata()",
+      "source_file": "Unit/Domain/Common/AuditableEntityTests.cs",
+      "source_location": "L8"
+    },
+    {
+      "id": "unit_domain_common_baseentitytests_elsheiekhhms_tests_unit_domain_common_baseentitytests_derived_entity_can_assign_integer_identity",
+      "label": ".Derived_entity_can_assign_integer_identity()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 4,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "ElsheiekhHMS.Tests.Unit.Domain.Common",
+        "scope_chain": [
+          "s46"
+        ],
+        "unresolved_calls": [
+          {
+            "callee": "Equal",
+            "receiver_type": "Assert",
+            "lang": "csharp",
+            "line": "L12"
+          }
+        ]
+      },
+      "norm_label": ".derived_entity_can_assign_integer_identity()",
+      "source_file": "Unit/Domain/Common/BaseEntityTests.cs",
+      "source_location": "L8"
+    },
+    {
+      "id": "unit_domain_common_softdeletableentitytests_elsheiekhhms_tests_unit_domain_common_softdeletableentitytests_new_entity_is_active_without_deletion_metadata",
+      "label": ".New_entity_is_active_without_deletion_metadata()",
+      "_callable": true,
+      "_origin": "ast",
+      "community": 5,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "ElsheiekhHMS.Tests.Unit.Domain.Common",
+        "scope_chain": [
+          "s46"
+        ],
+        "unresolved_calls": [
+          {
+            "callee": "False",
+            "receiver_type": "Assert",
+            "lang": "csharp",
+            "line": "L12"
+          },
+          {
+            "callee": "Null",
+            "receiver_type": "Assert",
+            "lang": "csharp",
+            "line": "L13"
+          }
+        ]
+      },
+      "norm_label": ".new_entity_is_active_without_deletion_metadata()",
+      "source_file": "Unit/Domain/Common/SoftDeletableEntityTests.cs",
+      "source_location": "L8"
+    },
+    {
+      "id": "elsheiekhhms_tests",
+      "label": "ElsheiekhHMS.Tests.csproj",
+      "_origin": "ast",
+      "community": 0,
+      "file_type": "code",
+      "norm_label": "elsheiekhhms.tests.csproj",
+      "source_file": "ElsheiekhHMS.Tests.csproj",
+      "source_location": null
+    },
+    {
+      "id": "ext_elsheiekhhms_application_elsheiekhhms_application_csproj",
+      "label": "ElsheiekhHMS.Application.csproj",
+      "_origin": "ast",
+      "community": 0,
+      "file_type": "code",
+      "norm_label": "elsheiekhhms.application.csproj",
+      "source_file": "../ElsheiekhHMS.Application/ElsheiekhHMS.Application.csproj",
+      "source_location": null
+    },
+    {
+      "id": "ext_elsheiekhhms_core_elsheiekhhms_core_csproj",
+      "label": "ElsheiekhHMS.Core.csproj",
+      "_origin": "ast",
+      "community": 0,
+      "file_type": "code",
+      "norm_label": "elsheiekhhms.core.csproj",
+      "source_file": "../ElsheiekhHMS.Core/ElsheiekhHMS.Core.csproj",
+      "source_location": null
+    },
+    {
+      "id": "ext_elsheiekhhms_infrastructure_elsheiekhhms_infrastructure_csproj",
+      "label": "ElsheiekhHMS.Infrastructure.csproj",
+      "_origin": "ast",
+      "community": 0,
+      "file_type": "code",
+      "norm_label": "elsheiekhhms.infrastructure.csproj",
+      "source_file": "../ElsheiekhHMS.Infrastructure/ElsheiekhHMS.Infrastructure.csproj",
+      "source_location": null
+    },
+    {
+      "id": "nuget_coverlet_collector",
+      "label": "coverlet.collector (6.0.4)",
+      "_origin": "ast",
+      "community": 0,
+      "file_type": "code",
+      "norm_label": "coverlet.collector (6.0.4)",
+      "source_file": "ElsheiekhHMS.Tests.csproj",
+      "source_location": null
+    },
+    {
+      "id": "nuget_microsoft_net_test_sdk",
+      "label": "Microsoft.NET.Test.Sdk (17.14.1)",
+      "_origin": "ast",
+      "community": 0,
+      "file_type": "code",
+      "norm_label": "microsoft.net.test.sdk (17.14.1)",
+      "source_file": "ElsheiekhHMS.Tests.csproj",
+      "source_location": null
+    },
+    {
+      "id": "nuget_xunit",
+      "label": "xunit (2.9.3)",
+      "_origin": "ast",
+      "community": 0,
+      "file_type": "code",
+      "norm_label": "xunit (2.9.3)",
+      "source_file": "ElsheiekhHMS.Tests.csproj",
+      "source_location": null
+    },
+    {
+      "id": "nuget_xunit_runner_visualstudio",
+      "label": "xunit.runner.visualstudio (3.1.4)",
+      "_origin": "ast",
+      "community": 0,
+      "file_type": "code",
+      "norm_label": "xunit.runner.visualstudio (3.1.4)",
+      "source_file": "ElsheiekhHMS.Tests.csproj",
+      "source_location": null
+    },
+    {
+      "id": "framework_net10_0",
+      "label": "net10.0",
+      "_origin": "ast",
+      "community": 0,
+      "file_type": "concept",
+      "norm_label": "net10.0",
+      "source_file": "ElsheiekhHMS.Tests.csproj",
+      "source_location": null
+    },
+    {
+      "id": "sdk_microsoft_net_sdk",
+      "label": "Microsoft.NET.Sdk",
+      "_origin": "ast",
+      "community": 0,
+      "file_type": "concept",
+      "norm_label": "microsoft.net.sdk",
+      "source_file": "ElsheiekhHMS.Tests.csproj",
+      "source_location": null
+    },
+    {
+      "id": "csharp_namespace:67c6625fb7964389",
+      "label": "ElsheiekhHMS.Tests.Unit.Domain.Exceptions",
+      "_origin": "ast",
+      "community": 1,
+      "file_type": "code",
+      "metadata": {
+        "kind": "csharp_namespace",
+        "namespace": "ElsheiekhHMS.Tests.Unit.Domain.Exceptions"
+      },
+      "norm_label": "elsheiekhhms.tests.unit.domain.exceptions",
+      "source_file": "Unit/Domain/Exceptions/DomainExceptionTests.cs",
+      "source_location": "L4",
+      "type": "namespace"
+    },
+    {
+      "id": "inlinedata",
+      "label": "InlineData",
+      "_origin": "ast",
+      "community": 1,
+      "file_type": "code",
+      "norm_label": "inlinedata",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "theory",
+      "label": "Theory",
+      "_origin": "ast",
+      "community": 1,
+      "file_type": "code",
+      "norm_label": "theory",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "unit_domain_exceptions_domainexceptiontests",
+      "label": "DomainExceptionTests.cs",
+      "_origin": "ast",
+      "community": 1,
+      "file_type": "code",
+      "norm_label": "domainexceptiontests.cs",
+      "source_file": "Unit/Domain/Exceptions/DomainExceptionTests.cs",
+      "source_location": "L1"
+    },
+    {
+      "id": "auditableentity",
+      "label": "AuditableEntity",
+      "_origin": "ast",
+      "community": 2,
+      "file_type": "code",
+      "norm_label": "auditableentity",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "unit_domain_common_auditableentitytests_cs_fact",
+      "label": "Fact",
+      "_origin": "ast",
+      "community": 2,
+      "file_type": "code",
+      "norm_label": "fact",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "csharp_namespace:3e45288a4abf34b9",
+      "label": "ElsheiekhHMS.Tests.Unit.Domain.Common",
+      "_origin": "ast",
+      "community": 3,
+      "file_type": "code",
+      "metadata": {
+        "kind": "csharp_namespace",
+        "namespace": "ElsheiekhHMS.Tests.Unit.Domain.Common"
+      },
+      "norm_label": "elsheiekhhms.tests.unit.domain.common",
+      "source_file": "Unit/Domain/Common/AuditableEntityTests.cs",
+      "source_location": "L4",
+      "type": "namespace"
+    },
+    {
+      "id": "unit_domain_common_auditableentitytests",
+      "label": "AuditableEntityTests.cs",
+      "_origin": "ast",
+      "community": 3,
+      "file_type": "code",
+      "norm_label": "auditableentitytests.cs",
+      "source_file": "Unit/Domain/Common/AuditableEntityTests.cs",
+      "source_location": "L1"
+    },
+    {
+      "id": "unit_domain_common_baseentitytests",
+      "label": "BaseEntityTests.cs",
+      "_origin": "ast",
+      "community": 3,
+      "file_type": "code",
+      "norm_label": "baseentitytests.cs",
+      "source_file": "Unit/Domain/Common/BaseEntityTests.cs",
+      "source_location": "L1"
+    },
+    {
+      "id": "unit_domain_common_softdeletableentitytests",
+      "label": "SoftDeletableEntityTests.cs",
+      "_origin": "ast",
+      "community": 3,
+      "file_type": "code",
+      "norm_label": "softdeletableentitytests.cs",
+      "source_file": "Unit/Domain/Common/SoftDeletableEntityTests.cs",
+      "source_location": "L1"
+    },
+    {
+      "id": "baseentity",
+      "label": "BaseEntity",
+      "_origin": "ast",
+      "community": 4,
+      "file_type": "code",
+      "norm_label": "baseentity",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "unit_domain_common_baseentitytests_cs_fact",
+      "label": "Fact",
+      "_origin": "ast",
+      "community": 4,
+      "file_type": "code",
+      "norm_label": "fact",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "softdeletableentity",
+      "label": "SoftDeletableEntity",
+      "_origin": "ast",
+      "community": 5,
+      "file_type": "code",
+      "norm_label": "softdeletableentity",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "unit_domain_common_softdeletableentitytests_cs_fact",
+      "label": "Fact",
+      "_origin": "ast",
+      "community": 5,
+      "file_type": "code",
+      "norm_label": "fact",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "elsheiekhhms_core_exceptions",
+      "label": "elsheiekhhms_core_exceptions",
+      "community": 1,
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "elsheiekhhms_core_exceptions",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "elsheiekhhms_core_common",
+      "label": "elsheiekhhms_core_common",
+      "community": 3,
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "elsheiekhhms_core_common",
+      "source_file": "",
+      "type": "external"
+    },
+    {
+      "id": "xunit",
+      "label": "xunit",
+      "community": 3,
+      "external": true,
+      "file_type": "concept",
+      "norm_label": "xunit",
+      "source_file": "",
+      "type": "external"
+    }
+  ],
+  "links": [
+    {
+      "source": "unit_domain_common_auditableentitytests_elsheiekhhms_tests_unit_domain_common_auditableentitytests_creation_metadata_preserves_supplied_utc_time_and_identifier",
+      "target": "unit_domain_common_auditableentitytests_cs_fact",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "attribute",
+      "metadata": {
+        "ref_token": "Fact"
+      },
+      "source_file": "Unit/Domain/Common/AuditableEntityTests.cs",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "unit_domain_common_auditableentitytests_elsheiekhhms_tests_unit_domain_common_auditableentitytests_new_entity_has_no_update_or_user_metadata",
+      "target": "unit_domain_common_auditableentitytests_cs_fact",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "attribute",
+      "metadata": {
+        "ref_token": "Fact"
+      },
+      "source_file": "Unit/Domain/Common/AuditableEntityTests.cs",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "unit_domain_common_baseentitytests_elsheiekhhms_tests_unit_domain_common_baseentitytests_derived_entity_can_assign_integer_identity",
+      "target": "unit_domain_common_baseentitytests_cs_fact",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "attribute",
+      "metadata": {
+        "ref_token": "Fact"
+      },
+      "source_file": "Unit/Domain/Common/BaseEntityTests.cs",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "unit_domain_common_softdeletableentitytests_elsheiekhhms_tests_unit_domain_common_softdeletableentitytests_new_entity_is_active_without_deletion_metadata",
+      "target": "unit_domain_common_softdeletableentitytests_cs_fact",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "attribute",
+      "metadata": {
+        "ref_token": "Fact"
+      },
+      "source_file": "Unit/Domain/Common/SoftDeletableEntityTests.cs",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "unit_domain_exceptions_domainexceptiontests_elsheiekhhms_tests_unit_domain_exceptions_domainexceptiontests_exceptions_preserve_message",
+      "target": "inlinedata",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "attribute",
+      "metadata": {
+        "ref_token": "InlineData"
+      },
+      "source_file": "Unit/Domain/Exceptions/DomainExceptionTests.cs",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "unit_domain_exceptions_domainexceptiontests_elsheiekhhms_tests_unit_domain_exceptions_domainexceptiontests_exceptions_preserve_original_cause",
+      "target": "inlinedata",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "attribute",
+      "metadata": {
+        "ref_token": "InlineData"
+      },
+      "source_file": "Unit/Domain/Exceptions/DomainExceptionTests.cs",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "unit_domain_exceptions_domainexceptiontests_elsheiekhhms_tests_unit_domain_exceptions_domainexceptiontests_exceptions_preserve_message",
+      "target": "theory",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "attribute",
+      "metadata": {
+        "ref_token": "Theory"
+      },
+      "source_file": "Unit/Domain/Exceptions/DomainExceptionTests.cs",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "unit_domain_exceptions_domainexceptiontests_elsheiekhhms_tests_unit_domain_exceptions_domainexceptiontests_exceptions_preserve_original_cause",
+      "target": "theory",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "attribute",
+      "metadata": {
+        "ref_token": "Theory"
+      },
+      "source_file": "Unit/Domain/Exceptions/DomainExceptionTests.cs",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "unit_domain_common_auditableentitytests_elsheiekhhms_tests_unit_domain_common_auditableentitytests_creation_metadata_preserves_supplied_utc_time_and_identifier",
+      "target": "unit_domain_common_auditableentitytests_elsheiekhhms_tests_unit_domain_common_testentity",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "Unit/Domain/Common/AuditableEntityTests.cs",
+      "source_location": "L21",
+      "weight": 1.0
+    },
+    {
+      "source": "unit_domain_common_auditableentitytests_elsheiekhhms_tests_unit_domain_common_auditableentitytests_new_entity_has_no_update_or_user_metadata",
+      "target": "unit_domain_common_auditableentitytests_elsheiekhhms_tests_unit_domain_common_testentity",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "Unit/Domain/Common/AuditableEntityTests.cs",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "unit_domain_common_baseentitytests_elsheiekhhms_tests_unit_domain_common_baseentitytests_derived_entity_can_assign_integer_identity",
+      "target": "unit_domain_common_baseentitytests_elsheiekhhms_tests_unit_domain_common_testentity",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "Unit/Domain/Common/BaseEntityTests.cs",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "unit_domain_common_softdeletableentitytests_elsheiekhhms_tests_unit_domain_common_softdeletableentitytests_new_entity_is_active_without_deletion_metadata",
+      "target": "unit_domain_common_softdeletableentitytests_elsheiekhhms_tests_unit_domain_common_testentity",
+      "relation": "calls",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "call",
+      "source_file": "Unit/Domain/Common/SoftDeletableEntityTests.cs",
+      "source_location": "L11",
+      "weight": 1.0
+    },
+    {
+      "source": "unit_domain_common_auditableentitytests",
+      "target": "elsheiekhhms_core_common",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "ElsheiekhHMS.Core.Common",
+        "scope_kind": "file"
+      },
+      "source_file": "Unit/Domain/Common/AuditableEntityTests.cs",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "unit_domain_common_baseentitytests",
+      "target": "elsheiekhhms_core_common",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "ElsheiekhHMS.Core.Common",
+        "scope_kind": "file"
+      },
+      "source_file": "Unit/Domain/Common/BaseEntityTests.cs",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "unit_domain_common_softdeletableentitytests",
+      "target": "elsheiekhhms_core_common",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "ElsheiekhHMS.Core.Common",
+        "scope_kind": "file"
+      },
+      "source_file": "Unit/Domain/Common/SoftDeletableEntityTests.cs",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "unit_domain_exceptions_domainexceptiontests",
+      "target": "elsheiekhhms_core_exceptions",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "ElsheiekhHMS.Core.Exceptions",
+        "scope_kind": "file"
+      },
+      "source_file": "Unit/Domain/Exceptions/DomainExceptionTests.cs",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "unit_domain_common_auditableentitytests",
+      "target": "xunit",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "Xunit",
+        "scope_kind": "file"
+      },
+      "source_file": "Unit/Domain/Common/AuditableEntityTests.cs",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "unit_domain_common_baseentitytests",
+      "target": "xunit",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "Xunit",
+        "scope_kind": "file"
+      },
+      "source_file": "Unit/Domain/Common/BaseEntityTests.cs",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "unit_domain_common_softdeletableentitytests",
+      "target": "xunit",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "Xunit",
+        "scope_kind": "file"
+      },
+      "source_file": "Unit/Domain/Common/SoftDeletableEntityTests.cs",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "unit_domain_exceptions_domainexceptiontests",
+      "target": "xunit",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "import",
+      "metadata": {
+        "using_kind": "namespace",
+        "target_fqn": "Xunit",
+        "scope_kind": "file"
+      },
+      "source_file": "Unit/Domain/Exceptions/DomainExceptionTests.cs",
+      "source_location": "L2",
+      "weight": 1.0
+    },
+    {
+      "source": "unit_domain_common_auditableentitytests_elsheiekhhms_tests_unit_domain_common_testentity",
+      "target": "auditableentity",
+      "relation": "inherits",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "metadata": {
+        "ref_token": "AuditableEntity"
+      },
+      "source_file": "Unit/Domain/Common/AuditableEntityTests.cs",
+      "source_location": "L28",
+      "weight": 1.0
+    },
+    {
+      "source": "unit_domain_common_baseentitytests_elsheiekhhms_tests_unit_domain_common_testentity",
+      "target": "baseentity",
+      "relation": "inherits",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "metadata": {
+        "ref_token": "BaseEntity"
+      },
+      "source_file": "Unit/Domain/Common/BaseEntityTests.cs",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "unit_domain_common_softdeletableentitytests_elsheiekhhms_tests_unit_domain_common_testentity",
+      "target": "softdeletableentity",
+      "relation": "inherits",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "metadata": {
+        "ref_token": "SoftDeletableEntity"
+      },
+      "source_file": "Unit/Domain/Common/SoftDeletableEntityTests.cs",
+      "source_location": "L18",
+      "weight": 1.0
+    },
+    {
+      "source": "unit_domain_common_auditableentitytests",
+      "target": "csharp_namespace:3e45288a4abf34b9",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Unit/Domain/Common/AuditableEntityTests.cs",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "unit_domain_common_auditableentitytests",
+      "target": "unit_domain_common_auditableentitytests_elsheiekhhms_tests_unit_domain_common_auditableentitytests",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Unit/Domain/Common/AuditableEntityTests.cs",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "unit_domain_common_auditableentitytests_elsheiekhhms_tests_unit_domain_common_auditableentitytests",
+      "target": "unit_domain_common_auditableentitytests_elsheiekhhms_tests_unit_domain_common_testentity",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Unit/Domain/Common/AuditableEntityTests.cs",
+      "source_location": "L28",
+      "weight": 1.0
+    },
+    {
+      "source": "unit_domain_common_baseentitytests",
+      "target": "csharp_namespace:3e45288a4abf34b9",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Unit/Domain/Common/BaseEntityTests.cs",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "unit_domain_common_baseentitytests",
+      "target": "unit_domain_common_baseentitytests_elsheiekhhms_tests_unit_domain_common_baseentitytests",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Unit/Domain/Common/BaseEntityTests.cs",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "unit_domain_common_baseentitytests_elsheiekhhms_tests_unit_domain_common_baseentitytests",
+      "target": "unit_domain_common_baseentitytests_elsheiekhhms_tests_unit_domain_common_testentity",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Unit/Domain/Common/BaseEntityTests.cs",
+      "source_location": "L15",
+      "weight": 1.0
+    },
+    {
+      "source": "unit_domain_common_softdeletableentitytests",
+      "target": "csharp_namespace:3e45288a4abf34b9",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Unit/Domain/Common/SoftDeletableEntityTests.cs",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "unit_domain_common_softdeletableentitytests",
+      "target": "unit_domain_common_softdeletableentitytests_elsheiekhhms_tests_unit_domain_common_softdeletableentitytests",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Unit/Domain/Common/SoftDeletableEntityTests.cs",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "unit_domain_common_softdeletableentitytests_elsheiekhhms_tests_unit_domain_common_softdeletableentitytests",
+      "target": "unit_domain_common_softdeletableentitytests_elsheiekhhms_tests_unit_domain_common_testentity",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Unit/Domain/Common/SoftDeletableEntityTests.cs",
+      "source_location": "L18",
+      "weight": 1.0
+    },
+    {
+      "source": "unit_domain_exceptions_domainexceptiontests",
+      "target": "csharp_namespace:67c6625fb7964389",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Unit/Domain/Exceptions/DomainExceptionTests.cs",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "unit_domain_exceptions_domainexceptiontests",
+      "target": "unit_domain_exceptions_domainexceptiontests_elsheiekhhms_tests_unit_domain_exceptions_domainexceptiontests",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Unit/Domain/Exceptions/DomainExceptionTests.cs",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_tests",
+      "target": "ext_elsheiekhhms_application_elsheiekhhms_application_csproj",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ElsheiekhHMS.Tests.csproj",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_tests",
+      "target": "ext_elsheiekhhms_core_elsheiekhhms_core_csproj",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ElsheiekhHMS.Tests.csproj",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_tests",
+      "target": "ext_elsheiekhhms_infrastructure_elsheiekhhms_infrastructure_csproj",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ElsheiekhHMS.Tests.csproj",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_tests",
+      "target": "nuget_coverlet_collector",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ElsheiekhHMS.Tests.csproj",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_tests",
+      "target": "nuget_microsoft_net_test_sdk",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ElsheiekhHMS.Tests.csproj",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_tests",
+      "target": "nuget_xunit",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ElsheiekhHMS.Tests.csproj",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_tests",
+      "target": "nuget_xunit_runner_visualstudio",
+      "relation": "imports",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ElsheiekhHMS.Tests.csproj",
+      "weight": 1.0
+    },
+    {
+      "source": "unit_domain_common_auditableentitytests_elsheiekhhms_tests_unit_domain_common_auditableentitytests",
+      "target": "unit_domain_common_auditableentitytests_elsheiekhhms_tests_unit_domain_common_auditableentitytests_creation_metadata_preserves_supplied_utc_time_and_identifier",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Unit/Domain/Common/AuditableEntityTests.cs",
+      "source_location": "L17",
+      "weight": 1.0
+    },
+    {
+      "source": "unit_domain_common_auditableentitytests_elsheiekhhms_tests_unit_domain_common_auditableentitytests",
+      "target": "unit_domain_common_auditableentitytests_elsheiekhhms_tests_unit_domain_common_auditableentitytests_new_entity_has_no_update_or_user_metadata",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Unit/Domain/Common/AuditableEntityTests.cs",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "unit_domain_common_baseentitytests_elsheiekhhms_tests_unit_domain_common_baseentitytests",
+      "target": "unit_domain_common_baseentitytests_elsheiekhhms_tests_unit_domain_common_baseentitytests_derived_entity_can_assign_integer_identity",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Unit/Domain/Common/BaseEntityTests.cs",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "unit_domain_common_softdeletableentitytests_elsheiekhhms_tests_unit_domain_common_softdeletableentitytests",
+      "target": "unit_domain_common_softdeletableentitytests_elsheiekhhms_tests_unit_domain_common_softdeletableentitytests_new_entity_is_active_without_deletion_metadata",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Unit/Domain/Common/SoftDeletableEntityTests.cs",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "unit_domain_exceptions_domainexceptiontests_elsheiekhhms_tests_unit_domain_exceptions_domainexceptiontests",
+      "target": "unit_domain_exceptions_domainexceptiontests_elsheiekhhms_tests_unit_domain_exceptions_domainexceptiontests_exceptions_preserve_original_cause",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Unit/Domain/Exceptions/DomainExceptionTests.cs",
+      "source_location": "L25",
+      "weight": 1.0
+    },
+    {
+      "source": "unit_domain_exceptions_domainexceptiontests_elsheiekhhms_tests_unit_domain_exceptions_domainexceptiontests",
+      "target": "unit_domain_exceptions_domainexceptiontests_elsheiekhhms_tests_unit_domain_exceptions_domainexceptiontests_exceptions_preserve_message",
+      "relation": "method",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Unit/Domain/Exceptions/DomainExceptionTests.cs",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_tests",
+      "target": "framework_net10_0",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ElsheiekhHMS.Tests.csproj",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_tests",
+      "target": "sdk_microsoft_net_sdk",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ElsheiekhHMS.Tests.csproj",
+      "weight": 1.0
+    }
+  ],
+  "hyperedges": [],
+  "built_at_commit": "01fbf3f947effcbc078838c1935c7645894683f9"
+}

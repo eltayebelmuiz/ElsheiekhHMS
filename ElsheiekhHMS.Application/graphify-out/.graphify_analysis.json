@@ -1,0 +1,58 @@
+{
+  "communities": {
+    "0": [
+      "elsheiekhhms_application",
+      "ext_elsheiekhhms_core_elsheiekhhms_core_csproj",
+      "framework_net10_0",
+      "nuget_microsoft_extensions_dependencyinjection_abstractions",
+      "sdk_microsoft_net_sdk"
+    ],
+    "1": [
+      "applicationserviceextensions",
+      "csharp_namespace:445f2ad739c775ae",
+      "microsoft_extensions_dependencyinjection"
+    ],
+    "2": [
+      "applicationserviceextensions_elsheiekhhms_application_applicationserviceextensions",
+      "applicationserviceextensions_elsheiekhhms_application_applicationserviceextensions_addapplication",
+      "iservicecollection"
+    ]
+  },
+  "cohesion": {
+    "0": 0.4,
+    "1": 0.6666666666666666,
+    "2": 0.6666666666666666
+  },
+  "gods": [
+    {
+      "id": "applicationserviceextensions_elsheiekhhms_application_applicationserviceextensions",
+      "label": "ApplicationServiceExtensions",
+      "degree": 2
+    },
+    {
+      "id": "csharp_namespace:445f2ad739c775ae",
+      "label": "ElsheiekhHMS.Application",
+      "degree": 1
+    },
+    {
+      "id": "framework_net10_0",
+      "label": "net10.0",
+      "degree": 1
+    },
+    {
+      "id": "nuget_microsoft_extensions_dependencyinjection_abstractions",
+      "label": "Microsoft.Extensions.DependencyInjection.Abstractions (10.0.12)",
+      "degree": 1
+    },
+    {
+      "id": "sdk_microsoft_net_sdk",
+      "label": "Microsoft.NET.Sdk",
+      "degree": 1
+    }
+  ],
+  "surprises": [],
+  "tokens": {
+    "input": 0,
+    "output": 0
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "Common/AuditableEntity.cs": {
+    "mtime": 1789579684.5361938,
+    "seen": 1789641892.8773627,
+    "ast_hash": "f6671bf101c0d113a03c223f604c067d",
+    "semantic_hash": "f6671bf101c0d113a03c223f604c067d"
+  },
+  "Common/BaseEntity.cs": {
+    "mtime": 1789579684.5287495,
+    "seen": 1789641892.8773673,
+    "ast_hash": "bab634339c629fc7b1bde906e2b89810",
+    "semantic_hash": "bab634339c629fc7b1bde906e2b89810"
+  },
+  "Common/SoftDeletableEntity.cs": {
+    "mtime": 1789579684.5462143,
+    "seen": 1789641892.8773694,
+    "ast_hash": "3f04eb1c69d800f304a2f2a842546ed9",
+    "semantic_hash": "3f04eb1c69d800f304a2f2a842546ed9"
+  },
+  "ElsheiekhHMS.Core.csproj": {
+    "mtime": 1789573135.4720652,
+    "seen": 1789641892.8773704,
+    "ast_hash": "46b0780bd56312ea2d1bab391f179e89",
+    "semantic_hash": "46b0780bd56312ea2d1bab391f179e89"
+  },
+  "Exceptions/BusinessRuleException.cs": {
+    "mtime": 1789579684.5750976,
+    "seen": 1789641892.8773713,
+    "ast_hash": "d4586093bfbcb4697e9204336ec2aa5d",
+    "semantic_hash": "d4586093bfbcb4697e9204336ec2aa5d"
+  },
+  "Exceptions/DomainException.cs": {
+    "mtime": 1789579684.5656557,
+    "seen": 1789641892.8773725,
+    "ast_hash": "14b18aabd4449e3132b7edd4ab850982",
+    "semantic_hash": "14b18aabd4449e3132b7edd4ab850982"
+  },
+  "Exceptions/DomainValidationException.cs": {
+    "mtime": 1789579684.5820203,
+    "seen": 1789641892.8773735,
+    "ast_hash": "709e2cdf573838c899473592eda8f02b",
+    "semantic_hash": "709e2cdf573838c899473592eda8f02b"
+  },
+  "Interfaces/IHasConcurrencyToken.cs": {
+    "mtime": 1789579684.5555644,
+    "seen": 1789641892.8773744,
+    "ast_hash": "d86c1704a4b485ee6860e37fcc999ad9",
+    "semantic_hash": "d86c1704a4b485ee6860e37fcc999ad9"
+  }
+}

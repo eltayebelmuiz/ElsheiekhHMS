@@ -1,0 +1,838 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "id": "exceptions_businessruleexception_elsheiekhhms_core_exceptions_businessruleexception",
+      "label": "BusinessRuleException",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 0,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "ElsheiekhHMS.Core.Exceptions",
+        "scope_chain": [
+          "s0"
+        ]
+      },
+      "norm_label": "businessruleexception",
+      "source_file": "Exceptions/BusinessRuleException.cs",
+      "source_location": "L4"
+    },
+    {
+      "id": "exceptions_domainexception_elsheiekhhms_core_exceptions_domainexception",
+      "label": "DomainException",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 0,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "ElsheiekhHMS.Core.Exceptions",
+        "scope_chain": [
+          "s0"
+        ]
+      },
+      "norm_label": "domainexception",
+      "source_file": "Exceptions/DomainException.cs",
+      "source_location": "L3"
+    },
+    {
+      "id": "exceptions_domainvalidationexception_elsheiekhhms_core_exceptions_domainvalidationexception",
+      "label": "DomainValidationException",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 0,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "ElsheiekhHMS.Core.Exceptions",
+        "scope_chain": [
+          "s0"
+        ]
+      },
+      "norm_label": "domainvalidationexception",
+      "source_file": "Exceptions/DomainValidationException.cs",
+      "source_location": "L4"
+    },
+    {
+      "id": "common_baseentity_elsheiekhhms_core_common_baseentity",
+      "label": "BaseEntity",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 1,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "ElsheiekhHMS.Core.Common",
+        "scope_chain": [
+          "s0"
+        ]
+      },
+      "norm_label": "baseentity",
+      "source_file": "Common/BaseEntity.cs",
+      "source_location": "L3"
+    },
+    {
+      "id": "common_auditableentity_elsheiekhhms_core_common_auditableentity",
+      "label": "AuditableEntity",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 2,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "ElsheiekhHMS.Core.Common",
+        "scope_chain": [
+          "s0"
+        ]
+      },
+      "norm_label": "auditableentity",
+      "source_file": "Common/AuditableEntity.cs",
+      "source_location": "L3"
+    },
+    {
+      "id": "common_softdeletableentity_elsheiekhhms_core_common_softdeletableentity",
+      "label": "SoftDeletableEntity",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 3,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "ElsheiekhHMS.Core.Common",
+        "scope_chain": [
+          "s0"
+        ]
+      },
+      "norm_label": "softdeletableentity",
+      "source_file": "Common/SoftDeletableEntity.cs",
+      "source_location": "L3"
+    },
+    {
+      "id": "interfaces_ihasconcurrencytoken_elsheiekhhms_core_interfaces_ihasconcurrencytoken",
+      "label": "IHasConcurrencyToken",
+      "_callable": true,
+      "_callable_class": true,
+      "_origin": "ast",
+      "community": 4,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "ElsheiekhHMS.Core.Interfaces",
+        "scope_chain": [
+          "s0"
+        ]
+      },
+      "norm_label": "ihasconcurrencytoken",
+      "source_file": "Interfaces/IHasConcurrencyToken.cs",
+      "source_location": "L7"
+    },
+    {
+      "id": "csharp_namespace:77bc4792baee6799",
+      "label": "ElsheiekhHMS.Core.Exceptions",
+      "_origin": "ast",
+      "community": 0,
+      "file_type": "code",
+      "metadata": {
+        "kind": "csharp_namespace",
+        "namespace": "ElsheiekhHMS.Core.Exceptions"
+      },
+      "norm_label": "elsheiekhhms.core.exceptions",
+      "source_file": "Exceptions/BusinessRuleException.cs",
+      "source_location": "L1",
+      "type": "namespace"
+    },
+    {
+      "id": "exception",
+      "label": "Exception",
+      "_origin": "ast",
+      "community": 0,
+      "file_type": "code",
+      "norm_label": "exception",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "exceptions_businessruleexception",
+      "label": "BusinessRuleException.cs",
+      "_origin": "ast",
+      "community": 0,
+      "file_type": "code",
+      "norm_label": "businessruleexception.cs",
+      "source_file": "Exceptions/BusinessRuleException.cs",
+      "source_location": "L1"
+    },
+    {
+      "id": "exceptions_domainexception",
+      "label": "DomainException.cs",
+      "_origin": "ast",
+      "community": 0,
+      "file_type": "code",
+      "norm_label": "domainexception.cs",
+      "source_file": "Exceptions/DomainException.cs",
+      "source_location": "L1"
+    },
+    {
+      "id": "exceptions_domainvalidationexception",
+      "label": "DomainValidationException.cs",
+      "_origin": "ast",
+      "community": 0,
+      "file_type": "code",
+      "norm_label": "domainvalidationexception.cs",
+      "source_file": "Exceptions/DomainValidationException.cs",
+      "source_location": "L1"
+    },
+    {
+      "id": "common_auditableentity",
+      "label": "AuditableEntity.cs",
+      "_origin": "ast",
+      "community": 1,
+      "file_type": "code",
+      "norm_label": "auditableentity.cs",
+      "source_file": "Common/AuditableEntity.cs",
+      "source_location": "L1"
+    },
+    {
+      "id": "common_baseentity",
+      "label": "BaseEntity.cs",
+      "_origin": "ast",
+      "community": 1,
+      "file_type": "code",
+      "norm_label": "baseentity.cs",
+      "source_file": "Common/BaseEntity.cs",
+      "source_location": "L1"
+    },
+    {
+      "id": "common_baseentity_elsheiekhhms_core_common_baseentity_id",
+      "label": "Id",
+      "_origin": "ast",
+      "community": 1,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "ElsheiekhHMS.Core.Common",
+        "scope_chain": [
+          "s0"
+        ]
+      },
+      "norm_label": "id",
+      "source_file": "Common/BaseEntity.cs",
+      "source_location": "L5"
+    },
+    {
+      "id": "common_softdeletableentity",
+      "label": "SoftDeletableEntity.cs",
+      "_origin": "ast",
+      "community": 1,
+      "file_type": "code",
+      "norm_label": "softdeletableentity.cs",
+      "source_file": "Common/SoftDeletableEntity.cs",
+      "source_location": "L1"
+    },
+    {
+      "id": "csharp_namespace:849a5ff7b4e439b6",
+      "label": "ElsheiekhHMS.Core.Common",
+      "_origin": "ast",
+      "community": 1,
+      "file_type": "code",
+      "metadata": {
+        "kind": "csharp_namespace",
+        "namespace": "ElsheiekhHMS.Core.Common"
+      },
+      "norm_label": "elsheiekhhms.core.common",
+      "source_file": "Common/AuditableEntity.cs",
+      "source_location": "L1",
+      "type": "namespace"
+    },
+    {
+      "id": "common_auditableentity_cs_datetimeoffset",
+      "label": "DateTimeOffset",
+      "_origin": "ast",
+      "community": 2,
+      "file_type": "code",
+      "norm_label": "datetimeoffset",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "common_auditableentity_elsheiekhhms_core_common_auditableentity_createdat",
+      "label": "CreatedAt",
+      "_origin": "ast",
+      "community": 2,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "ElsheiekhHMS.Core.Common",
+        "scope_chain": [
+          "s0"
+        ]
+      },
+      "norm_label": "createdat",
+      "source_file": "Common/AuditableEntity.cs",
+      "source_location": "L6"
+    },
+    {
+      "id": "common_auditableentity_elsheiekhhms_core_common_auditableentity_createdby",
+      "label": "CreatedBy",
+      "_origin": "ast",
+      "community": 2,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "ElsheiekhHMS.Core.Common",
+        "scope_chain": [
+          "s0"
+        ]
+      },
+      "norm_label": "createdby",
+      "source_file": "Common/AuditableEntity.cs",
+      "source_location": "L7"
+    },
+    {
+      "id": "common_auditableentity_elsheiekhhms_core_common_auditableentity_updatedat",
+      "label": "UpdatedAt",
+      "_origin": "ast",
+      "community": 2,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "ElsheiekhHMS.Core.Common",
+        "scope_chain": [
+          "s0"
+        ]
+      },
+      "norm_label": "updatedat",
+      "source_file": "Common/AuditableEntity.cs",
+      "source_location": "L8"
+    },
+    {
+      "id": "common_auditableentity_elsheiekhhms_core_common_auditableentity_updatedby",
+      "label": "UpdatedBy",
+      "_origin": "ast",
+      "community": 2,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "ElsheiekhHMS.Core.Common",
+        "scope_chain": [
+          "s0"
+        ]
+      },
+      "norm_label": "updatedby",
+      "source_file": "Common/AuditableEntity.cs",
+      "source_location": "L9"
+    },
+    {
+      "id": "common_softdeletableentity_cs_datetimeoffset",
+      "label": "DateTimeOffset",
+      "_origin": "ast",
+      "community": 3,
+      "file_type": "code",
+      "norm_label": "datetimeoffset",
+      "source_file": "",
+      "source_location": ""
+    },
+    {
+      "id": "common_softdeletableentity_elsheiekhhms_core_common_softdeletableentity_deletedat",
+      "label": "DeletedAt",
+      "_origin": "ast",
+      "community": 3,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "ElsheiekhHMS.Core.Common",
+        "scope_chain": [
+          "s0"
+        ]
+      },
+      "norm_label": "deletedat",
+      "source_file": "Common/SoftDeletableEntity.cs",
+      "source_location": "L7"
+    },
+    {
+      "id": "common_softdeletableentity_elsheiekhhms_core_common_softdeletableentity_deletedby",
+      "label": "DeletedBy",
+      "_origin": "ast",
+      "community": 3,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "ElsheiekhHMS.Core.Common",
+        "scope_chain": [
+          "s0"
+        ]
+      },
+      "norm_label": "deletedby",
+      "source_file": "Common/SoftDeletableEntity.cs",
+      "source_location": "L8"
+    },
+    {
+      "id": "common_softdeletableentity_elsheiekhhms_core_common_softdeletableentity_isdeleted",
+      "label": "IsDeleted",
+      "_origin": "ast",
+      "community": 3,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "ElsheiekhHMS.Core.Common",
+        "scope_chain": [
+          "s0"
+        ]
+      },
+      "norm_label": "isdeleted",
+      "source_file": "Common/SoftDeletableEntity.cs",
+      "source_location": "L6"
+    },
+    {
+      "id": "csharp_namespace:798fee7d7dc1564a",
+      "label": "ElsheiekhHMS.Core.Interfaces",
+      "_origin": "ast",
+      "community": 4,
+      "file_type": "code",
+      "metadata": {
+        "kind": "csharp_namespace",
+        "namespace": "ElsheiekhHMS.Core.Interfaces"
+      },
+      "norm_label": "elsheiekhhms.core.interfaces",
+      "source_file": "Interfaces/IHasConcurrencyToken.cs",
+      "source_location": "L1",
+      "type": "namespace"
+    },
+    {
+      "id": "interfaces_ihasconcurrencytoken",
+      "label": "IHasConcurrencyToken.cs",
+      "_origin": "ast",
+      "community": 4,
+      "file_type": "code",
+      "norm_label": "ihasconcurrencytoken.cs",
+      "source_file": "Interfaces/IHasConcurrencyToken.cs",
+      "source_location": "L1"
+    },
+    {
+      "id": "interfaces_ihasconcurrencytoken_elsheiekhhms_core_interfaces_ihasconcurrencytoken_rowversion",
+      "label": "RowVersion",
+      "_origin": "ast",
+      "community": 4,
+      "file_type": "code",
+      "metadata": {
+        "namespace": "ElsheiekhHMS.Core.Interfaces",
+        "scope_chain": [
+          "s0"
+        ]
+      },
+      "norm_label": "rowversion",
+      "source_file": "Interfaces/IHasConcurrencyToken.cs",
+      "source_location": "L9"
+    },
+    {
+      "id": "elsheiekhhms_core",
+      "label": "ElsheiekhHMS.Core.csproj",
+      "_origin": "ast",
+      "community": 5,
+      "file_type": "code",
+      "norm_label": "elsheiekhhms.core.csproj",
+      "source_file": "ElsheiekhHMS.Core.csproj",
+      "source_location": null
+    },
+    {
+      "id": "framework_net10_0",
+      "label": "net10.0",
+      "_origin": "ast",
+      "community": 5,
+      "file_type": "concept",
+      "norm_label": "net10.0",
+      "source_file": "ElsheiekhHMS.Core.csproj",
+      "source_location": null
+    },
+    {
+      "id": "sdk_microsoft_net_sdk",
+      "label": "Microsoft.NET.Sdk",
+      "_origin": "ast",
+      "community": 5,
+      "file_type": "concept",
+      "norm_label": "microsoft.net.sdk",
+      "source_file": "ElsheiekhHMS.Core.csproj",
+      "source_location": null
+    }
+  ],
+  "links": [
+    {
+      "source": "common_auditableentity_elsheiekhhms_core_common_auditableentity",
+      "target": "common_auditableentity_cs_datetimeoffset",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "metadata": {
+        "ref_token": "DateTimeOffset"
+      },
+      "source_file": "Common/AuditableEntity.cs",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "common_softdeletableentity_elsheiekhhms_core_common_softdeletableentity",
+      "target": "common_softdeletableentity_cs_datetimeoffset",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "metadata": {
+        "ref_token": "DateTimeOffset"
+      },
+      "source_file": "Common/SoftDeletableEntity.cs",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "common_auditableentity_elsheiekhhms_core_common_auditableentity",
+      "target": "common_auditableentity_elsheiekhhms_core_common_auditableentity_createdat",
+      "relation": "defines",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "Common/AuditableEntity.cs",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "common_auditableentity_elsheiekhhms_core_common_auditableentity",
+      "target": "common_auditableentity_elsheiekhhms_core_common_auditableentity_createdby",
+      "relation": "defines",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "Common/AuditableEntity.cs",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "common_auditableentity_elsheiekhhms_core_common_auditableentity",
+      "target": "common_auditableentity_elsheiekhhms_core_common_auditableentity_updatedat",
+      "relation": "defines",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "Common/AuditableEntity.cs",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "common_auditableentity_elsheiekhhms_core_common_auditableentity",
+      "target": "common_auditableentity_elsheiekhhms_core_common_auditableentity_updatedby",
+      "relation": "defines",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "Common/AuditableEntity.cs",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "common_baseentity_elsheiekhhms_core_common_baseentity",
+      "target": "common_baseentity_elsheiekhhms_core_common_baseentity_id",
+      "relation": "defines",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "Common/BaseEntity.cs",
+      "source_location": "L5",
+      "weight": 1.0
+    },
+    {
+      "source": "common_softdeletableentity_elsheiekhhms_core_common_softdeletableentity",
+      "target": "common_softdeletableentity_elsheiekhhms_core_common_softdeletableentity_isdeleted",
+      "relation": "defines",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "Common/SoftDeletableEntity.cs",
+      "source_location": "L6",
+      "weight": 1.0
+    },
+    {
+      "source": "common_softdeletableentity_elsheiekhhms_core_common_softdeletableentity",
+      "target": "common_softdeletableentity_elsheiekhhms_core_common_softdeletableentity_deletedat",
+      "relation": "defines",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "Common/SoftDeletableEntity.cs",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "common_softdeletableentity_elsheiekhhms_core_common_softdeletableentity",
+      "target": "common_softdeletableentity_elsheiekhhms_core_common_softdeletableentity_deletedby",
+      "relation": "defines",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "Common/SoftDeletableEntity.cs",
+      "source_location": "L8",
+      "weight": 1.0
+    },
+    {
+      "source": "interfaces_ihasconcurrencytoken_elsheiekhhms_core_interfaces_ihasconcurrencytoken",
+      "target": "interfaces_ihasconcurrencytoken_elsheiekhhms_core_interfaces_ihasconcurrencytoken_rowversion",
+      "relation": "defines",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "context": "field",
+      "source_file": "Interfaces/IHasConcurrencyToken.cs",
+      "source_location": "L9",
+      "weight": 1.0
+    },
+    {
+      "source": "common_softdeletableentity_elsheiekhhms_core_common_softdeletableentity",
+      "target": "common_auditableentity_elsheiekhhms_core_common_auditableentity",
+      "relation": "inherits",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "metadata": {
+        "ref_token": "AuditableEntity"
+      },
+      "source_file": "Common/SoftDeletableEntity.cs",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "common_auditableentity_elsheiekhhms_core_common_auditableentity",
+      "target": "common_baseentity_elsheiekhhms_core_common_baseentity",
+      "relation": "inherits",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "metadata": {
+        "ref_token": "BaseEntity"
+      },
+      "source_file": "Common/AuditableEntity.cs",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "exceptions_businessruleexception_elsheiekhhms_core_exceptions_businessruleexception",
+      "target": "exceptions_domainexception_elsheiekhhms_core_exceptions_domainexception",
+      "relation": "inherits",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "metadata": {
+        "ref_token": "DomainException"
+      },
+      "source_file": "Exceptions/BusinessRuleException.cs",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "exceptions_domainvalidationexception_elsheiekhhms_core_exceptions_domainvalidationexception",
+      "target": "exceptions_domainexception_elsheiekhhms_core_exceptions_domainexception",
+      "relation": "inherits",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "metadata": {
+        "ref_token": "DomainException"
+      },
+      "source_file": "Exceptions/DomainValidationException.cs",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "exceptions_domainexception_elsheiekhhms_core_exceptions_domainexception",
+      "target": "exception",
+      "relation": "inherits",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "metadata": {
+        "ref_token": "Exception"
+      },
+      "source_file": "Exceptions/DomainException.cs",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "common_auditableentity",
+      "target": "csharp_namespace:849a5ff7b4e439b6",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Common/AuditableEntity.cs",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "common_auditableentity",
+      "target": "common_auditableentity_elsheiekhhms_core_common_auditableentity",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Common/AuditableEntity.cs",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "common_baseentity",
+      "target": "csharp_namespace:849a5ff7b4e439b6",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Common/BaseEntity.cs",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "common_baseentity",
+      "target": "common_baseentity_elsheiekhhms_core_common_baseentity",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Common/BaseEntity.cs",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "common_softdeletableentity",
+      "target": "csharp_namespace:849a5ff7b4e439b6",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Common/SoftDeletableEntity.cs",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "common_softdeletableentity",
+      "target": "common_softdeletableentity_elsheiekhhms_core_common_softdeletableentity",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Common/SoftDeletableEntity.cs",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "exceptions_businessruleexception",
+      "target": "csharp_namespace:77bc4792baee6799",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Exceptions/BusinessRuleException.cs",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "exceptions_businessruleexception",
+      "target": "exceptions_businessruleexception_elsheiekhhms_core_exceptions_businessruleexception",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Exceptions/BusinessRuleException.cs",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "exceptions_domainexception",
+      "target": "csharp_namespace:77bc4792baee6799",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Exceptions/DomainException.cs",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "exceptions_domainexception",
+      "target": "exceptions_domainexception_elsheiekhhms_core_exceptions_domainexception",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Exceptions/DomainException.cs",
+      "source_location": "L3",
+      "weight": 1.0
+    },
+    {
+      "source": "exceptions_domainvalidationexception",
+      "target": "csharp_namespace:77bc4792baee6799",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Exceptions/DomainValidationException.cs",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "exceptions_domainvalidationexception",
+      "target": "exceptions_domainvalidationexception_elsheiekhhms_core_exceptions_domainvalidationexception",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Exceptions/DomainValidationException.cs",
+      "source_location": "L4",
+      "weight": 1.0
+    },
+    {
+      "source": "interfaces_ihasconcurrencytoken",
+      "target": "csharp_namespace:798fee7d7dc1564a",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Interfaces/IHasConcurrencyToken.cs",
+      "source_location": "L1",
+      "weight": 1.0
+    },
+    {
+      "source": "interfaces_ihasconcurrencytoken",
+      "target": "interfaces_ihasconcurrencytoken_elsheiekhhms_core_interfaces_ihasconcurrencytoken",
+      "relation": "contains",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "Interfaces/IHasConcurrencyToken.cs",
+      "source_location": "L7",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_core",
+      "target": "framework_net10_0",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ElsheiekhHMS.Core.csproj",
+      "weight": 1.0
+    },
+    {
+      "source": "elsheiekhhms_core",
+      "target": "sdk_microsoft_net_sdk",
+      "relation": "references",
+      "_origin": "ast",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "ElsheiekhHMS.Core.csproj",
+      "weight": 1.0
+    }
+  ],
+  "hyperedges": [],
+  "built_at_commit": "01fbf3f947effcbc078838c1935c7645894683f9"
+}
