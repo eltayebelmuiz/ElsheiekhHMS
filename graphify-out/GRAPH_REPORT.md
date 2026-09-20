@@ -2,11 +2,11 @@
 
 ## Snapshot
 
-- **generatedAtUtc:** `2026-09-20T13:34:34.7722575+00:00`
+- **generatedAtUtc:** `2026-09-20T18:57:06.7223005+00:00`
 - **gitBranch:** `main`
-- **gitCommit:** `70433a65532516376ba76a6db45a6475ed4d1ebc`
+- **gitCommit:** `6c28aa7a5e3aba30e444d81af7c6ed0afbd0a7bf`
 - **workingTreeDirty:** `True`
-- **sourceFingerprint:** `d6eaf90da98f7a4bae3857758e23847458dd62df13c6d1efd3cbbd593985914b`
+- **sourceFingerprint:** `38dfc3a2977b26d74b5a269cea8c5384166d5b7a5708aec51cc72a3533bb00c4`
 - Framework: net10.0
 - Structural extraction only: **0 LLM API calls / 0 LLM tokens**. No statistical community clustering is claimed; project ownership supplies the visual groups.
 
@@ -37,6 +37,7 @@ ElsheiekhHMS.Web -> ElsheiekhHMS.Application, ElsheiekhHMS.Infrastructure
 - [ElsheiekhHMS.Core.Common.AuditableEntity](../ElsheiekhHMS.Core/Common/AuditableEntity.cs) — abstract-class, public
 - [ElsheiekhHMS.Core.Common.BaseEntity](../ElsheiekhHMS.Core/Common/BaseEntity.cs) — abstract-class, public
 - [ElsheiekhHMS.Core.Common.SoftDeletableEntity](../ElsheiekhHMS.Core/Common/SoftDeletableEntity.cs) — abstract-class, public
+- [ElsheiekhHMS.Core.Domain.Organization.Entities.Department](../ElsheiekhHMS.Core/Domain/Organization/Entities/Department.cs) — class, public
 - [ElsheiekhHMS.Core.Exceptions.BusinessRuleException](../ElsheiekhHMS.Core/Exceptions/BusinessRuleException.cs) — class, public
 - [ElsheiekhHMS.Core.Exceptions.DomainException](../ElsheiekhHMS.Core/Exceptions/DomainException.cs) — class, public
 - [ElsheiekhHMS.Core.Exceptions.DomainValidationException](../ElsheiekhHMS.Core/Exceptions/DomainValidationException.cs) — class, public
@@ -48,6 +49,7 @@ Derived -> base (includes private test helper types and resolved external bases)
 
 - `ElsheiekhHMS.Core.Common.AuditableEntity` -> `ElsheiekhHMS.Core.Common.BaseEntity` — ElsheiekhHMS.Core/Common/AuditableEntity.cs:L3
 - `ElsheiekhHMS.Core.Common.SoftDeletableEntity` -> `ElsheiekhHMS.Core.Common.AuditableEntity` — ElsheiekhHMS.Core/Common/SoftDeletableEntity.cs:L3
+- `ElsheiekhHMS.Core.Domain.Organization.Entities.Department` -> `ElsheiekhHMS.Core.Common.AuditableEntity` — ElsheiekhHMS.Core/Domain/Organization/Entities/Department.cs:L6
 - `ElsheiekhHMS.Core.Exceptions.BusinessRuleException` -> `ElsheiekhHMS.Core.Exceptions.DomainException` — ElsheiekhHMS.Core/Exceptions/BusinessRuleException.cs:L4
 - `ElsheiekhHMS.Core.Exceptions.DomainException` -> `System.Exception` — ElsheiekhHMS.Core/Exceptions/DomainException.cs:L3
 - `ElsheiekhHMS.Core.Exceptions.DomainValidationException` -> `ElsheiekhHMS.Core.Exceptions.DomainException` — ElsheiekhHMS.Core/Exceptions/DomainValidationException.cs:L4
@@ -62,7 +64,7 @@ Derived -> base (includes private test helper types and resolved external bases)
 
 ## Tests
 
-4 classes; 6 methods; 10 statically enumerable cases. This is discovery from source, not an execution result.
+5 classes; 13 methods; 19 statically enumerable cases. This is discovery from source, not an execution result.
 
 - [ElsheiekhHMS.Tests.Unit.Domain.Common.AuditableEntityTests](../ElsheiekhHMS.Tests/Unit/Domain/Common/AuditableEntityTests.cs) — 2 cases
   - Uses/tests `ElsheiekhHMS.Core.Common.AuditableEntity` (source type/member binding; includes inherited foundation dependencies)
@@ -74,6 +76,13 @@ Derived -> base (includes private test helper types and resolved external bases)
   - Uses/tests `ElsheiekhHMS.Core.Common.BaseEntity` (source type/member binding; includes inherited foundation dependencies)
   - Uses/tests `ElsheiekhHMS.Core.Common.SoftDeletableEntity` (source type/member binding; includes inherited foundation dependencies)
 - [ElsheiekhHMS.Tests.Unit.Domain.Exceptions.DomainExceptionTests](../ElsheiekhHMS.Tests/Unit/Domain/Exceptions/DomainExceptionTests.cs) — 6 cases
+  - Uses/tests `ElsheiekhHMS.Core.Exceptions.BusinessRuleException` (source type/member binding; includes inherited foundation dependencies)
+  - Uses/tests `ElsheiekhHMS.Core.Exceptions.DomainException` (source type/member binding; includes inherited foundation dependencies)
+  - Uses/tests `ElsheiekhHMS.Core.Exceptions.DomainValidationException` (source type/member binding; includes inherited foundation dependencies)
+- [ElsheiekhHMS.Tests.Unit.Domain.Organization.DepartmentTests](../ElsheiekhHMS.Tests/Unit/Domain/Organization/DepartmentTests.cs) — 9 cases
+  - Uses/tests `ElsheiekhHMS.Core.Common.AuditableEntity` (source type/member binding; includes inherited foundation dependencies)
+  - Uses/tests `ElsheiekhHMS.Core.Common.BaseEntity` (source type/member binding; includes inherited foundation dependencies)
+  - Uses/tests `ElsheiekhHMS.Core.Domain.Organization.Entities.Department` (source type/member binding; includes inherited foundation dependencies)
   - Uses/tests `ElsheiekhHMS.Core.Exceptions.BusinessRuleException` (source type/member binding; includes inherited foundation dependencies)
   - Uses/tests `ElsheiekhHMS.Core.Exceptions.DomainException` (source type/member binding; includes inherited foundation dependencies)
   - Uses/tests `ElsheiekhHMS.Core.Exceptions.DomainValidationException` (source type/member binding; includes inherited foundation dependencies)
@@ -124,6 +133,7 @@ Declared by README; not inferred from the existence of classes:
 - [ElsheiekhHMS.Core/Common/AuditableEntity.cs](../ElsheiekhHMS.Core/Common/AuditableEntity.cs) — ElsheiekhHMS.Core
 - [ElsheiekhHMS.Core/Common/BaseEntity.cs](../ElsheiekhHMS.Core/Common/BaseEntity.cs) — ElsheiekhHMS.Core
 - [ElsheiekhHMS.Core/Common/SoftDeletableEntity.cs](../ElsheiekhHMS.Core/Common/SoftDeletableEntity.cs) — ElsheiekhHMS.Core
+- [ElsheiekhHMS.Core/Domain/Organization/Entities/Department.cs](../ElsheiekhHMS.Core/Domain/Organization/Entities/Department.cs) — ElsheiekhHMS.Core
 - [ElsheiekhHMS.Core/Exceptions/BusinessRuleException.cs](../ElsheiekhHMS.Core/Exceptions/BusinessRuleException.cs) — ElsheiekhHMS.Core
 - [ElsheiekhHMS.Core/Exceptions/DomainException.cs](../ElsheiekhHMS.Core/Exceptions/DomainException.cs) — ElsheiekhHMS.Core
 - [ElsheiekhHMS.Core/Exceptions/DomainValidationException.cs](../ElsheiekhHMS.Core/Exceptions/DomainValidationException.cs) — ElsheiekhHMS.Core
@@ -133,6 +143,7 @@ Declared by README; not inferred from the existence of classes:
 - [ElsheiekhHMS.Tests/Unit/Domain/Common/BaseEntityTests.cs](../ElsheiekhHMS.Tests/Unit/Domain/Common/BaseEntityTests.cs) — ElsheiekhHMS.Tests
 - [ElsheiekhHMS.Tests/Unit/Domain/Common/SoftDeletableEntityTests.cs](../ElsheiekhHMS.Tests/Unit/Domain/Common/SoftDeletableEntityTests.cs) — ElsheiekhHMS.Tests
 - [ElsheiekhHMS.Tests/Unit/Domain/Exceptions/DomainExceptionTests.cs](../ElsheiekhHMS.Tests/Unit/Domain/Exceptions/DomainExceptionTests.cs) — ElsheiekhHMS.Tests
+- [ElsheiekhHMS.Tests/Unit/Domain/Organization/DepartmentTests.cs](../ElsheiekhHMS.Tests/Unit/Domain/Organization/DepartmentTests.cs) — ElsheiekhHMS.Tests
 - [ElsheiekhHMS.Web/Components/App.razor](../ElsheiekhHMS.Web/Components/App.razor) — ElsheiekhHMS.Web
 - [ElsheiekhHMS.Web/Components/Layout/MainLayout.razor](../ElsheiekhHMS.Web/Components/Layout/MainLayout.razor) — ElsheiekhHMS.Web
 - [ElsheiekhHMS.Web/Components/Layout/NavMenu.razor](../ElsheiekhHMS.Web/Components/Layout/NavMenu.razor) — ElsheiekhHMS.Web

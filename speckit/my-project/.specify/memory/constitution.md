@@ -15,9 +15,11 @@ Sync Impact Report
 
 ### I. Layered Architecture and Application-Owned Behavior
 The system MUST maintain the dependency direction Core -> Application -> Infrastructure -> Web.
-Core contains domain rules and abstractions; Application contains use cases and business logic;
-Infrastructure contains persistence and external-system implementations; Web contains endpoints,
-Blazor presentation, and transport concerns. Blazor components MUST NOT contain business logic or
+Core contains intrinsic domain invariants, domain behavior, and abstractions. Application contains
+use-case orchestration and rules requiring coordination, persistence queries, authorization, or
+external dependencies. Infrastructure contains persistence and external-system implementations;
+Web contains endpoints, Blazor presentation, and transport concerns. Blazor components MUST NOT
+contain business logic or
 direct database access. Components MUST delegate behavior to Application services and remain focused
 on presentation, input binding, and user interaction. This separation keeps clinical behavior
 testable and prevents the UI from becoming an alternative business layer.
@@ -59,7 +61,9 @@ contracts consistent across layers.
 ## Implementation Constraints
 
 - Core MUST remain independent of Infrastructure and Web concerns.
-- Application services MUST be the only location for use-case orchestration and business rules.
+- Core MUST own intrinsic domain invariants and domain behavior. Application services MUST own
+  use-case orchestration and rules requiring coordination, persistence queries, authorization, or
+  external dependencies.
 - Infrastructure MUST encapsulate EF Core, transactions, audit persistence, and external integrations.
 - Web endpoints and Blazor components MUST call Application contracts rather than `DbContext`
   directly.
