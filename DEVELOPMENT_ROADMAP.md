@@ -3,7 +3,7 @@
 **Version:** 1.0.0
 **Date:** September 20, 2026
 **Owner:** Eltayeb Elmuiz
-**Status:** Active — Phase 01 Complete, Phase 12 (MVC) In Progress, Blazor Migration Planned
+**Status:** Active — Phase 05 Identity & Security in progress; 05A, 05B, 05C, 05C-A, and 05D complete
 
 ---
 
@@ -43,7 +43,7 @@ ElsheiekhHMS is a web-based, enterprise-grade Hospital Management System designe
 | Billing & Payments | Invoices, line items, partial payments, receipts | 08/12 |
 | Notifications | In-app bell, unread count, event-driven alerts | 09/12 |
 | Audit Trail | Full append-only activity log, before/after snapshots | 01/12 |
-| Users & Roles | 7 roles, ASP.NET Identity, permission enforcement | 05/12 |
+| Users & Roles | Five canonical roles, ASP.NET Identity, policy enforcement | 05/12 |
 | System Settings | Hospital name, code prefixes, session config | 09/12 |
 | Dashboard | Real-time KPIs per role, SignalR updates | 12/12 |
 | Reporting | Revenue, workload, lab activity, bed occupancy | Future |
@@ -61,10 +61,9 @@ ElsheiekhHMS is a web-based, enterprise-grade Hospital Management System designe
 
 | Technology | Purpose | Project |
 |-----------|---------|---------|
-| .NET 9 / C# | Runtime and language | All |
-| ASP.NET Core MVC | Web framework (current UI layer) | Web |
-| Blazor Interactive Server | Planned UI migration target | Web (planned) |
-| Entity Framework Core 9 | ORM, Code-First migrations | Infrastructure |
+| .NET 10 / C# | Runtime and language | All |
+| ASP.NET Core / Blazor Interactive Server | Web framework and current UI layer | Web |
+| Entity Framework Core 10 | ORM, Code-First migrations | Infrastructure |
 | SQL Server / LocalDB | Database | Infrastructure |
 | ASP.NET Core Identity | Authentication, roles, password hashing | Infrastructure |
 | Tabler Icons CDN | Icon system | Web |
@@ -77,7 +76,7 @@ ElsheiekhHMS is a web-based, enterprise-grade Hospital Management System designe
 
 | Technology | Purpose | Earliest Phase |
 |-----------|---------|---------------|
-| Blazor Interactive Server (full migration) | Replace MVC views | Phase 12 |
+| Blazor Interactive Server | Future HMS UI expansion after backend readiness | Phase 12 |
 | EF Core InMemory | Integration test database | Phase 10 |
 | ILogger<T> structured logging | Observability | Phase 09 |
 | Health checks | Infrastructure monitoring | Phase 09 |
@@ -92,7 +91,7 @@ The following were considered and rejected. Do not introduce them:
 - Docker / Kubernetes — hospital LAN deployment, not cloud
 - Event sourcing — overkill for HMS domain
 - Message brokers (RabbitMQ, Azure Service Bus) — no async messaging required
-- gRPC — REST/MVC patterns sufficient
+- gRPC — standard HTTP/Blazor patterns are sufficient
 - GraphQL — not needed
 - Microservices — monolith is correct for this domain and team size
 
@@ -103,15 +102,14 @@ The following were considered and rejected. Do not introduce them:
 ### Projects
 
 ```
-ElsheiekhHMS.sln
-├── ElsheiekhMedicalComplex.Core/           ← Domain layer. ZERO external dependencies.
-├── ElsheiekhMedicalComplex.Infrastructure/ ← Data + services. References Core only.
-├── ElsheiekhMedicalComplex.Web/            ← Presentation. References Core + Infrastructure.
-└── ElsheiekhMedicalComplex.Tests/          ← Test project. References all.
+ElsheiekhHMS.slnx
+├── ElsheiekhHMS.Core/           ← Domain layer. ZERO project dependencies.
+├── ElsheiekhHMS.Application/    ← Use-case contracts and security vocabulary. References Core.
+├── ElsheiekhHMS.Infrastructure/ ← EF Core, SQL Server, Identity. References Application + Core.
+├── ElsheiekhHMS.Web/            ← Blazor host and composition root. References Application + Infrastructure.
+└── ElsheiekhHMS.Tests/          ← Tests. References Core + Application + Infrastructure.
 
-NOTE: The current codebase uses the namespace prefix ELShiekhMedicalComplex
-(matching the original MVC solution). The Blazor migration target uses
-ElsheiekhHMS as the namespace prefix per phase01-setup.ps1.
+The current checkout uses the `ElsheiekhHMS` namespace and project prefix.
 ```
 
 ### Project responsibilities
@@ -119,19 +117,17 @@ ElsheiekhHMS as the namespace prefix per phase01-setup.ps1.
 | Project | Responsibility | May Reference |
 |---------|---------------|---------------|
 | **Core** | Domain entities, enums, interfaces, exceptions, ServiceResult | Nothing |
-| **Infrastructure** | AppDbContext, EF configs, repositories, UnitOfWork, services | Core only |
-| **Web** | Controllers (MVC) / Components (Blazor), ViewModels, middleware, wwwroot | Core + Infrastructure |
-| **Tests** | All test types across all layers | Core + Infrastructure + Web |
+| **Infrastructure** | DbContext, EF configs, Identity, role seeder, repositories, services | Application + Core |
+| **Web** | Blazor components, authorization composition, middleware, wwwroot | Application + Infrastructure |
+| **Tests** | Domain, application, infrastructure, and persistence tests | Core + Application + Infrastructure |
 
 ### Dependency direction (enforced, never violated)
 
 ```
-Web
- ├──► Infrastructure
- │         └──► Core
- └──────────────► Core
-
-Tests ──► Core + Infrastructure + Web
+Web ──► Application + Infrastructure
+Infrastructure ──► Application + Core
+Application ──► Core
+Tests ──► Core + Application + Infrastructure
 
 Core ──► (nothing — zero external references)
 ```
@@ -175,10 +171,10 @@ These rules apply across all phases. Violations are architectural defects, not s
 - Core has **zero** NuGet package dependencies — no EF Core, no Identity, no HTTP, no logging implementations
 - No `using Microsoft.EntityFrameworkCore` inside any Core file
 - No `DbContext`, `DbSet`, or `[Key]` EF attributes in Core entities (configuration belongs in Infrastructure)
-- No DTOs in Core — DTOs belong in Application (Blazor) or ViewModels (MVC)
+- No DTOs in Core — DTOs belong in Application and presentation models belong in Web
 
 ### Service and business logic rules
-- All business rules live in Application services — never in Blazor components or MVC controllers
+- All business rules live in Application services — never in Blazor components or transport endpoints
 - Controllers and Blazor components call services and handle results — they do not orchestrate business logic
 - Authorization is verified **server-side** on every action — hiding a button in the UI is never sufficient
 - Every write operation that changes domain state must produce an AuditLog entry within the same database transaction
@@ -222,7 +218,7 @@ The backend is built and verified before substantial UI work begins. This ensure
 ```
 PHASE 01–11: Backend
 ──────────────────────────────────────────────────
-Blazor/MVC Component
+Blazor Component
         ↓
 Application Service (called via DI)
         ↓
@@ -243,7 +239,7 @@ They do NOT contain business logic.
 
 ### Why UI development is intentionally late
 
-If business rules exist only in Razor components or MVC actions, they cannot be tested independently, they cannot be reused by future clients (mobile app, API, background jobs), and they are invisible to the audit trail. By building services first, the Blazor UI becomes a thin presentation layer over a fully tested backend.
+If business rules exist only in Razor components or transport endpoints, they cannot be tested independently, they cannot be reused by future clients (mobile app, API, background jobs), and they are invisible to the audit trail. By building services first, the Blazor UI becomes a thin presentation layer over a fully tested backend.
 
 ---
 
@@ -251,18 +247,18 @@ If business rules exist only in Razor components or MVC actions, they cannot be 
 
 | Phase | Name | Purpose | Status | Main Deliverable |
 |-------|------|---------|--------|-----------------|
-| 01 | Solution & Architecture | Project structure, DI, health checks | ✅ Complete | Compiling 3-project solution |
+| 01 | Solution & Architecture | Project structure, DI, health checks | ✅ Complete | Compiling five-project solution |
 | 02 | Core Foundation | BaseEntity, enums, exceptions, ServiceResult | ✅ Complete | Core compiles with zero dependencies |
 | 03 | Domain Entities | All HMS domain models | ✅ Complete | DomainModels.cs, IRepositories.cs |
 | 04 | EF Core & Database | AppDbContext, Fluent config, migrations | ✅ Complete | Database created and migrated |
-| 05 | Identity & Security | ApplicationUser, roles, auth, middleware | ✅ Complete | Login, logout, role enforcement |
-| 06 | DTOs & Validation | ViewModels, ServiceResult, validation | ✅ Complete | PatientViewModels, DoctorViewModels |
-| 07 | Application Services | PatientService, DoctorService, LabService, etc. | ✅ Complete | All P0 services operational |
-| 08 | Business Workflows | Queue, appointments, EMR, billing | 🟡 In Progress | WalkInQueue complete, Billing pending |
-| 09 | Enterprise Infrastructure | Audit, notifications, middleware, settings | 🟡 In Progress | AuditLog, Notifications done |
-| 10 | Testing & Hardening | Unit + integration tests, security hardening | ⏳ Planned | Test suite passing |
-| 11 | Backend Review | Full backend gate before UI | ⏳ Planned | Architecture audit passing |
-| 12 | Blazor UI | Migrate MVC to Blazor Interactive Server | ⏳ Planned | All modules in Blazor |
+| 05 | Identity & Security | ApplicationUser, roles, policies, entity auditing, AuditLog foundation, migration, authentication hardening | 🟡 In Progress (05A/05B/05C/05C-A/05D complete) | Identity/security foundations |
+| 06 | DTOs & Validation | DTOs, input validation, shared pagination | ⏳ Not started | Approved validation contracts |
+| 07 | Application Services | Application use cases and orchestration | ⏳ Not started | Tested application contracts |
+| 08 | Business Workflows | Queue, appointments, EMR, billing | ⏳ Not started | Approved workflow services |
+| 09 | Enterprise Infrastructure | Remaining audit events, notifications, settings, integrations | ⏳ Not started | Approved cross-cutting services |
+| 10 | Testing & Hardening | Unit, integration, security, performance | ⏳ Not started | Hardening evidence |
+| 11 | Backend Review | Full backend gate before UI | ⏳ Not started | Architecture audit passing |
+| 12 | Blazor UI | HMS presentation and workflows | ⏳ Not started | Approved Blazor UI |
 
 ---
 
@@ -297,15 +293,14 @@ None — this is the starting point.
 - No database connection
 
 ### Architecture decisions
-- **Three projects** for MVC phase: Core, Infrastructure, Web (Tests added)
-- **Five projects** for Blazor phase: Core, Application, Infrastructure, Web, Tests
+- **Five projects** are established for the current .NET 10 Blazor-hosted architecture: Core, Application, Infrastructure, Web, Tests
 - `Program.cs` calls `AddApplication()` and `AddInfrastructure()` — not hundreds of inline registrations
 - Health check endpoint present from day one
 
 ### Projects affected
 All
 
-### Folder structure (MVC — current)
+### Legacy folder structure (historical MVC reference)
 
 ```
 ELShiekhMedicalComplex/
@@ -546,7 +541,7 @@ Generated server-side in WalkInQueueService only — never in UI
 - No DbContext
 - No migration
 
-**Note:** The current codebase does use some Data Annotations on entities (`[Required]`, `[MaxLength]`) for model validation purposes — these are acceptable for MVC model binding but the authoritative database constraints must come from Fluent API in Infrastructure.
+**Note:** The current codebase does use some Data Annotations on entities (`[Required]`, `[MaxLength]`) for model validation purposes — these remain compatible with presentation binding, but authoritative database constraints must come from Fluent API in Infrastructure.
 
 ### Definition of done
 
@@ -788,7 +783,7 @@ options.Cookie.IsEssential = true;
 
 - `[ValidateAntiForgeryToken]` on all POST actions
 - `[Authorize(Roles = "...")]` on every controller and action
-- `[AllowAnonymous]` only on Login, Logout, Setup, and Queue Display board
+- Anonymous access is limited to authentication/access-denied surfaces, `/health`, static/framework infrastructure, and separately approved public pages
 - Server-side role check on every write — never rely on UI hiding
 
 #### AccountController actions
@@ -801,7 +796,7 @@ options.Cookie.IsEssential = true;
 ### Definition of done
 
 - [ ] Identity configured with password policy and lockout
-- [ ] All 7 roles seeded on startup
+- [x] Five canonical roles defined; password-free role seeding is implemented but invoked only through explicit post-migration bootstrap
 - [ ] Login, logout, and setup pages functional
 - [ ] `[Authorize]` present on all controllers
 - [ ] `IdempotencyMiddleware` and `RateLimitMiddleware` registered in pipeline
@@ -818,14 +813,14 @@ git commit -m "Phase05: Identity config, roles seeded, auth cookie, security mid
 ## PHASE 06 — DTOs & Validation
 
 ### Objective
-Create ViewModels (MVC) / DTOs (Blazor) for all module operations. Establish the pattern for separating presentation data from domain entities.
+Create DTOs and presentation models for all module operations. Establish the pattern for separating presentation data from domain entities.
 
 ### Prerequisites
 Phase 05 complete.
 
 ### Scope
 
-#### ViewModel pattern (MVC current)
+#### Presentation model pattern (historical MVC reference)
 
 ```
 Web/ViewModels/
@@ -1449,7 +1444,7 @@ git commit -m "Phase11: backend audit complete, all checks passing, ready for Bl
 ## PHASE 12 — Blazor UI
 
 ### Objective
-Migrate the MVC presentation layer to Blazor Interactive Server, or build the Blazor UI fresh using `setup-elshiekh-blazor.ps1`. The backend behavior is already implemented — Blazor is purely presentation.
+Build the Blazor Interactive Server UI using the approved backend contracts. Blazor remains a presentation layer over tested Application workflows.
 
 ### Prerequisites
 Phase 11 complete and signed off.
@@ -1713,7 +1708,7 @@ dotnet ef migrations list \
 |------|---------|
 | `DEVELOPMENT_ROADMAP.md` | This file — master roadmap |
 | `PRD.md` | Product Requirements Document |
-| `phase01-setup.ps1` | Phase 01 MVC solution setup script |
+| `phase01-setup.ps1` | Phase 01 legacy solution setup script |
 | `setup-elshiekh-blazor.ps1` | Blazor migration setup script |
 | `seed_patients.sql` | 100 patient seed records (integer enums, NULL passport) |
 | `WalkInQueue-Backend.md` | Walk-in queue full backend spec |
@@ -1757,7 +1752,7 @@ DO NOT:
 ❌ Add HasOne(q => q.Department) to WalkInQueue config — no such navigation
 ❌ Add e.Ignore(q => q.WaitTime) to WalkInQueue config — WaitTime is not on entity
 ❌ Call SaveChangesAsync() inside a repository method
-❌ Inject AppDbContext into a Blazor component or MVC controller
+❌ Inject AppDbContext into a Blazor component or transport endpoint
 ❌ Add packages to Core project
 ❌ Add CQRS, MediatR, Redis, Docker, or microservices patterns
 ❌ Implement features belonging to future phases
@@ -1801,10 +1796,10 @@ public async Task<ServiceResult<T>> DoSomethingAsync(Dto dto, string actorEmail)
 **Consequence:** UI development (Phase 12) begins only after backend is audited (Phase 11).
 **Phase:** Established at project start.
 
-### Decision: Three-project MVC solution → Five-project Blazor solution
-**Reason:** MVC phase used Core/Infrastructure/Web for speed. Blazor migration adds Application layer to enforce DTO separation and avoid domain entities leaking to UI.
-**Consequence:** `ElsheiekhHMS.Application` project created during Blazor migration.
-**Phase:** 01 (MVC), 12 (Blazor migration)
+### Decision: Five-project .NET 10 Blazor-hosted solution
+**Reason:** Core, Application, Infrastructure, Web, and Tests keep domain rules, orchestration, technical persistence, host composition, and verification separate.
+**Consequence:** The verified project graph is preserved: Core has no project dependency; Application references Core; Infrastructure references Application/Core; Web references Application/Infrastructure; Tests references Core/Application/Infrastructure.
+**Phase:** 01
 
 ### Decision: English-only, LTR layout
 **Reason:** Arabic UI complexity was significant. All Arabic/RTL code was removed to unblock development.
@@ -1861,22 +1856,24 @@ public async Task<ServiceResult<T>> DoSomethingAsync(Dto dto, string actorEmail)
 ## 16. Current Project Checkpoint
 
 ```
-Last completed phase:  Phase 09 — Enterprise Infrastructure
-Current phase:         Phase 08/09 — Walk-in Queue complete; Billing module pending
-Next phase:            Phase 10 — Testing & Hardening
-Next action:           Complete billing module (Invoice, Payment, Receipt)
-                       Then begin Phase 10 test suite
+Last completed phase:  Phase 05E — Security Integration / Hardening
+Current phase:         Phase 05 — Identity & Security complete; Phase 06 pending
+Next phase:            Phase 06 — DTOs & Validation
+Next action:           Prepare and approve the Phase 06 DTOs & Validation design gate
 Known blockers:        None
 Important notes:
-  - MVC solution is the current working codebase (ELShiekhMedicalComplex.*)
-  - Blazor migration target uses ElsheiekhHMS.* namespace (phase01-setup.ps1 ready)
+  - The current working codebase is the five-project .NET 10 ElsheiekhHMS solution
+  - The Web project uses the Blazor Interactive Server host
   - PRD.md is complete and approved
   - SpecKit and Codex command files generated
   - seed_patients.sql corrected: integer enums, NULL passports, no IDENTITY_INSERT
   - Enterprise table system active on Patient/Index
   - _PatientSearch partial complete and in use in WalkInQueue/Add
-  - Display board complete with bank-style dark theme
+  - Display board and future UI modules remain later workflow/UI scope
   - Arabic/RTL removed — English-only confirmed
+  - 05C-A stable audit vocabulary, bounded append-only model, server-controlled writer, and focused tests are complete
+  - 05D additive Identity/AuditLog migration, development/integration SQL verification, and pending-model suppression reassessment are complete
+  - AuditLog event-producing workflows, retention duration, IP/UserAgent capture, clinical/read auditing, and UI remain deferred after 05E security integration
   - All CSS in wwwroot/css/ split into 8 files
   - site.js is 1389 lines including EntTable and PS_init engines
 ```

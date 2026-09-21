@@ -2,11 +2,11 @@
 
 ## Snapshot
 
-- **generatedAtUtc:** `2026-09-21T11:53:31.7615920+00:00`
+- **generatedAtUtc:** `2026-09-21T19:27:04.7665157+00:00`
 - **gitBranch:** `main`
-- **gitCommit:** `5899d795e05f23d8266d4092df27a8984b18018f`
+- **gitCommit:** `bd180f22fca1b0ce2769012e1ad2226ba34718a1`
 - **workingTreeDirty:** `True`
-- **sourceFingerprint:** `f7a69b7fd6144dd6805869f43390296990d812ac1660f5c0e0cf63affe4390ac`
+- **sourceFingerprint:** `d9cba880a431d156dd2727629c2a5010853177e955c6d4d17a1b183040a58203`
 - Framework: net10.0
 - Structural extraction only: **0 LLM API calls / 0 LLM tokens**. No statistical community clustering is claimed; project ownership supplies the visual groups.
 
@@ -70,24 +70,44 @@ Derived -> base (includes private test helper types and resolved external bases)
 - `ElsheiekhHMS.Core.Exceptions.BusinessRuleException` -> `ElsheiekhHMS.Core.Exceptions.DomainException` — ElsheiekhHMS.Core/Exceptions/BusinessRuleException.cs:L4
 - `ElsheiekhHMS.Core.Exceptions.DomainException` -> `System.Exception` — ElsheiekhHMS.Core/Exceptions/DomainException.cs:L3
 - `ElsheiekhHMS.Core.Exceptions.DomainValidationException` -> `ElsheiekhHMS.Core.Exceptions.DomainException` — ElsheiekhHMS.Core/Exceptions/DomainValidationException.cs:L4
+- `ElsheiekhHMS.Infrastructure.Auditing.EntityAuditSaveChangesInterceptor` -> `Microsoft.EntityFrameworkCore.Diagnostics.SaveChangesInterceptor` — ElsheiekhHMS.Infrastructure/Auditing/EntityAuditSaveChangesInterceptor.cs:L9
+- `ElsheiekhHMS.Infrastructure.Identity.Entities.ApplicationUser` -> `Microsoft.AspNetCore.Identity.IdentityUser` — ElsheiekhHMS.Infrastructure/Identity/Entities/ApplicationUser.cs:L5
+- `ElsheiekhHMS.Infrastructure.Migrations.AddPhase05IdentityAndAuditLog` -> `Microsoft.EntityFrameworkCore.Migrations.Migration` — ElsheiekhHMS.Infrastructure/Migrations/20260921182651_AddPhase05IdentityAndAuditLog.cs:L9
 - `ElsheiekhHMS.Infrastructure.Migrations.ElsheiekhHmsDbContextModelSnapshot` -> `Microsoft.EntityFrameworkCore.Infrastructure.ModelSnapshot` — ElsheiekhHMS.Infrastructure/Migrations/ElsheiekhHmsDbContextModelSnapshot.cs:L13
 - `ElsheiekhHMS.Infrastructure.Migrations.InitialCreate` -> `Microsoft.EntityFrameworkCore.Migrations.Migration` — ElsheiekhHMS.Infrastructure/Migrations/20260921111137_InitialCreate.cs:L9
-- `ElsheiekhHMS.Infrastructure.Persistence.ElsheiekhHmsDbContext` -> `Microsoft.EntityFrameworkCore.DbContext` — ElsheiekhHMS.Infrastructure/Persistence/ElsheiekhHmsDbContext.cs:L9
+- `ElsheiekhHMS.Infrastructure.Persistence.ElsheiekhHmsDbContext` -> `Microsoft.AspNetCore.Identity.EntityFrameworkCore.IdentityDbContext<ElsheiekhHMS.Infrastructure.Identity.Entities.ApplicationUser>` — ElsheiekhHMS.Infrastructure/Persistence/ElsheiekhHmsDbContext.cs:L12
+- `ElsheiekhHMS.Tests.Integration.Persistence.ElsheiekhHmsDbContextSqlServerTests.FixedTimeProvider` -> `System.TimeProvider` — ElsheiekhHMS.Tests/Integration/Persistence/ElsheiekhHmsDbContextSqlServerTests.cs:L208
+- `ElsheiekhHMS.Tests.Integration.Persistence.IdentityAndAuditLogSqlServerTests.FixedTimeProvider` -> `System.TimeProvider` — ElsheiekhHMS.Tests/Integration/Persistence/IdentityAndAuditLogSqlServerTests.cs:L300
 - `ElsheiekhHMS.Tests.Unit.Domain.Common.AuditableEntityTests.TestEntity` -> `ElsheiekhHMS.Core.Common.AuditableEntity` — ElsheiekhHMS.Tests/Unit/Domain/Common/AuditableEntityTests.cs:L28
 - `ElsheiekhHMS.Tests.Unit.Domain.Common.BaseEntityTests.TestEntity` -> `ElsheiekhHMS.Core.Common.BaseEntity` — ElsheiekhHMS.Tests/Unit/Domain/Common/BaseEntityTests.cs:L15
 - `ElsheiekhHMS.Tests.Unit.Domain.Common.SoftDeletableEntityTests.TestEntity` -> `ElsheiekhHMS.Core.Common.SoftDeletableEntity` — ElsheiekhHMS.Tests/Unit/Domain/Common/SoftDeletableEntityTests.cs:L18
+- `ElsheiekhHMS.Tests.Unit.Infrastructure.Auditing.AuditEventWriterTests.FixedTimeProvider` -> `System.TimeProvider` — ElsheiekhHMS.Tests/Unit/Infrastructure/Auditing/AuditEventWriterTests.cs:L192
 
 ## Interfaces
 
+- `ElsheiekhHMS.Application.Common.Auditing.IAuditEventWriter`
+  - Implementations: ElsheiekhHMS.Infrastructure.Auditing.AuditEventWriter
+- `ElsheiekhHMS.Application.Common.Security.ICurrentUser`
+  - Implementations: ElsheiekhHMS.Tests.Integration.Persistence.ElsheiekhHmsDbContextSqlServerTests.TestCurrentUser, ElsheiekhHMS.Tests.Integration.Persistence.IdentityAndAuditLogSqlServerTests.TestCurrentUser, ElsheiekhHMS.Tests.Unit.Infrastructure.Auditing.AuditEventWriterTests.TestCurrentUser, ElsheiekhHMS.Web.Security.CurrentUserAccessor
 - `ElsheiekhHMS.Core.Interfaces.IHasConcurrencyToken`
   - Implementations: ElsheiekhHMS.Core.Domain.Patients.Entities.Patient, ElsheiekhHMS.Core.Domain.Scheduling.Entities.Appointment, ElsheiekhHMS.Core.Domain.Scheduling.Entities.WalkInQueueEntry
-- `Microsoft.EntityFrameworkCore.IEntityTypeConfiguration<ElsheiekhHMS.Core.Domain.Scheduling.Entities.Appointment>`
-  - Implementations: ElsheiekhHMS.Infrastructure.Configurations.Entities.AppointmentConfiguration, ElsheiekhHMS.Infrastructure.Configurations.Entities.DepartmentConfiguration, ElsheiekhHMS.Infrastructure.Configurations.Entities.DoctorConfiguration, ElsheiekhHMS.Infrastructure.Configurations.Entities.DoctorScheduleConfiguration, ElsheiekhHMS.Infrastructure.Configurations.Entities.PatientConfiguration, ElsheiekhHMS.Infrastructure.Configurations.Entities.WalkInQueueEntryConfiguration
+- `Microsoft.AspNetCore.Identity.IRoleStore<Microsoft.AspNetCore.Identity.IdentityRole>`
+  - Implementations: ElsheiekhHMS.Tests.Unit.Infrastructure.Identity.IdentityRoleSeederTests.InMemoryRoleStore
+- `Microsoft.EntityFrameworkCore.IEntityTypeConfiguration<ElsheiekhHMS.Infrastructure.Auditing.Entities.AuditLog>`
+  - Implementations: ElsheiekhHMS.Infrastructure.Auditing.Configurations.AuditLogConfiguration, ElsheiekhHMS.Infrastructure.Configurations.Entities.AppointmentConfiguration, ElsheiekhHMS.Infrastructure.Configurations.Entities.DepartmentConfiguration, ElsheiekhHMS.Infrastructure.Configurations.Entities.DoctorConfiguration, ElsheiekhHMS.Infrastructure.Configurations.Entities.DoctorScheduleConfiguration, ElsheiekhHMS.Infrastructure.Configurations.Entities.PatientConfiguration, ElsheiekhHMS.Infrastructure.Configurations.Entities.WalkInQueueEntryConfiguration, ElsheiekhHMS.Infrastructure.Identity.Configurations.ApplicationUserConfiguration
+- `Microsoft.Extensions.Logging.ILogger<T>`
+  - Implementations: ElsheiekhHMS.Tests.Unit.Infrastructure.Identity.IdentityRoleSeederTests.NullLogger<T>
+- `System.IEquatable<ElsheiekhHMS.Application.Common.Auditing.AuditEventRequest>`
+  - Implementations: ElsheiekhHMS.Application.Common.Auditing.AuditEventRequest, ElsheiekhHMS.Tests.Integration.Persistence.IdentityAndAuditLogSqlServerTests.TestCurrentUser
 
 ## Tests
 
-8 classes; 63 methods; 100 statically enumerable cases. This is discovery from source, not an execution result.
+11 classes; 76 methods; 113 statically enumerable cases. This is discovery from source, not an execution result.
 
+- [ElsheiekhHMS.Tests.Unit.Application.Auditing.AuditVocabularyTests](../ElsheiekhHMS.Tests/Unit/Application/Auditing/AuditVocabularyTests.cs) — 3 cases
+  - Uses/tests `ElsheiekhHMS.Application.Common.Auditing.AuditActions` (source type/member binding; includes inherited foundation dependencies)
+  - Uses/tests `ElsheiekhHMS.Application.Common.Auditing.AuditActorKinds` (source type/member binding; includes inherited foundation dependencies)
+  - Uses/tests `ElsheiekhHMS.Application.Common.Auditing.AuditCategories` (source type/member binding; includes inherited foundation dependencies)
 - [ElsheiekhHMS.Tests.Unit.Domain.Common.AuditableEntityTests](../ElsheiekhHMS.Tests/Unit/Domain/Common/AuditableEntityTests.cs) — 2 cases
   - Uses/tests `ElsheiekhHMS.Core.Common.AuditableEntity` (source type/member binding; includes inherited foundation dependencies)
   - Uses/tests `ElsheiekhHMS.Core.Common.BaseEntity` (source type/member binding; includes inherited foundation dependencies)
@@ -137,6 +157,18 @@ Derived -> base (includes private test helper types and resolved external bases)
   - Uses/tests `ElsheiekhHMS.Core.Exceptions.BusinessRuleException` (source type/member binding; includes inherited foundation dependencies)
   - Uses/tests `ElsheiekhHMS.Core.Exceptions.DomainException` (source type/member binding; includes inherited foundation dependencies)
   - Uses/tests `ElsheiekhHMS.Core.Exceptions.DomainValidationException` (source type/member binding; includes inherited foundation dependencies)
+- [ElsheiekhHMS.Tests.Unit.Infrastructure.Auditing.AuditEventWriterTests](../ElsheiekhHMS.Tests/Unit/Infrastructure/Auditing/AuditEventWriterTests.cs) — 7 cases
+  - Uses/tests `ElsheiekhHMS.Application.Common.Auditing.AuditActions` (source type/member binding; includes inherited foundation dependencies)
+  - Uses/tests `ElsheiekhHMS.Application.Common.Auditing.AuditActorKinds` (source type/member binding; includes inherited foundation dependencies)
+  - Uses/tests `ElsheiekhHMS.Application.Common.Auditing.AuditCategories` (source type/member binding; includes inherited foundation dependencies)
+  - Uses/tests `ElsheiekhHMS.Application.Common.Auditing.AuditEventRequest` (source type/member binding; includes inherited foundation dependencies)
+  - Uses/tests `ElsheiekhHMS.Application.Common.Security.ICurrentUser` (source type/member binding; includes inherited foundation dependencies)
+  - Uses/tests `ElsheiekhHMS.Infrastructure.Auditing.AuditEventWriter` (source type/member binding; includes inherited foundation dependencies)
+  - Uses/tests `ElsheiekhHMS.Infrastructure.Auditing.Entities.AuditLog` (source type/member binding; includes inherited foundation dependencies)
+  - Uses/tests `ElsheiekhHMS.Infrastructure.Persistence.ElsheiekhHmsDbContext` (source type/member binding; includes inherited foundation dependencies)
+- [ElsheiekhHMS.Tests.Unit.Infrastructure.Auditing.AuditLogModelTests](../ElsheiekhHMS.Tests/Unit/Infrastructure/Auditing/AuditLogModelTests.cs) — 3 cases
+  - Uses/tests `ElsheiekhHMS.Infrastructure.Auditing.Entities.AuditLog` (source type/member binding; includes inherited foundation dependencies)
+  - Uses/tests `ElsheiekhHMS.Infrastructure.Persistence.ElsheiekhHmsDbContext` (source type/member binding; includes inherited foundation dependencies)
 
 ## Packages
 
@@ -144,7 +176,7 @@ Evaluated direct PackageReference items only. Framework/SDK auto-references and 
 
 - **ElsheiekhHMS.Application:** Microsoft.Extensions.DependencyInjection.Abstractions 10.0.12
 - **ElsheiekhHMS.Core:** none
-- **ElsheiekhHMS.Infrastructure:** Microsoft.EntityFrameworkCore 10.0.12; Microsoft.EntityFrameworkCore.Design 10.0.12; Microsoft.EntityFrameworkCore.SqlServer 10.0.12; Microsoft.Extensions.Configuration.Abstractions 10.0.12; Microsoft.Extensions.DependencyInjection.Abstractions 10.0.12
+- **ElsheiekhHMS.Infrastructure:** Microsoft.AspNetCore.Identity.EntityFrameworkCore 10.0.12; Microsoft.EntityFrameworkCore 10.0.12; Microsoft.EntityFrameworkCore.Design 10.0.12; Microsoft.EntityFrameworkCore.SqlServer 10.0.12; Microsoft.Extensions.Configuration.Abstractions 10.0.12; Microsoft.Extensions.DependencyInjection.Abstractions 10.0.12
 - **ElsheiekhHMS.Tests:** coverlet.collector 6.0.4; Microsoft.NET.Test.Sdk 17.14.1; xunit 2.9.3; xunit.runner.visualstudio 3.1.4
 - **ElsheiekhHMS.Web:** Microsoft.EntityFrameworkCore.Design 10.0.12
 
@@ -157,14 +189,25 @@ Evaluated direct PackageReference items only. Framework/SDK auto-references and 
 - ruleSource: `Documented HMS layer policy; observed edges extracted separately`
 - efCorePresent: `True`
 - sqlServerPresent: `True`
-- identityPackagePresent: `False`
-- Identity source references: `[]`
+- identityPackagePresent: `True`
+- Identity source references: `[
+      "ElsheiekhHMS.Infrastructure/Identity/AdministratorBootstrapper.cs",
+      "ElsheiekhHMS.Infrastructure/Identity/Entities/ApplicationUser.cs",
+      "ElsheiekhHMS.Infrastructure/Identity/IdentityRoleSeeder.cs",
+      "ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs",
+      "ElsheiekhHMS.Infrastructure/Persistence/ElsheiekhHmsDbContext.cs",
+      "ElsheiekhHMS.Tests/Integration/Persistence/IdentityAndAuditLogSqlServerTests.cs",
+      "ElsheiekhHMS.Tests/Unit/Infrastructure/Identity/IdentityOptionsTests.cs",
+      "ElsheiekhHMS.Tests/Unit/Infrastructure/Identity/IdentityRoleSeederTests.cs",
+      "ElsheiekhHMS.Web/Program.cs",
+      "ElsheiekhHMS.Web/Security/HmsRevalidatingAuthenticationStateProvider.cs"
+    ]`
 
 ## Current Development Phase
 
 Declared by README; not inferred from the existence of classes:
 
-- > **Current development stage:** Phase 04 — EF Core & Database (complete) — README.md:L5
+- > **Current development stage:** Phase 05 — Identity & Security (05A, 05B, 05C, 05C-A, 05D, and 05E complete; Phase 06 pending) — README.md:L5
 - > **Phase 01:** ✅ Complete — README.md:L7
 - > **Phase 02 Setup:** ✅ Complete and verified — README.md:L9
 - > **Phase 03A / 03B / 03C:** ✅ Complete — README.md:L11
@@ -177,19 +220,33 @@ Declared by README; not inferred from the existence of classes:
 - > **Phase 04D-B:** ✅ Initial migration generated and inspected; database not created or updated — README.md:L25
 - > **Phase 04D-C:** ✅ Initial migration applied and local SQL Server schema verified — README.md:L27
 - > **Phase 04E:** ✅ Persistence integration tests implemented and verified — README.md:L29
--  /  01  /  Solution & Architecture  /  ✅ Complete  /  — README.md:L346
--  /  02  /  Core Foundation  /  ✅ Complete  /  — README.md:L347
--  /  03  /  Domain Entities  /  ✅ Complete  /  — README.md:L348
--  /  04  /  EF Core & Database  /  ✅ Complete  /  — README.md:L349
--  /  05  /  Identity & Security  /  ⏳ Not started  /  — README.md:L350
--  /  06  /  DTOs & Validation  /  ⏳ Not started  /  — README.md:L351
--  /  07  /  Application Services  /  ⏳ Not started  /  — README.md:L352
--  /  08  /  Business Workflows  /  ⏳ Not started  /  — README.md:L353
--  /  09  /  Enterprise Infrastructure  /  ⏳ Not started  /  — README.md:L354
+- > **Phase 05A:** ✅ Identity foundation and security-model amendment implemented and verified — README.md:L31
+- > **Phase 05B:** ✅ Roles, authorization policies, fallback policy, and password-free role seeder implemented and verified — README.md:L33
+- > **Phase 05C:** ✅ Current-user foundation and entity lifecycle auditing implemented and verified — README.md:L35
+- > **Phase 05C-A:** ✅ Durable security/business AuditLog model and writer foundation implemented and verified; event-producing workflows, retention policy, IP/UserAgent capture, and clinical/read auditing remain deferred — README.md:L37
+- > **Phase 05D:** ✅ Identity and AuditLog migration applied and verified against development and isolated integration SQL Server databases; pending-model suppression removed — README.md:L39
+- > **Phase 05E:** ✅ Security integration and hardening implemented and verified; account workflows, durable event producers, retention, IP/UserAgent capture, clinical/read auditing, and UI remain deferred — README.md:L41
+-  /  01  /  Solution & Architecture  /  ✅ Complete  /  — README.md:L358
+-  /  02  /  Core Foundation  /  ✅ Complete  /  — README.md:L359
+-  /  03  /  Domain Entities  /  ✅ Complete  /  — README.md:L360
+-  /  04  /  EF Core & Database  /  ✅ Complete  /  — README.md:L361
+-  /  05  /  Identity & Security  /  ✅ Complete (05A, 05B, 05C, 05C-A, 05D, and 05E)  /  — README.md:L362
+-  /  06  /  DTOs & Validation  /  ⏳ Not started  /  — README.md:L363
+-  /  07  /  Application Services  /  ⏳ Not started  /  — README.md:L364
+-  /  08  /  Business Workflows  /  ⏳ Not started  /  — README.md:L365
+-  /  09  /  Enterprise Infrastructure  /  ⏳ Not started  /  — README.md:L366
 
 ## Important Files
 
 - [ElsheiekhHMS.Application/ApplicationServiceExtensions.cs](../ElsheiekhHMS.Application/ApplicationServiceExtensions.cs) — ElsheiekhHMS.Application
+- [ElsheiekhHMS.Application/Common/Auditing/AuditActions.cs](../ElsheiekhHMS.Application/Common/Auditing/AuditActions.cs) — ElsheiekhHMS.Application
+- [ElsheiekhHMS.Application/Common/Auditing/AuditActorKinds.cs](../ElsheiekhHMS.Application/Common/Auditing/AuditActorKinds.cs) — ElsheiekhHMS.Application
+- [ElsheiekhHMS.Application/Common/Auditing/AuditCategories.cs](../ElsheiekhHMS.Application/Common/Auditing/AuditCategories.cs) — ElsheiekhHMS.Application
+- [ElsheiekhHMS.Application/Common/Auditing/AuditEventRequest.cs](../ElsheiekhHMS.Application/Common/Auditing/AuditEventRequest.cs) — ElsheiekhHMS.Application
+- [ElsheiekhHMS.Application/Common/Auditing/IAuditEventWriter.cs](../ElsheiekhHMS.Application/Common/Auditing/IAuditEventWriter.cs) — ElsheiekhHMS.Application
+- [ElsheiekhHMS.Application/Common/Security/ICurrentUser.cs](../ElsheiekhHMS.Application/Common/Security/ICurrentUser.cs) — ElsheiekhHMS.Application
+- [ElsheiekhHMS.Application/Common/Security/PolicyNames.cs](../ElsheiekhHMS.Application/Common/Security/PolicyNames.cs) — ElsheiekhHMS.Application
+- [ElsheiekhHMS.Application/Common/Security/RoleNames.cs](../ElsheiekhHMS.Application/Common/Security/RoleNames.cs) — ElsheiekhHMS.Application
 - [ElsheiekhHMS.Core/Common/AuditableEntity.cs](../ElsheiekhHMS.Core/Common/AuditableEntity.cs) — ElsheiekhHMS.Core
 - [ElsheiekhHMS.Core/Common/BaseEntity.cs](../ElsheiekhHMS.Core/Common/BaseEntity.cs) — ElsheiekhHMS.Core
 - [ElsheiekhHMS.Core/Common/SoftDeletableEntity.cs](../ElsheiekhHMS.Core/Common/SoftDeletableEntity.cs) — ElsheiekhHMS.Core
@@ -210,21 +267,36 @@ Declared by README; not inferred from the existence of classes:
 - [ElsheiekhHMS.Core/Exceptions/DomainException.cs](../ElsheiekhHMS.Core/Exceptions/DomainException.cs) — ElsheiekhHMS.Core
 - [ElsheiekhHMS.Core/Exceptions/DomainValidationException.cs](../ElsheiekhHMS.Core/Exceptions/DomainValidationException.cs) — ElsheiekhHMS.Core
 - [ElsheiekhHMS.Core/Interfaces/IHasConcurrencyToken.cs](../ElsheiekhHMS.Core/Interfaces/IHasConcurrencyToken.cs) — ElsheiekhHMS.Core
+- [ElsheiekhHMS.Infrastructure/Auditing/AuditEventWriter.cs](../ElsheiekhHMS.Infrastructure/Auditing/AuditEventWriter.cs) — ElsheiekhHMS.Infrastructure
+- [ElsheiekhHMS.Infrastructure/Auditing/Configurations/AuditLogConfiguration.cs](../ElsheiekhHMS.Infrastructure/Auditing/Configurations/AuditLogConfiguration.cs) — ElsheiekhHMS.Infrastructure
+- [ElsheiekhHMS.Infrastructure/Auditing/Entities/AuditLog.cs](../ElsheiekhHMS.Infrastructure/Auditing/Entities/AuditLog.cs) — ElsheiekhHMS.Infrastructure
+- [ElsheiekhHMS.Infrastructure/Auditing/EntityAuditSaveChangesInterceptor.cs](../ElsheiekhHMS.Infrastructure/Auditing/EntityAuditSaveChangesInterceptor.cs) — ElsheiekhHMS.Infrastructure
 - [ElsheiekhHMS.Infrastructure/Configurations/Entities/AppointmentConfiguration.cs](../ElsheiekhHMS.Infrastructure/Configurations/Entities/AppointmentConfiguration.cs) — ElsheiekhHMS.Infrastructure
 - [ElsheiekhHMS.Infrastructure/Configurations/Entities/DepartmentConfiguration.cs](../ElsheiekhHMS.Infrastructure/Configurations/Entities/DepartmentConfiguration.cs) — ElsheiekhHMS.Infrastructure
 - [ElsheiekhHMS.Infrastructure/Configurations/Entities/DoctorConfiguration.cs](../ElsheiekhHMS.Infrastructure/Configurations/Entities/DoctorConfiguration.cs) — ElsheiekhHMS.Infrastructure
 - [ElsheiekhHMS.Infrastructure/Configurations/Entities/DoctorScheduleConfiguration.cs](../ElsheiekhHMS.Infrastructure/Configurations/Entities/DoctorScheduleConfiguration.cs) — ElsheiekhHMS.Infrastructure
 - [ElsheiekhHMS.Infrastructure/Configurations/Entities/PatientConfiguration.cs](../ElsheiekhHMS.Infrastructure/Configurations/Entities/PatientConfiguration.cs) — ElsheiekhHMS.Infrastructure
 - [ElsheiekhHMS.Infrastructure/Configurations/Entities/WalkInQueueEntryConfiguration.cs](../ElsheiekhHMS.Infrastructure/Configurations/Entities/WalkInQueueEntryConfiguration.cs) — ElsheiekhHMS.Infrastructure
+- [ElsheiekhHMS.Infrastructure/Identity/AccountLoginEligibility.cs](../ElsheiekhHMS.Infrastructure/Identity/AccountLoginEligibility.cs) — ElsheiekhHMS.Infrastructure
+- [ElsheiekhHMS.Infrastructure/Identity/AdministratorBootstrapper.cs](../ElsheiekhHMS.Infrastructure/Identity/AdministratorBootstrapper.cs) — ElsheiekhHMS.Infrastructure
+- [ElsheiekhHMS.Infrastructure/Identity/Configurations/ApplicationUserConfiguration.cs](../ElsheiekhHMS.Infrastructure/Identity/Configurations/ApplicationUserConfiguration.cs) — ElsheiekhHMS.Infrastructure
+- [ElsheiekhHMS.Infrastructure/Identity/Entities/AccountSecurityState.cs](../ElsheiekhHMS.Infrastructure/Identity/Entities/AccountSecurityState.cs) — ElsheiekhHMS.Infrastructure
+- [ElsheiekhHMS.Infrastructure/Identity/Entities/ApplicationUser.cs](../ElsheiekhHMS.Infrastructure/Identity/Entities/ApplicationUser.cs) — ElsheiekhHMS.Infrastructure
+- [ElsheiekhHMS.Infrastructure/Identity/IdentityRoleSeeder.cs](../ElsheiekhHMS.Infrastructure/Identity/IdentityRoleSeeder.cs) — ElsheiekhHMS.Infrastructure
 - [ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs](../ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs) — ElsheiekhHMS.Infrastructure
 - [ElsheiekhHMS.Infrastructure/Migrations/20260921111137_InitialCreate.Designer.cs](../ElsheiekhHMS.Infrastructure/Migrations/20260921111137_InitialCreate.Designer.cs) — ElsheiekhHMS.Infrastructure
 - [ElsheiekhHMS.Infrastructure/Migrations/20260921111137_InitialCreate.cs](../ElsheiekhHMS.Infrastructure/Migrations/20260921111137_InitialCreate.cs) — ElsheiekhHMS.Infrastructure
+- [ElsheiekhHMS.Infrastructure/Migrations/20260921182651_AddPhase05IdentityAndAuditLog.Designer.cs](../ElsheiekhHMS.Infrastructure/Migrations/20260921182651_AddPhase05IdentityAndAuditLog.Designer.cs) — ElsheiekhHMS.Infrastructure
+- [ElsheiekhHMS.Infrastructure/Migrations/20260921182651_AddPhase05IdentityAndAuditLog.cs](../ElsheiekhHMS.Infrastructure/Migrations/20260921182651_AddPhase05IdentityAndAuditLog.cs) — ElsheiekhHMS.Infrastructure
 - [ElsheiekhHMS.Infrastructure/Migrations/ElsheiekhHmsDbContextModelSnapshot.cs](../ElsheiekhHMS.Infrastructure/Migrations/ElsheiekhHmsDbContextModelSnapshot.cs) — ElsheiekhHMS.Infrastructure
 - [ElsheiekhHMS.Infrastructure/Persistence/ElsheiekhHmsDbContext.cs](../ElsheiekhHMS.Infrastructure/Persistence/ElsheiekhHmsDbContext.cs) — ElsheiekhHMS.Infrastructure
 - [ElsheiekhHMS.Tests/Integration/Persistence/ElsheiekhHmsDbContextSqlServerTests.cs](../ElsheiekhHMS.Tests/Integration/Persistence/ElsheiekhHmsDbContextSqlServerTests.cs) — ElsheiekhHMS.Tests
+- [ElsheiekhHMS.Tests/Integration/Persistence/IdentityAndAuditLogSqlServerTests.cs](../ElsheiekhHMS.Tests/Integration/Persistence/IdentityAndAuditLogSqlServerTests.cs) — ElsheiekhHMS.Tests
 - [ElsheiekhHMS.Tests/Integration/Persistence/SqlServerTestDatabaseFixture.cs](../ElsheiekhHMS.Tests/Integration/Persistence/SqlServerTestDatabaseFixture.cs) — ElsheiekhHMS.Tests
 - [ElsheiekhHMS.Tests/Integration/Persistence/SqlServerTestDatabaseGuard.cs](../ElsheiekhHMS.Tests/Integration/Persistence/SqlServerTestDatabaseGuard.cs) — ElsheiekhHMS.Tests
 - [ElsheiekhHMS.Tests/Integration/Persistence/SqlServerTestDatabaseSafetyTests.cs](../ElsheiekhHMS.Tests/Integration/Persistence/SqlServerTestDatabaseSafetyTests.cs) — ElsheiekhHMS.Tests
+- [ElsheiekhHMS.Tests/Unit/Application/Auditing/AuditVocabularyTests.cs](../ElsheiekhHMS.Tests/Unit/Application/Auditing/AuditVocabularyTests.cs) — ElsheiekhHMS.Tests
+- [ElsheiekhHMS.Tests/Unit/Application/Security/SecurityVocabularyTests.cs](../ElsheiekhHMS.Tests/Unit/Application/Security/SecurityVocabularyTests.cs) — ElsheiekhHMS.Tests
 - [ElsheiekhHMS.Tests/Unit/Domain/Common/AuditableEntityTests.cs](../ElsheiekhHMS.Tests/Unit/Domain/Common/AuditableEntityTests.cs) — ElsheiekhHMS.Tests
 - [ElsheiekhHMS.Tests/Unit/Domain/Common/BaseEntityTests.cs](../ElsheiekhHMS.Tests/Unit/Domain/Common/BaseEntityTests.cs) — ElsheiekhHMS.Tests
 - [ElsheiekhHMS.Tests/Unit/Domain/Common/SoftDeletableEntityTests.cs](../ElsheiekhHMS.Tests/Unit/Domain/Common/SoftDeletableEntityTests.cs) — ElsheiekhHMS.Tests
@@ -235,8 +307,15 @@ Declared by README; not inferred from the existence of classes:
 - [ElsheiekhHMS.Tests/Unit/Domain/Scheduling/WalkInQueueEntryTests.cs](../ElsheiekhHMS.Tests/Unit/Domain/Scheduling/WalkInQueueEntryTests.cs) — ElsheiekhHMS.Tests
 - [ElsheiekhHMS.Tests/Unit/Domain/Staff/DoctorScheduleTests.cs](../ElsheiekhHMS.Tests/Unit/Domain/Staff/DoctorScheduleTests.cs) — ElsheiekhHMS.Tests
 - [ElsheiekhHMS.Tests/Unit/Domain/Staff/DoctorTests.cs](../ElsheiekhHMS.Tests/Unit/Domain/Staff/DoctorTests.cs) — ElsheiekhHMS.Tests
+- [ElsheiekhHMS.Tests/Unit/Infrastructure/Auditing/AuditEventWriterTests.cs](../ElsheiekhHMS.Tests/Unit/Infrastructure/Auditing/AuditEventWriterTests.cs) — ElsheiekhHMS.Tests
+- [ElsheiekhHMS.Tests/Unit/Infrastructure/Auditing/AuditLogModelTests.cs](../ElsheiekhHMS.Tests/Unit/Infrastructure/Auditing/AuditLogModelTests.cs) — ElsheiekhHMS.Tests
 - [ElsheiekhHMS.Tests/Unit/Infrastructure/ElsheiekhHmsDbContextModelTests.cs](../ElsheiekhHMS.Tests/Unit/Infrastructure/ElsheiekhHmsDbContextModelTests.cs) — ElsheiekhHMS.Tests
 - [ElsheiekhHMS.Tests/Unit/Infrastructure/ElsheiekhHmsDbContextTests.cs](../ElsheiekhHMS.Tests/Unit/Infrastructure/ElsheiekhHmsDbContextTests.cs) — ElsheiekhHMS.Tests
+- [ElsheiekhHMS.Tests/Unit/Infrastructure/Identity/AccountLoginEligibilityTests.cs](../ElsheiekhHMS.Tests/Unit/Infrastructure/Identity/AccountLoginEligibilityTests.cs) — ElsheiekhHMS.Tests
+- [ElsheiekhHMS.Tests/Unit/Infrastructure/Identity/ApplicationUserTests.cs](../ElsheiekhHMS.Tests/Unit/Infrastructure/Identity/ApplicationUserTests.cs) — ElsheiekhHMS.Tests
+- [ElsheiekhHMS.Tests/Unit/Infrastructure/Identity/IdentityModelTests.cs](../ElsheiekhHMS.Tests/Unit/Infrastructure/Identity/IdentityModelTests.cs) — ElsheiekhHMS.Tests
+- [ElsheiekhHMS.Tests/Unit/Infrastructure/Identity/IdentityOptionsTests.cs](../ElsheiekhHMS.Tests/Unit/Infrastructure/Identity/IdentityOptionsTests.cs) — ElsheiekhHMS.Tests
+- [ElsheiekhHMS.Tests/Unit/Infrastructure/Identity/IdentityRoleSeederTests.cs](../ElsheiekhHMS.Tests/Unit/Infrastructure/Identity/IdentityRoleSeederTests.cs) — ElsheiekhHMS.Tests
 - [ElsheiekhHMS.Web/Components/App.razor](../ElsheiekhHMS.Web/Components/App.razor) — ElsheiekhHMS.Web
 - [ElsheiekhHMS.Web/Components/Layout/MainLayout.razor](../ElsheiekhHMS.Web/Components/Layout/MainLayout.razor) — ElsheiekhHMS.Web
 - [ElsheiekhHMS.Web/Components/Layout/NavMenu.razor](../ElsheiekhHMS.Web/Components/Layout/NavMenu.razor) — ElsheiekhHMS.Web
@@ -249,6 +328,9 @@ Declared by README; not inferred from the existence of classes:
 - [ElsheiekhHMS.Web/Components/Routes.razor](../ElsheiekhHMS.Web/Components/Routes.razor) — ElsheiekhHMS.Web
 - [ElsheiekhHMS.Web/Components/_Imports.razor](../ElsheiekhHMS.Web/Components/_Imports.razor) — ElsheiekhHMS.Web
 - [ElsheiekhHMS.Web/Program.cs](../ElsheiekhHMS.Web/Program.cs) — ElsheiekhHMS.Web
+- [ElsheiekhHMS.Web/Security/AuthorizationConfiguration.cs](../ElsheiekhHMS.Web/Security/AuthorizationConfiguration.cs) — ElsheiekhHMS.Web
+- [ElsheiekhHMS.Web/Security/CurrentUserAccessor.cs](../ElsheiekhHMS.Web/Security/CurrentUserAccessor.cs) — ElsheiekhHMS.Web
+- [ElsheiekhHMS.Web/Security/HmsRevalidatingAuthenticationStateProvider.cs](../ElsheiekhHMS.Web/Security/HmsRevalidatingAuthenticationStateProvider.cs) — ElsheiekhHMS.Web
 
 ## Graph Freshness
 
@@ -274,3 +356,4 @@ powershell -ExecutionPolicy Bypass -File .\tools\graphify.ps1
 - Architecture checks are structural observations, not a full semantic security or dependency audit.
 - WARNING: Unresolved base omitted: ElsheiekhHMS.Tests.Integration.Persistence.SqlServerPersistenceCollection : ICollectionFixture<ElsheiekhHMS.Tests.Integration.Persistence.SqlServerTestDatabaseFixture>
 - WARNING: Unresolved base omitted: ElsheiekhHMS.Tests.Integration.Persistence.SqlServerTestDatabaseFixture : IAsyncLifetime
+- WARNING: Unresolved base omitted: ElsheiekhHMS.Web.Security.HmsRevalidatingAuthenticationStateProvider : RevalidatingServerAuthenticationStateProvider

@@ -4,6 +4,7 @@ using ElsheiekhHMS.Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace ElsheiekhHMS.Infrastructure.Migrations
 {
     [DbContext(typeof(ElsheiekhHmsDbContext))]
-    partial class ElsheiekhHmsDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260921182651_AddPhase05IdentityAndAuditLog")]
+    partial class AddPhase05IdentityAndAuditLog
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

@@ -6,7 +6,7 @@ The source-backed architecture is described in [ARCHITECTURE.md](ARCHITECTURE.md
 
 ## ADR-001 — Five-project solution on .NET 10
 
-**Status:** Accepted  
+**Status:** Accepted
 **Phase:** 01
 
 ### Context
@@ -232,7 +232,7 @@ Message and inner-exception constructors preserve the cause. No HTTP status mapp
 ## ADR-010 — EF Core and SQL Server behind Infrastructure
 
 **Status:** Accepted  
-**Phase:** 04 complete (04A–04E complete)
+**Phase:** 04 complete (04A–04E complete); 05D migration rollout complete
 
 ### Context
 
@@ -248,7 +248,7 @@ This follows the selected Microsoft stack and hospital deployment requirements w
 
 ### Consequences
 
-`ElsheiekhHmsDbContext`, SQL Server DI registration, six scalar configuration units, the Phase 04C relational metadata, the inspected Phase 04D-B migration/snapshot, the verified local Phase 04D-C schema, and the Phase 04E isolated persistence integration suite now exist in Infrastructure/Tests. Patient has a private EF-only materialization constructor while retaining its validated public creation path; getter-only `PatientCode` is mapped through its existing backing field. Database provisioning outside the approved local development target, repositories, and Unit of Work remain deferred. Roadmap repository/Unit-of-Work examples are not proof of current APIs.
+`ElsheiekhHmsDbContext`, SQL Server DI registration, six scalar configuration units, the Phase 04C relational metadata, the inspected Phase 04D-B migration/snapshot, the verified local Phase 04D-C schema, and the Phase 04E isolated persistence integration suite now exist in Infrastructure/Tests. Phase 05D adds the single approved additive `20260921182651_AddPhase05IdentityAndAuditLog` migration, applies it to the approved local development database, verifies the physical Identity/AuditLog schema and migration history, and applies it to the guarded isolated integration database. Patient has a private EF-only materialization constructor while retaining its validated public creation path; getter-only `PatientCode` is mapped through its existing backing field. Database provisioning outside the approved local development target, repositories, and Unit of Work remain deferred. Roadmap repository/Unit-of-Work examples are not proof of current APIs.
 
 ### Evidence / Notes
 
@@ -257,7 +257,7 @@ This follows the selected Microsoft stack and hospital deployment requirements w
 ## ADR-011 — Identity and backend-enforced authorization
 
 **Status:** Accepted  
-**Phase:** 05 planned
+**Phase:** 05 in progress (05A, 05B, 05C, 05C-A, and 05D complete)
 
 ### Context
 
@@ -273,7 +273,7 @@ Clients and UI controls cannot be trusted as authorization boundaries.
 
 ### Consequences
 
-Identity implementation stays outside Core. Authorization-aware UI is supplementary. The current Blazor host has no HMS authentication/authorization implementation.
+Identity implementation stays outside Core. Phase 05A provides `ApplicationUser`, the same-context Identity EF foundation, role stores, approved password/lockout options, and the approved security-model amendment in Infrastructure. Phase 05B provides the five canonical roles, eight named policies, authenticated fallback authorization, anonymous health metadata, and a deterministic password-free role seeder; it does not modify `ApplicationUser` or invoke the seeder during normal startup. Phase 05C provides the Application `ICurrentUser` contract, Web claims adapter, UTC `TimeProvider`, and Infrastructure entity lifecycle auditing using stable UserId attribution. Phase 05C-A provides the stable audit vocabulary, Application writer contract, bounded append-only Infrastructure `AuditLog` model, and server-controlled writer; it does not implement the workflows that emit security/business events. Phase 05D applies the single approved additive `20260921182651_AddPhase05IdentityAndAuditLog` migration, verifies the development and guarded integration schemas, confirms the migration history, and removes the temporary pending-model warning suppression. Phase 05E composes the Identity cookie, request-level security-stamp/account-state validation, Interactive Server circuit revalidation, scoped current-user propagation, baseline security headers with report-only CSP, and an explicit secret-backed administrator bootstrap primitive without startup provisioning. `AccountSecurityState : byte` uses fixed values `Active = 0`, `Suspended = 1`, and `Banned = 2`; independent `LoginAllowed` replaces the ambiguous `IsActive` security meaning. The finalized Phase 05 design preserves the separation between domain persons, login identities, administrative account state, sessions, lockout, roles, and policies. Password-reset workflow, role-management workflows, durable event emission, production retention duration, IP/UserAgent capture, and clinical/read auditing remain later Phase 05 gates. Authorization-aware UI is supplementary.
 
 ### Evidence / Notes
 
@@ -303,6 +303,19 @@ Current tests cover Core metadata and exceptions. Integration, security, workflo
 ### Evidence / Notes
 
 [Tests project](../ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj); [foundation tests](../ElsheiekhHMS.Tests/Unit/Domain/); [README section 13](../README.md).
+
+## ADR-013 — Phase 05E server security composition
+
+**Status:** Accepted
+**Phase:** 05E
+
+### Decision
+
+Use the ASP.NET Core Identity application cookie and framework middleware at the Web composition root. Validate the security stamp and administrative account state on every authenticated request, revalidate Interactive Server circuits every five minutes, and propagate only the stable UserId, informational username, and role snapshot through a scoped current-user accessor. Add baseline security headers with CSP report-only and retain the existing antiforgery, HTTPS, HSTS, and exception pipeline. Provide an explicit secret-backed administrator bootstrap service without invoking it during startup.
+
+### Boundaries
+
+No custom session registry, cache, distributed store, new package, migration, database update, account lifecycle workflow, durable event producer, IP/UserAgent capture, clinical/read auditing, or UI workflow is introduced. Existing roles and policies remain unchanged. Administrator bootstrap refuses to overwrite any existing privileged account and never logs or persists a plaintext password.
 
 ## ADR-013 — Graphify as generated navigation evidence
 
@@ -353,3 +366,28 @@ Update checkpoints only after verified completion. Report conflicts; do not rewr
 ### Evidence / Notes
 
 [AGENTS context protocol](../AGENTS.md); [README maintenance rule](../README.md); [SpecKit workspace](../speckit/my-project/).
+
+## ADR-015 — Measured performance, reliability, and quality gates
+
+**Status:** Accepted
+**Phase:** Cross-phase requirement
+
+### Context
+
+The HMS must remain correct, secure, reliable, and responsive under realistic hospital workloads without speculative infrastructure or premature optimization.
+
+### Decision
+
+Apply a cross-cutting performance and reliability review to every remaining phase. Prefer bounded, server-side, measured database operations; appropriate async I/O and cancellation; safe exception handling; structured logging; health checks; deliberate retries and timeouts; correct resource lifetimes; and explicit concurrency behavior. Add caching, indexes, background infrastructure, or other performance technology only when a measured and approved use case justifies it.
+
+### Rationale
+
+Correctness, security, data integrity, and predictable behavior have priority over unmeasured latency improvements. Measurements and realistic workflows are required before claiming high performance or introducing operational complexity.
+
+### Consequences
+
+Phase gates must report performance, reliability, security, database-query, and regression-test impact. Phase 06/07 must define the shared pagination contract before large list services proliferate. Phase 10/11 must perform a dedicated performance and reliability review covering representative SQL, indexes, N+1 detection, bounded queries, pagination, latency, Identity overhead, concurrency, exception handling, logging, health checks, resource lifetimes, load testing, and regressions. No current source, package, index, cache, Identity, migration, or database change follows from this documentation decision.
+
+### Evidence / Notes
+
+[Approved performance, reliability, and quality requirement](superpowers/specs/2026-09-21-performance-reliability-quality-requirement.md); [architecture overview](ARCHITECTURE.md); [development roadmap](../DEVELOPMENT_ROADMAP.md).

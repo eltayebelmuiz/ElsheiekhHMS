@@ -1,4 +1,9 @@
 using ElsheiekhHMS.Infrastructure.Persistence;
+using ElsheiekhHMS.Infrastructure.Auditing;
+using ElsheiekhHMS.Application.Common.Auditing;
+using ElsheiekhHMS.Infrastructure.Identity;
+using ElsheiekhHMS.Infrastructure.Identity.Entities;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -23,8 +28,32 @@ public static class InfrastructureServiceExtensions
             ?? throw new InvalidOperationException(
                 "Connection string 'ElsheiekhHmsDatabase' is required.");
 
-        services.AddDbContext<ElsheiekhHmsDbContext>(options =>
-            options.UseSqlServer(connectionString));
+        services.AddSingleton<TimeProvider>(TimeProvider.System);
+        services.AddScoped<EntityAuditSaveChangesInterceptor>();
+        services.AddScoped<IAuditEventWriter, AuditEventWriter>();
+        services.AddScoped<AccountLoginEligibility>();
+        services.AddScoped<AdministratorBootstrapper>();
+        services.AddDbContext<ElsheiekhHmsDbContext>((serviceProvider, options) =>
+        {
+            options.UseSqlServer(connectionString);
+            options.AddInterceptors(
+                serviceProvider.GetRequiredService<EntityAuditSaveChangesInterceptor>());
+        });
+
+        services.AddIdentityCore<ApplicationUser>(options =>
+            {
+                options.Password.RequiredLength = 8;
+                options.Password.RequireUppercase = true;
+                options.Password.RequireDigit = true;
+                options.Password.RequireNonAlphanumeric = true;
+                options.Lockout.MaxFailedAccessAttempts = 5;
+                options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(15);
+                options.Lockout.AllowedForNewUsers = true;
+            })
+            .AddRoles<IdentityRole>()
+            .AddEntityFrameworkStores<ElsheiekhHmsDbContext>();
+
+        services.AddScoped<IdentityRoleSeeder>();
 
         return services;
     }

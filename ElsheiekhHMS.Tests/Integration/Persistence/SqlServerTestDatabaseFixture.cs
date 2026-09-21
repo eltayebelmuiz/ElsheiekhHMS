@@ -1,4 +1,6 @@
 using ElsheiekhHMS.Infrastructure.Persistence;
+using ElsheiekhHMS.Application.Common.Security;
+using ElsheiekhHMS.Infrastructure.Auditing;
 using Microsoft.EntityFrameworkCore;
 
 namespace ElsheiekhHMS.Tests.Integration.Persistence;
@@ -37,6 +39,18 @@ public sealed class SqlServerTestDatabaseFixture : IAsyncLifetime
 
         var options = new DbContextOptionsBuilder<ElsheiekhHmsDbContext>()
             .UseSqlServer(ConnectionString)
+            .Options;
+
+        return new ElsheiekhHmsDbContext(options);
+    }
+
+    public ElsheiekhHmsDbContext CreateContext(ICurrentUser currentUser, TimeProvider timeProvider)
+    {
+        SqlServerTestDatabaseGuard.ValidateDestructiveTarget(ConnectionString);
+
+        var options = new DbContextOptionsBuilder<ElsheiekhHmsDbContext>()
+            .UseSqlServer(ConnectionString)
+            .AddInterceptors(new EntityAuditSaveChangesInterceptor(currentUser, timeProvider))
             .Options;
 
         return new ElsheiekhHmsDbContext(options);

@@ -2,7 +2,7 @@
 
 Enterprise Hospital Management System built with **.NET 10, ASP.NET Core, Blazor, Entity Framework Core, SQL Server, and ASP.NET Core Identity**.
 
-> **Current development stage:** Phase 04 — EF Core & Database (complete)
+> **Current development stage:** Phase 05 — Identity & Security (05A, 05B, 05C, 05C-A, 05D, and 05E complete; Phase 06 pending)
 >
 > **Phase 01:** ✅ Complete
 >
@@ -28,7 +28,19 @@ Enterprise Hospital Management System built with **.NET 10, ASP.NET Core, Blazor
 >
 > **Phase 04E:** ✅ Persistence integration tests implemented and verified
 >
-> **Next gate:** Phase 05 Identity & Security design review
+> **Phase 05A:** ✅ Identity foundation and security-model amendment implemented and verified
+>
+> **Phase 05B:** ✅ Roles, authorization policies, fallback policy, and password-free role seeder implemented and verified
+>
+> **Phase 05C:** ✅ Current-user foundation and entity lifecycle auditing implemented and verified
+>
+> **Phase 05C-A:** ✅ Durable security/business AuditLog model and writer foundation implemented and verified; event-producing workflows, retention policy, IP/UserAgent capture, and clinical/read auditing remain deferred
+>
+> **Phase 05D:** ✅ Identity and AuditLog migration applied and verified against development and isolated integration SQL Server databases; pending-model suppression removed
+>
+> **Phase 05E:** ✅ Security integration and hardening implemented and verified; account workflows, durable event producers, retention, IP/UserAgent capture, clinical/read auditing, and UI remain deferred
+>
+> **Next gate:** Phase 06 DTOs & Validation design gate
 
 ---
 
@@ -80,7 +92,7 @@ Testing                  xUnit
 Version Control          Git / GitHub
 ```
 
-Some technologies listed above intentionally remain deferred because development is being completed phase by phase. EF Core mappings, the inspected migration, the local development schema, and isolated persistence integration tests are complete through approved Phase 04E; seed/bootstrap decisions and Identity remain later gates.
+Some technologies listed above intentionally remain deferred because development is being completed phase by phase. EF Core mappings, the inspected Phase 04 migration, the local development schema, isolated persistence integration tests, the 05A Identity foundation, 05B role/policy foundation, 05C current-user/entity-lifecycle auditing, 05C-A AuditLog model/writer foundation, the 05D Identity/AuditLog migration, and 05E security integration are complete. Event-producing workflows, production retention policy, IP/UserAgent capture, clinical/read auditing, and UI remain later gates. The approved performance, reliability, and quality requirement applies to every remaining phase; optimization and infrastructure additions require measured need.
 
 ---
 
@@ -347,7 +359,7 @@ Do not skip phases without reviewing the architectural impact.
 | 02 | Core Foundation | ✅ Complete |
 | 03 | Domain Entities | ✅ Complete |
 | 04 | EF Core & Database | ✅ Complete |
-| 05 | Identity & Security | ⏳ Not started |
+| 05 | Identity & Security | ✅ Complete (05A, 05B, 05C, 05C-A, 05D, and 05E) |
 | 06 | DTOs & Validation | ⏳ Not started |
 | 07 | Application Services | ⏳ Not started |
 | 08 | Business Workflows | ⏳ Not started |
@@ -638,17 +650,15 @@ Database seed
 
 ## Phase 05+
 
-No authentication/authorization implementation yet:
+The 05A Identity foundation, security-model amendment, 05B Roles & Authorization foundation, 05C current-user/entity-lifecycle auditing, 05C-A durable AuditLog model/writer foundation, 05D Identity/AuditLog migration, and 05E security integration are implemented; these remain deferred:
 
 ```text
-ApplicationUser
-ASP.NET Core Identity
-Roles
-Permissions
-Authorization policies
+Security/business workflows that emit AuditLog events
+Production retention durations pending Rwanda-first and future Sudan compliance validation
+IP/UserAgent host capture, clinical auditing, and read-access auditing
 ```
 
-This is intentional.
+This staged boundary is intentional.
 
 Do not treat these as missing Phase 02 work.
 
@@ -790,26 +800,36 @@ When opening this repository after a break, read this section first.
 
 ```text
 LAST COMPLETED PHASE:
-Phase 04E — Persistence integration test implementation and verification
+Phase 05E — Security integration and hardening implementation and verification
 
 CURRENT PHASE:
-Phase 05 — Identity & Security (design review only)
+Phase 05 — Identity & Security complete; Phase 06 pending
 
 CURRENT STATUS:
 Phase 04A foundation, 04B scalar mappings, 04C relational metadata, 04D-A environment readiness,
 04D-B0 design-time tooling, 04D-B migration generation/inspection, 04D-C local schema verification,
-and 04E isolated SQL Server persistence integration tests are complete.
+04E isolated SQL Server persistence integration tests, 05A Identity foundation, 05B Roles & Authorization, 05C current-user/entity auditing, 05C-A AuditLog foundation, 05D Identity/AuditLog migration and SQL verification, and 05E security integration/hardening are complete.
 The six approved entity configurations, explicit historical-safe relationships, approved indexes/uniqueness,
 soft-delete filters, three opted-in rowversion mappings, and the Infrastructure migration/snapshot are present.
-Full restore, build, and tests passed (187 tests). The integration fixture uses only the exact
+Full restore, build, and tests passed (237 tests). The integration fixture uses only the exact
 `ElsheiekhHMS_IntegrationTests` LocalDB target and removes it after each run; `ElsheiekhHMS_Dev`
-remains untouched. The migration files were not modified. Repositories, Unit of Work, and Identity have not started.
+was updated only through the approved additive migration. `ApplicationUser`, the
+same-context Identity foundation, approved account-security state model, options, role stores, and focused model tests are present.
+The five canonical roles, eight approved policies, authenticated fallback policy, anonymous health endpoint,
+and deterministic password-free role seeder are implemented. The 05C current-user contract, Web claims adapter,
+TimeProvider registration, centralized EF entity auditing, and RowVersion regression coverage are implemented.
+The 05C-A stable AuditLog vocabulary, bounded append-only persistence model, server-controlled writer, transaction
+boundary, sensitive-data exclusions, model tests, and focused writer tests are implemented. The 05D migration,
+physical Identity/AuditLog schema verification, migration-history verification, isolated SQL tests, and removal of the
+temporary pending-model suppression are complete. Phase 05E adds Identity cookie composition, request-level security-stamp/account-state validation,
+Interactive Server circuit revalidation, scoped stable-user propagation, antiforgery/security-header hardening, and an explicit secret-backed administrator bootstrap primitive.
+Event-producing security and business workflows, retention duration, IP/UserAgent capture, clinical/read auditing, and UI remain deferred.
 
 NEXT ACTION:
-Review and approve the Phase 05 Identity & Security design.
+Prepare and approve the Phase 06 DTOs & Validation design gate.
 
 DO NOT:
-Do not begin Phase 05 implementation without design approval.
+Do not begin Phase 06 without the corresponding approval.
 ```
 
 ---

@@ -21,9 +21,10 @@ public sealed class ElsheiekhHmsDbContextModelTests
             .OrderBy(name => name)
             .ToArray();
 
-        Assert.Equal(
+        Assert.All(
             ["Appointment", "Department", "Doctor", "DoctorSchedule", "Patient", "WalkInQueueEntry"],
-            entityNames);
+            expected => Assert.Contains(expected, entityNames));
+        Assert.Contains("ApplicationUser", entityNames);
     }
 
     [Fact]

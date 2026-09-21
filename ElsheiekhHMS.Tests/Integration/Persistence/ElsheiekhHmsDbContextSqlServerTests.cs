@@ -5,6 +5,7 @@ using ElsheiekhHMS.Core.Domain.Patients.Enums;
 using ElsheiekhHMS.Core.Domain.Scheduling.Entities;
 using ElsheiekhHMS.Core.Domain.Scheduling.Enums;
 using ElsheiekhHMS.Core.Domain.Staff.Entities;
+using ElsheiekhHMS.Application.Common.Security;
 using Microsoft.EntityFrameworkCore;
 
 namespace ElsheiekhHMS.Tests.Integration.Persistence;
@@ -21,10 +22,192 @@ public sealed class ElsheiekhHmsDbContextSqlServerTests(
         await using var context = fixture.CreateContext();
 
         Assert.True(await context.Database.CanConnectAsync());
-        Assert.Contains(
-            "20260921111137_InitialCreate",
-            await context.Database.GetAppliedMigrationsAsync());
+        var applied = await context.Database.GetAppliedMigrationsAsync();
+        Assert.Contains("20260921111137_InitialCreate", applied);
+        Assert.Contains("20260921182651_AddPhase05IdentityAndAuditLog", applied);
         Assert.Empty(await context.Database.GetPendingMigrationsAsync());
+    }
+
+    [Fact]
+    public async Task Entity_auditing_uses_stable_user_id_and_utc_time()
+    {
+        var createdAt = new DateTimeOffset(2026, 1, 2, 3, 4, 5, TimeSpan.Zero);
+        var currentUser = new TestCurrentUser("user-05c", "display-name", ["Provider"]);
+        var patient = CreatePatient();
+
+        await using (var context = fixture.CreateContext(currentUser, new FixedTimeProvider(createdAt)))
+        {
+            context.Patients.Add(patient);
+            await context.SaveChangesAsync();
+        }
+
+        await using var readContext = fixture.CreateContext();
+        var persisted = await readContext.Patients.SingleAsync(item => item.Id == patient.Id);
+
+        Assert.Equal(createdAt, persisted.CreatedAt);
+        Assert.Equal("user-05c", persisted.CreatedBy);
+        Assert.Null(persisted.UpdatedAt);
+        Assert.Null(persisted.UpdatedBy);
+    }
+
+    [Fact]
+    public async Task Entity_auditing_preserves_creation_and_stamps_update()
+    {
+        var createdAt = new DateTimeOffset(2026, 1, 2, 3, 4, 5, TimeSpan.Zero);
+        var updatedAt = createdAt.AddMinutes(10);
+        var patient = CreatePatient();
+
+        await using (var createContext = fixture.CreateContext(
+                         new TestCurrentUser("creator", "creator-name", []),
+                         new FixedTimeProvider(createdAt)))
+        {
+            createContext.Patients.Add(patient);
+            await createContext.SaveChangesAsync();
+        }
+
+        await using (var updateContext = fixture.CreateContext(
+                         new TestCurrentUser("editor", "editor-name", []),
+                         new FixedTimeProvider(updatedAt)))
+        {
+            var tracked = await updateContext.Patients.SingleAsync(item => item.Id == patient.Id);
+            tracked.UpdateContactDetails(
+                "0900111222", "Updated address", "Khartoum", null, null, null, null,
+                updatedAt, "spoofed");
+            await updateContext.SaveChangesAsync();
+        }
+
+        await using var readContext = fixture.CreateContext();
+        var persisted = await readContext.Patients.SingleAsync(item => item.Id == patient.Id);
+
+        Assert.Equal(createdAt, persisted.CreatedAt);
+        Assert.Equal("creator", persisted.CreatedBy);
+        Assert.Equal(updatedAt, persisted.UpdatedAt);
+        Assert.Equal("editor", persisted.UpdatedBy);
+    }
+
+    [Fact]
+    public async Task Entity_auditing_preserves_rowversion_concurrency_failures()
+    {
+        var patient = CreatePatient();
+        await using (var seedContext = fixture.CreateContext())
+        {
+            seedContext.Patients.Add(patient);
+            await seedContext.SaveChangesAsync();
+        }
+
+        await using var first = fixture.CreateContext(
+            new TestCurrentUser("editor-1", "editor-1", []),
+            new FixedTimeProvider(Utc(40)));
+        await using var second = fixture.CreateContext(
+            new TestCurrentUser("editor-2", "editor-2", []),
+            new FixedTimeProvider(Utc(41)));
+        var firstPatient = await first.Patients.SingleAsync(item => item.Id == patient.Id);
+        var secondPatient = await second.Patients.SingleAsync(item => item.Id == patient.Id);
+
+        firstPatient.UpdateContactDetails(
+            "0900222333", "First update", "Khartoum", null, null, null, null,
+            Utc(40), "spoofed");
+        await first.SaveChangesAsync();
+        secondPatient.UpdateContactDetails(
+            "0900333444", "Second update", "Khartoum", null, null, null, null,
+            Utc(41), "spoofed");
+
+        await Assert.ThrowsAsync<DbUpdateConcurrencyException>(() => second.SaveChangesAsync());
+    }
+
+    [Fact]
+    public async Task Entity_auditing_keeps_anonymous_actor_null()
+    {
+        var createdAt = new DateTimeOffset(2026, 1, 2, 3, 4, 5, TimeSpan.Zero);
+        var patient = CreatePatient();
+
+        await using (var context = fixture.CreateContext(
+                         new TestCurrentUser(null, null, [], isAuthenticated: false),
+                         new FixedTimeProvider(createdAt)))
+        {
+            context.Patients.Add(patient);
+            await context.SaveChangesAsync();
+        }
+
+        await using var readContext = fixture.CreateContext();
+        var persisted = await readContext.Patients.SingleAsync(item => item.Id == patient.Id);
+
+        Assert.Null(persisted.CreatedBy);
+    }
+
+    [Fact]
+    public async Task Entity_auditing_clears_created_soft_delete_metadata()
+    {
+        var patient = CreatePatient();
+
+        await using (var context = fixture.CreateContext(
+                         new TestCurrentUser("creator", "creator", []),
+                         new FixedTimeProvider(Utc(45))))
+        {
+            context.Patients.Add(patient);
+            context.Entry(patient).Property(nameof(SoftDeletableEntity.DeletedAt)).CurrentValue = Utc(46);
+            context.Entry(patient).Property(nameof(SoftDeletableEntity.DeletedBy)).CurrentValue = "spoofed";
+            await context.SaveChangesAsync();
+        }
+
+        await using var readContext = fixture.CreateContext();
+        var persisted = await readContext.Patients.SingleAsync(item => item.Id == patient.Id);
+
+        Assert.Null(persisted.DeletedAt);
+        Assert.Null(persisted.DeletedBy);
+    }
+
+    [Fact]
+    public async Task Entity_auditing_stamps_explicit_soft_delete_transition()
+    {
+        var createdAt = Utc(50);
+        var deletedAt = Utc(51);
+        var patient = CreatePatient();
+
+        await using (var createContext = fixture.CreateContext(
+                         new TestCurrentUser("creator", "creator", []),
+                         new FixedTimeProvider(createdAt)))
+        {
+            createContext.Patients.Add(patient);
+            await createContext.SaveChangesAsync();
+        }
+
+        await using (var deleteContext = fixture.CreateContext(
+                         new TestCurrentUser("deleter", "deleter", []),
+                         new FixedTimeProvider(deletedAt)))
+        {
+            var tracked = await deleteContext.Patients.SingleAsync(item => item.Id == patient.Id);
+            tracked.MarkDeleted(deletedAt, "spoofed");
+            await deleteContext.SaveChangesAsync();
+        }
+
+        await using var readContext = fixture.CreateContext();
+        var persisted = await readContext.Patients
+            .IgnoreQueryFilters()
+            .SingleAsync(item => item.Id == patient.Id);
+
+        Assert.True(persisted.IsDeleted);
+        Assert.Equal(deletedAt, persisted.DeletedAt);
+        Assert.Equal("deleter", persisted.DeletedBy);
+        Assert.Equal(deletedAt, persisted.UpdatedAt);
+        Assert.Equal("deleter", persisted.UpdatedBy);
+    }
+
+    private sealed class TestCurrentUser(
+        string? userId,
+        string? userName,
+        IReadOnlyCollection<string> roles,
+        bool isAuthenticated = true) : ICurrentUser
+    {
+        public bool IsAuthenticated => isAuthenticated;
+        public string? UserId { get; } = userId;
+        public string? UserName { get; } = userName;
+        public IReadOnlyCollection<string> Roles { get; } = roles;
+    }
+
+    private sealed class FixedTimeProvider(DateTimeOffset value) : TimeProvider
+    {
+        public override DateTimeOffset GetUtcNow() => value;
     }
 
     [Fact]
