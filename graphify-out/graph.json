@@ -1,11 +1,11 @@
 {
   "schemaVersion": "1.0",
-  "generatedAtUtc": "2026-09-21T07:46:48.1938707\u002B00:00",
-  "gitCommit": "1e8699cba1f910830a98f9470ebe98246e66edb5",
+  "generatedAtUtc": "2026-09-21T11:53:31.7615920\u002B00:00",
+  "gitCommit": "5899d795e05f23d8266d4092df27a8984b18018f",
   "gitBranch": "main",
   "workingTreeDirty": true,
-  "gitStatusAtGeneration": "M README.md\n M docs/ARCHITECTURE.md\n M docs/DECISIONS.md\n M docs/superpowers/specs/2026-09-20-phase03a-department-foundation-design.md\n M docs/superpowers/specs/2026-09-20-phase03b-doctor-availability-design.md\n M docs/superpowers/specs/2026-09-21-phase03c-patient-identity-vitals-design.md\n M graphify-out/GRAPH_REPORT.md\n M graphify-out/cache/last_query_stamp\n M graphify-out/graph.html\n M graphify-out/graph.json\n?? ElsheiekhHMS.Core/Domain/Scheduling/Entities/Appointment.cs\n?? ElsheiekhHMS.Core/Domain/Scheduling/Entities/WalkInQueueEntry.cs\n?? ElsheiekhHMS.Core/Domain/Scheduling/Enums/AppointmentStatus.cs\n?? ElsheiekhHMS.Core/Domain/Scheduling/Enums/AppointmentType.cs\n?? ElsheiekhHMS.Core/Domain/Scheduling/Enums/QueuePriority.cs\n?? ElsheiekhHMS.Core/Domain/Scheduling/Enums/QueueStatus.cs\n?? ElsheiekhHMS.Tests/Unit/Domain/Scheduling/AppointmentTests.cs\n?? ElsheiekhHMS.Tests/Unit/Domain/Scheduling/WalkInQueueEntryTests.cs\n?? docs/superpowers/plans/2026-09-21-phase03d-appointment-walk-in-queue.md\n?? docs/superpowers/specs/2026-09-21-phase03d-appointment-walk-in-queue-design.md",
-  "sourceFingerprint": "7246acca9732b44b0302b60535a55297c4cd1fcc169f36bc0613cdc2c40cc2d4",
+  "gitStatusAtGeneration": "M ElsheiekhHMS.Core/Domain/Patients/Entities/Patient.cs\n M ElsheiekhHMS.Infrastructure/ElsheiekhHMS.Infrastructure.csproj\n M ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs\n M ElsheiekhHMS.Web/ElsheiekhHMS.Web.csproj\n M README.md\n M docs/ARCHITECTURE.md\n M docs/DECISIONS.md\n M graphify-out/GRAPH_REPORT.md\n M graphify-out/graph.html\n M graphify-out/graph.json\n?? ElsheiekhHMS.Infrastructure/Configurations/Entities/AppointmentConfiguration.cs\n?? ElsheiekhHMS.Infrastructure/Configurations/Entities/DepartmentConfiguration.cs\n?? ElsheiekhHMS.Infrastructure/Configurations/Entities/DoctorConfiguration.cs\n?? ElsheiekhHMS.Infrastructure/Configurations/Entities/DoctorScheduleConfiguration.cs\n?? ElsheiekhHMS.Infrastructure/Configurations/Entities/PatientConfiguration.cs\n?? ElsheiekhHMS.Infrastructure/Configurations/Entities/WalkInQueueEntryConfiguration.cs\n?? ElsheiekhHMS.Infrastructure/Migrations/20260921111137_InitialCreate.Designer.cs\n?? ElsheiekhHMS.Infrastructure/Migrations/20260921111137_InitialCreate.cs\n?? ElsheiekhHMS.Infrastructure/Migrations/ElsheiekhHmsDbContextModelSnapshot.cs\n?? ElsheiekhHMS.Infrastructure/Persistence/ElsheiekhHmsDbContext.cs\n?? ElsheiekhHMS.Tests/Integration/Persistence/ElsheiekhHmsDbContextSqlServerTests.cs\n?? ElsheiekhHMS.Tests/Integration/Persistence/SqlServerTestDatabaseFixture.cs\n?? ElsheiekhHMS.Tests/Integration/Persistence/SqlServerTestDatabaseGuard.cs\n?? ElsheiekhHMS.Tests/Integration/Persistence/SqlServerTestDatabaseSafetyTests.cs\n?? ElsheiekhHMS.Tests/Unit/Infrastructure/ElsheiekhHmsDbContextModelTests.cs\n?? ElsheiekhHMS.Tests/Unit/Infrastructure/ElsheiekhHmsDbContextTests.cs\n?? docs/superpowers/plans/2026-09-21-phase04-ef-core-database.md\n?? docs/superpowers/specs/2026-09-21-phase04-ef-core-database-design.md",
+  "sourceFingerprint": "f7a69b7fd6144dd6805869f43390296990d812ac1660f5c0e0cf63affe4390ac",
   "generatorFingerprint": "03eee0a8853a7e84af6cbe571d34e6f7d820505ac8f5670a719d0d63b113840c",
   "fingerprintAlgorithm": "SHA-256 of ordinal path \u002B NUL \u002B content SHA-256 records joined with LF; sourceManifest defines inputs; graphify-out excluded everywhere",
   "sourceManifest": [
@@ -35,7 +35,7 @@
     },
     {
       "path": "ElsheiekhHMS.Core/Domain/Patients/Entities/Patient.cs",
-      "sha256": "ce75187d2151ffa9a9f047cebeb4511590a4bd8a71fd6d74c8306770a5bc5589"
+      "sha256": "0a9dab68caa7882b18ca1de473e24fbf9258c69e667e86560735f87ff96de806"
     },
     {
       "path": "ElsheiekhHMS.Core/Domain/Patients/Enums/BloodGroup.cs",
@@ -102,16 +102,72 @@
       "sha256": "df2c4fae7d248259691412de23235a9184ec774844578f95713ebf7472f1e924"
     },
     {
+      "path": "ElsheiekhHMS.Infrastructure/Configurations/Entities/AppointmentConfiguration.cs",
+      "sha256": "c9be3b461f1e5a229d2cf16a695e5f761fd8a87fe4aca56fd30ae6a4e5a68ffa"
+    },
+    {
+      "path": "ElsheiekhHMS.Infrastructure/Configurations/Entities/DepartmentConfiguration.cs",
+      "sha256": "857797faee63ad00e51727b09c09b8edfdd6f2a73191c896c737fd147fd6d3e8"
+    },
+    {
+      "path": "ElsheiekhHMS.Infrastructure/Configurations/Entities/DoctorConfiguration.cs",
+      "sha256": "b8bb45b15376b40df94890a2f9a99257bfbff0f758c737259c19b87b8a531e4c"
+    },
+    {
+      "path": "ElsheiekhHMS.Infrastructure/Configurations/Entities/DoctorScheduleConfiguration.cs",
+      "sha256": "1e38b4cbf9a6f53e06481442b19ab5129165b683959423c2e8771f66ce921a88"
+    },
+    {
+      "path": "ElsheiekhHMS.Infrastructure/Configurations/Entities/PatientConfiguration.cs",
+      "sha256": "7bb1eccf42364bd99c5c99a81db48b526090ac3ce6f1ec5b9304edda12be8b82"
+    },
+    {
+      "path": "ElsheiekhHMS.Infrastructure/Configurations/Entities/WalkInQueueEntryConfiguration.cs",
+      "sha256": "6f7b12bf3aff2e4da2ff0ebf65c5595d5fba77bb6564346adcc85ffdd0142718"
+    },
+    {
       "path": "ElsheiekhHMS.Infrastructure/ElsheiekhHMS.Infrastructure.csproj",
-      "sha256": "b1e58247fbae77c6c44caa639362c0e57a574ca159f67aaa4a789fa69e8d8c68"
+      "sha256": "834d01da164bc1a63587b3397bf7eb95f04c3e3bfe8ae0b3066b177055a300a2"
     },
     {
       "path": "ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs",
-      "sha256": "3eb28d8c3e25f83446cdcce7c9b5d4170aae80442b656db3a6c8a4b3e0d70bfd"
+      "sha256": "da5e51655907fbfe7404d08651145c013bd70fa6fdcbddbd995b0c25858909fa"
+    },
+    {
+      "path": "ElsheiekhHMS.Infrastructure/Migrations/20260921111137_InitialCreate.Designer.cs",
+      "sha256": "0a8486bd0d61db7c3a498fa854f56301005865efadaecea4cc145a5c93737848"
+    },
+    {
+      "path": "ElsheiekhHMS.Infrastructure/Migrations/20260921111137_InitialCreate.cs",
+      "sha256": "a519d8966a9d1362542202136a7b616cdf88734bae73efc7b369857f2659de89"
+    },
+    {
+      "path": "ElsheiekhHMS.Infrastructure/Migrations/ElsheiekhHmsDbContextModelSnapshot.cs",
+      "sha256": "c789de36120b44032b0a0ff394eafac9f0f23f4500489c7d952c359d48bae4e0"
+    },
+    {
+      "path": "ElsheiekhHMS.Infrastructure/Persistence/ElsheiekhHmsDbContext.cs",
+      "sha256": "60f757300f90107a95e25fd6503d121a028003597cb17f7549915957f7f85f1f"
     },
     {
       "path": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
       "sha256": "6cc9fd9be55e6b7f477c82f95a8127514f07cf172c2f7bf08d55643ce49c04a0"
+    },
+    {
+      "path": "ElsheiekhHMS.Tests/Integration/Persistence/ElsheiekhHmsDbContextSqlServerTests.cs",
+      "sha256": "6d9e8b993140742a860afce3c95824136eb86c0d287cb00c7179d5b56911e49e"
+    },
+    {
+      "path": "ElsheiekhHMS.Tests/Integration/Persistence/SqlServerTestDatabaseFixture.cs",
+      "sha256": "aa1fb9f442b111bb62c34e5bc0da5a68c52884c102172e0df1235c51682cf67a"
+    },
+    {
+      "path": "ElsheiekhHMS.Tests/Integration/Persistence/SqlServerTestDatabaseGuard.cs",
+      "sha256": "62ff712b141e5111cbe2985961cd845a55e59a0b6be9a04241574bf7cb1d7fe3"
+    },
+    {
+      "path": "ElsheiekhHMS.Tests/Integration/Persistence/SqlServerTestDatabaseSafetyTests.cs",
+      "sha256": "509bac05c344a4fa42ab21dde344633ff311fbdb6244e464c44cb6c52ad7047c"
     },
     {
       "path": "ElsheiekhHMS.Tests/Unit/Domain/Common/AuditableEntityTests.cs",
@@ -152,6 +208,14 @@
     {
       "path": "ElsheiekhHMS.Tests/Unit/Domain/Staff/DoctorTests.cs",
       "sha256": "5cd83887538641ffbd6fe66358362a5fabd42212cf47be55d69762cc43685ad2"
+    },
+    {
+      "path": "ElsheiekhHMS.Tests/Unit/Infrastructure/ElsheiekhHmsDbContextModelTests.cs",
+      "sha256": "d84f807c037c34b56b14848bcf883f8c67fb7646e11296342ad956f10fb744c7"
+    },
+    {
+      "path": "ElsheiekhHMS.Tests/Unit/Infrastructure/ElsheiekhHmsDbContextTests.cs",
+      "sha256": "c3a585541ea15b6e187c046c65c5bd780ced13a9add3a30f4b1d7f24ca162144"
     },
     {
       "path": "ElsheiekhHMS.Web/Components/App.razor",
@@ -199,7 +263,7 @@
     },
     {
       "path": "ElsheiekhHMS.Web/ElsheiekhHMS.Web.csproj",
-      "sha256": "d71209599da68473de0b88557e2987803d7647ad11fb5fcce9588a0c8572a2d2"
+      "sha256": "40fc6f17a04c8828f5dbe7223257a5eaced300c4691fa15a2a77f5955c883312"
     },
     {
       "path": "ElsheiekhHMS.Web/Program.cs",
@@ -211,7 +275,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "21a9dc282698ee8822f733ae419a134d8c24801392429903177e05161eaa7f0c"
+      "sha256": "3102970a984e9e6b2760f6f7e0ece8966cf18d8a01959337adedb2e5f45892b2"
     }
   ],
   "repository": {
@@ -221,16 +285,16 @@
   },
   "summary": {
     "projectCount": 5,
-    "sourceFileCount": 33,
+    "sourceFileCount": 49,
     "razorFileCount": 11,
-    "typeCount": 35,
+    "typeCount": 51,
     "interfaceCount": 1,
     "testClassCount": 8,
     "testMethodCount": 63,
     "testCount": 100,
     "dynamicTheoryCount": 0,
-    "nodeCount": 104,
-    "edgeCount": 206
+    "nodeCount": 145,
+    "edgeCount": 269
   },
   "projects": [
     {
@@ -305,6 +369,21 @@
       ],
       "packageReferences": [
         {
+          "name": "Microsoft.EntityFrameworkCore",
+          "version": "10.0.12",
+          "evidence": "MSBuild evaluated PackageReference"
+        },
+        {
+          "name": "Microsoft.EntityFrameworkCore.Design",
+          "version": "10.0.12",
+          "evidence": "MSBuild evaluated PackageReference"
+        },
+        {
+          "name": "Microsoft.EntityFrameworkCore.SqlServer",
+          "version": "10.0.12",
+          "evidence": "MSBuild evaluated PackageReference"
+        },
+        {
           "name": "Microsoft.Extensions.Configuration.Abstractions",
           "version": "10.0.12",
           "evidence": "MSBuild evaluated PackageReference"
@@ -316,7 +395,17 @@
         }
       ],
       "sourceFiles": [
-        "ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs"
+        "ElsheiekhHMS.Infrastructure/Configurations/Entities/AppointmentConfiguration.cs",
+        "ElsheiekhHMS.Infrastructure/Configurations/Entities/DepartmentConfiguration.cs",
+        "ElsheiekhHMS.Infrastructure/Configurations/Entities/DoctorConfiguration.cs",
+        "ElsheiekhHMS.Infrastructure/Configurations/Entities/DoctorScheduleConfiguration.cs",
+        "ElsheiekhHMS.Infrastructure/Configurations/Entities/PatientConfiguration.cs",
+        "ElsheiekhHMS.Infrastructure/Configurations/Entities/WalkInQueueEntryConfiguration.cs",
+        "ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs",
+        "ElsheiekhHMS.Infrastructure/Migrations/20260921111137_InitialCreate.cs",
+        "ElsheiekhHMS.Infrastructure/Migrations/20260921111137_InitialCreate.Designer.cs",
+        "ElsheiekhHMS.Infrastructure/Migrations/ElsheiekhHmsDbContextModelSnapshot.cs",
+        "ElsheiekhHMS.Infrastructure/Persistence/ElsheiekhHmsDbContext.cs"
       ]
     },
     {
@@ -356,6 +445,10 @@
         }
       ],
       "sourceFiles": [
+        "ElsheiekhHMS.Tests/Integration/Persistence/ElsheiekhHmsDbContextSqlServerTests.cs",
+        "ElsheiekhHMS.Tests/Integration/Persistence/SqlServerTestDatabaseFixture.cs",
+        "ElsheiekhHMS.Tests/Integration/Persistence/SqlServerTestDatabaseGuard.cs",
+        "ElsheiekhHMS.Tests/Integration/Persistence/SqlServerTestDatabaseSafetyTests.cs",
         "ElsheiekhHMS.Tests/Unit/Domain/Common/AuditableEntityTests.cs",
         "ElsheiekhHMS.Tests/Unit/Domain/Common/BaseEntityTests.cs",
         "ElsheiekhHMS.Tests/Unit/Domain/Common/SoftDeletableEntityTests.cs",
@@ -365,7 +458,9 @@
         "ElsheiekhHMS.Tests/Unit/Domain/Scheduling/AppointmentTests.cs",
         "ElsheiekhHMS.Tests/Unit/Domain/Scheduling/WalkInQueueEntryTests.cs",
         "ElsheiekhHMS.Tests/Unit/Domain/Staff/DoctorScheduleTests.cs",
-        "ElsheiekhHMS.Tests/Unit/Domain/Staff/DoctorTests.cs"
+        "ElsheiekhHMS.Tests/Unit/Domain/Staff/DoctorTests.cs",
+        "ElsheiekhHMS.Tests/Unit/Infrastructure/ElsheiekhHmsDbContextModelTests.cs",
+        "ElsheiekhHMS.Tests/Unit/Infrastructure/ElsheiekhHmsDbContextTests.cs"
       ]
     },
     {
@@ -381,7 +476,13 @@
         "ElsheiekhHMS.Application/ElsheiekhHMS.Application.csproj",
         "ElsheiekhHMS.Infrastructure/ElsheiekhHMS.Infrastructure.csproj"
       ],
-      "packageReferences": [],
+      "packageReferences": [
+        {
+          "name": "Microsoft.EntityFrameworkCore.Design",
+          "version": "10.0.12",
+          "evidence": "MSBuild evaluated PackageReference"
+        }
+      ],
       "sourceFiles": [
         "ElsheiekhHMS.Web/Program.cs"
       ]
@@ -725,6 +826,102 @@
       "dynamicTheories": 0
     },
     {
+      "id": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Configurations/Entities/AppointmentConfiguration.cs",
+      "name": "AppointmentConfiguration.cs",
+      "label": "AppointmentConfiguration.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Infrastructure",
+      "file": "ElsheiekhHMS.Infrastructure/Configurations/Entities/AppointmentConfiguration.cs",
+      "source_file": "ElsheiekhHMS.Infrastructure/Configurations/Entities/AppointmentConfiguration.cs",
+      "external": false,
+      "community": 2,
+      "community_name": "ElsheiekhHMS.Infrastructure",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Configurations/Entities/DepartmentConfiguration.cs",
+      "name": "DepartmentConfiguration.cs",
+      "label": "DepartmentConfiguration.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Infrastructure",
+      "file": "ElsheiekhHMS.Infrastructure/Configurations/Entities/DepartmentConfiguration.cs",
+      "source_file": "ElsheiekhHMS.Infrastructure/Configurations/Entities/DepartmentConfiguration.cs",
+      "external": false,
+      "community": 2,
+      "community_name": "ElsheiekhHMS.Infrastructure",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Configurations/Entities/DoctorConfiguration.cs",
+      "name": "DoctorConfiguration.cs",
+      "label": "DoctorConfiguration.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Infrastructure",
+      "file": "ElsheiekhHMS.Infrastructure/Configurations/Entities/DoctorConfiguration.cs",
+      "source_file": "ElsheiekhHMS.Infrastructure/Configurations/Entities/DoctorConfiguration.cs",
+      "external": false,
+      "community": 2,
+      "community_name": "ElsheiekhHMS.Infrastructure",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Configurations/Entities/DoctorScheduleConfiguration.cs",
+      "name": "DoctorScheduleConfiguration.cs",
+      "label": "DoctorScheduleConfiguration.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Infrastructure",
+      "file": "ElsheiekhHMS.Infrastructure/Configurations/Entities/DoctorScheduleConfiguration.cs",
+      "source_file": "ElsheiekhHMS.Infrastructure/Configurations/Entities/DoctorScheduleConfiguration.cs",
+      "external": false,
+      "community": 2,
+      "community_name": "ElsheiekhHMS.Infrastructure",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Configurations/Entities/PatientConfiguration.cs",
+      "name": "PatientConfiguration.cs",
+      "label": "PatientConfiguration.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Infrastructure",
+      "file": "ElsheiekhHMS.Infrastructure/Configurations/Entities/PatientConfiguration.cs",
+      "source_file": "ElsheiekhHMS.Infrastructure/Configurations/Entities/PatientConfiguration.cs",
+      "external": false,
+      "community": 2,
+      "community_name": "ElsheiekhHMS.Infrastructure",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Configurations/Entities/WalkInQueueEntryConfiguration.cs",
+      "name": "WalkInQueueEntryConfiguration.cs",
+      "label": "WalkInQueueEntryConfiguration.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Infrastructure",
+      "file": "ElsheiekhHMS.Infrastructure/Configurations/Entities/WalkInQueueEntryConfiguration.cs",
+      "source_file": "ElsheiekhHMS.Infrastructure/Configurations/Entities/WalkInQueueEntryConfiguration.cs",
+      "external": false,
+      "community": 2,
+      "community_name": "ElsheiekhHMS.Infrastructure",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
       "id": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs",
       "name": "InfrastructureServiceExtensions.cs",
       "label": "InfrastructureServiceExtensions.cs",
@@ -736,6 +933,134 @@
       "external": false,
       "community": 2,
       "community_name": "ElsheiekhHMS.Infrastructure",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Migrations/20260921111137_InitialCreate.Designer.cs",
+      "name": "20260921111137_InitialCreate.Designer.cs",
+      "label": "20260921111137_InitialCreate.Designer.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Infrastructure",
+      "file": "ElsheiekhHMS.Infrastructure/Migrations/20260921111137_InitialCreate.Designer.cs",
+      "source_file": "ElsheiekhHMS.Infrastructure/Migrations/20260921111137_InitialCreate.Designer.cs",
+      "external": false,
+      "community": 2,
+      "community_name": "ElsheiekhHMS.Infrastructure",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Migrations/20260921111137_InitialCreate.cs",
+      "name": "20260921111137_InitialCreate.cs",
+      "label": "20260921111137_InitialCreate.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Infrastructure",
+      "file": "ElsheiekhHMS.Infrastructure/Migrations/20260921111137_InitialCreate.cs",
+      "source_file": "ElsheiekhHMS.Infrastructure/Migrations/20260921111137_InitialCreate.cs",
+      "external": false,
+      "community": 2,
+      "community_name": "ElsheiekhHMS.Infrastructure",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Migrations/ElsheiekhHmsDbContextModelSnapshot.cs",
+      "name": "ElsheiekhHmsDbContextModelSnapshot.cs",
+      "label": "ElsheiekhHmsDbContextModelSnapshot.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Infrastructure",
+      "file": "ElsheiekhHMS.Infrastructure/Migrations/ElsheiekhHmsDbContextModelSnapshot.cs",
+      "source_file": "ElsheiekhHMS.Infrastructure/Migrations/ElsheiekhHmsDbContextModelSnapshot.cs",
+      "external": false,
+      "community": 2,
+      "community_name": "ElsheiekhHMS.Infrastructure",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Persistence/ElsheiekhHmsDbContext.cs",
+      "name": "ElsheiekhHmsDbContext.cs",
+      "label": "ElsheiekhHmsDbContext.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Infrastructure",
+      "file": "ElsheiekhHMS.Infrastructure/Persistence/ElsheiekhHmsDbContext.cs",
+      "source_file": "ElsheiekhHMS.Infrastructure/Persistence/ElsheiekhHmsDbContext.cs",
+      "external": false,
+      "community": 2,
+      "community_name": "ElsheiekhHMS.Infrastructure",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/ElsheiekhHmsDbContextSqlServerTests.cs",
+      "name": "ElsheiekhHmsDbContextSqlServerTests.cs",
+      "label": "ElsheiekhHmsDbContextSqlServerTests.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Tests",
+      "file": "ElsheiekhHMS.Tests/Integration/Persistence/ElsheiekhHmsDbContextSqlServerTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Integration/Persistence/ElsheiekhHmsDbContextSqlServerTests.cs",
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/SqlServerTestDatabaseFixture.cs",
+      "name": "SqlServerTestDatabaseFixture.cs",
+      "label": "SqlServerTestDatabaseFixture.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Tests",
+      "file": "ElsheiekhHMS.Tests/Integration/Persistence/SqlServerTestDatabaseFixture.cs",
+      "source_file": "ElsheiekhHMS.Tests/Integration/Persistence/SqlServerTestDatabaseFixture.cs",
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/SqlServerTestDatabaseGuard.cs",
+      "name": "SqlServerTestDatabaseGuard.cs",
+      "label": "SqlServerTestDatabaseGuard.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Tests",
+      "file": "ElsheiekhHMS.Tests/Integration/Persistence/SqlServerTestDatabaseGuard.cs",
+      "source_file": "ElsheiekhHMS.Tests/Integration/Persistence/SqlServerTestDatabaseGuard.cs",
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/SqlServerTestDatabaseSafetyTests.cs",
+      "name": "SqlServerTestDatabaseSafetyTests.cs",
+      "label": "SqlServerTestDatabaseSafetyTests.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Tests",
+      "file": "ElsheiekhHMS.Tests/Integration/Persistence/SqlServerTestDatabaseSafetyTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Integration/Persistence/SqlServerTestDatabaseSafetyTests.cs",
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
       "testMethods": [],
       "staticTestCases": 0,
       "dynamicTheories": 0
@@ -893,6 +1218,38 @@
       "project": "ElsheiekhHMS.Tests",
       "file": "ElsheiekhHMS.Tests/Unit/Domain/Staff/DoctorTests.cs",
       "source_file": "ElsheiekhHMS.Tests/Unit/Domain/Staff/DoctorTests.cs",
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Infrastructure/ElsheiekhHmsDbContextModelTests.cs",
+      "name": "ElsheiekhHmsDbContextModelTests.cs",
+      "label": "ElsheiekhHmsDbContextModelTests.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Tests",
+      "file": "ElsheiekhHMS.Tests/Unit/Infrastructure/ElsheiekhHmsDbContextModelTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Unit/Infrastructure/ElsheiekhHmsDbContextModelTests.cs",
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Infrastructure/ElsheiekhHmsDbContextTests.cs",
+      "name": "ElsheiekhHmsDbContextTests.cs",
+      "label": "ElsheiekhHmsDbContextTests.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Tests",
+      "file": "ElsheiekhHMS.Tests/Unit/Infrastructure/ElsheiekhHmsDbContextTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Unit/Infrastructure/ElsheiekhHmsDbContextTests.cs",
       "external": false,
       "community": 3,
       "community_name": "ElsheiekhHMS.Tests",
@@ -1273,6 +1630,66 @@
       "dynamicTheories": 0
     },
     {
+      "id": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Configurations.Entities",
+      "name": "ElsheiekhHMS.Infrastructure.Configurations.Entities",
+      "label": "ElsheiekhHMS.Infrastructure.Configurations.Entities",
+      "kind": "namespace",
+      "type": "namespace",
+      "project": "ElsheiekhHMS.Infrastructure",
+      "namespace": "ElsheiekhHMS.Infrastructure.Configurations.Entities",
+      "external": false,
+      "community": 2,
+      "community_name": "ElsheiekhHMS.Infrastructure",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Migrations",
+      "name": "ElsheiekhHMS.Infrastructure.Migrations",
+      "label": "ElsheiekhHMS.Infrastructure.Migrations",
+      "kind": "namespace",
+      "type": "namespace",
+      "project": "ElsheiekhHMS.Infrastructure",
+      "namespace": "ElsheiekhHMS.Infrastructure.Migrations",
+      "external": false,
+      "community": 2,
+      "community_name": "ElsheiekhHMS.Infrastructure",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Persistence",
+      "name": "ElsheiekhHMS.Infrastructure.Persistence",
+      "label": "ElsheiekhHMS.Infrastructure.Persistence",
+      "kind": "namespace",
+      "type": "namespace",
+      "project": "ElsheiekhHMS.Infrastructure",
+      "namespace": "ElsheiekhHMS.Infrastructure.Persistence",
+      "external": false,
+      "community": 2,
+      "community_name": "ElsheiekhHMS.Infrastructure",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Integration.Persistence",
+      "name": "ElsheiekhHMS.Tests.Integration.Persistence",
+      "label": "ElsheiekhHMS.Tests.Integration.Persistence",
+      "kind": "namespace",
+      "type": "namespace",
+      "project": "ElsheiekhHMS.Tests",
+      "namespace": "ElsheiekhHMS.Tests.Integration.Persistence",
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
       "id": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Domain.Common",
       "name": "ElsheiekhHMS.Tests.Unit.Domain.Common",
       "label": "ElsheiekhHMS.Tests.Unit.Domain.Common",
@@ -1355,6 +1772,21 @@
       "type": "namespace",
       "project": "ElsheiekhHMS.Tests",
       "namespace": "ElsheiekhHMS.Tests.Unit.Domain.Staff",
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Infrastructure",
+      "name": "ElsheiekhHMS.Tests.Unit.Infrastructure",
+      "label": "ElsheiekhHMS.Tests.Unit.Infrastructure",
+      "kind": "namespace",
+      "type": "namespace",
+      "project": "ElsheiekhHMS.Tests",
+      "namespace": "ElsheiekhHMS.Tests.Unit.Infrastructure",
       "external": false,
       "community": 3,
       "community_name": "ElsheiekhHMS.Tests",
@@ -1962,6 +2394,150 @@
       "dynamicTheories": 0
     },
     {
+      "id": "type:ElsheiekhHMS.Infrastructure.Configurations.Entities.AppointmentConfiguration",
+      "name": "AppointmentConfiguration",
+      "label": "AppointmentConfiguration",
+      "kind": "class",
+      "type": "class",
+      "fullName": "ElsheiekhHMS.Infrastructure.Configurations.Entities.AppointmentConfiguration",
+      "project": "ElsheiekhHMS.Infrastructure",
+      "namespace": "ElsheiekhHMS.Infrastructure.Configurations.Entities",
+      "file": "ElsheiekhHMS.Infrastructure/Configurations/Entities/AppointmentConfiguration.cs",
+      "source_file": "ElsheiekhHMS.Infrastructure/Configurations/Entities/AppointmentConfiguration.cs",
+      "source_location": "L10",
+      "line": 10,
+      "accessibility": "public",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 2,
+      "community_name": "ElsheiekhHMS.Infrastructure",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Infrastructure.Configurations.Entities.DepartmentConfiguration",
+      "name": "DepartmentConfiguration",
+      "label": "DepartmentConfiguration",
+      "kind": "class",
+      "type": "class",
+      "fullName": "ElsheiekhHMS.Infrastructure.Configurations.Entities.DepartmentConfiguration",
+      "project": "ElsheiekhHMS.Infrastructure",
+      "namespace": "ElsheiekhHMS.Infrastructure.Configurations.Entities",
+      "file": "ElsheiekhHMS.Infrastructure/Configurations/Entities/DepartmentConfiguration.cs",
+      "source_file": "ElsheiekhHMS.Infrastructure/Configurations/Entities/DepartmentConfiguration.cs",
+      "source_location": "L9",
+      "line": 9,
+      "accessibility": "public",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 2,
+      "community_name": "ElsheiekhHMS.Infrastructure",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Infrastructure.Configurations.Entities.DoctorConfiguration",
+      "name": "DoctorConfiguration",
+      "label": "DoctorConfiguration",
+      "kind": "class",
+      "type": "class",
+      "fullName": "ElsheiekhHMS.Infrastructure.Configurations.Entities.DoctorConfiguration",
+      "project": "ElsheiekhHMS.Infrastructure",
+      "namespace": "ElsheiekhHMS.Infrastructure.Configurations.Entities",
+      "file": "ElsheiekhHMS.Infrastructure/Configurations/Entities/DoctorConfiguration.cs",
+      "source_file": "ElsheiekhHMS.Infrastructure/Configurations/Entities/DoctorConfiguration.cs",
+      "source_location": "L9",
+      "line": 9,
+      "accessibility": "public",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 2,
+      "community_name": "ElsheiekhHMS.Infrastructure",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Infrastructure.Configurations.Entities.DoctorScheduleConfiguration",
+      "name": "DoctorScheduleConfiguration",
+      "label": "DoctorScheduleConfiguration",
+      "kind": "class",
+      "type": "class",
+      "fullName": "ElsheiekhHMS.Infrastructure.Configurations.Entities.DoctorScheduleConfiguration",
+      "project": "ElsheiekhHMS.Infrastructure",
+      "namespace": "ElsheiekhHMS.Infrastructure.Configurations.Entities",
+      "file": "ElsheiekhHMS.Infrastructure/Configurations/Entities/DoctorScheduleConfiguration.cs",
+      "source_file": "ElsheiekhHMS.Infrastructure/Configurations/Entities/DoctorScheduleConfiguration.cs",
+      "source_location": "L7",
+      "line": 7,
+      "accessibility": "public",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 2,
+      "community_name": "ElsheiekhHMS.Infrastructure",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Infrastructure.Configurations.Entities.PatientConfiguration",
+      "name": "PatientConfiguration",
+      "label": "PatientConfiguration",
+      "kind": "class",
+      "type": "class",
+      "fullName": "ElsheiekhHMS.Infrastructure.Configurations.Entities.PatientConfiguration",
+      "project": "ElsheiekhHMS.Infrastructure",
+      "namespace": "ElsheiekhHMS.Infrastructure.Configurations.Entities",
+      "file": "ElsheiekhHMS.Infrastructure/Configurations/Entities/PatientConfiguration.cs",
+      "source_file": "ElsheiekhHMS.Infrastructure/Configurations/Entities/PatientConfiguration.cs",
+      "source_location": "L8",
+      "line": 8,
+      "accessibility": "public",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 2,
+      "community_name": "ElsheiekhHMS.Infrastructure",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Infrastructure.Configurations.Entities.WalkInQueueEntryConfiguration",
+      "name": "WalkInQueueEntryConfiguration",
+      "label": "WalkInQueueEntryConfiguration",
+      "kind": "class",
+      "type": "class",
+      "fullName": "ElsheiekhHMS.Infrastructure.Configurations.Entities.WalkInQueueEntryConfiguration",
+      "project": "ElsheiekhHMS.Infrastructure",
+      "namespace": "ElsheiekhHMS.Infrastructure.Configurations.Entities",
+      "file": "ElsheiekhHMS.Infrastructure/Configurations/Entities/WalkInQueueEntryConfiguration.cs",
+      "source_file": "ElsheiekhHMS.Infrastructure/Configurations/Entities/WalkInQueueEntryConfiguration.cs",
+      "source_location": "L10",
+      "line": 10,
+      "accessibility": "public",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 2,
+      "community_name": "ElsheiekhHMS.Infrastructure",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
       "id": "type:ElsheiekhHMS.Infrastructure.InfrastructureServiceExtensions",
       "name": "InfrastructureServiceExtensions",
       "label": "InfrastructureServiceExtensions",
@@ -1972,8 +2548,8 @@
       "namespace": "ElsheiekhHMS.Infrastructure",
       "file": "ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs",
       "source_file": "ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs",
-      "source_location": "L14",
-      "line": 14,
+      "source_location": "L16",
+      "line": 16,
       "accessibility": "public",
       "abstract": false,
       "sealed": false,
@@ -1981,6 +2557,198 @@
       "external": false,
       "community": 2,
       "community_name": "ElsheiekhHMS.Infrastructure",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Infrastructure.Migrations.ElsheiekhHmsDbContextModelSnapshot",
+      "name": "ElsheiekhHmsDbContextModelSnapshot",
+      "label": "ElsheiekhHmsDbContextModelSnapshot",
+      "kind": "class",
+      "type": "class",
+      "fullName": "ElsheiekhHMS.Infrastructure.Migrations.ElsheiekhHmsDbContextModelSnapshot",
+      "project": "ElsheiekhHMS.Infrastructure",
+      "namespace": "ElsheiekhHMS.Infrastructure.Migrations",
+      "file": "ElsheiekhHMS.Infrastructure/Migrations/ElsheiekhHmsDbContextModelSnapshot.cs",
+      "source_file": "ElsheiekhHMS.Infrastructure/Migrations/ElsheiekhHmsDbContextModelSnapshot.cs",
+      "source_location": "L13",
+      "line": 13,
+      "accessibility": "internal",
+      "abstract": false,
+      "sealed": false,
+      "static": false,
+      "external": false,
+      "community": 2,
+      "community_name": "ElsheiekhHMS.Infrastructure",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Infrastructure.Migrations.InitialCreate",
+      "name": "InitialCreate",
+      "label": "InitialCreate",
+      "kind": "class",
+      "type": "class",
+      "fullName": "ElsheiekhHMS.Infrastructure.Migrations.InitialCreate",
+      "project": "ElsheiekhHMS.Infrastructure",
+      "namespace": "ElsheiekhHMS.Infrastructure.Migrations",
+      "file": "ElsheiekhHMS.Infrastructure/Migrations/20260921111137_InitialCreate.cs",
+      "source_file": "ElsheiekhHMS.Infrastructure/Migrations/20260921111137_InitialCreate.cs",
+      "source_location": "L9",
+      "line": 9,
+      "accessibility": "public",
+      "abstract": false,
+      "sealed": false,
+      "static": false,
+      "external": false,
+      "community": 2,
+      "community_name": "ElsheiekhHMS.Infrastructure",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Infrastructure.Persistence.ElsheiekhHmsDbContext",
+      "name": "ElsheiekhHmsDbContext",
+      "label": "ElsheiekhHmsDbContext",
+      "kind": "class",
+      "type": "class",
+      "fullName": "ElsheiekhHMS.Infrastructure.Persistence.ElsheiekhHmsDbContext",
+      "project": "ElsheiekhHMS.Infrastructure",
+      "namespace": "ElsheiekhHMS.Infrastructure.Persistence",
+      "file": "ElsheiekhHMS.Infrastructure/Persistence/ElsheiekhHmsDbContext.cs",
+      "source_file": "ElsheiekhHMS.Infrastructure/Persistence/ElsheiekhHmsDbContext.cs",
+      "source_location": "L9",
+      "line": 9,
+      "accessibility": "public",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 2,
+      "community_name": "ElsheiekhHMS.Infrastructure",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Tests.Integration.Persistence.ElsheiekhHmsDbContextSqlServerTests",
+      "name": "ElsheiekhHmsDbContextSqlServerTests",
+      "label": "ElsheiekhHmsDbContextSqlServerTests",
+      "kind": "class",
+      "type": "class",
+      "fullName": "ElsheiekhHMS.Tests.Integration.Persistence.ElsheiekhHmsDbContextSqlServerTests",
+      "project": "ElsheiekhHMS.Tests",
+      "namespace": "ElsheiekhHMS.Tests.Integration.Persistence",
+      "file": "ElsheiekhHMS.Tests/Integration/Persistence/ElsheiekhHmsDbContextSqlServerTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Integration/Persistence/ElsheiekhHmsDbContextSqlServerTests.cs",
+      "source_location": "L12",
+      "line": 12,
+      "accessibility": "public",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Tests.Integration.Persistence.SqlServerPersistenceCollection",
+      "name": "SqlServerPersistenceCollection",
+      "label": "SqlServerPersistenceCollection",
+      "kind": "class",
+      "type": "class",
+      "fullName": "ElsheiekhHMS.Tests.Integration.Persistence.SqlServerPersistenceCollection",
+      "project": "ElsheiekhHMS.Tests",
+      "namespace": "ElsheiekhHMS.Tests.Integration.Persistence",
+      "file": "ElsheiekhHMS.Tests/Integration/Persistence/SqlServerTestDatabaseFixture.cs",
+      "source_file": "ElsheiekhHMS.Tests/Integration/Persistence/SqlServerTestDatabaseFixture.cs",
+      "source_location": "L6",
+      "line": 6,
+      "accessibility": "public",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Tests.Integration.Persistence.SqlServerTestDatabaseFixture",
+      "name": "SqlServerTestDatabaseFixture",
+      "label": "SqlServerTestDatabaseFixture",
+      "kind": "class",
+      "type": "class",
+      "fullName": "ElsheiekhHMS.Tests.Integration.Persistence.SqlServerTestDatabaseFixture",
+      "project": "ElsheiekhHMS.Tests",
+      "namespace": "ElsheiekhHMS.Tests.Integration.Persistence",
+      "file": "ElsheiekhHMS.Tests/Integration/Persistence/SqlServerTestDatabaseFixture.cs",
+      "source_file": "ElsheiekhHMS.Tests/Integration/Persistence/SqlServerTestDatabaseFixture.cs",
+      "source_location": "L10",
+      "line": 10,
+      "accessibility": "public",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Tests.Integration.Persistence.SqlServerTestDatabaseGuard",
+      "name": "SqlServerTestDatabaseGuard",
+      "label": "SqlServerTestDatabaseGuard",
+      "kind": "class",
+      "type": "class",
+      "fullName": "ElsheiekhHMS.Tests.Integration.Persistence.SqlServerTestDatabaseGuard",
+      "project": "ElsheiekhHMS.Tests",
+      "namespace": "ElsheiekhHMS.Tests.Integration.Persistence",
+      "file": "ElsheiekhHMS.Tests/Integration/Persistence/SqlServerTestDatabaseGuard.cs",
+      "source_file": "ElsheiekhHMS.Tests/Integration/Persistence/SqlServerTestDatabaseGuard.cs",
+      "source_location": "L3",
+      "line": 3,
+      "accessibility": "internal",
+      "abstract": false,
+      "sealed": false,
+      "static": true,
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Tests.Integration.Persistence.SqlServerTestDatabaseSafetyTests",
+      "name": "SqlServerTestDatabaseSafetyTests",
+      "label": "SqlServerTestDatabaseSafetyTests",
+      "kind": "class",
+      "type": "class",
+      "fullName": "ElsheiekhHMS.Tests.Integration.Persistence.SqlServerTestDatabaseSafetyTests",
+      "project": "ElsheiekhHMS.Tests",
+      "namespace": "ElsheiekhHMS.Tests.Integration.Persistence",
+      "file": "ElsheiekhHMS.Tests/Integration/Persistence/SqlServerTestDatabaseSafetyTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Integration/Persistence/SqlServerTestDatabaseSafetyTests.cs",
+      "source_location": "L3",
+      "line": 3,
+      "accessibility": "public",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
       "testMethods": [],
       "staticTestCases": 0,
       "dynamicTheories": 0
@@ -2369,6 +3137,114 @@
       "dynamicTheories": 0
     },
     {
+      "id": "type:ElsheiekhHMS.Tests.Unit.Infrastructure.ElsheiekhHmsDbContextModelTests",
+      "name": "ElsheiekhHmsDbContextModelTests",
+      "label": "ElsheiekhHmsDbContextModelTests",
+      "kind": "class",
+      "type": "class",
+      "fullName": "ElsheiekhHMS.Tests.Unit.Infrastructure.ElsheiekhHmsDbContextModelTests",
+      "project": "ElsheiekhHMS.Tests",
+      "namespace": "ElsheiekhHMS.Tests.Unit.Infrastructure",
+      "file": "ElsheiekhHMS.Tests/Unit/Infrastructure/ElsheiekhHmsDbContextModelTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Unit/Infrastructure/ElsheiekhHmsDbContextModelTests.cs",
+      "source_location": "L12",
+      "line": 12,
+      "accessibility": "public",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Tests.Unit.Infrastructure.ElsheiekhHmsDbContextTests",
+      "name": "ElsheiekhHmsDbContextTests",
+      "label": "ElsheiekhHmsDbContextTests",
+      "kind": "class",
+      "type": "class",
+      "fullName": "ElsheiekhHMS.Tests.Unit.Infrastructure.ElsheiekhHmsDbContextTests",
+      "project": "ElsheiekhHMS.Tests",
+      "namespace": "ElsheiekhHMS.Tests.Unit.Infrastructure",
+      "file": "ElsheiekhHMS.Tests/Unit/Infrastructure/ElsheiekhHmsDbContextTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Unit/Infrastructure/ElsheiekhHmsDbContextTests.cs",
+      "source_location": "L10",
+      "line": 10,
+      "accessibility": "public",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:Microsoft.EntityFrameworkCore.DbContext",
+      "name": "DbContext",
+      "label": "DbContext",
+      "kind": "class",
+      "type": "class",
+      "fullName": "Microsoft.EntityFrameworkCore.DbContext",
+      "namespace": "Microsoft.EntityFrameworkCore",
+      "external": true,
+      "community": -1,
+      "community_name": "Solution / external",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:Microsoft.EntityFrameworkCore.IEntityTypeConfiguration\u003CTEntity\u003E",
+      "name": "IEntityTypeConfiguration",
+      "label": "IEntityTypeConfiguration",
+      "kind": "interface",
+      "type": "interface",
+      "fullName": "Microsoft.EntityFrameworkCore.IEntityTypeConfiguration\u003CElsheiekhHMS.Core.Domain.Scheduling.Entities.Appointment\u003E",
+      "namespace": "Microsoft.EntityFrameworkCore",
+      "external": true,
+      "community": -1,
+      "community_name": "Solution / external",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:Microsoft.EntityFrameworkCore.Infrastructure.ModelSnapshot",
+      "name": "ModelSnapshot",
+      "label": "ModelSnapshot",
+      "kind": "class",
+      "type": "class",
+      "fullName": "Microsoft.EntityFrameworkCore.Infrastructure.ModelSnapshot",
+      "namespace": "Microsoft.EntityFrameworkCore.Infrastructure",
+      "external": true,
+      "community": -1,
+      "community_name": "Solution / external",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:Microsoft.EntityFrameworkCore.Migrations.Migration",
+      "name": "Migration",
+      "label": "Migration",
+      "kind": "class",
+      "type": "class",
+      "fullName": "Microsoft.EntityFrameworkCore.Migrations.Migration",
+      "namespace": "Microsoft.EntityFrameworkCore.Migrations",
+      "external": true,
+      "community": -1,
+      "community_name": "Solution / external",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
       "id": "type:System.Exception",
       "name": "Exception",
       "label": "Exception",
@@ -2575,10 +3451,145 @@
       "weight": 1
     },
     {
+      "source": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Configurations/Entities/AppointmentConfiguration.cs",
+      "target": "type:ElsheiekhHMS.Infrastructure.Configurations.Entities.AppointmentConfiguration",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Infrastructure/Configurations/Entities/AppointmentConfiguration.cs:L10",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Configurations/Entities/DepartmentConfiguration.cs",
+      "target": "type:ElsheiekhHMS.Infrastructure.Configurations.Entities.DepartmentConfiguration",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Infrastructure/Configurations/Entities/DepartmentConfiguration.cs:L9",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Configurations/Entities/DoctorConfiguration.cs",
+      "target": "type:ElsheiekhHMS.Infrastructure.Configurations.Entities.DoctorConfiguration",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Infrastructure/Configurations/Entities/DoctorConfiguration.cs:L9",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Configurations/Entities/DoctorScheduleConfiguration.cs",
+      "target": "type:ElsheiekhHMS.Infrastructure.Configurations.Entities.DoctorScheduleConfiguration",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Infrastructure/Configurations/Entities/DoctorScheduleConfiguration.cs:L7",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Configurations/Entities/PatientConfiguration.cs",
+      "target": "type:ElsheiekhHMS.Infrastructure.Configurations.Entities.PatientConfiguration",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Infrastructure/Configurations/Entities/PatientConfiguration.cs:L8",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Configurations/Entities/WalkInQueueEntryConfiguration.cs",
+      "target": "type:ElsheiekhHMS.Infrastructure.Configurations.Entities.WalkInQueueEntryConfiguration",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Infrastructure/Configurations/Entities/WalkInQueueEntryConfiguration.cs:L10",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
       "source": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs",
       "target": "type:ElsheiekhHMS.Infrastructure.InfrastructureServiceExtensions",
       "type": "declares",
-      "evidence": "ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs:L14",
+      "evidence": "ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs:L16",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Migrations/20260921111137_InitialCreate.Designer.cs",
+      "target": "type:ElsheiekhHMS.Infrastructure.Migrations.InitialCreate",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Infrastructure/Migrations/20260921111137_InitialCreate.Designer.cs:L9",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Migrations/20260921111137_InitialCreate.cs",
+      "target": "type:ElsheiekhHMS.Infrastructure.Migrations.InitialCreate",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Infrastructure/Migrations/20260921111137_InitialCreate.cs:L9",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Migrations/ElsheiekhHmsDbContextModelSnapshot.cs",
+      "target": "type:ElsheiekhHMS.Infrastructure.Migrations.ElsheiekhHmsDbContextModelSnapshot",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Infrastructure/Migrations/ElsheiekhHmsDbContextModelSnapshot.cs:L13",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Persistence/ElsheiekhHmsDbContext.cs",
+      "target": "type:ElsheiekhHMS.Infrastructure.Persistence.ElsheiekhHmsDbContext",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Infrastructure/Persistence/ElsheiekhHmsDbContext.cs:L9",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/ElsheiekhHmsDbContextSqlServerTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.ElsheiekhHmsDbContextSqlServerTests",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/ElsheiekhHmsDbContextSqlServerTests.cs:L12",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/SqlServerTestDatabaseFixture.cs",
+      "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.SqlServerPersistenceCollection",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/SqlServerTestDatabaseFixture.cs:L6",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/SqlServerTestDatabaseFixture.cs",
+      "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.SqlServerTestDatabaseFixture",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/SqlServerTestDatabaseFixture.cs:L10",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/SqlServerTestDatabaseGuard.cs",
+      "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.SqlServerTestDatabaseGuard",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/SqlServerTestDatabaseGuard.cs:L3",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/SqlServerTestDatabaseSafetyTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.SqlServerTestDatabaseSafetyTests",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/SqlServerTestDatabaseSafetyTests.cs:L3",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -2696,6 +3707,24 @@
       "target": "type:ElsheiekhHMS.Tests.Unit.Domain.Staff.DoctorTests",
       "type": "declares",
       "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Staff/DoctorTests.cs:L8",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Infrastructure/ElsheiekhHmsDbContextModelTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Infrastructure.ElsheiekhHmsDbContextModelTests",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Infrastructure/ElsheiekhHmsDbContextModelTests.cs:L12",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Infrastructure/ElsheiekhHmsDbContextTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Infrastructure.ElsheiekhHmsDbContextTests",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Infrastructure/ElsheiekhHmsDbContextTests.cs:L10",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -2999,7 +4028,97 @@
     },
     {
       "source": "project:ElsheiekhHMS.Infrastructure",
+      "target": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Configurations/Entities/AppointmentConfiguration.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Infrastructure/ElsheiekhHMS.Infrastructure.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Infrastructure",
+      "target": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Configurations/Entities/DepartmentConfiguration.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Infrastructure/ElsheiekhHMS.Infrastructure.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Infrastructure",
+      "target": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Configurations/Entities/DoctorConfiguration.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Infrastructure/ElsheiekhHMS.Infrastructure.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Infrastructure",
+      "target": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Configurations/Entities/DoctorScheduleConfiguration.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Infrastructure/ElsheiekhHMS.Infrastructure.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Infrastructure",
+      "target": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Configurations/Entities/PatientConfiguration.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Infrastructure/ElsheiekhHMS.Infrastructure.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Infrastructure",
+      "target": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Configurations/Entities/WalkInQueueEntryConfiguration.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Infrastructure/ElsheiekhHMS.Infrastructure.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Infrastructure",
       "target": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Infrastructure/ElsheiekhHMS.Infrastructure.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Infrastructure",
+      "target": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Migrations/20260921111137_InitialCreate.Designer.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Infrastructure/ElsheiekhHMS.Infrastructure.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Infrastructure",
+      "target": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Migrations/20260921111137_InitialCreate.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Infrastructure/ElsheiekhHMS.Infrastructure.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Infrastructure",
+      "target": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Migrations/ElsheiekhHmsDbContextModelSnapshot.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Infrastructure/ElsheiekhHMS.Infrastructure.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Infrastructure",
+      "target": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Persistence/ElsheiekhHmsDbContext.cs",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Infrastructure/ElsheiekhHMS.Infrastructure.csproj",
       "relation": "contains",
@@ -3011,6 +4130,33 @@
       "target": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Infrastructure",
+      "target": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Configurations.Entities",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Infrastructure/Configurations/Entities/AppointmentConfiguration.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Infrastructure",
+      "target": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Migrations",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Infrastructure/Migrations/20260921111137_InitialCreate.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Infrastructure",
+      "target": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Persistence",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Infrastructure/Persistence/ElsheiekhHmsDbContext.cs",
       "relation": "contains",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -3030,6 +4176,42 @@
       "type": "project-reference",
       "evidence": "ElsheiekhHMS.Infrastructure/ElsheiekhHMS.Infrastructure.csproj",
       "relation": "project-reference",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Tests",
+      "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/ElsheiekhHmsDbContextSqlServerTests.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Tests",
+      "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/SqlServerTestDatabaseFixture.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Tests",
+      "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/SqlServerTestDatabaseGuard.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Tests",
+      "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/SqlServerTestDatabaseSafetyTests.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
+      "relation": "contains",
       "confidence": "EXTRACTED",
       "weight": 1
     },
@@ -3125,6 +4307,33 @@
     },
     {
       "source": "project:ElsheiekhHMS.Tests",
+      "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Infrastructure/ElsheiekhHmsDbContextModelTests.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Tests",
+      "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Infrastructure/ElsheiekhHmsDbContextTests.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Tests",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Integration.Persistence",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/ElsheiekhHmsDbContextSqlServerTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Tests",
       "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Domain.Common",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Common/AuditableEntityTests.cs",
@@ -3173,6 +4382,15 @@
       "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Domain.Staff",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Staff/DoctorScheduleTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Tests",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Infrastructure",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Infrastructure/ElsheiekhHmsDbContextModelTests.cs",
       "relation": "contains",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -3691,10 +4909,217 @@
       "weight": 1
     },
     {
+      "source": "type:ElsheiekhHMS.Infrastructure.Configurations.Entities.AppointmentConfiguration",
+      "target": "type:Microsoft.EntityFrameworkCore.IEntityTypeConfiguration\u003CTEntity\u003E",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Infrastructure/Configurations/Entities/AppointmentConfiguration.cs:L10",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Infrastructure.Configurations.Entities.AppointmentConfiguration",
+      "target": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Configurations.Entities",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Infrastructure/Configurations/Entities/AppointmentConfiguration.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Infrastructure.Configurations.Entities.DepartmentConfiguration",
+      "target": "type:Microsoft.EntityFrameworkCore.IEntityTypeConfiguration\u003CTEntity\u003E",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Infrastructure/Configurations/Entities/DepartmentConfiguration.cs:L9",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Infrastructure.Configurations.Entities.DepartmentConfiguration",
+      "target": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Configurations.Entities",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Infrastructure/Configurations/Entities/DepartmentConfiguration.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Infrastructure.Configurations.Entities.DoctorConfiguration",
+      "target": "type:Microsoft.EntityFrameworkCore.IEntityTypeConfiguration\u003CTEntity\u003E",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Infrastructure/Configurations/Entities/DoctorConfiguration.cs:L9",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Infrastructure.Configurations.Entities.DoctorConfiguration",
+      "target": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Configurations.Entities",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Infrastructure/Configurations/Entities/DoctorConfiguration.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Infrastructure.Configurations.Entities.DoctorScheduleConfiguration",
+      "target": "type:Microsoft.EntityFrameworkCore.IEntityTypeConfiguration\u003CTEntity\u003E",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Infrastructure/Configurations/Entities/DoctorScheduleConfiguration.cs:L7",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Infrastructure.Configurations.Entities.DoctorScheduleConfiguration",
+      "target": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Configurations.Entities",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Infrastructure/Configurations/Entities/DoctorScheduleConfiguration.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Infrastructure.Configurations.Entities.PatientConfiguration",
+      "target": "type:Microsoft.EntityFrameworkCore.IEntityTypeConfiguration\u003CTEntity\u003E",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Infrastructure/Configurations/Entities/PatientConfiguration.cs:L8",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Infrastructure.Configurations.Entities.PatientConfiguration",
+      "target": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Configurations.Entities",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Infrastructure/Configurations/Entities/PatientConfiguration.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Infrastructure.Configurations.Entities.WalkInQueueEntryConfiguration",
+      "target": "type:Microsoft.EntityFrameworkCore.IEntityTypeConfiguration\u003CTEntity\u003E",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Infrastructure/Configurations/Entities/WalkInQueueEntryConfiguration.cs:L10",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Infrastructure.Configurations.Entities.WalkInQueueEntryConfiguration",
+      "target": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Configurations.Entities",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Infrastructure/Configurations/Entities/WalkInQueueEntryConfiguration.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
       "source": "type:ElsheiekhHMS.Infrastructure.InfrastructureServiceExtensions",
       "target": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure",
       "type": "namespace-membership",
       "evidence": "ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Infrastructure.Migrations.ElsheiekhHmsDbContextModelSnapshot",
+      "target": "type:Microsoft.EntityFrameworkCore.Infrastructure.ModelSnapshot",
+      "type": "inherits",
+      "evidence": "ElsheiekhHMS.Infrastructure/Migrations/ElsheiekhHmsDbContextModelSnapshot.cs:L13",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Infrastructure.Migrations.ElsheiekhHmsDbContextModelSnapshot",
+      "target": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Migrations",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Infrastructure/Migrations/ElsheiekhHmsDbContextModelSnapshot.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Infrastructure.Migrations.InitialCreate",
+      "target": "type:Microsoft.EntityFrameworkCore.Migrations.Migration",
+      "type": "inherits",
+      "evidence": "ElsheiekhHMS.Infrastructure/Migrations/20260921111137_InitialCreate.cs:L9",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Infrastructure.Migrations.InitialCreate",
+      "target": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Migrations",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Infrastructure/Migrations/20260921111137_InitialCreate.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Infrastructure.Persistence.ElsheiekhHmsDbContext",
+      "target": "type:Microsoft.EntityFrameworkCore.DbContext",
+      "type": "inherits",
+      "evidence": "ElsheiekhHMS.Infrastructure/Persistence/ElsheiekhHmsDbContext.cs:L9",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Infrastructure.Persistence.ElsheiekhHmsDbContext",
+      "target": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Persistence",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Infrastructure/Persistence/ElsheiekhHmsDbContext.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.ElsheiekhHmsDbContextSqlServerTests",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Integration.Persistence",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/ElsheiekhHmsDbContextSqlServerTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.SqlServerPersistenceCollection",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Integration.Persistence",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/SqlServerTestDatabaseFixture.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.SqlServerTestDatabaseFixture",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Integration.Persistence",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/SqlServerTestDatabaseFixture.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.SqlServerTestDatabaseGuard",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Integration.Persistence",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/SqlServerTestDatabaseGuard.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.SqlServerTestDatabaseSafetyTests",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Integration.Persistence",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/SqlServerTestDatabaseSafetyTests.cs",
       "relation": "namespace-membership",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -4238,6 +5663,24 @@
       "relation": "test-target",
       "confidence": "EXTRACTED",
       "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Infrastructure.ElsheiekhHmsDbContextModelTests",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Infrastructure",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Infrastructure/ElsheiekhHmsDbContextModelTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Infrastructure.ElsheiekhHmsDbContextTests",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Infrastructure",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Infrastructure/ElsheiekhHmsDbContextTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
     }
   ],
   "architecture": {
@@ -4256,8 +5699,8 @@
       "ruleSource": "Documented HMS layer policy; observed edges extracted separately"
     },
     "packageChecks": {
-      "efCorePresent": false,
-      "sqlServerPresent": false,
+      "efCorePresent": true,
+      "sqlServerPresent": true,
       "identityPackagePresent": false
     },
     "identitySourceReferences": [],
@@ -4265,7 +5708,7 @@
       "statusSource": "README.md declaration, not independently certified completion",
       "declaredStatus": [
         {
-          "text": "\u003E **Current development stage:** Phase 03 \u2014 Domain Entities (complete)",
+          "text": "\u003E **Current development stage:** Phase 04 \u2014 EF Core \u0026 Database (complete)",
           "source": "README.md:L5"
         },
         {
@@ -4285,40 +5728,72 @@
           "source": "README.md:L13"
         },
         {
+          "text": "\u003E **Phase 04A:** \u2705 EF Core foundation implemented and verified",
+          "source": "README.md:L15"
+        },
+        {
+          "text": "\u003E **Phase 04B:** \u2705 Entity Fluent mappings implemented and verified",
+          "source": "README.md:L17"
+        },
+        {
+          "text": "\u003E **Phase 04C:** \u2705 Relationships, filters, indexes, constraints, and concurrency metadata implemented and verified",
+          "source": "README.md:L19"
+        },
+        {
+          "text": "\u003E **Phase 04D-A:** \u2705 SQL Server environment readiness verified",
+          "source": "README.md:L21"
+        },
+        {
+          "text": "\u003E **Phase 04D-B0:** \u2705 EF design-time tooling verified",
+          "source": "README.md:L23"
+        },
+        {
+          "text": "\u003E **Phase 04D-B:** \u2705 Initial migration generated and inspected; database not created or updated",
+          "source": "README.md:L25"
+        },
+        {
+          "text": "\u003E **Phase 04D-C:** \u2705 Initial migration applied and local SQL Server schema verified",
+          "source": "README.md:L27"
+        },
+        {
+          "text": "\u003E **Phase 04E:** \u2705 Persistence integration tests implemented and verified",
+          "source": "README.md:L29"
+        },
+        {
           "text": "| 01 | Solution \u0026 Architecture | \u2705 Complete |",
-          "source": "README.md:L332"
+          "source": "README.md:L346"
         },
         {
           "text": "| 02 | Core Foundation | \u2705 Complete |",
-          "source": "README.md:L333"
+          "source": "README.md:L347"
         },
         {
           "text": "| 03 | Domain Entities | \u2705 Complete |",
-          "source": "README.md:L334"
+          "source": "README.md:L348"
         },
         {
-          "text": "| 04 | EF Core \u0026 Database | \u23F3 Not started |",
-          "source": "README.md:L335"
+          "text": "| 04 | EF Core \u0026 Database | \u2705 Complete |",
+          "source": "README.md:L349"
         },
         {
           "text": "| 05 | Identity \u0026 Security | \u23F3 Not started |",
-          "source": "README.md:L336"
+          "source": "README.md:L350"
         },
         {
           "text": "| 06 | DTOs \u0026 Validation | \u23F3 Not started |",
-          "source": "README.md:L337"
+          "source": "README.md:L351"
         },
         {
           "text": "| 07 | Application Services | \u23F3 Not started |",
-          "source": "README.md:L338"
+          "source": "README.md:L352"
         },
         {
           "text": "| 08 | Business Workflows | \u23F3 Not started |",
-          "source": "README.md:L339"
+          "source": "README.md:L353"
         },
         {
           "text": "| 09 | Enterprise Infrastructure | \u23F3 Not started |",
-          "source": "README.md:L340"
+          "source": "README.md:L354"
         }
       ]
     }
@@ -4333,7 +5808,10 @@
       "Package list is evaluated direct PackageReference only; transitive and SDK auto-references are not claimed as installed direct packages.",
       "Architecture checks are structural observations, not a full semantic security or dependency audit."
     ],
-    "warnings": [],
+    "warnings": [
+      "Unresolved base omitted: ElsheiekhHMS.Tests.Integration.Persistence.SqlServerPersistenceCollection : ICollectionFixture\u003CElsheiekhHMS.Tests.Integration.Persistence.SqlServerTestDatabaseFixture\u003E",
+      "Unresolved base omitted: ElsheiekhHMS.Tests.Integration.Persistence.SqlServerTestDatabaseFixture : IAsyncLifetime"
+    ],
     "llmApiCalls": 0,
     "llmTokens": 0
   },
@@ -4534,10 +6012,145 @@
       "weight": 1
     },
     {
+      "source": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Configurations/Entities/AppointmentConfiguration.cs",
+      "target": "type:ElsheiekhHMS.Infrastructure.Configurations.Entities.AppointmentConfiguration",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Infrastructure/Configurations/Entities/AppointmentConfiguration.cs:L10",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Configurations/Entities/DepartmentConfiguration.cs",
+      "target": "type:ElsheiekhHMS.Infrastructure.Configurations.Entities.DepartmentConfiguration",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Infrastructure/Configurations/Entities/DepartmentConfiguration.cs:L9",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Configurations/Entities/DoctorConfiguration.cs",
+      "target": "type:ElsheiekhHMS.Infrastructure.Configurations.Entities.DoctorConfiguration",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Infrastructure/Configurations/Entities/DoctorConfiguration.cs:L9",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Configurations/Entities/DoctorScheduleConfiguration.cs",
+      "target": "type:ElsheiekhHMS.Infrastructure.Configurations.Entities.DoctorScheduleConfiguration",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Infrastructure/Configurations/Entities/DoctorScheduleConfiguration.cs:L7",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Configurations/Entities/PatientConfiguration.cs",
+      "target": "type:ElsheiekhHMS.Infrastructure.Configurations.Entities.PatientConfiguration",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Infrastructure/Configurations/Entities/PatientConfiguration.cs:L8",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Configurations/Entities/WalkInQueueEntryConfiguration.cs",
+      "target": "type:ElsheiekhHMS.Infrastructure.Configurations.Entities.WalkInQueueEntryConfiguration",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Infrastructure/Configurations/Entities/WalkInQueueEntryConfiguration.cs:L10",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
       "source": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs",
       "target": "type:ElsheiekhHMS.Infrastructure.InfrastructureServiceExtensions",
       "type": "declares",
-      "evidence": "ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs:L14",
+      "evidence": "ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs:L16",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Migrations/20260921111137_InitialCreate.Designer.cs",
+      "target": "type:ElsheiekhHMS.Infrastructure.Migrations.InitialCreate",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Infrastructure/Migrations/20260921111137_InitialCreate.Designer.cs:L9",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Migrations/20260921111137_InitialCreate.cs",
+      "target": "type:ElsheiekhHMS.Infrastructure.Migrations.InitialCreate",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Infrastructure/Migrations/20260921111137_InitialCreate.cs:L9",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Migrations/ElsheiekhHmsDbContextModelSnapshot.cs",
+      "target": "type:ElsheiekhHMS.Infrastructure.Migrations.ElsheiekhHmsDbContextModelSnapshot",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Infrastructure/Migrations/ElsheiekhHmsDbContextModelSnapshot.cs:L13",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Persistence/ElsheiekhHmsDbContext.cs",
+      "target": "type:ElsheiekhHMS.Infrastructure.Persistence.ElsheiekhHmsDbContext",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Infrastructure/Persistence/ElsheiekhHmsDbContext.cs:L9",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/ElsheiekhHmsDbContextSqlServerTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.ElsheiekhHmsDbContextSqlServerTests",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/ElsheiekhHmsDbContextSqlServerTests.cs:L12",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/SqlServerTestDatabaseFixture.cs",
+      "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.SqlServerPersistenceCollection",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/SqlServerTestDatabaseFixture.cs:L6",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/SqlServerTestDatabaseFixture.cs",
+      "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.SqlServerTestDatabaseFixture",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/SqlServerTestDatabaseFixture.cs:L10",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/SqlServerTestDatabaseGuard.cs",
+      "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.SqlServerTestDatabaseGuard",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/SqlServerTestDatabaseGuard.cs:L3",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/SqlServerTestDatabaseSafetyTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.SqlServerTestDatabaseSafetyTests",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/SqlServerTestDatabaseSafetyTests.cs:L3",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -4655,6 +6268,24 @@
       "target": "type:ElsheiekhHMS.Tests.Unit.Domain.Staff.DoctorTests",
       "type": "declares",
       "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Staff/DoctorTests.cs:L8",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Infrastructure/ElsheiekhHmsDbContextModelTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Infrastructure.ElsheiekhHmsDbContextModelTests",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Infrastructure/ElsheiekhHmsDbContextModelTests.cs:L12",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Infrastructure/ElsheiekhHmsDbContextTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Infrastructure.ElsheiekhHmsDbContextTests",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Infrastructure/ElsheiekhHmsDbContextTests.cs:L10",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -4958,7 +6589,97 @@
     },
     {
       "source": "project:ElsheiekhHMS.Infrastructure",
+      "target": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Configurations/Entities/AppointmentConfiguration.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Infrastructure/ElsheiekhHMS.Infrastructure.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Infrastructure",
+      "target": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Configurations/Entities/DepartmentConfiguration.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Infrastructure/ElsheiekhHMS.Infrastructure.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Infrastructure",
+      "target": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Configurations/Entities/DoctorConfiguration.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Infrastructure/ElsheiekhHMS.Infrastructure.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Infrastructure",
+      "target": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Configurations/Entities/DoctorScheduleConfiguration.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Infrastructure/ElsheiekhHMS.Infrastructure.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Infrastructure",
+      "target": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Configurations/Entities/PatientConfiguration.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Infrastructure/ElsheiekhHMS.Infrastructure.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Infrastructure",
+      "target": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Configurations/Entities/WalkInQueueEntryConfiguration.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Infrastructure/ElsheiekhHMS.Infrastructure.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Infrastructure",
       "target": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Infrastructure/ElsheiekhHMS.Infrastructure.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Infrastructure",
+      "target": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Migrations/20260921111137_InitialCreate.Designer.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Infrastructure/ElsheiekhHMS.Infrastructure.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Infrastructure",
+      "target": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Migrations/20260921111137_InitialCreate.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Infrastructure/ElsheiekhHMS.Infrastructure.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Infrastructure",
+      "target": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Migrations/ElsheiekhHmsDbContextModelSnapshot.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Infrastructure/ElsheiekhHMS.Infrastructure.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Infrastructure",
+      "target": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Persistence/ElsheiekhHmsDbContext.cs",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Infrastructure/ElsheiekhHMS.Infrastructure.csproj",
       "relation": "contains",
@@ -4970,6 +6691,33 @@
       "target": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Infrastructure",
+      "target": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Configurations.Entities",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Infrastructure/Configurations/Entities/AppointmentConfiguration.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Infrastructure",
+      "target": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Migrations",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Infrastructure/Migrations/20260921111137_InitialCreate.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Infrastructure",
+      "target": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Persistence",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Infrastructure/Persistence/ElsheiekhHmsDbContext.cs",
       "relation": "contains",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -4989,6 +6737,42 @@
       "type": "project-reference",
       "evidence": "ElsheiekhHMS.Infrastructure/ElsheiekhHMS.Infrastructure.csproj",
       "relation": "project-reference",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Tests",
+      "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/ElsheiekhHmsDbContextSqlServerTests.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Tests",
+      "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/SqlServerTestDatabaseFixture.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Tests",
+      "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/SqlServerTestDatabaseGuard.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Tests",
+      "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/SqlServerTestDatabaseSafetyTests.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
+      "relation": "contains",
       "confidence": "EXTRACTED",
       "weight": 1
     },
@@ -5084,6 +6868,33 @@
     },
     {
       "source": "project:ElsheiekhHMS.Tests",
+      "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Infrastructure/ElsheiekhHmsDbContextModelTests.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Tests",
+      "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Infrastructure/ElsheiekhHmsDbContextTests.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Tests",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Integration.Persistence",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/ElsheiekhHmsDbContextSqlServerTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Tests",
       "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Domain.Common",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Common/AuditableEntityTests.cs",
@@ -5132,6 +6943,15 @@
       "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Domain.Staff",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Staff/DoctorScheduleTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Tests",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Infrastructure",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Infrastructure/ElsheiekhHmsDbContextModelTests.cs",
       "relation": "contains",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -5650,10 +7470,217 @@
       "weight": 1
     },
     {
+      "source": "type:ElsheiekhHMS.Infrastructure.Configurations.Entities.AppointmentConfiguration",
+      "target": "type:Microsoft.EntityFrameworkCore.IEntityTypeConfiguration\u003CTEntity\u003E",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Infrastructure/Configurations/Entities/AppointmentConfiguration.cs:L10",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Infrastructure.Configurations.Entities.AppointmentConfiguration",
+      "target": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Configurations.Entities",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Infrastructure/Configurations/Entities/AppointmentConfiguration.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Infrastructure.Configurations.Entities.DepartmentConfiguration",
+      "target": "type:Microsoft.EntityFrameworkCore.IEntityTypeConfiguration\u003CTEntity\u003E",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Infrastructure/Configurations/Entities/DepartmentConfiguration.cs:L9",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Infrastructure.Configurations.Entities.DepartmentConfiguration",
+      "target": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Configurations.Entities",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Infrastructure/Configurations/Entities/DepartmentConfiguration.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Infrastructure.Configurations.Entities.DoctorConfiguration",
+      "target": "type:Microsoft.EntityFrameworkCore.IEntityTypeConfiguration\u003CTEntity\u003E",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Infrastructure/Configurations/Entities/DoctorConfiguration.cs:L9",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Infrastructure.Configurations.Entities.DoctorConfiguration",
+      "target": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Configurations.Entities",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Infrastructure/Configurations/Entities/DoctorConfiguration.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Infrastructure.Configurations.Entities.DoctorScheduleConfiguration",
+      "target": "type:Microsoft.EntityFrameworkCore.IEntityTypeConfiguration\u003CTEntity\u003E",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Infrastructure/Configurations/Entities/DoctorScheduleConfiguration.cs:L7",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Infrastructure.Configurations.Entities.DoctorScheduleConfiguration",
+      "target": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Configurations.Entities",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Infrastructure/Configurations/Entities/DoctorScheduleConfiguration.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Infrastructure.Configurations.Entities.PatientConfiguration",
+      "target": "type:Microsoft.EntityFrameworkCore.IEntityTypeConfiguration\u003CTEntity\u003E",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Infrastructure/Configurations/Entities/PatientConfiguration.cs:L8",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Infrastructure.Configurations.Entities.PatientConfiguration",
+      "target": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Configurations.Entities",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Infrastructure/Configurations/Entities/PatientConfiguration.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Infrastructure.Configurations.Entities.WalkInQueueEntryConfiguration",
+      "target": "type:Microsoft.EntityFrameworkCore.IEntityTypeConfiguration\u003CTEntity\u003E",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Infrastructure/Configurations/Entities/WalkInQueueEntryConfiguration.cs:L10",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Infrastructure.Configurations.Entities.WalkInQueueEntryConfiguration",
+      "target": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Configurations.Entities",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Infrastructure/Configurations/Entities/WalkInQueueEntryConfiguration.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
       "source": "type:ElsheiekhHMS.Infrastructure.InfrastructureServiceExtensions",
       "target": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure",
       "type": "namespace-membership",
       "evidence": "ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Infrastructure.Migrations.ElsheiekhHmsDbContextModelSnapshot",
+      "target": "type:Microsoft.EntityFrameworkCore.Infrastructure.ModelSnapshot",
+      "type": "inherits",
+      "evidence": "ElsheiekhHMS.Infrastructure/Migrations/ElsheiekhHmsDbContextModelSnapshot.cs:L13",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Infrastructure.Migrations.ElsheiekhHmsDbContextModelSnapshot",
+      "target": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Migrations",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Infrastructure/Migrations/ElsheiekhHmsDbContextModelSnapshot.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Infrastructure.Migrations.InitialCreate",
+      "target": "type:Microsoft.EntityFrameworkCore.Migrations.Migration",
+      "type": "inherits",
+      "evidence": "ElsheiekhHMS.Infrastructure/Migrations/20260921111137_InitialCreate.cs:L9",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Infrastructure.Migrations.InitialCreate",
+      "target": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Migrations",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Infrastructure/Migrations/20260921111137_InitialCreate.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Infrastructure.Persistence.ElsheiekhHmsDbContext",
+      "target": "type:Microsoft.EntityFrameworkCore.DbContext",
+      "type": "inherits",
+      "evidence": "ElsheiekhHMS.Infrastructure/Persistence/ElsheiekhHmsDbContext.cs:L9",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Infrastructure.Persistence.ElsheiekhHmsDbContext",
+      "target": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Persistence",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Infrastructure/Persistence/ElsheiekhHmsDbContext.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.ElsheiekhHmsDbContextSqlServerTests",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Integration.Persistence",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/ElsheiekhHmsDbContextSqlServerTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.SqlServerPersistenceCollection",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Integration.Persistence",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/SqlServerTestDatabaseFixture.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.SqlServerTestDatabaseFixture",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Integration.Persistence",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/SqlServerTestDatabaseFixture.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.SqlServerTestDatabaseGuard",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Integration.Persistence",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/SqlServerTestDatabaseGuard.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.SqlServerTestDatabaseSafetyTests",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Integration.Persistence",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/SqlServerTestDatabaseSafetyTests.cs",
       "relation": "namespace-membership",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -6195,6 +8222,24 @@
       "type": "test-target",
       "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Staff/DoctorTests.cs (Roslyn-bound type/member use or base of test helper)",
       "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Infrastructure.ElsheiekhHmsDbContextModelTests",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Infrastructure",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Infrastructure/ElsheiekhHmsDbContextModelTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Infrastructure.ElsheiekhHmsDbContextTests",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Infrastructure",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Infrastructure/ElsheiekhHmsDbContextTests.cs",
+      "relation": "namespace-membership",
       "confidence": "EXTRACTED",
       "weight": 1
     }

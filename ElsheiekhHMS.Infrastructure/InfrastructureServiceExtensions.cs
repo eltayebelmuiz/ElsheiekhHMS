@@ -1,3 +1,5 @@
+using ElsheiekhHMS.Infrastructure.Persistence;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 
@@ -17,8 +19,12 @@ public static class InfrastructureServiceExtensions
         this IServiceCollection services,
         IConfiguration configuration)
     {
-        // Phase 04 onwards: register DbContext, Identity, repositories
-        // e.g. services.AddDbContext<ApplicationDbContext>(...);
+        var connectionString = configuration.GetConnectionString("ElsheiekhHmsDatabase")
+            ?? throw new InvalidOperationException(
+                "Connection string 'ElsheiekhHmsDatabase' is required.");
+
+        services.AddDbContext<ElsheiekhHmsDbContext>(options =>
+            options.UseSqlServer(connectionString));
 
         return services;
     }

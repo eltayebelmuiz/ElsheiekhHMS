@@ -7,6 +7,17 @@ namespace ElsheiekhHMS.Core.Domain.Patients.Entities;
 
 public sealed class Patient : SoftDeletableEntity, IHasConcurrencyToken
 {
+    // EF materializes persisted values after invoking this constructor. Normal
+    // domain creation continues through the validated public constructor below.
+    private Patient()
+    {
+        PatientCode = null!;
+        FirstName = null!;
+        LastName = null!;
+        Phone = null!;
+        Address = null!;
+    }
+
     public Patient(
         string patientCode, string firstName, string? middleName, string? thirdName,
         string lastName, DateOnly dateOfBirth, Gender gender, BloodGroup? bloodGroup,

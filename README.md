@@ -2,7 +2,7 @@
 
 Enterprise Hospital Management System built with **.NET 10, ASP.NET Core, Blazor, Entity Framework Core, SQL Server, and ASP.NET Core Identity**.
 
-> **Current development stage:** Phase 03 — Domain Entities (complete)
+> **Current development stage:** Phase 04 — EF Core & Database (complete)
 >
 > **Phase 01:** ✅ Complete
 >
@@ -12,7 +12,23 @@ Enterprise Hospital Management System built with **.NET 10, ASP.NET Core, Blazor
 >
 > **Phase 03D:** ✅ Implemented and verified
 >
-> **Next gate:** Phase 04 design review
+> **Phase 04A:** ✅ EF Core foundation implemented and verified
+>
+> **Phase 04B:** ✅ Entity Fluent mappings implemented and verified
+>
+> **Phase 04C:** ✅ Relationships, filters, indexes, constraints, and concurrency metadata implemented and verified
+>
+> **Phase 04D-A:** ✅ SQL Server environment readiness verified
+>
+> **Phase 04D-B0:** ✅ EF design-time tooling verified
+>
+> **Phase 04D-B:** ✅ Initial migration generated and inspected; database not created or updated
+>
+> **Phase 04D-C:** ✅ Initial migration applied and local SQL Server schema verified
+>
+> **Phase 04E:** ✅ Persistence integration tests implemented and verified
+>
+> **Next gate:** Phase 05 Identity & Security design review
 
 ---
 
@@ -64,9 +80,7 @@ Testing                  xUnit
 Version Control          Git / GitHub
 ```
 
-Some technologies listed above intentionally have **not been installed yet** because development is being completed phase by phase.
-
-For example, EF Core, SQL Server integration, and Identity belong to later phases.
+Some technologies listed above intentionally remain deferred because development is being completed phase by phase. EF Core mappings, the inspected migration, the local development schema, and isolated persistence integration tests are complete through approved Phase 04E; seed/bootstrap decisions and Identity remain later gates.
 
 ---
 
@@ -190,7 +204,7 @@ Infrastructure services
 
 Coordinates application use cases.
 
-Eventually contains:
+Application use-case implementation remains deferred; it will eventually contain:
 
 ```text
 DTOs
@@ -211,12 +225,12 @@ Application depends on Core but does not depend on Web.
 
 Implements technical concerns.
 
-Eventually contains:
+Currently contains the EF Core/SQL Server foundation, entity configurations, and the inspected initial migration; it will eventually contain:
 
 ```text
 EF Core
 SQL Server
-ApplicationDbContext
+ElsheiekhHmsDbContext
 Entity configurations
 Repositories where justified
 Identity
@@ -332,7 +346,7 @@ Do not skip phases without reviewing the architectural impact.
 | 01 | Solution & Architecture | ✅ Complete |
 | 02 | Core Foundation | ✅ Complete |
 | 03 | Domain Entities | ✅ Complete |
-| 04 | EF Core & Database | ⏳ Not started |
+| 04 | EF Core & Database | ✅ Complete |
 | 05 | Identity & Security | ⏳ Not started |
 | 06 | DTOs & Validation | ⏳ Not started |
 | 07 | Application Services | ⏳ Not started |
@@ -492,9 +506,9 @@ This provides a foundation for entities that should be archived rather than phys
 
 Not every entity must automatically inherit this class.
 
-EF Core global query filters have intentionally **not** been implemented yet.
-
-They belong to the database/persistence phase.
+Phase 04C now applies EF Core global query filters to Patient, Appointment, and
+WalkInQueueEntry. Doctor, Department, and DoctorSchedule lifecycle fields remain
+unfiltered; filters are persistence behavior, not domain deletion.
 
 ---
 
@@ -616,17 +630,10 @@ Insurance
 
 ## Phase 04+
 
-No persistence implementation yet:
+Persistence foundation, scalar mappings, approved relational metadata, the inspected migration, the local development schema, and isolated SQL Server integration tests now exist. These remain deferred:
 
 ```text
-ApplicationDbContext
-EF Core
-SQL Server provider
-Entity configurations
-Migrations
 Database seed
-Global query filters
-SQL Server rowversion configuration
 ```
 
 ## Phase 05+
@@ -783,26 +790,26 @@ When opening this repository after a break, read this section first.
 
 ```text
 LAST COMPLETED PHASE:
-Phase 01 — Solution & Architecture
+Phase 04E — Persistence integration test implementation and verification
 
 CURRENT PHASE:
-Phase 02 — Core Foundation
+Phase 05 — Identity & Security (design review only)
 
 CURRENT STATUS:
-Phase 02 setup executed successfully.
-Core foundation files created.
-Build passed.
-Tests passed.
-Architecture guards passed.
+Phase 04A foundation, 04B scalar mappings, 04C relational metadata, 04D-A environment readiness,
+04D-B0 design-time tooling, 04D-B migration generation/inspection, 04D-C local schema verification,
+and 04E isolated SQL Server persistence integration tests are complete.
+The six approved entity configurations, explicit historical-safe relationships, approved indexes/uniqueness,
+soft-delete filters, three opted-in rowversion mappings, and the Infrastructure migration/snapshot are present.
+Full restore, build, and tests passed (187 tests). The integration fixture uses only the exact
+`ElsheiekhHMS_IntegrationTests` LocalDB target and removes it after each run; `ElsheiekhHMS_Dev`
+remains untouched. The migration files were not modified. Repositories, Unit of Work, and Identity have not started.
 
 NEXT ACTION:
-Perform/finalize the Phase 02 architecture audit.
+Review and approve the Phase 05 Identity & Security design.
 
-IF PHASE 02 AUDIT PASSES:
-Create the Phase 02 Git checkpoint.
-
-THEN:
-Begin Phase 03 — Domain Entities.
+DO NOT:
+Do not begin Phase 05 implementation without design approval.
 ```
 
 ---

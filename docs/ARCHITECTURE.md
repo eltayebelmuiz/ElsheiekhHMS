@@ -38,9 +38,9 @@ All five members of [ElsheiekhHMS.slnx](../ElsheiekhHMS.slnx) target `net10.0`.
 |---|---|---|---|
 | Core | Domain foundations and, later, domain behavior | Base classes, concurrency contract, exceptions | None |
 | Application | Use-case contracts and orchestration | `AddApplication()` registration entry point; no service registrations | Core |
-| Infrastructure | Persistence and external technical implementations | `AddInfrastructure(configuration)` entry point; no service registrations | Application, Core |
+| Infrastructure | Persistence and external technical implementations | `ElsheiekhHmsDbContext`, SQL Server registration, 04B scalar Fluent mappings, and 04C relational metadata | Application, Core |
 | Web | ASP.NET Core host, composition root, Blazor presentation | Interactive Server template, startup pipeline, health endpoint | Application, Infrastructure |
-| Tests | Automated verification | Core foundation xUnit tests | Core, Application, Infrastructure |
+| Tests | Automated verification | Core foundation, 04A context-contract, and 04B/04C model-metadata xUnit tests | Core, Application, Infrastructure |
 
 Arrows below mean **direct project references**, not runtime execution:
 
@@ -56,7 +56,7 @@ Tests -------> Core
 
 The table is the exact reference list.
 
-Core has no PackageReference, FrameworkReference, or ProjectReference. Application uses DI abstractions; Infrastructure uses DI and configuration abstractions. Tests use xUnit, its Visual Studio runner, Microsoft.NET.Test.Sdk, and coverlet.collector. No direct EF Core, SQL Server provider, or Identity packages are installed.
+Core has no PackageReference, FrameworkReference, or ProjectReference. Application uses DI abstractions; Infrastructure uses EF Core, the SQL Server provider, DI, and configuration abstractions. Tests use xUnit, its Visual Studio runner, Microsoft.NET.Test.Sdk, and coverlet.collector. Identity packages are not installed.
 
 Forbidden directions include Core to any outer layer, Application to Infrastructure/Web, Infrastructure to Web, and production projects to Tests. Web has no direct Core project reference. Core must not depend on Blazor, EF Core, SQL Server implementation, or ASP.NET Core Identity implementation.
 
@@ -74,7 +74,7 @@ Blazor presentation
 
 This is a **planned runtime collaboration**, not a Core-to-Infrastructure project dependency. Application orchestrates domain behavior and technical calls; Core does not invoke an EF implementation. Concrete contracts are introduced with justified use cases.
 
-Currently only the host, layer registration entry points, and Core foundations exist. Application use cases and HMS aggregates are future work; EF Core/SQL Server integration belongs to Phase 04. The frontend interacts with the application and must not become the business layer.
+The host, layer registration entry points, Core foundations, approved Phase 04A–04C EF Core persistence model, inspected Phase 04D-B migration/snapshot, verified Phase 04D-C local SQL Server schema, and Phase 04E isolated persistence integration tests now exist. Application use cases remain future work. The frontend interacts with the application and must not become the business layer.
 
 ## 5. Core foundation
 
@@ -111,7 +111,7 @@ The implemented domain model currently includes the completed Department, Doctor
 
 **Application:** the existing registration method returns the service collection without adding services. DTOs, validation, mapping, queries, pagination, use cases, and workflows are planned responsibilities, primarily Phases 06–08. Business orchestration belongs here; domain invariants belong in Core. No repository or result-wrapper API is established by roadmap examples alone.
 
-**Infrastructure:** its registration method currently adds no services. EF Core and SQL Server persistence are Phase 04; Identity implementation is Phase 05. Storage, in-app notifications, integrations, background processing, and logging integrations are later technical concerns only where product requirements justify them. An example comment mentioning email/SMS is not authorization to add them; PRD excludes external SMS/email delivery from current scope.
+**Infrastructure:** Phase 04A registers `ElsheiekhHmsDbContext` with SQL Server using the `ElsheiekhHmsDatabase` connection key. Phase 04B owns scalar Fluent mappings, Phase 04C owns explicit historical-safe relationships, approved indexes/uniqueness, soft-delete filters, and rowversion metadata for the opted-in entities, Phase 04D-B/04D-C contain the inspected migration and verified local schema, and Phase 04E provides isolated LocalDB persistence integration tests. Repositories and Unit of Work remain deferred to later gates; Identity implementation is Phase 05. Patient retains its validated public creation path plus a private EF-only materialization constructor, with getter-only `PatientCode` mapped through its compiler-generated backing field. Storage, in-app notifications, integrations, background processing, and logging integrations are later technical concerns only where product requirements justify them. An example comment mentioning email/SMS is not authorization to add them; PRD excludes external SMS/email delivery from current scope.
 
 **Web:** [Program.cs](../ElsheiekhHMS.Web/Program.cs) calls both layer registration methods, configures Razor components with Interactive Server support, and maps static assets and `/health`. It configures HTTPS redirection, antiforgery, non-development exception handling/HSTS, and status-code re-execution. It is the composition root.
 
@@ -125,8 +125,10 @@ Future Blazor pages own presentation, navigation, input, and loading/error state
 - `Unit/Domain/Exceptions`: message and inner-exception preservation for the three exception types.
 - `Unit/Domain/Organization`, `Unit/Domain/Patients`, and `Unit/Domain/Staff`: completed 03A–03C domain behavior.
 - `Unit/Domain/Scheduling`: Phase 03D appointment and walk-in queue invariants and lifecycle transitions.
+- `Unit/Infrastructure`: Phase 04A context contract plus 04B/04C EF model metadata, relationship, index, filter, uniqueness, concurrency, and shadow-FK assertions.
+- `Integration/Persistence`: Phase 04E isolated SQL Server migration, materialization, relationship, uniqueness, concurrency, audit, and soft-delete verification.
 
-The current source contains the foundation, completed 03A–03C, and Phase 03D domain test groups. Test counts are reported from actual test runs rather than treated as architecture guarantees.
+The current source contains the foundation, completed 03A–03C, Phase 03D domain test groups, and the Phase 04E persistence integration suite. Test counts are reported from actual test runs rather than treated as architecture guarantees.
 
 Testing evolves with implementation: foundation tests -> domain invariants -> Application services -> persistence/integration -> authorization/security and workflows -> UI/E2E. Earlier tests continue throughout the roadmap; Phase 10 expands and hardens testing rather than introducing xUnit for the first time. No future integration, security, or E2E suite is claimed as present.
 
@@ -151,7 +153,7 @@ The SpecKit constitution requires transactional audit records and backend author
 
 ## 9. Data and security architecture
 
-**Planned persistence:** SQL Server with EF Core, configured in Infrastructure. Phase 04 introduces DbContext, entity configurations (`IEntityTypeConfiguration`), migrations, constraints, indexes, decimal precision, soft-delete query filters, and concurrency mappings where approved. Core entities remain persistence-independent. No database provisioning, migration, repository, Unit of Work, or EF configuration is currently implemented.
+**Persistence status:** SQL Server with EF Core is configured in Infrastructure through the Phase 04A `ElsheiekhHmsDbContext` foundation. Phase 04B provides six entity configurations with scalar/table/key/audit/temporal/enum metadata and the approved Patient materialization accommodation. Phase 04C provides explicit relationships with Restrict delete behavior, approved lookup and uniqueness indexes, soft-delete query filters for Patient/Appointment/WalkInQueueEntry, and rowversion metadata for Patient/Appointment/WalkInQueueEntry. Phase 04D-B generated and inspected the initial migration and model snapshot; Phase 04D-C applied it only to the approved local `MSSQLLocalDB` database `ElsheiekhHMS_Dev` and verified the physical schema, migration history, startup, and health endpoint. Phase 04E verifies the migration and persistence behavior against a separate exact-target LocalDB database, removes that test database after each run, and leaves the development database untouched. Core entities remain persistence-independent apart from the approved private Patient materialization constructor; no repositories or Unit of Work are implemented.
 
 **Planned security:** ASP.NET Core Identity integration starts in Phase 05. Authentication establishes identity; backend roles, permissions, and policies authorize operations. UI indicators improve usability but cannot replace those checks. User identities referenced by Core audit metadata remain opaque strings rather than Identity implementation types. Authentication, permission design, and account lifecycle are not established by the current template.
 

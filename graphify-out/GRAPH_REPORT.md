@@ -2,11 +2,11 @@
 
 ## Snapshot
 
-- **generatedAtUtc:** `2026-09-21T07:46:48.1938707+00:00`
+- **generatedAtUtc:** `2026-09-21T11:53:31.7615920+00:00`
 - **gitBranch:** `main`
-- **gitCommit:** `1e8699cba1f910830a98f9470ebe98246e66edb5`
+- **gitCommit:** `5899d795e05f23d8266d4092df27a8984b18018f`
 - **workingTreeDirty:** `True`
-- **sourceFingerprint:** `7246acca9732b44b0302b60535a55297c4cd1fcc169f36bc0613cdc2c40cc2d4`
+- **sourceFingerprint:** `f7a69b7fd6144dd6805869f43390296990d812ac1660f5c0e0cf63affe4390ac`
 - Framework: net10.0
 - Structural extraction only: **0 LLM API calls / 0 LLM tokens**. No statistical community clustering is claimed; project ownership supplies the visual groups.
 
@@ -70,6 +70,9 @@ Derived -> base (includes private test helper types and resolved external bases)
 - `ElsheiekhHMS.Core.Exceptions.BusinessRuleException` -> `ElsheiekhHMS.Core.Exceptions.DomainException` — ElsheiekhHMS.Core/Exceptions/BusinessRuleException.cs:L4
 - `ElsheiekhHMS.Core.Exceptions.DomainException` -> `System.Exception` — ElsheiekhHMS.Core/Exceptions/DomainException.cs:L3
 - `ElsheiekhHMS.Core.Exceptions.DomainValidationException` -> `ElsheiekhHMS.Core.Exceptions.DomainException` — ElsheiekhHMS.Core/Exceptions/DomainValidationException.cs:L4
+- `ElsheiekhHMS.Infrastructure.Migrations.ElsheiekhHmsDbContextModelSnapshot` -> `Microsoft.EntityFrameworkCore.Infrastructure.ModelSnapshot` — ElsheiekhHMS.Infrastructure/Migrations/ElsheiekhHmsDbContextModelSnapshot.cs:L13
+- `ElsheiekhHMS.Infrastructure.Migrations.InitialCreate` -> `Microsoft.EntityFrameworkCore.Migrations.Migration` — ElsheiekhHMS.Infrastructure/Migrations/20260921111137_InitialCreate.cs:L9
+- `ElsheiekhHMS.Infrastructure.Persistence.ElsheiekhHmsDbContext` -> `Microsoft.EntityFrameworkCore.DbContext` — ElsheiekhHMS.Infrastructure/Persistence/ElsheiekhHmsDbContext.cs:L9
 - `ElsheiekhHMS.Tests.Unit.Domain.Common.AuditableEntityTests.TestEntity` -> `ElsheiekhHMS.Core.Common.AuditableEntity` — ElsheiekhHMS.Tests/Unit/Domain/Common/AuditableEntityTests.cs:L28
 - `ElsheiekhHMS.Tests.Unit.Domain.Common.BaseEntityTests.TestEntity` -> `ElsheiekhHMS.Core.Common.BaseEntity` — ElsheiekhHMS.Tests/Unit/Domain/Common/BaseEntityTests.cs:L15
 - `ElsheiekhHMS.Tests.Unit.Domain.Common.SoftDeletableEntityTests.TestEntity` -> `ElsheiekhHMS.Core.Common.SoftDeletableEntity` — ElsheiekhHMS.Tests/Unit/Domain/Common/SoftDeletableEntityTests.cs:L18
@@ -78,6 +81,8 @@ Derived -> base (includes private test helper types and resolved external bases)
 
 - `ElsheiekhHMS.Core.Interfaces.IHasConcurrencyToken`
   - Implementations: ElsheiekhHMS.Core.Domain.Patients.Entities.Patient, ElsheiekhHMS.Core.Domain.Scheduling.Entities.Appointment, ElsheiekhHMS.Core.Domain.Scheduling.Entities.WalkInQueueEntry
+- `Microsoft.EntityFrameworkCore.IEntityTypeConfiguration<ElsheiekhHMS.Core.Domain.Scheduling.Entities.Appointment>`
+  - Implementations: ElsheiekhHMS.Infrastructure.Configurations.Entities.AppointmentConfiguration, ElsheiekhHMS.Infrastructure.Configurations.Entities.DepartmentConfiguration, ElsheiekhHMS.Infrastructure.Configurations.Entities.DoctorConfiguration, ElsheiekhHMS.Infrastructure.Configurations.Entities.DoctorScheduleConfiguration, ElsheiekhHMS.Infrastructure.Configurations.Entities.PatientConfiguration, ElsheiekhHMS.Infrastructure.Configurations.Entities.WalkInQueueEntryConfiguration
 
 ## Tests
 
@@ -139,9 +144,9 @@ Evaluated direct PackageReference items only. Framework/SDK auto-references and 
 
 - **ElsheiekhHMS.Application:** Microsoft.Extensions.DependencyInjection.Abstractions 10.0.12
 - **ElsheiekhHMS.Core:** none
-- **ElsheiekhHMS.Infrastructure:** Microsoft.Extensions.Configuration.Abstractions 10.0.12; Microsoft.Extensions.DependencyInjection.Abstractions 10.0.12
+- **ElsheiekhHMS.Infrastructure:** Microsoft.EntityFrameworkCore 10.0.12; Microsoft.EntityFrameworkCore.Design 10.0.12; Microsoft.EntityFrameworkCore.SqlServer 10.0.12; Microsoft.Extensions.Configuration.Abstractions 10.0.12; Microsoft.Extensions.DependencyInjection.Abstractions 10.0.12
 - **ElsheiekhHMS.Tests:** coverlet.collector 6.0.4; Microsoft.NET.Test.Sdk 17.14.1; xunit 2.9.3; xunit.runner.visualstudio 3.1.4
-- **ElsheiekhHMS.Web:** none
+- **ElsheiekhHMS.Web:** Microsoft.EntityFrameworkCore.Design 10.0.12
 
 ## Architecture Checks
 
@@ -150,8 +155,8 @@ Evaluated direct PackageReference items only. Framework/SDK auto-references and 
 - unexpectedDependencies: `[]`
 - forbiddenCoreUsings: `[]`
 - ruleSource: `Documented HMS layer policy; observed edges extracted separately`
-- efCorePresent: `False`
-- sqlServerPresent: `False`
+- efCorePresent: `True`
+- sqlServerPresent: `True`
 - identityPackagePresent: `False`
 - Identity source references: `[]`
 
@@ -159,20 +164,28 @@ Evaluated direct PackageReference items only. Framework/SDK auto-references and 
 
 Declared by README; not inferred from the existence of classes:
 
-- > **Current development stage:** Phase 03 — Domain Entities (complete) — README.md:L5
+- > **Current development stage:** Phase 04 — EF Core & Database (complete) — README.md:L5
 - > **Phase 01:** ✅ Complete — README.md:L7
 - > **Phase 02 Setup:** ✅ Complete and verified — README.md:L9
 - > **Phase 03A / 03B / 03C:** ✅ Complete — README.md:L11
 - > **Phase 03D:** ✅ Implemented and verified — README.md:L13
--  /  01  /  Solution & Architecture  /  ✅ Complete  /  — README.md:L332
--  /  02  /  Core Foundation  /  ✅ Complete  /  — README.md:L333
--  /  03  /  Domain Entities  /  ✅ Complete  /  — README.md:L334
--  /  04  /  EF Core & Database  /  ⏳ Not started  /  — README.md:L335
--  /  05  /  Identity & Security  /  ⏳ Not started  /  — README.md:L336
--  /  06  /  DTOs & Validation  /  ⏳ Not started  /  — README.md:L337
--  /  07  /  Application Services  /  ⏳ Not started  /  — README.md:L338
--  /  08  /  Business Workflows  /  ⏳ Not started  /  — README.md:L339
--  /  09  /  Enterprise Infrastructure  /  ⏳ Not started  /  — README.md:L340
+- > **Phase 04A:** ✅ EF Core foundation implemented and verified — README.md:L15
+- > **Phase 04B:** ✅ Entity Fluent mappings implemented and verified — README.md:L17
+- > **Phase 04C:** ✅ Relationships, filters, indexes, constraints, and concurrency metadata implemented and verified — README.md:L19
+- > **Phase 04D-A:** ✅ SQL Server environment readiness verified — README.md:L21
+- > **Phase 04D-B0:** ✅ EF design-time tooling verified — README.md:L23
+- > **Phase 04D-B:** ✅ Initial migration generated and inspected; database not created or updated — README.md:L25
+- > **Phase 04D-C:** ✅ Initial migration applied and local SQL Server schema verified — README.md:L27
+- > **Phase 04E:** ✅ Persistence integration tests implemented and verified — README.md:L29
+-  /  01  /  Solution & Architecture  /  ✅ Complete  /  — README.md:L346
+-  /  02  /  Core Foundation  /  ✅ Complete  /  — README.md:L347
+-  /  03  /  Domain Entities  /  ✅ Complete  /  — README.md:L348
+-  /  04  /  EF Core & Database  /  ✅ Complete  /  — README.md:L349
+-  /  05  /  Identity & Security  /  ⏳ Not started  /  — README.md:L350
+-  /  06  /  DTOs & Validation  /  ⏳ Not started  /  — README.md:L351
+-  /  07  /  Application Services  /  ⏳ Not started  /  — README.md:L352
+-  /  08  /  Business Workflows  /  ⏳ Not started  /  — README.md:L353
+-  /  09  /  Enterprise Infrastructure  /  ⏳ Not started  /  — README.md:L354
 
 ## Important Files
 
@@ -197,7 +210,21 @@ Declared by README; not inferred from the existence of classes:
 - [ElsheiekhHMS.Core/Exceptions/DomainException.cs](../ElsheiekhHMS.Core/Exceptions/DomainException.cs) — ElsheiekhHMS.Core
 - [ElsheiekhHMS.Core/Exceptions/DomainValidationException.cs](../ElsheiekhHMS.Core/Exceptions/DomainValidationException.cs) — ElsheiekhHMS.Core
 - [ElsheiekhHMS.Core/Interfaces/IHasConcurrencyToken.cs](../ElsheiekhHMS.Core/Interfaces/IHasConcurrencyToken.cs) — ElsheiekhHMS.Core
+- [ElsheiekhHMS.Infrastructure/Configurations/Entities/AppointmentConfiguration.cs](../ElsheiekhHMS.Infrastructure/Configurations/Entities/AppointmentConfiguration.cs) — ElsheiekhHMS.Infrastructure
+- [ElsheiekhHMS.Infrastructure/Configurations/Entities/DepartmentConfiguration.cs](../ElsheiekhHMS.Infrastructure/Configurations/Entities/DepartmentConfiguration.cs) — ElsheiekhHMS.Infrastructure
+- [ElsheiekhHMS.Infrastructure/Configurations/Entities/DoctorConfiguration.cs](../ElsheiekhHMS.Infrastructure/Configurations/Entities/DoctorConfiguration.cs) — ElsheiekhHMS.Infrastructure
+- [ElsheiekhHMS.Infrastructure/Configurations/Entities/DoctorScheduleConfiguration.cs](../ElsheiekhHMS.Infrastructure/Configurations/Entities/DoctorScheduleConfiguration.cs) — ElsheiekhHMS.Infrastructure
+- [ElsheiekhHMS.Infrastructure/Configurations/Entities/PatientConfiguration.cs](../ElsheiekhHMS.Infrastructure/Configurations/Entities/PatientConfiguration.cs) — ElsheiekhHMS.Infrastructure
+- [ElsheiekhHMS.Infrastructure/Configurations/Entities/WalkInQueueEntryConfiguration.cs](../ElsheiekhHMS.Infrastructure/Configurations/Entities/WalkInQueueEntryConfiguration.cs) — ElsheiekhHMS.Infrastructure
 - [ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs](../ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs) — ElsheiekhHMS.Infrastructure
+- [ElsheiekhHMS.Infrastructure/Migrations/20260921111137_InitialCreate.Designer.cs](../ElsheiekhHMS.Infrastructure/Migrations/20260921111137_InitialCreate.Designer.cs) — ElsheiekhHMS.Infrastructure
+- [ElsheiekhHMS.Infrastructure/Migrations/20260921111137_InitialCreate.cs](../ElsheiekhHMS.Infrastructure/Migrations/20260921111137_InitialCreate.cs) — ElsheiekhHMS.Infrastructure
+- [ElsheiekhHMS.Infrastructure/Migrations/ElsheiekhHmsDbContextModelSnapshot.cs](../ElsheiekhHMS.Infrastructure/Migrations/ElsheiekhHmsDbContextModelSnapshot.cs) — ElsheiekhHMS.Infrastructure
+- [ElsheiekhHMS.Infrastructure/Persistence/ElsheiekhHmsDbContext.cs](../ElsheiekhHMS.Infrastructure/Persistence/ElsheiekhHmsDbContext.cs) — ElsheiekhHMS.Infrastructure
+- [ElsheiekhHMS.Tests/Integration/Persistence/ElsheiekhHmsDbContextSqlServerTests.cs](../ElsheiekhHMS.Tests/Integration/Persistence/ElsheiekhHmsDbContextSqlServerTests.cs) — ElsheiekhHMS.Tests
+- [ElsheiekhHMS.Tests/Integration/Persistence/SqlServerTestDatabaseFixture.cs](../ElsheiekhHMS.Tests/Integration/Persistence/SqlServerTestDatabaseFixture.cs) — ElsheiekhHMS.Tests
+- [ElsheiekhHMS.Tests/Integration/Persistence/SqlServerTestDatabaseGuard.cs](../ElsheiekhHMS.Tests/Integration/Persistence/SqlServerTestDatabaseGuard.cs) — ElsheiekhHMS.Tests
+- [ElsheiekhHMS.Tests/Integration/Persistence/SqlServerTestDatabaseSafetyTests.cs](../ElsheiekhHMS.Tests/Integration/Persistence/SqlServerTestDatabaseSafetyTests.cs) — ElsheiekhHMS.Tests
 - [ElsheiekhHMS.Tests/Unit/Domain/Common/AuditableEntityTests.cs](../ElsheiekhHMS.Tests/Unit/Domain/Common/AuditableEntityTests.cs) — ElsheiekhHMS.Tests
 - [ElsheiekhHMS.Tests/Unit/Domain/Common/BaseEntityTests.cs](../ElsheiekhHMS.Tests/Unit/Domain/Common/BaseEntityTests.cs) — ElsheiekhHMS.Tests
 - [ElsheiekhHMS.Tests/Unit/Domain/Common/SoftDeletableEntityTests.cs](../ElsheiekhHMS.Tests/Unit/Domain/Common/SoftDeletableEntityTests.cs) — ElsheiekhHMS.Tests
@@ -208,6 +235,8 @@ Declared by README; not inferred from the existence of classes:
 - [ElsheiekhHMS.Tests/Unit/Domain/Scheduling/WalkInQueueEntryTests.cs](../ElsheiekhHMS.Tests/Unit/Domain/Scheduling/WalkInQueueEntryTests.cs) — ElsheiekhHMS.Tests
 - [ElsheiekhHMS.Tests/Unit/Domain/Staff/DoctorScheduleTests.cs](../ElsheiekhHMS.Tests/Unit/Domain/Staff/DoctorScheduleTests.cs) — ElsheiekhHMS.Tests
 - [ElsheiekhHMS.Tests/Unit/Domain/Staff/DoctorTests.cs](../ElsheiekhHMS.Tests/Unit/Domain/Staff/DoctorTests.cs) — ElsheiekhHMS.Tests
+- [ElsheiekhHMS.Tests/Unit/Infrastructure/ElsheiekhHmsDbContextModelTests.cs](../ElsheiekhHMS.Tests/Unit/Infrastructure/ElsheiekhHmsDbContextModelTests.cs) — ElsheiekhHMS.Tests
+- [ElsheiekhHMS.Tests/Unit/Infrastructure/ElsheiekhHmsDbContextTests.cs](../ElsheiekhHMS.Tests/Unit/Infrastructure/ElsheiekhHmsDbContextTests.cs) — ElsheiekhHMS.Tests
 - [ElsheiekhHMS.Web/Components/App.razor](../ElsheiekhHMS.Web/Components/App.razor) — ElsheiekhHMS.Web
 - [ElsheiekhHMS.Web/Components/Layout/MainLayout.razor](../ElsheiekhHMS.Web/Components/Layout/MainLayout.razor) — ElsheiekhHMS.Web
 - [ElsheiekhHMS.Web/Components/Layout/NavMenu.razor](../ElsheiekhHMS.Web/Components/Layout/NavMenu.razor) — ElsheiekhHMS.Web
@@ -243,3 +272,5 @@ powershell -ExecutionPolicy Bypass -File .\tools\graphify.ps1
 - testCount is static Fact + InlineData case count, not a test execution result; dynamic theories reported separately.
 - Package list is evaluated direct PackageReference only; transitive and SDK auto-references are not claimed as installed direct packages.
 - Architecture checks are structural observations, not a full semantic security or dependency audit.
+- WARNING: Unresolved base omitted: ElsheiekhHMS.Tests.Integration.Persistence.SqlServerPersistenceCollection : ICollectionFixture<ElsheiekhHMS.Tests.Integration.Persistence.SqlServerTestDatabaseFixture>
+- WARNING: Unresolved base omitted: ElsheiekhHMS.Tests.Integration.Persistence.SqlServerTestDatabaseFixture : IAsyncLifetime

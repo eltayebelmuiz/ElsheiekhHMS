@@ -232,7 +232,7 @@ Message and inner-exception constructors preserve the cause. No HTTP status mapp
 ## ADR-010 — EF Core and SQL Server behind Infrastructure
 
 **Status:** Accepted  
-**Phase:** 04 planned
+**Phase:** 04 complete (04A–04E complete)
 
 ### Context
 
@@ -240,7 +240,7 @@ Persistence is required by the product but must not contaminate foundation/domai
 
 ### Decision
 
-Use EF Core with SQL Server in Infrastructure, introduced in the persistence phase.
+Use EF Core with SQL Server in Infrastructure. Phase 04A establishes the context/provider foundation, Phase 04B adds scalar Fluent mappings, and Phase 04C adds explicit historical-safe relationships, approved indexes/uniqueness, soft-delete filters, and opted-in rowversion metadata. Phase 04D-B generates and inspects the initial migration; Phase 04D-C applies it only to the approved local `MSSQLLocalDB` database `ElsheiekhHMS_Dev` and verifies the physical schema. Phase 04E verifies persistence behavior against a separate exact-target `MSSQLLocalDB` database named `ElsheiekhHMS_IntegrationTests`, with a safety guard that rejects every other database and fixture cleanup after each run. The development database is never used by integration tests.
 
 ### Rationale
 
@@ -248,7 +248,7 @@ This follows the selected Microsoft stack and hospital deployment requirements w
 
 ### Consequences
 
-DbContext, mappings, migrations, constraints, filters, and concurrency configuration are planned. No EF/SQL provider packages or persistence implementation currently exist. Roadmap repository/Unit-of-Work examples are not proof of current APIs.
+`ElsheiekhHmsDbContext`, SQL Server DI registration, six scalar configuration units, the Phase 04C relational metadata, the inspected Phase 04D-B migration/snapshot, the verified local Phase 04D-C schema, and the Phase 04E isolated persistence integration suite now exist in Infrastructure/Tests. Patient has a private EF-only materialization constructor while retaining its validated public creation path; getter-only `PatientCode` is mapped through its existing backing field. Database provisioning outside the approved local development target, repositories, and Unit of Work remain deferred. Roadmap repository/Unit-of-Work examples are not proof of current APIs.
 
 ### Evidence / Notes
 
