@@ -251,8 +251,8 @@ If business rules exist only in Razor components or transport endpoints, they ca
 | 02 | Core Foundation | BaseEntity, enums, exceptions, ServiceResult | ✅ Complete | Core compiles with zero dependencies |
 | 03 | Domain Entities | All HMS domain models | ✅ Complete | DomainModels.cs, IRepositories.cs |
 | 04 | EF Core & Database | AppDbContext, Fluent config, migrations | ✅ Complete | Database created and migrated |
-| 05 | Identity & Security | ApplicationUser, roles, policies, entity auditing, AuditLog foundation, migration, authentication hardening | 🟡 In Progress (05A/05B/05C/05C-A/05D complete) | Identity/security foundations |
-| 06 | DTOs & Validation | DTOs, input validation, shared pagination | ⏳ Not started | Approved validation contracts |
+| 05 | Identity & Security | ApplicationUser, roles, policies, entity auditing, AuditLog foundation, migration, authentication hardening | ✅ Complete (05A–05E) | Identity/security foundations |
+| 06 | DTOs & Validation | DTOs, input validation, shared pagination | ✅ Complete (06A–06D) | Approved validation contracts |
 | 07 | Application Services | Application use cases and orchestration | ⏳ Not started | Tested application contracts |
 | 08 | Business Workflows | Queue, appointments, EMR, billing | ⏳ Not started | Approved workflow services |
 | 09 | Enterprise Infrastructure | Remaining audit events, notifications, settings, integrations | ⏳ Not started | Approved cross-cutting services |
@@ -913,24 +913,28 @@ git commit -m "Phase06: ViewModels, DTOs, ServiceResult usage pattern, PatientSe
 
 ## PHASE 07 — Application Services
 
+**Status: NOT STARTED.** The material in this section is planned design guidance only; no
+Phase 07 services, repositories, Unit of Work, or workflows are implemented in the current
+checkpoint.
+
 ### Objective
 Implement all application-layer services. Services orchestrate validation, authorization checks, business rules, repository calls, and audit logging.
 
 ### Prerequisites
 Phase 06 complete.
 
-### Services implemented
+### Planned services (not implemented)
 
 | Service | Interface | File | Status |
 |---------|-----------|------|--------|
-| PatientService | IPatientService | Infrastructure/Services/ | ✅ |
-| DoctorService | IDoctorService | Infrastructure/Services/ | ✅ |
-| DepartmentService | IDepartmentService | Infrastructure/Services/ | ✅ |
-| AppointmentService | IAppointmentService | Infrastructure/Services/ | ✅ |
-| LabService | ILabService | Infrastructure/Services/ | ✅ |
-| WalkInQueueService | IWalkInQueueService | Infrastructure/Services/ | ✅ |
-| AuditLogService | IAuditLogService | Infrastructure/Services/ | ✅ |
-| NotificationService | INotificationService | Infrastructure/Services/ | ✅ |
+| PatientService | IPatientService | Infrastructure/Services/ | Planned |
+| DoctorService | IDoctorService | Infrastructure/Services/ | Planned |
+| DepartmentService | IDepartmentService | Infrastructure/Services/ | Planned |
+| AppointmentService | IAppointmentService | Infrastructure/Services/ | Planned |
+| LabService | ILabService | Infrastructure/Services/ | Planned |
+| WalkInQueueService | IWalkInQueueService | Infrastructure/Services/ | Planned |
+| AuditLogService | IAuditLogService | Infrastructure/Services/ | Planned |
+| NotificationService | INotificationService | Infrastructure/Services/ | Planned |
 
 ### WalkInQueueService — corrected method signatures
 
@@ -1024,7 +1028,7 @@ var doctorName = entry.Doctor?.ApplicationUser != null
 
 ### Git checkpoint
 ```
-git commit -m "Phase07: all application services implemented, ServiceResult naming corrected"
+git commit -m "Phase07: application services checkpoint"
 ```
 
 ---
@@ -1035,7 +1039,7 @@ git commit -m "Phase07: all application services implemented, ServiceResult nami
 Implement complete business workflows — multi-step processes that involve validation, status transitions, transactions, audit trails, and cross-entity coordination.
 
 ### Prerequisites
-Phase 07 complete.
+Phase 07 must be complete before Phase 08 begins.
 
 ### Walk-in Queue workflow ✅ Complete
 
@@ -1856,10 +1860,10 @@ public async Task<ServiceResult<T>> DoSomethingAsync(Dto dto, string actorEmail)
 ## 16. Current Project Checkpoint
 
 ```
-Last completed phase:  Phase 05E — Security Integration / Hardening
-Current phase:         Phase 05 — Identity & Security complete; Phase 06 pending
-Next phase:            Phase 06 — DTOs & Validation
-Next action:           Prepare and approve the Phase 06 DTOs & Validation design gate
+Last completed phase:  Phase 06D — DTOs & Validation final integration/audit
+Current phase:         Phase 06 — DTOs & Validation complete
+Next phase:            Phase 07 — Application Services
+Next action:           Prepare and approve the Phase 07 Application Services design gate
 Known blockers:        None
 Important notes:
   - The current working codebase is the five-project .NET 10 ElsheiekhHMS solution

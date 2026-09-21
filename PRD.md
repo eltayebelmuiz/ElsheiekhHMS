@@ -261,7 +261,7 @@ As a Receptionist, I want to register a new patient quickly and receive a unique
 
 **Pre-conditions:**
 - User is authenticated as Receptionist or Admin
-- Patient does not already exist in the system (checked by phone or national ID)
+- Duplicate-candidate review may use phone or national ID; phone is not globally unique
 
 **Post-conditions:**
 - Patient record created with unique PatientCode (format: PT-YYYY-NNNNN)
@@ -274,7 +274,7 @@ As a Receptionist, I want to register a new patient quickly and receive a unique
 3. Receptionist fills all required fields and optional fields (National ID, Blood Group, Insurance, Emergency Contact)
 4. Receptionist clicks Save
 5. System validates all inputs server-side
-6. System checks for duplicate phone number or national ID
+6. System checks duplicate-candidate signals; phone does not enforce uniqueness
 7. System generates PatientCode using format PT-{YEAR}-{5-digit-sequence}
 8. Patient record saved to database
 9. System redirects to Patient Details page showing the new PatientCode
@@ -282,13 +282,13 @@ As a Receptionist, I want to register a new patient quickly and receive a unique
 11. Audit trail entry written
 
 **Alternate Flows:**
-- If phone number already exists: system displays inline warning — "A patient with this phone number already exists. View existing record?"
+- If phone number already exists: system may display a non-blocking duplicate-candidate warning — "A patient with this phone number already exists. View existing record?"
 - If national ID already exists: system blocks save and shows error — "National ID already registered to another patient."
 - If required field is missing: inline validation error shown before form submission
 
 **Acceptance Criteria:**
 - [ ] PatientCode is unique, auto-generated, and follows PT-YYYY-NNNNN format
-- [ ] Duplicate phone and national ID are detected and blocked
+- [ ] Duplicate national ID is detected and blocked; duplicate phone numbers remain allowed and may be used as duplicate-candidate search signals
 - [ ] Patient record is soft-deletable only — no hard delete endpoint exists
 - [ ] Audit trail entry created on every successful registration
 - [ ] Search returns results within 500ms for up to 100,000 patient records

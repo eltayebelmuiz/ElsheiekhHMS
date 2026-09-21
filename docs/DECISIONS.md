@@ -31,7 +31,7 @@ Preserve the verified solution membership and reference graph. The roadmap's .NE
 
 ## ADR-002 — Independent, persistence-free Core
 
-**Status:** Accepted  
+**Status:** Accepted
 **Phase:** 01–02
 
 ### Context
@@ -391,3 +391,37 @@ Phase gates must report performance, reliability, security, database-query, and 
 ### Evidence / Notes
 
 [Approved performance, reliability, and quality requirement](superpowers/specs/2026-09-21-performance-reliability-quality-requirement.md); [architecture overview](ARCHITECTURE.md); [development roadmap](../DEVELOPMENT_ROADMAP.md).
+
+## ADR-016 — Phase 06 DTO and validation boundaries
+
+**Status:** Accepted
+**Phase:** 06
+
+### Context
+
+Phase 06 establishes application contracts before use-case services are introduced.
+The contracts must remain persistence-neutral and must not encode unapproved workflow
+or resource decisions.
+
+### Decision
+
+Use immutable summary/detail/request contracts with bounded, explicitly validated
+pagination, search, filtering, and sorting. Normalize textual input by trimming and
+converting blank optional values to `null` while preserving Unicode and caller-visible
+values. Patient phone numbers are non-unique: duplicates remain allowed and phone may
+only provide a duplicate-candidate search signal. Patient email remains optional.
+Persistence-assisted validation, duplicate lookups, resource authorization, and
+application services remain outside Phase 06. Apply opaque concurrency tokens only to
+the explicitly approved Patient, Appointment, and queue contracts.
+
+### Consequences
+
+DTO validation cannot replace domain invariants or persistence constraints. Phase 07
+may orchestrate these contracts, but must not reinterpret duplicate-phone signals as
+uniqueness or introduce speculative FacilityId, provider/doctor DTO, rescheduling,
+reactivation, queue-position, or ticket-generation behavior.
+
+### Evidence / Notes
+
+[Architecture overview](ARCHITECTURE.md); [development roadmap](../DEVELOPMENT_ROADMAP.md);
+Phase 06 contract and validator sources under `ElsheiekhHMS.Application`.
