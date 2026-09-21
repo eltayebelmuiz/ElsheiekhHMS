@@ -1,11 +1,11 @@
 {
   "schemaVersion": "1.0",
-  "generatedAtUtc": "2026-09-21T06:30:52.7547477\u002B00:00",
-  "gitCommit": "beaf42e92c64823c4ac77d14e827699d7febac95",
+  "generatedAtUtc": "2026-09-21T07:02:48.4041992\u002B00:00",
+  "gitCommit": "f03c3f9e5d09952787bc65f9a68da4f5caaaae3f",
   "gitBranch": "main",
   "workingTreeDirty": true,
-  "gitStatusAtGeneration": "M graphify-out/GRAPH_REPORT.md\n M graphify-out/graph.html\n M graphify-out/graph.json\n?? ElsheiekhHMS.Core/Domain/Staff/Entities/Doctor.cs\n?? ElsheiekhHMS.Core/Domain/Staff/Entities/DoctorSchedule.cs\n?? ElsheiekhHMS.Core/Domain/Staff/Enums/DoctorStatus.cs\n?? ElsheiekhHMS.Tests/Unit/Domain/Staff/DoctorScheduleTests.cs\n?? ElsheiekhHMS.Tests/Unit/Domain/Staff/DoctorTests.cs\n?? docs/superpowers/plans/2026-09-20-phase03b-doctor-availability.md\n?? docs/superpowers/specs/2026-09-20-phase03b-doctor-availability-design.md",
-  "sourceFingerprint": "8d3722716b6561b637232acf88bc20fcc6d307998933e870807e26dd77a9373d",
+  "gitStatusAtGeneration": "M README.md\n M graphify-out/GRAPH_REPORT.md\n M graphify-out/graph.html\n M graphify-out/graph.json\n?? ElsheiekhHMS.Core/Domain/Patients/Entities/Patient.cs\n?? ElsheiekhHMS.Core/Domain/Patients/Enums/BloodGroup.cs\n?? ElsheiekhHMS.Core/Domain/Patients/Enums/Gender.cs\n?? ElsheiekhHMS.Tests/Unit/Domain/Patients/PatientTests.cs\n?? docs/superpowers/plans/2026-09-21-phase03c-patient-foundation.md\n?? docs/superpowers/specs/2026-09-21-phase03c-patient-identity-vitals-design.md",
+  "sourceFingerprint": "a7cfd5c74000f6d33beb66e2387b821f1a118c7883614e2fd10fa476bbf76112",
   "generatorFingerprint": "03eee0a8853a7e84af6cbe571d34e6f7d820505ac8f5670a719d0d63b113840c",
   "fingerprintAlgorithm": "SHA-256 of ordinal path \u002B NUL \u002B content SHA-256 records joined with LF; sourceManifest defines inputs; graphify-out excluded everywhere",
   "sourceManifest": [
@@ -32,6 +32,18 @@
     {
       "path": "ElsheiekhHMS.Core/Domain/Organization/Entities/Department.cs",
       "sha256": "f098ef48a0614ceaedb5afe844f07415c8df16d9e8210ee80a3f743aed21b836"
+    },
+    {
+      "path": "ElsheiekhHMS.Core/Domain/Patients/Entities/Patient.cs",
+      "sha256": "ce75187d2151ffa9a9f047cebeb4511590a4bd8a71fd6d74c8306770a5bc5589"
+    },
+    {
+      "path": "ElsheiekhHMS.Core/Domain/Patients/Enums/BloodGroup.cs",
+      "sha256": "5850d5649a784d065cdc13f5972a5b989b003152be8a2d7d173104ce10ec07c9"
+    },
+    {
+      "path": "ElsheiekhHMS.Core/Domain/Patients/Enums/Gender.cs",
+      "sha256": "08e3282dc39403a396bf8c25f5f7ad042f90d7dcdcb7656db505aafcfb32a2ed"
     },
     {
       "path": "ElsheiekhHMS.Core/Domain/Staff/Entities/Doctor.cs",
@@ -96,6 +108,10 @@
     {
       "path": "ElsheiekhHMS.Tests/Unit/Domain/Organization/DepartmentTests.cs",
       "sha256": "9aadb52ec8695293ed0fe2a02ecc64a533bdecf1b78cbd133ae523bcbf655670"
+    },
+    {
+      "path": "ElsheiekhHMS.Tests/Unit/Domain/Patients/PatientTests.cs",
+      "sha256": "0ee5a3e14619aa41e6ee18f8bd351100708e4438da5aa9f82155c2cc64ac7273"
     },
     {
       "path": "ElsheiekhHMS.Tests/Unit/Domain/Staff/DoctorScheduleTests.cs",
@@ -163,7 +179,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "549dee43ccd7e41895e55937217bc10a4b477f5dbd1dc178cf8ee27ac2c127d4"
+      "sha256": "2a405e8dad0baa738f6f28787498258fc7c93456f115410a39ed089123fc05ea"
     }
   ],
   "repository": {
@@ -173,16 +189,16 @@
   },
   "summary": {
     "projectCount": 5,
-    "sourceFileCount": 21,
+    "sourceFileCount": 25,
     "razorFileCount": 11,
-    "typeCount": 23,
+    "typeCount": 27,
     "interfaceCount": 1,
-    "testClassCount": 7,
-    "testMethodCount": 46,
-    "testCount": 67,
+    "testClassCount": 8,
+    "testMethodCount": 63,
+    "testCount": 100,
     "dynamicTheoryCount": 0,
-    "nodeCount": 74,
-    "edgeCount": 148
+    "nodeCount": 85,
+    "edgeCount": 175
   },
   "projects": [
     {
@@ -224,6 +240,9 @@
         "ElsheiekhHMS.Core/Common/BaseEntity.cs",
         "ElsheiekhHMS.Core/Common/SoftDeletableEntity.cs",
         "ElsheiekhHMS.Core/Domain/Organization/Entities/Department.cs",
+        "ElsheiekhHMS.Core/Domain/Patients/Entities/Patient.cs",
+        "ElsheiekhHMS.Core/Domain/Patients/Enums/BloodGroup.cs",
+        "ElsheiekhHMS.Core/Domain/Patients/Enums/Gender.cs",
         "ElsheiekhHMS.Core/Domain/Staff/Entities/Doctor.cs",
         "ElsheiekhHMS.Core/Domain/Staff/Entities/DoctorSchedule.cs",
         "ElsheiekhHMS.Core/Domain/Staff/Enums/DoctorStatus.cs",
@@ -304,6 +323,7 @@
         "ElsheiekhHMS.Tests/Unit/Domain/Common/SoftDeletableEntityTests.cs",
         "ElsheiekhHMS.Tests/Unit/Domain/Exceptions/DomainExceptionTests.cs",
         "ElsheiekhHMS.Tests/Unit/Domain/Organization/DepartmentTests.cs",
+        "ElsheiekhHMS.Tests/Unit/Domain/Patients/PatientTests.cs",
         "ElsheiekhHMS.Tests/Unit/Domain/Staff/DoctorScheduleTests.cs",
         "ElsheiekhHMS.Tests/Unit/Domain/Staff/DoctorTests.cs"
       ]
@@ -401,6 +421,54 @@
       "project": "ElsheiekhHMS.Core",
       "file": "ElsheiekhHMS.Core/Domain/Organization/Entities/Department.cs",
       "source_file": "ElsheiekhHMS.Core/Domain/Organization/Entities/Department.cs",
+      "external": false,
+      "community": 1,
+      "community_name": "ElsheiekhHMS.Core",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "file:ElsheiekhHMS.Core:ElsheiekhHMS.Core/Domain/Patients/Entities/Patient.cs",
+      "name": "Patient.cs",
+      "label": "Patient.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Core",
+      "file": "ElsheiekhHMS.Core/Domain/Patients/Entities/Patient.cs",
+      "source_file": "ElsheiekhHMS.Core/Domain/Patients/Entities/Patient.cs",
+      "external": false,
+      "community": 1,
+      "community_name": "ElsheiekhHMS.Core",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "file:ElsheiekhHMS.Core:ElsheiekhHMS.Core/Domain/Patients/Enums/BloodGroup.cs",
+      "name": "BloodGroup.cs",
+      "label": "BloodGroup.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Core",
+      "file": "ElsheiekhHMS.Core/Domain/Patients/Enums/BloodGroup.cs",
+      "source_file": "ElsheiekhHMS.Core/Domain/Patients/Enums/BloodGroup.cs",
+      "external": false,
+      "community": 1,
+      "community_name": "ElsheiekhHMS.Core",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "file:ElsheiekhHMS.Core:ElsheiekhHMS.Core/Domain/Patients/Enums/Gender.cs",
+      "name": "Gender.cs",
+      "label": "Gender.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Core",
+      "file": "ElsheiekhHMS.Core/Domain/Patients/Enums/Gender.cs",
+      "source_file": "ElsheiekhHMS.Core/Domain/Patients/Enums/Gender.cs",
       "external": false,
       "community": 1,
       "community_name": "ElsheiekhHMS.Core",
@@ -609,6 +677,22 @@
       "project": "ElsheiekhHMS.Tests",
       "file": "ElsheiekhHMS.Tests/Unit/Domain/Organization/DepartmentTests.cs",
       "source_file": "ElsheiekhHMS.Tests/Unit/Domain/Organization/DepartmentTests.cs",
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Domain/Patients/PatientTests.cs",
+      "name": "PatientTests.cs",
+      "label": "PatientTests.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Tests",
+      "file": "ElsheiekhHMS.Tests/Unit/Domain/Patients/PatientTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Unit/Domain/Patients/PatientTests.cs",
       "external": false,
       "community": 3,
       "community_name": "ElsheiekhHMS.Tests",
@@ -886,6 +970,36 @@
       "dynamicTheories": 0
     },
     {
+      "id": "namespace:ElsheiekhHMS.Core:ElsheiekhHMS.Core.Domain.Patients.Entities",
+      "name": "ElsheiekhHMS.Core.Domain.Patients.Entities",
+      "label": "ElsheiekhHMS.Core.Domain.Patients.Entities",
+      "kind": "namespace",
+      "type": "namespace",
+      "project": "ElsheiekhHMS.Core",
+      "namespace": "ElsheiekhHMS.Core.Domain.Patients.Entities",
+      "external": false,
+      "community": 1,
+      "community_name": "ElsheiekhHMS.Core",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "namespace:ElsheiekhHMS.Core:ElsheiekhHMS.Core.Domain.Patients.Enums",
+      "name": "ElsheiekhHMS.Core.Domain.Patients.Enums",
+      "label": "ElsheiekhHMS.Core.Domain.Patients.Enums",
+      "kind": "namespace",
+      "type": "namespace",
+      "project": "ElsheiekhHMS.Core",
+      "namespace": "ElsheiekhHMS.Core.Domain.Patients.Enums",
+      "external": false,
+      "community": 1,
+      "community_name": "ElsheiekhHMS.Core",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
       "id": "namespace:ElsheiekhHMS.Core:ElsheiekhHMS.Core.Domain.Staff.Entities",
       "name": "ElsheiekhHMS.Core.Domain.Staff.Entities",
       "label": "ElsheiekhHMS.Core.Domain.Staff.Entities",
@@ -998,6 +1112,21 @@
       "type": "namespace",
       "project": "ElsheiekhHMS.Tests",
       "namespace": "ElsheiekhHMS.Tests.Unit.Domain.Organization",
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Domain.Patients",
+      "name": "ElsheiekhHMS.Tests.Unit.Domain.Patients",
+      "label": "ElsheiekhHMS.Tests.Unit.Domain.Patients",
+      "kind": "namespace",
+      "type": "namespace",
+      "project": "ElsheiekhHMS.Tests",
+      "namespace": "ElsheiekhHMS.Tests.Unit.Domain.Patients",
       "external": false,
       "community": 3,
       "community_name": "ElsheiekhHMS.Tests",
@@ -1224,6 +1353,78 @@
       "source_file": "ElsheiekhHMS.Core/Domain/Organization/Entities/Department.cs",
       "source_location": "L6",
       "line": 6,
+      "accessibility": "public",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 1,
+      "community_name": "ElsheiekhHMS.Core",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Core.Domain.Patients.Entities.Patient",
+      "name": "Patient",
+      "label": "Patient",
+      "kind": "class",
+      "type": "class",
+      "fullName": "ElsheiekhHMS.Core.Domain.Patients.Entities.Patient",
+      "project": "ElsheiekhHMS.Core",
+      "namespace": "ElsheiekhHMS.Core.Domain.Patients.Entities",
+      "file": "ElsheiekhHMS.Core/Domain/Patients/Entities/Patient.cs",
+      "source_file": "ElsheiekhHMS.Core/Domain/Patients/Entities/Patient.cs",
+      "source_location": "L8",
+      "line": 8,
+      "accessibility": "public",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 1,
+      "community_name": "ElsheiekhHMS.Core",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Core.Domain.Patients.Enums.BloodGroup",
+      "name": "BloodGroup",
+      "label": "BloodGroup",
+      "kind": "enum",
+      "type": "enum",
+      "fullName": "ElsheiekhHMS.Core.Domain.Patients.Enums.BloodGroup",
+      "project": "ElsheiekhHMS.Core",
+      "namespace": "ElsheiekhHMS.Core.Domain.Patients.Enums",
+      "file": "ElsheiekhHMS.Core/Domain/Patients/Enums/BloodGroup.cs",
+      "source_file": "ElsheiekhHMS.Core/Domain/Patients/Enums/BloodGroup.cs",
+      "source_location": "L3",
+      "line": 3,
+      "accessibility": "public",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 1,
+      "community_name": "ElsheiekhHMS.Core",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Core.Domain.Patients.Enums.Gender",
+      "name": "Gender",
+      "label": "Gender",
+      "kind": "enum",
+      "type": "enum",
+      "fullName": "ElsheiekhHMS.Core.Domain.Patients.Enums.Gender",
+      "project": "ElsheiekhHMS.Core",
+      "namespace": "ElsheiekhHMS.Core.Domain.Patients.Enums",
+      "file": "ElsheiekhHMS.Core/Domain/Patients/Enums/Gender.cs",
+      "source_file": "ElsheiekhHMS.Core/Domain/Patients/Enums/Gender.cs",
+      "source_location": "L3",
+      "line": 3,
       "accessibility": "public",
       "abstract": false,
       "sealed": true,
@@ -1638,6 +1839,48 @@
       "dynamicTheories": 0
     },
     {
+      "id": "type:ElsheiekhHMS.Tests.Unit.Domain.Patients.PatientTests",
+      "name": "PatientTests",
+      "label": "PatientTests",
+      "kind": "test-class",
+      "type": "test-class",
+      "fullName": "ElsheiekhHMS.Tests.Unit.Domain.Patients.PatientTests",
+      "project": "ElsheiekhHMS.Tests",
+      "namespace": "ElsheiekhHMS.Tests.Unit.Domain.Patients",
+      "file": "ElsheiekhHMS.Tests/Unit/Domain/Patients/PatientTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Unit/Domain/Patients/PatientTests.cs",
+      "source_location": "L9",
+      "line": 9,
+      "accessibility": "public",
+      "abstract": false,
+      "sealed": false,
+      "static": false,
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [
+        "Approved_blood_group_values_remain_stable",
+        "Code_phone_and_address_cannot_be_blank",
+        "Construction_preserves_durable_identity_and_audit_metadata",
+        "Contact_update_normalizes_all_fields_and_allows_a_shared_phone",
+        "Deleted_patient_rejects_every_update_without_changing_state",
+        "Demographic_update_preserves_code_and_recomputes_names",
+        "Distinct_patients_can_share_a_phone_number",
+        "Four_part_name_and_optional_contact_values_are_normalized",
+        "Future_birth_date_update_preserves_all_demographics_and_audit",
+        "Invalid_birth_date_is_rejected",
+        "Invalid_contact_update_preserves_values_and_audit",
+        "Invalid_name_or_enum_update_preserves_original_state",
+        "Optional_fields_can_be_cleared_and_identifiers_normalize_to_null",
+        "Patient_code_requires_exact_ASCII_format",
+        "Required_names_cannot_be_blank",
+        "Soft_deletion_sets_consistent_metadata_and_rejects_repetition",
+        "Undefined_enums_are_rejected"
+      ],
+      "staticTestCases": 33,
+      "dynamicTheories": 0
+    },
+    {
       "id": "type:ElsheiekhHMS.Tests.Unit.Domain.Staff.DoctorScheduleTests",
       "name": "DoctorScheduleTests",
       "label": "DoctorScheduleTests",
@@ -1778,6 +2021,33 @@
       "target": "type:ElsheiekhHMS.Core.Domain.Organization.Entities.Department",
       "type": "declares",
       "evidence": "ElsheiekhHMS.Core/Domain/Organization/Entities/Department.cs:L6",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Core:ElsheiekhHMS.Core/Domain/Patients/Entities/Patient.cs",
+      "target": "type:ElsheiekhHMS.Core.Domain.Patients.Entities.Patient",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Core/Domain/Patients/Entities/Patient.cs:L8",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Core:ElsheiekhHMS.Core/Domain/Patients/Enums/BloodGroup.cs",
+      "target": "type:ElsheiekhHMS.Core.Domain.Patients.Enums.BloodGroup",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Core/Domain/Patients/Enums/BloodGroup.cs:L3",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Core:ElsheiekhHMS.Core/Domain/Patients/Enums/Gender.cs",
+      "target": "type:ElsheiekhHMS.Core.Domain.Patients.Enums.Gender",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Core/Domain/Patients/Enums/Gender.cs:L3",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -1927,6 +2197,15 @@
       "weight": 1
     },
     {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Domain/Patients/PatientTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Domain.Patients.PatientTests",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Patients/PatientTests.cs:L9",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
       "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Domain/Staff/DoctorScheduleTests.cs",
       "target": "type:ElsheiekhHMS.Tests.Unit.Domain.Staff.DoctorScheduleTests",
       "type": "declares",
@@ -2001,6 +2280,33 @@
     {
       "source": "project:ElsheiekhHMS.Core",
       "target": "file:ElsheiekhHMS.Core:ElsheiekhHMS.Core/Domain/Organization/Entities/Department.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Core/ElsheiekhHMS.Core.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Core",
+      "target": "file:ElsheiekhHMS.Core:ElsheiekhHMS.Core/Domain/Patients/Entities/Patient.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Core/ElsheiekhHMS.Core.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Core",
+      "target": "file:ElsheiekhHMS.Core:ElsheiekhHMS.Core/Domain/Patients/Enums/BloodGroup.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Core/ElsheiekhHMS.Core.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Core",
+      "target": "file:ElsheiekhHMS.Core:ElsheiekhHMS.Core/Domain/Patients/Enums/Gender.cs",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Core/ElsheiekhHMS.Core.csproj",
       "relation": "contains",
@@ -2084,6 +2390,24 @@
       "target": "namespace:ElsheiekhHMS.Core:ElsheiekhHMS.Core.Domain.Organization.Entities",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Core/Domain/Organization/Entities/Department.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Core",
+      "target": "namespace:ElsheiekhHMS.Core:ElsheiekhHMS.Core.Domain.Patients.Entities",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Core/Domain/Patients/Entities/Patient.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Core",
+      "target": "namespace:ElsheiekhHMS.Core:ElsheiekhHMS.Core.Domain.Patients.Enums",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Core/Domain/Patients/Enums/BloodGroup.cs",
       "relation": "contains",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -2207,6 +2531,15 @@
     },
     {
       "source": "project:ElsheiekhHMS.Tests",
+      "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Domain/Patients/PatientTests.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Tests",
       "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Domain/Staff/DoctorScheduleTests.cs",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
@@ -2246,6 +2579,15 @@
       "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Domain.Organization",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Organization/DepartmentTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Tests",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Domain.Patients",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Patients/PatientTests.cs",
       "relation": "contains",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -2525,6 +2867,51 @@
       "target": "namespace:ElsheiekhHMS.Core:ElsheiekhHMS.Core.Domain.Organization.Entities",
       "type": "namespace-membership",
       "evidence": "ElsheiekhHMS.Core/Domain/Organization/Entities/Department.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Core.Domain.Patients.Entities.Patient",
+      "target": "type:ElsheiekhHMS.Core.Interfaces.IHasConcurrencyToken",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Core/Domain/Patients/Entities/Patient.cs:L8",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Core.Domain.Patients.Entities.Patient",
+      "target": "type:ElsheiekhHMS.Core.Common.SoftDeletableEntity",
+      "type": "inherits",
+      "evidence": "ElsheiekhHMS.Core/Domain/Patients/Entities/Patient.cs:L8",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Core.Domain.Patients.Entities.Patient",
+      "target": "namespace:ElsheiekhHMS.Core:ElsheiekhHMS.Core.Domain.Patients.Entities",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Core/Domain/Patients/Entities/Patient.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Core.Domain.Patients.Enums.BloodGroup",
+      "target": "namespace:ElsheiekhHMS.Core:ElsheiekhHMS.Core.Domain.Patients.Enums",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Core/Domain/Patients/Enums/BloodGroup.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Core.Domain.Patients.Enums.Gender",
+      "target": "namespace:ElsheiekhHMS.Core:ElsheiekhHMS.Core.Domain.Patients.Enums",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Core/Domain/Patients/Enums/Gender.cs",
       "relation": "namespace-membership",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -2903,6 +3290,105 @@
       "target": "type:ElsheiekhHMS.Core.Exceptions.DomainValidationException",
       "type": "test-target",
       "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Organization/DepartmentTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Domain.Patients.PatientTests",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Domain.Patients",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Patients/PatientTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Domain.Patients.PatientTests",
+      "target": "type:ElsheiekhHMS.Core.Common.AuditableEntity",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Patients/PatientTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Domain.Patients.PatientTests",
+      "target": "type:ElsheiekhHMS.Core.Common.BaseEntity",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Patients/PatientTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Domain.Patients.PatientTests",
+      "target": "type:ElsheiekhHMS.Core.Common.SoftDeletableEntity",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Patients/PatientTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Domain.Patients.PatientTests",
+      "target": "type:ElsheiekhHMS.Core.Domain.Patients.Entities.Patient",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Patients/PatientTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Domain.Patients.PatientTests",
+      "target": "type:ElsheiekhHMS.Core.Domain.Patients.Enums.BloodGroup",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Patients/PatientTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Domain.Patients.PatientTests",
+      "target": "type:ElsheiekhHMS.Core.Domain.Patients.Enums.Gender",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Patients/PatientTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Domain.Patients.PatientTests",
+      "target": "type:ElsheiekhHMS.Core.Exceptions.BusinessRuleException",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Patients/PatientTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Domain.Patients.PatientTests",
+      "target": "type:ElsheiekhHMS.Core.Exceptions.DomainException",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Patients/PatientTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Domain.Patients.PatientTests",
+      "target": "type:ElsheiekhHMS.Core.Exceptions.DomainValidationException",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Patients/PatientTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Domain.Patients.PatientTests",
+      "target": "type:ElsheiekhHMS.Core.Interfaces.IHasConcurrencyToken",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Patients/PatientTests.cs (Roslyn-bound type/member use or base of test helper)",
       "relation": "test-target",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -3095,56 +3581,56 @@
       "statusSource": "README.md declaration, not independently certified completion",
       "declaredStatus": [
         {
-          "text": "\u003E **Current development stage:** Phase 02 \u2014 Core Foundation  ",
+          "text": "\u003E **Current development stage:** Phase 03 \u2014 Domain Entities (in progress)",
           "source": "README.md:L5"
         },
         {
-          "text": "\u003E **Phase 01:** \u2705 Complete  ",
-          "source": "README.md:L6"
-        },
-        {
-          "text": "\u003E **Phase 02 Setup:** \u2705 Complete and verified  ",
+          "text": "\u003E **Phase 01:** \u2705 Complete",
           "source": "README.md:L7"
         },
         {
-          "text": "\u003E **Next action:** Final Phase 02 review/checkpoint, then Phase 03 \u2014 Domain Entities",
-          "source": "README.md:L8"
+          "text": "\u003E **Phase 02 Setup:** \u2705 Complete and verified",
+          "source": "README.md:L9"
+        },
+        {
+          "text": "\u003E **Phase 03A / 03B / 03C:** \u2705 Complete",
+          "source": "README.md:L11"
         },
         {
           "text": "| 01 | Solution \u0026 Architecture | \u2705 Complete |",
-          "source": "README.md:L325"
-        },
-        {
-          "text": "| 02 | Core Foundation | \uD83D\uDFE1 Setup complete / final review pending |",
-          "source": "README.md:L326"
-        },
-        {
-          "text": "| 03 | Domain Entities | \u23F3 Not started |",
-          "source": "README.md:L327"
-        },
-        {
-          "text": "| 04 | EF Core \u0026 Database | \u23F3 Not started |",
-          "source": "README.md:L328"
-        },
-        {
-          "text": "| 05 | Identity \u0026 Security | \u23F3 Not started |",
-          "source": "README.md:L329"
-        },
-        {
-          "text": "| 06 | DTOs \u0026 Validation | \u23F3 Not started |",
           "source": "README.md:L330"
         },
         {
-          "text": "| 07 | Application Services | \u23F3 Not started |",
+          "text": "| 02 | Core Foundation | \uD83D\uDFE1 Setup complete / final review pending |",
           "source": "README.md:L331"
         },
         {
-          "text": "| 08 | Business Workflows | \u23F3 Not started |",
+          "text": "| 03 | Domain Entities | \u23F3 Not started |",
           "source": "README.md:L332"
         },
         {
-          "text": "| 09 | Enterprise Infrastructure | \u23F3 Not started |",
+          "text": "| 04 | EF Core \u0026 Database | \u23F3 Not started |",
           "source": "README.md:L333"
+        },
+        {
+          "text": "| 05 | Identity \u0026 Security | \u23F3 Not started |",
+          "source": "README.md:L334"
+        },
+        {
+          "text": "| 06 | DTOs \u0026 Validation | \u23F3 Not started |",
+          "source": "README.md:L335"
+        },
+        {
+          "text": "| 07 | Application Services | \u23F3 Not started |",
+          "source": "README.md:L336"
+        },
+        {
+          "text": "| 08 | Business Workflows | \u23F3 Not started |",
+          "source": "README.md:L337"
+        },
+        {
+          "text": "| 09 | Enterprise Infrastructure | \u23F3 Not started |",
+          "source": "README.md:L338"
         }
       ]
     }
@@ -3211,6 +3697,33 @@
       "target": "type:ElsheiekhHMS.Core.Domain.Organization.Entities.Department",
       "type": "declares",
       "evidence": "ElsheiekhHMS.Core/Domain/Organization/Entities/Department.cs:L6",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Core:ElsheiekhHMS.Core/Domain/Patients/Entities/Patient.cs",
+      "target": "type:ElsheiekhHMS.Core.Domain.Patients.Entities.Patient",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Core/Domain/Patients/Entities/Patient.cs:L8",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Core:ElsheiekhHMS.Core/Domain/Patients/Enums/BloodGroup.cs",
+      "target": "type:ElsheiekhHMS.Core.Domain.Patients.Enums.BloodGroup",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Core/Domain/Patients/Enums/BloodGroup.cs:L3",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Core:ElsheiekhHMS.Core/Domain/Patients/Enums/Gender.cs",
+      "target": "type:ElsheiekhHMS.Core.Domain.Patients.Enums.Gender",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Core/Domain/Patients/Enums/Gender.cs:L3",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -3360,6 +3873,15 @@
       "weight": 1
     },
     {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Domain/Patients/PatientTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Domain.Patients.PatientTests",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Patients/PatientTests.cs:L9",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
       "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Domain/Staff/DoctorScheduleTests.cs",
       "target": "type:ElsheiekhHMS.Tests.Unit.Domain.Staff.DoctorScheduleTests",
       "type": "declares",
@@ -3434,6 +3956,33 @@
     {
       "source": "project:ElsheiekhHMS.Core",
       "target": "file:ElsheiekhHMS.Core:ElsheiekhHMS.Core/Domain/Organization/Entities/Department.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Core/ElsheiekhHMS.Core.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Core",
+      "target": "file:ElsheiekhHMS.Core:ElsheiekhHMS.Core/Domain/Patients/Entities/Patient.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Core/ElsheiekhHMS.Core.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Core",
+      "target": "file:ElsheiekhHMS.Core:ElsheiekhHMS.Core/Domain/Patients/Enums/BloodGroup.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Core/ElsheiekhHMS.Core.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Core",
+      "target": "file:ElsheiekhHMS.Core:ElsheiekhHMS.Core/Domain/Patients/Enums/Gender.cs",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Core/ElsheiekhHMS.Core.csproj",
       "relation": "contains",
@@ -3517,6 +4066,24 @@
       "target": "namespace:ElsheiekhHMS.Core:ElsheiekhHMS.Core.Domain.Organization.Entities",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Core/Domain/Organization/Entities/Department.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Core",
+      "target": "namespace:ElsheiekhHMS.Core:ElsheiekhHMS.Core.Domain.Patients.Entities",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Core/Domain/Patients/Entities/Patient.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Core",
+      "target": "namespace:ElsheiekhHMS.Core:ElsheiekhHMS.Core.Domain.Patients.Enums",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Core/Domain/Patients/Enums/BloodGroup.cs",
       "relation": "contains",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -3640,6 +4207,15 @@
     },
     {
       "source": "project:ElsheiekhHMS.Tests",
+      "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Domain/Patients/PatientTests.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Tests",
       "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Domain/Staff/DoctorScheduleTests.cs",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
@@ -3679,6 +4255,15 @@
       "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Domain.Organization",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Organization/DepartmentTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Tests",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Domain.Patients",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Patients/PatientTests.cs",
       "relation": "contains",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -3958,6 +4543,51 @@
       "target": "namespace:ElsheiekhHMS.Core:ElsheiekhHMS.Core.Domain.Organization.Entities",
       "type": "namespace-membership",
       "evidence": "ElsheiekhHMS.Core/Domain/Organization/Entities/Department.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Core.Domain.Patients.Entities.Patient",
+      "target": "type:ElsheiekhHMS.Core.Interfaces.IHasConcurrencyToken",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Core/Domain/Patients/Entities/Patient.cs:L8",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Core.Domain.Patients.Entities.Patient",
+      "target": "type:ElsheiekhHMS.Core.Common.SoftDeletableEntity",
+      "type": "inherits",
+      "evidence": "ElsheiekhHMS.Core/Domain/Patients/Entities/Patient.cs:L8",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Core.Domain.Patients.Entities.Patient",
+      "target": "namespace:ElsheiekhHMS.Core:ElsheiekhHMS.Core.Domain.Patients.Entities",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Core/Domain/Patients/Entities/Patient.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Core.Domain.Patients.Enums.BloodGroup",
+      "target": "namespace:ElsheiekhHMS.Core:ElsheiekhHMS.Core.Domain.Patients.Enums",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Core/Domain/Patients/Enums/BloodGroup.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Core.Domain.Patients.Enums.Gender",
+      "target": "namespace:ElsheiekhHMS.Core:ElsheiekhHMS.Core.Domain.Patients.Enums",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Core/Domain/Patients/Enums/Gender.cs",
       "relation": "namespace-membership",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -4336,6 +4966,105 @@
       "target": "type:ElsheiekhHMS.Core.Exceptions.DomainValidationException",
       "type": "test-target",
       "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Organization/DepartmentTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Domain.Patients.PatientTests",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Domain.Patients",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Patients/PatientTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Domain.Patients.PatientTests",
+      "target": "type:ElsheiekhHMS.Core.Common.AuditableEntity",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Patients/PatientTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Domain.Patients.PatientTests",
+      "target": "type:ElsheiekhHMS.Core.Common.BaseEntity",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Patients/PatientTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Domain.Patients.PatientTests",
+      "target": "type:ElsheiekhHMS.Core.Common.SoftDeletableEntity",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Patients/PatientTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Domain.Patients.PatientTests",
+      "target": "type:ElsheiekhHMS.Core.Domain.Patients.Entities.Patient",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Patients/PatientTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Domain.Patients.PatientTests",
+      "target": "type:ElsheiekhHMS.Core.Domain.Patients.Enums.BloodGroup",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Patients/PatientTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Domain.Patients.PatientTests",
+      "target": "type:ElsheiekhHMS.Core.Domain.Patients.Enums.Gender",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Patients/PatientTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Domain.Patients.PatientTests",
+      "target": "type:ElsheiekhHMS.Core.Exceptions.BusinessRuleException",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Patients/PatientTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Domain.Patients.PatientTests",
+      "target": "type:ElsheiekhHMS.Core.Exceptions.DomainException",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Patients/PatientTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Domain.Patients.PatientTests",
+      "target": "type:ElsheiekhHMS.Core.Exceptions.DomainValidationException",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Patients/PatientTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Domain.Patients.PatientTests",
+      "target": "type:ElsheiekhHMS.Core.Interfaces.IHasConcurrencyToken",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Patients/PatientTests.cs (Roslyn-bound type/member use or base of test helper)",
       "relation": "test-target",
       "confidence": "EXTRACTED",
       "weight": 1

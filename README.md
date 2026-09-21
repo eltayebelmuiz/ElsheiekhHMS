@@ -2,10 +2,15 @@
 
 Enterprise Hospital Management System built with **.NET 10, ASP.NET Core, Blazor, Entity Framework Core, SQL Server, and ASP.NET Core Identity**.
 
-> **Current development stage:** Phase 02 — Core Foundation  
-> **Phase 01:** ✅ Complete  
-> **Phase 02 Setup:** ✅ Complete and verified  
-> **Next action:** Final Phase 02 review/checkpoint, then Phase 03 — Domain Entities
+> **Current development stage:** Phase 03 — Domain Entities (in progress)
+>
+> **Phase 01:** ✅ Complete
+>
+> **Phase 02 Setup:** ✅ Complete and verified
+>
+> **Phase 03A / 03B / 03C:** ✅ Complete
+>
+> **Next gate:** Phase 03D design review (not started)
 
 ---
 
