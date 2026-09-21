@@ -3,7 +3,7 @@
 **Version:** 1.0.0
 **Date:** September 20, 2026
 **Owner:** Eltayeb Elmuiz
-**Status:** Active — Phase 05 Identity & Security in progress; 05A, 05B, 05C, 05C-A, and 05D complete
+**Status:** Active — Phase 07 Application Services in progress; 07S allocator prerequisite complete; application-service sub-phases not started
 
 ---
 
@@ -913,9 +913,18 @@ git commit -m "Phase06: ViewModels, DTOs, ServiceResult usage pattern, PatientSe
 
 ## PHASE 07 — Application Services
 
-**Status: NOT STARTED.** The material in this section is planned design guidance only; no
-Phase 07 services, repositories, Unit of Work, or workflows are implemented in the current
-checkpoint.
+**Status: IN PROGRESS (07S prerequisite complete).** The material in this section is planned
+design guidance only; no Phase 07 application services, repositories, Unit of Work, or workflows
+are implemented in the current checkpoint.
+
+### Phase 07S — Allocator / Schema Prerequisite
+
+**Status: COMPLETE.** Infrastructure now contains database-backed PatientCode and queue-ticket
+allocation primitives. The approved `AddPhase07AllocatorInfrastructure` migration was applied
+exactly once to `ElsheiekhHMS_Dev`, and the physical allocator tables, checks, primary keys, and
+queue uniqueness `(QueueDate, SequenceNumber)` were verified. Patient phone remains non-unique;
+no application-service sub-phase has started. The next Phase 07 sub-phase requires its own design
+and implementation approval.
 
 ### Objective
 Implement all application-layer services. Services orchestrate validation, authorization checks, business rules, repository calls, and audit logging.
@@ -1860,10 +1869,10 @@ public async Task<ServiceResult<T>> DoSomethingAsync(Dto dto, string actorEmail)
 ## 16. Current Project Checkpoint
 
 ```
-Last completed phase:  Phase 06D — DTOs & Validation final integration/audit
-Current phase:         Phase 06 — DTOs & Validation complete
+Last completed phase:  Phase 07S — Allocator Infrastructure prerequisite
+Current phase:         Phase 07 — Application Services (in progress)
 Next phase:            Phase 07 — Application Services
-Next action:           Prepare and approve the Phase 07 Application Services design gate
+Next action:           Prepare and approve the next Phase 07 application-service design gate
 Known blockers:        None
 Important notes:
   - The current working codebase is the five-project .NET 10 ElsheiekhHMS solution

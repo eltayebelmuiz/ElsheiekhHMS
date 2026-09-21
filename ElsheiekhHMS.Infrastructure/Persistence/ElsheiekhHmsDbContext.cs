@@ -4,6 +4,7 @@ using ElsheiekhHMS.Core.Domain.Scheduling.Entities;
 using ElsheiekhHMS.Core.Domain.Staff.Entities;
 using ElsheiekhHMS.Infrastructure.Auditing.Entities;
 using ElsheiekhHMS.Infrastructure.Identity.Entities;
+using ElsheiekhHMS.Infrastructure.Persistence.Allocation;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
@@ -19,6 +20,8 @@ public sealed class ElsheiekhHmsDbContext(
     public DbSet<Appointment> Appointments => Set<Appointment>();
     public DbSet<WalkInQueueEntry> WalkInQueueEntries => Set<WalkInQueueEntry>();
     public DbSet<AuditLog> AuditLogs => Set<AuditLog>();
+    public DbSet<PatientCodeAllocation> PatientCodeAllocations => Set<PatientCodeAllocation>();
+    public DbSet<QueueTicketAllocation> QueueTicketAllocations => Set<QueueTicketAllocation>();
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

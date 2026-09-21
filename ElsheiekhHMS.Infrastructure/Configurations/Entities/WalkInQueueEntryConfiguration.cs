@@ -74,6 +74,9 @@ public sealed class WalkInQueueEntryConfiguration : IEntityTypeConfiguration<Wal
             entry.QueueDate,
             entry.RegisteredAt
         });
+        builder.HasIndex(entry => new { entry.QueueDate, entry.SequenceNumber })
+            .IsUnique()
+            .HasDatabaseName("UX_WalkInQueueEntries_QueueDate_SequenceNumber");
 
         builder.HasQueryFilter(entry => !entry.IsDeleted);
         builder.Property(entry => entry.RowVersion)

@@ -3,6 +3,7 @@ using ElsheiekhHMS.Core.Domain.Patients.Entities;
 using ElsheiekhHMS.Core.Domain.Scheduling.Entities;
 using ElsheiekhHMS.Core.Domain.Staff.Entities;
 using ElsheiekhHMS.Infrastructure.Persistence;
+using ElsheiekhHMS.Infrastructure.Persistence.Allocation;
 using Microsoft.EntityFrameworkCore;
 
 namespace ElsheiekhHMS.Tests.Unit.Infrastructure;
@@ -29,6 +30,8 @@ public sealed class ElsheiekhHmsDbContextTests
         Assert.Equal(typeof(DbSet<Patient>), dbSetProperties[nameof(context.Patients)]);
         Assert.Equal(typeof(DbSet<Appointment>), dbSetProperties[nameof(context.Appointments)]);
         Assert.Equal(typeof(DbSet<WalkInQueueEntry>), dbSetProperties[nameof(context.WalkInQueueEntries)]);
+        Assert.Equal(typeof(DbSet<PatientCodeAllocation>), dbSetProperties[nameof(context.PatientCodeAllocations)]);
+        Assert.Equal(typeof(DbSet<QueueTicketAllocation>), dbSetProperties[nameof(context.QueueTicketAllocations)]);
         Assert.DoesNotContain(dbSetProperties.Keys, name =>
             name is "Encounters" or "Admissions" or "ClinicalObservations");
     }

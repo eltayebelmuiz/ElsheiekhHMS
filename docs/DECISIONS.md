@@ -425,3 +425,36 @@ reactivation, queue-position, or ticket-generation behavior.
 
 [Architecture overview](ARCHITECTURE.md); [development roadmap](../DEVELOPMENT_ROADMAP.md);
 Phase 06 contract and validator sources under `ElsheiekhHMS.Application`.
+
+## ADR-017 — Phase 07S database-backed identifier allocation
+
+**Status:** Accepted
+**Phase:** 07S
+
+### Context
+
+Patient codes and walk-in queue tickets must remain unique under concurrent requests,
+application restarts, and multiple application instances. Queue identity is operationally
+scoped by date, while duplicate patient phone numbers remain valid.
+
+### Decision
+
+Keep allocation in Infrastructure and persist the next sequence in SQL Server allocation
+tables. Allocation uses a serialized transaction and atomic update/output operation rather
+than `MAX+1`, a process-local/static counter, or an identifier derived from a phone number
+or name. Walk-in queue uniqueness is the tuple `(QueueDate, SequenceNumber)` and does not
+include Department. Patient phone has no unique constraint. Development and integration
+verification databases remain separate.
+
+### Consequences
+
+The approved additive `AddPhase07AllocatorInfrastructure` migration owns the two allocation
+tables and queue uniqueness index. Application contracts remain persistence-neutral, and no
+repository, Unit of Work, MediatR, CQRS, broker, or cache is introduced by this prerequisite.
+The next Phase 07 service sub-phases must use these boundaries rather than reimplementing
+allocation in application code.
+
+### Evidence / Notes
+
+[Phase 07S allocator implementation](../ElsheiekhHMS.Infrastructure/Persistence/Allocation/);
+[Architecture overview](ARCHITECTURE.md); [development roadmap](../DEVELOPMENT_ROADMAP.md).

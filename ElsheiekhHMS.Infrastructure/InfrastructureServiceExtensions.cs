@@ -3,6 +3,7 @@ using ElsheiekhHMS.Infrastructure.Auditing;
 using ElsheiekhHMS.Application.Common.Auditing;
 using ElsheiekhHMS.Infrastructure.Identity;
 using ElsheiekhHMS.Infrastructure.Identity.Entities;
+using ElsheiekhHMS.Infrastructure.Persistence.Allocation;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -33,6 +34,8 @@ public static class InfrastructureServiceExtensions
         services.AddScoped<IAuditEventWriter, AuditEventWriter>();
         services.AddScoped<AccountLoginEligibility>();
         services.AddScoped<AdministratorBootstrapper>();
+        services.AddScoped<PatientCodeAllocator>();
+        services.AddScoped<QueueTicketAllocator>();
         services.AddDbContext<ElsheiekhHmsDbContext>((serviceProvider, options) =>
         {
             options.UseSqlServer(connectionString);

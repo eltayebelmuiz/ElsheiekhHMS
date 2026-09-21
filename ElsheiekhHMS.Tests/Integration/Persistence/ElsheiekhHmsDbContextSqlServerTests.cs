@@ -479,7 +479,7 @@ public sealed class ElsheiekhHmsDbContextSqlServerTests(
     }
 
     [Fact]
-    public async Task Queue_ticket_values_are_not_globally_unique()
+    public async Task Queue_ticket_values_can_repeat_on_different_operational_dates()
     {
         var department = CreateDepartment();
         var firstPatient = CreatePatient();
@@ -490,10 +490,52 @@ public sealed class ElsheiekhHmsDbContextSqlServerTests(
         context.Patients.AddRange(firstPatient, secondPatient);
         await context.SaveChangesAsync();
         context.WalkInQueueEntries.AddRange(
-            CreateQueueEntry(firstPatient.Id, department.Id),
-            CreateQueueEntry(secondPatient.Id, department.Id));
+            CreateQueueEntry(firstPatient.Id, department.Id, new DateOnly(2026, 11, 2), 7),
+            CreateQueueEntry(secondPatient.Id, department.Id, new DateOnly(2026, 11, 2), 8),
+            CreateQueueEntry(secondPatient.Id, department.Id, new DateOnly(2026, 11, 3), 7));
 
         await context.SaveChangesAsync();
+    }
+
+    [Fact]
+    public async Task Duplicate_queue_ticket_on_same_operational_date_is_rejected()
+    {
+        var department = CreateDepartment();
+        var firstPatient = CreatePatient();
+        var secondPatient = CreatePatient();
+
+        await using var context = fixture.CreateContext();
+        context.Departments.Add(department);
+        context.Patients.AddRange(firstPatient, secondPatient);
+        await context.SaveChangesAsync();
+        context.WalkInQueueEntries.Add(
+            CreateQueueEntry(firstPatient.Id, department.Id, new DateOnly(2026, 11, 4), 9));
+        await context.SaveChangesAsync();
+        context.WalkInQueueEntries.Add(
+            CreateQueueEntry(secondPatient.Id, department.Id, new DateOnly(2026, 11, 4), 9));
+
+        await Assert.ThrowsAsync<DbUpdateException>(() => context.SaveChangesAsync());
+    }
+
+    [Fact]
+    public async Task Queue_ticket_uniqueness_ignores_department()
+    {
+        var firstDepartment = CreateDepartment();
+        var secondDepartment = CreateDepartment();
+        var firstPatient = CreatePatient();
+        var secondPatient = CreatePatient();
+
+        await using var context = fixture.CreateContext();
+        context.Departments.AddRange(firstDepartment, secondDepartment);
+        context.Patients.AddRange(firstPatient, secondPatient);
+        await context.SaveChangesAsync();
+        context.WalkInQueueEntries.Add(
+            CreateQueueEntry(firstPatient.Id, firstDepartment.Id, new DateOnly(2026, 11, 5), 10));
+        await context.SaveChangesAsync();
+        context.WalkInQueueEntries.Add(
+            CreateQueueEntry(secondPatient.Id, secondDepartment.Id, new DateOnly(2026, 11, 5), 10));
+
+        await Assert.ThrowsAsync<DbUpdateException>(() => context.SaveChangesAsync());
     }
 
     [Fact]
@@ -580,7 +622,7 @@ public sealed class ElsheiekhHmsDbContextSqlServerTests(
             seed.Departments.Add(department);
             seed.Patients.Add(patient);
             await seed.SaveChangesAsync();
-            entry = CreateQueueEntry(patient.Id, department.Id);
+            entry = CreateQueueEntry(patient.Id, department.Id, new DateOnly(2026, 11, 6), 11);
             seed.WalkInQueueEntries.Add(entry);
             await seed.SaveChangesAsync();
         }
@@ -683,7 +725,7 @@ public sealed class ElsheiekhHmsDbContextSqlServerTests(
             context.Departments.Add(department);
             context.Patients.Add(patient);
             await context.SaveChangesAsync();
-            var entry = CreateQueueEntry(patient.Id, department.Id);
+            var entry = CreateQueueEntry(patient.Id, department.Id, new DateOnly(2026, 11, 7), 12);
             context.WalkInQueueEntries.Add(entry);
             await context.SaveChangesAsync();
             queueEntryId = entry.Id;
@@ -768,13 +810,17 @@ public sealed class ElsheiekhHmsDbContextSqlServerTests(
             Utc(23),
             "integration");
 
-    private static WalkInQueueEntry CreateQueueEntry(int patientId, int departmentId) =>
+    private static WalkInQueueEntry CreateQueueEntry(
+        int patientId,
+        int departmentId,
+        DateOnly queueDate,
+        int sequenceNumber) =>
         new(
             patientId,
             departmentId,
-            new DateOnly(2026, 11, 2),
-            7,
-            "A-007",
+            queueDate,
+            sequenceNumber,
+            $"A-{sequenceNumber:D3}",
             QueuePriority.Normal,
             "integration queue",
             Utc(24),

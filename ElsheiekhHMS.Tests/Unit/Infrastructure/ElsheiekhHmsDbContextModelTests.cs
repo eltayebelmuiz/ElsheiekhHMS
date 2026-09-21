@@ -4,6 +4,7 @@ using ElsheiekhHMS.Core.Domain.Staff.Entities;
 using ElsheiekhHMS.Core.Domain.Scheduling.Entities;
 using ElsheiekhHMS.Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using System.Reflection;
 
@@ -25,6 +26,8 @@ public sealed class ElsheiekhHmsDbContextModelTests
             ["Appointment", "Department", "Doctor", "DoctorSchedule", "Patient", "WalkInQueueEntry"],
             expected => Assert.Contains(expected, entityNames));
         Assert.Contains("ApplicationUser", entityNames);
+        Assert.Contains("PatientCodeAllocation", entityNames);
+        Assert.Contains("QueueTicketAllocation", entityNames);
     }
 
     [Fact]
@@ -147,6 +150,42 @@ public sealed class ElsheiekhHmsDbContextModelTests
             index.Properties.Select(property => property.Name).SequenceEqual([nameof(Patient.Phone)]) && index.IsUnique);
         Assert.DoesNotContain(queue.GetIndexes(), index =>
             index.Properties.Select(property => property.Name).SequenceEqual([nameof(WalkInQueueEntry.QueueNumber)]) && index.IsUnique);
+
+        AssertIndex(queue,
+            [nameof(WalkInQueueEntry.QueueDate), nameof(WalkInQueueEntry.SequenceNumber)],
+            unique: true);
+        var queueTicketIndex = queue.GetIndexes().Single(index =>
+            index.Properties.Select(property => property.Name).SequenceEqual(
+                [nameof(WalkInQueueEntry.QueueDate), nameof(WalkInQueueEntry.SequenceNumber)]));
+        Assert.Equal("UX_WalkInQueueEntries_QueueDate_SequenceNumber", queueTicketIndex.GetDatabaseName());
+    }
+
+    [Fact]
+    public void Allocator_tables_have_only_the_approved_scope_keys_and_sequence_columns()
+    {
+        using var context = CreateContext();
+        var designModel = context.GetService<IDesignTimeModel>().Model;
+
+        var patient = designModel.FindEntityType("ElsheiekhHMS.Infrastructure.Persistence.Allocation.PatientCodeAllocation")!;
+        Assert.Equal("PatientCodeAllocations", patient.GetTableName());
+        Assert.Equal("CodeYear", patient.FindProperty("CodeYear")!.GetColumnName());
+        Assert.Equal("NextSequenceNumber", patient.FindProperty("NextSequenceNumber")!.GetColumnName());
+        Assert.Equal(["CodeYear"], patient.FindPrimaryKey()!.Properties.Select(property => property.Name));
+        Assert.Contains(patient.GetCheckConstraints(), constraint =>
+            constraint.Sql.Contains("NextSequenceNumber", StringComparison.Ordinal) &&
+            constraint.Sql.Contains("100000", StringComparison.Ordinal));
+
+        var queue = designModel.FindEntityType("ElsheiekhHMS.Infrastructure.Persistence.Allocation.QueueTicketAllocation")!;
+        Assert.Equal("QueueTicketAllocations", queue.GetTableName());
+        Assert.Equal("QueueDate", queue.FindProperty("QueueDate")!.GetColumnName());
+        Assert.Equal("date", queue.FindProperty("QueueDate")!.GetColumnType());
+        Assert.Equal("NextSequenceNumber", queue.FindProperty("NextSequenceNumber")!.GetColumnName());
+        Assert.Equal(["QueueDate"], queue.FindPrimaryKey()!.Properties.Select(property => property.Name));
+        Assert.Contains(queue.GetCheckConstraints(), constraint =>
+            constraint.Sql.Contains("NextSequenceNumber", StringComparison.Ordinal) &&
+            constraint.Sql.Contains("1000", StringComparison.Ordinal));
+        Assert.Empty(patient.GetForeignKeys());
+        Assert.Empty(queue.GetForeignKeys());
     }
 
     [Fact]
