@@ -11,12 +11,12 @@
 <footer>Architectural index, not authoritative source. Check freshness with <code>tools/graphify.ps1 -Check</code> before relying on this snapshot. No network requests or external libraries.</footer>
 <script id="graph-data" type="application/json">{
   "schemaVersion": "1.0",
-  "generatedAtUtc": "2026-09-20T18:57:06.7223005\u002B00:00",
-  "gitCommit": "6c28aa7a5e3aba30e444d81af7c6ed0afbd0a7bf",
+  "generatedAtUtc": "2026-09-21T06:30:52.7547477\u002B00:00",
+  "gitCommit": "beaf42e92c64823c4ac77d14e827699d7febac95",
   "gitBranch": "main",
   "workingTreeDirty": true,
-  "gitStatusAtGeneration": "M speckit/my-project/.specify/memory/constitution.md\n?? ElsheiekhHMS.Core/Domain/Organization/Entities/Department.cs\n?? ElsheiekhHMS.Tests/Unit/Domain/Organization/DepartmentTests.cs\n?? docs/superpowers/plans/2026-09-20-phase03a-department-foundation.md\n?? docs/superpowers/specs/2026-09-20-phase03a-department-foundation-design.md",
-  "sourceFingerprint": "38dfc3a2977b26d74b5a269cea8c5384166d5b7a5708aec51cc72a3533bb00c4",
+  "gitStatusAtGeneration": "M graphify-out/GRAPH_REPORT.md\n M graphify-out/graph.html\n M graphify-out/graph.json\n?? ElsheiekhHMS.Core/Domain/Staff/Entities/Doctor.cs\n?? ElsheiekhHMS.Core/Domain/Staff/Entities/DoctorSchedule.cs\n?? ElsheiekhHMS.Core/Domain/Staff/Enums/DoctorStatus.cs\n?? ElsheiekhHMS.Tests/Unit/Domain/Staff/DoctorScheduleTests.cs\n?? ElsheiekhHMS.Tests/Unit/Domain/Staff/DoctorTests.cs\n?? docs/superpowers/plans/2026-09-20-phase03b-doctor-availability.md\n?? docs/superpowers/specs/2026-09-20-phase03b-doctor-availability-design.md",
+  "sourceFingerprint": "8d3722716b6561b637232acf88bc20fcc6d307998933e870807e26dd77a9373d",
   "generatorFingerprint": "03eee0a8853a7e84af6cbe571d34e6f7d820505ac8f5670a719d0d63b113840c",
   "fingerprintAlgorithm": "SHA-256 of ordinal path \u002B NUL \u002B content SHA-256 records joined with LF; sourceManifest defines inputs; graphify-out excluded everywhere",
   "sourceManifest": [
@@ -43,6 +43,18 @@
     {
       "path": "ElsheiekhHMS.Core/Domain/Organization/Entities/Department.cs",
       "sha256": "f098ef48a0614ceaedb5afe844f07415c8df16d9e8210ee80a3f743aed21b836"
+    },
+    {
+      "path": "ElsheiekhHMS.Core/Domain/Staff/Entities/Doctor.cs",
+      "sha256": "8dd95e6b5b0236b0b6032bdeed850d452033244697a998c301ac30f8ad416111"
+    },
+    {
+      "path": "ElsheiekhHMS.Core/Domain/Staff/Entities/DoctorSchedule.cs",
+      "sha256": "d62497ca3b2fe79804c972c09e5cdaf97d778847eee1b3545284ac3547d5c03c"
+    },
+    {
+      "path": "ElsheiekhHMS.Core/Domain/Staff/Enums/DoctorStatus.cs",
+      "sha256": "dc7abb5ca6b15855891306730cb63712df9ecc927112431901c34a04967ba626"
     },
     {
       "path": "ElsheiekhHMS.Core/ElsheiekhHMS.Core.csproj",
@@ -95,6 +107,14 @@
     {
       "path": "ElsheiekhHMS.Tests/Unit/Domain/Organization/DepartmentTests.cs",
       "sha256": "9aadb52ec8695293ed0fe2a02ecc64a533bdecf1b78cbd133ae523bcbf655670"
+    },
+    {
+      "path": "ElsheiekhHMS.Tests/Unit/Domain/Staff/DoctorScheduleTests.cs",
+      "sha256": "96fe940babeb75c08584e8af96bb856c2f9a327823315fbb07329284b8695101"
+    },
+    {
+      "path": "ElsheiekhHMS.Tests/Unit/Domain/Staff/DoctorTests.cs",
+      "sha256": "5cd83887538641ffbd6fe66358362a5fabd42212cf47be55d69762cc43685ad2"
     },
     {
       "path": "ElsheiekhHMS.Web/Components/App.razor",
@@ -164,16 +184,16 @@
   },
   "summary": {
     "projectCount": 5,
-    "sourceFileCount": 16,
+    "sourceFileCount": 21,
     "razorFileCount": 11,
-    "typeCount": 18,
+    "typeCount": 23,
     "interfaceCount": 1,
-    "testClassCount": 5,
-    "testMethodCount": 13,
-    "testCount": 19,
+    "testClassCount": 7,
+    "testMethodCount": 46,
+    "testCount": 67,
     "dynamicTheoryCount": 0,
-    "nodeCount": 61,
-    "edgeCount": 112
+    "nodeCount": 74,
+    "edgeCount": 148
   },
   "projects": [
     {
@@ -215,6 +235,9 @@
         "ElsheiekhHMS.Core/Common/BaseEntity.cs",
         "ElsheiekhHMS.Core/Common/SoftDeletableEntity.cs",
         "ElsheiekhHMS.Core/Domain/Organization/Entities/Department.cs",
+        "ElsheiekhHMS.Core/Domain/Staff/Entities/Doctor.cs",
+        "ElsheiekhHMS.Core/Domain/Staff/Entities/DoctorSchedule.cs",
+        "ElsheiekhHMS.Core/Domain/Staff/Enums/DoctorStatus.cs",
         "ElsheiekhHMS.Core/Exceptions/BusinessRuleException.cs",
         "ElsheiekhHMS.Core/Exceptions/DomainException.cs",
         "ElsheiekhHMS.Core/Exceptions/DomainValidationException.cs",
@@ -291,7 +314,9 @@
         "ElsheiekhHMS.Tests/Unit/Domain/Common/BaseEntityTests.cs",
         "ElsheiekhHMS.Tests/Unit/Domain/Common/SoftDeletableEntityTests.cs",
         "ElsheiekhHMS.Tests/Unit/Domain/Exceptions/DomainExceptionTests.cs",
-        "ElsheiekhHMS.Tests/Unit/Domain/Organization/DepartmentTests.cs"
+        "ElsheiekhHMS.Tests/Unit/Domain/Organization/DepartmentTests.cs",
+        "ElsheiekhHMS.Tests/Unit/Domain/Staff/DoctorScheduleTests.cs",
+        "ElsheiekhHMS.Tests/Unit/Domain/Staff/DoctorTests.cs"
       ]
     },
     {
@@ -387,6 +412,54 @@
       "project": "ElsheiekhHMS.Core",
       "file": "ElsheiekhHMS.Core/Domain/Organization/Entities/Department.cs",
       "source_file": "ElsheiekhHMS.Core/Domain/Organization/Entities/Department.cs",
+      "external": false,
+      "community": 1,
+      "community_name": "ElsheiekhHMS.Core",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "file:ElsheiekhHMS.Core:ElsheiekhHMS.Core/Domain/Staff/Entities/Doctor.cs",
+      "name": "Doctor.cs",
+      "label": "Doctor.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Core",
+      "file": "ElsheiekhHMS.Core/Domain/Staff/Entities/Doctor.cs",
+      "source_file": "ElsheiekhHMS.Core/Domain/Staff/Entities/Doctor.cs",
+      "external": false,
+      "community": 1,
+      "community_name": "ElsheiekhHMS.Core",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "file:ElsheiekhHMS.Core:ElsheiekhHMS.Core/Domain/Staff/Entities/DoctorSchedule.cs",
+      "name": "DoctorSchedule.cs",
+      "label": "DoctorSchedule.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Core",
+      "file": "ElsheiekhHMS.Core/Domain/Staff/Entities/DoctorSchedule.cs",
+      "source_file": "ElsheiekhHMS.Core/Domain/Staff/Entities/DoctorSchedule.cs",
+      "external": false,
+      "community": 1,
+      "community_name": "ElsheiekhHMS.Core",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "file:ElsheiekhHMS.Core:ElsheiekhHMS.Core/Domain/Staff/Enums/DoctorStatus.cs",
+      "name": "DoctorStatus.cs",
+      "label": "DoctorStatus.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Core",
+      "file": "ElsheiekhHMS.Core/Domain/Staff/Enums/DoctorStatus.cs",
+      "source_file": "ElsheiekhHMS.Core/Domain/Staff/Enums/DoctorStatus.cs",
       "external": false,
       "community": 1,
       "community_name": "ElsheiekhHMS.Core",
@@ -547,6 +620,38 @@
       "project": "ElsheiekhHMS.Tests",
       "file": "ElsheiekhHMS.Tests/Unit/Domain/Organization/DepartmentTests.cs",
       "source_file": "ElsheiekhHMS.Tests/Unit/Domain/Organization/DepartmentTests.cs",
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Domain/Staff/DoctorScheduleTests.cs",
+      "name": "DoctorScheduleTests.cs",
+      "label": "DoctorScheduleTests.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Tests",
+      "file": "ElsheiekhHMS.Tests/Unit/Domain/Staff/DoctorScheduleTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Unit/Domain/Staff/DoctorScheduleTests.cs",
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Domain/Staff/DoctorTests.cs",
+      "name": "DoctorTests.cs",
+      "label": "DoctorTests.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Tests",
+      "file": "ElsheiekhHMS.Tests/Unit/Domain/Staff/DoctorTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Unit/Domain/Staff/DoctorTests.cs",
       "external": false,
       "community": 3,
       "community_name": "ElsheiekhHMS.Tests",
@@ -792,6 +897,36 @@
       "dynamicTheories": 0
     },
     {
+      "id": "namespace:ElsheiekhHMS.Core:ElsheiekhHMS.Core.Domain.Staff.Entities",
+      "name": "ElsheiekhHMS.Core.Domain.Staff.Entities",
+      "label": "ElsheiekhHMS.Core.Domain.Staff.Entities",
+      "kind": "namespace",
+      "type": "namespace",
+      "project": "ElsheiekhHMS.Core",
+      "namespace": "ElsheiekhHMS.Core.Domain.Staff.Entities",
+      "external": false,
+      "community": 1,
+      "community_name": "ElsheiekhHMS.Core",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "namespace:ElsheiekhHMS.Core:ElsheiekhHMS.Core.Domain.Staff.Enums",
+      "name": "ElsheiekhHMS.Core.Domain.Staff.Enums",
+      "label": "ElsheiekhHMS.Core.Domain.Staff.Enums",
+      "kind": "namespace",
+      "type": "namespace",
+      "project": "ElsheiekhHMS.Core",
+      "namespace": "ElsheiekhHMS.Core.Domain.Staff.Enums",
+      "external": false,
+      "community": 1,
+      "community_name": "ElsheiekhHMS.Core",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
       "id": "namespace:ElsheiekhHMS.Core:ElsheiekhHMS.Core.Exceptions",
       "name": "ElsheiekhHMS.Core.Exceptions",
       "label": "ElsheiekhHMS.Core.Exceptions",
@@ -874,6 +1009,21 @@
       "type": "namespace",
       "project": "ElsheiekhHMS.Tests",
       "namespace": "ElsheiekhHMS.Tests.Unit.Domain.Organization",
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Domain.Staff",
+      "name": "ElsheiekhHMS.Tests.Unit.Domain.Staff",
+      "label": "ElsheiekhHMS.Tests.Unit.Domain.Staff",
+      "kind": "namespace",
+      "type": "namespace",
+      "project": "ElsheiekhHMS.Tests",
+      "namespace": "ElsheiekhHMS.Tests.Unit.Domain.Staff",
       "external": false,
       "community": 3,
       "community_name": "ElsheiekhHMS.Tests",
@@ -1085,6 +1235,78 @@
       "source_file": "ElsheiekhHMS.Core/Domain/Organization/Entities/Department.cs",
       "source_location": "L6",
       "line": 6,
+      "accessibility": "public",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 1,
+      "community_name": "ElsheiekhHMS.Core",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Core.Domain.Staff.Entities.Doctor",
+      "name": "Doctor",
+      "label": "Doctor",
+      "kind": "class",
+      "type": "class",
+      "fullName": "ElsheiekhHMS.Core.Domain.Staff.Entities.Doctor",
+      "project": "ElsheiekhHMS.Core",
+      "namespace": "ElsheiekhHMS.Core.Domain.Staff.Entities",
+      "file": "ElsheiekhHMS.Core/Domain/Staff/Entities/Doctor.cs",
+      "source_file": "ElsheiekhHMS.Core/Domain/Staff/Entities/Doctor.cs",
+      "source_location": "L8",
+      "line": 8,
+      "accessibility": "public",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 1,
+      "community_name": "ElsheiekhHMS.Core",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Core.Domain.Staff.Entities.DoctorSchedule",
+      "name": "DoctorSchedule",
+      "label": "DoctorSchedule",
+      "kind": "class",
+      "type": "class",
+      "fullName": "ElsheiekhHMS.Core.Domain.Staff.Entities.DoctorSchedule",
+      "project": "ElsheiekhHMS.Core",
+      "namespace": "ElsheiekhHMS.Core.Domain.Staff.Entities",
+      "file": "ElsheiekhHMS.Core/Domain/Staff/Entities/DoctorSchedule.cs",
+      "source_file": "ElsheiekhHMS.Core/Domain/Staff/Entities/DoctorSchedule.cs",
+      "source_location": "L6",
+      "line": 6,
+      "accessibility": "public",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 1,
+      "community_name": "ElsheiekhHMS.Core",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Core.Domain.Staff.Enums.DoctorStatus",
+      "name": "DoctorStatus",
+      "label": "DoctorStatus",
+      "kind": "enum",
+      "type": "enum",
+      "fullName": "ElsheiekhHMS.Core.Domain.Staff.Enums.DoctorStatus",
+      "project": "ElsheiekhHMS.Core",
+      "namespace": "ElsheiekhHMS.Core.Domain.Staff.Enums",
+      "file": "ElsheiekhHMS.Core/Domain/Staff/Enums/DoctorStatus.cs",
+      "source_file": "ElsheiekhHMS.Core/Domain/Staff/Enums/DoctorStatus.cs",
+      "source_location": "L3",
+      "line": 3,
       "accessibility": "public",
       "abstract": false,
       "sealed": true,
@@ -1427,6 +1649,89 @@
       "dynamicTheories": 0
     },
     {
+      "id": "type:ElsheiekhHMS.Tests.Unit.Domain.Staff.DoctorScheduleTests",
+      "name": "DoctorScheduleTests",
+      "label": "DoctorScheduleTests",
+      "kind": "test-class",
+      "type": "test-class",
+      "fullName": "ElsheiekhHMS.Tests.Unit.Domain.Staff.DoctorScheduleTests",
+      "project": "ElsheiekhHMS.Tests",
+      "namespace": "ElsheiekhHMS.Tests.Unit.Domain.Staff",
+      "file": "ElsheiekhHMS.Tests/Unit/Domain/Staff/DoctorScheduleTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Unit/Domain/Staff/DoctorScheduleTests.cs",
+      "source_location": "L7",
+      "line": 7,
+      "accessibility": "public",
+      "abstract": false,
+      "sealed": false,
+      "static": false,
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [
+        "AddSchedule_accepts_adjacent_and_different_day_intervals",
+        "AddSchedule_creates_owned_active_schedule_with_audit_metadata",
+        "AddSchedule_rejects_invalid_interval_or_slot_duration",
+        "AddSchedule_rejects_same_day_overlap",
+        "AddSchedule_rejects_undefined_day_without_mutating_doctor",
+        "Deleted_doctor_rejects_schedule_addition_and_retirement",
+        "Doctor_cannot_retire_schedule_owned_by_another_doctor",
+        "Inactive_doctor_rejects_schedule_addition_and_retirement",
+        "New_doctor_has_no_schedules",
+        "On_leave_doctor_can_administer_schedules",
+        "Repeated_retirement_preserves_first_retirement_metadata",
+        "Retired_schedule_no_longer_blocks_replacement_interval",
+        "RetireSchedule_preserves_schedule_and_records_audit_metadata"
+      ],
+      "staticTestCases": 21,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Tests.Unit.Domain.Staff.DoctorTests",
+      "name": "DoctorTests",
+      "label": "DoctorTests",
+      "kind": "test-class",
+      "type": "test-class",
+      "fullName": "ElsheiekhHMS.Tests.Unit.Domain.Staff.DoctorTests",
+      "project": "ElsheiekhHMS.Tests",
+      "namespace": "ElsheiekhHMS.Tests.Unit.Domain.Staff",
+      "file": "ElsheiekhHMS.Tests/Unit/Domain/Staff/DoctorTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Unit/Domain/Staff/DoctorTests.cs",
+      "source_location": "L8",
+      "line": 8,
+      "accessibility": "public",
+      "abstract": false,
+      "sealed": false,
+      "static": false,
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [
+        "ChangeDepartment_changes_department_and_records_audit_metadata",
+        "Constructor_allows_gp_without_specialization",
+        "Constructor_creates_active_doctor_with_normalized_values_and_audit_metadata",
+        "Constructor_rejects_missing_doctor_code",
+        "Constructor_rejects_missing_full_name",
+        "Constructor_rejects_negative_consultation_fee",
+        "Constructor_rejects_nonpositive_department_id",
+        "Constructor_requires_specialization_for_non_gp_doctor",
+        "Deactivate_accepts_active_or_on_leave_doctor",
+        "Deleted_doctor_rejects_all_lifecycle_changes",
+        "Inactive_doctor_rejects_professional_department_and_lifecycle_changes",
+        "Invalid_department_change_preserves_department_and_audit_metadata",
+        "Invalid_professional_update_preserves_values_and_audit_metadata",
+        "Invalid_status_transition_preserves_status_and_audit_metadata",
+        "MarkDeleted_rejects_active_or_on_leave_doctor",
+        "MarkDeleted_soft_deletes_inactive_doctor_with_consistent_metadata",
+        "PlaceOnLeave_changes_active_doctor_and_records_audit_metadata",
+        "Repeated_deletion_preserves_first_deletion_metadata",
+        "ReturnToActive_changes_on_leave_doctor_and_records_audit_metadata",
+        "UpdateProfessionalDetails_changes_values_and_records_audit_metadata"
+      ],
+      "staticTestCases": 27,
+      "dynamicTheories": 0
+    },
+    {
       "id": "type:System.Exception",
       "name": "Exception",
       "label": "Exception",
@@ -1484,6 +1789,33 @@
       "target": "type:ElsheiekhHMS.Core.Domain.Organization.Entities.Department",
       "type": "declares",
       "evidence": "ElsheiekhHMS.Core/Domain/Organization/Entities/Department.cs:L6",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Core:ElsheiekhHMS.Core/Domain/Staff/Entities/Doctor.cs",
+      "target": "type:ElsheiekhHMS.Core.Domain.Staff.Entities.Doctor",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Core/Domain/Staff/Entities/Doctor.cs:L8",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Core:ElsheiekhHMS.Core/Domain/Staff/Entities/DoctorSchedule.cs",
+      "target": "type:ElsheiekhHMS.Core.Domain.Staff.Entities.DoctorSchedule",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Core/Domain/Staff/Entities/DoctorSchedule.cs:L6",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Core:ElsheiekhHMS.Core/Domain/Staff/Enums/DoctorStatus.cs",
+      "target": "type:ElsheiekhHMS.Core.Domain.Staff.Enums.DoctorStatus",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Core/Domain/Staff/Enums/DoctorStatus.cs:L3",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -1606,6 +1938,24 @@
       "weight": 1
     },
     {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Domain/Staff/DoctorScheduleTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Domain.Staff.DoctorScheduleTests",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Staff/DoctorScheduleTests.cs:L7",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Domain/Staff/DoctorTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Domain.Staff.DoctorTests",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Staff/DoctorTests.cs:L8",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
       "source": "project:ElsheiekhHMS.Application",
       "target": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/ApplicationServiceExtensions.cs",
       "type": "contains",
@@ -1670,6 +2020,33 @@
     },
     {
       "source": "project:ElsheiekhHMS.Core",
+      "target": "file:ElsheiekhHMS.Core:ElsheiekhHMS.Core/Domain/Staff/Entities/Doctor.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Core/ElsheiekhHMS.Core.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Core",
+      "target": "file:ElsheiekhHMS.Core:ElsheiekhHMS.Core/Domain/Staff/Entities/DoctorSchedule.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Core/ElsheiekhHMS.Core.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Core",
+      "target": "file:ElsheiekhHMS.Core:ElsheiekhHMS.Core/Domain/Staff/Enums/DoctorStatus.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Core/ElsheiekhHMS.Core.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Core",
       "target": "file:ElsheiekhHMS.Core:ElsheiekhHMS.Core/Exceptions/BusinessRuleException.cs",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Core/ElsheiekhHMS.Core.csproj",
@@ -1718,6 +2095,24 @@
       "target": "namespace:ElsheiekhHMS.Core:ElsheiekhHMS.Core.Domain.Organization.Entities",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Core/Domain/Organization/Entities/Department.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Core",
+      "target": "namespace:ElsheiekhHMS.Core:ElsheiekhHMS.Core.Domain.Staff.Entities",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Core/Domain/Staff/Entities/Doctor.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Core",
+      "target": "namespace:ElsheiekhHMS.Core:ElsheiekhHMS.Core.Domain.Staff.Enums",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Core/Domain/Staff/Enums/DoctorStatus.cs",
       "relation": "contains",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -1823,6 +2218,24 @@
     },
     {
       "source": "project:ElsheiekhHMS.Tests",
+      "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Domain/Staff/DoctorScheduleTests.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Tests",
+      "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Domain/Staff/DoctorTests.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Tests",
       "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Domain.Common",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Common/AuditableEntityTests.cs",
@@ -1844,6 +2257,15 @@
       "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Domain.Organization",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Organization/DepartmentTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Tests",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Domain.Staff",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Staff/DoctorScheduleTests.cs",
       "relation": "contains",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -2114,6 +2536,51 @@
       "target": "namespace:ElsheiekhHMS.Core:ElsheiekhHMS.Core.Domain.Organization.Entities",
       "type": "namespace-membership",
       "evidence": "ElsheiekhHMS.Core/Domain/Organization/Entities/Department.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Core.Domain.Staff.Entities.Doctor",
+      "target": "type:ElsheiekhHMS.Core.Common.SoftDeletableEntity",
+      "type": "inherits",
+      "evidence": "ElsheiekhHMS.Core/Domain/Staff/Entities/Doctor.cs:L8",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Core.Domain.Staff.Entities.Doctor",
+      "target": "namespace:ElsheiekhHMS.Core:ElsheiekhHMS.Core.Domain.Staff.Entities",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Core/Domain/Staff/Entities/Doctor.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Core.Domain.Staff.Entities.DoctorSchedule",
+      "target": "type:ElsheiekhHMS.Core.Common.AuditableEntity",
+      "type": "inherits",
+      "evidence": "ElsheiekhHMS.Core/Domain/Staff/Entities/DoctorSchedule.cs:L6",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Core.Domain.Staff.Entities.DoctorSchedule",
+      "target": "namespace:ElsheiekhHMS.Core:ElsheiekhHMS.Core.Domain.Staff.Entities",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Core/Domain/Staff/Entities/DoctorSchedule.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Core.Domain.Staff.Enums.DoctorStatus",
+      "target": "namespace:ElsheiekhHMS.Core:ElsheiekhHMS.Core.Domain.Staff.Enums",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Core/Domain/Staff/Enums/DoctorStatus.cs",
       "relation": "namespace-membership",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -2447,6 +2914,168 @@
       "target": "type:ElsheiekhHMS.Core.Exceptions.DomainValidationException",
       "type": "test-target",
       "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Organization/DepartmentTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Domain.Staff.DoctorScheduleTests",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Domain.Staff",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Staff/DoctorScheduleTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Domain.Staff.DoctorScheduleTests",
+      "target": "type:ElsheiekhHMS.Core.Common.AuditableEntity",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Staff/DoctorScheduleTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Domain.Staff.DoctorScheduleTests",
+      "target": "type:ElsheiekhHMS.Core.Common.BaseEntity",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Staff/DoctorScheduleTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Domain.Staff.DoctorScheduleTests",
+      "target": "type:ElsheiekhHMS.Core.Common.SoftDeletableEntity",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Staff/DoctorScheduleTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Domain.Staff.DoctorScheduleTests",
+      "target": "type:ElsheiekhHMS.Core.Domain.Staff.Entities.Doctor",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Staff/DoctorScheduleTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Domain.Staff.DoctorScheduleTests",
+      "target": "type:ElsheiekhHMS.Core.Domain.Staff.Entities.DoctorSchedule",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Staff/DoctorScheduleTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Domain.Staff.DoctorScheduleTests",
+      "target": "type:ElsheiekhHMS.Core.Exceptions.BusinessRuleException",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Staff/DoctorScheduleTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Domain.Staff.DoctorScheduleTests",
+      "target": "type:ElsheiekhHMS.Core.Exceptions.DomainException",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Staff/DoctorScheduleTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Domain.Staff.DoctorScheduleTests",
+      "target": "type:ElsheiekhHMS.Core.Exceptions.DomainValidationException",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Staff/DoctorScheduleTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Domain.Staff.DoctorTests",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Domain.Staff",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Staff/DoctorTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Domain.Staff.DoctorTests",
+      "target": "type:ElsheiekhHMS.Core.Common.AuditableEntity",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Staff/DoctorTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Domain.Staff.DoctorTests",
+      "target": "type:ElsheiekhHMS.Core.Common.BaseEntity",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Staff/DoctorTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Domain.Staff.DoctorTests",
+      "target": "type:ElsheiekhHMS.Core.Common.SoftDeletableEntity",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Staff/DoctorTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Domain.Staff.DoctorTests",
+      "target": "type:ElsheiekhHMS.Core.Domain.Staff.Entities.Doctor",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Staff/DoctorTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Domain.Staff.DoctorTests",
+      "target": "type:ElsheiekhHMS.Core.Domain.Staff.Enums.DoctorStatus",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Staff/DoctorTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Domain.Staff.DoctorTests",
+      "target": "type:ElsheiekhHMS.Core.Exceptions.BusinessRuleException",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Staff/DoctorTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Domain.Staff.DoctorTests",
+      "target": "type:ElsheiekhHMS.Core.Exceptions.DomainException",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Staff/DoctorTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Domain.Staff.DoctorTests",
+      "target": "type:ElsheiekhHMS.Core.Exceptions.DomainValidationException",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Staff/DoctorTests.cs (Roslyn-bound type/member use or base of test helper)",
       "relation": "test-target",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -2598,6 +3227,33 @@
       "weight": 1
     },
     {
+      "source": "file:ElsheiekhHMS.Core:ElsheiekhHMS.Core/Domain/Staff/Entities/Doctor.cs",
+      "target": "type:ElsheiekhHMS.Core.Domain.Staff.Entities.Doctor",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Core/Domain/Staff/Entities/Doctor.cs:L8",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Core:ElsheiekhHMS.Core/Domain/Staff/Entities/DoctorSchedule.cs",
+      "target": "type:ElsheiekhHMS.Core.Domain.Staff.Entities.DoctorSchedule",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Core/Domain/Staff/Entities/DoctorSchedule.cs:L6",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Core:ElsheiekhHMS.Core/Domain/Staff/Enums/DoctorStatus.cs",
+      "target": "type:ElsheiekhHMS.Core.Domain.Staff.Enums.DoctorStatus",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Core/Domain/Staff/Enums/DoctorStatus.cs:L3",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
       "source": "file:ElsheiekhHMS.Core:ElsheiekhHMS.Core/Exceptions/BusinessRuleException.cs",
       "target": "type:ElsheiekhHMS.Core.Exceptions.BusinessRuleException",
       "type": "declares",
@@ -2715,6 +3371,24 @@
       "weight": 1
     },
     {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Domain/Staff/DoctorScheduleTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Domain.Staff.DoctorScheduleTests",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Staff/DoctorScheduleTests.cs:L7",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Domain/Staff/DoctorTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Domain.Staff.DoctorTests",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Staff/DoctorTests.cs:L8",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
       "source": "project:ElsheiekhHMS.Application",
       "target": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/ApplicationServiceExtensions.cs",
       "type": "contains",
@@ -2779,6 +3453,33 @@
     },
     {
       "source": "project:ElsheiekhHMS.Core",
+      "target": "file:ElsheiekhHMS.Core:ElsheiekhHMS.Core/Domain/Staff/Entities/Doctor.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Core/ElsheiekhHMS.Core.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Core",
+      "target": "file:ElsheiekhHMS.Core:ElsheiekhHMS.Core/Domain/Staff/Entities/DoctorSchedule.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Core/ElsheiekhHMS.Core.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Core",
+      "target": "file:ElsheiekhHMS.Core:ElsheiekhHMS.Core/Domain/Staff/Enums/DoctorStatus.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Core/ElsheiekhHMS.Core.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Core",
       "target": "file:ElsheiekhHMS.Core:ElsheiekhHMS.Core/Exceptions/BusinessRuleException.cs",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Core/ElsheiekhHMS.Core.csproj",
@@ -2827,6 +3528,24 @@
       "target": "namespace:ElsheiekhHMS.Core:ElsheiekhHMS.Core.Domain.Organization.Entities",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Core/Domain/Organization/Entities/Department.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Core",
+      "target": "namespace:ElsheiekhHMS.Core:ElsheiekhHMS.Core.Domain.Staff.Entities",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Core/Domain/Staff/Entities/Doctor.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Core",
+      "target": "namespace:ElsheiekhHMS.Core:ElsheiekhHMS.Core.Domain.Staff.Enums",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Core/Domain/Staff/Enums/DoctorStatus.cs",
       "relation": "contains",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -2932,6 +3651,24 @@
     },
     {
       "source": "project:ElsheiekhHMS.Tests",
+      "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Domain/Staff/DoctorScheduleTests.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Tests",
+      "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Domain/Staff/DoctorTests.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Tests",
       "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Domain.Common",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Common/AuditableEntityTests.cs",
@@ -2953,6 +3690,15 @@
       "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Domain.Organization",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Organization/DepartmentTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Tests",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Domain.Staff",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Staff/DoctorScheduleTests.cs",
       "relation": "contains",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -3223,6 +3969,51 @@
       "target": "namespace:ElsheiekhHMS.Core:ElsheiekhHMS.Core.Domain.Organization.Entities",
       "type": "namespace-membership",
       "evidence": "ElsheiekhHMS.Core/Domain/Organization/Entities/Department.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Core.Domain.Staff.Entities.Doctor",
+      "target": "type:ElsheiekhHMS.Core.Common.SoftDeletableEntity",
+      "type": "inherits",
+      "evidence": "ElsheiekhHMS.Core/Domain/Staff/Entities/Doctor.cs:L8",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Core.Domain.Staff.Entities.Doctor",
+      "target": "namespace:ElsheiekhHMS.Core:ElsheiekhHMS.Core.Domain.Staff.Entities",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Core/Domain/Staff/Entities/Doctor.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Core.Domain.Staff.Entities.DoctorSchedule",
+      "target": "type:ElsheiekhHMS.Core.Common.AuditableEntity",
+      "type": "inherits",
+      "evidence": "ElsheiekhHMS.Core/Domain/Staff/Entities/DoctorSchedule.cs:L6",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Core.Domain.Staff.Entities.DoctorSchedule",
+      "target": "namespace:ElsheiekhHMS.Core:ElsheiekhHMS.Core.Domain.Staff.Entities",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Core/Domain/Staff/Entities/DoctorSchedule.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Core.Domain.Staff.Enums.DoctorStatus",
+      "target": "namespace:ElsheiekhHMS.Core:ElsheiekhHMS.Core.Domain.Staff.Enums",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Core/Domain/Staff/Enums/DoctorStatus.cs",
       "relation": "namespace-membership",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -3556,6 +4347,168 @@
       "target": "type:ElsheiekhHMS.Core.Exceptions.DomainValidationException",
       "type": "test-target",
       "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Organization/DepartmentTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Domain.Staff.DoctorScheduleTests",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Domain.Staff",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Staff/DoctorScheduleTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Domain.Staff.DoctorScheduleTests",
+      "target": "type:ElsheiekhHMS.Core.Common.AuditableEntity",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Staff/DoctorScheduleTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Domain.Staff.DoctorScheduleTests",
+      "target": "type:ElsheiekhHMS.Core.Common.BaseEntity",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Staff/DoctorScheduleTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Domain.Staff.DoctorScheduleTests",
+      "target": "type:ElsheiekhHMS.Core.Common.SoftDeletableEntity",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Staff/DoctorScheduleTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Domain.Staff.DoctorScheduleTests",
+      "target": "type:ElsheiekhHMS.Core.Domain.Staff.Entities.Doctor",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Staff/DoctorScheduleTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Domain.Staff.DoctorScheduleTests",
+      "target": "type:ElsheiekhHMS.Core.Domain.Staff.Entities.DoctorSchedule",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Staff/DoctorScheduleTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Domain.Staff.DoctorScheduleTests",
+      "target": "type:ElsheiekhHMS.Core.Exceptions.BusinessRuleException",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Staff/DoctorScheduleTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Domain.Staff.DoctorScheduleTests",
+      "target": "type:ElsheiekhHMS.Core.Exceptions.DomainException",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Staff/DoctorScheduleTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Domain.Staff.DoctorScheduleTests",
+      "target": "type:ElsheiekhHMS.Core.Exceptions.DomainValidationException",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Staff/DoctorScheduleTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Domain.Staff.DoctorTests",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Domain.Staff",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Staff/DoctorTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Domain.Staff.DoctorTests",
+      "target": "type:ElsheiekhHMS.Core.Common.AuditableEntity",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Staff/DoctorTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Domain.Staff.DoctorTests",
+      "target": "type:ElsheiekhHMS.Core.Common.BaseEntity",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Staff/DoctorTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Domain.Staff.DoctorTests",
+      "target": "type:ElsheiekhHMS.Core.Common.SoftDeletableEntity",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Staff/DoctorTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Domain.Staff.DoctorTests",
+      "target": "type:ElsheiekhHMS.Core.Domain.Staff.Entities.Doctor",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Staff/DoctorTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Domain.Staff.DoctorTests",
+      "target": "type:ElsheiekhHMS.Core.Domain.Staff.Enums.DoctorStatus",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Staff/DoctorTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Domain.Staff.DoctorTests",
+      "target": "type:ElsheiekhHMS.Core.Exceptions.BusinessRuleException",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Staff/DoctorTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Domain.Staff.DoctorTests",
+      "target": "type:ElsheiekhHMS.Core.Exceptions.DomainException",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Staff/DoctorTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Domain.Staff.DoctorTests",
+      "target": "type:ElsheiekhHMS.Core.Exceptions.DomainValidationException",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Staff/DoctorTests.cs (Roslyn-bound type/member use or base of test helper)",
       "relation": "test-target",
       "confidence": "EXTRACTED",
       "weight": 1

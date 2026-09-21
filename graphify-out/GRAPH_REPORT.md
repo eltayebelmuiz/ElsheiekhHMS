@@ -2,11 +2,11 @@
 
 ## Snapshot
 
-- **generatedAtUtc:** `2026-09-20T18:57:06.7223005+00:00`
+- **generatedAtUtc:** `2026-09-21T06:30:52.7547477+00:00`
 - **gitBranch:** `main`
-- **gitCommit:** `6c28aa7a5e3aba30e444d81af7c6ed0afbd0a7bf`
+- **gitCommit:** `beaf42e92c64823c4ac77d14e827699d7febac95`
 - **workingTreeDirty:** `True`
-- **sourceFingerprint:** `38dfc3a2977b26d74b5a269cea8c5384166d5b7a5708aec51cc72a3533bb00c4`
+- **sourceFingerprint:** `8d3722716b6561b637232acf88bc20fcc6d307998933e870807e26dd77a9373d`
 - Framework: net10.0
 - Structural extraction only: **0 LLM API calls / 0 LLM tokens**. No statistical community clustering is claimed; project ownership supplies the visual groups.
 
@@ -38,6 +38,9 @@ ElsheiekhHMS.Web -> ElsheiekhHMS.Application, ElsheiekhHMS.Infrastructure
 - [ElsheiekhHMS.Core.Common.BaseEntity](../ElsheiekhHMS.Core/Common/BaseEntity.cs) — abstract-class, public
 - [ElsheiekhHMS.Core.Common.SoftDeletableEntity](../ElsheiekhHMS.Core/Common/SoftDeletableEntity.cs) — abstract-class, public
 - [ElsheiekhHMS.Core.Domain.Organization.Entities.Department](../ElsheiekhHMS.Core/Domain/Organization/Entities/Department.cs) — class, public
+- [ElsheiekhHMS.Core.Domain.Staff.Entities.Doctor](../ElsheiekhHMS.Core/Domain/Staff/Entities/Doctor.cs) — class, public
+- [ElsheiekhHMS.Core.Domain.Staff.Entities.DoctorSchedule](../ElsheiekhHMS.Core/Domain/Staff/Entities/DoctorSchedule.cs) — class, public
+- [ElsheiekhHMS.Core.Domain.Staff.Enums.DoctorStatus](../ElsheiekhHMS.Core/Domain/Staff/Enums/DoctorStatus.cs) — enum, public
 - [ElsheiekhHMS.Core.Exceptions.BusinessRuleException](../ElsheiekhHMS.Core/Exceptions/BusinessRuleException.cs) — class, public
 - [ElsheiekhHMS.Core.Exceptions.DomainException](../ElsheiekhHMS.Core/Exceptions/DomainException.cs) — class, public
 - [ElsheiekhHMS.Core.Exceptions.DomainValidationException](../ElsheiekhHMS.Core/Exceptions/DomainValidationException.cs) — class, public
@@ -50,6 +53,8 @@ Derived -> base (includes private test helper types and resolved external bases)
 - `ElsheiekhHMS.Core.Common.AuditableEntity` -> `ElsheiekhHMS.Core.Common.BaseEntity` — ElsheiekhHMS.Core/Common/AuditableEntity.cs:L3
 - `ElsheiekhHMS.Core.Common.SoftDeletableEntity` -> `ElsheiekhHMS.Core.Common.AuditableEntity` — ElsheiekhHMS.Core/Common/SoftDeletableEntity.cs:L3
 - `ElsheiekhHMS.Core.Domain.Organization.Entities.Department` -> `ElsheiekhHMS.Core.Common.AuditableEntity` — ElsheiekhHMS.Core/Domain/Organization/Entities/Department.cs:L6
+- `ElsheiekhHMS.Core.Domain.Staff.Entities.Doctor` -> `ElsheiekhHMS.Core.Common.SoftDeletableEntity` — ElsheiekhHMS.Core/Domain/Staff/Entities/Doctor.cs:L8
+- `ElsheiekhHMS.Core.Domain.Staff.Entities.DoctorSchedule` -> `ElsheiekhHMS.Core.Common.AuditableEntity` — ElsheiekhHMS.Core/Domain/Staff/Entities/DoctorSchedule.cs:L6
 - `ElsheiekhHMS.Core.Exceptions.BusinessRuleException` -> `ElsheiekhHMS.Core.Exceptions.DomainException` — ElsheiekhHMS.Core/Exceptions/BusinessRuleException.cs:L4
 - `ElsheiekhHMS.Core.Exceptions.DomainException` -> `System.Exception` — ElsheiekhHMS.Core/Exceptions/DomainException.cs:L3
 - `ElsheiekhHMS.Core.Exceptions.DomainValidationException` -> `ElsheiekhHMS.Core.Exceptions.DomainException` — ElsheiekhHMS.Core/Exceptions/DomainValidationException.cs:L4
@@ -64,7 +69,7 @@ Derived -> base (includes private test helper types and resolved external bases)
 
 ## Tests
 
-5 classes; 13 methods; 19 statically enumerable cases. This is discovery from source, not an execution result.
+7 classes; 46 methods; 67 statically enumerable cases. This is discovery from source, not an execution result.
 
 - [ElsheiekhHMS.Tests.Unit.Domain.Common.AuditableEntityTests](../ElsheiekhHMS.Tests/Unit/Domain/Common/AuditableEntityTests.cs) — 2 cases
   - Uses/tests `ElsheiekhHMS.Core.Common.AuditableEntity` (source type/member binding; includes inherited foundation dependencies)
@@ -83,6 +88,24 @@ Derived -> base (includes private test helper types and resolved external bases)
   - Uses/tests `ElsheiekhHMS.Core.Common.AuditableEntity` (source type/member binding; includes inherited foundation dependencies)
   - Uses/tests `ElsheiekhHMS.Core.Common.BaseEntity` (source type/member binding; includes inherited foundation dependencies)
   - Uses/tests `ElsheiekhHMS.Core.Domain.Organization.Entities.Department` (source type/member binding; includes inherited foundation dependencies)
+  - Uses/tests `ElsheiekhHMS.Core.Exceptions.BusinessRuleException` (source type/member binding; includes inherited foundation dependencies)
+  - Uses/tests `ElsheiekhHMS.Core.Exceptions.DomainException` (source type/member binding; includes inherited foundation dependencies)
+  - Uses/tests `ElsheiekhHMS.Core.Exceptions.DomainValidationException` (source type/member binding; includes inherited foundation dependencies)
+- [ElsheiekhHMS.Tests.Unit.Domain.Staff.DoctorScheduleTests](../ElsheiekhHMS.Tests/Unit/Domain/Staff/DoctorScheduleTests.cs) — 21 cases
+  - Uses/tests `ElsheiekhHMS.Core.Common.AuditableEntity` (source type/member binding; includes inherited foundation dependencies)
+  - Uses/tests `ElsheiekhHMS.Core.Common.BaseEntity` (source type/member binding; includes inherited foundation dependencies)
+  - Uses/tests `ElsheiekhHMS.Core.Common.SoftDeletableEntity` (source type/member binding; includes inherited foundation dependencies)
+  - Uses/tests `ElsheiekhHMS.Core.Domain.Staff.Entities.Doctor` (source type/member binding; includes inherited foundation dependencies)
+  - Uses/tests `ElsheiekhHMS.Core.Domain.Staff.Entities.DoctorSchedule` (source type/member binding; includes inherited foundation dependencies)
+  - Uses/tests `ElsheiekhHMS.Core.Exceptions.BusinessRuleException` (source type/member binding; includes inherited foundation dependencies)
+  - Uses/tests `ElsheiekhHMS.Core.Exceptions.DomainException` (source type/member binding; includes inherited foundation dependencies)
+  - Uses/tests `ElsheiekhHMS.Core.Exceptions.DomainValidationException` (source type/member binding; includes inherited foundation dependencies)
+- [ElsheiekhHMS.Tests.Unit.Domain.Staff.DoctorTests](../ElsheiekhHMS.Tests/Unit/Domain/Staff/DoctorTests.cs) — 27 cases
+  - Uses/tests `ElsheiekhHMS.Core.Common.AuditableEntity` (source type/member binding; includes inherited foundation dependencies)
+  - Uses/tests `ElsheiekhHMS.Core.Common.BaseEntity` (source type/member binding; includes inherited foundation dependencies)
+  - Uses/tests `ElsheiekhHMS.Core.Common.SoftDeletableEntity` (source type/member binding; includes inherited foundation dependencies)
+  - Uses/tests `ElsheiekhHMS.Core.Domain.Staff.Entities.Doctor` (source type/member binding; includes inherited foundation dependencies)
+  - Uses/tests `ElsheiekhHMS.Core.Domain.Staff.Enums.DoctorStatus` (source type/member binding; includes inherited foundation dependencies)
   - Uses/tests `ElsheiekhHMS.Core.Exceptions.BusinessRuleException` (source type/member binding; includes inherited foundation dependencies)
   - Uses/tests `ElsheiekhHMS.Core.Exceptions.DomainException` (source type/member binding; includes inherited foundation dependencies)
   - Uses/tests `ElsheiekhHMS.Core.Exceptions.DomainValidationException` (source type/member binding; includes inherited foundation dependencies)
@@ -134,6 +157,9 @@ Declared by README; not inferred from the existence of classes:
 - [ElsheiekhHMS.Core/Common/BaseEntity.cs](../ElsheiekhHMS.Core/Common/BaseEntity.cs) — ElsheiekhHMS.Core
 - [ElsheiekhHMS.Core/Common/SoftDeletableEntity.cs](../ElsheiekhHMS.Core/Common/SoftDeletableEntity.cs) — ElsheiekhHMS.Core
 - [ElsheiekhHMS.Core/Domain/Organization/Entities/Department.cs](../ElsheiekhHMS.Core/Domain/Organization/Entities/Department.cs) — ElsheiekhHMS.Core
+- [ElsheiekhHMS.Core/Domain/Staff/Entities/Doctor.cs](../ElsheiekhHMS.Core/Domain/Staff/Entities/Doctor.cs) — ElsheiekhHMS.Core
+- [ElsheiekhHMS.Core/Domain/Staff/Entities/DoctorSchedule.cs](../ElsheiekhHMS.Core/Domain/Staff/Entities/DoctorSchedule.cs) — ElsheiekhHMS.Core
+- [ElsheiekhHMS.Core/Domain/Staff/Enums/DoctorStatus.cs](../ElsheiekhHMS.Core/Domain/Staff/Enums/DoctorStatus.cs) — ElsheiekhHMS.Core
 - [ElsheiekhHMS.Core/Exceptions/BusinessRuleException.cs](../ElsheiekhHMS.Core/Exceptions/BusinessRuleException.cs) — ElsheiekhHMS.Core
 - [ElsheiekhHMS.Core/Exceptions/DomainException.cs](../ElsheiekhHMS.Core/Exceptions/DomainException.cs) — ElsheiekhHMS.Core
 - [ElsheiekhHMS.Core/Exceptions/DomainValidationException.cs](../ElsheiekhHMS.Core/Exceptions/DomainValidationException.cs) — ElsheiekhHMS.Core
@@ -144,6 +170,8 @@ Declared by README; not inferred from the existence of classes:
 - [ElsheiekhHMS.Tests/Unit/Domain/Common/SoftDeletableEntityTests.cs](../ElsheiekhHMS.Tests/Unit/Domain/Common/SoftDeletableEntityTests.cs) — ElsheiekhHMS.Tests
 - [ElsheiekhHMS.Tests/Unit/Domain/Exceptions/DomainExceptionTests.cs](../ElsheiekhHMS.Tests/Unit/Domain/Exceptions/DomainExceptionTests.cs) — ElsheiekhHMS.Tests
 - [ElsheiekhHMS.Tests/Unit/Domain/Organization/DepartmentTests.cs](../ElsheiekhHMS.Tests/Unit/Domain/Organization/DepartmentTests.cs) — ElsheiekhHMS.Tests
+- [ElsheiekhHMS.Tests/Unit/Domain/Staff/DoctorScheduleTests.cs](../ElsheiekhHMS.Tests/Unit/Domain/Staff/DoctorScheduleTests.cs) — ElsheiekhHMS.Tests
+- [ElsheiekhHMS.Tests/Unit/Domain/Staff/DoctorTests.cs](../ElsheiekhHMS.Tests/Unit/Domain/Staff/DoctorTests.cs) — ElsheiekhHMS.Tests
 - [ElsheiekhHMS.Web/Components/App.razor](../ElsheiekhHMS.Web/Components/App.razor) — ElsheiekhHMS.Web
 - [ElsheiekhHMS.Web/Components/Layout/MainLayout.razor](../ElsheiekhHMS.Web/Components/Layout/MainLayout.razor) — ElsheiekhHMS.Web
 - [ElsheiekhHMS.Web/Components/Layout/NavMenu.razor](../ElsheiekhHMS.Web/Components/Layout/NavMenu.razor) — ElsheiekhHMS.Web
