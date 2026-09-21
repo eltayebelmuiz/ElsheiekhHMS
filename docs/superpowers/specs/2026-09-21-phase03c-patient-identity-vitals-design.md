@@ -1,6 +1,6 @@
 # Phase 03C Patient Foundation Design (Vitals Deferred)
 
-**Status:** Phase 03C architectural decisions approved by the owner on 2026-09-21; implementation remains unapproved. The filename retains the original review identity; vitals implementation is explicitly outside 03C.
+**Status:** Phase 03C architectural decisions approved by the owner on 2026-09-21 and implemented/verified. The filename retains the original review identity; vitals implementation is explicitly outside 03C.
 
 ## Goal, sequence, and scope
 

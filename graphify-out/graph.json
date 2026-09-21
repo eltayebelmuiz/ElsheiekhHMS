@@ -1,11 +1,11 @@
 {
   "schemaVersion": "1.0",
-  "generatedAtUtc": "2026-09-21T07:02:48.4041992\u002B00:00",
-  "gitCommit": "f03c3f9e5d09952787bc65f9a68da4f5caaaae3f",
+  "generatedAtUtc": "2026-09-21T07:46:48.1938707\u002B00:00",
+  "gitCommit": "1e8699cba1f910830a98f9470ebe98246e66edb5",
   "gitBranch": "main",
   "workingTreeDirty": true,
-  "gitStatusAtGeneration": "M README.md\n M graphify-out/GRAPH_REPORT.md\n M graphify-out/graph.html\n M graphify-out/graph.json\n?? ElsheiekhHMS.Core/Domain/Patients/Entities/Patient.cs\n?? ElsheiekhHMS.Core/Domain/Patients/Enums/BloodGroup.cs\n?? ElsheiekhHMS.Core/Domain/Patients/Enums/Gender.cs\n?? ElsheiekhHMS.Tests/Unit/Domain/Patients/PatientTests.cs\n?? docs/superpowers/plans/2026-09-21-phase03c-patient-foundation.md\n?? docs/superpowers/specs/2026-09-21-phase03c-patient-identity-vitals-design.md",
-  "sourceFingerprint": "a7cfd5c74000f6d33beb66e2387b821f1a118c7883614e2fd10fa476bbf76112",
+  "gitStatusAtGeneration": "M README.md\n M docs/ARCHITECTURE.md\n M docs/DECISIONS.md\n M docs/superpowers/specs/2026-09-20-phase03a-department-foundation-design.md\n M docs/superpowers/specs/2026-09-20-phase03b-doctor-availability-design.md\n M docs/superpowers/specs/2026-09-21-phase03c-patient-identity-vitals-design.md\n M graphify-out/GRAPH_REPORT.md\n M graphify-out/cache/last_query_stamp\n M graphify-out/graph.html\n M graphify-out/graph.json\n?? ElsheiekhHMS.Core/Domain/Scheduling/Entities/Appointment.cs\n?? ElsheiekhHMS.Core/Domain/Scheduling/Entities/WalkInQueueEntry.cs\n?? ElsheiekhHMS.Core/Domain/Scheduling/Enums/AppointmentStatus.cs\n?? ElsheiekhHMS.Core/Domain/Scheduling/Enums/AppointmentType.cs\n?? ElsheiekhHMS.Core/Domain/Scheduling/Enums/QueuePriority.cs\n?? ElsheiekhHMS.Core/Domain/Scheduling/Enums/QueueStatus.cs\n?? ElsheiekhHMS.Tests/Unit/Domain/Scheduling/AppointmentTests.cs\n?? ElsheiekhHMS.Tests/Unit/Domain/Scheduling/WalkInQueueEntryTests.cs\n?? docs/superpowers/plans/2026-09-21-phase03d-appointment-walk-in-queue.md\n?? docs/superpowers/specs/2026-09-21-phase03d-appointment-walk-in-queue-design.md",
+  "sourceFingerprint": "7246acca9732b44b0302b60535a55297c4cd1fcc169f36bc0613cdc2c40cc2d4",
   "generatorFingerprint": "03eee0a8853a7e84af6cbe571d34e6f7d820505ac8f5670a719d0d63b113840c",
   "fingerprintAlgorithm": "SHA-256 of ordinal path \u002B NUL \u002B content SHA-256 records joined with LF; sourceManifest defines inputs; graphify-out excluded everywhere",
   "sourceManifest": [
@@ -44,6 +44,30 @@
     {
       "path": "ElsheiekhHMS.Core/Domain/Patients/Enums/Gender.cs",
       "sha256": "08e3282dc39403a396bf8c25f5f7ad042f90d7dcdcb7656db505aafcfb32a2ed"
+    },
+    {
+      "path": "ElsheiekhHMS.Core/Domain/Scheduling/Entities/Appointment.cs",
+      "sha256": "2bfaadd0b5222d60162de146d20d3f79a8981708329bd5b163d8af9ca4b10058"
+    },
+    {
+      "path": "ElsheiekhHMS.Core/Domain/Scheduling/Entities/WalkInQueueEntry.cs",
+      "sha256": "45fa77ac84b08e79ae8ea4691126a4c926567d575a8ead397c6de2e211f85c8d"
+    },
+    {
+      "path": "ElsheiekhHMS.Core/Domain/Scheduling/Enums/AppointmentStatus.cs",
+      "sha256": "226a29fa569b95b560cf254d5ac433b756b44a391d40191a7799d2c5166c03a8"
+    },
+    {
+      "path": "ElsheiekhHMS.Core/Domain/Scheduling/Enums/AppointmentType.cs",
+      "sha256": "15279fc1135d772ac2a5d3a111357a444ab11ff8f00e9596b158814e28d01814"
+    },
+    {
+      "path": "ElsheiekhHMS.Core/Domain/Scheduling/Enums/QueuePriority.cs",
+      "sha256": "292c5c21dc48415930bcfd40dda53afd6a3b85c3a257a58dcba57b4f3b3116c4"
+    },
+    {
+      "path": "ElsheiekhHMS.Core/Domain/Scheduling/Enums/QueueStatus.cs",
+      "sha256": "a193957b0c736d42e99566fb67c398d87d99c37134895aeecd8cfdbfcfb7fb4a"
     },
     {
       "path": "ElsheiekhHMS.Core/Domain/Staff/Entities/Doctor.cs",
@@ -114,6 +138,14 @@
       "sha256": "0ee5a3e14619aa41e6ee18f8bd351100708e4438da5aa9f82155c2cc64ac7273"
     },
     {
+      "path": "ElsheiekhHMS.Tests/Unit/Domain/Scheduling/AppointmentTests.cs",
+      "sha256": "68f5238f360c6deca1e3191868397988c6e67ede9fe98ea6169a37e228b4ad60"
+    },
+    {
+      "path": "ElsheiekhHMS.Tests/Unit/Domain/Scheduling/WalkInQueueEntryTests.cs",
+      "sha256": "799974d202599d7b6b99d2b8117c524cbfde784116265f8f84fc0e7b38b344b4"
+    },
+    {
       "path": "ElsheiekhHMS.Tests/Unit/Domain/Staff/DoctorScheduleTests.cs",
       "sha256": "96fe940babeb75c08584e8af96bb856c2f9a327823315fbb07329284b8695101"
     },
@@ -179,7 +211,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "2a405e8dad0baa738f6f28787498258fc7c93456f115410a39ed089123fc05ea"
+      "sha256": "21a9dc282698ee8822f733ae419a134d8c24801392429903177e05161eaa7f0c"
     }
   ],
   "repository": {
@@ -189,16 +221,16 @@
   },
   "summary": {
     "projectCount": 5,
-    "sourceFileCount": 25,
+    "sourceFileCount": 33,
     "razorFileCount": 11,
-    "typeCount": 27,
+    "typeCount": 35,
     "interfaceCount": 1,
     "testClassCount": 8,
     "testMethodCount": 63,
     "testCount": 100,
     "dynamicTheoryCount": 0,
-    "nodeCount": 85,
-    "edgeCount": 175
+    "nodeCount": 104,
+    "edgeCount": 206
   },
   "projects": [
     {
@@ -243,6 +275,12 @@
         "ElsheiekhHMS.Core/Domain/Patients/Entities/Patient.cs",
         "ElsheiekhHMS.Core/Domain/Patients/Enums/BloodGroup.cs",
         "ElsheiekhHMS.Core/Domain/Patients/Enums/Gender.cs",
+        "ElsheiekhHMS.Core/Domain/Scheduling/Entities/Appointment.cs",
+        "ElsheiekhHMS.Core/Domain/Scheduling/Entities/WalkInQueueEntry.cs",
+        "ElsheiekhHMS.Core/Domain/Scheduling/Enums/AppointmentStatus.cs",
+        "ElsheiekhHMS.Core/Domain/Scheduling/Enums/AppointmentType.cs",
+        "ElsheiekhHMS.Core/Domain/Scheduling/Enums/QueuePriority.cs",
+        "ElsheiekhHMS.Core/Domain/Scheduling/Enums/QueueStatus.cs",
         "ElsheiekhHMS.Core/Domain/Staff/Entities/Doctor.cs",
         "ElsheiekhHMS.Core/Domain/Staff/Entities/DoctorSchedule.cs",
         "ElsheiekhHMS.Core/Domain/Staff/Enums/DoctorStatus.cs",
@@ -324,6 +362,8 @@
         "ElsheiekhHMS.Tests/Unit/Domain/Exceptions/DomainExceptionTests.cs",
         "ElsheiekhHMS.Tests/Unit/Domain/Organization/DepartmentTests.cs",
         "ElsheiekhHMS.Tests/Unit/Domain/Patients/PatientTests.cs",
+        "ElsheiekhHMS.Tests/Unit/Domain/Scheduling/AppointmentTests.cs",
+        "ElsheiekhHMS.Tests/Unit/Domain/Scheduling/WalkInQueueEntryTests.cs",
         "ElsheiekhHMS.Tests/Unit/Domain/Staff/DoctorScheduleTests.cs",
         "ElsheiekhHMS.Tests/Unit/Domain/Staff/DoctorTests.cs"
       ]
@@ -469,6 +509,102 @@
       "project": "ElsheiekhHMS.Core",
       "file": "ElsheiekhHMS.Core/Domain/Patients/Enums/Gender.cs",
       "source_file": "ElsheiekhHMS.Core/Domain/Patients/Enums/Gender.cs",
+      "external": false,
+      "community": 1,
+      "community_name": "ElsheiekhHMS.Core",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "file:ElsheiekhHMS.Core:ElsheiekhHMS.Core/Domain/Scheduling/Entities/Appointment.cs",
+      "name": "Appointment.cs",
+      "label": "Appointment.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Core",
+      "file": "ElsheiekhHMS.Core/Domain/Scheduling/Entities/Appointment.cs",
+      "source_file": "ElsheiekhHMS.Core/Domain/Scheduling/Entities/Appointment.cs",
+      "external": false,
+      "community": 1,
+      "community_name": "ElsheiekhHMS.Core",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "file:ElsheiekhHMS.Core:ElsheiekhHMS.Core/Domain/Scheduling/Entities/WalkInQueueEntry.cs",
+      "name": "WalkInQueueEntry.cs",
+      "label": "WalkInQueueEntry.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Core",
+      "file": "ElsheiekhHMS.Core/Domain/Scheduling/Entities/WalkInQueueEntry.cs",
+      "source_file": "ElsheiekhHMS.Core/Domain/Scheduling/Entities/WalkInQueueEntry.cs",
+      "external": false,
+      "community": 1,
+      "community_name": "ElsheiekhHMS.Core",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "file:ElsheiekhHMS.Core:ElsheiekhHMS.Core/Domain/Scheduling/Enums/AppointmentStatus.cs",
+      "name": "AppointmentStatus.cs",
+      "label": "AppointmentStatus.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Core",
+      "file": "ElsheiekhHMS.Core/Domain/Scheduling/Enums/AppointmentStatus.cs",
+      "source_file": "ElsheiekhHMS.Core/Domain/Scheduling/Enums/AppointmentStatus.cs",
+      "external": false,
+      "community": 1,
+      "community_name": "ElsheiekhHMS.Core",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "file:ElsheiekhHMS.Core:ElsheiekhHMS.Core/Domain/Scheduling/Enums/AppointmentType.cs",
+      "name": "AppointmentType.cs",
+      "label": "AppointmentType.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Core",
+      "file": "ElsheiekhHMS.Core/Domain/Scheduling/Enums/AppointmentType.cs",
+      "source_file": "ElsheiekhHMS.Core/Domain/Scheduling/Enums/AppointmentType.cs",
+      "external": false,
+      "community": 1,
+      "community_name": "ElsheiekhHMS.Core",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "file:ElsheiekhHMS.Core:ElsheiekhHMS.Core/Domain/Scheduling/Enums/QueuePriority.cs",
+      "name": "QueuePriority.cs",
+      "label": "QueuePriority.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Core",
+      "file": "ElsheiekhHMS.Core/Domain/Scheduling/Enums/QueuePriority.cs",
+      "source_file": "ElsheiekhHMS.Core/Domain/Scheduling/Enums/QueuePriority.cs",
+      "external": false,
+      "community": 1,
+      "community_name": "ElsheiekhHMS.Core",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "file:ElsheiekhHMS.Core:ElsheiekhHMS.Core/Domain/Scheduling/Enums/QueueStatus.cs",
+      "name": "QueueStatus.cs",
+      "label": "QueueStatus.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Core",
+      "file": "ElsheiekhHMS.Core/Domain/Scheduling/Enums/QueueStatus.cs",
+      "source_file": "ElsheiekhHMS.Core/Domain/Scheduling/Enums/QueueStatus.cs",
       "external": false,
       "community": 1,
       "community_name": "ElsheiekhHMS.Core",
@@ -693,6 +829,38 @@
       "project": "ElsheiekhHMS.Tests",
       "file": "ElsheiekhHMS.Tests/Unit/Domain/Patients/PatientTests.cs",
       "source_file": "ElsheiekhHMS.Tests/Unit/Domain/Patients/PatientTests.cs",
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Domain/Scheduling/AppointmentTests.cs",
+      "name": "AppointmentTests.cs",
+      "label": "AppointmentTests.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Tests",
+      "file": "ElsheiekhHMS.Tests/Unit/Domain/Scheduling/AppointmentTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Unit/Domain/Scheduling/AppointmentTests.cs",
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Domain/Scheduling/WalkInQueueEntryTests.cs",
+      "name": "WalkInQueueEntryTests.cs",
+      "label": "WalkInQueueEntryTests.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Tests",
+      "file": "ElsheiekhHMS.Tests/Unit/Domain/Scheduling/WalkInQueueEntryTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Unit/Domain/Scheduling/WalkInQueueEntryTests.cs",
       "external": false,
       "community": 3,
       "community_name": "ElsheiekhHMS.Tests",
@@ -1000,6 +1168,36 @@
       "dynamicTheories": 0
     },
     {
+      "id": "namespace:ElsheiekhHMS.Core:ElsheiekhHMS.Core.Domain.Scheduling.Entities",
+      "name": "ElsheiekhHMS.Core.Domain.Scheduling.Entities",
+      "label": "ElsheiekhHMS.Core.Domain.Scheduling.Entities",
+      "kind": "namespace",
+      "type": "namespace",
+      "project": "ElsheiekhHMS.Core",
+      "namespace": "ElsheiekhHMS.Core.Domain.Scheduling.Entities",
+      "external": false,
+      "community": 1,
+      "community_name": "ElsheiekhHMS.Core",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "namespace:ElsheiekhHMS.Core:ElsheiekhHMS.Core.Domain.Scheduling.Enums",
+      "name": "ElsheiekhHMS.Core.Domain.Scheduling.Enums",
+      "label": "ElsheiekhHMS.Core.Domain.Scheduling.Enums",
+      "kind": "namespace",
+      "type": "namespace",
+      "project": "ElsheiekhHMS.Core",
+      "namespace": "ElsheiekhHMS.Core.Domain.Scheduling.Enums",
+      "external": false,
+      "community": 1,
+      "community_name": "ElsheiekhHMS.Core",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
       "id": "namespace:ElsheiekhHMS.Core:ElsheiekhHMS.Core.Domain.Staff.Entities",
       "name": "ElsheiekhHMS.Core.Domain.Staff.Entities",
       "label": "ElsheiekhHMS.Core.Domain.Staff.Entities",
@@ -1127,6 +1325,21 @@
       "type": "namespace",
       "project": "ElsheiekhHMS.Tests",
       "namespace": "ElsheiekhHMS.Tests.Unit.Domain.Patients",
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Domain.Scheduling",
+      "name": "ElsheiekhHMS.Tests.Unit.Domain.Scheduling",
+      "label": "ElsheiekhHMS.Tests.Unit.Domain.Scheduling",
+      "kind": "namespace",
+      "type": "namespace",
+      "project": "ElsheiekhHMS.Tests",
+      "namespace": "ElsheiekhHMS.Tests.Unit.Domain.Scheduling",
       "external": false,
       "community": 3,
       "community_name": "ElsheiekhHMS.Tests",
@@ -1423,6 +1636,150 @@
       "namespace": "ElsheiekhHMS.Core.Domain.Patients.Enums",
       "file": "ElsheiekhHMS.Core/Domain/Patients/Enums/Gender.cs",
       "source_file": "ElsheiekhHMS.Core/Domain/Patients/Enums/Gender.cs",
+      "source_location": "L3",
+      "line": 3,
+      "accessibility": "public",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 1,
+      "community_name": "ElsheiekhHMS.Core",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Core.Domain.Scheduling.Entities.Appointment",
+      "name": "Appointment",
+      "label": "Appointment",
+      "kind": "class",
+      "type": "class",
+      "fullName": "ElsheiekhHMS.Core.Domain.Scheduling.Entities.Appointment",
+      "project": "ElsheiekhHMS.Core",
+      "namespace": "ElsheiekhHMS.Core.Domain.Scheduling.Entities",
+      "file": "ElsheiekhHMS.Core/Domain/Scheduling/Entities/Appointment.cs",
+      "source_file": "ElsheiekhHMS.Core/Domain/Scheduling/Entities/Appointment.cs",
+      "source_location": "L8",
+      "line": 8,
+      "accessibility": "public",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 1,
+      "community_name": "ElsheiekhHMS.Core",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Core.Domain.Scheduling.Entities.WalkInQueueEntry",
+      "name": "WalkInQueueEntry",
+      "label": "WalkInQueueEntry",
+      "kind": "class",
+      "type": "class",
+      "fullName": "ElsheiekhHMS.Core.Domain.Scheduling.Entities.WalkInQueueEntry",
+      "project": "ElsheiekhHMS.Core",
+      "namespace": "ElsheiekhHMS.Core.Domain.Scheduling.Entities",
+      "file": "ElsheiekhHMS.Core/Domain/Scheduling/Entities/WalkInQueueEntry.cs",
+      "source_file": "ElsheiekhHMS.Core/Domain/Scheduling/Entities/WalkInQueueEntry.cs",
+      "source_location": "L8",
+      "line": 8,
+      "accessibility": "public",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 1,
+      "community_name": "ElsheiekhHMS.Core",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Core.Domain.Scheduling.Enums.AppointmentStatus",
+      "name": "AppointmentStatus",
+      "label": "AppointmentStatus",
+      "kind": "enum",
+      "type": "enum",
+      "fullName": "ElsheiekhHMS.Core.Domain.Scheduling.Enums.AppointmentStatus",
+      "project": "ElsheiekhHMS.Core",
+      "namespace": "ElsheiekhHMS.Core.Domain.Scheduling.Enums",
+      "file": "ElsheiekhHMS.Core/Domain/Scheduling/Enums/AppointmentStatus.cs",
+      "source_file": "ElsheiekhHMS.Core/Domain/Scheduling/Enums/AppointmentStatus.cs",
+      "source_location": "L3",
+      "line": 3,
+      "accessibility": "public",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 1,
+      "community_name": "ElsheiekhHMS.Core",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Core.Domain.Scheduling.Enums.AppointmentType",
+      "name": "AppointmentType",
+      "label": "AppointmentType",
+      "kind": "enum",
+      "type": "enum",
+      "fullName": "ElsheiekhHMS.Core.Domain.Scheduling.Enums.AppointmentType",
+      "project": "ElsheiekhHMS.Core",
+      "namespace": "ElsheiekhHMS.Core.Domain.Scheduling.Enums",
+      "file": "ElsheiekhHMS.Core/Domain/Scheduling/Enums/AppointmentType.cs",
+      "source_file": "ElsheiekhHMS.Core/Domain/Scheduling/Enums/AppointmentType.cs",
+      "source_location": "L3",
+      "line": 3,
+      "accessibility": "public",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 1,
+      "community_name": "ElsheiekhHMS.Core",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Core.Domain.Scheduling.Enums.QueuePriority",
+      "name": "QueuePriority",
+      "label": "QueuePriority",
+      "kind": "enum",
+      "type": "enum",
+      "fullName": "ElsheiekhHMS.Core.Domain.Scheduling.Enums.QueuePriority",
+      "project": "ElsheiekhHMS.Core",
+      "namespace": "ElsheiekhHMS.Core.Domain.Scheduling.Enums",
+      "file": "ElsheiekhHMS.Core/Domain/Scheduling/Enums/QueuePriority.cs",
+      "source_file": "ElsheiekhHMS.Core/Domain/Scheduling/Enums/QueuePriority.cs",
+      "source_location": "L3",
+      "line": 3,
+      "accessibility": "public",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 1,
+      "community_name": "ElsheiekhHMS.Core",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Core.Domain.Scheduling.Enums.QueueStatus",
+      "name": "QueueStatus",
+      "label": "QueueStatus",
+      "kind": "enum",
+      "type": "enum",
+      "fullName": "ElsheiekhHMS.Core.Domain.Scheduling.Enums.QueueStatus",
+      "project": "ElsheiekhHMS.Core",
+      "namespace": "ElsheiekhHMS.Core.Domain.Scheduling.Enums",
+      "file": "ElsheiekhHMS.Core/Domain/Scheduling/Enums/QueueStatus.cs",
+      "source_file": "ElsheiekhHMS.Core/Domain/Scheduling/Enums/QueueStatus.cs",
       "source_location": "L3",
       "line": 3,
       "accessibility": "public",
@@ -1881,6 +2238,54 @@
       "dynamicTheories": 0
     },
     {
+      "id": "type:ElsheiekhHMS.Tests.Unit.Domain.Scheduling.AppointmentTests",
+      "name": "AppointmentTests",
+      "label": "AppointmentTests",
+      "kind": "class",
+      "type": "class",
+      "fullName": "ElsheiekhHMS.Tests.Unit.Domain.Scheduling.AppointmentTests",
+      "project": "ElsheiekhHMS.Tests",
+      "namespace": "ElsheiekhHMS.Tests.Unit.Domain.Scheduling",
+      "file": "ElsheiekhHMS.Tests/Unit/Domain/Scheduling/AppointmentTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Unit/Domain/Scheduling/AppointmentTests.cs",
+      "source_location": "L8",
+      "line": 8,
+      "accessibility": "public",
+      "abstract": false,
+      "sealed": false,
+      "static": false,
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Tests.Unit.Domain.Scheduling.WalkInQueueEntryTests",
+      "name": "WalkInQueueEntryTests",
+      "label": "WalkInQueueEntryTests",
+      "kind": "class",
+      "type": "class",
+      "fullName": "ElsheiekhHMS.Tests.Unit.Domain.Scheduling.WalkInQueueEntryTests",
+      "project": "ElsheiekhHMS.Tests",
+      "namespace": "ElsheiekhHMS.Tests.Unit.Domain.Scheduling",
+      "file": "ElsheiekhHMS.Tests/Unit/Domain/Scheduling/WalkInQueueEntryTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Unit/Domain/Scheduling/WalkInQueueEntryTests.cs",
+      "source_location": "L8",
+      "line": 8,
+      "accessibility": "public",
+      "abstract": false,
+      "sealed": false,
+      "static": false,
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
       "id": "type:ElsheiekhHMS.Tests.Unit.Domain.Staff.DoctorScheduleTests",
       "name": "DoctorScheduleTests",
       "label": "DoctorScheduleTests",
@@ -2053,6 +2458,60 @@
       "weight": 1
     },
     {
+      "source": "file:ElsheiekhHMS.Core:ElsheiekhHMS.Core/Domain/Scheduling/Entities/Appointment.cs",
+      "target": "type:ElsheiekhHMS.Core.Domain.Scheduling.Entities.Appointment",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Core/Domain/Scheduling/Entities/Appointment.cs:L8",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Core:ElsheiekhHMS.Core/Domain/Scheduling/Entities/WalkInQueueEntry.cs",
+      "target": "type:ElsheiekhHMS.Core.Domain.Scheduling.Entities.WalkInQueueEntry",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Core/Domain/Scheduling/Entities/WalkInQueueEntry.cs:L8",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Core:ElsheiekhHMS.Core/Domain/Scheduling/Enums/AppointmentStatus.cs",
+      "target": "type:ElsheiekhHMS.Core.Domain.Scheduling.Enums.AppointmentStatus",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Core/Domain/Scheduling/Enums/AppointmentStatus.cs:L3",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Core:ElsheiekhHMS.Core/Domain/Scheduling/Enums/AppointmentType.cs",
+      "target": "type:ElsheiekhHMS.Core.Domain.Scheduling.Enums.AppointmentType",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Core/Domain/Scheduling/Enums/AppointmentType.cs:L3",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Core:ElsheiekhHMS.Core/Domain/Scheduling/Enums/QueuePriority.cs",
+      "target": "type:ElsheiekhHMS.Core.Domain.Scheduling.Enums.QueuePriority",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Core/Domain/Scheduling/Enums/QueuePriority.cs:L3",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Core:ElsheiekhHMS.Core/Domain/Scheduling/Enums/QueueStatus.cs",
+      "target": "type:ElsheiekhHMS.Core.Domain.Scheduling.Enums.QueueStatus",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Core/Domain/Scheduling/Enums/QueueStatus.cs:L3",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
       "source": "file:ElsheiekhHMS.Core:ElsheiekhHMS.Core/Domain/Staff/Entities/Doctor.cs",
       "target": "type:ElsheiekhHMS.Core.Domain.Staff.Entities.Doctor",
       "type": "declares",
@@ -2206,6 +2665,24 @@
       "weight": 1
     },
     {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Domain/Scheduling/AppointmentTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Domain.Scheduling.AppointmentTests",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Scheduling/AppointmentTests.cs:L8",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Domain/Scheduling/WalkInQueueEntryTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Domain.Scheduling.WalkInQueueEntryTests",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Scheduling/WalkInQueueEntryTests.cs:L8",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
       "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Domain/Staff/DoctorScheduleTests.cs",
       "target": "type:ElsheiekhHMS.Tests.Unit.Domain.Staff.DoctorScheduleTests",
       "type": "declares",
@@ -2315,6 +2792,60 @@
     },
     {
       "source": "project:ElsheiekhHMS.Core",
+      "target": "file:ElsheiekhHMS.Core:ElsheiekhHMS.Core/Domain/Scheduling/Entities/Appointment.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Core/ElsheiekhHMS.Core.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Core",
+      "target": "file:ElsheiekhHMS.Core:ElsheiekhHMS.Core/Domain/Scheduling/Entities/WalkInQueueEntry.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Core/ElsheiekhHMS.Core.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Core",
+      "target": "file:ElsheiekhHMS.Core:ElsheiekhHMS.Core/Domain/Scheduling/Enums/AppointmentStatus.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Core/ElsheiekhHMS.Core.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Core",
+      "target": "file:ElsheiekhHMS.Core:ElsheiekhHMS.Core/Domain/Scheduling/Enums/AppointmentType.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Core/ElsheiekhHMS.Core.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Core",
+      "target": "file:ElsheiekhHMS.Core:ElsheiekhHMS.Core/Domain/Scheduling/Enums/QueuePriority.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Core/ElsheiekhHMS.Core.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Core",
+      "target": "file:ElsheiekhHMS.Core:ElsheiekhHMS.Core/Domain/Scheduling/Enums/QueueStatus.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Core/ElsheiekhHMS.Core.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Core",
       "target": "file:ElsheiekhHMS.Core:ElsheiekhHMS.Core/Domain/Staff/Entities/Doctor.cs",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Core/ElsheiekhHMS.Core.csproj",
@@ -2408,6 +2939,24 @@
       "target": "namespace:ElsheiekhHMS.Core:ElsheiekhHMS.Core.Domain.Patients.Enums",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Core/Domain/Patients/Enums/BloodGroup.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Core",
+      "target": "namespace:ElsheiekhHMS.Core:ElsheiekhHMS.Core.Domain.Scheduling.Entities",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Core/Domain/Scheduling/Entities/Appointment.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Core",
+      "target": "namespace:ElsheiekhHMS.Core:ElsheiekhHMS.Core.Domain.Scheduling.Enums",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Core/Domain/Scheduling/Enums/AppointmentStatus.cs",
       "relation": "contains",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -2540,6 +3089,24 @@
     },
     {
       "source": "project:ElsheiekhHMS.Tests",
+      "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Domain/Scheduling/AppointmentTests.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Tests",
+      "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Domain/Scheduling/WalkInQueueEntryTests.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Tests",
       "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Domain/Staff/DoctorScheduleTests.cs",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
@@ -2588,6 +3155,15 @@
       "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Domain.Patients",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Patients/PatientTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Tests",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Domain.Scheduling",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Scheduling/AppointmentTests.cs",
       "relation": "contains",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -2912,6 +3488,96 @@
       "target": "namespace:ElsheiekhHMS.Core:ElsheiekhHMS.Core.Domain.Patients.Enums",
       "type": "namespace-membership",
       "evidence": "ElsheiekhHMS.Core/Domain/Patients/Enums/Gender.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Core.Domain.Scheduling.Entities.Appointment",
+      "target": "type:ElsheiekhHMS.Core.Interfaces.IHasConcurrencyToken",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Core/Domain/Scheduling/Entities/Appointment.cs:L8",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Core.Domain.Scheduling.Entities.Appointment",
+      "target": "type:ElsheiekhHMS.Core.Common.SoftDeletableEntity",
+      "type": "inherits",
+      "evidence": "ElsheiekhHMS.Core/Domain/Scheduling/Entities/Appointment.cs:L8",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Core.Domain.Scheduling.Entities.Appointment",
+      "target": "namespace:ElsheiekhHMS.Core:ElsheiekhHMS.Core.Domain.Scheduling.Entities",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Core/Domain/Scheduling/Entities/Appointment.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Core.Domain.Scheduling.Entities.WalkInQueueEntry",
+      "target": "type:ElsheiekhHMS.Core.Interfaces.IHasConcurrencyToken",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Core/Domain/Scheduling/Entities/WalkInQueueEntry.cs:L8",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Core.Domain.Scheduling.Entities.WalkInQueueEntry",
+      "target": "type:ElsheiekhHMS.Core.Common.SoftDeletableEntity",
+      "type": "inherits",
+      "evidence": "ElsheiekhHMS.Core/Domain/Scheduling/Entities/WalkInQueueEntry.cs:L8",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Core.Domain.Scheduling.Entities.WalkInQueueEntry",
+      "target": "namespace:ElsheiekhHMS.Core:ElsheiekhHMS.Core.Domain.Scheduling.Entities",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Core/Domain/Scheduling/Entities/WalkInQueueEntry.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Core.Domain.Scheduling.Enums.AppointmentStatus",
+      "target": "namespace:ElsheiekhHMS.Core:ElsheiekhHMS.Core.Domain.Scheduling.Enums",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Core/Domain/Scheduling/Enums/AppointmentStatus.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Core.Domain.Scheduling.Enums.AppointmentType",
+      "target": "namespace:ElsheiekhHMS.Core:ElsheiekhHMS.Core.Domain.Scheduling.Enums",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Core/Domain/Scheduling/Enums/AppointmentType.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Core.Domain.Scheduling.Enums.QueuePriority",
+      "target": "namespace:ElsheiekhHMS.Core:ElsheiekhHMS.Core.Domain.Scheduling.Enums",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Core/Domain/Scheduling/Enums/QueuePriority.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Core.Domain.Scheduling.Enums.QueueStatus",
+      "target": "namespace:ElsheiekhHMS.Core:ElsheiekhHMS.Core.Domain.Scheduling.Enums",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Core/Domain/Scheduling/Enums/QueueStatus.cs",
       "relation": "namespace-membership",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -3390,6 +4056,24 @@
       "type": "test-target",
       "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Patients/PatientTests.cs (Roslyn-bound type/member use or base of test helper)",
       "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Domain.Scheduling.AppointmentTests",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Domain.Scheduling",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Scheduling/AppointmentTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Domain.Scheduling.WalkInQueueEntryTests",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Domain.Scheduling",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Scheduling/WalkInQueueEntryTests.cs",
+      "relation": "namespace-membership",
       "confidence": "EXTRACTED",
       "weight": 1
     },
@@ -3581,7 +4265,7 @@
       "statusSource": "README.md declaration, not independently certified completion",
       "declaredStatus": [
         {
-          "text": "\u003E **Current development stage:** Phase 03 \u2014 Domain Entities (in progress)",
+          "text": "\u003E **Current development stage:** Phase 03 \u2014 Domain Entities (complete)",
           "source": "README.md:L5"
         },
         {
@@ -3597,40 +4281,44 @@
           "source": "README.md:L11"
         },
         {
+          "text": "\u003E **Phase 03D:** \u2705 Implemented and verified",
+          "source": "README.md:L13"
+        },
+        {
           "text": "| 01 | Solution \u0026 Architecture | \u2705 Complete |",
-          "source": "README.md:L330"
-        },
-        {
-          "text": "| 02 | Core Foundation | \uD83D\uDFE1 Setup complete / final review pending |",
-          "source": "README.md:L331"
-        },
-        {
-          "text": "| 03 | Domain Entities | \u23F3 Not started |",
           "source": "README.md:L332"
         },
         {
-          "text": "| 04 | EF Core \u0026 Database | \u23F3 Not started |",
+          "text": "| 02 | Core Foundation | \u2705 Complete |",
           "source": "README.md:L333"
         },
         {
-          "text": "| 05 | Identity \u0026 Security | \u23F3 Not started |",
+          "text": "| 03 | Domain Entities | \u2705 Complete |",
           "source": "README.md:L334"
         },
         {
-          "text": "| 06 | DTOs \u0026 Validation | \u23F3 Not started |",
+          "text": "| 04 | EF Core \u0026 Database | \u23F3 Not started |",
           "source": "README.md:L335"
         },
         {
-          "text": "| 07 | Application Services | \u23F3 Not started |",
+          "text": "| 05 | Identity \u0026 Security | \u23F3 Not started |",
           "source": "README.md:L336"
         },
         {
-          "text": "| 08 | Business Workflows | \u23F3 Not started |",
+          "text": "| 06 | DTOs \u0026 Validation | \u23F3 Not started |",
           "source": "README.md:L337"
         },
         {
-          "text": "| 09 | Enterprise Infrastructure | \u23F3 Not started |",
+          "text": "| 07 | Application Services | \u23F3 Not started |",
           "source": "README.md:L338"
+        },
+        {
+          "text": "| 08 | Business Workflows | \u23F3 Not started |",
+          "source": "README.md:L339"
+        },
+        {
+          "text": "| 09 | Enterprise Infrastructure | \u23F3 Not started |",
+          "source": "README.md:L340"
         }
       ]
     }
@@ -3724,6 +4412,60 @@
       "target": "type:ElsheiekhHMS.Core.Domain.Patients.Enums.Gender",
       "type": "declares",
       "evidence": "ElsheiekhHMS.Core/Domain/Patients/Enums/Gender.cs:L3",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Core:ElsheiekhHMS.Core/Domain/Scheduling/Entities/Appointment.cs",
+      "target": "type:ElsheiekhHMS.Core.Domain.Scheduling.Entities.Appointment",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Core/Domain/Scheduling/Entities/Appointment.cs:L8",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Core:ElsheiekhHMS.Core/Domain/Scheduling/Entities/WalkInQueueEntry.cs",
+      "target": "type:ElsheiekhHMS.Core.Domain.Scheduling.Entities.WalkInQueueEntry",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Core/Domain/Scheduling/Entities/WalkInQueueEntry.cs:L8",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Core:ElsheiekhHMS.Core/Domain/Scheduling/Enums/AppointmentStatus.cs",
+      "target": "type:ElsheiekhHMS.Core.Domain.Scheduling.Enums.AppointmentStatus",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Core/Domain/Scheduling/Enums/AppointmentStatus.cs:L3",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Core:ElsheiekhHMS.Core/Domain/Scheduling/Enums/AppointmentType.cs",
+      "target": "type:ElsheiekhHMS.Core.Domain.Scheduling.Enums.AppointmentType",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Core/Domain/Scheduling/Enums/AppointmentType.cs:L3",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Core:ElsheiekhHMS.Core/Domain/Scheduling/Enums/QueuePriority.cs",
+      "target": "type:ElsheiekhHMS.Core.Domain.Scheduling.Enums.QueuePriority",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Core/Domain/Scheduling/Enums/QueuePriority.cs:L3",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Core:ElsheiekhHMS.Core/Domain/Scheduling/Enums/QueueStatus.cs",
+      "target": "type:ElsheiekhHMS.Core.Domain.Scheduling.Enums.QueueStatus",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Core/Domain/Scheduling/Enums/QueueStatus.cs:L3",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -3882,6 +4624,24 @@
       "weight": 1
     },
     {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Domain/Scheduling/AppointmentTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Domain.Scheduling.AppointmentTests",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Scheduling/AppointmentTests.cs:L8",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Domain/Scheduling/WalkInQueueEntryTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Domain.Scheduling.WalkInQueueEntryTests",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Scheduling/WalkInQueueEntryTests.cs:L8",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
       "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Domain/Staff/DoctorScheduleTests.cs",
       "target": "type:ElsheiekhHMS.Tests.Unit.Domain.Staff.DoctorScheduleTests",
       "type": "declares",
@@ -3991,6 +4751,60 @@
     },
     {
       "source": "project:ElsheiekhHMS.Core",
+      "target": "file:ElsheiekhHMS.Core:ElsheiekhHMS.Core/Domain/Scheduling/Entities/Appointment.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Core/ElsheiekhHMS.Core.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Core",
+      "target": "file:ElsheiekhHMS.Core:ElsheiekhHMS.Core/Domain/Scheduling/Entities/WalkInQueueEntry.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Core/ElsheiekhHMS.Core.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Core",
+      "target": "file:ElsheiekhHMS.Core:ElsheiekhHMS.Core/Domain/Scheduling/Enums/AppointmentStatus.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Core/ElsheiekhHMS.Core.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Core",
+      "target": "file:ElsheiekhHMS.Core:ElsheiekhHMS.Core/Domain/Scheduling/Enums/AppointmentType.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Core/ElsheiekhHMS.Core.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Core",
+      "target": "file:ElsheiekhHMS.Core:ElsheiekhHMS.Core/Domain/Scheduling/Enums/QueuePriority.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Core/ElsheiekhHMS.Core.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Core",
+      "target": "file:ElsheiekhHMS.Core:ElsheiekhHMS.Core/Domain/Scheduling/Enums/QueueStatus.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Core/ElsheiekhHMS.Core.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Core",
       "target": "file:ElsheiekhHMS.Core:ElsheiekhHMS.Core/Domain/Staff/Entities/Doctor.cs",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Core/ElsheiekhHMS.Core.csproj",
@@ -4084,6 +4898,24 @@
       "target": "namespace:ElsheiekhHMS.Core:ElsheiekhHMS.Core.Domain.Patients.Enums",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Core/Domain/Patients/Enums/BloodGroup.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Core",
+      "target": "namespace:ElsheiekhHMS.Core:ElsheiekhHMS.Core.Domain.Scheduling.Entities",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Core/Domain/Scheduling/Entities/Appointment.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Core",
+      "target": "namespace:ElsheiekhHMS.Core:ElsheiekhHMS.Core.Domain.Scheduling.Enums",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Core/Domain/Scheduling/Enums/AppointmentStatus.cs",
       "relation": "contains",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -4216,6 +5048,24 @@
     },
     {
       "source": "project:ElsheiekhHMS.Tests",
+      "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Domain/Scheduling/AppointmentTests.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Tests",
+      "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Domain/Scheduling/WalkInQueueEntryTests.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Tests",
       "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Domain/Staff/DoctorScheduleTests.cs",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
@@ -4264,6 +5114,15 @@
       "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Domain.Patients",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Patients/PatientTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Tests",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Domain.Scheduling",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Scheduling/AppointmentTests.cs",
       "relation": "contains",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -4588,6 +5447,96 @@
       "target": "namespace:ElsheiekhHMS.Core:ElsheiekhHMS.Core.Domain.Patients.Enums",
       "type": "namespace-membership",
       "evidence": "ElsheiekhHMS.Core/Domain/Patients/Enums/Gender.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Core.Domain.Scheduling.Entities.Appointment",
+      "target": "type:ElsheiekhHMS.Core.Interfaces.IHasConcurrencyToken",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Core/Domain/Scheduling/Entities/Appointment.cs:L8",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Core.Domain.Scheduling.Entities.Appointment",
+      "target": "type:ElsheiekhHMS.Core.Common.SoftDeletableEntity",
+      "type": "inherits",
+      "evidence": "ElsheiekhHMS.Core/Domain/Scheduling/Entities/Appointment.cs:L8",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Core.Domain.Scheduling.Entities.Appointment",
+      "target": "namespace:ElsheiekhHMS.Core:ElsheiekhHMS.Core.Domain.Scheduling.Entities",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Core/Domain/Scheduling/Entities/Appointment.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Core.Domain.Scheduling.Entities.WalkInQueueEntry",
+      "target": "type:ElsheiekhHMS.Core.Interfaces.IHasConcurrencyToken",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Core/Domain/Scheduling/Entities/WalkInQueueEntry.cs:L8",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Core.Domain.Scheduling.Entities.WalkInQueueEntry",
+      "target": "type:ElsheiekhHMS.Core.Common.SoftDeletableEntity",
+      "type": "inherits",
+      "evidence": "ElsheiekhHMS.Core/Domain/Scheduling/Entities/WalkInQueueEntry.cs:L8",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Core.Domain.Scheduling.Entities.WalkInQueueEntry",
+      "target": "namespace:ElsheiekhHMS.Core:ElsheiekhHMS.Core.Domain.Scheduling.Entities",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Core/Domain/Scheduling/Entities/WalkInQueueEntry.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Core.Domain.Scheduling.Enums.AppointmentStatus",
+      "target": "namespace:ElsheiekhHMS.Core:ElsheiekhHMS.Core.Domain.Scheduling.Enums",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Core/Domain/Scheduling/Enums/AppointmentStatus.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Core.Domain.Scheduling.Enums.AppointmentType",
+      "target": "namespace:ElsheiekhHMS.Core:ElsheiekhHMS.Core.Domain.Scheduling.Enums",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Core/Domain/Scheduling/Enums/AppointmentType.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Core.Domain.Scheduling.Enums.QueuePriority",
+      "target": "namespace:ElsheiekhHMS.Core:ElsheiekhHMS.Core.Domain.Scheduling.Enums",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Core/Domain/Scheduling/Enums/QueuePriority.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Core.Domain.Scheduling.Enums.QueueStatus",
+      "target": "namespace:ElsheiekhHMS.Core:ElsheiekhHMS.Core.Domain.Scheduling.Enums",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Core/Domain/Scheduling/Enums/QueueStatus.cs",
       "relation": "namespace-membership",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -5066,6 +6015,24 @@
       "type": "test-target",
       "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Patients/PatientTests.cs (Roslyn-bound type/member use or base of test helper)",
       "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Domain.Scheduling.AppointmentTests",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Domain.Scheduling",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Scheduling/AppointmentTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Domain.Scheduling.WalkInQueueEntryTests",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Domain.Scheduling",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Scheduling/WalkInQueueEntryTests.cs",
+      "relation": "namespace-membership",
       "confidence": "EXTRACTED",
       "weight": 1
     },

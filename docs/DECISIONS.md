@@ -198,7 +198,7 @@ An opaque opt-in contract expresses the capability without embedding EF attribut
 
 ### Consequences
 
-No current HMS entity implements the interface. It is not part of the base hierarchy. Aggregate selection remains Phase 03 work; database row-version generation, mapping, and conflict handling are future persistence behavior.
+It is not part of the base hierarchy. The approved Phase 03D `Appointment` and `WalkInQueueEntry` aggregates implement the interface; database row-version generation, mapping, and conflict handling remain future persistence behavior.
 
 ### Evidence / Notes
 

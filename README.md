@@ -2,7 +2,7 @@
 
 Enterprise Hospital Management System built with **.NET 10, ASP.NET Core, Blazor, Entity Framework Core, SQL Server, and ASP.NET Core Identity**.
 
-> **Current development stage:** Phase 03 — Domain Entities (in progress)
+> **Current development stage:** Phase 03 — Domain Entities (complete)
 >
 > **Phase 01:** ✅ Complete
 >
@@ -10,7 +10,9 @@ Enterprise Hospital Management System built with **.NET 10, ASP.NET Core, Blazor
 >
 > **Phase 03A / 03B / 03C:** ✅ Complete
 >
-> **Next gate:** Phase 03D design review (not started)
+> **Phase 03D:** ✅ Implemented and verified
+>
+> **Next gate:** Phase 04 design review
 
 ---
 
@@ -328,8 +330,8 @@ Do not skip phases without reviewing the architectural impact.
 | Phase | Description | Status |
 |---|---|---|
 | 01 | Solution & Architecture | ✅ Complete |
-| 02 | Core Foundation | 🟡 Setup complete / final review pending |
-| 03 | Domain Entities | ⏳ Not started |
+| 02 | Core Foundation | ✅ Complete |
+| 03 | Domain Entities | ✅ Complete |
 | 04 | EF Core & Database | ⏳ Not started |
 | 05 | Identity & Security | ⏳ Not started |
 | 06 | DTOs & Validation | ⏳ Not started |

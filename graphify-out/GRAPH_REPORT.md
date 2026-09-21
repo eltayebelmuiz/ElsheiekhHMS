@@ -2,11 +2,11 @@
 
 ## Snapshot
 
-- **generatedAtUtc:** `2026-09-21T07:02:48.4041992+00:00`
+- **generatedAtUtc:** `2026-09-21T07:46:48.1938707+00:00`
 - **gitBranch:** `main`
-- **gitCommit:** `f03c3f9e5d09952787bc65f9a68da4f5caaaae3f`
+- **gitCommit:** `1e8699cba1f910830a98f9470ebe98246e66edb5`
 - **workingTreeDirty:** `True`
-- **sourceFingerprint:** `a7cfd5c74000f6d33beb66e2387b821f1a118c7883614e2fd10fa476bbf76112`
+- **sourceFingerprint:** `7246acca9732b44b0302b60535a55297c4cd1fcc169f36bc0613cdc2c40cc2d4`
 - Framework: net10.0
 - Structural extraction only: **0 LLM API calls / 0 LLM tokens**. No statistical community clustering is claimed; project ownership supplies the visual groups.
 
@@ -41,6 +41,12 @@ ElsheiekhHMS.Web -> ElsheiekhHMS.Application, ElsheiekhHMS.Infrastructure
 - [ElsheiekhHMS.Core.Domain.Patients.Entities.Patient](../ElsheiekhHMS.Core/Domain/Patients/Entities/Patient.cs) — class, public
 - [ElsheiekhHMS.Core.Domain.Patients.Enums.BloodGroup](../ElsheiekhHMS.Core/Domain/Patients/Enums/BloodGroup.cs) — enum, public
 - [ElsheiekhHMS.Core.Domain.Patients.Enums.Gender](../ElsheiekhHMS.Core/Domain/Patients/Enums/Gender.cs) — enum, public
+- [ElsheiekhHMS.Core.Domain.Scheduling.Entities.Appointment](../ElsheiekhHMS.Core/Domain/Scheduling/Entities/Appointment.cs) — class, public
+- [ElsheiekhHMS.Core.Domain.Scheduling.Entities.WalkInQueueEntry](../ElsheiekhHMS.Core/Domain/Scheduling/Entities/WalkInQueueEntry.cs) — class, public
+- [ElsheiekhHMS.Core.Domain.Scheduling.Enums.AppointmentStatus](../ElsheiekhHMS.Core/Domain/Scheduling/Enums/AppointmentStatus.cs) — enum, public
+- [ElsheiekhHMS.Core.Domain.Scheduling.Enums.AppointmentType](../ElsheiekhHMS.Core/Domain/Scheduling/Enums/AppointmentType.cs) — enum, public
+- [ElsheiekhHMS.Core.Domain.Scheduling.Enums.QueuePriority](../ElsheiekhHMS.Core/Domain/Scheduling/Enums/QueuePriority.cs) — enum, public
+- [ElsheiekhHMS.Core.Domain.Scheduling.Enums.QueueStatus](../ElsheiekhHMS.Core/Domain/Scheduling/Enums/QueueStatus.cs) — enum, public
 - [ElsheiekhHMS.Core.Domain.Staff.Entities.Doctor](../ElsheiekhHMS.Core/Domain/Staff/Entities/Doctor.cs) — class, public
 - [ElsheiekhHMS.Core.Domain.Staff.Entities.DoctorSchedule](../ElsheiekhHMS.Core/Domain/Staff/Entities/DoctorSchedule.cs) — class, public
 - [ElsheiekhHMS.Core.Domain.Staff.Enums.DoctorStatus](../ElsheiekhHMS.Core/Domain/Staff/Enums/DoctorStatus.cs) — enum, public
@@ -57,6 +63,8 @@ Derived -> base (includes private test helper types and resolved external bases)
 - `ElsheiekhHMS.Core.Common.SoftDeletableEntity` -> `ElsheiekhHMS.Core.Common.AuditableEntity` — ElsheiekhHMS.Core/Common/SoftDeletableEntity.cs:L3
 - `ElsheiekhHMS.Core.Domain.Organization.Entities.Department` -> `ElsheiekhHMS.Core.Common.AuditableEntity` — ElsheiekhHMS.Core/Domain/Organization/Entities/Department.cs:L6
 - `ElsheiekhHMS.Core.Domain.Patients.Entities.Patient` -> `ElsheiekhHMS.Core.Common.SoftDeletableEntity` — ElsheiekhHMS.Core/Domain/Patients/Entities/Patient.cs:L8
+- `ElsheiekhHMS.Core.Domain.Scheduling.Entities.Appointment` -> `ElsheiekhHMS.Core.Common.SoftDeletableEntity` — ElsheiekhHMS.Core/Domain/Scheduling/Entities/Appointment.cs:L8
+- `ElsheiekhHMS.Core.Domain.Scheduling.Entities.WalkInQueueEntry` -> `ElsheiekhHMS.Core.Common.SoftDeletableEntity` — ElsheiekhHMS.Core/Domain/Scheduling/Entities/WalkInQueueEntry.cs:L8
 - `ElsheiekhHMS.Core.Domain.Staff.Entities.Doctor` -> `ElsheiekhHMS.Core.Common.SoftDeletableEntity` — ElsheiekhHMS.Core/Domain/Staff/Entities/Doctor.cs:L8
 - `ElsheiekhHMS.Core.Domain.Staff.Entities.DoctorSchedule` -> `ElsheiekhHMS.Core.Common.AuditableEntity` — ElsheiekhHMS.Core/Domain/Staff/Entities/DoctorSchedule.cs:L6
 - `ElsheiekhHMS.Core.Exceptions.BusinessRuleException` -> `ElsheiekhHMS.Core.Exceptions.DomainException` — ElsheiekhHMS.Core/Exceptions/BusinessRuleException.cs:L4
@@ -69,7 +77,7 @@ Derived -> base (includes private test helper types and resolved external bases)
 ## Interfaces
 
 - `ElsheiekhHMS.Core.Interfaces.IHasConcurrencyToken`
-  - Implementations: ElsheiekhHMS.Core.Domain.Patients.Entities.Patient
+  - Implementations: ElsheiekhHMS.Core.Domain.Patients.Entities.Patient, ElsheiekhHMS.Core.Domain.Scheduling.Entities.Appointment, ElsheiekhHMS.Core.Domain.Scheduling.Entities.WalkInQueueEntry
 
 ## Tests
 
@@ -151,19 +159,20 @@ Evaluated direct PackageReference items only. Framework/SDK auto-references and 
 
 Declared by README; not inferred from the existence of classes:
 
-- > **Current development stage:** Phase 03 — Domain Entities (in progress) — README.md:L5
+- > **Current development stage:** Phase 03 — Domain Entities (complete) — README.md:L5
 - > **Phase 01:** ✅ Complete — README.md:L7
 - > **Phase 02 Setup:** ✅ Complete and verified — README.md:L9
 - > **Phase 03A / 03B / 03C:** ✅ Complete — README.md:L11
--  /  01  /  Solution & Architecture  /  ✅ Complete  /  — README.md:L330
--  /  02  /  Core Foundation  /  🟡 Setup complete / final review pending  /  — README.md:L331
--  /  03  /  Domain Entities  /  ⏳ Not started  /  — README.md:L332
--  /  04  /  EF Core & Database  /  ⏳ Not started  /  — README.md:L333
--  /  05  /  Identity & Security  /  ⏳ Not started  /  — README.md:L334
--  /  06  /  DTOs & Validation  /  ⏳ Not started  /  — README.md:L335
--  /  07  /  Application Services  /  ⏳ Not started  /  — README.md:L336
--  /  08  /  Business Workflows  /  ⏳ Not started  /  — README.md:L337
--  /  09  /  Enterprise Infrastructure  /  ⏳ Not started  /  — README.md:L338
+- > **Phase 03D:** ✅ Implemented and verified — README.md:L13
+-  /  01  /  Solution & Architecture  /  ✅ Complete  /  — README.md:L332
+-  /  02  /  Core Foundation  /  ✅ Complete  /  — README.md:L333
+-  /  03  /  Domain Entities  /  ✅ Complete  /  — README.md:L334
+-  /  04  /  EF Core & Database  /  ⏳ Not started  /  — README.md:L335
+-  /  05  /  Identity & Security  /  ⏳ Not started  /  — README.md:L336
+-  /  06  /  DTOs & Validation  /  ⏳ Not started  /  — README.md:L337
+-  /  07  /  Application Services  /  ⏳ Not started  /  — README.md:L338
+-  /  08  /  Business Workflows  /  ⏳ Not started  /  — README.md:L339
+-  /  09  /  Enterprise Infrastructure  /  ⏳ Not started  /  — README.md:L340
 
 ## Important Files
 
@@ -175,6 +184,12 @@ Declared by README; not inferred from the existence of classes:
 - [ElsheiekhHMS.Core/Domain/Patients/Entities/Patient.cs](../ElsheiekhHMS.Core/Domain/Patients/Entities/Patient.cs) — ElsheiekhHMS.Core
 - [ElsheiekhHMS.Core/Domain/Patients/Enums/BloodGroup.cs](../ElsheiekhHMS.Core/Domain/Patients/Enums/BloodGroup.cs) — ElsheiekhHMS.Core
 - [ElsheiekhHMS.Core/Domain/Patients/Enums/Gender.cs](../ElsheiekhHMS.Core/Domain/Patients/Enums/Gender.cs) — ElsheiekhHMS.Core
+- [ElsheiekhHMS.Core/Domain/Scheduling/Entities/Appointment.cs](../ElsheiekhHMS.Core/Domain/Scheduling/Entities/Appointment.cs) — ElsheiekhHMS.Core
+- [ElsheiekhHMS.Core/Domain/Scheduling/Entities/WalkInQueueEntry.cs](../ElsheiekhHMS.Core/Domain/Scheduling/Entities/WalkInQueueEntry.cs) — ElsheiekhHMS.Core
+- [ElsheiekhHMS.Core/Domain/Scheduling/Enums/AppointmentStatus.cs](../ElsheiekhHMS.Core/Domain/Scheduling/Enums/AppointmentStatus.cs) — ElsheiekhHMS.Core
+- [ElsheiekhHMS.Core/Domain/Scheduling/Enums/AppointmentType.cs](../ElsheiekhHMS.Core/Domain/Scheduling/Enums/AppointmentType.cs) — ElsheiekhHMS.Core
+- [ElsheiekhHMS.Core/Domain/Scheduling/Enums/QueuePriority.cs](../ElsheiekhHMS.Core/Domain/Scheduling/Enums/QueuePriority.cs) — ElsheiekhHMS.Core
+- [ElsheiekhHMS.Core/Domain/Scheduling/Enums/QueueStatus.cs](../ElsheiekhHMS.Core/Domain/Scheduling/Enums/QueueStatus.cs) — ElsheiekhHMS.Core
 - [ElsheiekhHMS.Core/Domain/Staff/Entities/Doctor.cs](../ElsheiekhHMS.Core/Domain/Staff/Entities/Doctor.cs) — ElsheiekhHMS.Core
 - [ElsheiekhHMS.Core/Domain/Staff/Entities/DoctorSchedule.cs](../ElsheiekhHMS.Core/Domain/Staff/Entities/DoctorSchedule.cs) — ElsheiekhHMS.Core
 - [ElsheiekhHMS.Core/Domain/Staff/Enums/DoctorStatus.cs](../ElsheiekhHMS.Core/Domain/Staff/Enums/DoctorStatus.cs) — ElsheiekhHMS.Core
@@ -189,6 +204,8 @@ Declared by README; not inferred from the existence of classes:
 - [ElsheiekhHMS.Tests/Unit/Domain/Exceptions/DomainExceptionTests.cs](../ElsheiekhHMS.Tests/Unit/Domain/Exceptions/DomainExceptionTests.cs) — ElsheiekhHMS.Tests
 - [ElsheiekhHMS.Tests/Unit/Domain/Organization/DepartmentTests.cs](../ElsheiekhHMS.Tests/Unit/Domain/Organization/DepartmentTests.cs) — ElsheiekhHMS.Tests
 - [ElsheiekhHMS.Tests/Unit/Domain/Patients/PatientTests.cs](../ElsheiekhHMS.Tests/Unit/Domain/Patients/PatientTests.cs) — ElsheiekhHMS.Tests
+- [ElsheiekhHMS.Tests/Unit/Domain/Scheduling/AppointmentTests.cs](../ElsheiekhHMS.Tests/Unit/Domain/Scheduling/AppointmentTests.cs) — ElsheiekhHMS.Tests
+- [ElsheiekhHMS.Tests/Unit/Domain/Scheduling/WalkInQueueEntryTests.cs](../ElsheiekhHMS.Tests/Unit/Domain/Scheduling/WalkInQueueEntryTests.cs) — ElsheiekhHMS.Tests
 - [ElsheiekhHMS.Tests/Unit/Domain/Staff/DoctorScheduleTests.cs](../ElsheiekhHMS.Tests/Unit/Domain/Staff/DoctorScheduleTests.cs) — ElsheiekhHMS.Tests
 - [ElsheiekhHMS.Tests/Unit/Domain/Staff/DoctorTests.cs](../ElsheiekhHMS.Tests/Unit/Domain/Staff/DoctorTests.cs) — ElsheiekhHMS.Tests
 - [ElsheiekhHMS.Web/Components/App.razor](../ElsheiekhHMS.Web/Components/App.razor) — ElsheiekhHMS.Web

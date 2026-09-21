@@ -103,9 +103,9 @@ System.Exception
 
 Callers/derived domain behavior supply audit metadata. Comments require UTC timestamps, but these properties do not enforce UTC, populate themselves, or record an audit trail. Soft-delete flags do not implement deletion operations or database filtering.
 
-The concurrency interface is **retained**. It is not inherited by the base classes and currently has no implementing HMS entity. Phase 03 determines applicable aggregates; Phase 04 supplies EF Core/SQL Server conflict detection and mapping. No EF attributes or persistence behavior are embedded in Core. See ADR-008.
+The concurrency interface is **retained**. It is not inherited by the base classes. The approved Phase 03D `Appointment` and `WalkInQueueEntry` aggregates implement it; Phase 04 supplies EF Core/SQL Server conflict detection and mapping. No EF attributes or persistence behavior are embedded in Core. See ADR-008.
 
-There are no HMS domain entities yet. Empty entity/enum/constant folders do not establish domain models or approved aggregate boundaries.
+The implemented domain model currently includes the completed Department, Doctor, DoctorSchedule, and Patient types plus the Phase 03D Appointment and WalkInQueueEntry scheduling roots. Other HMS capabilities remain future work; folder presence alone does not establish an aggregate.
 
 ## 6. Application, Infrastructure, and Web boundaries
 
@@ -123,8 +123,10 @@ Future Blazor pages own presentation, navigation, input, and loading/error state
 
 - `Unit/Domain/Common`: identity assignment, audit metadata defaults/supplied values, and soft-delete defaults.
 - `Unit/Domain/Exceptions`: message and inner-exception preservation for the three exception types.
+- `Unit/Domain/Organization`, `Unit/Domain/Patients`, and `Unit/Domain/Staff`: completed 03A–03C domain behavior.
+- `Unit/Domain/Scheduling`: Phase 03D appointment and walk-in queue invariants and lifecycle transitions.
 
-There are four test classes, six test methods, and ten statically enumerable xUnit cases. These counts describe source; they are not a new execution result.
+The current source contains the foundation, completed 03A–03C, and Phase 03D domain test groups. Test counts are reported from actual test runs rather than treated as architecture guarantees.
 
 Testing evolves with implementation: foundation tests -> domain invariants -> Application services -> persistence/integration -> authorization/security and workflows -> UI/E2E. Earlier tests continue throughout the roadmap; Phase 10 expands and hardens testing rather than introducing xUnit for the first time. No future integration, security, or E2E suite is claimed as present.
 
