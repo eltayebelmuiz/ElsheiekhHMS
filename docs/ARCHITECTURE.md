@@ -350,3 +350,20 @@ carry concurrency tokens without exposing them. No Encounter, consultation,
 Provider ownership, Patient self-service, direct EF access, backend/schema,
 migration, or package change is introduced. External browser QA is tracked in
 `docs/UI_QUEUE_QA_CHECKLIST.md`.
+
+### Phase 12G dashboard and UI hardening
+
+Phase 12G remains Web-only. The Home route is now an operational dashboard
+over the frozen `IAppointmentService` and `IQueueService` contracts: it makes
+two bounded current-Africa/Kigali-date searches (five rows each), uses each
+result's server-provided `TotalCount`, and shows short appointment and waiting
+queue attention lists. Administrator and Receptionist users receive approved
+Patient, Appointment, and Queue quick actions; SystemAdministrator retains a
+Department configuration link without invented operational metrics. No
+dashboard repository, aggregation layer, chart library, polling, cache, or
+backend/schema/package change was introduced. The former foundation showcase
+and its unused styles were removed after confirming there were no consumers.
+Source-level accessibility, responsive, logical-property, loading, empty,
+error, and reduced-motion patterns remain in the Web design system. Browser
+and production performance certification remain external acceptance work;
+the consolidated handoff is `docs/UI_PHASE12G_QA.md`.

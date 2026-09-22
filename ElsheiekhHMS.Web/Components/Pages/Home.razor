@@ -1,83 +1,214 @@
 @page "/"
 @rendermode InteractiveServer
+@implements IDisposable
 
-<PageTitle>Workspace</PageTitle>
+@inject IAppointmentService AppointmentService
+@inject IQueueService QueueService
+@inject AuthenticationStateProvider AuthenticationStateProvider
+@inject TimeProvider Clock
 
-<PageHeader Eyebrow="Hospital operations" Title="Welcome to the workspace" Description="A calm, secure starting point for the EL-Shiekh Medical Complex team." />
+<PageTitle>Dashboard</PageTitle>
 
-<div class="hms-hero-grid">
-    <section class="hms-panel hms-panel--welcome" aria-labelledby="workspace-heading">
-        <div class="hms-panel__content">
-            <span class="hms-kicker">PHASE 12F · QUEUE OPERATIONS</span>
-            <h2 id="workspace-heading">One operational view for every approved workflow.</h2>
-            <p>Patient, Department, and Appointment foundations are available for authorized staff. Queue operations and the approved Appointment→Queue handoff now follow the frozen backend contracts.</p>
-            <AuthorizeView>
-                <Authorized>
-                    <AppAlert Tone="AppAlert.AlertTone.Success" Title="Session active" Message="Your account is authenticated. Access is still enforced by the backend service policies." />
-                </Authorized>
-                <NotAuthorized>
-                    <AppAlert Tone="AppAlert.AlertTone.Information" Title="Read-only welcome" Message="Sign in with an approved hospital account to access operational workflows." />
-                </NotAuthorized>
-            </AuthorizeView>
-        </div>
-        <div class="hms-hero-grid__aside" aria-hidden="true">
-            <span class="hms-hero-grid__seal">E</span>
-            <span>Trustworthy<br />care operations</span>
-        </div>
-    </section>
+<PageHeader Eyebrow="Hospital operations" Title="Operations dashboard" Description="A focused view of today's scheduled appointments and waiting queue work.">
+    <Actions>
+        <AuthorizeView Roles="@($"{RoleNames.Administrator},{RoleNames.Receptionist}")">
+            <Authorized>
+                <a class="btn btn-primary" href="/patients/new">Register patient</a>
+            </Authorized>
+        </AuthorizeView>
+    </Actions>
+</PageHeader>
 
-    <section class="hms-panel" aria-labelledby="module-heading">
-        <div class="hms-panel__header">
+@if (!_initialized || _loading)
+{
+    <LoadingState Message="Loading today's operations" />
+}
+else if (_errorMessage is not null)
+{
+    <ErrorState Title="Dashboard unavailable" Message="@_errorMessage">
+        <Actions><button type="button" class="btn btn-outline-secondary" @onclick="LoadDashboardAsync">Retry</button></Actions>
+    </ErrorState>
+}
+else if (_isOperationalUser)
+{
+    <section class="hms-dashboard-summary" aria-label="Today's operational summary">
+        <article class="hms-dashboard-metric hms-panel">
             <div>
-                <p class="hms-eyebrow">Navigation foundation</p>
-                <h2 id="module-heading">Approved modules</h2>
+                <p class="hms-eyebrow">Today · Africa/Kigali</p>
+                <h2>Appointments</h2>
             </div>
-            <StatusBadge Text="Foundation" Tone="StatusBadge.StatusTone.Information" />
-        </div>
-        <ul class="hms-module-list">
-            <li><span class="hms-module-list__mark">P</span><a href="/patients">Patients</a><small>Registry available</small></li>
-            <li><span class="hms-module-list__mark">D</span><a href="/departments">Departments</a><small>Configuration available</small></li>
-            <li><span class="hms-module-list__mark">A</span><a href="/appointments">Appointments</a><small>Management available</small></li>
-            <li><span class="hms-module-list__mark">Q</span><a href="/queue">Queue</a><small>Operations available</small></li>
-        </ul>
+            <strong class="hms-dashboard-metric__value">@_appointments!.TotalCount</strong>
+            <a href="/appointments">Open appointment registry</a>
+        </article>
+        <article class="hms-dashboard-metric hms-panel hms-dashboard-metric--attention">
+            <div>
+                <p class="hms-eyebrow">Needs attention</p>
+                <h2>Waiting queue</h2>
+            </div>
+            <strong class="hms-dashboard-metric__value">@_waitingQueue!.TotalCount</strong>
+            <a href="/queue">Open operational queue</a>
+        </article>
     </section>
-</div>
 
-<section class="hms-showcase" aria-labelledby="patterns-heading">
-    <PageHeader Eyebrow="Reusable patterns" Title="Operational UI language" Description="Small, composable building blocks for later module screens. The examples below contain no production data." HeadingId="patterns-heading" />
-    <div class="hms-showcase-grid">
-        <section class="hms-panel" aria-labelledby="feedback-heading">
-            <div class="hms-panel__header"><h2 id="feedback-heading">Feedback and status</h2><StatusBadge Text="Active" Tone="StatusBadge.StatusTone.Success" /></div>
-            <div class="hms-stack">
-                <AppAlert Tone="AppAlert.AlertTone.Information" Title="Information" Message="Use concise, safe guidance for routine state changes." />
-                <AppAlert Tone="AppAlert.AlertTone.Warning" Title="Review required" Message="Possible duplicate patients remain a warning and never block registration." />
-                <AppAlert Tone="AppAlert.AlertTone.Danger" Title="Conflict" Message="The record changed after it was opened. Reload before saving." />
+    <section class="hms-dashboard-grid" aria-label="Today's work">
+        <section class="hms-panel" aria-labelledby="today-appointments-heading">
+            <div class="hms-panel__header">
+                <div><p class="hms-eyebrow">Scheduled today</p><h2 id="today-appointments-heading">Appointment list</h2></div>
+                <a class="btn btn-sm btn-outline-secondary" href="/appointments">View all</a>
             </div>
+            @if (_appointments.Items.Count == 0)
+            {
+                <EmptyState Title="No appointments scheduled today" Message="The appointment registry has no records for the current Kigali date." />
+            }
+            else
+            {
+                <div class="hms-dashboard-list">
+                    @foreach (var appointment in _appointments.Items)
+                    {
+                        <a class="hms-dashboard-list__item" href="@($"/appointments/{appointment.Id}")">
+                            <span><strong>@appointment.AppointmentCode</strong><small>Patient #@appointment.PatientId · Department #@appointment.DepartmentId</small></span>
+                            <span class="hms-dashboard-list__meta"><span>@appointment.ScheduledTime.ToString("HH\\:mm")</span><StatusBadge Text="@StatusLabel(appointment.Status)" Tone="@StatusTone(appointment.Status)" /></span>
+                        </a>
+                    }
+                </div>
+            }
         </section>
-        <section class="hms-panel" aria-labelledby="list-heading">
-            <div class="hms-panel__header"><h2 id="list-heading">List and search</h2><span class="hms-result-count">0 results</span></div>
-            <SearchBox Label="Search records" Placeholder="Search by name or code" InputId="foundation-search" />
-            <EmptyState Title="No records yet" Message="Create an approved record to see it here." HasSearch="false" />
-        </section>
-    </div>
-</section>
 
-<section class="hms-panel hms-form-panel" aria-labelledby="form-heading">
-    <div class="hms-panel__header"><div><p class="hms-eyebrow">Form foundation</p><h2 id="form-heading">Clear input and safe actions</h2></div><span class="hms-helper-text">Presentation example</span></div>
-    <form class="hms-form">
-        <div class="hms-form__grid">
-            <div class="hms-field"><label for="example-name">Display name <span aria-hidden="true">*</span></label><input id="example-name" class="form-control" placeholder="Example value" required /><span class="hms-helper-text">Use the label and helper text pattern on module forms.</span></div>
-            <div class="hms-field"><label for="example-status">Status</label><select id="example-status" class="form-select"><option>Active</option><option>Inactive</option></select></div>
+        <section class="hms-panel" aria-labelledby="waiting-queue-heading">
+            <div class="hms-panel__header">
+                <div><p class="hms-eyebrow">Waiting now</p><h2 id="waiting-queue-heading">Queue attention</h2></div>
+                <a class="btn btn-sm btn-outline-secondary" href="/queue">View all</a>
+            </div>
+            @if (_waitingQueue.Items.Count == 0)
+            {
+                <EmptyState Title="No patients are waiting" Message="The waiting queue is clear for the current Kigali date." />
+            }
+            else
+            {
+                <div class="hms-dashboard-list">
+                    @foreach (var entry in _waitingQueue.Items)
+                    {
+                        <a class="hms-dashboard-list__item" href="@($"/queue/{entry.Id}")">
+                            <span><strong>@entry.QueueNumber</strong><small>Patient #@entry.PatientId · Department #@entry.DepartmentId</small></span>
+                            <span class="hms-dashboard-list__meta"><span>@entry.Priority</span><StatusBadge Text="Waiting" Tone="StatusBadge.StatusTone.Information" /></span>
+                        </a>
+                    }
+                </div>
+            }
+        </section>
+    </section>
+
+    <section class="hms-panel hms-dashboard-actions" aria-labelledby="quick-actions-heading">
+        <div class="hms-panel__header"><div><p class="hms-eyebrow">Approved workflows</p><h2 id="quick-actions-heading">Quick actions</h2></div><span class="hms-helper-text">Existing service workflows</span></div>
+        <div class="hms-dashboard-action-list">
+            <a class="btn btn-primary" href="/patients/new">Register patient</a>
+            <a class="btn btn-outline-primary" href="/appointments/new">Schedule appointment</a>
+            <a class="btn btn-outline-primary" href="/queue/new">Add walk-in</a>
+            <a class="btn btn-outline-secondary" href="/queue">View queue</a>
         </div>
-        <div class="hms-form__actions"><button type="button" class="btn btn-primary" @onclick="ShowConfirmation">Preview action</button><button type="button" class="btn btn-outline-secondary">Cancel</button></div>
-    </form>
-</section>
-
-<ConfirmDialog IsOpen="@showConfirmation" Title="Preview a protected action" Message="Later modules will explain the record, impact, and available recovery before a destructive action." ConfirmText="Continue" OnConfirm="CloseConfirmation" OnCancel="CloseConfirmation" />
+    </section>
+}
+else
+{
+    <AppAlert Tone="AppAlert.AlertTone.Information" Title="Operational dashboard access" Message="This account can use the approved areas assigned to its role. Operational summaries are available to authorized appointment and queue staff." />
+    <AuthorizeView Roles="@RoleNames.SystemAdministrator">
+        <Authorized>
+            <section class="hms-panel hms-dashboard-actions" aria-labelledby="configuration-action-heading">
+                <div class="hms-panel__header"><div><p class="hms-eyebrow">Configuration</p><h2 id="configuration-action-heading">System administration</h2></div></div>
+                <a class="btn btn-primary" href="/departments">Manage departments</a>
+            </section>
+        </Authorized>
+    </AuthorizeView>
+}
 
 @code {
-    private bool showConfirmation;
+    private readonly CancellationTokenSource _loadCancellation = new();
+    private PagedResult<AppointmentSummaryDto>? _appointments;
+    private PagedResult<QueueEntrySummaryDto>? _waitingQueue;
+    private bool _initialized;
+    private bool _loading;
+    private bool _isOperationalUser;
+    private string? _errorMessage;
 
-    private void ShowConfirmation() => showConfirmation = true;
-    private void CloseConfirmation() => showConfirmation = false;
+    protected override async Task OnInitializedAsync()
+    {
+        var authenticationState = await AuthenticationStateProvider.GetAuthenticationStateAsync();
+        var user = authenticationState.User;
+        _isOperationalUser = user.IsInRole(RoleNames.Administrator) || user.IsInRole(RoleNames.Receptionist);
+        _initialized = true;
+
+        if (_isOperationalUser)
+        {
+            await LoadDashboardAsync();
+        }
+    }
+
+    private async Task LoadDashboardAsync()
+    {
+        _loading = true;
+        _errorMessage = null;
+        try
+        {
+            var today = KigaliToday();
+            var appointmentsTask = AppointmentService.SearchAsync(
+                new AppointmentSearchRequest(today, today, page: new PageRequest(1, 5)),
+                _loadCancellation.Token);
+            var queueTask = QueueService.SearchAsync(
+                new QueueSearchRequest(today, status: QueueStatus.Waiting, page: new PageRequest(1, 5)),
+                _loadCancellation.Token);
+
+            await Task.WhenAll(appointmentsTask, queueTask);
+            var appointments = await appointmentsTask;
+            var waitingQueue = await queueTask;
+            if (!appointments.IsSuccess || appointments.Value is null || !waitingQueue.IsSuccess || waitingQueue.Value is null)
+            {
+                _errorMessage = "Today's operational summaries could not be loaded. Try again.";
+                return;
+            }
+
+            _appointments = appointments.Value;
+            _waitingQueue = waitingQueue.Value;
+        }
+        catch (OperationCanceledException) when (_loadCancellation.IsCancellationRequested) { }
+        catch
+        {
+            _errorMessage = "Today's operational summaries could not be loaded. Try again.";
+        }
+        finally
+        {
+            _loading = false;
+        }
+    }
+
+    private DateOnly KigaliToday()
+    {
+        try
+        {
+            return DateOnly.FromDateTime(TimeZoneInfo.ConvertTimeBySystemTimeZoneId(Clock.GetUtcNow(), "Africa/Kigali").DateTime);
+        }
+        catch (TimeZoneNotFoundException) { return DateOnly.FromDateTime(Clock.GetUtcNow().UtcDateTime); }
+        catch (InvalidTimeZoneException) { return DateOnly.FromDateTime(Clock.GetUtcNow().UtcDateTime); }
+    }
+
+    private static string StatusLabel(AppointmentStatus status) => status switch
+    {
+        AppointmentStatus.NoShow => "No-show",
+        AppointmentStatus.CheckedIn => "Checked in",
+        _ => status.ToString()
+    };
+
+    private static StatusBadge.StatusTone StatusTone(AppointmentStatus status) => status switch
+    {
+        AppointmentStatus.Completed => StatusBadge.StatusTone.Success,
+        AppointmentStatus.Cancelled or AppointmentStatus.NoShow => StatusBadge.StatusTone.Neutral,
+        AppointmentStatus.CheckedIn => StatusBadge.StatusTone.Information,
+        AppointmentStatus.Confirmed => StatusBadge.StatusTone.Warning,
+        _ => StatusBadge.StatusTone.Information
+    };
+
+    public void Dispose()
+    {
+        _loadCancellation.Cancel();
+        _loadCancellation.Dispose();
+    }
 }

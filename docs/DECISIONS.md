@@ -1062,3 +1062,29 @@ not complete Appointments, create Encounters, or imply consultation. No
 QueuePosition, drag ordering, polling, Provider ownership, Patient
 self-service, direct EF access, backend/schema/package change is introduced.
 External browser review is tracked in `docs/UI_QUEUE_QA_CHECKLIST.md`.
+
+## ADR-036 — Phase 12G operational dashboard and UI hardening
+
+**Status:** Complete
+**Phase:** 12G
+
+### Decision
+
+Use the Home route as a small operational dashboard over the frozen
+`IAppointmentService` and `IQueueService` contracts. For authorized
+Administrator and Receptionist users, request only the current
+Africa/Kigali date with bounded five-row pages: all appointments for the day
+and Waiting queue entries. Render server-provided `TotalCount` values and the
+bounded result rows; show safe loading, empty, error, and retry states. Keep
+quick actions as links to existing Patient, Appointment, and Queue workflows,
+and retain a SystemAdministrator Department link without exposing unsupported
+operational metrics.
+
+### Consequences
+
+No backend project, dashboard repository, aggregation query, chart library,
+polling, cache, ownership model, or package changed. The previous static
+foundation showcase and unused styles were removed after a consumer audit.
+The consolidated browser/visual QA handoff is
+`docs/UI_PHASE12G_QA.md`; local source checks do not certify browser rendering
+or production performance targets.

@@ -6,7 +6,7 @@
     color: var(--hms-danger-text);
     display: none;
     gap: var(--hms-space-4);
-    left: 0;
+    inset-inline-start: 0;
     padding: var(--hms-space-3) var(--hms-space-5);
     position: fixed;
     width: 100%;

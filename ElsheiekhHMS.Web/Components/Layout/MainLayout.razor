@@ -1,6 +1,6 @@
 @inherits LayoutComponentBase
 
-<input id="hms-sidebar-toggle" class="hms-visually-hidden" type="checkbox" aria-label="Toggle navigation" />
+<input id="hms-sidebar-toggle" class="hms-visually-hidden" type="checkbox" aria-label="Toggle navigation" aria-controls="primary-navigation" />
 <div class="hms-shell">
     <aside class="hms-sidebar" aria-label="Application navigation">
         <NavMenu />
@@ -10,7 +10,7 @@
     <div class="hms-shell__content">
         <header class="hms-topbar">
             <div class="hms-topbar__inner">
-                <label class="hms-menu-toggle" for="hms-sidebar-toggle">
+                <label class="hms-menu-toggle" for="hms-sidebar-toggle" aria-controls="primary-navigation">
                     <span class="hms-menu-toggle__mark" aria-hidden="true">☰</span>
                     <span>Menu</span>
                 </label>

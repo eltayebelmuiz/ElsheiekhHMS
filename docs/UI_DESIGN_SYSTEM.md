@@ -94,3 +94,13 @@ support is C# Dev Kit, C#, EditorConfig, and CSS Peek; IntelliCode, Error Lens,
 GitLens, and REST Client are optional. Stylelint is unnecessary for the current
 small centralized CSS workflow. These are recommendations only; extensions are
 not installed by the application build.
+
+Phase 12G replaces the Phase 12A foundation showcase on Home with the
+operational dashboard. The dashboard makes only two bounded searches for the
+current Africa/Kigali date through the accepted Appointment and Queue
+services, displays their real `TotalCount` values and at most five attention
+rows, and exposes quick links to existing authorized workflows. It does not
+invent KPIs, charts, ownership, polling, or a new data layer. Shared dashboard
+summary/list patterns use the existing panel, eyebrow, status, empty, loading,
+error, and responsive conventions. The consolidated browser handoff is
+`docs/UI_PHASE12G_QA.md`; external browser execution is still required.

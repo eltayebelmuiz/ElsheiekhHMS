@@ -1,11 +1,11 @@
 {
   "schemaVersion": "1.0",
-  "generatedAtUtc": "2026-09-22T19:35:14.8343576\u002B00:00",
-  "gitCommit": "4a1ab782aadeaac5ecede00a3ae135e43d642c89",
+  "generatedAtUtc": "2026-09-22T20:03:50.8560806\u002B00:00",
+  "gitCommit": "a341f442ad1e47d623756b82b934fd2644e5a768",
   "gitBranch": "main",
   "workingTreeDirty": true,
-  "gitStatusAtGeneration": "M DEVELOPMENT_ROADMAP.md\n M ElsheiekhHMS.Web/Components/Layout/NavMenu.razor\n M ElsheiekhHMS.Web/Components/Pages/Appointments/AppointmentDetails.razor\n M ElsheiekhHMS.Web/Components/Pages/Home.razor\n M ElsheiekhHMS.Web/Components/_Imports.razor\n M ElsheiekhHMS.Web/wwwroot/app.css\n M README.md\n M docs/ARCHITECTURE.md\n M docs/DECISIONS.md\n M docs/UI_DESIGN_SYSTEM.md\n M graphify-out/GRAPH_REPORT.md\n M graphify-out/graph.html\n M graphify-out/graph.json\n?? .vscode/launch.json\n?? ElsheiekhHMS.Web/Components/Pages/Queue/AppointmentQueueHandoff.razor\n?? ElsheiekhHMS.Web/Components/Pages/Queue/QueueCreate.razor\n?? ElsheiekhHMS.Web/Components/Pages/Queue/QueueDetails.razor\n?? ElsheiekhHMS.Web/Components/Pages/Queue/QueueRegistry.razor\n?? docs/UI_QUEUE_QA_CHECKLIST.md",
-  "sourceFingerprint": "1a89abd8cc60cd739d6448d78e784ce607a462aab4459560c812095f0e2b1b6d",
+  "gitStatusAtGeneration": "M DEVELOPMENT_ROADMAP.md\n M ElsheiekhHMS.Web/Components/Layout/MainLayout.razor\n M ElsheiekhHMS.Web/Components/Layout/MainLayout.razor.css\n M ElsheiekhHMS.Web/Components/Layout/NavMenu.razor\n M ElsheiekhHMS.Web/Components/Pages/Home.razor\n M ElsheiekhHMS.Web/wwwroot/app.css\n M README.md\n M docs/ARCHITECTURE.md\n M docs/DECISIONS.md\n M docs/UI_DESIGN_SYSTEM.md\n M graphify-out/GRAPH_REPORT.md\n M graphify-out/graph.html\n M graphify-out/graph.json\n?? docs/UI_PHASE12G_QA.md",
+  "sourceFingerprint": "49a773af9bccc9b5a2758d7534937db325860fca38813b17a89d557822ce8516",
   "generatorFingerprint": "03eee0a8853a7e84af6cbe571d34e6f7d820505ac8f5670a719d0d63b113840c",
   "fingerprintAlgorithm": "SHA-256 of ordinal path \u002B NUL \u002B content SHA-256 records joined with LF; sourceManifest defines inputs; graphify-out excluded everywhere",
   "sourceManifest": [
@@ -875,11 +875,11 @@
     },
     {
       "path": "ElsheiekhHMS.Web/Components/Layout/MainLayout.razor",
-      "sha256": "c053bce8e8b44855eb531ab9006dc704f58d5e43a67c422d1cf81fc4bead5356"
+      "sha256": "f5e6afdafd1be86752c93687178bb32bb995b8f9a7b16ba691c5760a62e91932"
     },
     {
       "path": "ElsheiekhHMS.Web/Components/Layout/NavMenu.razor",
-      "sha256": "d92d081c1e1d6247245cda9a89bfc68e61e99fa503f143e0da6acffd84a8a725"
+      "sha256": "19dceb9ce73212ccf6cbd7b490d08efea3d4169565fe8de78eb60691450d7ad3"
     },
     {
       "path": "ElsheiekhHMS.Web/Components/Layout/ReconnectModal.razor",
@@ -895,7 +895,7 @@
     },
     {
       "path": "ElsheiekhHMS.Web/Components/Pages/Appointments/AppointmentDetails.razor",
-      "sha256": "fbcac0914d65ffbfc9e8ab89009053eaaac8fd97d46955c74975d75bc85f32f5"
+      "sha256": "48a374bfd487fefd74f48918c620f9ed230b97fe13c55206663a47ac9b8ecb3d"
     },
     {
       "path": "ElsheiekhHMS.Web/Components/Pages/Appointments/AppointmentRegistry.razor",
@@ -923,7 +923,7 @@
     },
     {
       "path": "ElsheiekhHMS.Web/Components/Pages/Home.razor",
-      "sha256": "81d2a26e0df8e45ffaa4c198f80f10c68e0d3c62e731c5e8259f28ef43276b7b"
+      "sha256": "483ed9c9157b97fb6b3211064564a5c04f535a095c0c704f4de2be0f852a8f82"
     },
     {
       "path": "ElsheiekhHMS.Web/Components/Pages/Login.razor",
@@ -1043,7 +1043,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "8e30e746d6471b9ba21c196a2627810df1fc4edcb03e35078bc338f4fd87fd4a"
+      "sha256": "5683dadaf86d589d7836baf59805ea4c663c8261cc3418c8b5013ed2d2c2439f"
     }
   ],
   "repository": {
@@ -24445,7 +24445,7 @@
       "statusSource": "README.md declaration, not independently certified completion",
       "declaredStatus": [
         {
-          "text": "\u003E **Current development stage:** Phase 12F \u2014 Queue and Appointment\u2192Queue UI complete; backend remains accepted and frozen",
+          "text": "\u003E **Current development stage:** Phase 12G \u2014 Dashboard and UI/UX hardening complete; backend remains accepted and frozen",
           "source": "README.md:L5"
         },
         {
@@ -24613,40 +24613,44 @@
           "source": "README.md:L88"
         },
         {
+          "text": "\u003E **Phase 12G:** \u2705 Operational dashboard, cross-module UI hardening, accessibility source review, and consolidated QA handoff complete; external browser QA remains required",
+          "source": "README.md:L90"
+        },
+        {
           "text": "| 01 | Solution \u0026 Architecture | \u2705 Complete |",
-          "source": "README.md:L405"
-        },
-        {
-          "text": "| 02 | Core Foundation | \u2705 Complete |",
-          "source": "README.md:L406"
-        },
-        {
-          "text": "| 03 | Domain Entities | \u2705 Complete |",
           "source": "README.md:L407"
         },
         {
-          "text": "| 04 | EF Core \u0026 Database | \u2705 Complete |",
+          "text": "| 02 | Core Foundation | \u2705 Complete |",
           "source": "README.md:L408"
         },
         {
-          "text": "| 05 | Identity \u0026 Security | \u2705 Complete (05A, 05B, 05C, 05C-A, 05D, and 05E) |",
+          "text": "| 03 | Domain Entities | \u2705 Complete |",
           "source": "README.md:L409"
         },
         {
-          "text": "| 06 | DTOs \u0026 Validation | \u2705 Complete (06A\u201306D) |",
+          "text": "| 04 | EF Core \u0026 Database | \u2705 Complete |",
           "source": "README.md:L410"
         },
         {
-          "text": "| 07 | Application Services | \u2705 Complete for approved scope (07S, 07A, 07B, 07C-P, 07C, 07D; 07E deferred) |",
+          "text": "| 05 | Identity \u0026 Security | \u2705 Complete (05A, 05B, 05C, 05C-A, 05D, and 05E) |",
           "source": "README.md:L411"
         },
         {
-          "text": "| 08 | Business Workflows | \u2705 Complete (08A, 08B-P, 08B) |",
+          "text": "| 06 | DTOs \u0026 Validation | \u2705 Complete (06A\u201306D) |",
           "source": "README.md:L412"
         },
         {
-          "text": "| 09 | Enterprise Infrastructure | \u2705 Complete (09A, 09B) |",
+          "text": "| 07 | Application Services | \u2705 Complete for approved scope (07S, 07A, 07B, 07C-P, 07C, 07D; 07E deferred) |",
           "source": "README.md:L413"
+        },
+        {
+          "text": "| 08 | Business Workflows | \u2705 Complete (08A, 08B-P, 08B) |",
+          "source": "README.md:L414"
+        },
+        {
+          "text": "| 09 | Enterprise Infrastructure | \u2705 Complete (09A, 09B) |",
+          "source": "README.md:L415"
         }
       ]
     }
