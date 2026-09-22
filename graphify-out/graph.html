@@ -11,12 +11,12 @@
 <footer>Architectural index, not authoritative source. Check freshness with <code>tools/graphify.ps1 -Check</code> before relying on this snapshot. No network requests or external libraries.</footer>
 <script id="graph-data" type="application/json">{
   "schemaVersion": "1.0",
-  "generatedAtUtc": "2026-09-22T10:51:40.1285401\u002B00:00",
-  "gitCommit": "315e2005549c29622e1e998bf59d820de4b7aed8",
+  "generatedAtUtc": "2026-09-22T11:08:23.1476884\u002B00:00",
+  "gitCommit": "a18e1180df43035a576d9444e188a97681dd4844",
   "gitBranch": "main",
   "workingTreeDirty": true,
-  "gitStatusAtGeneration": "M DEVELOPMENT_ROADMAP.md\n M ElsheiekhHMS.Application/Common/Auditing/AuditActions.cs\n M ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs\n M ElsheiekhHMS.Tests/Unit/Application/Auditing/AuditVocabularyTests.cs\n M README.md\n M docs/ARCHITECTURE.md\n M docs/DECISIONS.md\n M graphify-out/GRAPH_REPORT.md\n M graphify-out/graph.html\n M graphify-out/graph.json\n?? ElsheiekhHMS.Application/Queue/Contracts/QueueEntryActionRequest.cs\n?? ElsheiekhHMS.Application/Queue/IQueueService.cs\n?? ElsheiekhHMS.Application/Queue/Persistence/IQueuePersistence.cs\n?? ElsheiekhHMS.Application/Queue/Persistence/QueuePersistenceSaveStatus.cs\n?? ElsheiekhHMS.Application/Queue/QueueService.cs\n?? ElsheiekhHMS.Application/Queue/Validation/QueueEntryActionRequestValidator.cs\n?? ElsheiekhHMS.Infrastructure/Persistence/Queue/QueuePersistence.cs\n?? ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs\n?? ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs\n?? Phases.md",
-  "sourceFingerprint": "1d109c1f69670ef258e6029b202f0eaeed0c01eb0619495969771cb1d62b390e",
+  "gitStatusAtGeneration": "M DEVELOPMENT_ROADMAP.md\n M README.md\n M docs/ARCHITECTURE.md\n M docs/DECISIONS.md\n M graphify-out/GRAPH_REPORT.md\n M graphify-out/graph.html\n M graphify-out/graph.json\n?? Phases.md",
+  "sourceFingerprint": "e52821662b4913a3ed128c45d719b69bb7fcdcb54f0b5ea5ab5fc65431abfb2e",
   "generatorFingerprint": "03eee0a8853a7e84af6cbe571d34e6f7d820505ac8f5670a719d0d63b113840c",
   "fingerprintAlgorithm": "SHA-256 of ordinal path \u002B NUL \u002B content SHA-256 records joined with LF; sourceManifest defines inputs; graphify-out excluded everywhere",
   "sourceManifest": [
@@ -854,7 +854,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "54e1ef1483f604745ced8511e1ce3f9a6e31e22f471d2f48f5c97fdb59b09617"
+      "sha256": "b7648b303d0e9975c6eb22566409c98b97e711e1468c15db700a1257e2e6b3e1"
     }
   ],
   "repository": {
@@ -20106,7 +20106,7 @@
       "statusSource": "README.md declaration, not independently certified completion",
       "declaredStatus": [
         {
-          "text": "\u003E **Current development stage:** Phase 07 \u2014 Application Services (07S, 07A, 07B, 07C-P, 07C, and 07D implementation complete; 07D closeout pending)",
+          "text": "\u003E **Current development stage:** Phase 07 \u2014 Application Services complete for the approved scope; 07E Doctor/Provider service deferred; Phase 08 not started",
           "source": "README.md:L5"
         },
         {
@@ -20182,7 +20182,7 @@
           "source": "README.md:L41"
         },
         {
-          "text": "\u003E **Phase 07S:** \u2705 Database-backed allocator prerequisite implemented, migration applied, physical schema verified, and regression suite passed; Phase 07 application-service sub-phases remain separately gated",
+          "text": "\u003E **Phase 07S:** \u2705 Database-backed allocator prerequisite implemented, migration applied, physical schema verified, and regression suite passed",
           "source": "README.md:L43"
         },
         {
@@ -20202,44 +20202,56 @@
           "source": "README.md:L51"
         },
         {
-          "text": "\u003E **Phase 07D:** \u2705 Queue Application Service implemented and verified; closeout pending",
+          "text": "\u003E **Phase 07D:** \u2705 Queue Application Service complete, implemented, verified, and closed out",
           "source": "README.md:L53"
         },
         {
+          "text": "\u003E **Phase 07E:** \u23F8 Doctor/Provider Application Service deferred; Doctor/Provider contracts and Doctor\u2194ApplicationUser ownership-aware authorization are not yet approved",
+          "source": "README.md:L55"
+        },
+        {
+          "text": "\u003E **Phase 07:** \u2705 Application Services complete for the approved scope; 07E is explicitly deferred",
+          "source": "README.md:L57"
+        },
+        {
+          "text": "\u003E **Phase 08:** \u23F8 Business Workflows not started",
+          "source": "README.md:L59"
+        },
+        {
           "text": "| 01 | Solution \u0026 Architecture | \u2705 Complete |",
-          "source": "README.md:L370"
-        },
-        {
-          "text": "| 02 | Core Foundation | \u2705 Complete |",
-          "source": "README.md:L371"
-        },
-        {
-          "text": "| 03 | Domain Entities | \u2705 Complete |",
-          "source": "README.md:L372"
-        },
-        {
-          "text": "| 04 | EF Core \u0026 Database | \u2705 Complete |",
-          "source": "README.md:L373"
-        },
-        {
-          "text": "| 05 | Identity \u0026 Security | \u2705 Complete (05A, 05B, 05C, 05C-A, 05D, and 05E) |",
-          "source": "README.md:L374"
-        },
-        {
-          "text": "| 06 | DTOs \u0026 Validation | \u2705 Complete (06A\u201306D) |",
-          "source": "README.md:L375"
-        },
-        {
-          "text": "| 07 | Application Services | \uD83D\uDFE1 In progress (07S, 07A, 07B, and 07C-P complete) |",
           "source": "README.md:L376"
         },
         {
-          "text": "| 08 | Business Workflows | \u23F3 Not started |",
+          "text": "| 02 | Core Foundation | \u2705 Complete |",
           "source": "README.md:L377"
         },
         {
-          "text": "| 09 | Enterprise Infrastructure | \u23F3 Not started |",
+          "text": "| 03 | Domain Entities | \u2705 Complete |",
           "source": "README.md:L378"
+        },
+        {
+          "text": "| 04 | EF Core \u0026 Database | \u2705 Complete |",
+          "source": "README.md:L379"
+        },
+        {
+          "text": "| 05 | Identity \u0026 Security | \u2705 Complete (05A, 05B, 05C, 05C-A, 05D, and 05E) |",
+          "source": "README.md:L380"
+        },
+        {
+          "text": "| 06 | DTOs \u0026 Validation | \u2705 Complete (06A\u201306D) |",
+          "source": "README.md:L381"
+        },
+        {
+          "text": "| 07 | Application Services | \u2705 Complete for approved scope (07S, 07A, 07B, 07C-P, 07C, 07D; 07E deferred) |",
+          "source": "README.md:L382"
+        },
+        {
+          "text": "| 08 | Business Workflows | \u23F3 Not started |",
+          "source": "README.md:L383"
+        },
+        {
+          "text": "| 09 | Enterprise Infrastructure | \u23F3 Not started |",
+          "source": "README.md:L384"
         }
       ]
     }

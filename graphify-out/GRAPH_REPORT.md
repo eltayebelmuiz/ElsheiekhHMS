@@ -2,11 +2,11 @@
 
 ## Snapshot
 
-- **generatedAtUtc:** `2026-09-22T10:51:40.1285401+00:00`
+- **generatedAtUtc:** `2026-09-22T11:08:23.1476884+00:00`
 - **gitBranch:** `main`
-- **gitCommit:** `315e2005549c29622e1e998bf59d820de4b7aed8`
+- **gitCommit:** `a18e1180df43035a576d9444e188a97681dd4844`
 - **workingTreeDirty:** `True`
-- **sourceFingerprint:** `1d109c1f69670ef258e6029b202f0eaeed0c01eb0619495969771cb1d62b390e`
+- **sourceFingerprint:** `e52821662b4913a3ed128c45d719b69bb7fcdcb54f0b5ea5ab5fc65431abfb2e`
 - Framework: net10.0
 - Structural extraction only: **0 LLM API calls / 0 LLM tokens**. No statistical community clustering is claimed; project ownership supplies the visual groups.
 
@@ -236,7 +236,7 @@ Evaluated direct PackageReference items only. Framework/SDK auto-references and 
 
 Declared by README; not inferred from the existence of classes:
 
-- > **Current development stage:** Phase 07 — Application Services (07S, 07A, 07B, 07C-P, 07C, and 07D implementation complete; 07D closeout pending) — README.md:L5
+- > **Current development stage:** Phase 07 — Application Services complete for the approved scope; 07E Doctor/Provider service deferred; Phase 08 not started — README.md:L5
 - > **Phase 01:** ✅ Complete — README.md:L7
 - > **Phase 02 Setup:** ✅ Complete and verified — README.md:L9
 - > **Phase 03A / 03B / 03C:** ✅ Complete — README.md:L11
@@ -255,21 +255,24 @@ Declared by README; not inferred from the existence of classes:
 - > **Phase 05C-A:** ✅ Durable security/business AuditLog model and writer foundation implemented and verified; event-producing workflows, retention policy, IP/UserAgent capture, and clinical/read auditing remain deferred — README.md:L37
 - > **Phase 05D:** ✅ Identity and AuditLog migration applied and verified against development and isolated integration SQL Server databases; pending-model suppression removed — README.md:L39
 - > **Phase 05E:** ✅ Security integration and hardening implemented and verified; account workflows, durable event producers, retention, IP/UserAgent capture, clinical/read auditing, and UI remain deferred — README.md:L41
-- > **Phase 07S:** ✅ Database-backed allocator prerequisite implemented, migration applied, physical schema verified, and regression suite passed; Phase 07 application-service sub-phases remain separately gated — README.md:L43
+- > **Phase 07S:** ✅ Database-backed allocator prerequisite implemented, migration applied, physical schema verified, and regression suite passed — README.md:L43
 - > **Phase 07A:** ✅ Patient Application Service implemented, tested, and reviewed; registration and PatientCode allocation remain one-save transactional — README.md:L45
 - > **Phase 07B:** ✅ Department Application Service complete, implemented, tested, and reviewed — README.md:L47
 - > **Phase 07C-P:** ✅ AppointmentCode allocator prerequisite complete; migration applied and physical schema verified — README.md:L49
 - > **Phase 07C:** ✅ Appointment Application Service complete — README.md:L51
-- > **Phase 07D:** ✅ Queue Application Service implemented and verified; closeout pending — README.md:L53
--  /  01  /  Solution & Architecture  /  ✅ Complete  /  — README.md:L370
--  /  02  /  Core Foundation  /  ✅ Complete  /  — README.md:L371
--  /  03  /  Domain Entities  /  ✅ Complete  /  — README.md:L372
--  /  04  /  EF Core & Database  /  ✅ Complete  /  — README.md:L373
--  /  05  /  Identity & Security  /  ✅ Complete (05A, 05B, 05C, 05C-A, 05D, and 05E)  /  — README.md:L374
--  /  06  /  DTOs & Validation  /  ✅ Complete (06A–06D)  /  — README.md:L375
--  /  07  /  Application Services  /  🟡 In progress (07S, 07A, 07B, and 07C-P complete)  /  — README.md:L376
--  /  08  /  Business Workflows  /  ⏳ Not started  /  — README.md:L377
--  /  09  /  Enterprise Infrastructure  /  ⏳ Not started  /  — README.md:L378
+- > **Phase 07D:** ✅ Queue Application Service complete, implemented, verified, and closed out — README.md:L53
+- > **Phase 07E:** ⏸ Doctor/Provider Application Service deferred; Doctor/Provider contracts and Doctor↔ApplicationUser ownership-aware authorization are not yet approved — README.md:L55
+- > **Phase 07:** ✅ Application Services complete for the approved scope; 07E is explicitly deferred — README.md:L57
+- > **Phase 08:** ⏸ Business Workflows not started — README.md:L59
+-  /  01  /  Solution & Architecture  /  ✅ Complete  /  — README.md:L376
+-  /  02  /  Core Foundation  /  ✅ Complete  /  — README.md:L377
+-  /  03  /  Domain Entities  /  ✅ Complete  /  — README.md:L378
+-  /  04  /  EF Core & Database  /  ✅ Complete  /  — README.md:L379
+-  /  05  /  Identity & Security  /  ✅ Complete (05A, 05B, 05C, 05C-A, 05D, and 05E)  /  — README.md:L380
+-  /  06  /  DTOs & Validation  /  ✅ Complete (06A–06D)  /  — README.md:L381
+-  /  07  /  Application Services  /  ✅ Complete for approved scope (07S, 07A, 07B, 07C-P, 07C, 07D; 07E deferred)  /  — README.md:L382
+-  /  08  /  Business Workflows  /  ⏳ Not started  /  — README.md:L383
+-  /  09  /  Enterprise Infrastructure  /  ⏳ Not started  /  — README.md:L384
 
 ## Important Files
 

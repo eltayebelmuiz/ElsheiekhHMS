@@ -3,7 +3,7 @@
 **Version:** 1.0.0
 **Date:** September 20, 2026
 **Owner:** Eltayeb Elmuiz
-**Status:** Active — Phase 07 Application Services in progress; 07S, 07A, 07B, 07C-P, 07C, and 07D implementation complete; 07D closeout pending
+**Status:** Phase 07 Application Services complete for the approved scope; 07E Doctor/Provider Application Service deferred; Phase 08 not started
 
 ---
 
@@ -956,7 +956,7 @@ year-scoped, UTC-based `AP-YYYY-NNNNN` allocator backed by the dedicated
 `AppointmentCodeAllocations` table and serializable atomic allocation. The additive
 `AddAppointmentCodeAllocator` migration adds that table and the physical unique
 `UX_Appointments_AppointmentCode` index; it was applied exactly once to the development
-database and physically verified. AppointmentService 07C is complete; 07D Queue Application Service is implemented and verified; 07D closeout is pending.
+database and physically verified. AppointmentService 07C and Queue Application Service 07D are complete and verified. Phase 07 is complete for the approved scope; 07E Doctor/Provider Application Service is deferred pending approved contracts, Doctor↔ApplicationUser ownership, ownership persistence, and ownership-aware authorization.
 
 ### Objective
 Implement all application-layer services. Services orchestrate validation, authorization checks, business rules, repository calls, and audit logging.
@@ -969,11 +969,11 @@ Phase 06 complete.
 | Service | Interface | File | Status |
 |---------|-----------|------|--------|
 | PatientService | IPatientService | Application/Patients/ | ✅ Complete (07A) |
-| DoctorService | IDoctorService | Infrastructure/Services/ | Planned |
+| DoctorService | IDoctorService | Infrastructure/Services/ | ⏸ Deferred (07E prerequisites not approved) |
 | DepartmentService | IDepartmentService | Application/Departments/ | ✅ Complete (07B) |
 | AppointmentService | IAppointmentService | Application/Appointments/ | ✅ Complete (07C) |
 | LabService | ILabService | Infrastructure/Services/ | Planned |
-| WalkInQueueService | IQueueService | Application/Queue/ | ✅ Implemented (07D; closeout pending) |
+| WalkInQueueService | IQueueService | Application/Queue/ | ✅ Complete (07D) |
 | AuditLogService | IAuditLogService | Infrastructure/Services/ | Planned |
 | NotificationService | INotificationService | Infrastructure/Services/ | Planned |
 
@@ -1074,7 +1074,14 @@ git commit -m "Phase07: application services checkpoint"
 
 ---
 
+### Phase 07 closeout
+
+**Status: COMPLETE for the approved scope.** 07S, 07A, 07B, 07C-P, 07C, and 07D are complete. 07E Doctor/Provider Application Service is explicitly deferred. The Doctor domain entity, Department relationship, Appointment relationship, and EF persistence model already exist; the missing prerequisites are approved Phase06-style Doctor/Provider contracts, a service contract, Doctor↔ApplicationUser ownership mapping, ownership persistence, and ownership-aware authorization. Do not implement 07E until those prerequisites are designed and approved.
+
+
 ## PHASE 08 — Business Workflows
+
+**Status: NOT STARTED.** Phase 08 begins only after the completed Phase 07 checkpoint is reviewed and approved.
 
 ### Objective
 Implement complete business workflows — multi-step processes that involve validation, status transitions, transactions, audit trails, and cross-entity coordination.
@@ -1901,10 +1908,10 @@ public async Task<ServiceResult<T>> DoSomethingAsync(Dto dto, string actorEmail)
 ## 16. Current Project Checkpoint
 
 ```
-Last completed phase:  Phase 07C — Appointment Application Service
-Current phase:         Phase 07 — Application Services (in progress)
-Next phase:            Phase 07 — Application Services
-Next action:           Perform 07D closeout/commit review; 07E has not started
+Last completed phase:  Phase 07 — Application Services (approved scope)
+Current phase:         Phase 08 — Business Workflows (not started)
+Next phase:            Phase 08 — Business Workflows
+Next action:           Review Phase 08 readiness; 07E remains explicitly deferred
 Known blockers:        None
 Important notes:
   - The current working codebase is the five-project .NET 10 ElsheiekhHMS solution
@@ -1915,7 +1922,7 @@ Important notes:
   - Enterprise table system active on Patient/Index
   - _PatientSearch partial complete and in use in WalkInQueue/Add
   - Display board and future UI modules remain later workflow/UI scope
-  - 07A Patient Application Service, 07B Department service, 07C Appointment service, and 07D Queue service implementation are complete; 07D closeout is pending
+  - 07A Patient Application Service, 07B Department service, 07C Appointment service, and 07D Queue service are complete; Phase 07 is complete for the approved scope
   - Arabic/RTL removed — English-only confirmed
   - 05C-A stable audit vocabulary, bounded append-only model, server-controlled writer, and focused tests are complete
   - 05D additive Identity/AuditLog migration, development/integration SQL verification, and pending-model suppression reassessment are complete

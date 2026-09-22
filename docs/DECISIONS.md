@@ -576,7 +576,7 @@ integration database; AppointmentService and 07D remain separately gated.
 
 ## ADR-021 — Phase 07C Appointment application service boundaries
 
-**Status:** Implemented; closeout pending
+**Status:** Implemented; closed
 **Phase:** 07C
 
 ### Context
@@ -625,7 +625,7 @@ server-side filtering/sorting, bounded pagination, and cancellation propagation.
 
 ## ADR-022 — Phase 07D Queue application service boundaries
 
-**Status:** Implemented; closeout pending
+**Status:** Implemented; closed
 **Phase:** 07D
 
 ### Context
@@ -669,3 +669,33 @@ existing Core aggregate.
 [Queue service](../ElsheiekhHMS.Application/Queue/);
 [Queue persistence](../ElsheiekhHMS.Infrastructure/Persistence/Queue/);
 [Queue domain design](../docs/superpowers/specs/2026-09-21-phase03d-appointment-walk-in-queue-design.md).
+## ADR-023 — Phase 07 closeout and 07E deferment
+
+**Status:** Accepted
+**Phase:** 07
+
+### Decision
+
+Phase 07 Application Services is complete for the approved scope: 07S allocator
+infrastructure, 07A Patient, 07B Department, 07C-P AppointmentCode allocation,
+07C Appointment, and 07D Queue are complete. The conditional 07E Doctor/Provider
+Application Service is explicitly deferred.
+
+The Doctor domain entity, its Department relationship, the required Appointment
+relationship, the optional Queue routing relationship, and the EF persistence model
+already exist. 07E cannot begin until the project approves Phase06-style
+Doctor/Provider contracts and validators, the service operations, a
+Doctor↔ApplicationUser ownership relationship, ownership persistence, and an
+ownership-aware authorization scope. Any required schema migration and its tests
+must be designed and approved before implementation. Doctor is not a missing
+entity, and Department/Appointment relationships are not missing.
+
+Phase 08 Business Workflows is not started. No Core, ApplicationUser, schema,
+migration, snapshot, package, service, or test changes are part of this closeout.
+
+### Consequences
+
+07E remains deferred until its prerequisites are explicitly reviewed and approved.
+Phase 07 may close for the currently approved service scope, while provider-scoped
+and ownership-dependent workflows remain unavailable. The next checkpoint is
+Phase 08 review; 07E must be revisited before implementing Doctor/Provider workflows.
