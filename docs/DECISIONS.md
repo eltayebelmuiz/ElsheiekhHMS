@@ -458,3 +458,40 @@ allocation in application code.
 
 [Phase 07S allocator implementation](../ElsheiekhHMS.Infrastructure/Persistence/Allocation/);
 [Architecture overview](ARCHITECTURE.md); [development roadmap](../DEVELOPMENT_ROADMAP.md).
+
+## ADR-018 — Phase 07A Patient service transaction boundaries
+
+**Status:** Accepted
+**Phase:** 07A
+
+### Context
+
+Patient registration requires the database-backed 07S PatientCode allocator and a
+durable business audit event. Patient integer identity is database-generated and is
+not available before the write is saved.
+
+### Decision
+
+Keep `AllocatePatientCodeAsync` on the narrow `IPatientPersistence` port. Do not add
+another allocator abstraction or perform an early save. Registration stages the
+`PATIENT_REGISTERED` AuditLog with the durable PatientCode as its target identifier,
+then saves Patient and AuditLog together exactly once.
+
+### Rationale
+
+Allocation is persistence-dependent, and the existing 07S allocator is the approved
+concurrency-safe implementation. PatientCode is available before persistence and is
+stable, unique, and sufficient to identify the registration event while preserving
+the atomic Patient/AuditLog transaction.
+
+### Consequences
+
+Patient phone remains non-unique, duplicate candidates remain non-blocking, stable
+UserId remains the actor identifier, and no Core, Identity, schema, migration, or
+package change is required. Later Phase 07 services remain separately gated.
+
+### Evidence / Notes
+
+[07A Patient service](../ElsheiekhHMS.Application/Patients/);
+[narrow persistence port](../ElsheiekhHMS.Application/Patients/Persistence/);
+[07S allocator decision](#adr-017--phase-07s-database-backed-identifier-allocation).

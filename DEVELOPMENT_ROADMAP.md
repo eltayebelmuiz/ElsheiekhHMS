@@ -3,7 +3,7 @@
 **Version:** 1.0.0
 **Date:** September 20, 2026
 **Owner:** Eltayeb Elmuiz
-**Status:** Active — Phase 07 Application Services in progress; 07S allocator prerequisite complete; application-service sub-phases not started
+**Status:** Active — Phase 07 Application Services in progress; 07S and 07A complete; 07B remains separately gated
 
 ---
 
@@ -913,9 +913,9 @@ git commit -m "Phase06: ViewModels, DTOs, ServiceResult usage pattern, PatientSe
 
 ## PHASE 07 — Application Services
 
-**Status: IN PROGRESS (07S prerequisite complete).** The material in this section is planned
-design guidance only; no Phase 07 application services, repositories, Unit of Work, or workflows
-are implemented in the current checkpoint.
+**Status: IN PROGRESS (07S and 07A complete).** The remaining material in this section is planned
+design guidance; later Phase 07 services, repositories, Unit of Work, and workflows are not
+implemented in the current checkpoint.
 
 ### Phase 07S — Allocator / Schema Prerequisite
 
@@ -923,8 +923,18 @@ are implemented in the current checkpoint.
 allocation primitives. The approved `AddPhase07AllocatorInfrastructure` migration was applied
 exactly once to `ElsheiekhHMS_Dev`, and the physical allocator tables, checks, primary keys, and
 queue uniqueness `(QueueDate, SequenceNumber)` were verified. Patient phone remains non-unique;
-no application-service sub-phase has started. The next Phase 07 sub-phase requires its own design
-and implementation approval.
+07A is complete under its approved implementation gate. The next Phase 07 sub-phase requires its
+own design and implementation approval.
+
+### Phase 07A — Patient Application Service
+
+**Status: COMPLETE.** Application owns the `IPatientService` contract, immutable result/error
+contracts, and the narrow EF-free `IPatientPersistence` port. Infrastructure implements bounded
+Patient projections, PatientCode allocation through the approved 07S allocator, rowversion and
+unique-identifier translation, and one-save Patient/AuditLog transactions. Patient phone remains
+non-unique and duplicate candidates never block registration. The two approved implementation
+decisions are recorded in ADR-018. No migration, snapshot, Core, Identity, or database change was
+required.
 
 ### Objective
 Implement all application-layer services. Services orchestrate validation, authorization checks, business rules, repository calls, and audit logging.
@@ -932,13 +942,13 @@ Implement all application-layer services. Services orchestrate validation, autho
 ### Prerequisites
 Phase 06 complete.
 
-### Planned services (not implemented)
+### Planned services
 
 | Service | Interface | File | Status |
 |---------|-----------|------|--------|
-| PatientService | IPatientService | Infrastructure/Services/ | Planned |
+| PatientService | IPatientService | Application/Patients/ | ✅ Complete (07A) |
 | DoctorService | IDoctorService | Infrastructure/Services/ | Planned |
-| DepartmentService | IDepartmentService | Infrastructure/Services/ | Planned |
+| DepartmentService | IDepartmentService | Application/Departments/ | Planned (07B) |
 | AppointmentService | IAppointmentService | Infrastructure/Services/ | Planned |
 | LabService | ILabService | Infrastructure/Services/ | Planned |
 | WalkInQueueService | IWalkInQueueService | Infrastructure/Services/ | Planned |
@@ -1869,10 +1879,10 @@ public async Task<ServiceResult<T>> DoSomethingAsync(Dto dto, string actorEmail)
 ## 16. Current Project Checkpoint
 
 ```
-Last completed phase:  Phase 07S — Allocator Infrastructure prerequisite
+Last completed phase:  Phase 07A — Patient Application Service
 Current phase:         Phase 07 — Application Services (in progress)
 Next phase:            Phase 07 — Application Services
-Next action:           Prepare and approve the next Phase 07 application-service design gate
+Next action:           Prepare and approve the next Phase 07B Department Application Service design gate
 Known blockers:        None
 Important notes:
   - The current working codebase is the five-project .NET 10 ElsheiekhHMS solution
@@ -1883,6 +1893,7 @@ Important notes:
   - Enterprise table system active on Patient/Index
   - _PatientSearch partial complete and in use in WalkInQueue/Add
   - Display board and future UI modules remain later workflow/UI scope
+  - 07A Patient Application Service is complete; 07B Department service is not started
   - Arabic/RTL removed — English-only confirmed
   - 05C-A stable audit vocabulary, bounded append-only model, server-controlled writer, and focused tests are complete
   - 05D additive Identity/AuditLog migration, development/integration SQL verification, and pending-model suppression reassessment are complete

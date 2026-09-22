@@ -1,9 +1,12 @@
 using ElsheiekhHMS.Infrastructure.Persistence;
 using ElsheiekhHMS.Infrastructure.Auditing;
 using ElsheiekhHMS.Application.Common.Auditing;
+using ElsheiekhHMS.Application.Patients;
+using ElsheiekhHMS.Application.Patients.Persistence;
 using ElsheiekhHMS.Infrastructure.Identity;
 using ElsheiekhHMS.Infrastructure.Identity.Entities;
 using ElsheiekhHMS.Infrastructure.Persistence.Allocation;
+using ElsheiekhHMS.Infrastructure.Persistence.Patients;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -36,6 +39,8 @@ public static class InfrastructureServiceExtensions
         services.AddScoped<AdministratorBootstrapper>();
         services.AddScoped<PatientCodeAllocator>();
         services.AddScoped<QueueTicketAllocator>();
+        services.AddScoped<IPatientPersistence, PatientPersistence>();
+        services.AddScoped<IPatientService, PatientService>();
         services.AddDbContext<ElsheiekhHmsDbContext>((serviceProvider, options) =>
         {
             options.UseSqlServer(connectionString);

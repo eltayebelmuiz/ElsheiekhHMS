@@ -15,6 +15,10 @@ public static class AuditActions
     public const string RoleRemoved = "ROLE_REMOVED";
     public const string PrivilegedRoleAssigned = "PRIVILEGED_ROLE_ASSIGNED";
     public const string PrivilegedRoleRemoved = "PRIVILEGED_ROLE_REMOVED";
+    public const string PatientRegistered = "PATIENT_REGISTERED";
+    public const string PatientDemographicsUpdated = "PATIENT_DEMOGRAPHICS_UPDATED";
+    public const string PatientContactUpdated = "PATIENT_CONTACT_UPDATED";
+    public const string PatientIdentifiersUpdated = "PATIENT_IDENTIFIERS_UPDATED";
 
     public static IReadOnlyList<string> All { get; } =
     [
@@ -30,6 +34,10 @@ public static class AuditActions
         RoleAssigned,
         RoleRemoved,
         PrivilegedRoleAssigned,
-        PrivilegedRoleRemoved
+        PrivilegedRoleRemoved,
+        PatientRegistered,
+        PatientDemographicsUpdated,
+        PatientContactUpdated,
+        PatientIdentifiersUpdated
     ];
 }

@@ -30,7 +30,11 @@ public sealed class AuditVocabularyTests
                 "ROLE_ASSIGNED",
                 "ROLE_REMOVED",
                 "PRIVILEGED_ROLE_ASSIGNED",
-                "PRIVILEGED_ROLE_REMOVED"
+                "PRIVILEGED_ROLE_REMOVED",
+                "PATIENT_REGISTERED",
+                "PATIENT_DEMOGRAPHICS_UPDATED",
+                "PATIENT_CONTACT_UPDATED",
+                "PATIENT_IDENTIFIERS_UPDATED"
             ],
             AuditActions.All);
     }

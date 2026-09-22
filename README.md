@@ -2,7 +2,7 @@
 
 Enterprise Hospital Management System built with **.NET 10, ASP.NET Core, Blazor, Entity Framework Core, SQL Server, and ASP.NET Core Identity**.
 
-> **Current development stage:** Phase 07 — Application Services (07S allocator infrastructure prerequisite complete; application-service sub-phases not started)
+> **Current development stage:** Phase 07 — Application Services (07S and 07A complete; 07B remains separately gated)
 >
 > **Phase 01:** ✅ Complete
 >
@@ -42,7 +42,9 @@ Enterprise Hospital Management System built with **.NET 10, ASP.NET Core, Blazor
 >
 > **Phase 07S:** ✅ Database-backed allocator prerequisite implemented, migration applied, physical schema verified, and regression suite passed; Phase 07 application-service sub-phases remain separately gated
 >
-> **Next gate:** Next approved Phase 07 application-service sub-phase design gate
+> **Phase 07A:** ✅ Patient Application Service implemented, tested, and reviewed; registration and PatientCode allocation remain one-save transactional
+>
+> **Next gate:** Next approved Phase 07B Department Application Service design/implementation gate
 
 ---
 
@@ -363,7 +365,7 @@ Do not skip phases without reviewing the architectural impact.
 | 04 | EF Core & Database | ✅ Complete |
 | 05 | Identity & Security | ✅ Complete (05A, 05B, 05C, 05C-A, 05D, and 05E) |
 | 06 | DTOs & Validation | ✅ Complete (06A–06D) |
-| 07 | Application Services | 🟡 In progress (07S complete; application-service sub-phases not started) |
+| 07 | Application Services | 🟡 In progress (07S and 07A complete; 07B not started) |
 | 08 | Business Workflows | ⏳ Not started |
 | 09 | Enterprise Infrastructure | ⏳ Not started |
 | 10 | Testing & Hardening | ⏳ Not started |
@@ -802,7 +804,7 @@ When opening this repository after a break, read this section first.
 
 ```text
 LAST COMPLETED PHASE:
-Phase 07S — Allocator Infrastructure prerequisite
+Phase 07A — Patient Application Service
 
 CURRENT PHASE:
 Phase 07 — Application Services (in progress)
@@ -810,10 +812,10 @@ Phase 07 — Application Services (in progress)
 CURRENT STATUS:
 Phase 04A foundation, 04B scalar mappings, 04C relational metadata, 04D-A environment readiness,
 04D-B0 design-time tooling, 04D-B migration generation/inspection, 04D-C local schema verification,
-04E isolated SQL Server persistence integration tests, 05A Identity foundation, 05B Roles & Authorization, 05C current-user/entity auditing, 05C-A AuditLog foundation, 05D Identity/AuditLog migration and SQL verification, 05E security integration/hardening, 06A–06D DTOs & Validation, and 07S allocator infrastructure are complete.
+04E isolated SQL Server persistence integration tests, 05A Identity foundation, 05B Roles & Authorization, 05C current-user/entity auditing, 05C-A AuditLog foundation, 05D Identity/AuditLog migration and SQL verification, 05E security integration/hardening, 06A–06D DTOs & Validation, 07S allocator infrastructure, and 07A Patient Application Service are complete.
 The six approved entity configurations, explicit historical-safe relationships, approved indexes/uniqueness,
 soft-delete filters, three opted-in rowversion mappings, and the Infrastructure migration/snapshot are present.
-Full restore, build, and tests passed (285 tests). The integration fixture uses only the exact
+Full restore, build, and tests passed (300 tests). The integration fixture uses only the exact
 `ElsheiekhHMS_IntegrationTests` LocalDB target and removes it after each run; `ElsheiekhHMS_Dev`
 was updated only through the approved additive migration. `ApplicationUser`, the
 same-context Identity foundation, approved account-security state model, options, role stores, and focused model tests are present.
@@ -826,10 +828,10 @@ physical Identity/AuditLog schema verification, migration-history verification, 
 temporary pending-model suppression are complete. Phase 05E adds Identity cookie composition, request-level security-stamp/account-state validation,
 Interactive Server circuit revalidation, scoped stable-user propagation, antiforgery/security-header hardening, and an explicit secret-backed administrator bootstrap primitive.
 Event-producing security and business workflows, retention duration, IP/UserAgent capture, clinical/read auditing, and UI remain deferred.
-The 07S migration `AddPhase07AllocatorInfrastructure` is applied exactly once to `ElsheiekhHMS_Dev`; allocator tables and queue uniqueness were physically verified. Patient phone remains non-unique, and no Phase 07 application-service sub-phase has started.
+The 07S migration `AddPhase07AllocatorInfrastructure` is applied exactly once to `ElsheiekhHMS_Dev`; allocator tables and queue uniqueness were physically verified. Patient phone remains non-unique. 07A provides the first approved application service, a narrow EF-free persistence port, bounded projections, stable UserId authorization, and transactional Patient/AuditLog writes. Its two reviewed decisions are that allocator access remains on the narrow persistence port and registration audits target the durable PatientCode before the single save. 07B has not started.
 
 NEXT ACTION:
-Prepare and approve the next Phase 07 application-service design/implementation gate.
+Prepare and approve the next Phase 07B Department Application Service design/implementation gate.
 
 DO NOT:
 Do not begin the next Phase 07 sub-phase without its corresponding approval.

@@ -1,11 +1,11 @@
 {
   "schemaVersion": "1.0",
-  "generatedAtUtc": "2026-09-21T23:43:10.1156262\u002B00:00",
-  "gitCommit": "07ba37f3fd55b05ab625a8988b5035535e3c8281",
+  "generatedAtUtc": "2026-09-22T00:34:58.8426864\u002B00:00",
+  "gitCommit": "d65a907ce83fb53e0c38131fda9c59d3f2b2c145",
   "gitBranch": "main",
   "workingTreeDirty": true,
-  "gitStatusAtGeneration": "M DEVELOPMENT_ROADMAP.md\n M ElsheiekhHMS.Infrastructure/Configurations/Entities/WalkInQueueEntryConfiguration.cs\n M ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs\n M ElsheiekhHMS.Infrastructure/Migrations/ElsheiekhHmsDbContextModelSnapshot.cs\n M ElsheiekhHMS.Infrastructure/Persistence/ElsheiekhHmsDbContext.cs\n M ElsheiekhHMS.Tests/Integration/Persistence/ElsheiekhHmsDbContextSqlServerTests.cs\n M ElsheiekhHMS.Tests/Unit/Infrastructure/ElsheiekhHmsDbContextModelTests.cs\n M ElsheiekhHMS.Tests/Unit/Infrastructure/ElsheiekhHmsDbContextTests.cs\n M README.md\n M docs/ARCHITECTURE.md\n M docs/DECISIONS.md\n?? ElsheiekhHMS.Infrastructure/Migrations/20260921230714_AddPhase07AllocatorInfrastructure.Designer.cs\n?? ElsheiekhHMS.Infrastructure/Migrations/20260921230714_AddPhase07AllocatorInfrastructure.cs\n?? ElsheiekhHMS.Infrastructure/Persistence/Allocation/PatientCodeAllocation.cs\n?? ElsheiekhHMS.Infrastructure/Persistence/Allocation/PatientCodeAllocationConfiguration.cs\n?? ElsheiekhHMS.Infrastructure/Persistence/Allocation/PatientCodeAllocator.cs\n?? ElsheiekhHMS.Infrastructure/Persistence/Allocation/QueueTicketAllocation.cs\n?? ElsheiekhHMS.Infrastructure/Persistence/Allocation/QueueTicketAllocationConfiguration.cs\n?? ElsheiekhHMS.Infrastructure/Persistence/Allocation/QueueTicketAllocator.cs\n?? ElsheiekhHMS.Tests/Unit/Infrastructure/Allocation/AllocatorFormattingTests.cs\n?? ElsheiekhHMS.Tests/Unit/Infrastructure/Allocation/AllocatorRegistrationTests.cs\n?? Phases.md",
-  "sourceFingerprint": "fef1694316c7c90725e0b2a96f046fa4ee441d377917a9d20f5c3fe5b0c8456c",
+  "gitStatusAtGeneration": "M DEVELOPMENT_ROADMAP.md\n M ElsheiekhHMS.Application/Common/Auditing/AuditActions.cs\n M ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs\n M ElsheiekhHMS.Tests/Unit/Application/Architecture/ApplicationContractArchitectureTests.cs\n M ElsheiekhHMS.Tests/Unit/Application/Auditing/AuditVocabularyTests.cs\n M README.md\n M docs/ARCHITECTURE.md\n M docs/DECISIONS.md\n M graphify-out/GRAPH_REPORT.md\n M graphify-out/graph.html\n M graphify-out/graph.json\n?? ElsheiekhHMS.Application/Common/Results/ServiceError.cs\n?? ElsheiekhHMS.Application/Common/Results/ServiceResult.cs\n?? ElsheiekhHMS.Application/Patients/IPatientService.cs\n?? ElsheiekhHMS.Application/Patients/PatientService.cs\n?? ElsheiekhHMS.Application/Patients/Persistence/IPatientPersistence.cs\n?? ElsheiekhHMS.Application/Patients/Persistence/PatientPersistenceSaveStatus.cs\n?? ElsheiekhHMS.Infrastructure/Persistence/Patients/PatientPersistence.cs\n?? ElsheiekhHMS.Tests/Integration/Persistence/PatientServiceSqlServerTests.cs\n?? ElsheiekhHMS.Tests/Unit/Application/Common/Results/ServiceResultTests.cs\n?? ElsheiekhHMS.Tests/Unit/Application/Patients/PatientServiceTests.cs\n?? Phases.md",
+  "sourceFingerprint": "32a6634f3d8a7773575d6a497abcb0dfdac519080c2308858e311177de1a039a",
   "generatorFingerprint": "03eee0a8853a7e84af6cbe571d34e6f7d820505ac8f5670a719d0d63b113840c",
   "fingerprintAlgorithm": "SHA-256 of ordinal path \u002B NUL \u002B content SHA-256 records joined with LF; sourceManifest defines inputs; graphify-out excluded everywhere",
   "sourceManifest": [
@@ -51,7 +51,7 @@
     },
     {
       "path": "ElsheiekhHMS.Application/Common/Auditing/AuditActions.cs",
-      "sha256": "8cdfb917d477641234b90bbcd07521e295ea4d099d1effb08fa9759021cee00f"
+      "sha256": "e1c0bdfa3838d32121ba604fae0ae2f93bf7e93bf3e5635699b908e60c048c4c"
     },
     {
       "path": "ElsheiekhHMS.Application/Common/Auditing/AuditActorKinds.cs",
@@ -80,6 +80,14 @@
     {
       "path": "ElsheiekhHMS.Application/Common/Contracts/SortDirection.cs",
       "sha256": "75f0e63f5b3006a42bf113b13d914e69becfa38987a12a366301bc828d81a49d"
+    },
+    {
+      "path": "ElsheiekhHMS.Application/Common/Results/ServiceError.cs",
+      "sha256": "cd20828e1941ae2afda1601f08f783457f94e3f207863dccfb8da40e846c3f6d"
+    },
+    {
+      "path": "ElsheiekhHMS.Application/Common/Results/ServiceResult.cs",
+      "sha256": "e04035c5e74970fb4ace02a478bbe6d928e512ed6b82d1fd8a319ff124a2dff8"
     },
     {
       "path": "ElsheiekhHMS.Application/Common/Security/ICurrentUser.cs",
@@ -172,6 +180,22 @@
     {
       "path": "ElsheiekhHMS.Application/Patients/Contracts/UpdatePatientIdentifiersRequest.cs",
       "sha256": "dc4ca6121e0ffaeaef7d5798608837df601d860b7f3dc5d88c76110446515089"
+    },
+    {
+      "path": "ElsheiekhHMS.Application/Patients/IPatientService.cs",
+      "sha256": "9c7db186e01fd47915d0850763d57699ba33d5522494a39558c6dfabce331788"
+    },
+    {
+      "path": "ElsheiekhHMS.Application/Patients/PatientService.cs",
+      "sha256": "4befcedfe703859d119a0ed35618d957505b87c3a91c4dee28ae6da3dc36202f"
+    },
+    {
+      "path": "ElsheiekhHMS.Application/Patients/Persistence/IPatientPersistence.cs",
+      "sha256": "646fed7939f78e171b4a34c2adaf67bd08fa0334afc252a7db2d9ecdab3cc0b8"
+    },
+    {
+      "path": "ElsheiekhHMS.Application/Patients/Persistence/PatientPersistenceSaveStatus.cs",
+      "sha256": "bbce5b19cdb121d5c2ede515909eba931cd81d63950f071918a94bbd0d806243"
     },
     {
       "path": "ElsheiekhHMS.Application/Patients/Validation/PatientSearchRequestValidator.cs",
@@ -383,7 +407,7 @@
     },
     {
       "path": "ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs",
-      "sha256": "a667c1ffc1dea726aa41750a72e2fbafad223cc4b50d2c07f9f1807042fb3c9b"
+      "sha256": "70176ada8266f107bb3edf64a1ec56cfe43ce8a9f3cc709964c80045ca16bbf9"
     },
     {
       "path": "ElsheiekhHMS.Infrastructure/Migrations/20260921111137_InitialCreate.Designer.cs",
@@ -442,6 +466,10 @@
       "sha256": "bc020a8f0155f1275dc217915db3f19a505da8db4fa65d107baf4c950cad5f50"
     },
     {
+      "path": "ElsheiekhHMS.Infrastructure/Persistence/Patients/PatientPersistence.cs",
+      "sha256": "3379c0e4cd34e7455d2b570cedcb4d262c1e606e5764bba3e6d2ddf93230d462"
+    },
+    {
       "path": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
       "sha256": "6cc9fd9be55e6b7f477c82f95a8127514f07cf172c2f7bf08d55643ce49c04a0"
     },
@@ -452,6 +480,10 @@
     {
       "path": "ElsheiekhHMS.Tests/Integration/Persistence/IdentityAndAuditLogSqlServerTests.cs",
       "sha256": "b0878a850a54bd6440fc422cd5869f27c226677c9a0f886780c18bac54c8857c"
+    },
+    {
+      "path": "ElsheiekhHMS.Tests/Integration/Persistence/PatientServiceSqlServerTests.cs",
+      "sha256": "684033a133439ea41bbd96ce4faffb559ade1415e1f1423a1bfb50800ffec264"
     },
     {
       "path": "ElsheiekhHMS.Tests/Integration/Persistence/SqlServerTestDatabaseFixture.cs",
@@ -475,15 +507,19 @@
     },
     {
       "path": "ElsheiekhHMS.Tests/Unit/Application/Architecture/ApplicationContractArchitectureTests.cs",
-      "sha256": "c8e05b587addd9a6d03d5130e1845b372e7797b4aa5a19c19bf1fbf1f806e6a0"
+      "sha256": "471851d991733a46c99bb6c95a50768384547e143dc3fb376928472ba340f495"
     },
     {
       "path": "ElsheiekhHMS.Tests/Unit/Application/Auditing/AuditVocabularyTests.cs",
-      "sha256": "2dae5dd3d1e79dd1b668fa22fa38bc04c35e6594ab83fdb8499b0c4a3fcd25b7"
+      "sha256": "376e94475b1855d38c04024f924cff53f10a84ca3fec862671479bdc4ee9f790"
     },
     {
       "path": "ElsheiekhHMS.Tests/Unit/Application/Common/Contracts/PageRequestTests.cs",
       "sha256": "c5a3b60ba21859414942db8c7b82da6719ee70f8dff13b84f588977ea85cd2ea"
+    },
+    {
+      "path": "ElsheiekhHMS.Tests/Unit/Application/Common/Results/ServiceResultTests.cs",
+      "sha256": "5bff7b09e9d5016e50205957689a0f4c92aa8477047750578831383411a554b7"
     },
     {
       "path": "ElsheiekhHMS.Tests/Unit/Application/Common/Validation/ValidationResultTests.cs",
@@ -500,6 +536,10 @@
     {
       "path": "ElsheiekhHMS.Tests/Unit/Application/Patients/PatientContractTests.cs",
       "sha256": "c04d907c005469e641d3ab880e979a123da5e585277ee8e31f8045a8098914fc"
+    },
+    {
+      "path": "ElsheiekhHMS.Tests/Unit/Application/Patients/PatientServiceTests.cs",
+      "sha256": "c287c5fc802bf43eec922de32e1903adf8ccb86bbed4e06949f3a46ee1ebcdda"
     },
     {
       "path": "ElsheiekhHMS.Tests/Unit/Application/Patients/PatientValidationTests.cs",
@@ -671,7 +711,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "3ade87f7d0931504d82a1578aad7d9816fb1642dfae3e8361767ff093b21352d"
+      "sha256": "9cf7b0932cea33eb4530373c37e1da0b050a39418607701381e8927960b0d1e8"
     }
   ],
   "repository": {
@@ -681,16 +721,16 @@
   },
   "summary": {
     "projectCount": 5,
-    "sourceFileCount": 148,
+    "sourceFileCount": 158,
     "razorFileCount": 11,
-    "typeCount": 156,
-    "interfaceCount": 4,
+    "typeCount": 173,
+    "interfaceCount": 6,
     "testClassCount": 11,
     "testMethodCount": 76,
     "testCount": 113,
     "dynamicTheoryCount": 0,
-    "nodeCount": 387,
-    "edgeCount": 691
+    "nodeCount": 419,
+    "edgeCount": 758
   },
   "projects": [
     {
@@ -731,6 +771,8 @@
         "ElsheiekhHMS.Application/Common/Contracts/PagedResult.cs",
         "ElsheiekhHMS.Application/Common/Contracts/PageRequest.cs",
         "ElsheiekhHMS.Application/Common/Contracts/SortDirection.cs",
+        "ElsheiekhHMS.Application/Common/Results/ServiceError.cs",
+        "ElsheiekhHMS.Application/Common/Results/ServiceResult.cs",
         "ElsheiekhHMS.Application/Common/Security/ICurrentUser.cs",
         "ElsheiekhHMS.Application/Common/Security/PolicyNames.cs",
         "ElsheiekhHMS.Application/Common/Security/RoleNames.cs",
@@ -753,6 +795,10 @@
         "ElsheiekhHMS.Application/Patients/Contracts/UpdatePatientContactDetailsRequest.cs",
         "ElsheiekhHMS.Application/Patients/Contracts/UpdatePatientDemographicsRequest.cs",
         "ElsheiekhHMS.Application/Patients/Contracts/UpdatePatientIdentifiersRequest.cs",
+        "ElsheiekhHMS.Application/Patients/IPatientService.cs",
+        "ElsheiekhHMS.Application/Patients/PatientService.cs",
+        "ElsheiekhHMS.Application/Patients/Persistence/IPatientPersistence.cs",
+        "ElsheiekhHMS.Application/Patients/Persistence/PatientPersistenceSaveStatus.cs",
         "ElsheiekhHMS.Application/Patients/Validation/PatientSearchRequestValidator.cs",
         "ElsheiekhHMS.Application/Patients/Validation/RegisterPatientRequestValidator.cs",
         "ElsheiekhHMS.Application/Patients/Validation/UpdatePatientContactDetailsRequestValidator.cs",
@@ -879,7 +925,8 @@
         "ElsheiekhHMS.Infrastructure/Persistence/Allocation/QueueTicketAllocation.cs",
         "ElsheiekhHMS.Infrastructure/Persistence/Allocation/QueueTicketAllocationConfiguration.cs",
         "ElsheiekhHMS.Infrastructure/Persistence/Allocation/QueueTicketAllocator.cs",
-        "ElsheiekhHMS.Infrastructure/Persistence/ElsheiekhHmsDbContext.cs"
+        "ElsheiekhHMS.Infrastructure/Persistence/ElsheiekhHmsDbContext.cs",
+        "ElsheiekhHMS.Infrastructure/Persistence/Patients/PatientPersistence.cs"
       ]
     },
     {
@@ -921,6 +968,7 @@
       "sourceFiles": [
         "ElsheiekhHMS.Tests/Integration/Persistence/ElsheiekhHmsDbContextSqlServerTests.cs",
         "ElsheiekhHMS.Tests/Integration/Persistence/IdentityAndAuditLogSqlServerTests.cs",
+        "ElsheiekhHMS.Tests/Integration/Persistence/PatientServiceSqlServerTests.cs",
         "ElsheiekhHMS.Tests/Integration/Persistence/SqlServerTestDatabaseFixture.cs",
         "ElsheiekhHMS.Tests/Integration/Persistence/SqlServerTestDatabaseGuard.cs",
         "ElsheiekhHMS.Tests/Integration/Persistence/SqlServerTestDatabaseSafetyTests.cs",
@@ -929,10 +977,12 @@
         "ElsheiekhHMS.Tests/Unit/Application/Architecture/ApplicationContractArchitectureTests.cs",
         "ElsheiekhHMS.Tests/Unit/Application/Auditing/AuditVocabularyTests.cs",
         "ElsheiekhHMS.Tests/Unit/Application/Common/Contracts/PageRequestTests.cs",
+        "ElsheiekhHMS.Tests/Unit/Application/Common/Results/ServiceResultTests.cs",
         "ElsheiekhHMS.Tests/Unit/Application/Common/Validation/ValidationResultTests.cs",
         "ElsheiekhHMS.Tests/Unit/Application/Departments/DepartmentContractTests.cs",
         "ElsheiekhHMS.Tests/Unit/Application/Departments/DepartmentValidationTests.cs",
         "ElsheiekhHMS.Tests/Unit/Application/Patients/PatientContractTests.cs",
+        "ElsheiekhHMS.Tests/Unit/Application/Patients/PatientServiceTests.cs",
         "ElsheiekhHMS.Tests/Unit/Application/Patients/PatientValidationTests.cs",
         "ElsheiekhHMS.Tests/Unit/Application/Queue/QueueContractTests.cs",
         "ElsheiekhHMS.Tests/Unit/Application/Queue/QueueValidationTests.cs",
@@ -1270,6 +1320,38 @@
       "project": "ElsheiekhHMS.Application",
       "file": "ElsheiekhHMS.Application/Common/Contracts/SortDirection.cs",
       "source_file": "ElsheiekhHMS.Application/Common/Contracts/SortDirection.cs",
+      "external": false,
+      "community": 0,
+      "community_name": "ElsheiekhHMS.Application",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Common/Results/ServiceError.cs",
+      "name": "ServiceError.cs",
+      "label": "ServiceError.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Application",
+      "file": "ElsheiekhHMS.Application/Common/Results/ServiceError.cs",
+      "source_file": "ElsheiekhHMS.Application/Common/Results/ServiceError.cs",
+      "external": false,
+      "community": 0,
+      "community_name": "ElsheiekhHMS.Application",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Common/Results/ServiceResult.cs",
+      "name": "ServiceResult.cs",
+      "label": "ServiceResult.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Application",
+      "file": "ElsheiekhHMS.Application/Common/Results/ServiceResult.cs",
+      "source_file": "ElsheiekhHMS.Application/Common/Results/ServiceResult.cs",
       "external": false,
       "community": 0,
       "community_name": "ElsheiekhHMS.Application",
@@ -1622,6 +1704,70 @@
       "project": "ElsheiekhHMS.Application",
       "file": "ElsheiekhHMS.Application/Patients/Contracts/UpdatePatientIdentifiersRequest.cs",
       "source_file": "ElsheiekhHMS.Application/Patients/Contracts/UpdatePatientIdentifiersRequest.cs",
+      "external": false,
+      "community": 0,
+      "community_name": "ElsheiekhHMS.Application",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Patients/IPatientService.cs",
+      "name": "IPatientService.cs",
+      "label": "IPatientService.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Application",
+      "file": "ElsheiekhHMS.Application/Patients/IPatientService.cs",
+      "source_file": "ElsheiekhHMS.Application/Patients/IPatientService.cs",
+      "external": false,
+      "community": 0,
+      "community_name": "ElsheiekhHMS.Application",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Patients/PatientService.cs",
+      "name": "PatientService.cs",
+      "label": "PatientService.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Application",
+      "file": "ElsheiekhHMS.Application/Patients/PatientService.cs",
+      "source_file": "ElsheiekhHMS.Application/Patients/PatientService.cs",
+      "external": false,
+      "community": 0,
+      "community_name": "ElsheiekhHMS.Application",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Patients/Persistence/IPatientPersistence.cs",
+      "name": "IPatientPersistence.cs",
+      "label": "IPatientPersistence.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Application",
+      "file": "ElsheiekhHMS.Application/Patients/Persistence/IPatientPersistence.cs",
+      "source_file": "ElsheiekhHMS.Application/Patients/Persistence/IPatientPersistence.cs",
+      "external": false,
+      "community": 0,
+      "community_name": "ElsheiekhHMS.Application",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Patients/Persistence/PatientPersistenceSaveStatus.cs",
+      "name": "PatientPersistenceSaveStatus.cs",
+      "label": "PatientPersistenceSaveStatus.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Application",
+      "file": "ElsheiekhHMS.Application/Patients/Persistence/PatientPersistenceSaveStatus.cs",
+      "source_file": "ElsheiekhHMS.Application/Patients/Persistence/PatientPersistenceSaveStatus.cs",
       "external": false,
       "community": 0,
       "community_name": "ElsheiekhHMS.Application",
@@ -2670,6 +2816,22 @@
       "dynamicTheories": 0
     },
     {
+      "id": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Persistence/Patients/PatientPersistence.cs",
+      "name": "PatientPersistence.cs",
+      "label": "PatientPersistence.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Infrastructure",
+      "file": "ElsheiekhHMS.Infrastructure/Persistence/Patients/PatientPersistence.cs",
+      "source_file": "ElsheiekhHMS.Infrastructure/Persistence/Patients/PatientPersistence.cs",
+      "external": false,
+      "community": 2,
+      "community_name": "ElsheiekhHMS.Infrastructure",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
       "id": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/ElsheiekhHmsDbContextSqlServerTests.cs",
       "name": "ElsheiekhHmsDbContextSqlServerTests.cs",
       "label": "ElsheiekhHmsDbContextSqlServerTests.cs",
@@ -2694,6 +2856,22 @@
       "project": "ElsheiekhHMS.Tests",
       "file": "ElsheiekhHMS.Tests/Integration/Persistence/IdentityAndAuditLogSqlServerTests.cs",
       "source_file": "ElsheiekhHMS.Tests/Integration/Persistence/IdentityAndAuditLogSqlServerTests.cs",
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/PatientServiceSqlServerTests.cs",
+      "name": "PatientServiceSqlServerTests.cs",
+      "label": "PatientServiceSqlServerTests.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Tests",
+      "file": "ElsheiekhHMS.Tests/Integration/Persistence/PatientServiceSqlServerTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Integration/Persistence/PatientServiceSqlServerTests.cs",
       "external": false,
       "community": 3,
       "community_name": "ElsheiekhHMS.Tests",
@@ -2830,6 +3008,22 @@
       "dynamicTheories": 0
     },
     {
+      "id": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Common/Results/ServiceResultTests.cs",
+      "name": "ServiceResultTests.cs",
+      "label": "ServiceResultTests.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Tests",
+      "file": "ElsheiekhHMS.Tests/Unit/Application/Common/Results/ServiceResultTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Unit/Application/Common/Results/ServiceResultTests.cs",
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
       "id": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Common/Validation/ValidationResultTests.cs",
       "name": "ValidationResultTests.cs",
       "label": "ValidationResultTests.cs",
@@ -2886,6 +3080,22 @@
       "project": "ElsheiekhHMS.Tests",
       "file": "ElsheiekhHMS.Tests/Unit/Application/Patients/PatientContractTests.cs",
       "source_file": "ElsheiekhHMS.Tests/Unit/Application/Patients/PatientContractTests.cs",
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Patients/PatientServiceTests.cs",
+      "name": "PatientServiceTests.cs",
+      "label": "PatientServiceTests.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Tests",
+      "file": "ElsheiekhHMS.Tests/Unit/Application/Patients/PatientServiceTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Unit/Application/Patients/PatientServiceTests.cs",
       "external": false,
       "community": 3,
       "community_name": "ElsheiekhHMS.Tests",
@@ -3609,6 +3819,21 @@
       "dynamicTheories": 0
     },
     {
+      "id": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Common.Results",
+      "name": "ElsheiekhHMS.Application.Common.Results",
+      "label": "ElsheiekhHMS.Application.Common.Results",
+      "kind": "namespace",
+      "type": "namespace",
+      "project": "ElsheiekhHMS.Application",
+      "namespace": "ElsheiekhHMS.Application.Common.Results",
+      "external": false,
+      "community": 0,
+      "community_name": "ElsheiekhHMS.Application",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
       "id": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Common.Security",
       "name": "ElsheiekhHMS.Application.Common.Security",
       "label": "ElsheiekhHMS.Application.Common.Security",
@@ -3669,6 +3894,21 @@
       "dynamicTheories": 0
     },
     {
+      "id": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Patients",
+      "name": "ElsheiekhHMS.Application.Patients",
+      "label": "ElsheiekhHMS.Application.Patients",
+      "kind": "namespace",
+      "type": "namespace",
+      "project": "ElsheiekhHMS.Application",
+      "namespace": "ElsheiekhHMS.Application.Patients",
+      "external": false,
+      "community": 0,
+      "community_name": "ElsheiekhHMS.Application",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
       "id": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Patients.Contracts",
       "name": "ElsheiekhHMS.Application.Patients.Contracts",
       "label": "ElsheiekhHMS.Application.Patients.Contracts",
@@ -3676,6 +3916,21 @@
       "type": "namespace",
       "project": "ElsheiekhHMS.Application",
       "namespace": "ElsheiekhHMS.Application.Patients.Contracts",
+      "external": false,
+      "community": 0,
+      "community_name": "ElsheiekhHMS.Application",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Patients.Persistence",
+      "name": "ElsheiekhHMS.Application.Patients.Persistence",
+      "label": "ElsheiekhHMS.Application.Patients.Persistence",
+      "kind": "namespace",
+      "type": "namespace",
+      "project": "ElsheiekhHMS.Application",
+      "namespace": "ElsheiekhHMS.Application.Patients.Persistence",
       "external": false,
       "community": 0,
       "community_name": "ElsheiekhHMS.Application",
@@ -4044,6 +4299,21 @@
       "dynamicTheories": 0
     },
     {
+      "id": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Persistence.Patients",
+      "name": "ElsheiekhHMS.Infrastructure.Persistence.Patients",
+      "label": "ElsheiekhHMS.Infrastructure.Persistence.Patients",
+      "kind": "namespace",
+      "type": "namespace",
+      "project": "ElsheiekhHMS.Infrastructure",
+      "namespace": "ElsheiekhHMS.Infrastructure.Persistence.Patients",
+      "external": false,
+      "community": 2,
+      "community_name": "ElsheiekhHMS.Infrastructure",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
       "id": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Integration.Persistence",
       "name": "ElsheiekhHMS.Tests.Integration.Persistence",
       "label": "ElsheiekhHMS.Tests.Integration.Persistence",
@@ -4111,6 +4381,21 @@
       "type": "namespace",
       "project": "ElsheiekhHMS.Tests",
       "namespace": "ElsheiekhHMS.Tests.Unit.Application.Common.Contracts",
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Application.Common.Results",
+      "name": "ElsheiekhHMS.Tests.Unit.Application.Common.Results",
+      "label": "ElsheiekhHMS.Tests.Unit.Application.Common.Results",
+      "kind": "namespace",
+      "type": "namespace",
+      "project": "ElsheiekhHMS.Tests",
+      "namespace": "ElsheiekhHMS.Tests.Unit.Application.Common.Results",
       "external": false,
       "community": 3,
       "community_name": "ElsheiekhHMS.Tests",
@@ -4886,6 +5171,54 @@
       "dynamicTheories": 0
     },
     {
+      "id": "type:ElsheiekhHMS.Application.Common.Results.ServiceError",
+      "name": "ServiceError",
+      "label": "ServiceError",
+      "kind": "record",
+      "type": "record",
+      "fullName": "ElsheiekhHMS.Application.Common.Results.ServiceError",
+      "project": "ElsheiekhHMS.Application",
+      "namespace": "ElsheiekhHMS.Application.Common.Results",
+      "file": "ElsheiekhHMS.Application/Common/Results/ServiceError.cs",
+      "source_file": "ElsheiekhHMS.Application/Common/Results/ServiceError.cs",
+      "source_location": "L3",
+      "line": 3,
+      "accessibility": "public",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 0,
+      "community_name": "ElsheiekhHMS.Application",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Application.Common.Results.ServiceResult\u003CT\u003E",
+      "name": "ServiceResult",
+      "label": "ServiceResult",
+      "kind": "class",
+      "type": "class",
+      "fullName": "ElsheiekhHMS.Application.Common.Results.ServiceResult\u003CT\u003E",
+      "project": "ElsheiekhHMS.Application",
+      "namespace": "ElsheiekhHMS.Application.Common.Results",
+      "file": "ElsheiekhHMS.Application/Common/Results/ServiceResult.cs",
+      "source_file": "ElsheiekhHMS.Application/Common/Results/ServiceResult.cs",
+      "source_location": "L3",
+      "line": 3,
+      "accessibility": "public",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 0,
+      "community_name": "ElsheiekhHMS.Application",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
       "id": "type:ElsheiekhHMS.Application.Common.Security.ICurrentUser",
       "name": "ICurrentUser",
       "label": "ICurrentUser",
@@ -5400,6 +5733,102 @@
       "namespace": "ElsheiekhHMS.Application.Patients.Contracts",
       "file": "ElsheiekhHMS.Application/Patients/Contracts/UpdatePatientIdentifiersRequest.cs",
       "source_file": "ElsheiekhHMS.Application/Patients/Contracts/UpdatePatientIdentifiersRequest.cs",
+      "source_location": "L3",
+      "line": 3,
+      "accessibility": "public",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 0,
+      "community_name": "ElsheiekhHMS.Application",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Application.Patients.IPatientService",
+      "name": "IPatientService",
+      "label": "IPatientService",
+      "kind": "interface",
+      "type": "interface",
+      "fullName": "ElsheiekhHMS.Application.Patients.IPatientService",
+      "project": "ElsheiekhHMS.Application",
+      "namespace": "ElsheiekhHMS.Application.Patients",
+      "file": "ElsheiekhHMS.Application/Patients/IPatientService.cs",
+      "source_file": "ElsheiekhHMS.Application/Patients/IPatientService.cs",
+      "source_location": "L7",
+      "line": 7,
+      "accessibility": "public",
+      "abstract": true,
+      "sealed": false,
+      "static": false,
+      "external": false,
+      "community": 0,
+      "community_name": "ElsheiekhHMS.Application",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Application.Patients.PatientService",
+      "name": "PatientService",
+      "label": "PatientService",
+      "kind": "class",
+      "type": "class",
+      "fullName": "ElsheiekhHMS.Application.Patients.PatientService",
+      "project": "ElsheiekhHMS.Application",
+      "namespace": "ElsheiekhHMS.Application.Patients",
+      "file": "ElsheiekhHMS.Application/Patients/PatientService.cs",
+      "source_file": "ElsheiekhHMS.Application/Patients/PatientService.cs",
+      "source_location": "L14",
+      "line": 14,
+      "accessibility": "public",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 0,
+      "community_name": "ElsheiekhHMS.Application",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Application.Patients.Persistence.IPatientPersistence",
+      "name": "IPatientPersistence",
+      "label": "IPatientPersistence",
+      "kind": "interface",
+      "type": "interface",
+      "fullName": "ElsheiekhHMS.Application.Patients.Persistence.IPatientPersistence",
+      "project": "ElsheiekhHMS.Application",
+      "namespace": "ElsheiekhHMS.Application.Patients.Persistence",
+      "file": "ElsheiekhHMS.Application/Patients/Persistence/IPatientPersistence.cs",
+      "source_file": "ElsheiekhHMS.Application/Patients/Persistence/IPatientPersistence.cs",
+      "source_location": "L7",
+      "line": 7,
+      "accessibility": "public",
+      "abstract": true,
+      "sealed": false,
+      "static": false,
+      "external": false,
+      "community": 0,
+      "community_name": "ElsheiekhHMS.Application",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Application.Patients.Persistence.PatientPersistenceSaveStatus",
+      "name": "PatientPersistenceSaveStatus",
+      "label": "PatientPersistenceSaveStatus",
+      "kind": "enum",
+      "type": "enum",
+      "fullName": "ElsheiekhHMS.Application.Patients.Persistence.PatientPersistenceSaveStatus",
+      "project": "ElsheiekhHMS.Application",
+      "namespace": "ElsheiekhHMS.Application.Patients.Persistence",
+      "file": "ElsheiekhHMS.Application/Patients/Persistence/PatientPersistenceSaveStatus.cs",
+      "source_file": "ElsheiekhHMS.Application/Patients/Persistence/PatientPersistenceSaveStatus.cs",
       "source_location": "L3",
       "line": 3,
       "accessibility": "public",
@@ -6624,8 +7053,8 @@
       "namespace": "ElsheiekhHMS.Infrastructure",
       "file": "ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs",
       "source_file": "ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs",
-      "source_location": "L22",
-      "line": 22,
+      "source_location": "L25",
+      "line": 25,
       "accessibility": "public",
       "abstract": false,
       "sealed": false,
@@ -6902,6 +7331,54 @@
       "dynamicTheories": 0
     },
     {
+      "id": "type:ElsheiekhHMS.Infrastructure.Persistence.Patients.PatientPersistence",
+      "name": "PatientPersistence",
+      "label": "PatientPersistence",
+      "kind": "class",
+      "type": "class",
+      "fullName": "ElsheiekhHMS.Infrastructure.Persistence.Patients.PatientPersistence",
+      "project": "ElsheiekhHMS.Infrastructure",
+      "namespace": "ElsheiekhHMS.Infrastructure.Persistence.Patients",
+      "file": "ElsheiekhHMS.Infrastructure/Persistence/Patients/PatientPersistence.cs",
+      "source_file": "ElsheiekhHMS.Infrastructure/Persistence/Patients/PatientPersistence.cs",
+      "source_location": "L10",
+      "line": 10,
+      "accessibility": "public",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 2,
+      "community_name": "ElsheiekhHMS.Infrastructure",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Infrastructure.Persistence.Patients.PatientPersistence.PatientDetailsProjection",
+      "name": "PatientDetailsProjection",
+      "label": "PatientDetailsProjection",
+      "kind": "record",
+      "type": "record",
+      "fullName": "ElsheiekhHMS.Infrastructure.Persistence.Patients.PatientPersistence.PatientDetailsProjection",
+      "project": "ElsheiekhHMS.Infrastructure",
+      "namespace": "ElsheiekhHMS.Infrastructure.Persistence.Patients",
+      "file": "ElsheiekhHMS.Infrastructure/Persistence/Patients/PatientPersistence.cs",
+      "source_file": "ElsheiekhHMS.Infrastructure/Persistence/Patients/PatientPersistence.cs",
+      "source_location": "L155",
+      "line": 155,
+      "accessibility": "private",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 2,
+      "community_name": "ElsheiekhHMS.Infrastructure",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
       "id": "type:ElsheiekhHMS.Tests.Integration.Persistence.ElsheiekhHmsDbContextSqlServerTests",
       "name": "ElsheiekhHmsDbContextSqlServerTests",
       "label": "ElsheiekhHmsDbContextSqlServerTests",
@@ -7034,6 +7511,78 @@
       "source_file": "ElsheiekhHMS.Tests/Integration/Persistence/IdentityAndAuditLogSqlServerTests.cs",
       "source_location": "L292",
       "line": 292,
+      "accessibility": "private",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Tests.Integration.Persistence.PatientServiceSqlServerTests",
+      "name": "PatientServiceSqlServerTests",
+      "label": "PatientServiceSqlServerTests",
+      "kind": "class",
+      "type": "class",
+      "fullName": "ElsheiekhHMS.Tests.Integration.Persistence.PatientServiceSqlServerTests",
+      "project": "ElsheiekhHMS.Tests",
+      "namespace": "ElsheiekhHMS.Tests.Integration.Persistence",
+      "file": "ElsheiekhHMS.Tests/Integration/Persistence/PatientServiceSqlServerTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Integration/Persistence/PatientServiceSqlServerTests.cs",
+      "source_location": "L13",
+      "line": 13,
+      "accessibility": "public",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Tests.Integration.Persistence.PatientServiceSqlServerTests.FixedTimeProvider",
+      "name": "FixedTimeProvider",
+      "label": "FixedTimeProvider",
+      "kind": "class",
+      "type": "class",
+      "fullName": "ElsheiekhHMS.Tests.Integration.Persistence.PatientServiceSqlServerTests.FixedTimeProvider",
+      "project": "ElsheiekhHMS.Tests",
+      "namespace": "ElsheiekhHMS.Tests.Integration.Persistence",
+      "file": "ElsheiekhHMS.Tests/Integration/Persistence/PatientServiceSqlServerTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Integration/Persistence/PatientServiceSqlServerTests.cs",
+      "source_location": "L97",
+      "line": 97,
+      "accessibility": "private",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Tests.Integration.Persistence.PatientServiceSqlServerTests.TestCurrentUser",
+      "name": "TestCurrentUser",
+      "label": "TestCurrentUser",
+      "kind": "record",
+      "type": "record",
+      "fullName": "ElsheiekhHMS.Tests.Integration.Persistence.PatientServiceSqlServerTests.TestCurrentUser",
+      "project": "ElsheiekhHMS.Tests",
+      "namespace": "ElsheiekhHMS.Tests.Integration.Persistence",
+      "file": "ElsheiekhHMS.Tests/Integration/Persistence/PatientServiceSqlServerTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Integration/Persistence/PatientServiceSqlServerTests.cs",
+      "source_location": "L89",
+      "line": 89,
       "accessibility": "private",
       "abstract": false,
       "sealed": true,
@@ -7200,8 +7749,8 @@
       "namespace": "ElsheiekhHMS.Tests.Unit.Application.Architecture",
       "file": "ElsheiekhHMS.Tests/Unit/Application/Architecture/ApplicationContractArchitectureTests.cs",
       "source_file": "ElsheiekhHMS.Tests/Unit/Application/Architecture/ApplicationContractArchitectureTests.cs",
-      "source_location": "L7",
-      "line": 7,
+      "source_location": "L8",
+      "line": 8,
       "accessibility": "public",
       "abstract": false,
       "sealed": true,
@@ -7254,6 +7803,30 @@
       "source_file": "ElsheiekhHMS.Tests/Unit/Application/Common/Contracts/PageRequestTests.cs",
       "source_location": "L6",
       "line": 6,
+      "accessibility": "public",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Tests.Unit.Application.Common.Results.ServiceResultTests",
+      "name": "ServiceResultTests",
+      "label": "ServiceResultTests",
+      "kind": "class",
+      "type": "class",
+      "fullName": "ElsheiekhHMS.Tests.Unit.Application.Common.Results.ServiceResultTests",
+      "project": "ElsheiekhHMS.Tests",
+      "namespace": "ElsheiekhHMS.Tests.Unit.Application.Common.Results",
+      "file": "ElsheiekhHMS.Tests/Unit/Application/Common/Results/ServiceResultTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Unit/Application/Common/Results/ServiceResultTests.cs",
+      "source_location": "L5",
+      "line": 5,
       "accessibility": "public",
       "abstract": false,
       "sealed": true,
@@ -7351,6 +7924,126 @@
       "source_location": "L8",
       "line": 8,
       "accessibility": "public",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Tests.Unit.Application.Patients.PatientServiceTests",
+      "name": "PatientServiceTests",
+      "label": "PatientServiceTests",
+      "kind": "class",
+      "type": "class",
+      "fullName": "ElsheiekhHMS.Tests.Unit.Application.Patients.PatientServiceTests",
+      "project": "ElsheiekhHMS.Tests",
+      "namespace": "ElsheiekhHMS.Tests.Unit.Application.Patients",
+      "file": "ElsheiekhHMS.Tests/Unit/Application/Patients/PatientServiceTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Unit/Application/Patients/PatientServiceTests.cs",
+      "source_location": "L12",
+      "line": 12,
+      "accessibility": "public",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Tests.Unit.Application.Patients.PatientServiceTests.FakePatientPersistence",
+      "name": "FakePatientPersistence",
+      "label": "FakePatientPersistence",
+      "kind": "class",
+      "type": "class",
+      "fullName": "ElsheiekhHMS.Tests.Unit.Application.Patients.PatientServiceTests.FakePatientPersistence",
+      "project": "ElsheiekhHMS.Tests",
+      "namespace": "ElsheiekhHMS.Tests.Unit.Application.Patients",
+      "file": "ElsheiekhHMS.Tests/Unit/Application/Patients/PatientServiceTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Unit/Application/Patients/PatientServiceTests.cs",
+      "source_location": "L243",
+      "line": 243,
+      "accessibility": "private",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Tests.Unit.Application.Patients.PatientServiceTests.FixedTimeProvider",
+      "name": "FixedTimeProvider",
+      "label": "FixedTimeProvider",
+      "kind": "class",
+      "type": "class",
+      "fullName": "ElsheiekhHMS.Tests.Unit.Application.Patients.PatientServiceTests.FixedTimeProvider",
+      "project": "ElsheiekhHMS.Tests",
+      "namespace": "ElsheiekhHMS.Tests.Unit.Application.Patients",
+      "file": "ElsheiekhHMS.Tests/Unit/Application/Patients/PatientServiceTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Unit/Application/Patients/PatientServiceTests.cs",
+      "source_location": "L226",
+      "line": 226,
+      "accessibility": "private",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Tests.Unit.Application.Patients.PatientServiceTests.RecordingAuditWriter",
+      "name": "RecordingAuditWriter",
+      "label": "RecordingAuditWriter",
+      "kind": "class",
+      "type": "class",
+      "fullName": "ElsheiekhHMS.Tests.Unit.Application.Patients.PatientServiceTests.RecordingAuditWriter",
+      "project": "ElsheiekhHMS.Tests",
+      "namespace": "ElsheiekhHMS.Tests.Unit.Application.Patients",
+      "file": "ElsheiekhHMS.Tests/Unit/Application/Patients/PatientServiceTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Unit/Application/Patients/PatientServiceTests.cs",
+      "source_location": "L231",
+      "line": 231,
+      "accessibility": "private",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Tests.Unit.Application.Patients.PatientServiceTests.TestCurrentUser",
+      "name": "TestCurrentUser",
+      "label": "TestCurrentUser",
+      "kind": "class",
+      "type": "class",
+      "fullName": "ElsheiekhHMS.Tests.Unit.Application.Patients.PatientServiceTests.TestCurrentUser",
+      "project": "ElsheiekhHMS.Tests",
+      "namespace": "ElsheiekhHMS.Tests.Unit.Application.Patients",
+      "file": "ElsheiekhHMS.Tests/Unit/Application/Patients/PatientServiceTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Unit/Application/Patients/PatientServiceTests.cs",
+      "source_location": "L216",
+      "line": 216,
+      "accessibility": "private",
       "abstract": false,
       "sealed": true,
       "static": false,
@@ -8614,6 +9307,24 @@
       "weight": 1
     },
     {
+      "source": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Common/Results/ServiceError.cs",
+      "target": "type:ElsheiekhHMS.Application.Common.Results.ServiceError",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Application/Common/Results/ServiceError.cs:L3",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Common/Results/ServiceResult.cs",
+      "target": "type:ElsheiekhHMS.Application.Common.Results.ServiceResult\u003CT\u003E",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Application/Common/Results/ServiceResult.cs:L3",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
       "source": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Common/Security/ICurrentUser.cs",
       "target": "type:ElsheiekhHMS.Application.Common.Security.ICurrentUser",
       "type": "declares",
@@ -8807,6 +9518,42 @@
       "target": "type:ElsheiekhHMS.Application.Patients.Contracts.UpdatePatientIdentifiersRequest",
       "type": "declares",
       "evidence": "ElsheiekhHMS.Application/Patients/Contracts/UpdatePatientIdentifiersRequest.cs:L3",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Patients/IPatientService.cs",
+      "target": "type:ElsheiekhHMS.Application.Patients.IPatientService",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Application/Patients/IPatientService.cs:L7",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Patients/PatientService.cs",
+      "target": "type:ElsheiekhHMS.Application.Patients.PatientService",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Application/Patients/PatientService.cs:L14",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Patients/Persistence/IPatientPersistence.cs",
+      "target": "type:ElsheiekhHMS.Application.Patients.Persistence.IPatientPersistence",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Application/Patients/Persistence/IPatientPersistence.cs:L7",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Patients/Persistence/PatientPersistenceSaveStatus.cs",
+      "target": "type:ElsheiekhHMS.Application.Patients.Persistence.PatientPersistenceSaveStatus",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Application/Patients/Persistence/PatientPersistenceSaveStatus.cs:L3",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -9265,7 +10012,7 @@
       "source": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs",
       "target": "type:ElsheiekhHMS.Infrastructure.InfrastructureServiceExtensions",
       "type": "declares",
-      "evidence": "ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs:L22",
+      "evidence": "ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs:L25",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -9397,6 +10144,24 @@
       "weight": 1
     },
     {
+      "source": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Persistence/Patients/PatientPersistence.cs",
+      "target": "type:ElsheiekhHMS.Infrastructure.Persistence.Patients.PatientPersistence",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Infrastructure/Persistence/Patients/PatientPersistence.cs:L10",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Persistence/Patients/PatientPersistence.cs",
+      "target": "type:ElsheiekhHMS.Infrastructure.Persistence.Patients.PatientPersistence.PatientDetailsProjection",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Infrastructure/Persistence/Patients/PatientPersistence.cs:L155",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
       "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/ElsheiekhHmsDbContextSqlServerTests.cs",
       "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.ElsheiekhHmsDbContextSqlServerTests",
       "type": "declares",
@@ -9446,6 +10211,33 @@
       "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.IdentityAndAuditLogSqlServerTests.TestCurrentUser",
       "type": "declares",
       "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/IdentityAndAuditLogSqlServerTests.cs:L292",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/PatientServiceSqlServerTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.PatientServiceSqlServerTests",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/PatientServiceSqlServerTests.cs:L13",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/PatientServiceSqlServerTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.PatientServiceSqlServerTests.FixedTimeProvider",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/PatientServiceSqlServerTests.cs:L97",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/PatientServiceSqlServerTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.PatientServiceSqlServerTests.TestCurrentUser",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/PatientServiceSqlServerTests.cs:L89",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -9508,7 +10300,7 @@
       "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Architecture/ApplicationContractArchitectureTests.cs",
       "target": "type:ElsheiekhHMS.Tests.Unit.Application.Architecture.ApplicationContractArchitectureTests",
       "type": "declares",
-      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Architecture/ApplicationContractArchitectureTests.cs:L7",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Architecture/ApplicationContractArchitectureTests.cs:L8",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -9527,6 +10319,15 @@
       "target": "type:ElsheiekhHMS.Tests.Unit.Application.Common.Contracts.PageRequestTests",
       "type": "declares",
       "evidence": "ElsheiekhHMS.Tests/Unit/Application/Common/Contracts/PageRequestTests.cs:L6",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Common/Results/ServiceResultTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Application.Common.Results.ServiceResultTests",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Common/Results/ServiceResultTests.cs:L5",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -9563,6 +10364,51 @@
       "target": "type:ElsheiekhHMS.Tests.Unit.Application.Patients.PatientContractTests",
       "type": "declares",
       "evidence": "ElsheiekhHMS.Tests/Unit/Application/Patients/PatientContractTests.cs:L8",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Patients/PatientServiceTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Application.Patients.PatientServiceTests",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Patients/PatientServiceTests.cs:L12",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Patients/PatientServiceTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Application.Patients.PatientServiceTests.FakePatientPersistence",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Patients/PatientServiceTests.cs:L243",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Patients/PatientServiceTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Application.Patients.PatientServiceTests.FixedTimeProvider",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Patients/PatientServiceTests.cs:L226",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Patients/PatientServiceTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Application.Patients.PatientServiceTests.RecordingAuditWriter",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Patients/PatientServiceTests.cs:L231",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Patients/PatientServiceTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Application.Patients.PatientServiceTests.TestCurrentUser",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Patients/PatientServiceTests.cs:L216",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -10046,6 +10892,24 @@
     },
     {
       "source": "project:ElsheiekhHMS.Application",
+      "target": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Common/Results/ServiceError.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Application/ElsheiekhHMS.Application.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Application",
+      "target": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Common/Results/ServiceResult.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Application/ElsheiekhHMS.Application.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Application",
       "target": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Common/Security/ICurrentUser.cs",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Application/ElsheiekhHMS.Application.csproj",
@@ -10244,6 +11108,42 @@
     },
     {
       "source": "project:ElsheiekhHMS.Application",
+      "target": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Patients/IPatientService.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Application/ElsheiekhHMS.Application.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Application",
+      "target": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Patients/PatientService.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Application/ElsheiekhHMS.Application.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Application",
+      "target": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Patients/Persistence/IPatientPersistence.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Application/ElsheiekhHMS.Application.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Application",
+      "target": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Patients/Persistence/PatientPersistenceSaveStatus.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Application/ElsheiekhHMS.Application.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Application",
       "target": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Patients/Validation/PatientSearchRequestValidator.cs",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Application/ElsheiekhHMS.Application.csproj",
@@ -10415,6 +11315,15 @@
     },
     {
       "source": "project:ElsheiekhHMS.Application",
+      "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Common.Results",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Application/Common/Results/ServiceError.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Application",
       "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Common.Security",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Application/Common/Security/ICurrentUser.cs",
@@ -10451,9 +11360,27 @@
     },
     {
       "source": "project:ElsheiekhHMS.Application",
+      "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Patients",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Application/Patients/IPatientService.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Application",
       "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Patients.Contracts",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Application/Patients/Contracts/PatientDetailsDto.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Application",
+      "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Patients.Persistence",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Application/Patients/Persistence/IPatientPersistence.cs",
       "relation": "contains",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -11045,6 +11972,15 @@
     },
     {
       "source": "project:ElsheiekhHMS.Infrastructure",
+      "target": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Persistence/Patients/PatientPersistence.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Infrastructure/ElsheiekhHMS.Infrastructure.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Infrastructure",
       "target": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs",
@@ -11144,6 +12080,15 @@
     },
     {
       "source": "project:ElsheiekhHMS.Infrastructure",
+      "target": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Persistence.Patients",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Infrastructure/Persistence/Patients/PatientPersistence.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Infrastructure",
       "target": "project:ElsheiekhHMS.Application",
       "type": "project-reference",
       "evidence": "ElsheiekhHMS.Infrastructure/ElsheiekhHMS.Infrastructure.csproj",
@@ -11172,6 +12117,15 @@
     {
       "source": "project:ElsheiekhHMS.Tests",
       "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/IdentityAndAuditLogSqlServerTests.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Tests",
+      "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/PatientServiceSqlServerTests.cs",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
       "relation": "contains",
@@ -11252,6 +12206,15 @@
     },
     {
       "source": "project:ElsheiekhHMS.Tests",
+      "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Common/Results/ServiceResultTests.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Tests",
       "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Common/Validation/ValidationResultTests.cs",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
@@ -11280,6 +12243,15 @@
     {
       "source": "project:ElsheiekhHMS.Tests",
       "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Patients/PatientContractTests.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Tests",
+      "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Patients/PatientServiceTests.cs",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
       "relation": "contains",
@@ -11552,6 +12524,15 @@
       "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Application.Common.Contracts",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Tests/Unit/Application/Common/Contracts/PageRequestTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Tests",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Application.Common.Results",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Common/Results/ServiceResultTests.cs",
       "relation": "contains",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -12178,6 +13159,33 @@
       "weight": 1
     },
     {
+      "source": "type:ElsheiekhHMS.Application.Common.Results.ServiceError",
+      "target": "type:System.IEquatable\u003CT\u003E",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Application/Common/Results/ServiceError.cs:L3",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Application.Common.Results.ServiceError",
+      "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Common.Results",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Application/Common/Results/ServiceError.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Application.Common.Results.ServiceResult\u003CT\u003E",
+      "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Common.Results",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Application/Common/Results/ServiceResult.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
       "source": "type:ElsheiekhHMS.Application.Common.Security.ICurrentUser",
       "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Common.Security",
       "type": "namespace-membership",
@@ -12515,6 +13523,51 @@
       "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Patients.Contracts",
       "type": "namespace-membership",
       "evidence": "ElsheiekhHMS.Application/Patients/Contracts/UpdatePatientIdentifiersRequest.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Application.Patients.IPatientService",
+      "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Patients",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Application/Patients/IPatientService.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Application.Patients.PatientService",
+      "target": "type:ElsheiekhHMS.Application.Patients.IPatientService",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Application/Patients/PatientService.cs:L14",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Application.Patients.PatientService",
+      "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Patients",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Application/Patients/PatientService.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Application.Patients.Persistence.IPatientPersistence",
+      "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Patients.Persistence",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Application/Patients/Persistence/IPatientPersistence.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Application.Patients.Persistence.PatientPersistenceSaveStatus",
+      "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Patients.Persistence",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Application/Patients/Persistence/PatientPersistenceSaveStatus.cs",
       "relation": "namespace-membership",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -13483,6 +14536,51 @@
       "weight": 1
     },
     {
+      "source": "type:ElsheiekhHMS.Infrastructure.Persistence.Patients.PatientPersistence",
+      "target": "type:ElsheiekhHMS.Infrastructure.Persistence.Patients.PatientPersistence.PatientDetailsProjection",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Infrastructure/Persistence/Patients/PatientPersistence.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Infrastructure.Persistence.Patients.PatientPersistence",
+      "target": "type:ElsheiekhHMS.Application.Patients.Persistence.IPatientPersistence",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Infrastructure/Persistence/Patients/PatientPersistence.cs:L10",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Infrastructure.Persistence.Patients.PatientPersistence",
+      "target": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Persistence.Patients",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Infrastructure/Persistence/Patients/PatientPersistence.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Infrastructure.Persistence.Patients.PatientPersistence.PatientDetailsProjection",
+      "target": "type:System.IEquatable\u003CT\u003E",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Infrastructure/Persistence/Patients/PatientPersistence.cs:L155",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Infrastructure.Persistence.Patients.PatientPersistence.PatientDetailsProjection",
+      "target": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Persistence.Patients",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Infrastructure/Persistence/Patients/PatientPersistence.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
       "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.ElsheiekhHmsDbContextSqlServerTests",
       "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.ElsheiekhHmsDbContextSqlServerTests.FixedTimeProvider",
       "type": "contains",
@@ -13618,6 +14716,78 @@
       "weight": 1
     },
     {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.PatientServiceSqlServerTests",
+      "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.PatientServiceSqlServerTests.FixedTimeProvider",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/PatientServiceSqlServerTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.PatientServiceSqlServerTests",
+      "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.PatientServiceSqlServerTests.TestCurrentUser",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/PatientServiceSqlServerTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.PatientServiceSqlServerTests",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Integration.Persistence",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/PatientServiceSqlServerTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.PatientServiceSqlServerTests.FixedTimeProvider",
+      "target": "type:System.TimeProvider",
+      "type": "inherits",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/PatientServiceSqlServerTests.cs:L97",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.PatientServiceSqlServerTests.FixedTimeProvider",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Integration.Persistence",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/PatientServiceSqlServerTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.PatientServiceSqlServerTests.TestCurrentUser",
+      "target": "type:ElsheiekhHMS.Application.Common.Security.ICurrentUser",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/PatientServiceSqlServerTests.cs:L89",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.PatientServiceSqlServerTests.TestCurrentUser",
+      "target": "type:System.IEquatable\u003CT\u003E",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/PatientServiceSqlServerTests.cs:L89",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.PatientServiceSqlServerTests.TestCurrentUser",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Integration.Persistence",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/PatientServiceSqlServerTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
       "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.SqlServerPersistenceCollection",
       "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Integration.Persistence",
       "type": "namespace-membership",
@@ -13726,6 +14896,15 @@
       "weight": 1
     },
     {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Common.Results.ServiceResultTests",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Application.Common.Results",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Common/Results/ServiceResultTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
       "source": "type:ElsheiekhHMS.Tests.Unit.Application.Common.Validation.ValidationResultTests",
       "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Application.Common.Validation",
       "type": "namespace-membership",
@@ -13757,6 +14936,123 @@
       "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Application.Patients",
       "type": "namespace-membership",
       "evidence": "ElsheiekhHMS.Tests/Unit/Application/Patients/PatientContractTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Patients.PatientServiceTests",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Application.Patients.PatientServiceTests.FakePatientPersistence",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Patients/PatientServiceTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Patients.PatientServiceTests",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Application.Patients.PatientServiceTests.FixedTimeProvider",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Patients/PatientServiceTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Patients.PatientServiceTests",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Application.Patients.PatientServiceTests.RecordingAuditWriter",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Patients/PatientServiceTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Patients.PatientServiceTests",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Application.Patients.PatientServiceTests.TestCurrentUser",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Patients/PatientServiceTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Patients.PatientServiceTests",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Application.Patients",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Patients/PatientServiceTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Patients.PatientServiceTests.FakePatientPersistence",
+      "target": "type:ElsheiekhHMS.Application.Patients.Persistence.IPatientPersistence",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Patients/PatientServiceTests.cs:L243",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Patients.PatientServiceTests.FakePatientPersistence",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Application.Patients",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Patients/PatientServiceTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Patients.PatientServiceTests.FixedTimeProvider",
+      "target": "type:System.TimeProvider",
+      "type": "inherits",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Patients/PatientServiceTests.cs:L226",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Patients.PatientServiceTests.FixedTimeProvider",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Application.Patients",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Patients/PatientServiceTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Patients.PatientServiceTests.RecordingAuditWriter",
+      "target": "type:ElsheiekhHMS.Application.Common.Auditing.IAuditEventWriter",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Patients/PatientServiceTests.cs:L231",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Patients.PatientServiceTests.RecordingAuditWriter",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Application.Patients",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Patients/PatientServiceTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Patients.PatientServiceTests.TestCurrentUser",
+      "target": "type:ElsheiekhHMS.Application.Common.Security.ICurrentUser",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Patients/PatientServiceTests.cs:L216",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Patients.PatientServiceTests.TestCurrentUser",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Application.Patients",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Patients/PatientServiceTests.cs",
       "relation": "namespace-membership",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -14707,7 +16003,7 @@
       "statusSource": "README.md declaration, not independently certified completion",
       "declaredStatus": [
         {
-          "text": "\u003E **Current development stage:** Phase 07 \u2014 Application Services (07S allocator infrastructure prerequisite complete; application-service sub-phases not started)",
+          "text": "\u003E **Current development stage:** Phase 07 \u2014 Application Services (07S and 07A complete; 07B remains separately gated)",
           "source": "README.md:L5"
         },
         {
@@ -14787,40 +16083,44 @@
           "source": "README.md:L43"
         },
         {
+          "text": "\u003E **Phase 07A:** \u2705 Patient Application Service implemented, tested, and reviewed; registration and PatientCode allocation remain one-save transactional",
+          "source": "README.md:L45"
+        },
+        {
           "text": "| 01 | Solution \u0026 Architecture | \u2705 Complete |",
-          "source": "README.md:L360"
-        },
-        {
-          "text": "| 02 | Core Foundation | \u2705 Complete |",
-          "source": "README.md:L361"
-        },
-        {
-          "text": "| 03 | Domain Entities | \u2705 Complete |",
           "source": "README.md:L362"
         },
         {
-          "text": "| 04 | EF Core \u0026 Database | \u2705 Complete |",
+          "text": "| 02 | Core Foundation | \u2705 Complete |",
           "source": "README.md:L363"
         },
         {
-          "text": "| 05 | Identity \u0026 Security | \u2705 Complete (05A, 05B, 05C, 05C-A, 05D, and 05E) |",
+          "text": "| 03 | Domain Entities | \u2705 Complete |",
           "source": "README.md:L364"
         },
         {
-          "text": "| 06 | DTOs \u0026 Validation | \u2705 Complete (06A\u201306D) |",
+          "text": "| 04 | EF Core \u0026 Database | \u2705 Complete |",
           "source": "README.md:L365"
         },
         {
-          "text": "| 07 | Application Services | \uD83D\uDFE1 In progress (07S complete; application-service sub-phases not started) |",
+          "text": "| 05 | Identity \u0026 Security | \u2705 Complete (05A, 05B, 05C, 05C-A, 05D, and 05E) |",
           "source": "README.md:L366"
         },
         {
-          "text": "| 08 | Business Workflows | \u23F3 Not started |",
+          "text": "| 06 | DTOs \u0026 Validation | \u2705 Complete (06A\u201306D) |",
           "source": "README.md:L367"
         },
         {
-          "text": "| 09 | Enterprise Infrastructure | \u23F3 Not started |",
+          "text": "| 07 | Application Services | \uD83D\uDFE1 In progress (07S and 07A complete; 07B not started) |",
           "source": "README.md:L368"
+        },
+        {
+          "text": "| 08 | Business Workflows | \u23F3 Not started |",
+          "source": "README.md:L369"
+        },
+        {
+          "text": "| 09 | Enterprise Infrastructure | \u23F3 Not started |",
+          "source": "README.md:L370"
         }
       ]
     }
@@ -15008,6 +16308,24 @@
       "target": "type:ElsheiekhHMS.Application.Common.Contracts.SortDirection",
       "type": "declares",
       "evidence": "ElsheiekhHMS.Application/Common/Contracts/SortDirection.cs:L3",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Common/Results/ServiceError.cs",
+      "target": "type:ElsheiekhHMS.Application.Common.Results.ServiceError",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Application/Common/Results/ServiceError.cs:L3",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Common/Results/ServiceResult.cs",
+      "target": "type:ElsheiekhHMS.Application.Common.Results.ServiceResult\u003CT\u003E",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Application/Common/Results/ServiceResult.cs:L3",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -15206,6 +16524,42 @@
       "target": "type:ElsheiekhHMS.Application.Patients.Contracts.UpdatePatientIdentifiersRequest",
       "type": "declares",
       "evidence": "ElsheiekhHMS.Application/Patients/Contracts/UpdatePatientIdentifiersRequest.cs:L3",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Patients/IPatientService.cs",
+      "target": "type:ElsheiekhHMS.Application.Patients.IPatientService",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Application/Patients/IPatientService.cs:L7",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Patients/PatientService.cs",
+      "target": "type:ElsheiekhHMS.Application.Patients.PatientService",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Application/Patients/PatientService.cs:L14",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Patients/Persistence/IPatientPersistence.cs",
+      "target": "type:ElsheiekhHMS.Application.Patients.Persistence.IPatientPersistence",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Application/Patients/Persistence/IPatientPersistence.cs:L7",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Patients/Persistence/PatientPersistenceSaveStatus.cs",
+      "target": "type:ElsheiekhHMS.Application.Patients.Persistence.PatientPersistenceSaveStatus",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Application/Patients/Persistence/PatientPersistenceSaveStatus.cs:L3",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -15664,7 +17018,7 @@
       "source": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs",
       "target": "type:ElsheiekhHMS.Infrastructure.InfrastructureServiceExtensions",
       "type": "declares",
-      "evidence": "ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs:L22",
+      "evidence": "ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs:L25",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -15796,6 +17150,24 @@
       "weight": 1
     },
     {
+      "source": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Persistence/Patients/PatientPersistence.cs",
+      "target": "type:ElsheiekhHMS.Infrastructure.Persistence.Patients.PatientPersistence",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Infrastructure/Persistence/Patients/PatientPersistence.cs:L10",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Persistence/Patients/PatientPersistence.cs",
+      "target": "type:ElsheiekhHMS.Infrastructure.Persistence.Patients.PatientPersistence.PatientDetailsProjection",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Infrastructure/Persistence/Patients/PatientPersistence.cs:L155",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
       "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/ElsheiekhHmsDbContextSqlServerTests.cs",
       "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.ElsheiekhHmsDbContextSqlServerTests",
       "type": "declares",
@@ -15845,6 +17217,33 @@
       "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.IdentityAndAuditLogSqlServerTests.TestCurrentUser",
       "type": "declares",
       "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/IdentityAndAuditLogSqlServerTests.cs:L292",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/PatientServiceSqlServerTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.PatientServiceSqlServerTests",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/PatientServiceSqlServerTests.cs:L13",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/PatientServiceSqlServerTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.PatientServiceSqlServerTests.FixedTimeProvider",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/PatientServiceSqlServerTests.cs:L97",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/PatientServiceSqlServerTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.PatientServiceSqlServerTests.TestCurrentUser",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/PatientServiceSqlServerTests.cs:L89",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -15907,7 +17306,7 @@
       "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Architecture/ApplicationContractArchitectureTests.cs",
       "target": "type:ElsheiekhHMS.Tests.Unit.Application.Architecture.ApplicationContractArchitectureTests",
       "type": "declares",
-      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Architecture/ApplicationContractArchitectureTests.cs:L7",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Architecture/ApplicationContractArchitectureTests.cs:L8",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -15926,6 +17325,15 @@
       "target": "type:ElsheiekhHMS.Tests.Unit.Application.Common.Contracts.PageRequestTests",
       "type": "declares",
       "evidence": "ElsheiekhHMS.Tests/Unit/Application/Common/Contracts/PageRequestTests.cs:L6",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Common/Results/ServiceResultTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Application.Common.Results.ServiceResultTests",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Common/Results/ServiceResultTests.cs:L5",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -15962,6 +17370,51 @@
       "target": "type:ElsheiekhHMS.Tests.Unit.Application.Patients.PatientContractTests",
       "type": "declares",
       "evidence": "ElsheiekhHMS.Tests/Unit/Application/Patients/PatientContractTests.cs:L8",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Patients/PatientServiceTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Application.Patients.PatientServiceTests",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Patients/PatientServiceTests.cs:L12",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Patients/PatientServiceTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Application.Patients.PatientServiceTests.FakePatientPersistence",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Patients/PatientServiceTests.cs:L243",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Patients/PatientServiceTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Application.Patients.PatientServiceTests.FixedTimeProvider",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Patients/PatientServiceTests.cs:L226",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Patients/PatientServiceTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Application.Patients.PatientServiceTests.RecordingAuditWriter",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Patients/PatientServiceTests.cs:L231",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Patients/PatientServiceTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Application.Patients.PatientServiceTests.TestCurrentUser",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Patients/PatientServiceTests.cs:L216",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -16445,6 +17898,24 @@
     },
     {
       "source": "project:ElsheiekhHMS.Application",
+      "target": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Common/Results/ServiceError.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Application/ElsheiekhHMS.Application.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Application",
+      "target": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Common/Results/ServiceResult.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Application/ElsheiekhHMS.Application.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Application",
       "target": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Common/Security/ICurrentUser.cs",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Application/ElsheiekhHMS.Application.csproj",
@@ -16643,6 +18114,42 @@
     },
     {
       "source": "project:ElsheiekhHMS.Application",
+      "target": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Patients/IPatientService.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Application/ElsheiekhHMS.Application.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Application",
+      "target": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Patients/PatientService.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Application/ElsheiekhHMS.Application.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Application",
+      "target": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Patients/Persistence/IPatientPersistence.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Application/ElsheiekhHMS.Application.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Application",
+      "target": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Patients/Persistence/PatientPersistenceSaveStatus.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Application/ElsheiekhHMS.Application.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Application",
       "target": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Patients/Validation/PatientSearchRequestValidator.cs",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Application/ElsheiekhHMS.Application.csproj",
@@ -16814,6 +18321,15 @@
     },
     {
       "source": "project:ElsheiekhHMS.Application",
+      "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Common.Results",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Application/Common/Results/ServiceError.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Application",
       "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Common.Security",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Application/Common/Security/ICurrentUser.cs",
@@ -16850,9 +18366,27 @@
     },
     {
       "source": "project:ElsheiekhHMS.Application",
+      "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Patients",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Application/Patients/IPatientService.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Application",
       "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Patients.Contracts",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Application/Patients/Contracts/PatientDetailsDto.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Application",
+      "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Patients.Persistence",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Application/Patients/Persistence/IPatientPersistence.cs",
       "relation": "contains",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -17444,6 +18978,15 @@
     },
     {
       "source": "project:ElsheiekhHMS.Infrastructure",
+      "target": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Persistence/Patients/PatientPersistence.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Infrastructure/ElsheiekhHMS.Infrastructure.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Infrastructure",
       "target": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs",
@@ -17543,6 +19086,15 @@
     },
     {
       "source": "project:ElsheiekhHMS.Infrastructure",
+      "target": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Persistence.Patients",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Infrastructure/Persistence/Patients/PatientPersistence.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Infrastructure",
       "target": "project:ElsheiekhHMS.Application",
       "type": "project-reference",
       "evidence": "ElsheiekhHMS.Infrastructure/ElsheiekhHMS.Infrastructure.csproj",
@@ -17571,6 +19123,15 @@
     {
       "source": "project:ElsheiekhHMS.Tests",
       "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/IdentityAndAuditLogSqlServerTests.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Tests",
+      "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/PatientServiceSqlServerTests.cs",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
       "relation": "contains",
@@ -17651,6 +19212,15 @@
     },
     {
       "source": "project:ElsheiekhHMS.Tests",
+      "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Common/Results/ServiceResultTests.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Tests",
       "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Common/Validation/ValidationResultTests.cs",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
@@ -17679,6 +19249,15 @@
     {
       "source": "project:ElsheiekhHMS.Tests",
       "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Patients/PatientContractTests.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Tests",
+      "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Patients/PatientServiceTests.cs",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
       "relation": "contains",
@@ -17951,6 +19530,15 @@
       "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Application.Common.Contracts",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Tests/Unit/Application/Common/Contracts/PageRequestTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Tests",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Application.Common.Results",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Common/Results/ServiceResultTests.cs",
       "relation": "contains",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -18577,6 +20165,33 @@
       "weight": 1
     },
     {
+      "source": "type:ElsheiekhHMS.Application.Common.Results.ServiceError",
+      "target": "type:System.IEquatable\u003CT\u003E",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Application/Common/Results/ServiceError.cs:L3",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Application.Common.Results.ServiceError",
+      "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Common.Results",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Application/Common/Results/ServiceError.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Application.Common.Results.ServiceResult\u003CT\u003E",
+      "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Common.Results",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Application/Common/Results/ServiceResult.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
       "source": "type:ElsheiekhHMS.Application.Common.Security.ICurrentUser",
       "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Common.Security",
       "type": "namespace-membership",
@@ -18914,6 +20529,51 @@
       "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Patients.Contracts",
       "type": "namespace-membership",
       "evidence": "ElsheiekhHMS.Application/Patients/Contracts/UpdatePatientIdentifiersRequest.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Application.Patients.IPatientService",
+      "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Patients",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Application/Patients/IPatientService.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Application.Patients.PatientService",
+      "target": "type:ElsheiekhHMS.Application.Patients.IPatientService",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Application/Patients/PatientService.cs:L14",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Application.Patients.PatientService",
+      "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Patients",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Application/Patients/PatientService.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Application.Patients.Persistence.IPatientPersistence",
+      "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Patients.Persistence",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Application/Patients/Persistence/IPatientPersistence.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Application.Patients.Persistence.PatientPersistenceSaveStatus",
+      "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Patients.Persistence",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Application/Patients/Persistence/PatientPersistenceSaveStatus.cs",
       "relation": "namespace-membership",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -19882,6 +21542,51 @@
       "weight": 1
     },
     {
+      "source": "type:ElsheiekhHMS.Infrastructure.Persistence.Patients.PatientPersistence",
+      "target": "type:ElsheiekhHMS.Infrastructure.Persistence.Patients.PatientPersistence.PatientDetailsProjection",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Infrastructure/Persistence/Patients/PatientPersistence.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Infrastructure.Persistence.Patients.PatientPersistence",
+      "target": "type:ElsheiekhHMS.Application.Patients.Persistence.IPatientPersistence",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Infrastructure/Persistence/Patients/PatientPersistence.cs:L10",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Infrastructure.Persistence.Patients.PatientPersistence",
+      "target": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Persistence.Patients",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Infrastructure/Persistence/Patients/PatientPersistence.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Infrastructure.Persistence.Patients.PatientPersistence.PatientDetailsProjection",
+      "target": "type:System.IEquatable\u003CT\u003E",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Infrastructure/Persistence/Patients/PatientPersistence.cs:L155",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Infrastructure.Persistence.Patients.PatientPersistence.PatientDetailsProjection",
+      "target": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Persistence.Patients",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Infrastructure/Persistence/Patients/PatientPersistence.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
       "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.ElsheiekhHmsDbContextSqlServerTests",
       "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.ElsheiekhHmsDbContextSqlServerTests.FixedTimeProvider",
       "type": "contains",
@@ -20017,6 +21722,78 @@
       "weight": 1
     },
     {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.PatientServiceSqlServerTests",
+      "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.PatientServiceSqlServerTests.FixedTimeProvider",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/PatientServiceSqlServerTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.PatientServiceSqlServerTests",
+      "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.PatientServiceSqlServerTests.TestCurrentUser",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/PatientServiceSqlServerTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.PatientServiceSqlServerTests",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Integration.Persistence",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/PatientServiceSqlServerTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.PatientServiceSqlServerTests.FixedTimeProvider",
+      "target": "type:System.TimeProvider",
+      "type": "inherits",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/PatientServiceSqlServerTests.cs:L97",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.PatientServiceSqlServerTests.FixedTimeProvider",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Integration.Persistence",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/PatientServiceSqlServerTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.PatientServiceSqlServerTests.TestCurrentUser",
+      "target": "type:ElsheiekhHMS.Application.Common.Security.ICurrentUser",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/PatientServiceSqlServerTests.cs:L89",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.PatientServiceSqlServerTests.TestCurrentUser",
+      "target": "type:System.IEquatable\u003CT\u003E",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/PatientServiceSqlServerTests.cs:L89",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.PatientServiceSqlServerTests.TestCurrentUser",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Integration.Persistence",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/PatientServiceSqlServerTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
       "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.SqlServerPersistenceCollection",
       "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Integration.Persistence",
       "type": "namespace-membership",
@@ -20125,6 +21902,15 @@
       "weight": 1
     },
     {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Common.Results.ServiceResultTests",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Application.Common.Results",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Common/Results/ServiceResultTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
       "source": "type:ElsheiekhHMS.Tests.Unit.Application.Common.Validation.ValidationResultTests",
       "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Application.Common.Validation",
       "type": "namespace-membership",
@@ -20156,6 +21942,123 @@
       "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Application.Patients",
       "type": "namespace-membership",
       "evidence": "ElsheiekhHMS.Tests/Unit/Application/Patients/PatientContractTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Patients.PatientServiceTests",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Application.Patients.PatientServiceTests.FakePatientPersistence",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Patients/PatientServiceTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Patients.PatientServiceTests",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Application.Patients.PatientServiceTests.FixedTimeProvider",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Patients/PatientServiceTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Patients.PatientServiceTests",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Application.Patients.PatientServiceTests.RecordingAuditWriter",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Patients/PatientServiceTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Patients.PatientServiceTests",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Application.Patients.PatientServiceTests.TestCurrentUser",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Patients/PatientServiceTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Patients.PatientServiceTests",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Application.Patients",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Patients/PatientServiceTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Patients.PatientServiceTests.FakePatientPersistence",
+      "target": "type:ElsheiekhHMS.Application.Patients.Persistence.IPatientPersistence",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Patients/PatientServiceTests.cs:L243",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Patients.PatientServiceTests.FakePatientPersistence",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Application.Patients",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Patients/PatientServiceTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Patients.PatientServiceTests.FixedTimeProvider",
+      "target": "type:System.TimeProvider",
+      "type": "inherits",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Patients/PatientServiceTests.cs:L226",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Patients.PatientServiceTests.FixedTimeProvider",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Application.Patients",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Patients/PatientServiceTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Patients.PatientServiceTests.RecordingAuditWriter",
+      "target": "type:ElsheiekhHMS.Application.Common.Auditing.IAuditEventWriter",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Patients/PatientServiceTests.cs:L231",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Patients.PatientServiceTests.RecordingAuditWriter",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Application.Patients",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Patients/PatientServiceTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Patients.PatientServiceTests.TestCurrentUser",
+      "target": "type:ElsheiekhHMS.Application.Common.Security.ICurrentUser",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Patients/PatientServiceTests.cs:L216",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Patients.PatientServiceTests.TestCurrentUser",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Application.Patients",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Patients/PatientServiceTests.cs",
       "relation": "namespace-membership",
       "confidence": "EXTRACTED",
       "weight": 1

@@ -1,5 +1,6 @@
 using System.Reflection;
 using ElsheiekhHMS.Application.Common.Contracts;
+using ElsheiekhHMS.Application.Common.Results;
 using ElsheiekhHMS.Application.Common.Validation;
 
 namespace ElsheiekhHMS.Tests.Unit.Application.Architecture;
@@ -28,6 +29,8 @@ public sealed class ApplicationContractArchitectureTests
             typeof(PageRequest),
             typeof(PagedResult<>),
             typeof(SortDirection),
+            typeof(ServiceError),
+            typeof(ServiceResult<>),
             typeof(ValidationError),
             typeof(ValidationResult)
         };
