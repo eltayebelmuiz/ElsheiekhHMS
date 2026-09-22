@@ -2,7 +2,7 @@
 
 Enterprise Hospital Management System built with **.NET 10, ASP.NET Core, Blazor, Entity Framework Core, SQL Server, and ASP.NET Core Identity**.
 
-> **Current development stage:** Phase 07 — Application Services complete for the approved scope; 07E Doctor/Provider service deferred; Phase 08 not started
+> **Current development stage:** Phase 08 — 08A Staff Patient Intake & Appointment Scheduling complete; 08B arrival/queue handoff remains deferred
 >
 > **Phase 01:** ✅ Complete
 >
@@ -56,9 +56,11 @@ Enterprise Hospital Management System built with **.NET 10, ASP.NET Core, Blazor
 >
 > **Phase 07:** ✅ Application Services complete for the approved scope; 07E is explicitly deferred
 >
-> **Phase 08:** ⏸ Business Workflows not started
+> **Phase 08A:** ✅ Staff Patient Intake & Appointment Scheduling implemented, tested, and verified; partial-success retry semantics preserve newly registered Patients
 >
-> **Next gate:** Phase 08 review; resolve the approved 07E prerequisites before implementing Doctor/Provider workflows
+> **Phase 08:** 🔄 In progress; 08A complete and 08B Staff Appointment Arrival & Queue Handoff not started
+>
+> **Next gate:** Phase 08B design review; 07E remains deferred and provider-owned workflows remain blocked
 
 ---
 
@@ -818,10 +820,10 @@ When opening this repository after a break, read this section first.
 
 ```text
 LAST COMPLETED PHASE:
-Phase 07 — Application Services (approved scope)
+Phase 08A — Staff Patient Intake & Appointment Scheduling
 
 CURRENT PHASE:
-Phase 08 — Business Workflows (not started)
+Phase 08 — Business Workflows (in progress; 08B not started)
 
 CURRENT STATUS:
 Phase 04A foundation, 04B scalar mappings, 04C relational metadata, 04D-A environment readiness,
@@ -829,7 +831,7 @@ Phase 04A foundation, 04B scalar mappings, 04C relational metadata, 04D-A enviro
 04E isolated SQL Server persistence integration tests, 05A Identity foundation, 05B Roles & Authorization, 05C current-user/entity auditing, 05C-A AuditLog foundation, 05D Identity/AuditLog migration and SQL verification, 05E security integration/hardening, 06A–06D DTOs & Validation, 07S allocator infrastructure, 07A Patient Application Service, 07B Department Application Service, 07C-P AppointmentCode allocator infrastructure, 07C Appointment Application Service, 07D Queue Application Service, and the Phase 07 closeout are complete for the approved scope. 07E Doctor/Provider Application Service is explicitly deferred because the Phase06 Doctor/Provider contract family, service contract, Doctor↔ApplicationUser ownership mapping, ownership persistence design, and ownership-aware authorization scope are not approved.
 The six approved entity configurations, explicit historical-safe relationships, approved indexes/uniqueness,
 soft-delete filters, three opted-in rowversion mappings, and the Infrastructure migration/snapshot are present.
-Full restore, build, and tests passed (352 tests). The integration fixture uses only the exact
+Full restore, build, and tests passed (365 tests). The integration fixture uses only the exact
 `ElsheiekhHMS_IntegrationTests` LocalDB target and removes it after each run; `ElsheiekhHMS_Dev`
 was updated only through the approved additive migration. `ApplicationUser`, the
 same-context Identity foundation, approved account-security state model, options, role stores, and focused model tests are present.
@@ -842,13 +844,13 @@ physical Identity/AuditLog schema verification, migration-history verification, 
 temporary pending-model suppression are complete. Phase 05E adds Identity cookie composition, request-level security-stamp/account-state validation,
 Interactive Server circuit revalidation, scoped stable-user propagation, antiforgery/security-header hardening, and an explicit secret-backed administrator bootstrap primitive.
 Event-producing security and business workflows, retention duration, IP/UserAgent capture, clinical/read auditing, and UI remain deferred.
-The 07S migration `AddPhase07AllocatorInfrastructure` is applied exactly once to `ElsheiekhHMS_Dev`; allocator tables and queue uniqueness were physically verified. Patient phone remains non-unique. 07A provides the first approved application service, a narrow EF-free persistence port, bounded projections, stable UserId authorization, and transactional Patient/AuditLog writes. Its two reviewed decisions are that allocator access remains on the narrow persistence port and registration audits target the durable PatientCode before the single save. 07B adds the bounded Department service, the minimal Department search contract, SystemAdministrator-only configuration authorization through the existing `CanConfigureSystem` capability, and transactional Department/AuditLog writes; Department names remain non-unique and reactivation remains out of scope. 07C-P adds the Infrastructure-only UTC year-scoped AppointmentCode allocator; `AddAppointmentCodeAllocator` is applied exactly once to `ElsheiekhHMS_Dev` and its physical schema was verified. 07C adds the EF-free Appointment service, Africa/Kigali civil-time validation, active Patient/Department/Doctor checks, bounded appointment projections, lifecycle orchestration, stable UserId authorization, and transactional Appointment/AuditLog writes. Same Department and scheduled-instant collisions are serialized with a transaction-scoped SQL Server application lock; Cancelled, NoShow, and Completed history does not block a slot. 07D adds the EF-free Queue service, Kigali operational-date calculation, registered-Patient and active-Department checks, atomic ticket allocation through the approved QueueTicket allocator, bounded queue projections, deterministic priority/arrival/sequence ordering, lifecycle orchestration, stable UserId authorization, and transactional Queue/AuditLog writes. Same Patient and Kigali queue-date duplicate-active requests are serialized with a transaction-scoped SQL Server application lock; Completed and Cancelled history does not block a future queue entry. Provider-scoped and Patient self-service operations remain deferred. 07E is not implemented: before it can begin, the project must approve Phase06-style Doctor/Provider contracts, service operations, a Doctor↔ApplicationUser relationship, ownership persistence, ownership-aware authorization, any required schema migration, and its tests.
+The 07S migration `AddPhase07AllocatorInfrastructure` is applied exactly once to `ElsheiekhHMS_Dev`; allocator tables and queue uniqueness were physically verified. Patient phone remains non-unique. 07A provides the first approved application service, a narrow EF-free persistence port, bounded projections, stable UserId authorization, and transactional Patient/AuditLog writes. Its two reviewed decisions are that allocator access remains on the narrow persistence port and registration audits target the durable PatientCode before the single save. 07B adds the bounded Department service, the minimal Department search contract, SystemAdministrator-only configuration authorization through the existing `CanConfigureSystem` capability, and transactional Department/AuditLog writes; Department names remain non-unique and reactivation remains out of scope. 07C-P adds the Infrastructure-only UTC year-scoped AppointmentCode allocator; `AddAppointmentCodeAllocator` is applied exactly once to `ElsheiekhHMS_Dev` and its physical schema was verified. 07C adds the EF-free Appointment service, Africa/Kigali civil-time validation, active Patient/Department/Doctor checks, bounded appointment projections, lifecycle orchestration, stable UserId authorization, and transactional Appointment/AuditLog writes. Same Department and scheduled-instant collisions are serialized with a transaction-scoped SQL Server application lock; Cancelled, NoShow, and Completed history does not block a slot. 07D adds the EF-free Queue service, Kigali operational-date calculation, registered-Patient and active-Department checks, atomic ticket allocation through the approved QueueTicket allocator, bounded queue projections, deterministic priority/arrival/sequence ordering, lifecycle orchestration, stable UserId authorization, and transactional Queue/AuditLog writes. Same Patient and Kigali queue-date duplicate-active requests are serialized with a transaction-scoped SQL Server application lock; Completed and Cancelled history does not block a future queue entry. 08A adds the EF-free staff intake orchestration over the existing Patient and Appointment services. It supports existing-Patient scheduling and new-Patient registration followed by scheduling, preserves the registered Patient when appointment scheduling fails, returns the Patient identity for retry, and adds no workflow-level audit event, queue interaction, schema, or ownership behavior. Provider-scoped and Patient self-service operations remain deferred. 07E is not implemented: before it can begin, the project must approve Phase06-style Doctor/Provider contracts, service operations, a Doctor↔ApplicationUser relationship, ownership persistence, ownership-aware authorization, any required schema migration, and its tests.
 
 NEXT ACTION:
-Review Phase 08 readiness. Revisit the deferred 07E prerequisites before implementing Doctor/Provider workflows.
+Review and approve the 08B Staff Appointment Arrival & Queue Handoff design. Revisit the deferred 07E prerequisites before implementing Doctor/Provider workflows.
 
 DO NOT:
-Do not begin Phase 08 implementation without its corresponding approval. Do not implement 07E before its deferred prerequisites are approved and established.
+Do not begin 08B implementation without its corresponding approval. Do not implement 07E before its deferred prerequisites are approved and established.
 ```
 
 ---

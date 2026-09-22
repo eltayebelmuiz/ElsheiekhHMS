@@ -2,11 +2,11 @@
 
 ## Snapshot
 
-- **generatedAtUtc:** `2026-09-22T11:08:23.1476884+00:00`
+- **generatedAtUtc:** `2026-09-22T11:37:53.5762134+00:00`
 - **gitBranch:** `main`
-- **gitCommit:** `a18e1180df43035a576d9444e188a97681dd4844`
+- **gitCommit:** `caae4229b49d9fd087ca5a8851727692c568fe08`
 - **workingTreeDirty:** `True`
-- **sourceFingerprint:** `e52821662b4913a3ed128c45d719b69bb7fcdcb54f0b5ea5ab5fc65431abfb2e`
+- **sourceFingerprint:** `67437f2ad8b9dd4e6207ef6d18c29f9283a574a25fa302e62d62c01f66600620`
 - Framework: net10.0
 - Structural extraction only: **0 LLM API calls / 0 LLM tokens**. No statistical community clustering is claimed; project ownership supplies the visual groups.
 
@@ -97,13 +97,13 @@ Derived -> base (includes private test helper types and resolved external bases)
 ## Interfaces
 
 - `ElsheiekhHMS.Application.Appointments.IAppointmentService`
-  - Implementations: ElsheiekhHMS.Application.Appointments.AppointmentService
+  - Implementations: ElsheiekhHMS.Application.Appointments.AppointmentService, ElsheiekhHMS.Tests.Unit.Application.Workflows.PatientIntakeAppointmentServiceTests.FakeAppointmentService
 - `ElsheiekhHMS.Application.Appointments.Persistence.IAppointmentPersistence`
   - Implementations: ElsheiekhHMS.Infrastructure.Persistence.Appointments.AppointmentPersistence, ElsheiekhHMS.Tests.Unit.Application.Appointments.AppointmentServiceTests.FakePersistence
 - `ElsheiekhHMS.Application.Common.Auditing.IAuditEventWriter`
   - Implementations: ElsheiekhHMS.Infrastructure.Auditing.AuditEventWriter, ElsheiekhHMS.Tests.Unit.Application.Appointments.AppointmentServiceTests.RecordingAuditWriter, ElsheiekhHMS.Tests.Unit.Application.Departments.DepartmentServiceTests.RecordingAuditWriter, ElsheiekhHMS.Tests.Unit.Application.Patients.PatientServiceTests.RecordingAuditWriter, ElsheiekhHMS.Tests.Unit.Application.Queue.QueueServiceTests.RecordingAuditWriter
 - `ElsheiekhHMS.Application.Common.Security.ICurrentUser`
-  - Implementations: ElsheiekhHMS.Tests.Integration.Persistence.AppointmentServiceSqlServerTests.TestCurrentUser, ElsheiekhHMS.Tests.Integration.Persistence.DepartmentServiceSqlServerTests.TestCurrentUser, ElsheiekhHMS.Tests.Integration.Persistence.ElsheiekhHmsDbContextSqlServerTests.TestCurrentUser, ElsheiekhHMS.Tests.Integration.Persistence.IdentityAndAuditLogSqlServerTests.TestCurrentUser, ElsheiekhHMS.Tests.Integration.Persistence.PatientServiceSqlServerTests.TestCurrentUser, ElsheiekhHMS.Tests.Integration.Persistence.QueueServiceSqlServerTests.TestCurrentUser, ElsheiekhHMS.Tests.Unit.Application.Appointments.AppointmentServiceTests.TestCurrentUser, ElsheiekhHMS.Tests.Unit.Application.Departments.DepartmentServiceTests.TestCurrentUser, ElsheiekhHMS.Tests.Unit.Application.Patients.PatientServiceTests.TestCurrentUser, ElsheiekhHMS.Tests.Unit.Application.Queue.QueueServiceTests.TestCurrentUser, ElsheiekhHMS.Tests.Unit.Infrastructure.Auditing.AuditEventWriterTests.TestCurrentUser, ElsheiekhHMS.Web.Security.CurrentUserAccessor
+  - Implementations: ElsheiekhHMS.Tests.Integration.Persistence.AppointmentServiceSqlServerTests.TestCurrentUser, ElsheiekhHMS.Tests.Integration.Persistence.DepartmentServiceSqlServerTests.TestCurrentUser, ElsheiekhHMS.Tests.Integration.Persistence.ElsheiekhHmsDbContextSqlServerTests.TestCurrentUser, ElsheiekhHMS.Tests.Integration.Persistence.IdentityAndAuditLogSqlServerTests.TestCurrentUser, ElsheiekhHMS.Tests.Integration.Persistence.PatientServiceSqlServerTests.TestCurrentUser, ElsheiekhHMS.Tests.Integration.Persistence.QueueServiceSqlServerTests.TestCurrentUser, ElsheiekhHMS.Tests.Unit.Application.Appointments.AppointmentServiceTests.TestCurrentUser, ElsheiekhHMS.Tests.Unit.Application.Departments.DepartmentServiceTests.TestCurrentUser, ElsheiekhHMS.Tests.Unit.Application.Patients.PatientServiceTests.TestCurrentUser, ElsheiekhHMS.Tests.Unit.Application.Queue.QueueServiceTests.TestCurrentUser, ElsheiekhHMS.Tests.Unit.Application.Workflows.PatientIntakeAppointmentServiceTests.TestCurrentUser, ElsheiekhHMS.Tests.Unit.Infrastructure.Auditing.AuditEventWriterTests.TestCurrentUser, ElsheiekhHMS.Web.Security.CurrentUserAccessor
 - `ElsheiekhHMS.Application.Common.Validation.IRequestValidator<TRequest>`
   - Implementations: ElsheiekhHMS.Application.Appointments.Validation.AppointmentActionRequestValidator, ElsheiekhHMS.Application.Appointments.Validation.AppointmentSearchRequestValidator, ElsheiekhHMS.Application.Appointments.Validation.CancelAppointmentRequestValidator, ElsheiekhHMS.Application.Appointments.Validation.CreateAppointmentRequestValidator, ElsheiekhHMS.Application.Common.Validation.PageRequestValidator, ElsheiekhHMS.Application.Departments.Validation.CreateDepartmentRequestValidator, ElsheiekhHMS.Application.Departments.Validation.DepartmentSearchRequestValidator, ElsheiekhHMS.Application.Departments.Validation.UpdateDepartmentRequestValidator, ElsheiekhHMS.Application.Patients.Validation.PatientSearchRequestValidator, ElsheiekhHMS.Application.Patients.Validation.RegisterPatientRequestValidator, ElsheiekhHMS.Application.Patients.Validation.UpdatePatientContactDetailsRequestValidator, ElsheiekhHMS.Application.Patients.Validation.UpdatePatientDemographicsRequestValidator, ElsheiekhHMS.Application.Patients.Validation.UpdatePatientIdentifiersRequestValidator, ElsheiekhHMS.Application.Queue.Validation.AddWalkInQueueEntryRequestValidator, ElsheiekhHMS.Application.Queue.Validation.QueueEntryActionRequestValidator, ElsheiekhHMS.Application.Queue.Validation.QueueSearchRequestValidator, ElsheiekhHMS.Application.Queue.Validation.SendToDoctorRequestValidator
 - `ElsheiekhHMS.Application.Departments.IDepartmentService`
@@ -111,13 +111,15 @@ Derived -> base (includes private test helper types and resolved external bases)
 - `ElsheiekhHMS.Application.Departments.Persistence.IDepartmentPersistence`
   - Implementations: ElsheiekhHMS.Infrastructure.Persistence.Departments.DepartmentPersistence, ElsheiekhHMS.Tests.Unit.Application.Departments.DepartmentServiceTests.FakeDepartmentPersistence
 - `ElsheiekhHMS.Application.Patients.IPatientService`
-  - Implementations: ElsheiekhHMS.Application.Patients.PatientService
+  - Implementations: ElsheiekhHMS.Application.Patients.PatientService, ElsheiekhHMS.Tests.Unit.Application.Workflows.PatientIntakeAppointmentServiceTests.FakePatientService
 - `ElsheiekhHMS.Application.Patients.Persistence.IPatientPersistence`
   - Implementations: ElsheiekhHMS.Infrastructure.Persistence.Patients.PatientPersistence, ElsheiekhHMS.Tests.Unit.Application.Patients.PatientServiceTests.FakePatientPersistence
 - `ElsheiekhHMS.Application.Queue.IQueueService`
   - Implementations: ElsheiekhHMS.Application.Queue.QueueService
 - `ElsheiekhHMS.Application.Queue.Persistence.IQueuePersistence`
   - Implementations: ElsheiekhHMS.Infrastructure.Persistence.Queue.QueuePersistence, ElsheiekhHMS.Tests.Unit.Application.Queue.QueueServiceTests.FakePersistence
+- `ElsheiekhHMS.Application.Workflows.PatientIntake.IPatientIntakeAppointmentService`
+  - Implementations: ElsheiekhHMS.Application.Workflows.PatientIntake.PatientIntakeAppointmentService
 - `ElsheiekhHMS.Core.Interfaces.IHasConcurrencyToken`
   - Implementations: ElsheiekhHMS.Core.Domain.Patients.Entities.Patient, ElsheiekhHMS.Core.Domain.Scheduling.Entities.Appointment, ElsheiekhHMS.Core.Domain.Scheduling.Entities.WalkInQueueEntry
 - `Microsoft.AspNetCore.Identity.IRoleStore<Microsoft.AspNetCore.Identity.IdentityRole>`
@@ -127,7 +129,7 @@ Derived -> base (includes private test helper types and resolved external bases)
 - `Microsoft.Extensions.Logging.ILogger<T>`
   - Implementations: ElsheiekhHMS.Tests.Unit.Infrastructure.Identity.IdentityRoleSeederTests.NullLogger<T>
 - `System.IEquatable<ElsheiekhHMS.Application.Appointments.Contracts.AppointmentActionRequest>`
-  - Implementations: ElsheiekhHMS.Application.Appointments.Contracts.AppointmentActionRequest, ElsheiekhHMS.Application.Appointments.Contracts.AppointmentDetailsDto, ElsheiekhHMS.Application.Appointments.Contracts.AppointmentSearchRequest, ElsheiekhHMS.Application.Appointments.Contracts.AppointmentSummaryDto, ElsheiekhHMS.Application.Appointments.Contracts.CancelAppointmentRequest, ElsheiekhHMS.Application.Appointments.Contracts.CreateAppointmentRequest, ElsheiekhHMS.Application.Common.Auditing.AuditEventRequest, ElsheiekhHMS.Application.Common.Contracts.PageRequest, ElsheiekhHMS.Application.Common.Results.ServiceError, ElsheiekhHMS.Application.Common.Validation.ValidationError, ElsheiekhHMS.Application.Departments.Contracts.CreateDepartmentRequest, ElsheiekhHMS.Application.Departments.Contracts.DepartmentDetailsDto, ElsheiekhHMS.Application.Departments.Contracts.DepartmentOptionDto, ElsheiekhHMS.Application.Departments.Contracts.DepartmentSearchRequest, ElsheiekhHMS.Application.Departments.Contracts.DepartmentSummaryDto, ElsheiekhHMS.Application.Departments.Contracts.UpdateDepartmentRequest, ElsheiekhHMS.Application.Patients.Contracts.PatientDetailsDto, ElsheiekhHMS.Application.Patients.Contracts.PatientSearchRequest, ElsheiekhHMS.Application.Patients.Contracts.PatientSummaryDto, ElsheiekhHMS.Application.Patients.Contracts.RegisterPatientRequest, ElsheiekhHMS.Application.Patients.Contracts.UpdatePatientContactDetailsRequest, ElsheiekhHMS.Application.Patients.Contracts.UpdatePatientDemographicsRequest, ElsheiekhHMS.Application.Patients.Contracts.UpdatePatientIdentifiersRequest, ElsheiekhHMS.Application.Queue.Contracts.AddWalkInQueueEntryRequest, ElsheiekhHMS.Application.Queue.Contracts.QueueEntryActionRequest, ElsheiekhHMS.Application.Queue.Contracts.QueueEntryDetailsDto, ElsheiekhHMS.Application.Queue.Contracts.QueueEntrySummaryDto, ElsheiekhHMS.Application.Queue.Contracts.QueueSearchRequest, ElsheiekhHMS.Application.Queue.Contracts.SendToDoctorRequest, ElsheiekhHMS.Infrastructure.Persistence.Appointments.AppointmentPersistence.AppointmentDetailsProjection, ElsheiekhHMS.Infrastructure.Persistence.Patients.PatientPersistence.PatientDetailsProjection, ElsheiekhHMS.Infrastructure.Persistence.Queue.QueuePersistence.QueueEntryDetailsProjection, ElsheiekhHMS.Tests.Integration.Persistence.AppointmentServiceSqlServerTests.SetupRecords, ElsheiekhHMS.Tests.Integration.Persistence.AppointmentServiceSqlServerTests.TestCurrentUser, ElsheiekhHMS.Tests.Integration.Persistence.DepartmentServiceSqlServerTests.TestCurrentUser, ElsheiekhHMS.Tests.Integration.Persistence.IdentityAndAuditLogSqlServerTests.TestCurrentUser, ElsheiekhHMS.Tests.Integration.Persistence.PatientServiceSqlServerTests.TestCurrentUser, ElsheiekhHMS.Tests.Integration.Persistence.QueueServiceSqlServerTests.SetupRecords, ElsheiekhHMS.Tests.Integration.Persistence.QueueServiceSqlServerTests.TestCurrentUser
+  - Implementations: ElsheiekhHMS.Application.Appointments.Contracts.AppointmentActionRequest, ElsheiekhHMS.Application.Appointments.Contracts.AppointmentDetailsDto, ElsheiekhHMS.Application.Appointments.Contracts.AppointmentSearchRequest, ElsheiekhHMS.Application.Appointments.Contracts.AppointmentSummaryDto, ElsheiekhHMS.Application.Appointments.Contracts.CancelAppointmentRequest, ElsheiekhHMS.Application.Appointments.Contracts.CreateAppointmentRequest, ElsheiekhHMS.Application.Common.Auditing.AuditEventRequest, ElsheiekhHMS.Application.Common.Contracts.PageRequest, ElsheiekhHMS.Application.Common.Results.ServiceError, ElsheiekhHMS.Application.Common.Validation.ValidationError, ElsheiekhHMS.Application.Departments.Contracts.CreateDepartmentRequest, ElsheiekhHMS.Application.Departments.Contracts.DepartmentDetailsDto, ElsheiekhHMS.Application.Departments.Contracts.DepartmentOptionDto, ElsheiekhHMS.Application.Departments.Contracts.DepartmentSearchRequest, ElsheiekhHMS.Application.Departments.Contracts.DepartmentSummaryDto, ElsheiekhHMS.Application.Departments.Contracts.UpdateDepartmentRequest, ElsheiekhHMS.Application.Patients.Contracts.PatientDetailsDto, ElsheiekhHMS.Application.Patients.Contracts.PatientSearchRequest, ElsheiekhHMS.Application.Patients.Contracts.PatientSummaryDto, ElsheiekhHMS.Application.Patients.Contracts.RegisterPatientRequest, ElsheiekhHMS.Application.Patients.Contracts.UpdatePatientContactDetailsRequest, ElsheiekhHMS.Application.Patients.Contracts.UpdatePatientDemographicsRequest, ElsheiekhHMS.Application.Patients.Contracts.UpdatePatientIdentifiersRequest, ElsheiekhHMS.Application.Queue.Contracts.AddWalkInQueueEntryRequest, ElsheiekhHMS.Application.Queue.Contracts.QueueEntryActionRequest, ElsheiekhHMS.Application.Queue.Contracts.QueueEntryDetailsDto, ElsheiekhHMS.Application.Queue.Contracts.QueueEntrySummaryDto, ElsheiekhHMS.Application.Queue.Contracts.QueueSearchRequest, ElsheiekhHMS.Application.Queue.Contracts.SendToDoctorRequest, ElsheiekhHMS.Application.Workflows.PatientIntake.PatientIntakeAppointmentRequest, ElsheiekhHMS.Application.Workflows.PatientIntake.PatientIntakeAppointmentResult, ElsheiekhHMS.Infrastructure.Persistence.Appointments.AppointmentPersistence.AppointmentDetailsProjection, ElsheiekhHMS.Infrastructure.Persistence.Patients.PatientPersistence.PatientDetailsProjection, ElsheiekhHMS.Infrastructure.Persistence.Queue.QueuePersistence.QueueEntryDetailsProjection, ElsheiekhHMS.Tests.Integration.Persistence.AppointmentServiceSqlServerTests.SetupRecords, ElsheiekhHMS.Tests.Integration.Persistence.AppointmentServiceSqlServerTests.TestCurrentUser, ElsheiekhHMS.Tests.Integration.Persistence.DepartmentServiceSqlServerTests.TestCurrentUser, ElsheiekhHMS.Tests.Integration.Persistence.IdentityAndAuditLogSqlServerTests.TestCurrentUser, ElsheiekhHMS.Tests.Integration.Persistence.PatientServiceSqlServerTests.TestCurrentUser, ElsheiekhHMS.Tests.Integration.Persistence.QueueServiceSqlServerTests.SetupRecords, ElsheiekhHMS.Tests.Integration.Persistence.QueueServiceSqlServerTests.TestCurrentUser
 
 ## Tests
 
@@ -236,7 +238,7 @@ Evaluated direct PackageReference items only. Framework/SDK auto-references and 
 
 Declared by README; not inferred from the existence of classes:
 
-- > **Current development stage:** Phase 07 — Application Services complete for the approved scope; 07E Doctor/Provider service deferred; Phase 08 not started — README.md:L5
+- > **Current development stage:** Phase 08 — 08A Staff Patient Intake & Appointment Scheduling complete; 08B arrival/queue handoff remains deferred — README.md:L5
 - > **Phase 01:** ✅ Complete — README.md:L7
 - > **Phase 02 Setup:** ✅ Complete and verified — README.md:L9
 - > **Phase 03A / 03B / 03C:** ✅ Complete — README.md:L11
@@ -263,16 +265,17 @@ Declared by README; not inferred from the existence of classes:
 - > **Phase 07D:** ✅ Queue Application Service complete, implemented, verified, and closed out — README.md:L53
 - > **Phase 07E:** ⏸ Doctor/Provider Application Service deferred; Doctor/Provider contracts and Doctor↔ApplicationUser ownership-aware authorization are not yet approved — README.md:L55
 - > **Phase 07:** ✅ Application Services complete for the approved scope; 07E is explicitly deferred — README.md:L57
-- > **Phase 08:** ⏸ Business Workflows not started — README.md:L59
--  /  01  /  Solution & Architecture  /  ✅ Complete  /  — README.md:L376
--  /  02  /  Core Foundation  /  ✅ Complete  /  — README.md:L377
--  /  03  /  Domain Entities  /  ✅ Complete  /  — README.md:L378
--  /  04  /  EF Core & Database  /  ✅ Complete  /  — README.md:L379
--  /  05  /  Identity & Security  /  ✅ Complete (05A, 05B, 05C, 05C-A, 05D, and 05E)  /  — README.md:L380
--  /  06  /  DTOs & Validation  /  ✅ Complete (06A–06D)  /  — README.md:L381
--  /  07  /  Application Services  /  ✅ Complete for approved scope (07S, 07A, 07B, 07C-P, 07C, 07D; 07E deferred)  /  — README.md:L382
--  /  08  /  Business Workflows  /  ⏳ Not started  /  — README.md:L383
--  /  09  /  Enterprise Infrastructure  /  ⏳ Not started  /  — README.md:L384
+- > **Phase 08A:** ✅ Staff Patient Intake & Appointment Scheduling implemented, tested, and verified; partial-success retry semantics preserve newly registered Patients — README.md:L59
+- > **Phase 08:** 🔄 In progress; 08A complete and 08B Staff Appointment Arrival & Queue Handoff not started — README.md:L61
+-  /  01  /  Solution & Architecture  /  ✅ Complete  /  — README.md:L378
+-  /  02  /  Core Foundation  /  ✅ Complete  /  — README.md:L379
+-  /  03  /  Domain Entities  /  ✅ Complete  /  — README.md:L380
+-  /  04  /  EF Core & Database  /  ✅ Complete  /  — README.md:L381
+-  /  05  /  Identity & Security  /  ✅ Complete (05A, 05B, 05C, 05C-A, 05D, and 05E)  /  — README.md:L382
+-  /  06  /  DTOs & Validation  /  ✅ Complete (06A–06D)  /  — README.md:L383
+-  /  07  /  Application Services  /  ✅ Complete for approved scope (07S, 07A, 07B, 07C-P, 07C, 07D; 07E deferred)  /  — README.md:L384
+-  /  08  /  Business Workflows  /  ⏳ Not started  /  — README.md:L385
+-  /  09  /  Enterprise Infrastructure  /  ⏳ Not started  /  — README.md:L386
 
 ## Important Files
 
@@ -354,6 +357,10 @@ Declared by README; not inferred from the existence of classes:
 - [ElsheiekhHMS.Application/Queue/Validation/QueueEntryActionRequestValidator.cs](../ElsheiekhHMS.Application/Queue/Validation/QueueEntryActionRequestValidator.cs) — ElsheiekhHMS.Application
 - [ElsheiekhHMS.Application/Queue/Validation/QueueSearchRequestValidator.cs](../ElsheiekhHMS.Application/Queue/Validation/QueueSearchRequestValidator.cs) — ElsheiekhHMS.Application
 - [ElsheiekhHMS.Application/Queue/Validation/SendToDoctorRequestValidator.cs](../ElsheiekhHMS.Application/Queue/Validation/SendToDoctorRequestValidator.cs) — ElsheiekhHMS.Application
+- [ElsheiekhHMS.Application/Workflows/PatientIntake/IPatientIntakeAppointmentService.cs](../ElsheiekhHMS.Application/Workflows/PatientIntake/IPatientIntakeAppointmentService.cs) — ElsheiekhHMS.Application
+- [ElsheiekhHMS.Application/Workflows/PatientIntake/PatientIntakeAppointmentRequest.cs](../ElsheiekhHMS.Application/Workflows/PatientIntake/PatientIntakeAppointmentRequest.cs) — ElsheiekhHMS.Application
+- [ElsheiekhHMS.Application/Workflows/PatientIntake/PatientIntakeAppointmentResult.cs](../ElsheiekhHMS.Application/Workflows/PatientIntake/PatientIntakeAppointmentResult.cs) — ElsheiekhHMS.Application
+- [ElsheiekhHMS.Application/Workflows/PatientIntake/PatientIntakeAppointmentService.cs](../ElsheiekhHMS.Application/Workflows/PatientIntake/PatientIntakeAppointmentService.cs) — ElsheiekhHMS.Application
 - [ElsheiekhHMS.Core/Common/AuditableEntity.cs](../ElsheiekhHMS.Core/Common/AuditableEntity.cs) — ElsheiekhHMS.Core
 - [ElsheiekhHMS.Core/Common/BaseEntity.cs](../ElsheiekhHMS.Core/Common/BaseEntity.cs) — ElsheiekhHMS.Core
 - [ElsheiekhHMS.Core/Common/SoftDeletableEntity.cs](../ElsheiekhHMS.Core/Common/SoftDeletableEntity.cs) — ElsheiekhHMS.Core
@@ -442,6 +449,7 @@ Declared by README; not inferred from the existence of classes:
 - [ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs](../ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs) — ElsheiekhHMS.Tests
 - [ElsheiekhHMS.Tests/Unit/Application/Queue/QueueValidationTests.cs](../ElsheiekhHMS.Tests/Unit/Application/Queue/QueueValidationTests.cs) — ElsheiekhHMS.Tests
 - [ElsheiekhHMS.Tests/Unit/Application/Security/SecurityVocabularyTests.cs](../ElsheiekhHMS.Tests/Unit/Application/Security/SecurityVocabularyTests.cs) — ElsheiekhHMS.Tests
+- [ElsheiekhHMS.Tests/Unit/Application/Workflows/PatientIntakeAppointmentServiceTests.cs](../ElsheiekhHMS.Tests/Unit/Application/Workflows/PatientIntakeAppointmentServiceTests.cs) — ElsheiekhHMS.Tests
 - [ElsheiekhHMS.Tests/Unit/Domain/Common/AuditableEntityTests.cs](../ElsheiekhHMS.Tests/Unit/Domain/Common/AuditableEntityTests.cs) — ElsheiekhHMS.Tests
 - [ElsheiekhHMS.Tests/Unit/Domain/Common/BaseEntityTests.cs](../ElsheiekhHMS.Tests/Unit/Domain/Common/BaseEntityTests.cs) — ElsheiekhHMS.Tests
 - [ElsheiekhHMS.Tests/Unit/Domain/Common/SoftDeletableEntityTests.cs](../ElsheiekhHMS.Tests/Unit/Domain/Common/SoftDeletableEntityTests.cs) — ElsheiekhHMS.Tests

@@ -11,12 +11,12 @@
 <footer>Architectural index, not authoritative source. Check freshness with <code>tools/graphify.ps1 -Check</code> before relying on this snapshot. No network requests or external libraries.</footer>
 <script id="graph-data" type="application/json">{
   "schemaVersion": "1.0",
-  "generatedAtUtc": "2026-09-22T11:08:23.1476884\u002B00:00",
-  "gitCommit": "a18e1180df43035a576d9444e188a97681dd4844",
+  "generatedAtUtc": "2026-09-22T11:37:53.5762134\u002B00:00",
+  "gitCommit": "caae4229b49d9fd087ca5a8851727692c568fe08",
   "gitBranch": "main",
   "workingTreeDirty": true,
-  "gitStatusAtGeneration": "M DEVELOPMENT_ROADMAP.md\n M README.md\n M docs/ARCHITECTURE.md\n M docs/DECISIONS.md\n M graphify-out/GRAPH_REPORT.md\n M graphify-out/graph.html\n M graphify-out/graph.json\n?? Phases.md",
-  "sourceFingerprint": "e52821662b4913a3ed128c45d719b69bb7fcdcb54f0b5ea5ab5fc65431abfb2e",
+  "gitStatusAtGeneration": "M DEVELOPMENT_ROADMAP.md\n M ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs\n M README.md\n M docs/DECISIONS.md\n M graphify-out/GRAPH_REPORT.md\n M graphify-out/graph.html\n M graphify-out/graph.json\n?? ElsheiekhHMS.Application/Workflows/PatientIntake/IPatientIntakeAppointmentService.cs\n?? ElsheiekhHMS.Application/Workflows/PatientIntake/PatientIntakeAppointmentRequest.cs\n?? ElsheiekhHMS.Application/Workflows/PatientIntake/PatientIntakeAppointmentResult.cs\n?? ElsheiekhHMS.Application/Workflows/PatientIntake/PatientIntakeAppointmentService.cs\n?? ElsheiekhHMS.Tests/Unit/Application/Workflows/PatientIntakeAppointmentServiceTests.cs\n?? Phases.md",
+  "sourceFingerprint": "67437f2ad8b9dd4e6207ef6d18c29f9283a574a25fa302e62d62c01f66600620",
   "generatorFingerprint": "03eee0a8853a7e84af6cbe571d34e6f7d820505ac8f5670a719d0d63b113840c",
   "fingerprintAlgorithm": "SHA-256 of ordinal path \u002B NUL \u002B content SHA-256 records joined with LF; sourceManifest defines inputs; graphify-out excluded everywhere",
   "sourceManifest": [
@@ -337,6 +337,22 @@
       "sha256": "20e5ec8a52ddb3581cc50ebcb29dd11762c2c0d4a1f0432c7151f85a231c7f1c"
     },
     {
+      "path": "ElsheiekhHMS.Application/Workflows/PatientIntake/IPatientIntakeAppointmentService.cs",
+      "sha256": "febabbbfbfa87bb81038095d9af7c4d30c5ef61700dcbd94c7f542c9c04766c1"
+    },
+    {
+      "path": "ElsheiekhHMS.Application/Workflows/PatientIntake/PatientIntakeAppointmentRequest.cs",
+      "sha256": "0bebef37255a1ed0f2056301a1082bda7c1b9e3497605a2eac3d9ed3396e78fd"
+    },
+    {
+      "path": "ElsheiekhHMS.Application/Workflows/PatientIntake/PatientIntakeAppointmentResult.cs",
+      "sha256": "e2799f963931a52c2a7e1a805a18a8ada9a48b4afaf0a1c03033d32a551c0fc9"
+    },
+    {
+      "path": "ElsheiekhHMS.Application/Workflows/PatientIntake/PatientIntakeAppointmentService.cs",
+      "sha256": "0677380f9227e0d44ad50054f945ef8359fd4dd89f777d384469d28b3f6d979e"
+    },
+    {
       "path": "ElsheiekhHMS.Core/Common/AuditableEntity.cs",
       "sha256": "3fbe068a9839d38477c56b62f6cd9fdf592ad342cfb9d963511627124c5a1924"
     },
@@ -490,7 +506,7 @@
     },
     {
       "path": "ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs",
-      "sha256": "6989d80a00aed3aed1eab700f717640a7b68b29c41d9f88b9dd2e9bad2f20b69"
+      "sha256": "97adad16174fcc5a2d33e43a726691c157c3c0176b814f62051fa99cd2b7c1f1"
     },
     {
       "path": "ElsheiekhHMS.Infrastructure/Migrations/20260921111137_InitialCreate.Designer.cs",
@@ -701,6 +717,10 @@
       "sha256": "1ba8f17a78c211856252d747907a1b4ee0090ec90f069d03bb91306cb8a900f0"
     },
     {
+      "path": "ElsheiekhHMS.Tests/Unit/Application/Workflows/PatientIntakeAppointmentServiceTests.cs",
+      "sha256": "7328bc08fe95d0d9d68faa34753ca8bfa9c55b52d5da9db8e3fcae4d4b97bcdc"
+    },
+    {
       "path": "ElsheiekhHMS.Tests/Unit/Domain/Common/AuditableEntityTests.cs",
       "sha256": "eeca0c799319306eded7405b003afcde18ea75dfec1aa52f3ca0411f46463d8f"
     },
@@ -854,7 +874,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "b7648b303d0e9975c6eb22566409c98b97e711e1468c15db700a1257e2e6b3e1"
+      "sha256": "36b9ab10ac513c547f8253a5038dcfd76fd10e8929bb364af60807bcb709a750"
     }
   ],
   "repository": {
@@ -864,16 +884,16 @@
   },
   "summary": {
     "projectCount": 5,
-    "sourceFileCount": 191,
+    "sourceFileCount": 196,
     "razorFileCount": 11,
-    "typeCount": 228,
-    "interfaceCount": 12,
+    "typeCount": 237,
+    "interfaceCount": 13,
     "testClassCount": 11,
     "testMethodCount": 76,
     "testCount": 113,
     "dynamicTheoryCount": 0,
-    "nodeCount": 516,
-    "edgeCount": 974
+    "nodeCount": 532,
+    "edgeCount": 1008
   },
   "projects": [
     {
@@ -973,7 +993,11 @@
         "ElsheiekhHMS.Application/Queue/Validation/AddWalkInQueueEntryRequestValidator.cs",
         "ElsheiekhHMS.Application/Queue/Validation/QueueEntryActionRequestValidator.cs",
         "ElsheiekhHMS.Application/Queue/Validation/QueueSearchRequestValidator.cs",
-        "ElsheiekhHMS.Application/Queue/Validation/SendToDoctorRequestValidator.cs"
+        "ElsheiekhHMS.Application/Queue/Validation/SendToDoctorRequestValidator.cs",
+        "ElsheiekhHMS.Application/Workflows/PatientIntake/IPatientIntakeAppointmentService.cs",
+        "ElsheiekhHMS.Application/Workflows/PatientIntake/PatientIntakeAppointmentRequest.cs",
+        "ElsheiekhHMS.Application/Workflows/PatientIntake/PatientIntakeAppointmentResult.cs",
+        "ElsheiekhHMS.Application/Workflows/PatientIntake/PatientIntakeAppointmentService.cs"
       ]
     },
     {
@@ -1163,6 +1187,7 @@
         "ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs",
         "ElsheiekhHMS.Tests/Unit/Application/Queue/QueueValidationTests.cs",
         "ElsheiekhHMS.Tests/Unit/Application/Security/SecurityVocabularyTests.cs",
+        "ElsheiekhHMS.Tests/Unit/Application/Workflows/PatientIntakeAppointmentServiceTests.cs",
         "ElsheiekhHMS.Tests/Unit/Domain/Common/AuditableEntityTests.cs",
         "ElsheiekhHMS.Tests/Unit/Domain/Common/BaseEntityTests.cs",
         "ElsheiekhHMS.Tests/Unit/Domain/Common/SoftDeletableEntityTests.cs",
@@ -2456,6 +2481,70 @@
       "project": "ElsheiekhHMS.Application",
       "file": "ElsheiekhHMS.Application/Queue/Validation/SendToDoctorRequestValidator.cs",
       "source_file": "ElsheiekhHMS.Application/Queue/Validation/SendToDoctorRequestValidator.cs",
+      "external": false,
+      "community": 0,
+      "community_name": "ElsheiekhHMS.Application",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Workflows/PatientIntake/IPatientIntakeAppointmentService.cs",
+      "name": "IPatientIntakeAppointmentService.cs",
+      "label": "IPatientIntakeAppointmentService.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Application",
+      "file": "ElsheiekhHMS.Application/Workflows/PatientIntake/IPatientIntakeAppointmentService.cs",
+      "source_file": "ElsheiekhHMS.Application/Workflows/PatientIntake/IPatientIntakeAppointmentService.cs",
+      "external": false,
+      "community": 0,
+      "community_name": "ElsheiekhHMS.Application",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Workflows/PatientIntake/PatientIntakeAppointmentRequest.cs",
+      "name": "PatientIntakeAppointmentRequest.cs",
+      "label": "PatientIntakeAppointmentRequest.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Application",
+      "file": "ElsheiekhHMS.Application/Workflows/PatientIntake/PatientIntakeAppointmentRequest.cs",
+      "source_file": "ElsheiekhHMS.Application/Workflows/PatientIntake/PatientIntakeAppointmentRequest.cs",
+      "external": false,
+      "community": 0,
+      "community_name": "ElsheiekhHMS.Application",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Workflows/PatientIntake/PatientIntakeAppointmentResult.cs",
+      "name": "PatientIntakeAppointmentResult.cs",
+      "label": "PatientIntakeAppointmentResult.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Application",
+      "file": "ElsheiekhHMS.Application/Workflows/PatientIntake/PatientIntakeAppointmentResult.cs",
+      "source_file": "ElsheiekhHMS.Application/Workflows/PatientIntake/PatientIntakeAppointmentResult.cs",
+      "external": false,
+      "community": 0,
+      "community_name": "ElsheiekhHMS.Application",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Workflows/PatientIntake/PatientIntakeAppointmentService.cs",
+      "name": "PatientIntakeAppointmentService.cs",
+      "label": "PatientIntakeAppointmentService.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Application",
+      "file": "ElsheiekhHMS.Application/Workflows/PatientIntake/PatientIntakeAppointmentService.cs",
+      "source_file": "ElsheiekhHMS.Application/Workflows/PatientIntake/PatientIntakeAppointmentService.cs",
       "external": false,
       "community": 0,
       "community_name": "ElsheiekhHMS.Application",
@@ -3872,6 +3961,22 @@
       "dynamicTheories": 0
     },
     {
+      "id": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Workflows/PatientIntakeAppointmentServiceTests.cs",
+      "name": "PatientIntakeAppointmentServiceTests.cs",
+      "label": "PatientIntakeAppointmentServiceTests.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Tests",
+      "file": "ElsheiekhHMS.Tests/Unit/Application/Workflows/PatientIntakeAppointmentServiceTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Unit/Application/Workflows/PatientIntakeAppointmentServiceTests.cs",
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
       "id": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Domain/Common/AuditableEntityTests.cs",
       "name": "AuditableEntityTests.cs",
       "label": "AuditableEntityTests.cs",
@@ -4778,6 +4883,21 @@
       "dynamicTheories": 0
     },
     {
+      "id": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Workflows.PatientIntake",
+      "name": "ElsheiekhHMS.Application.Workflows.PatientIntake",
+      "label": "ElsheiekhHMS.Application.Workflows.PatientIntake",
+      "kind": "namespace",
+      "type": "namespace",
+      "project": "ElsheiekhHMS.Application",
+      "namespace": "ElsheiekhHMS.Application.Workflows.PatientIntake",
+      "external": false,
+      "community": 0,
+      "community_name": "ElsheiekhHMS.Application",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
       "id": "namespace:ElsheiekhHMS.Core:ElsheiekhHMS.Core.Common",
       "name": "ElsheiekhHMS.Core.Common",
       "label": "ElsheiekhHMS.Core.Common",
@@ -5310,6 +5430,21 @@
       "type": "namespace",
       "project": "ElsheiekhHMS.Tests",
       "namespace": "ElsheiekhHMS.Tests.Unit.Application.Security",
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Application.Workflows",
+      "name": "ElsheiekhHMS.Tests.Unit.Application.Workflows",
+      "label": "ElsheiekhHMS.Tests.Unit.Application.Workflows",
+      "kind": "namespace",
+      "type": "namespace",
+      "project": "ElsheiekhHMS.Tests",
+      "namespace": "ElsheiekhHMS.Tests.Unit.Application.Workflows",
       "external": false,
       "community": 3,
       "community_name": "ElsheiekhHMS.Tests",
@@ -7450,6 +7585,126 @@
       "dynamicTheories": 0
     },
     {
+      "id": "type:ElsheiekhHMS.Application.Workflows.PatientIntake.IPatientIntakeAppointmentService",
+      "name": "IPatientIntakeAppointmentService",
+      "label": "IPatientIntakeAppointmentService",
+      "kind": "interface",
+      "type": "interface",
+      "fullName": "ElsheiekhHMS.Application.Workflows.PatientIntake.IPatientIntakeAppointmentService",
+      "project": "ElsheiekhHMS.Application",
+      "namespace": "ElsheiekhHMS.Application.Workflows.PatientIntake",
+      "file": "ElsheiekhHMS.Application/Workflows/PatientIntake/IPatientIntakeAppointmentService.cs",
+      "source_file": "ElsheiekhHMS.Application/Workflows/PatientIntake/IPatientIntakeAppointmentService.cs",
+      "source_location": "L5",
+      "line": 5,
+      "accessibility": "public",
+      "abstract": true,
+      "sealed": false,
+      "static": false,
+      "external": false,
+      "community": 0,
+      "community_name": "ElsheiekhHMS.Application",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Application.Workflows.PatientIntake.PatientIntakeAppointmentRequest",
+      "name": "PatientIntakeAppointmentRequest",
+      "label": "PatientIntakeAppointmentRequest",
+      "kind": "record",
+      "type": "record",
+      "fullName": "ElsheiekhHMS.Application.Workflows.PatientIntake.PatientIntakeAppointmentRequest",
+      "project": "ElsheiekhHMS.Application",
+      "namespace": "ElsheiekhHMS.Application.Workflows.PatientIntake",
+      "file": "ElsheiekhHMS.Application/Workflows/PatientIntake/PatientIntakeAppointmentRequest.cs",
+      "source_file": "ElsheiekhHMS.Application/Workflows/PatientIntake/PatientIntakeAppointmentRequest.cs",
+      "source_location": "L10",
+      "line": 10,
+      "accessibility": "public",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 0,
+      "community_name": "ElsheiekhHMS.Application",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Application.Workflows.PatientIntake.PatientIntakeAppointmentResult",
+      "name": "PatientIntakeAppointmentResult",
+      "label": "PatientIntakeAppointmentResult",
+      "kind": "record",
+      "type": "record",
+      "fullName": "ElsheiekhHMS.Application.Workflows.PatientIntake.PatientIntakeAppointmentResult",
+      "project": "ElsheiekhHMS.Application",
+      "namespace": "ElsheiekhHMS.Application.Workflows.PatientIntake",
+      "file": "ElsheiekhHMS.Application/Workflows/PatientIntake/PatientIntakeAppointmentResult.cs",
+      "source_file": "ElsheiekhHMS.Application/Workflows/PatientIntake/PatientIntakeAppointmentResult.cs",
+      "source_location": "L19",
+      "line": 19,
+      "accessibility": "public",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 0,
+      "community_name": "ElsheiekhHMS.Application",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Application.Workflows.PatientIntake.PatientIntakeAppointmentService",
+      "name": "PatientIntakeAppointmentService",
+      "label": "PatientIntakeAppointmentService",
+      "kind": "class",
+      "type": "class",
+      "fullName": "ElsheiekhHMS.Application.Workflows.PatientIntake.PatientIntakeAppointmentService",
+      "project": "ElsheiekhHMS.Application",
+      "namespace": "ElsheiekhHMS.Application.Workflows.PatientIntake",
+      "file": "ElsheiekhHMS.Application/Workflows/PatientIntake/PatientIntakeAppointmentService.cs",
+      "source_file": "ElsheiekhHMS.Application/Workflows/PatientIntake/PatientIntakeAppointmentService.cs",
+      "source_location": "L10",
+      "line": 10,
+      "accessibility": "public",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 0,
+      "community_name": "ElsheiekhHMS.Application",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Application.Workflows.PatientIntake.PatientIntakeOutcome",
+      "name": "PatientIntakeOutcome",
+      "label": "PatientIntakeOutcome",
+      "kind": "enum",
+      "type": "enum",
+      "fullName": "ElsheiekhHMS.Application.Workflows.PatientIntake.PatientIntakeOutcome",
+      "project": "ElsheiekhHMS.Application",
+      "namespace": "ElsheiekhHMS.Application.Workflows.PatientIntake",
+      "file": "ElsheiekhHMS.Application/Workflows/PatientIntake/PatientIntakeAppointmentResult.cs",
+      "source_file": "ElsheiekhHMS.Application/Workflows/PatientIntake/PatientIntakeAppointmentResult.cs",
+      "source_location": "L7",
+      "line": 7,
+      "accessibility": "public",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 0,
+      "community_name": "ElsheiekhHMS.Application",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
       "id": "type:ElsheiekhHMS.Core.Common.AuditableEntity",
       "name": "AuditableEntity",
       "label": "AuditableEntity",
@@ -8324,8 +8579,8 @@
       "namespace": "ElsheiekhHMS.Infrastructure",
       "file": "ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs",
       "source_file": "ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs",
-      "source_location": "L34",
-      "line": 34,
+      "source_location": "L35",
+      "line": 35,
       "accessibility": "public",
       "abstract": false,
       "sealed": false,
@@ -10310,6 +10565,102 @@
       "dynamicTheories": 0
     },
     {
+      "id": "type:ElsheiekhHMS.Tests.Unit.Application.Workflows.PatientIntakeAppointmentServiceTests",
+      "name": "PatientIntakeAppointmentServiceTests",
+      "label": "PatientIntakeAppointmentServiceTests",
+      "kind": "class",
+      "type": "class",
+      "fullName": "ElsheiekhHMS.Tests.Unit.Application.Workflows.PatientIntakeAppointmentServiceTests",
+      "project": "ElsheiekhHMS.Tests",
+      "namespace": "ElsheiekhHMS.Tests.Unit.Application.Workflows",
+      "file": "ElsheiekhHMS.Tests/Unit/Application/Workflows/PatientIntakeAppointmentServiceTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Unit/Application/Workflows/PatientIntakeAppointmentServiceTests.cs",
+      "source_location": "L14",
+      "line": 14,
+      "accessibility": "public",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Tests.Unit.Application.Workflows.PatientIntakeAppointmentServiceTests.FakeAppointmentService",
+      "name": "FakeAppointmentService",
+      "label": "FakeAppointmentService",
+      "kind": "class",
+      "type": "class",
+      "fullName": "ElsheiekhHMS.Tests.Unit.Application.Workflows.PatientIntakeAppointmentServiceTests.FakeAppointmentService",
+      "project": "ElsheiekhHMS.Tests",
+      "namespace": "ElsheiekhHMS.Tests.Unit.Application.Workflows",
+      "file": "ElsheiekhHMS.Tests/Unit/Application/Workflows/PatientIntakeAppointmentServiceTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Unit/Application/Workflows/PatientIntakeAppointmentServiceTests.cs",
+      "source_location": "L329",
+      "line": 329,
+      "accessibility": "private",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Tests.Unit.Application.Workflows.PatientIntakeAppointmentServiceTests.FakePatientService",
+      "name": "FakePatientService",
+      "label": "FakePatientService",
+      "kind": "class",
+      "type": "class",
+      "fullName": "ElsheiekhHMS.Tests.Unit.Application.Workflows.PatientIntakeAppointmentServiceTests.FakePatientService",
+      "project": "ElsheiekhHMS.Tests",
+      "namespace": "ElsheiekhHMS.Tests.Unit.Application.Workflows",
+      "file": "ElsheiekhHMS.Tests/Unit/Application/Workflows/PatientIntakeAppointmentServiceTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Unit/Application/Workflows/PatientIntakeAppointmentServiceTests.cs",
+      "source_location": "L289",
+      "line": 289,
+      "accessibility": "private",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Tests.Unit.Application.Workflows.PatientIntakeAppointmentServiceTests.TestCurrentUser",
+      "name": "TestCurrentUser",
+      "label": "TestCurrentUser",
+      "kind": "class",
+      "type": "class",
+      "fullName": "ElsheiekhHMS.Tests.Unit.Application.Workflows.PatientIntakeAppointmentServiceTests.TestCurrentUser",
+      "project": "ElsheiekhHMS.Tests",
+      "namespace": "ElsheiekhHMS.Tests.Unit.Application.Workflows",
+      "file": "ElsheiekhHMS.Tests/Unit/Application/Workflows/PatientIntakeAppointmentServiceTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Unit/Application/Workflows/PatientIntakeAppointmentServiceTests.cs",
+      "source_location": "L281",
+      "line": 281,
+      "accessibility": "private",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
       "id": "type:ElsheiekhHMS.Tests.Unit.Domain.Common.AuditableEntityTests",
       "name": "AuditableEntityTests",
       "label": "AuditableEntityTests",
@@ -12006,6 +12357,51 @@
       "weight": 1
     },
     {
+      "source": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Workflows/PatientIntake/IPatientIntakeAppointmentService.cs",
+      "target": "type:ElsheiekhHMS.Application.Workflows.PatientIntake.IPatientIntakeAppointmentService",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Application/Workflows/PatientIntake/IPatientIntakeAppointmentService.cs:L5",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Workflows/PatientIntake/PatientIntakeAppointmentRequest.cs",
+      "target": "type:ElsheiekhHMS.Application.Workflows.PatientIntake.PatientIntakeAppointmentRequest",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Application/Workflows/PatientIntake/PatientIntakeAppointmentRequest.cs:L10",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Workflows/PatientIntake/PatientIntakeAppointmentResult.cs",
+      "target": "type:ElsheiekhHMS.Application.Workflows.PatientIntake.PatientIntakeAppointmentResult",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Application/Workflows/PatientIntake/PatientIntakeAppointmentResult.cs:L19",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Workflows/PatientIntake/PatientIntakeAppointmentResult.cs",
+      "target": "type:ElsheiekhHMS.Application.Workflows.PatientIntake.PatientIntakeOutcome",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Application/Workflows/PatientIntake/PatientIntakeAppointmentResult.cs:L7",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Workflows/PatientIntake/PatientIntakeAppointmentService.cs",
+      "target": "type:ElsheiekhHMS.Application.Workflows.PatientIntake.PatientIntakeAppointmentService",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Application/Workflows/PatientIntake/PatientIntakeAppointmentService.cs:L10",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
       "source": "file:ElsheiekhHMS.Core:ElsheiekhHMS.Core/Common/AuditableEntity.cs",
       "target": "type:ElsheiekhHMS.Core.Common.AuditableEntity",
       "type": "declares",
@@ -12333,7 +12729,7 @@
       "source": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs",
       "target": "type:ElsheiekhHMS.Infrastructure.InfrastructureServiceExtensions",
       "type": "declares",
-      "evidence": "ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs:L34",
+      "evidence": "ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs:L35",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -13108,6 +13504,42 @@
       "target": "type:ElsheiekhHMS.Tests.Unit.Application.Security.SecurityVocabularyTests",
       "type": "declares",
       "evidence": "ElsheiekhHMS.Tests/Unit/Application/Security/SecurityVocabularyTests.cs:L5",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Workflows/PatientIntakeAppointmentServiceTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Application.Workflows.PatientIntakeAppointmentServiceTests",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Workflows/PatientIntakeAppointmentServiceTests.cs:L14",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Workflows/PatientIntakeAppointmentServiceTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Application.Workflows.PatientIntakeAppointmentServiceTests.FakeAppointmentService",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Workflows/PatientIntakeAppointmentServiceTests.cs:L329",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Workflows/PatientIntakeAppointmentServiceTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Application.Workflows.PatientIntakeAppointmentServiceTests.FakePatientService",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Workflows/PatientIntakeAppointmentServiceTests.cs:L289",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Workflows/PatientIntakeAppointmentServiceTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Application.Workflows.PatientIntakeAppointmentServiceTests.TestCurrentUser",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Workflows/PatientIntakeAppointmentServiceTests.cs:L281",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -14095,6 +14527,42 @@
     },
     {
       "source": "project:ElsheiekhHMS.Application",
+      "target": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Workflows/PatientIntake/IPatientIntakeAppointmentService.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Application/ElsheiekhHMS.Application.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Application",
+      "target": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Workflows/PatientIntake/PatientIntakeAppointmentRequest.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Application/ElsheiekhHMS.Application.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Application",
+      "target": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Workflows/PatientIntake/PatientIntakeAppointmentResult.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Application/ElsheiekhHMS.Application.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Application",
+      "target": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Workflows/PatientIntake/PatientIntakeAppointmentService.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Application/ElsheiekhHMS.Application.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Application",
       "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Application/ApplicationServiceExtensions.cs",
@@ -14287,6 +14755,15 @@
       "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Queue.Validation",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Application/Queue/Validation/AddWalkInQueueEntryRequestValidator.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Application",
+      "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Workflows.PatientIntake",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Application/Workflows/PatientIntake/IPatientIntakeAppointmentService.cs",
       "relation": "contains",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -15337,6 +15814,15 @@
     },
     {
       "source": "project:ElsheiekhHMS.Tests",
+      "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Workflows/PatientIntakeAppointmentServiceTests.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Tests",
       "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Domain/Common/AuditableEntityTests.cs",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
@@ -15619,6 +16105,15 @@
       "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Application.Security",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Tests/Unit/Application/Security/SecurityVocabularyTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Tests",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Application.Workflows",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Workflows/PatientIntakeAppointmentServiceTests.cs",
       "relation": "contains",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -17095,6 +17590,78 @@
       "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Queue.Validation",
       "type": "namespace-membership",
       "evidence": "ElsheiekhHMS.Application/Queue/Validation/SendToDoctorRequestValidator.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Application.Workflows.PatientIntake.IPatientIntakeAppointmentService",
+      "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Workflows.PatientIntake",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Application/Workflows/PatientIntake/IPatientIntakeAppointmentService.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Application.Workflows.PatientIntake.PatientIntakeAppointmentRequest",
+      "target": "type:System.IEquatable\u003CT\u003E",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Application/Workflows/PatientIntake/PatientIntakeAppointmentRequest.cs:L10",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Application.Workflows.PatientIntake.PatientIntakeAppointmentRequest",
+      "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Workflows.PatientIntake",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Application/Workflows/PatientIntake/PatientIntakeAppointmentRequest.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Application.Workflows.PatientIntake.PatientIntakeAppointmentResult",
+      "target": "type:System.IEquatable\u003CT\u003E",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Application/Workflows/PatientIntake/PatientIntakeAppointmentResult.cs:L19",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Application.Workflows.PatientIntake.PatientIntakeAppointmentResult",
+      "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Workflows.PatientIntake",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Application/Workflows/PatientIntake/PatientIntakeAppointmentResult.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Application.Workflows.PatientIntake.PatientIntakeAppointmentService",
+      "target": "type:ElsheiekhHMS.Application.Workflows.PatientIntake.IPatientIntakeAppointmentService",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Application/Workflows/PatientIntake/PatientIntakeAppointmentService.cs:L10",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Application.Workflows.PatientIntake.PatientIntakeAppointmentService",
+      "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Workflows.PatientIntake",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Application/Workflows/PatientIntake/PatientIntakeAppointmentService.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Application.Workflows.PatientIntake.PatientIntakeOutcome",
+      "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Workflows.PatientIntake",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Application/Workflows/PatientIntake/PatientIntakeAppointmentResult.cs",
       "relation": "namespace-membership",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -19192,6 +19759,96 @@
       "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Application.Security",
       "type": "namespace-membership",
       "evidence": "ElsheiekhHMS.Tests/Unit/Application/Security/SecurityVocabularyTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Workflows.PatientIntakeAppointmentServiceTests",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Application.Workflows.PatientIntakeAppointmentServiceTests.FakeAppointmentService",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Workflows/PatientIntakeAppointmentServiceTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Workflows.PatientIntakeAppointmentServiceTests",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Application.Workflows.PatientIntakeAppointmentServiceTests.FakePatientService",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Workflows/PatientIntakeAppointmentServiceTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Workflows.PatientIntakeAppointmentServiceTests",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Application.Workflows.PatientIntakeAppointmentServiceTests.TestCurrentUser",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Workflows/PatientIntakeAppointmentServiceTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Workflows.PatientIntakeAppointmentServiceTests",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Application.Workflows",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Workflows/PatientIntakeAppointmentServiceTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Workflows.PatientIntakeAppointmentServiceTests.FakeAppointmentService",
+      "target": "type:ElsheiekhHMS.Application.Appointments.IAppointmentService",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Workflows/PatientIntakeAppointmentServiceTests.cs:L329",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Workflows.PatientIntakeAppointmentServiceTests.FakeAppointmentService",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Application.Workflows",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Workflows/PatientIntakeAppointmentServiceTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Workflows.PatientIntakeAppointmentServiceTests.FakePatientService",
+      "target": "type:ElsheiekhHMS.Application.Patients.IPatientService",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Workflows/PatientIntakeAppointmentServiceTests.cs:L289",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Workflows.PatientIntakeAppointmentServiceTests.FakePatientService",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Application.Workflows",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Workflows/PatientIntakeAppointmentServiceTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Workflows.PatientIntakeAppointmentServiceTests.TestCurrentUser",
+      "target": "type:ElsheiekhHMS.Application.Common.Security.ICurrentUser",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Workflows/PatientIntakeAppointmentServiceTests.cs:L281",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Workflows.PatientIntakeAppointmentServiceTests.TestCurrentUser",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Application.Workflows",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Workflows/PatientIntakeAppointmentServiceTests.cs",
       "relation": "namespace-membership",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -20106,7 +20763,7 @@
       "statusSource": "README.md declaration, not independently certified completion",
       "declaredStatus": [
         {
-          "text": "\u003E **Current development stage:** Phase 07 \u2014 Application Services complete for the approved scope; 07E Doctor/Provider service deferred; Phase 08 not started",
+          "text": "\u003E **Current development stage:** Phase 08 \u2014 08A Staff Patient Intake \u0026 Appointment Scheduling complete; 08B arrival/queue handoff remains deferred",
           "source": "README.md:L5"
         },
         {
@@ -20214,44 +20871,48 @@
           "source": "README.md:L57"
         },
         {
-          "text": "\u003E **Phase 08:** \u23F8 Business Workflows not started",
+          "text": "\u003E **Phase 08A:** \u2705 Staff Patient Intake \u0026 Appointment Scheduling implemented, tested, and verified; partial-success retry semantics preserve newly registered Patients",
           "source": "README.md:L59"
         },
         {
+          "text": "\u003E **Phase 08:** \uD83D\uDD04 In progress; 08A complete and 08B Staff Appointment Arrival \u0026 Queue Handoff not started",
+          "source": "README.md:L61"
+        },
+        {
           "text": "| 01 | Solution \u0026 Architecture | \u2705 Complete |",
-          "source": "README.md:L376"
-        },
-        {
-          "text": "| 02 | Core Foundation | \u2705 Complete |",
-          "source": "README.md:L377"
-        },
-        {
-          "text": "| 03 | Domain Entities | \u2705 Complete |",
           "source": "README.md:L378"
         },
         {
-          "text": "| 04 | EF Core \u0026 Database | \u2705 Complete |",
+          "text": "| 02 | Core Foundation | \u2705 Complete |",
           "source": "README.md:L379"
         },
         {
-          "text": "| 05 | Identity \u0026 Security | \u2705 Complete (05A, 05B, 05C, 05C-A, 05D, and 05E) |",
+          "text": "| 03 | Domain Entities | \u2705 Complete |",
           "source": "README.md:L380"
         },
         {
-          "text": "| 06 | DTOs \u0026 Validation | \u2705 Complete (06A\u201306D) |",
+          "text": "| 04 | EF Core \u0026 Database | \u2705 Complete |",
           "source": "README.md:L381"
         },
         {
-          "text": "| 07 | Application Services | \u2705 Complete for approved scope (07S, 07A, 07B, 07C-P, 07C, 07D; 07E deferred) |",
+          "text": "| 05 | Identity \u0026 Security | \u2705 Complete (05A, 05B, 05C, 05C-A, 05D, and 05E) |",
           "source": "README.md:L382"
         },
         {
-          "text": "| 08 | Business Workflows | \u23F3 Not started |",
+          "text": "| 06 | DTOs \u0026 Validation | \u2705 Complete (06A\u201306D) |",
           "source": "README.md:L383"
         },
         {
-          "text": "| 09 | Enterprise Infrastructure | \u23F3 Not started |",
+          "text": "| 07 | Application Services | \u2705 Complete for approved scope (07S, 07A, 07B, 07C-P, 07C, 07D; 07E deferred) |",
           "source": "README.md:L384"
+        },
+        {
+          "text": "| 08 | Business Workflows | \u23F3 Not started |",
+          "source": "README.md:L385"
+        },
+        {
+          "text": "| 09 | Enterprise Infrastructure | \u23F3 Not started |",
+          "source": "README.md:L386"
         }
       ]
     }
@@ -20984,6 +21645,51 @@
       "weight": 1
     },
     {
+      "source": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Workflows/PatientIntake/IPatientIntakeAppointmentService.cs",
+      "target": "type:ElsheiekhHMS.Application.Workflows.PatientIntake.IPatientIntakeAppointmentService",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Application/Workflows/PatientIntake/IPatientIntakeAppointmentService.cs:L5",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Workflows/PatientIntake/PatientIntakeAppointmentRequest.cs",
+      "target": "type:ElsheiekhHMS.Application.Workflows.PatientIntake.PatientIntakeAppointmentRequest",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Application/Workflows/PatientIntake/PatientIntakeAppointmentRequest.cs:L10",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Workflows/PatientIntake/PatientIntakeAppointmentResult.cs",
+      "target": "type:ElsheiekhHMS.Application.Workflows.PatientIntake.PatientIntakeAppointmentResult",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Application/Workflows/PatientIntake/PatientIntakeAppointmentResult.cs:L19",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Workflows/PatientIntake/PatientIntakeAppointmentResult.cs",
+      "target": "type:ElsheiekhHMS.Application.Workflows.PatientIntake.PatientIntakeOutcome",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Application/Workflows/PatientIntake/PatientIntakeAppointmentResult.cs:L7",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Workflows/PatientIntake/PatientIntakeAppointmentService.cs",
+      "target": "type:ElsheiekhHMS.Application.Workflows.PatientIntake.PatientIntakeAppointmentService",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Application/Workflows/PatientIntake/PatientIntakeAppointmentService.cs:L10",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
       "source": "file:ElsheiekhHMS.Core:ElsheiekhHMS.Core/Common/AuditableEntity.cs",
       "target": "type:ElsheiekhHMS.Core.Common.AuditableEntity",
       "type": "declares",
@@ -21311,7 +22017,7 @@
       "source": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs",
       "target": "type:ElsheiekhHMS.Infrastructure.InfrastructureServiceExtensions",
       "type": "declares",
-      "evidence": "ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs:L34",
+      "evidence": "ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs:L35",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -22086,6 +22792,42 @@
       "target": "type:ElsheiekhHMS.Tests.Unit.Application.Security.SecurityVocabularyTests",
       "type": "declares",
       "evidence": "ElsheiekhHMS.Tests/Unit/Application/Security/SecurityVocabularyTests.cs:L5",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Workflows/PatientIntakeAppointmentServiceTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Application.Workflows.PatientIntakeAppointmentServiceTests",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Workflows/PatientIntakeAppointmentServiceTests.cs:L14",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Workflows/PatientIntakeAppointmentServiceTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Application.Workflows.PatientIntakeAppointmentServiceTests.FakeAppointmentService",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Workflows/PatientIntakeAppointmentServiceTests.cs:L329",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Workflows/PatientIntakeAppointmentServiceTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Application.Workflows.PatientIntakeAppointmentServiceTests.FakePatientService",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Workflows/PatientIntakeAppointmentServiceTests.cs:L289",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Workflows/PatientIntakeAppointmentServiceTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Application.Workflows.PatientIntakeAppointmentServiceTests.TestCurrentUser",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Workflows/PatientIntakeAppointmentServiceTests.cs:L281",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -23073,6 +23815,42 @@
     },
     {
       "source": "project:ElsheiekhHMS.Application",
+      "target": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Workflows/PatientIntake/IPatientIntakeAppointmentService.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Application/ElsheiekhHMS.Application.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Application",
+      "target": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Workflows/PatientIntake/PatientIntakeAppointmentRequest.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Application/ElsheiekhHMS.Application.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Application",
+      "target": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Workflows/PatientIntake/PatientIntakeAppointmentResult.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Application/ElsheiekhHMS.Application.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Application",
+      "target": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Workflows/PatientIntake/PatientIntakeAppointmentService.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Application/ElsheiekhHMS.Application.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Application",
       "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Application/ApplicationServiceExtensions.cs",
@@ -23265,6 +24043,15 @@
       "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Queue.Validation",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Application/Queue/Validation/AddWalkInQueueEntryRequestValidator.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Application",
+      "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Workflows.PatientIntake",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Application/Workflows/PatientIntake/IPatientIntakeAppointmentService.cs",
       "relation": "contains",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -24315,6 +25102,15 @@
     },
     {
       "source": "project:ElsheiekhHMS.Tests",
+      "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Workflows/PatientIntakeAppointmentServiceTests.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Tests",
       "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Domain/Common/AuditableEntityTests.cs",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
@@ -24597,6 +25393,15 @@
       "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Application.Security",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Tests/Unit/Application/Security/SecurityVocabularyTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Tests",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Application.Workflows",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Workflows/PatientIntakeAppointmentServiceTests.cs",
       "relation": "contains",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -26073,6 +26878,78 @@
       "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Queue.Validation",
       "type": "namespace-membership",
       "evidence": "ElsheiekhHMS.Application/Queue/Validation/SendToDoctorRequestValidator.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Application.Workflows.PatientIntake.IPatientIntakeAppointmentService",
+      "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Workflows.PatientIntake",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Application/Workflows/PatientIntake/IPatientIntakeAppointmentService.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Application.Workflows.PatientIntake.PatientIntakeAppointmentRequest",
+      "target": "type:System.IEquatable\u003CT\u003E",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Application/Workflows/PatientIntake/PatientIntakeAppointmentRequest.cs:L10",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Application.Workflows.PatientIntake.PatientIntakeAppointmentRequest",
+      "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Workflows.PatientIntake",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Application/Workflows/PatientIntake/PatientIntakeAppointmentRequest.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Application.Workflows.PatientIntake.PatientIntakeAppointmentResult",
+      "target": "type:System.IEquatable\u003CT\u003E",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Application/Workflows/PatientIntake/PatientIntakeAppointmentResult.cs:L19",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Application.Workflows.PatientIntake.PatientIntakeAppointmentResult",
+      "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Workflows.PatientIntake",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Application/Workflows/PatientIntake/PatientIntakeAppointmentResult.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Application.Workflows.PatientIntake.PatientIntakeAppointmentService",
+      "target": "type:ElsheiekhHMS.Application.Workflows.PatientIntake.IPatientIntakeAppointmentService",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Application/Workflows/PatientIntake/PatientIntakeAppointmentService.cs:L10",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Application.Workflows.PatientIntake.PatientIntakeAppointmentService",
+      "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Workflows.PatientIntake",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Application/Workflows/PatientIntake/PatientIntakeAppointmentService.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Application.Workflows.PatientIntake.PatientIntakeOutcome",
+      "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Workflows.PatientIntake",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Application/Workflows/PatientIntake/PatientIntakeAppointmentResult.cs",
       "relation": "namespace-membership",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -28170,6 +29047,96 @@
       "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Application.Security",
       "type": "namespace-membership",
       "evidence": "ElsheiekhHMS.Tests/Unit/Application/Security/SecurityVocabularyTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Workflows.PatientIntakeAppointmentServiceTests",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Application.Workflows.PatientIntakeAppointmentServiceTests.FakeAppointmentService",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Workflows/PatientIntakeAppointmentServiceTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Workflows.PatientIntakeAppointmentServiceTests",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Application.Workflows.PatientIntakeAppointmentServiceTests.FakePatientService",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Workflows/PatientIntakeAppointmentServiceTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Workflows.PatientIntakeAppointmentServiceTests",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Application.Workflows.PatientIntakeAppointmentServiceTests.TestCurrentUser",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Workflows/PatientIntakeAppointmentServiceTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Workflows.PatientIntakeAppointmentServiceTests",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Application.Workflows",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Workflows/PatientIntakeAppointmentServiceTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Workflows.PatientIntakeAppointmentServiceTests.FakeAppointmentService",
+      "target": "type:ElsheiekhHMS.Application.Appointments.IAppointmentService",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Workflows/PatientIntakeAppointmentServiceTests.cs:L329",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Workflows.PatientIntakeAppointmentServiceTests.FakeAppointmentService",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Application.Workflows",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Workflows/PatientIntakeAppointmentServiceTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Workflows.PatientIntakeAppointmentServiceTests.FakePatientService",
+      "target": "type:ElsheiekhHMS.Application.Patients.IPatientService",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Workflows/PatientIntakeAppointmentServiceTests.cs:L289",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Workflows.PatientIntakeAppointmentServiceTests.FakePatientService",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Application.Workflows",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Workflows/PatientIntakeAppointmentServiceTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Workflows.PatientIntakeAppointmentServiceTests.TestCurrentUser",
+      "target": "type:ElsheiekhHMS.Application.Common.Security.ICurrentUser",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Workflows/PatientIntakeAppointmentServiceTests.cs:L281",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Workflows.PatientIntakeAppointmentServiceTests.TestCurrentUser",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Application.Workflows",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Workflows/PatientIntakeAppointmentServiceTests.cs",
       "relation": "namespace-membership",
       "confidence": "EXTRACTED",
       "weight": 1

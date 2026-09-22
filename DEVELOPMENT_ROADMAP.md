@@ -3,7 +3,7 @@
 **Version:** 1.0.0
 **Date:** September 20, 2026
 **Owner:** Eltayeb Elmuiz
-**Status:** Phase 07 Application Services complete for the approved scope; 07E Doctor/Provider Application Service deferred; Phase 08 not started
+**Status:** Phase 08A Staff Patient Intake & Appointment Scheduling complete; Phase 08 in progress; 07E Doctor/Provider Application Service and 08B arrival/queue handoff remain deferred
 
 ---
 
@@ -1081,7 +1081,7 @@ git commit -m "Phase07: application services checkpoint"
 
 ## PHASE 08 — Business Workflows
 
-**Status: NOT STARTED.** Phase 08 begins only after the completed Phase 07 checkpoint is reviewed and approved.
+**Status: IN PROGRESS.** 08A Staff Patient Intake & Appointment Scheduling is complete; 08B Staff Appointment Arrival & Queue Handoff is not started.
 
 ### Objective
 Implement complete business workflows — multi-step processes that involve validation, status transitions, transactions, audit trails, and cross-entity coordination.

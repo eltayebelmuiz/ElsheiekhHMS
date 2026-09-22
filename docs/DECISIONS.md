@@ -690,12 +690,52 @@ ownership-aware authorization scope. Any required schema migration and its tests
 must be designed and approved before implementation. Doctor is not a missing
 entity, and Department/Appointment relationships are not missing.
 
-Phase 08 Business Workflows is not started. No Core, ApplicationUser, schema,
-migration, snapshot, package, service, or test changes are part of this closeout.
+At the time of this closeout, Phase 08 Business Workflows had not started. The
+later approved 08A staff intake orchestration is recorded in ADR-024; no Core,
+ApplicationUser, schema, migration, snapshot, or package change belongs to it.
 
 ### Consequences
 
 07E remains deferred until its prerequisites are explicitly reviewed and approved.
 Phase 07 may close for the currently approved service scope, while provider-scoped
-and ownership-dependent workflows remain unavailable. The next checkpoint is
-Phase 08 review; 07E must be revisited before implementing Doctor/Provider workflows.
+and ownership-dependent workflows remain unavailable. The next checkpoint recorded
+at that time was Phase 08 review; 07E must still be revisited before implementing
+Doctor/Provider workflows.
+
+## ADR-024 — Phase 08A staff intake orchestration
+
+**Status:** Implemented; ready for closeout
+**Phase:** 08A
+
+### Decision
+
+Implement one EF-free `IPatientIntakeAppointmentService` operation,
+`IntakeAndScheduleAsync`, for authenticated Administrators and Receptionists.
+The request selects exactly one mode: an existing Patient identifier or a new
+`RegisterPatientRequest`; it then schedules through the existing
+`IAppointmentService`. Existing Patient scheduling relies on the Appointment
+service's authoritative existence validation and does not perform a duplicate
+Patient lookup.
+
+Patient registration and appointment scheduling retain their existing separate
+atomic transaction boundaries. If a new Patient is registered but scheduling
+fails, the Patient remains valid master data and the workflow returns its
+identity plus the safe appointment errors so a retry can use the existing
+Patient without registering a duplicate. No compensation delete is attempted.
+
+The workflow adds no audit writer, queue interaction, Appointment-to-Queue
+relationship, provider ownership, persistence port, schema change, migration,
+package, generic repository, Unit of Work, MediatR, CQRS, or workflow engine.
+
+### Consequences
+
+PatientService and AppointmentService remain authoritative for validation,
+allocation, persistence, audit, time semantics, and collision protection.
+08B owns any later arrival or queue handoff design. Provider-owned and Patient
+self-service workflows remain deferred.
+
+### Evidence / Notes
+
+[08A workflow contract and implementation](../ElsheiekhHMS.Application/Workflows/PatientIntake/);
+[08A focused tests](../ElsheiekhHMS.Tests/Unit/Application/Workflows/PatientIntakeAppointmentServiceTests.cs);
+[Phase 08 scope review](../README.md#17-current-development-position).
