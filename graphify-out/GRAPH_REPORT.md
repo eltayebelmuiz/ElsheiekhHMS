@@ -2,11 +2,11 @@
 
 ## Snapshot
 
-- **generatedAtUtc:** `2026-09-22T20:03:50.8560806+00:00`
+- **generatedAtUtc:** `2026-09-22T20:21:46.3621276+00:00`
 - **gitBranch:** `main`
-- **gitCommit:** `a341f442ad1e47d623756b82b934fd2644e5a768`
+- **gitCommit:** `5d534ba25417e94fb05ef33bb8c2433cad304300`
 - **workingTreeDirty:** `True`
-- **sourceFingerprint:** `49a773af9bccc9b5a2758d7534937db325860fca38813b17a89d557822ce8516`
+- **sourceFingerprint:** `9bf9918342b02023cdf455acb8219c417512ccbad82af2c5fea7e42a68fe36e6`
 - Framework: net10.0
 - Structural extraction only: **0 LLM API calls / 0 LLM tokens**. No statistical community clustering is claimed; project ownership supplies the visual groups.
 
@@ -250,7 +250,7 @@ Evaluated direct PackageReference items only. Framework/SDK auto-references and 
 
 Declared by README; not inferred from the existence of classes:
 
-- > **Current development stage:** Phase 12G — Dashboard and UI/UX hardening complete; backend remains accepted and frozen — README.md:L5
+- > **Current development stage:** Phase 12H — Final UI acceptance complete; frontend baseline frozen and backend remains accepted and frozen — README.md:L5
 - > **Phase 01:** ✅ Complete — README.md:L7
 - > **Phase 02 Setup:** ✅ Complete and verified — README.md:L9
 - > **Phase 03A / 03B / 03C:** ✅ Complete — README.md:L11
@@ -293,15 +293,16 @@ Declared by README; not inferred from the existence of classes:
 - > **Phase 12E:** ✅ Appointment registry, bounded Patient lookup, scheduling, lifecycle details/actions, Kigali presentation, and concurrency-safe mutation UI complete; external browser QA remains required — README.md:L86
 - > **Phase 12F:** ✅ Queue registry, explicit walk-in workflow, queue lifecycle UI, and Appointment→Queue handoff UI complete; external browser QA remains required — README.md:L88
 - > **Phase 12G:** ✅ Operational dashboard, cross-module UI hardening, accessibility source review, and consolidated QA handoff complete; external browser QA remains required — README.md:L90
--  /  01  /  Solution & Architecture  /  ✅ Complete  /  — README.md:L407
--  /  02  /  Core Foundation  /  ✅ Complete  /  — README.md:L408
--  /  03  /  Domain Entities  /  ✅ Complete  /  — README.md:L409
--  /  04  /  EF Core & Database  /  ✅ Complete  /  — README.md:L410
--  /  05  /  Identity & Security  /  ✅ Complete (05A, 05B, 05C, 05C-A, 05D, and 05E)  /  — README.md:L411
--  /  06  /  DTOs & Validation  /  ✅ Complete (06A–06D)  /  — README.md:L412
--  /  07  /  Application Services  /  ✅ Complete for approved scope (07S, 07A, 07B, 07C-P, 07C, 07D; 07E deferred)  /  — README.md:L413
--  /  08  /  Business Workflows  /  ✅ Complete (08A, 08B-P, 08B)  /  — README.md:L414
--  /  09  /  Enterprise Infrastructure  /  ✅ Complete (09A, 09B)  /  — README.md:L415
+- > **Phase 12H:** ✅ Final UI acceptance, static-asset authentication-boundary fix, acceptance documentation, and frontend freeze complete; Antigravity and authenticated browser evidence remain environment-dependent — README.md:L92
+-  /  01  /  Solution & Architecture  /  ✅ Complete  /  — README.md:L409
+-  /  02  /  Core Foundation  /  ✅ Complete  /  — README.md:L410
+-  /  03  /  Domain Entities  /  ✅ Complete  /  — README.md:L411
+-  /  04  /  EF Core & Database  /  ✅ Complete  /  — README.md:L412
+-  /  05  /  Identity & Security  /  ✅ Complete (05A, 05B, 05C, 05C-A, 05D, and 05E)  /  — README.md:L413
+-  /  06  /  DTOs & Validation  /  ✅ Complete (06A–06D)  /  — README.md:L414
+-  /  07  /  Application Services  /  ✅ Complete for approved scope (07S, 07A, 07B, 07C-P, 07C, 07D; 07E deferred)  /  — README.md:L415
+-  /  08  /  Business Workflows  /  ✅ Complete (08A, 08B-P, 08B)  /  — README.md:L416
+-  /  09  /  Enterprise Infrastructure  /  ✅ Complete (09A, 09B)  /  — README.md:L417
 
 ## Important Files
 

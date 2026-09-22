@@ -3,7 +3,7 @@
 **Version:** 1.0.0
 **Date:** September 20, 2026
 **Owner:** Eltayeb Elmuiz
-**Status:** Phases 01–11 complete; Phase 12A–12G are complete; Phase 12H is next; 07E Doctor/Provider Application Service remains deferred
+**Status:** Phases 01–11 complete; Phase 12A–12H are complete and the frontend baseline is frozen; 07E Doctor/Provider Application Service remains deferred
 
 ---
 
@@ -1827,10 +1827,10 @@ public async Task<ServiceResult<T>> DoSomethingAsync(Dto dto, string actorEmail)
 ## 16. Current Project Checkpoint
 
 ```
-Last completed phase:  Phase 12G — Dashboard and UI/UX hardening
-Current phase:         Phase 12 — Blazor UI (12G complete; 12H is next)
-Next phase:            Phase 12H — Final UI acceptance
-Next action:           Execute the consolidated Phase 12G browser/visual QA handoff and final acceptance review; 07E and ownership-dependent workflows remain explicitly deferred
+Last completed phase:  Phase 12H — Final UI acceptance and frontend freeze
+Current phase:         Phase 12 — Blazor UI (12H complete; frontend baseline frozen)
+Next phase:            Roadmap decision after the frozen Phase 12 frontend
+Next action:           Review the frozen frontend baseline before selecting the next approved roadmap phase; 07E and ownership-dependent workflows remain explicitly deferred
 Known blockers:        None
 Important notes:
   - The current working codebase is the five-project .NET 10 ElsheiekhHMS solution
@@ -1848,7 +1848,7 @@ Important notes:
   - 05C-A stable audit vocabulary, bounded append-only model, server-controlled writer, and focused tests are complete
   - 05D additive Identity/AuditLog migration, development/integration SQL verification, and pending-model suppression reassessment are complete
   - AuditLog event-producing workflows, retention duration, IP/UserAgent capture, clinical/read auditing, and UI remain deferred after 05E security integration
-  - Phase 12G dashboard metrics use only bounded today queries through IAppointmentService and IQueueService; external browser QA remains required before final UI acceptance
+  - Phase 12G dashboard metrics use only bounded today queries through IAppointmentService and IQueueService; Phase 12H accepted and froze the frontend baseline after local anonymous browser verification
   - All CSS in wwwroot/css/ split into 8 files
   - site.js is 1389 lines including EntTable and PS_init engines
 ```

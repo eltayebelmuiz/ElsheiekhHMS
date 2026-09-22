@@ -1088,3 +1088,27 @@ foundation showcase and unused styles were removed after a consumer audit.
 The consolidated browser/visual QA handoff is
 `docs/UI_PHASE12G_QA.md`; local source checks do not certify browser rendering
 or production performance targets.
+
+## ADR-037 — Phase 12H frontend acceptance and static asset boundary
+
+**Status:** Complete
+**Phase:** 12H
+
+### Decision
+
+Freeze the Phase 12 Web baseline after source review and a local in-app browser
+acceptance run. Keep the authenticated fallback policy on application routes,
+and explicitly allow anonymous access only to the public static assets needed
+by login, access-denied, and error surfaces through
+`MapStaticAssets().AllowAnonymous()`.
+
+### Consequences
+
+Fingerprint CSS, component styles, scripts, and the favicon load before
+authentication without exposing application data or operations. Invalid login,
+protected-route redirects, keyboard focus order, and representative responsive
+widths were verified locally. Google Antigravity, authenticated workflow
+browser coverage, screenshot archiving, and production SLA measurement remain
+accepted external or operational limitations. The frontend baseline is frozen
+in `docs/UI_PHASE12_ACCEPTANCE.md`; backend projects, contracts, schema,
+migrations, snapshots, and packages remain unchanged.

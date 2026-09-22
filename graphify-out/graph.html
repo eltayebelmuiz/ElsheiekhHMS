@@ -11,12 +11,12 @@
 <footer>Architectural index, not authoritative source. Check freshness with <code>tools/graphify.ps1 -Check</code> before relying on this snapshot. No network requests or external libraries.</footer>
 <script id="graph-data" type="application/json">{
   "schemaVersion": "1.0",
-  "generatedAtUtc": "2026-09-22T20:03:50.8560806\u002B00:00",
-  "gitCommit": "a341f442ad1e47d623756b82b934fd2644e5a768",
+  "generatedAtUtc": "2026-09-22T20:21:46.3621276\u002B00:00",
+  "gitCommit": "5d534ba25417e94fb05ef33bb8c2433cad304300",
   "gitBranch": "main",
   "workingTreeDirty": true,
-  "gitStatusAtGeneration": "M DEVELOPMENT_ROADMAP.md\n M ElsheiekhHMS.Web/Components/Layout/MainLayout.razor\n M ElsheiekhHMS.Web/Components/Layout/MainLayout.razor.css\n M ElsheiekhHMS.Web/Components/Layout/NavMenu.razor\n M ElsheiekhHMS.Web/Components/Pages/Home.razor\n M ElsheiekhHMS.Web/wwwroot/app.css\n M README.md\n M docs/ARCHITECTURE.md\n M docs/DECISIONS.md\n M docs/UI_DESIGN_SYSTEM.md\n M graphify-out/GRAPH_REPORT.md\n M graphify-out/graph.html\n M graphify-out/graph.json\n?? docs/UI_PHASE12G_QA.md",
-  "sourceFingerprint": "49a773af9bccc9b5a2758d7534937db325860fca38813b17a89d557822ce8516",
+  "gitStatusAtGeneration": "M DEVELOPMENT_ROADMAP.md\n M ElsheiekhHMS.Web/Program.cs\n M README.md\n M docs/ARCHITECTURE.md\n M docs/DECISIONS.md\n M docs/UI_DESIGN_SYSTEM.md\n M docs/UI_PHASE12G_QA.md\n?? docs/UI_PHASE12_ACCEPTANCE.md",
+  "sourceFingerprint": "9bf9918342b02023cdf455acb8219c417512ccbad82af2c5fea7e42a68fe36e6",
   "generatorFingerprint": "03eee0a8853a7e84af6cbe571d34e6f7d820505ac8f5670a719d0d63b113840c",
   "fingerprintAlgorithm": "SHA-256 of ordinal path \u002B NUL \u002B content SHA-256 records joined with LF; sourceManifest defines inputs; graphify-out excluded everywhere",
   "sourceManifest": [
@@ -1034,7 +1034,7 @@
     },
     {
       "path": "ElsheiekhHMS.Web/Program.cs",
-      "sha256": "7e966b1736cdfabf1e9ee042679b624753c71bbc6bd2ed98bb0ae6d6740f1dbb"
+      "sha256": "a835bf34ea4a4f662eb77c5bacd25b643ddd49218ca97c9abe15c03d82838fbf"
     },
     {
       "path": "ElsheiekhHMS.Web/Security/AuthorizationConfiguration.cs",
@@ -1054,7 +1054,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "5683dadaf86d589d7836baf59805ea4c663c8261cc3418c8b5013ed2d2c2439f"
+      "sha256": "90c9d25446db8905a2fa0876081bc831ddf351bab89ea8bbe4aa33898b5a2d21"
     }
   ],
   "repository": {
@@ -24456,7 +24456,7 @@
       "statusSource": "README.md declaration, not independently certified completion",
       "declaredStatus": [
         {
-          "text": "\u003E **Current development stage:** Phase 12G \u2014 Dashboard and UI/UX hardening complete; backend remains accepted and frozen",
+          "text": "\u003E **Current development stage:** Phase 12H \u2014 Final UI acceptance complete; frontend baseline frozen and backend remains accepted and frozen",
           "source": "README.md:L5"
         },
         {
@@ -24628,40 +24628,44 @@
           "source": "README.md:L90"
         },
         {
+          "text": "\u003E **Phase 12H:** \u2705 Final UI acceptance, static-asset authentication-boundary fix, acceptance documentation, and frontend freeze complete; Antigravity and authenticated browser evidence remain environment-dependent",
+          "source": "README.md:L92"
+        },
+        {
           "text": "| 01 | Solution \u0026 Architecture | \u2705 Complete |",
-          "source": "README.md:L407"
-        },
-        {
-          "text": "| 02 | Core Foundation | \u2705 Complete |",
-          "source": "README.md:L408"
-        },
-        {
-          "text": "| 03 | Domain Entities | \u2705 Complete |",
           "source": "README.md:L409"
         },
         {
-          "text": "| 04 | EF Core \u0026 Database | \u2705 Complete |",
+          "text": "| 02 | Core Foundation | \u2705 Complete |",
           "source": "README.md:L410"
         },
         {
-          "text": "| 05 | Identity \u0026 Security | \u2705 Complete (05A, 05B, 05C, 05C-A, 05D, and 05E) |",
+          "text": "| 03 | Domain Entities | \u2705 Complete |",
           "source": "README.md:L411"
         },
         {
-          "text": "| 06 | DTOs \u0026 Validation | \u2705 Complete (06A\u201306D) |",
+          "text": "| 04 | EF Core \u0026 Database | \u2705 Complete |",
           "source": "README.md:L412"
         },
         {
-          "text": "| 07 | Application Services | \u2705 Complete for approved scope (07S, 07A, 07B, 07C-P, 07C, 07D; 07E deferred) |",
+          "text": "| 05 | Identity \u0026 Security | \u2705 Complete (05A, 05B, 05C, 05C-A, 05D, and 05E) |",
           "source": "README.md:L413"
         },
         {
-          "text": "| 08 | Business Workflows | \u2705 Complete (08A, 08B-P, 08B) |",
+          "text": "| 06 | DTOs \u0026 Validation | \u2705 Complete (06A\u201306D) |",
           "source": "README.md:L414"
         },
         {
-          "text": "| 09 | Enterprise Infrastructure | \u2705 Complete (09A, 09B) |",
+          "text": "| 07 | Application Services | \u2705 Complete for approved scope (07S, 07A, 07B, 07C-P, 07C, 07D; 07E deferred) |",
           "source": "README.md:L415"
+        },
+        {
+          "text": "| 08 | Business Workflows | \u2705 Complete (08A, 08B-P, 08B) |",
+          "source": "README.md:L416"
+        },
+        {
+          "text": "| 09 | Enterprise Infrastructure | \u2705 Complete (09A, 09B) |",
+          "source": "README.md:L417"
         }
       ]
     }

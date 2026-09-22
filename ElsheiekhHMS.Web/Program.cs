@@ -184,7 +184,10 @@ app.MapPost("/account/logout", async (HttpContext context, IAntiforgery antiforg
 })
     .RequireAuthorization();
 
-app.MapStaticAssets();
+// Static assets are public presentation resources; the fallback policy protects
+// application routes while leaving CSS, scripts, and the favicon available to
+// the anonymous login and error surfaces.
+app.MapStaticAssets().AllowAnonymous();
 app.MapHmsHealthEndpoints();
 
 app.MapRazorComponents<App>()

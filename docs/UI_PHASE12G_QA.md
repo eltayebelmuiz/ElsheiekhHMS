@@ -102,3 +102,8 @@ Medium/low findings: **none requiring a code change**.
 Google Antigravity and a browser screenshot pass were not available in this
 repository session. External browser execution and representative screenshot
 evidence remain required before Phase 12H final acceptance.
+
+Phase 12H completed the local browser attempt and recorded the final result in
+`docs/UI_PHASE12_ACCEPTANCE.md`. Static assets are now available to anonymous
+surfaces, and the remaining authenticated/Antigravity/screenshot work is an
+accepted external limitation.

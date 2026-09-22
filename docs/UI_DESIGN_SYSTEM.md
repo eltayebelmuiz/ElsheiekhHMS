@@ -104,3 +104,11 @@ invent KPIs, charts, ownership, polling, or a new data layer. Shared dashboard
 summary/list patterns use the existing panel, eyebrow, status, empty, loading,
 error, and responsive conventions. The consolidated browser handoff is
 `docs/UI_PHASE12G_QA.md`; external browser execution is still required.
+
+Phase 12H accepted and froze the frontend baseline. Anonymous static asset
+delivery is explicit so the login, access-denied, and error surfaces receive
+the same design system while application routes remain protected by the
+authenticated fallback policy. Local browser checks covered styled login,
+safe invalid-login feedback, protected-route redirects, keyboard focus order,
+and representative responsive widths; authenticated workflow and screenshot
+evidence remain external environment-dependent acceptance work.

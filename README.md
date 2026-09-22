@@ -2,7 +2,7 @@
 
 Enterprise Hospital Management System built with **.NET 10, ASP.NET Core, Blazor, Entity Framework Core, SQL Server, and ASP.NET Core Identity**.
 
-> **Current development stage:** Phase 12G — Dashboard and UI/UX hardening complete; backend remains accepted and frozen
+> **Current development stage:** Phase 12H — Final UI acceptance complete; frontend baseline frozen and backend remains accepted and frozen
 >
 > **Phase 01:** ✅ Complete
 >
@@ -89,7 +89,9 @@ Enterprise Hospital Management System built with **.NET 10, ASP.NET Core, Blazor
 >
 > **Phase 12G:** ✅ Operational dashboard, cross-module UI hardening, accessibility source review, and consolidated QA handoff complete; external browser QA remains required
 >
-> **Next gate:** Phase 12H — Final UI acceptance; 07E remains deferred and provider/patient ownership workflows remain blocked
+> **Phase 12H:** ✅ Final UI acceptance, static-asset authentication-boundary fix, acceptance documentation, and frontend freeze complete; Antigravity and authenticated browser evidence remain environment-dependent
+>
+> **Next gate:** Roadmap decision after the frozen Phase 12 frontend; 07E remains deferred and provider/patient ownership workflows remain blocked
 
 ---
 
@@ -847,10 +849,10 @@ When opening this repository after a break, read this section first.
 
 ```text
 LAST COMPLETED PHASE:
-Phase 12G — Dashboard and UI/UX hardening
+Phase 12H — Final UI acceptance and frontend freeze
 
 CURRENT PHASE:
-Phase 12 — Blazor UI (12G complete; 12H is next)
+Phase 12 — Blazor UI (12H complete; frontend baseline frozen)
 
 CURRENT STATUS:
 Phase 04A foundation, 04B scalar mappings, 04C relational metadata, 04D-A environment readiness,
@@ -877,7 +879,7 @@ The 07S migration `AddPhase07AllocatorInfrastructure` is applied exactly once to
 Phase 12G replaces the foundation showcase with a bounded operational dashboard. Authorized Administrator and Receptionist users see real current Africa/Kigali appointment and waiting-queue totals plus bounded attention lists sourced from the existing Application services. Quick actions link only to approved Patient, Appointment, and Queue workflows; SystemAdministrator users retain a Department configuration entry point without invented operational metrics. Shared CSS now uses the defined muted token, removes unused showcase rules, improves logical positioning and dashboard responsive layouts, and the shell exposes an accessible navigation relationship. The consolidated external browser handoff is `docs/UI_PHASE12G_QA.md`; local source QA does not claim browser or production SLA certification.
 
 NEXT ACTION:
-Prepare Phase 12H final UI acceptance using `docs/UI_PHASE12G_QA.md` and the existing module checklists. Keep 07E provider ownership and Patient self-service deferred until their prerequisites are approved; future clinical, laboratory, billing, inpatient, pharmacy, and notification workflows require separate domain designs.
+Make the next roadmap decision against the frozen Phase 12 frontend. The local browser run verified anonymous login, protected-route redirects, styled static assets, invalid-login feedback, keyboard focus order, and representative responsive widths. Antigravity, authenticated browser workflows, and screenshot archiving remain external environment-dependent limitations. Keep 07E provider ownership and Patient self-service deferred until their prerequisites are approved; future clinical, laboratory, billing, inpatient, pharmacy, and notification workflows require separate domain designs.
 
 DO NOT:
 Do not implement 07E before its deferred prerequisites are approved and established. Do not change backend behavior merely to simplify Phase 12 UI work; backend authorization and business rules remain authoritative.

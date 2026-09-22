@@ -367,3 +367,17 @@ Source-level accessibility, responsive, logical-property, loading, empty,
 error, and reduced-motion patterns remain in the Web design system. Browser
 and production performance certification remain external acceptance work;
 the consolidated handoff is `docs/UI_PHASE12G_QA.md`.
+
+### Phase 12H frontend acceptance and freeze
+
+Phase 12H accepted the final frontend baseline without changing Core,
+Application, Infrastructure, Identity, EF mappings, migrations, packages, or
+the database. A global authenticated fallback policy remains authoritative for
+application routes while `MapStaticAssets().AllowAnonymous()` makes public CSS,
+scripts, component styles, and favicon resources available to anonymous login,
+error, and access-denied surfaces. The local browser acceptance run verified
+styled anonymous login, safe invalid-login feedback, protected-route redirects,
+keyboard focus order, and representative responsive widths. Authenticated
+workflow execution, Google Antigravity, and screenshot archiving remain
+environment-dependent external QA limitations documented in
+`docs/UI_PHASE12_ACCEPTANCE.md`.
