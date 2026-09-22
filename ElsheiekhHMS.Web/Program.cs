@@ -5,6 +5,7 @@ using ElsheiekhHMS.Web.Components;
 using ElsheiekhHMS.Web.Security;
 using ElsheiekhHMS.Infrastructure.Identity;
 using ElsheiekhHMS.Infrastructure.Identity.Entities;
+using ElsheiekhHMS.Infrastructure.Development;
 using ElsheiekhHMS.Infrastructure.Health;
 using ElsheiekhHMS.Infrastructure.Observability;
 using Microsoft.AspNetCore.Authentication;
@@ -91,6 +92,15 @@ builder.Services.AddHealthChecks()
     .AddCheck<SqlServerReadinessHealthCheck>("sql_server", tags: ["ready"]);
 
 var app = builder.Build();
+
+if (app.Environment.IsDevelopment() &&
+    builder.Configuration.GetValue<bool>("DevelopmentSeed:Enabled"))
+{
+    await using var seedScope = app.Services.CreateAsyncScope();
+    await seedScope.ServiceProvider
+        .GetRequiredService<DevelopmentDataSeeder>()
+        .SeedAsync();
+}
 
 // Configure the HTTP request pipeline.
 app.UseMiddleware<RequestObservabilityMiddleware>();

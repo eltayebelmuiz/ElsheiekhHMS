@@ -18,6 +18,7 @@ using ElsheiekhHMS.Infrastructure.Persistence.Patients;
 using ElsheiekhHMS.Infrastructure.Persistence.Departments;
 using ElsheiekhHMS.Infrastructure.Persistence.Appointments;
 using ElsheiekhHMS.Infrastructure.Persistence.Queue;
+using ElsheiekhHMS.Infrastructure.Development;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -48,6 +49,7 @@ public static class InfrastructureServiceExtensions
         services.AddScoped<IAuditEventWriter, AuditEventWriter>();
         services.AddScoped<AccountLoginEligibility>();
         services.AddScoped<AdministratorBootstrapper>();
+        services.AddScoped<DevelopmentDataSeeder>();
         services.AddScoped<PatientCodeAllocator>();
         services.AddScoped<QueueTicketAllocator>();
         services.AddScoped<AppointmentCodeAllocator>();

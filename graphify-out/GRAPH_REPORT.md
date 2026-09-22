@@ -2,11 +2,11 @@
 
 ## Snapshot
 
-- **generatedAtUtc:** `2026-09-22T20:21:46.3621276+00:00`
+- **generatedAtUtc:** `2026-09-22T21:13:06.3080829+00:00`
 - **gitBranch:** `main`
-- **gitCommit:** `5d534ba25417e94fb05ef33bb8c2433cad304300`
+- **gitCommit:** `a1f8599ec397a7f019921f8538d61683267154c3`
 - **workingTreeDirty:** `True`
-- **sourceFingerprint:** `9bf9918342b02023cdf455acb8219c417512ccbad82af2c5fea7e42a68fe36e6`
+- **sourceFingerprint:** `a93c6788c9acf9abb57a2a68fbae7f31eef911d64d50aee00b5bf6d5b353bedd`
 - Framework: net10.0
 - Structural extraction only: **0 LLM API calls / 0 LLM tokens**. No statistical community clustering is claimed; project ownership supplies the visual groups.
 
@@ -106,7 +106,7 @@ Derived -> base (includes private test helper types and resolved external bases)
 - `ElsheiekhHMS.Application.Common.Auditing.IAuditEventWriter`
   - Implementations: ElsheiekhHMS.Infrastructure.Auditing.AuditEventWriter, ElsheiekhHMS.Tests.Integration.Persistence.DepartmentServiceSqlServerTests.InvalidAuditWriter, ElsheiekhHMS.Tests.Unit.Application.Appointments.AppointmentServiceTests.RecordingAuditWriter, ElsheiekhHMS.Tests.Unit.Application.Departments.DepartmentServiceTests.RecordingAuditWriter, ElsheiekhHMS.Tests.Unit.Application.Patients.PatientServiceTests.RecordingAuditWriter, ElsheiekhHMS.Tests.Unit.Application.Queue.QueueServiceTests.RecordingAuditWriter
 - `ElsheiekhHMS.Application.Common.Security.ICurrentUser`
-  - Implementations: ElsheiekhHMS.Tests.Integration.Persistence.AppointmentArrivalQueueSqlServerTests.TestCurrentUser, ElsheiekhHMS.Tests.Integration.Persistence.AppointmentServiceSqlServerTests.TestCurrentUser, ElsheiekhHMS.Tests.Integration.Persistence.DepartmentServiceSqlServerTests.TestCurrentUser, ElsheiekhHMS.Tests.Integration.Persistence.ElsheiekhHmsDbContextSqlServerTests.TestCurrentUser, ElsheiekhHMS.Tests.Integration.Persistence.IdentityAndAuditLogSqlServerTests.TestCurrentUser, ElsheiekhHMS.Tests.Integration.Persistence.PatientServiceSqlServerTests.TestCurrentUser, ElsheiekhHMS.Tests.Integration.Persistence.PerformanceSmokeSqlServerTests.TestCurrentUser, ElsheiekhHMS.Tests.Integration.Persistence.QueueServiceSqlServerTests.TestCurrentUser, ElsheiekhHMS.Tests.Unit.Application.Appointments.AppointmentServiceTests.TestCurrentUser, ElsheiekhHMS.Tests.Unit.Application.Departments.DepartmentServiceTests.TestCurrentUser, ElsheiekhHMS.Tests.Unit.Application.Patients.PatientServiceTests.TestCurrentUser, ElsheiekhHMS.Tests.Unit.Application.Queue.QueueServiceTests.TestCurrentUser, ElsheiekhHMS.Tests.Unit.Application.Workflows.AppointmentArrivalQueueServiceTests.TestCurrentUser, ElsheiekhHMS.Tests.Unit.Application.Workflows.PatientIntakeAppointmentServiceTests.TestCurrentUser, ElsheiekhHMS.Tests.Unit.Infrastructure.Auditing.AuditEventWriterTests.TestCurrentUser, ElsheiekhHMS.Web.Security.CurrentUserAccessor
+  - Implementations: ElsheiekhHMS.Infrastructure.Development.DevelopmentDataSeeder.SeedCurrentUser, ElsheiekhHMS.Tests.Integration.Persistence.AppointmentArrivalQueueSqlServerTests.TestCurrentUser, ElsheiekhHMS.Tests.Integration.Persistence.AppointmentServiceSqlServerTests.TestCurrentUser, ElsheiekhHMS.Tests.Integration.Persistence.DepartmentServiceSqlServerTests.TestCurrentUser, ElsheiekhHMS.Tests.Integration.Persistence.ElsheiekhHmsDbContextSqlServerTests.TestCurrentUser, ElsheiekhHMS.Tests.Integration.Persistence.IdentityAndAuditLogSqlServerTests.TestCurrentUser, ElsheiekhHMS.Tests.Integration.Persistence.PatientServiceSqlServerTests.TestCurrentUser, ElsheiekhHMS.Tests.Integration.Persistence.PerformanceSmokeSqlServerTests.TestCurrentUser, ElsheiekhHMS.Tests.Integration.Persistence.QueueServiceSqlServerTests.TestCurrentUser, ElsheiekhHMS.Tests.Unit.Application.Appointments.AppointmentServiceTests.TestCurrentUser, ElsheiekhHMS.Tests.Unit.Application.Departments.DepartmentServiceTests.TestCurrentUser, ElsheiekhHMS.Tests.Unit.Application.Patients.PatientServiceTests.TestCurrentUser, ElsheiekhHMS.Tests.Unit.Application.Queue.QueueServiceTests.TestCurrentUser, ElsheiekhHMS.Tests.Unit.Application.Workflows.AppointmentArrivalQueueServiceTests.TestCurrentUser, ElsheiekhHMS.Tests.Unit.Application.Workflows.PatientIntakeAppointmentServiceTests.TestCurrentUser, ElsheiekhHMS.Tests.Unit.Infrastructure.Auditing.AuditEventWriterTests.TestCurrentUser, ElsheiekhHMS.Web.Security.CurrentUserAccessor
 - `ElsheiekhHMS.Application.Common.Validation.IRequestValidator<TRequest>`
   - Implementations: ElsheiekhHMS.Application.Appointments.Validation.AppointmentActionRequestValidator, ElsheiekhHMS.Application.Appointments.Validation.AppointmentSearchRequestValidator, ElsheiekhHMS.Application.Appointments.Validation.CancelAppointmentRequestValidator, ElsheiekhHMS.Application.Appointments.Validation.CreateAppointmentRequestValidator, ElsheiekhHMS.Application.Common.Validation.PageRequestValidator, ElsheiekhHMS.Application.Departments.Validation.CreateDepartmentRequestValidator, ElsheiekhHMS.Application.Departments.Validation.DepartmentSearchRequestValidator, ElsheiekhHMS.Application.Departments.Validation.UpdateDepartmentRequestValidator, ElsheiekhHMS.Application.Patients.Validation.PatientSearchRequestValidator, ElsheiekhHMS.Application.Patients.Validation.RegisterPatientRequestValidator, ElsheiekhHMS.Application.Patients.Validation.UpdatePatientContactDetailsRequestValidator, ElsheiekhHMS.Application.Patients.Validation.UpdatePatientDemographicsRequestValidator, ElsheiekhHMS.Application.Patients.Validation.UpdatePatientIdentifiersRequestValidator, ElsheiekhHMS.Application.Queue.Validation.AddAppointmentQueueEntryRequestValidator, ElsheiekhHMS.Application.Queue.Validation.AddWalkInQueueEntryRequestValidator, ElsheiekhHMS.Application.Queue.Validation.QueueEntryActionRequestValidator, ElsheiekhHMS.Application.Queue.Validation.QueueSearchRequestValidator, ElsheiekhHMS.Application.Queue.Validation.SendToDoctorRequestValidator
 - `ElsheiekhHMS.Application.Departments.IDepartmentService`
@@ -233,6 +233,7 @@ Evaluated direct PackageReference items only. Framework/SDK auto-references and 
 - sqlServerPresent: `True`
 - identityPackagePresent: `True`
 - Identity source references: `[
+      "ElsheiekhHMS.Infrastructure/Development/DevelopmentDataSeeder.cs",
       "ElsheiekhHMS.Infrastructure/Identity/AdministratorBootstrapper.cs",
       "ElsheiekhHMS.Infrastructure/Identity/Entities/ApplicationUser.cs",
       "ElsheiekhHMS.Infrastructure/Identity/IdentityRoleSeeder.cs",
@@ -250,7 +251,7 @@ Evaluated direct PackageReference items only. Framework/SDK auto-references and 
 
 Declared by README; not inferred from the existence of classes:
 
-- > **Current development stage:** Phase 12H — Final UI acceptance complete; frontend baseline frozen and backend remains accepted and frozen — README.md:L5
+- > **Current development stage:** Pre-Phase13B — Development database inspection and safe test data seeding complete; Encounter implementation has not started — README.md:L5
 - > **Phase 01:** ✅ Complete — README.md:L7
 - > **Phase 02 Setup:** ✅ Complete and verified — README.md:L9
 - > **Phase 03A / 03B / 03C:** ✅ Complete — README.md:L11
@@ -294,15 +295,16 @@ Declared by README; not inferred from the existence of classes:
 - > **Phase 12F:** ✅ Queue registry, explicit walk-in workflow, queue lifecycle UI, and Appointment→Queue handoff UI complete; external browser QA remains required — README.md:L88
 - > **Phase 12G:** ✅ Operational dashboard, cross-module UI hardening, accessibility source review, and consolidated QA handoff complete; external browser QA remains required — README.md:L90
 - > **Phase 12H:** ✅ Final UI acceptance, static-asset authentication-boundary fix, acceptance documentation, and frontend freeze complete; Antigravity and authenticated browser evidence remain environment-dependent — README.md:L92
--  /  01  /  Solution & Architecture  /  ✅ Complete  /  — README.md:L409
--  /  02  /  Core Foundation  /  ✅ Complete  /  — README.md:L410
--  /  03  /  Domain Entities  /  ✅ Complete  /  — README.md:L411
--  /  04  /  EF Core & Database  /  ✅ Complete  /  — README.md:L412
--  /  05  /  Identity & Security  /  ✅ Complete (05A, 05B, 05C, 05C-A, 05D, and 05E)  /  — README.md:L413
--  /  06  /  DTOs & Validation  /  ✅ Complete (06A–06D)  /  — README.md:L414
--  /  07  /  Application Services  /  ✅ Complete for approved scope (07S, 07A, 07B, 07C-P, 07C, 07D; 07E deferred)  /  — README.md:L415
--  /  08  /  Business Workflows  /  ✅ Complete (08A, 08B-P, 08B)  /  — README.md:L416
--  /  09  /  Enterprise Infrastructure  /  ✅ Complete (09A, 09B)  /  — README.md:L417
+- > **Phase 13A:** ✅ Clinical Encounter architecture accepted; domain model and provider ownership decisions are documented, with implementation intentionally deferred to the Phase13B gate — README.md:L94
+-  /  01  /  Solution & Architecture  /  ✅ Complete  /  — README.md:L413
+-  /  02  /  Core Foundation  /  ✅ Complete  /  — README.md:L414
+-  /  03  /  Domain Entities  /  ✅ Complete  /  — README.md:L415
+-  /  04  /  EF Core & Database  /  ✅ Complete  /  — README.md:L416
+-  /  05  /  Identity & Security  /  ✅ Complete (05A, 05B, 05C, 05C-A, 05D, and 05E)  /  — README.md:L417
+-  /  06  /  DTOs & Validation  /  ✅ Complete (06A–06D)  /  — README.md:L418
+-  /  07  /  Application Services  /  ✅ Complete for approved scope (07S, 07A, 07B, 07C-P, 07C, 07D; 07E deferred)  /  — README.md:L419
+-  /  08  /  Business Workflows  /  ✅ Complete (08A, 08B-P, 08B)  /  — README.md:L420
+-  /  09  /  Enterprise Infrastructure  /  ✅ Complete (09A, 09B)  /  — README.md:L421
 
 ## Important Files
 
@@ -422,6 +424,7 @@ Declared by README; not inferred from the existence of classes:
 - [ElsheiekhHMS.Infrastructure/Configurations/Entities/DoctorScheduleConfiguration.cs](../ElsheiekhHMS.Infrastructure/Configurations/Entities/DoctorScheduleConfiguration.cs) — ElsheiekhHMS.Infrastructure
 - [ElsheiekhHMS.Infrastructure/Configurations/Entities/PatientConfiguration.cs](../ElsheiekhHMS.Infrastructure/Configurations/Entities/PatientConfiguration.cs) — ElsheiekhHMS.Infrastructure
 - [ElsheiekhHMS.Infrastructure/Configurations/Entities/WalkInQueueEntryConfiguration.cs](../ElsheiekhHMS.Infrastructure/Configurations/Entities/WalkInQueueEntryConfiguration.cs) — ElsheiekhHMS.Infrastructure
+- [ElsheiekhHMS.Infrastructure/Development/DevelopmentDataSeeder.cs](../ElsheiekhHMS.Infrastructure/Development/DevelopmentDataSeeder.cs) — ElsheiekhHMS.Infrastructure
 - [ElsheiekhHMS.Infrastructure/Health/HmsHealthChecks.cs](../ElsheiekhHMS.Infrastructure/Health/HmsHealthChecks.cs) — ElsheiekhHMS.Infrastructure
 - [ElsheiekhHMS.Infrastructure/Identity/AccountLoginEligibility.cs](../ElsheiekhHMS.Infrastructure/Identity/AccountLoginEligibility.cs) — ElsheiekhHMS.Infrastructure
 - [ElsheiekhHMS.Infrastructure/Identity/AdministratorBootstrapper.cs](../ElsheiekhHMS.Infrastructure/Identity/AdministratorBootstrapper.cs) — ElsheiekhHMS.Infrastructure
