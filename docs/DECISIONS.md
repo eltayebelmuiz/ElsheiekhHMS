@@ -535,3 +535,41 @@ query shape without reopening the broader Phase06 contract family.
 [Department persistence](../ElsheiekhHMS.Infrastructure/Persistence/Departments/);
 [Department EF configuration](../ElsheiekhHMS.Infrastructure/Configurations/Entities/DepartmentConfiguration.cs);
 [authorization policy mapping](../ElsheiekhHMS.Web/Security/AuthorizationConfiguration.cs).
+
+## ADR-020 — Phase 07C-P AppointmentCode allocation
+
+**Status:** Accepted
+**Phase:** 07C-P
+
+### Context
+
+Appointment creation needs a durable operational identifier that remains stable
+when an appointment is rescheduled and remains unique across application
+instances and restarts. The approved identifier is independent of the scheduled
+date and must be allocated before the future AppointmentService write.
+
+### Decision
+
+Keep AppointmentCode allocation in Infrastructure. Allocate from a dedicated
+SQL Server `AppointmentCodeAllocations` row keyed by the current UTC year,
+using a serializable transaction and an atomic update/insert operation. Format
+the result as `AP-YYYY-NNNNN`; the sequence resets per allocator year and the
+complete formatted value is protected by the unique
+`UX_Appointments_AppointmentCode` index. Formatting width is a minimum display
+width, not a hard sequence cap. The `AddAppointmentCodeAllocator` migration is
+the single additive migration for this prerequisite and has been applied exactly
+once to the approved development database after read-only preflight.
+
+### Consequences
+
+The Appointment domain entity, Core, ApplicationUser, existing migrations, and
+unrelated Appointment collision rules remain unchanged. The allocator is
+restart-safe and multi-instance-safe without `MAX+1`, static counters, or
+process-local state. Automated SQL verification uses only the exact isolated
+integration database; AppointmentService and 07D remain separately gated.
+
+### Evidence / Notes
+
+[AppointmentCode allocator](../ElsheiekhHMS.Infrastructure/Persistence/Allocation/AppointmentCodeAllocator.cs);
+[AddAppointmentCodeAllocator migration](../ElsheiekhHMS.Infrastructure/Migrations/20260922013639_AddAppointmentCodeAllocator.cs);
+[Development roadmap](../DEVELOPMENT_ROADMAP.md).

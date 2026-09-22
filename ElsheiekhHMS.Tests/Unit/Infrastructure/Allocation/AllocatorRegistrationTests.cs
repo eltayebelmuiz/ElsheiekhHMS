@@ -26,5 +26,8 @@ public sealed class AllocatorRegistrationTests
         Assert.Contains(services, descriptor =>
             descriptor.ServiceType == typeof(QueueTicketAllocator) &&
             descriptor.ImplementationType == typeof(QueueTicketAllocator));
+        Assert.Contains(services, descriptor =>
+            descriptor.ServiceType == typeof(AppointmentCodeAllocator) &&
+            descriptor.ImplementationType == typeof(AppointmentCodeAllocator));
     }
 }

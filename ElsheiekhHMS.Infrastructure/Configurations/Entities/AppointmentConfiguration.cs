@@ -72,6 +72,9 @@ public sealed class AppointmentConfiguration : IEntityTypeConfiguration<Appointm
             appointment.ScheduledDate
         });
         builder.HasIndex(appointment => appointment.DepartmentId);
+        builder.HasIndex(appointment => appointment.AppointmentCode)
+            .IsUnique()
+            .HasDatabaseName("UX_Appointments_AppointmentCode");
 
         builder.HasQueryFilter(appointment => !appointment.IsDeleted);
         builder.Property(appointment => appointment.RowVersion)

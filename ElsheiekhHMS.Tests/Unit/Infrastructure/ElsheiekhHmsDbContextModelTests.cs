@@ -28,6 +28,7 @@ public sealed class ElsheiekhHmsDbContextModelTests
         Assert.Contains("ApplicationUser", entityNames);
         Assert.Contains("PatientCodeAllocation", entityNames);
         Assert.Contains("QueueTicketAllocation", entityNames);
+        Assert.Contains("AppointmentCodeAllocation", entityNames);
     }
 
     [Fact]
@@ -134,6 +135,7 @@ public sealed class ElsheiekhHmsDbContextModelTests
             unique: false);
         AssertIndex(appointment, [nameof(Appointment.PatientId), nameof(Appointment.ScheduledDate)], unique: false);
         AssertIndex(appointment, [nameof(Appointment.DepartmentId)], unique: false);
+        AssertIndex(appointment, [nameof(Appointment.AppointmentCode)], unique: true);
 
         var queue = context.Model.FindEntityType(typeof(WalkInQueueEntry))!;
         AssertIndex(queue, [nameof(WalkInQueueEntry.PatientId)], unique: false);
@@ -158,6 +160,9 @@ public sealed class ElsheiekhHmsDbContextModelTests
             index.Properties.Select(property => property.Name).SequenceEqual(
                 [nameof(WalkInQueueEntry.QueueDate), nameof(WalkInQueueEntry.SequenceNumber)]));
         Assert.Equal("UX_WalkInQueueEntries_QueueDate_SequenceNumber", queueTicketIndex.GetDatabaseName());
+        var appointmentCodeIndex = appointment.GetIndexes().Single(index =>
+            index.Properties.Select(property => property.Name).SequenceEqual([nameof(Appointment.AppointmentCode)]));
+        Assert.Equal("UX_Appointments_AppointmentCode", appointmentCodeIndex.GetDatabaseName());
     }
 
     [Fact]
@@ -186,6 +191,15 @@ public sealed class ElsheiekhHmsDbContextModelTests
             constraint.Sql.Contains("1000", StringComparison.Ordinal));
         Assert.Empty(patient.GetForeignKeys());
         Assert.Empty(queue.GetForeignKeys());
+
+        var appointment = designModel.FindEntityType("ElsheiekhHMS.Infrastructure.Persistence.Allocation.AppointmentCodeAllocation")!;
+        Assert.Equal("AppointmentCodeAllocations", appointment.GetTableName());
+        Assert.Equal("AllocationYear", appointment.FindProperty("AllocationYear")!.GetColumnName());
+        Assert.Equal("NextSequenceNumber", appointment.FindProperty("NextSequenceNumber")!.GetColumnName());
+        Assert.Equal(["AllocationYear"], appointment.FindPrimaryKey()!.Properties.Select(property => property.Name));
+        Assert.Contains(appointment.GetCheckConstraints(), constraint =>
+            constraint.Sql.Contains("NextSequenceNumber", StringComparison.Ordinal));
+        Assert.Empty(appointment.GetForeignKeys());
     }
 
     [Fact]

@@ -3,7 +3,7 @@
 **Version:** 1.0.0
 **Date:** September 20, 2026
 **Owner:** Eltayeb Elmuiz
-**Status:** Active — Phase 07 Application Services in progress; 07S, 07A, and 07B complete
+**Status:** Active — Phase 07 Application Services in progress; 07S, 07A, 07B, and 07C-P complete
 
 ---
 
@@ -913,7 +913,7 @@ git commit -m "Phase06: ViewModels, DTOs, ServiceResult usage pattern, PatientSe
 
 ## PHASE 07 — Application Services
 
-**Status: IN PROGRESS (07S, 07A, and 07B complete).** The remaining material in this section is planned
+**Status: IN PROGRESS (07S, 07A, 07B, and 07C-P complete).** The remaining material in this section is planned
 design guidance; later Phase 07 services, repositories, Unit of Work, and workflows are not
 implemented in the current checkpoint.
 
@@ -948,6 +948,15 @@ Create, update, and deactivate stage `DEPARTMENT_CREATED`, `DEPARTMENT_UPDATED`,
 `SystemAdministrator` can manage Department configuration; Administrator, Receptionist,
 Provider, and Patient are not broadened. Department names remain non-unique, reactivation and
 hard delete are out of scope, and no schema or migration change is required.
+
+### Phase 07C-P — AppointmentCode Allocator Prerequisite
+
+**Status: COMPLETE.** Infrastructure provides a
+year-scoped, UTC-based `AP-YYYY-NNNNN` allocator backed by the dedicated
+`AppointmentCodeAllocations` table and serializable atomic allocation. The additive
+`AddAppointmentCodeAllocator` migration adds that table and the physical unique
+`UX_Appointments_AppointmentCode` index; it was applied exactly once to the development
+database and physically verified. AppointmentService 07C is ready to resume and 07D remains unstarted.
 
 ### Objective
 Implement all application-layer services. Services orchestrate validation, authorization checks, business rules, repository calls, and audit logging.
@@ -1895,7 +1904,7 @@ public async Task<ServiceResult<T>> DoSomethingAsync(Dto dto, string actorEmail)
 Last completed phase:  Phase 07B — Department Application Service
 Current phase:         Phase 07 — Application Services (in progress)
 Next phase:            Phase 07 — Application Services
-Next action:           Prepare the next approved Phase 07 sub-phase design gate; 07C has not started
+Next action:           Resume the approved 07C Appointment Application Service sub-phase; 07D has not started
 Known blockers:        None
 Important notes:
   - The current working codebase is the five-project .NET 10 ElsheiekhHMS solution

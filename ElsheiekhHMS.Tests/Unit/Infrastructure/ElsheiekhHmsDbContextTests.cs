@@ -32,6 +32,7 @@ public sealed class ElsheiekhHmsDbContextTests
         Assert.Equal(typeof(DbSet<WalkInQueueEntry>), dbSetProperties[nameof(context.WalkInQueueEntries)]);
         Assert.Equal(typeof(DbSet<PatientCodeAllocation>), dbSetProperties[nameof(context.PatientCodeAllocations)]);
         Assert.Equal(typeof(DbSet<QueueTicketAllocation>), dbSetProperties[nameof(context.QueueTicketAllocations)]);
+        Assert.Equal(typeof(DbSet<AppointmentCodeAllocation>), dbSetProperties[nameof(context.AppointmentCodeAllocations)]);
         Assert.DoesNotContain(dbSetProperties.Keys, name =>
             name is "Encounters" or "Admissions" or "ClinicalObservations");
     }

@@ -22,6 +22,7 @@ public sealed class ElsheiekhHmsDbContext(
     public DbSet<AuditLog> AuditLogs => Set<AuditLog>();
     public DbSet<PatientCodeAllocation> PatientCodeAllocations => Set<PatientCodeAllocation>();
     public DbSet<QueueTicketAllocation> QueueTicketAllocations => Set<QueueTicketAllocation>();
+    public DbSet<AppointmentCodeAllocation> AppointmentCodeAllocations => Set<AppointmentCodeAllocation>();
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

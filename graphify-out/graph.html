@@ -11,12 +11,12 @@
 <footer>Architectural index, not authoritative source. Check freshness with <code>tools/graphify.ps1 -Check</code> before relying on this snapshot. No network requests or external libraries.</footer>
 <script id="graph-data" type="application/json">{
   "schemaVersion": "1.0",
-  "generatedAtUtc": "2026-09-22T01:16:28.9087658\u002B00:00",
-  "gitCommit": "3f97dbd46f99287b452cc40fa4e77dec70c48566",
+  "generatedAtUtc": "2026-09-22T01:53:28.0519643\u002B00:00",
+  "gitCommit": "46193ca78588bbb7fdb4fc86a3e0a842afa79c5f",
   "gitBranch": "main",
   "workingTreeDirty": true,
-  "gitStatusAtGeneration": "M DEVELOPMENT_ROADMAP.md\n M ElsheiekhHMS.Application/Common/Auditing/AuditActions.cs\n M ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs\n M ElsheiekhHMS.Tests/Unit/Application/Auditing/AuditVocabularyTests.cs\n M ElsheiekhHMS.Tests/Unit/Application/Departments/DepartmentValidationTests.cs\n M README.md\n M docs/ARCHITECTURE.md\n M docs/DECISIONS.md\n M graphify-out/GRAPH_REPORT.md\n M graphify-out/graph.html\n M graphify-out/graph.json\n?? ElsheiekhHMS.Application/Departments/Contracts/DepartmentSearchRequest.cs\n?? ElsheiekhHMS.Application/Departments/Contracts/DepartmentSortField.cs\n?? ElsheiekhHMS.Application/Departments/DepartmentService.cs\n?? ElsheiekhHMS.Application/Departments/IDepartmentService.cs\n?? ElsheiekhHMS.Application/Departments/Persistence/IDepartmentPersistence.cs\n?? ElsheiekhHMS.Application/Departments/Validation/DepartmentSearchRequestValidator.cs\n?? ElsheiekhHMS.Infrastructure/Persistence/Departments/DepartmentPersistence.cs\n?? ElsheiekhHMS.Tests/Integration/Persistence/DepartmentServiceSqlServerTests.cs\n?? ElsheiekhHMS.Tests/Unit/Application/Departments/DepartmentServiceTests.cs\n?? Phases.md",
-  "sourceFingerprint": "f6d459c395b5ecd816a61811a41e4ba60c9b038c67c41924d7207a66fdddd396",
+  "gitStatusAtGeneration": "M DEVELOPMENT_ROADMAP.md\n M ElsheiekhHMS.Infrastructure/Configurations/Entities/AppointmentConfiguration.cs\n M ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs\n M ElsheiekhHMS.Infrastructure/Migrations/ElsheiekhHmsDbContextModelSnapshot.cs\n M ElsheiekhHMS.Infrastructure/Persistence/ElsheiekhHmsDbContext.cs\n M ElsheiekhHMS.Tests/Unit/Infrastructure/Allocation/AllocatorFormattingTests.cs\n M ElsheiekhHMS.Tests/Unit/Infrastructure/Allocation/AllocatorRegistrationTests.cs\n M ElsheiekhHMS.Tests/Unit/Infrastructure/ElsheiekhHmsDbContextModelTests.cs\n M ElsheiekhHMS.Tests/Unit/Infrastructure/ElsheiekhHmsDbContextTests.cs\n M README.md\n M docs/ARCHITECTURE.md\n M docs/DECISIONS.md\n M graphify-out/GRAPH_REPORT.md\n M graphify-out/graph.html\n M graphify-out/graph.json\n?? ElsheiekhHMS.Infrastructure/Migrations/20260922013639_AddAppointmentCodeAllocator.Designer.cs\n?? ElsheiekhHMS.Infrastructure/Migrations/20260922013639_AddAppointmentCodeAllocator.cs\n?? ElsheiekhHMS.Infrastructure/Persistence/Allocation/AppointmentCodeAllocation.cs\n?? ElsheiekhHMS.Infrastructure/Persistence/Allocation/AppointmentCodeAllocationConfiguration.cs\n?? ElsheiekhHMS.Infrastructure/Persistence/Allocation/AppointmentCodeAllocator.cs\n?? ElsheiekhHMS.Tests/Integration/Persistence/AppointmentCodeAllocatorSqlServerTests.cs\n?? Phases.md",
+  "sourceFingerprint": "6eacabb936da4b904af98ceb23fb626aab75c484b02dd7464673fb596e629d34",
   "generatorFingerprint": "03eee0a8853a7e84af6cbe571d34e6f7d820505ac8f5670a719d0d63b113840c",
   "fingerprintAlgorithm": "SHA-256 of ordinal path \u002B NUL \u002B content SHA-256 records joined with LF; sourceManifest defines inputs; graphify-out excluded everywhere",
   "sourceManifest": [
@@ -390,7 +390,7 @@
     },
     {
       "path": "ElsheiekhHMS.Infrastructure/Configurations/Entities/AppointmentConfiguration.cs",
-      "sha256": "c9be3b461f1e5a229d2cf16a695e5f761fd8a87fe4aca56fd30ae6a4e5a68ffa"
+      "sha256": "eaf399fcc2157a24d8567ec975f1ec2af439ef29645cf70ca2538ff0bce6c02f"
     },
     {
       "path": "ElsheiekhHMS.Infrastructure/Configurations/Entities/DepartmentConfiguration.cs",
@@ -442,7 +442,7 @@
     },
     {
       "path": "ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs",
-      "sha256": "0d2ad1a3f19e38fb9828884d39213feca352cd57cec01cfc99e6c5cd1e0593f1"
+      "sha256": "4787681d43ae993def903a82c5d32173dc04489c8336209b8e3bb98d0745f49e"
     },
     {
       "path": "ElsheiekhHMS.Infrastructure/Migrations/20260921111137_InitialCreate.Designer.cs",
@@ -469,8 +469,28 @@
       "sha256": "703226c12310ff2f48b59ebb126fddf78e72f9b7dbbc01080bf528d243701607"
     },
     {
+      "path": "ElsheiekhHMS.Infrastructure/Migrations/20260922013639_AddAppointmentCodeAllocator.Designer.cs",
+      "sha256": "5e9f78d4081b562f1dde0e6872be8af7e7839947b30b59c31a54e792b1fae8ec"
+    },
+    {
+      "path": "ElsheiekhHMS.Infrastructure/Migrations/20260922013639_AddAppointmentCodeAllocator.cs",
+      "sha256": "d40f07b6a412ca0958228ee39cc37d6b5e3c00d649991d53d76bebdbfb0ccb5c"
+    },
+    {
       "path": "ElsheiekhHMS.Infrastructure/Migrations/ElsheiekhHmsDbContextModelSnapshot.cs",
-      "sha256": "ef6ca04241fbf8dd08ce7fed85eddcdaa386d9d9013d2f98a04cd1fcf5fb63e3"
+      "sha256": "8f268b77e19330f3c17989ac7bf3765011b711edf43d0e4c89df430a29859be9"
+    },
+    {
+      "path": "ElsheiekhHMS.Infrastructure/Persistence/Allocation/AppointmentCodeAllocation.cs",
+      "sha256": "77ad6e3e6242b77e29b521827887d654994e7daf2da21bf0dd9c286d4d6fb17e"
+    },
+    {
+      "path": "ElsheiekhHMS.Infrastructure/Persistence/Allocation/AppointmentCodeAllocationConfiguration.cs",
+      "sha256": "e0f9890ba462a89318c43d5994b493e7f3dc96c3d70bd28cc98a23f4fd157a8a"
+    },
+    {
+      "path": "ElsheiekhHMS.Infrastructure/Persistence/Allocation/AppointmentCodeAllocator.cs",
+      "sha256": "877457bc08223a48f2453ff1d6848582a658c1e5f0a773ee448fe913014b817a"
     },
     {
       "path": "ElsheiekhHMS.Infrastructure/Persistence/Allocation/PatientCodeAllocation.cs",
@@ -502,7 +522,7 @@
     },
     {
       "path": "ElsheiekhHMS.Infrastructure/Persistence/ElsheiekhHmsDbContext.cs",
-      "sha256": "bc020a8f0155f1275dc217915db3f19a505da8db4fa65d107baf4c950cad5f50"
+      "sha256": "cb3a2b1a719f6eedbc56624eb538373883ad455ae00eddb7d2615140f180697f"
     },
     {
       "path": "ElsheiekhHMS.Infrastructure/Persistence/Patients/PatientPersistence.cs",
@@ -511,6 +531,10 @@
     {
       "path": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
       "sha256": "6cc9fd9be55e6b7f477c82f95a8127514f07cf172c2f7bf08d55643ce49c04a0"
+    },
+    {
+      "path": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentCodeAllocatorSqlServerTests.cs",
+      "sha256": "17512f6118b84a982095d13291893675119508e8896553fb4d5b5cb0c5527668"
     },
     {
       "path": "ElsheiekhHMS.Tests/Integration/Persistence/DepartmentServiceSqlServerTests.cs",
@@ -646,11 +670,11 @@
     },
     {
       "path": "ElsheiekhHMS.Tests/Unit/Infrastructure/Allocation/AllocatorFormattingTests.cs",
-      "sha256": "2fef8d4a95406c626e83d02036308950feaf75bd6f08632c1ae2b73c573212dd"
+      "sha256": "80b0d99f292f6c585685de19937d5850c796fa4b53c517dc0e17bebd368436fd"
     },
     {
       "path": "ElsheiekhHMS.Tests/Unit/Infrastructure/Allocation/AllocatorRegistrationTests.cs",
-      "sha256": "8061eccd065cb0b330f23930e4798871470669f2cbf51fd95d16b9e987fa333c"
+      "sha256": "aef17e00a10723ff65a8c94dee964355995e9b04dc9fb687914f1a00aa27bac6"
     },
     {
       "path": "ElsheiekhHMS.Tests/Unit/Infrastructure/Auditing/AuditEventWriterTests.cs",
@@ -662,11 +686,11 @@
     },
     {
       "path": "ElsheiekhHMS.Tests/Unit/Infrastructure/ElsheiekhHmsDbContextModelTests.cs",
-      "sha256": "cbbd7b4d5db39f2139840d663003f8cda38ec7dbde23257a8d4e246eb984a01e"
+      "sha256": "a8372041a9beb8b809940f88a0662ed5ef93221d215c6cad23673bbb80104ad4"
     },
     {
       "path": "ElsheiekhHMS.Tests/Unit/Infrastructure/ElsheiekhHmsDbContextTests.cs",
-      "sha256": "379099d23ad7b0ba88239223f20f3f07a9bc10dc06a0783eebdfc1b3e8a19756"
+      "sha256": "9ee249d02042b1573d4f2cfcba568abb2b951e7765d28eb571f00980f9b1ecb6"
     },
     {
       "path": "ElsheiekhHMS.Tests/Unit/Infrastructure/Identity/AccountLoginEligibilityTests.cs",
@@ -758,7 +782,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "43df65f9d3891e93f2e1e94e8d6bc5040305d5c9eed9c7ef803c38bb835fd06c"
+      "sha256": "63e54c60da5c4290b6031ce22a8be5f00b8bb12fe5fb2b10aafd41a6280134a3"
     }
   ],
   "repository": {
@@ -768,16 +792,16 @@
   },
   "summary": {
     "projectCount": 5,
-    "sourceFileCount": 167,
+    "sourceFileCount": 173,
     "razorFileCount": 11,
-    "typeCount": 188,
+    "typeCount": 194,
     "interfaceCount": 8,
     "testClassCount": 11,
     "testMethodCount": 76,
     "testCount": 113,
     "dynamicTheoryCount": 0,
-    "nodeCount": 446,
-    "edgeCount": 817
+    "nodeCount": 458,
+    "edgeCount": 840
   },
   "projects": [
     {
@@ -971,7 +995,12 @@
         "ElsheiekhHMS.Infrastructure/Migrations/20260921182651_AddPhase05IdentityAndAuditLog.Designer.cs",
         "ElsheiekhHMS.Infrastructure/Migrations/20260921230714_AddPhase07AllocatorInfrastructure.cs",
         "ElsheiekhHMS.Infrastructure/Migrations/20260921230714_AddPhase07AllocatorInfrastructure.Designer.cs",
+        "ElsheiekhHMS.Infrastructure/Migrations/20260922013639_AddAppointmentCodeAllocator.cs",
+        "ElsheiekhHMS.Infrastructure/Migrations/20260922013639_AddAppointmentCodeAllocator.Designer.cs",
         "ElsheiekhHMS.Infrastructure/Migrations/ElsheiekhHmsDbContextModelSnapshot.cs",
+        "ElsheiekhHMS.Infrastructure/Persistence/Allocation/AppointmentCodeAllocation.cs",
+        "ElsheiekhHMS.Infrastructure/Persistence/Allocation/AppointmentCodeAllocationConfiguration.cs",
+        "ElsheiekhHMS.Infrastructure/Persistence/Allocation/AppointmentCodeAllocator.cs",
         "ElsheiekhHMS.Infrastructure/Persistence/Allocation/PatientCodeAllocation.cs",
         "ElsheiekhHMS.Infrastructure/Persistence/Allocation/PatientCodeAllocationConfiguration.cs",
         "ElsheiekhHMS.Infrastructure/Persistence/Allocation/PatientCodeAllocator.cs",
@@ -1020,6 +1049,7 @@
         }
       ],
       "sourceFiles": [
+        "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentCodeAllocatorSqlServerTests.cs",
         "ElsheiekhHMS.Tests/Integration/Persistence/DepartmentServiceSqlServerTests.cs",
         "ElsheiekhHMS.Tests/Integration/Persistence/ElsheiekhHmsDbContextSqlServerTests.cs",
         "ElsheiekhHMS.Tests/Integration/Persistence/IdentityAndAuditLogSqlServerTests.cs",
@@ -2840,6 +2870,38 @@
       "dynamicTheories": 0
     },
     {
+      "id": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Migrations/20260922013639_AddAppointmentCodeAllocator.Designer.cs",
+      "name": "20260922013639_AddAppointmentCodeAllocator.Designer.cs",
+      "label": "20260922013639_AddAppointmentCodeAllocator.Designer.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Infrastructure",
+      "file": "ElsheiekhHMS.Infrastructure/Migrations/20260922013639_AddAppointmentCodeAllocator.Designer.cs",
+      "source_file": "ElsheiekhHMS.Infrastructure/Migrations/20260922013639_AddAppointmentCodeAllocator.Designer.cs",
+      "external": false,
+      "community": 2,
+      "community_name": "ElsheiekhHMS.Infrastructure",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Migrations/20260922013639_AddAppointmentCodeAllocator.cs",
+      "name": "20260922013639_AddAppointmentCodeAllocator.cs",
+      "label": "20260922013639_AddAppointmentCodeAllocator.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Infrastructure",
+      "file": "ElsheiekhHMS.Infrastructure/Migrations/20260922013639_AddAppointmentCodeAllocator.cs",
+      "source_file": "ElsheiekhHMS.Infrastructure/Migrations/20260922013639_AddAppointmentCodeAllocator.cs",
+      "external": false,
+      "community": 2,
+      "community_name": "ElsheiekhHMS.Infrastructure",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
       "id": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Migrations/ElsheiekhHmsDbContextModelSnapshot.cs",
       "name": "ElsheiekhHmsDbContextModelSnapshot.cs",
       "label": "ElsheiekhHmsDbContextModelSnapshot.cs",
@@ -2848,6 +2910,54 @@
       "project": "ElsheiekhHMS.Infrastructure",
       "file": "ElsheiekhHMS.Infrastructure/Migrations/ElsheiekhHmsDbContextModelSnapshot.cs",
       "source_file": "ElsheiekhHMS.Infrastructure/Migrations/ElsheiekhHmsDbContextModelSnapshot.cs",
+      "external": false,
+      "community": 2,
+      "community_name": "ElsheiekhHMS.Infrastructure",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Persistence/Allocation/AppointmentCodeAllocation.cs",
+      "name": "AppointmentCodeAllocation.cs",
+      "label": "AppointmentCodeAllocation.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Infrastructure",
+      "file": "ElsheiekhHMS.Infrastructure/Persistence/Allocation/AppointmentCodeAllocation.cs",
+      "source_file": "ElsheiekhHMS.Infrastructure/Persistence/Allocation/AppointmentCodeAllocation.cs",
+      "external": false,
+      "community": 2,
+      "community_name": "ElsheiekhHMS.Infrastructure",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Persistence/Allocation/AppointmentCodeAllocationConfiguration.cs",
+      "name": "AppointmentCodeAllocationConfiguration.cs",
+      "label": "AppointmentCodeAllocationConfiguration.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Infrastructure",
+      "file": "ElsheiekhHMS.Infrastructure/Persistence/Allocation/AppointmentCodeAllocationConfiguration.cs",
+      "source_file": "ElsheiekhHMS.Infrastructure/Persistence/Allocation/AppointmentCodeAllocationConfiguration.cs",
+      "external": false,
+      "community": 2,
+      "community_name": "ElsheiekhHMS.Infrastructure",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Persistence/Allocation/AppointmentCodeAllocator.cs",
+      "name": "AppointmentCodeAllocator.cs",
+      "label": "AppointmentCodeAllocator.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Infrastructure",
+      "file": "ElsheiekhHMS.Infrastructure/Persistence/Allocation/AppointmentCodeAllocator.cs",
+      "source_file": "ElsheiekhHMS.Infrastructure/Persistence/Allocation/AppointmentCodeAllocator.cs",
       "external": false,
       "community": 2,
       "community_name": "ElsheiekhHMS.Infrastructure",
@@ -2995,6 +3105,22 @@
       "external": false,
       "community": 2,
       "community_name": "ElsheiekhHMS.Infrastructure",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/AppointmentCodeAllocatorSqlServerTests.cs",
+      "name": "AppointmentCodeAllocatorSqlServerTests.cs",
+      "label": "AppointmentCodeAllocatorSqlServerTests.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Tests",
+      "file": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentCodeAllocatorSqlServerTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentCodeAllocatorSqlServerTests.cs",
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
       "testMethods": [],
       "staticTestCases": 0,
       "dynamicTheories": 0
@@ -7456,6 +7582,30 @@
       "dynamicTheories": 0
     },
     {
+      "id": "type:ElsheiekhHMS.Infrastructure.Migrations.AddAppointmentCodeAllocator",
+      "name": "AddAppointmentCodeAllocator",
+      "label": "AddAppointmentCodeAllocator",
+      "kind": "class",
+      "type": "class",
+      "fullName": "ElsheiekhHMS.Infrastructure.Migrations.AddAppointmentCodeAllocator",
+      "project": "ElsheiekhHMS.Infrastructure",
+      "namespace": "ElsheiekhHMS.Infrastructure.Migrations",
+      "file": "ElsheiekhHMS.Infrastructure/Migrations/20260922013639_AddAppointmentCodeAllocator.cs",
+      "source_file": "ElsheiekhHMS.Infrastructure/Migrations/20260922013639_AddAppointmentCodeAllocator.cs",
+      "source_location": "L8",
+      "line": 8,
+      "accessibility": "public",
+      "abstract": false,
+      "sealed": false,
+      "static": false,
+      "external": false,
+      "community": 2,
+      "community_name": "ElsheiekhHMS.Infrastructure",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
       "id": "type:ElsheiekhHMS.Infrastructure.Migrations.AddPhase05IdentityAndAuditLog",
       "name": "AddPhase05IdentityAndAuditLog",
       "label": "AddPhase05IdentityAndAuditLog",
@@ -7543,6 +7693,78 @@
       "accessibility": "public",
       "abstract": false,
       "sealed": false,
+      "static": false,
+      "external": false,
+      "community": 2,
+      "community_name": "ElsheiekhHMS.Infrastructure",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Infrastructure.Persistence.Allocation.AppointmentCodeAllocation",
+      "name": "AppointmentCodeAllocation",
+      "label": "AppointmentCodeAllocation",
+      "kind": "class",
+      "type": "class",
+      "fullName": "ElsheiekhHMS.Infrastructure.Persistence.Allocation.AppointmentCodeAllocation",
+      "project": "ElsheiekhHMS.Infrastructure",
+      "namespace": "ElsheiekhHMS.Infrastructure.Persistence.Allocation",
+      "file": "ElsheiekhHMS.Infrastructure/Persistence/Allocation/AppointmentCodeAllocation.cs",
+      "source_file": "ElsheiekhHMS.Infrastructure/Persistence/Allocation/AppointmentCodeAllocation.cs",
+      "source_location": "L3",
+      "line": 3,
+      "accessibility": "public",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 2,
+      "community_name": "ElsheiekhHMS.Infrastructure",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Infrastructure.Persistence.Allocation.AppointmentCodeAllocationConfiguration",
+      "name": "AppointmentCodeAllocationConfiguration",
+      "label": "AppointmentCodeAllocationConfiguration",
+      "kind": "class",
+      "type": "class",
+      "fullName": "ElsheiekhHMS.Infrastructure.Persistence.Allocation.AppointmentCodeAllocationConfiguration",
+      "project": "ElsheiekhHMS.Infrastructure",
+      "namespace": "ElsheiekhHMS.Infrastructure.Persistence.Allocation",
+      "file": "ElsheiekhHMS.Infrastructure/Persistence/Allocation/AppointmentCodeAllocationConfiguration.cs",
+      "source_file": "ElsheiekhHMS.Infrastructure/Persistence/Allocation/AppointmentCodeAllocationConfiguration.cs",
+      "source_location": "L6",
+      "line": 6,
+      "accessibility": "public",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 2,
+      "community_name": "ElsheiekhHMS.Infrastructure",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Infrastructure.Persistence.Allocation.AppointmentCodeAllocator",
+      "name": "AppointmentCodeAllocator",
+      "label": "AppointmentCodeAllocator",
+      "kind": "class",
+      "type": "class",
+      "fullName": "ElsheiekhHMS.Infrastructure.Persistence.Allocation.AppointmentCodeAllocator",
+      "project": "ElsheiekhHMS.Infrastructure",
+      "namespace": "ElsheiekhHMS.Infrastructure.Persistence.Allocation",
+      "file": "ElsheiekhHMS.Infrastructure/Persistence/Allocation/AppointmentCodeAllocator.cs",
+      "source_file": "ElsheiekhHMS.Infrastructure/Persistence/Allocation/AppointmentCodeAllocator.cs",
+      "source_location": "L9",
+      "line": 9,
+      "accessibility": "public",
+      "abstract": false,
+      "sealed": true,
       "static": false,
       "external": false,
       "community": 2,
@@ -7787,6 +8009,54 @@
       "external": false,
       "community": 2,
       "community_name": "ElsheiekhHMS.Infrastructure",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentCodeAllocatorSqlServerTests",
+      "name": "AppointmentCodeAllocatorSqlServerTests",
+      "label": "AppointmentCodeAllocatorSqlServerTests",
+      "kind": "class",
+      "type": "class",
+      "fullName": "ElsheiekhHMS.Tests.Integration.Persistence.AppointmentCodeAllocatorSqlServerTests",
+      "project": "ElsheiekhHMS.Tests",
+      "namespace": "ElsheiekhHMS.Tests.Integration.Persistence",
+      "file": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentCodeAllocatorSqlServerTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentCodeAllocatorSqlServerTests.cs",
+      "source_location": "L12",
+      "line": 12,
+      "accessibility": "public",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentCodeAllocatorSqlServerTests.FixedTimeProvider",
+      "name": "FixedTimeProvider",
+      "label": "FixedTimeProvider",
+      "kind": "class",
+      "type": "class",
+      "fullName": "ElsheiekhHMS.Tests.Integration.Persistence.AppointmentCodeAllocatorSqlServerTests.FixedTimeProvider",
+      "project": "ElsheiekhHMS.Tests",
+      "namespace": "ElsheiekhHMS.Tests.Integration.Persistence",
+      "file": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentCodeAllocatorSqlServerTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentCodeAllocatorSqlServerTests.cs",
+      "source_location": "L137",
+      "line": 137,
+      "accessibility": "private",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
       "testMethods": [],
       "staticTestCases": 0,
       "dynamicTheories": 0
@@ -10731,10 +11001,55 @@
       "weight": 1
     },
     {
+      "source": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Migrations/20260922013639_AddAppointmentCodeAllocator.Designer.cs",
+      "target": "type:ElsheiekhHMS.Infrastructure.Migrations.AddAppointmentCodeAllocator",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Infrastructure/Migrations/20260922013639_AddAppointmentCodeAllocator.Designer.cs:L8",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Migrations/20260922013639_AddAppointmentCodeAllocator.cs",
+      "target": "type:ElsheiekhHMS.Infrastructure.Migrations.AddAppointmentCodeAllocator",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Infrastructure/Migrations/20260922013639_AddAppointmentCodeAllocator.cs:L8",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
       "source": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Migrations/ElsheiekhHmsDbContextModelSnapshot.cs",
       "target": "type:ElsheiekhHMS.Infrastructure.Migrations.ElsheiekhHmsDbContextModelSnapshot",
       "type": "declares",
       "evidence": "ElsheiekhHMS.Infrastructure/Migrations/ElsheiekhHmsDbContextModelSnapshot.cs:L13",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Persistence/Allocation/AppointmentCodeAllocation.cs",
+      "target": "type:ElsheiekhHMS.Infrastructure.Persistence.Allocation.AppointmentCodeAllocation",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Infrastructure/Persistence/Allocation/AppointmentCodeAllocation.cs:L3",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Persistence/Allocation/AppointmentCodeAllocationConfiguration.cs",
+      "target": "type:ElsheiekhHMS.Infrastructure.Persistence.Allocation.AppointmentCodeAllocationConfiguration",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Infrastructure/Persistence/Allocation/AppointmentCodeAllocationConfiguration.cs:L6",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Persistence/Allocation/AppointmentCodeAllocator.cs",
+      "target": "type:ElsheiekhHMS.Infrastructure.Persistence.Allocation.AppointmentCodeAllocator",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Infrastructure/Persistence/Allocation/AppointmentCodeAllocator.cs:L9",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -10825,6 +11140,24 @@
       "target": "type:ElsheiekhHMS.Infrastructure.Persistence.Patients.PatientPersistence.PatientDetailsProjection",
       "type": "declares",
       "evidence": "ElsheiekhHMS.Infrastructure/Persistence/Patients/PatientPersistence.cs:L155",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/AppointmentCodeAllocatorSqlServerTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentCodeAllocatorSqlServerTests",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentCodeAllocatorSqlServerTests.cs:L12",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/AppointmentCodeAllocatorSqlServerTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentCodeAllocatorSqlServerTests.FixedTimeProvider",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentCodeAllocatorSqlServerTests.cs:L137",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -12712,7 +13045,52 @@
     },
     {
       "source": "project:ElsheiekhHMS.Infrastructure",
+      "target": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Migrations/20260922013639_AddAppointmentCodeAllocator.Designer.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Infrastructure/ElsheiekhHMS.Infrastructure.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Infrastructure",
+      "target": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Migrations/20260922013639_AddAppointmentCodeAllocator.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Infrastructure/ElsheiekhHMS.Infrastructure.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Infrastructure",
       "target": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Migrations/ElsheiekhHmsDbContextModelSnapshot.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Infrastructure/ElsheiekhHMS.Infrastructure.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Infrastructure",
+      "target": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Persistence/Allocation/AppointmentCodeAllocation.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Infrastructure/ElsheiekhHMS.Infrastructure.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Infrastructure",
+      "target": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Persistence/Allocation/AppointmentCodeAllocationConfiguration.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Infrastructure/ElsheiekhHMS.Infrastructure.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Infrastructure",
+      "target": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Persistence/Allocation/AppointmentCodeAllocator.cs",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Infrastructure/ElsheiekhHMS.Infrastructure.csproj",
       "relation": "contains",
@@ -12894,7 +13272,7 @@
       "source": "project:ElsheiekhHMS.Infrastructure",
       "target": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Persistence.Allocation",
       "type": "contains",
-      "evidence": "ElsheiekhHMS.Infrastructure/Persistence/Allocation/PatientCodeAllocation.cs",
+      "evidence": "ElsheiekhHMS.Infrastructure/Persistence/Allocation/AppointmentCodeAllocation.cs",
       "relation": "contains",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -12932,6 +13310,15 @@
       "type": "project-reference",
       "evidence": "ElsheiekhHMS.Infrastructure/ElsheiekhHMS.Infrastructure.csproj",
       "relation": "project-reference",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Tests",
+      "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/AppointmentCodeAllocatorSqlServerTests.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
+      "relation": "contains",
       "confidence": "EXTRACTED",
       "weight": 1
     },
@@ -13335,7 +13722,7 @@
       "source": "project:ElsheiekhHMS.Tests",
       "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Integration.Persistence",
       "type": "contains",
-      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/DepartmentServiceSqlServerTests.cs",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentCodeAllocatorSqlServerTests.cs",
       "relation": "contains",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -15303,6 +15690,24 @@
       "weight": 1
     },
     {
+      "source": "type:ElsheiekhHMS.Infrastructure.Migrations.AddAppointmentCodeAllocator",
+      "target": "type:Microsoft.EntityFrameworkCore.Migrations.Migration",
+      "type": "inherits",
+      "evidence": "ElsheiekhHMS.Infrastructure/Migrations/20260922013639_AddAppointmentCodeAllocator.cs:L8",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Infrastructure.Migrations.AddAppointmentCodeAllocator",
+      "target": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Migrations",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Infrastructure/Migrations/20260922013639_AddAppointmentCodeAllocator.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
       "source": "type:ElsheiekhHMS.Infrastructure.Migrations.AddPhase05IdentityAndAuditLog",
       "target": "type:Microsoft.EntityFrameworkCore.Migrations.Migration",
       "type": "inherits",
@@ -15370,6 +15775,42 @@
       "target": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Migrations",
       "type": "namespace-membership",
       "evidence": "ElsheiekhHMS.Infrastructure/Migrations/20260921111137_InitialCreate.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Infrastructure.Persistence.Allocation.AppointmentCodeAllocation",
+      "target": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Persistence.Allocation",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Infrastructure/Persistence/Allocation/AppointmentCodeAllocation.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Infrastructure.Persistence.Allocation.AppointmentCodeAllocationConfiguration",
+      "target": "type:Microsoft.EntityFrameworkCore.IEntityTypeConfiguration\u003CTEntity\u003E",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Infrastructure/Persistence/Allocation/AppointmentCodeAllocationConfiguration.cs:L6",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Infrastructure.Persistence.Allocation.AppointmentCodeAllocationConfiguration",
+      "target": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Persistence.Allocation",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Infrastructure/Persistence/Allocation/AppointmentCodeAllocationConfiguration.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Infrastructure.Persistence.Allocation.AppointmentCodeAllocator",
+      "target": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Persistence.Allocation",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Infrastructure/Persistence/Allocation/AppointmentCodeAllocator.cs",
       "relation": "namespace-membership",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -15523,6 +15964,42 @@
       "target": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Persistence.Patients",
       "type": "namespace-membership",
       "evidence": "ElsheiekhHMS.Infrastructure/Persistence/Patients/PatientPersistence.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentCodeAllocatorSqlServerTests",
+      "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentCodeAllocatorSqlServerTests.FixedTimeProvider",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentCodeAllocatorSqlServerTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentCodeAllocatorSqlServerTests",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Integration.Persistence",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentCodeAllocatorSqlServerTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentCodeAllocatorSqlServerTests.FixedTimeProvider",
+      "target": "type:System.TimeProvider",
+      "type": "inherits",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentCodeAllocatorSqlServerTests.cs:L137",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentCodeAllocatorSqlServerTests.FixedTimeProvider",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Integration.Persistence",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentCodeAllocatorSqlServerTests.cs",
       "relation": "namespace-membership",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -17139,7 +17616,7 @@
       "statusSource": "README.md declaration, not independently certified completion",
       "declaredStatus": [
         {
-          "text": "\u003E **Current development stage:** Phase 07 \u2014 Application Services (07S, 07A, and 07B complete; Phase 07 remains in progress)",
+          "text": "\u003E **Current development stage:** Phase 07 \u2014 Application Services (07S, 07A, 07B, and 07C-P complete; Phase 07 remains in progress)",
           "source": "README.md:L5"
         },
         {
@@ -17227,40 +17704,44 @@
           "source": "README.md:L47"
         },
         {
+          "text": "\u003E **Phase 07C-P:** \u2705 AppointmentCode allocator prerequisite complete; migration applied and physical schema verified",
+          "source": "README.md:L49"
+        },
+        {
           "text": "| 01 | Solution \u0026 Architecture | \u2705 Complete |",
-          "source": "README.md:L364"
-        },
-        {
-          "text": "| 02 | Core Foundation | \u2705 Complete |",
-          "source": "README.md:L365"
-        },
-        {
-          "text": "| 03 | Domain Entities | \u2705 Complete |",
           "source": "README.md:L366"
         },
         {
-          "text": "| 04 | EF Core \u0026 Database | \u2705 Complete |",
+          "text": "| 02 | Core Foundation | \u2705 Complete |",
           "source": "README.md:L367"
         },
         {
-          "text": "| 05 | Identity \u0026 Security | \u2705 Complete (05A, 05B, 05C, 05C-A, 05D, and 05E) |",
+          "text": "| 03 | Domain Entities | \u2705 Complete |",
           "source": "README.md:L368"
         },
         {
-          "text": "| 06 | DTOs \u0026 Validation | \u2705 Complete (06A\u201306D) |",
+          "text": "| 04 | EF Core \u0026 Database | \u2705 Complete |",
           "source": "README.md:L369"
         },
         {
-          "text": "| 07 | Application Services | \uD83D\uDFE1 In progress (07S, 07A, and 07B complete) |",
+          "text": "| 05 | Identity \u0026 Security | \u2705 Complete (05A, 05B, 05C, 05C-A, 05D, and 05E) |",
           "source": "README.md:L370"
         },
         {
-          "text": "| 08 | Business Workflows | \u23F3 Not started |",
+          "text": "| 06 | DTOs \u0026 Validation | \u2705 Complete (06A\u201306D) |",
           "source": "README.md:L371"
         },
         {
-          "text": "| 09 | Enterprise Infrastructure | \u23F3 Not started |",
+          "text": "| 07 | Application Services | \uD83D\uDFE1 In progress (07S, 07A, 07B, and 07C-P complete) |",
           "source": "README.md:L372"
+        },
+        {
+          "text": "| 08 | Business Workflows | \u23F3 Not started |",
+          "source": "README.md:L373"
+        },
+        {
+          "text": "| 09 | Enterprise Infrastructure | \u23F3 Not started |",
+          "source": "README.md:L374"
         }
       ]
     }
@@ -18272,10 +18753,55 @@
       "weight": 1
     },
     {
+      "source": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Migrations/20260922013639_AddAppointmentCodeAllocator.Designer.cs",
+      "target": "type:ElsheiekhHMS.Infrastructure.Migrations.AddAppointmentCodeAllocator",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Infrastructure/Migrations/20260922013639_AddAppointmentCodeAllocator.Designer.cs:L8",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Migrations/20260922013639_AddAppointmentCodeAllocator.cs",
+      "target": "type:ElsheiekhHMS.Infrastructure.Migrations.AddAppointmentCodeAllocator",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Infrastructure/Migrations/20260922013639_AddAppointmentCodeAllocator.cs:L8",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
       "source": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Migrations/ElsheiekhHmsDbContextModelSnapshot.cs",
       "target": "type:ElsheiekhHMS.Infrastructure.Migrations.ElsheiekhHmsDbContextModelSnapshot",
       "type": "declares",
       "evidence": "ElsheiekhHMS.Infrastructure/Migrations/ElsheiekhHmsDbContextModelSnapshot.cs:L13",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Persistence/Allocation/AppointmentCodeAllocation.cs",
+      "target": "type:ElsheiekhHMS.Infrastructure.Persistence.Allocation.AppointmentCodeAllocation",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Infrastructure/Persistence/Allocation/AppointmentCodeAllocation.cs:L3",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Persistence/Allocation/AppointmentCodeAllocationConfiguration.cs",
+      "target": "type:ElsheiekhHMS.Infrastructure.Persistence.Allocation.AppointmentCodeAllocationConfiguration",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Infrastructure/Persistence/Allocation/AppointmentCodeAllocationConfiguration.cs:L6",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Persistence/Allocation/AppointmentCodeAllocator.cs",
+      "target": "type:ElsheiekhHMS.Infrastructure.Persistence.Allocation.AppointmentCodeAllocator",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Infrastructure/Persistence/Allocation/AppointmentCodeAllocator.cs:L9",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -18366,6 +18892,24 @@
       "target": "type:ElsheiekhHMS.Infrastructure.Persistence.Patients.PatientPersistence.PatientDetailsProjection",
       "type": "declares",
       "evidence": "ElsheiekhHMS.Infrastructure/Persistence/Patients/PatientPersistence.cs:L155",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/AppointmentCodeAllocatorSqlServerTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentCodeAllocatorSqlServerTests",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentCodeAllocatorSqlServerTests.cs:L12",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/AppointmentCodeAllocatorSqlServerTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentCodeAllocatorSqlServerTests.FixedTimeProvider",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentCodeAllocatorSqlServerTests.cs:L137",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -20253,7 +20797,52 @@
     },
     {
       "source": "project:ElsheiekhHMS.Infrastructure",
+      "target": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Migrations/20260922013639_AddAppointmentCodeAllocator.Designer.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Infrastructure/ElsheiekhHMS.Infrastructure.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Infrastructure",
+      "target": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Migrations/20260922013639_AddAppointmentCodeAllocator.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Infrastructure/ElsheiekhHMS.Infrastructure.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Infrastructure",
       "target": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Migrations/ElsheiekhHmsDbContextModelSnapshot.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Infrastructure/ElsheiekhHMS.Infrastructure.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Infrastructure",
+      "target": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Persistence/Allocation/AppointmentCodeAllocation.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Infrastructure/ElsheiekhHMS.Infrastructure.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Infrastructure",
+      "target": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Persistence/Allocation/AppointmentCodeAllocationConfiguration.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Infrastructure/ElsheiekhHMS.Infrastructure.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Infrastructure",
+      "target": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Persistence/Allocation/AppointmentCodeAllocator.cs",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Infrastructure/ElsheiekhHMS.Infrastructure.csproj",
       "relation": "contains",
@@ -20435,7 +21024,7 @@
       "source": "project:ElsheiekhHMS.Infrastructure",
       "target": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Persistence.Allocation",
       "type": "contains",
-      "evidence": "ElsheiekhHMS.Infrastructure/Persistence/Allocation/PatientCodeAllocation.cs",
+      "evidence": "ElsheiekhHMS.Infrastructure/Persistence/Allocation/AppointmentCodeAllocation.cs",
       "relation": "contains",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -20473,6 +21062,15 @@
       "type": "project-reference",
       "evidence": "ElsheiekhHMS.Infrastructure/ElsheiekhHMS.Infrastructure.csproj",
       "relation": "project-reference",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Tests",
+      "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/AppointmentCodeAllocatorSqlServerTests.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
+      "relation": "contains",
       "confidence": "EXTRACTED",
       "weight": 1
     },
@@ -20876,7 +21474,7 @@
       "source": "project:ElsheiekhHMS.Tests",
       "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Integration.Persistence",
       "type": "contains",
-      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/DepartmentServiceSqlServerTests.cs",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentCodeAllocatorSqlServerTests.cs",
       "relation": "contains",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -22844,6 +23442,24 @@
       "weight": 1
     },
     {
+      "source": "type:ElsheiekhHMS.Infrastructure.Migrations.AddAppointmentCodeAllocator",
+      "target": "type:Microsoft.EntityFrameworkCore.Migrations.Migration",
+      "type": "inherits",
+      "evidence": "ElsheiekhHMS.Infrastructure/Migrations/20260922013639_AddAppointmentCodeAllocator.cs:L8",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Infrastructure.Migrations.AddAppointmentCodeAllocator",
+      "target": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Migrations",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Infrastructure/Migrations/20260922013639_AddAppointmentCodeAllocator.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
       "source": "type:ElsheiekhHMS.Infrastructure.Migrations.AddPhase05IdentityAndAuditLog",
       "target": "type:Microsoft.EntityFrameworkCore.Migrations.Migration",
       "type": "inherits",
@@ -22911,6 +23527,42 @@
       "target": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Migrations",
       "type": "namespace-membership",
       "evidence": "ElsheiekhHMS.Infrastructure/Migrations/20260921111137_InitialCreate.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Infrastructure.Persistence.Allocation.AppointmentCodeAllocation",
+      "target": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Persistence.Allocation",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Infrastructure/Persistence/Allocation/AppointmentCodeAllocation.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Infrastructure.Persistence.Allocation.AppointmentCodeAllocationConfiguration",
+      "target": "type:Microsoft.EntityFrameworkCore.IEntityTypeConfiguration\u003CTEntity\u003E",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Infrastructure/Persistence/Allocation/AppointmentCodeAllocationConfiguration.cs:L6",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Infrastructure.Persistence.Allocation.AppointmentCodeAllocationConfiguration",
+      "target": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Persistence.Allocation",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Infrastructure/Persistence/Allocation/AppointmentCodeAllocationConfiguration.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Infrastructure.Persistence.Allocation.AppointmentCodeAllocator",
+      "target": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Persistence.Allocation",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Infrastructure/Persistence/Allocation/AppointmentCodeAllocator.cs",
       "relation": "namespace-membership",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -23064,6 +23716,42 @@
       "target": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Persistence.Patients",
       "type": "namespace-membership",
       "evidence": "ElsheiekhHMS.Infrastructure/Persistence/Patients/PatientPersistence.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentCodeAllocatorSqlServerTests",
+      "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentCodeAllocatorSqlServerTests.FixedTimeProvider",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentCodeAllocatorSqlServerTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentCodeAllocatorSqlServerTests",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Integration.Persistence",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentCodeAllocatorSqlServerTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentCodeAllocatorSqlServerTests.FixedTimeProvider",
+      "target": "type:System.TimeProvider",
+      "type": "inherits",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentCodeAllocatorSqlServerTests.cs:L137",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentCodeAllocatorSqlServerTests.FixedTimeProvider",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Integration.Persistence",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentCodeAllocatorSqlServerTests.cs",
       "relation": "namespace-membership",
       "confidence": "EXTRACTED",
       "weight": 1

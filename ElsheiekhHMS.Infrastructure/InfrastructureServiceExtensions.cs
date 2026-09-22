@@ -42,6 +42,7 @@ public static class InfrastructureServiceExtensions
         services.AddScoped<AdministratorBootstrapper>();
         services.AddScoped<PatientCodeAllocator>();
         services.AddScoped<QueueTicketAllocator>();
+        services.AddScoped<AppointmentCodeAllocator>();
         services.AddScoped<IPatientPersistence, PatientPersistence>();
         services.AddScoped<IPatientService, PatientService>();
         services.AddScoped<IDepartmentPersistence, DepartmentPersistence>();

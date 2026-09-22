@@ -31,4 +31,20 @@ public sealed class AllocatorFormattingTests
         Assert.Throws<ArgumentOutOfRangeException>(() => QueueTicketAllocator.Format(0));
         Assert.Throws<ArgumentOutOfRangeException>(() => QueueTicketAllocator.Format(1000));
     }
+
+    [Fact]
+    public void AppointmentCode_format_is_the_approved_year_scoped_shape()
+    {
+        Assert.Equal("AP-2026-00001", AppointmentCodeAllocator.Format(2026, 1));
+        Assert.Equal("AP-2026-00042", AppointmentCodeAllocator.Format(2026, 42));
+        Assert.Equal("AP-2027-100000", AppointmentCodeAllocator.Format(2027, 100000));
+    }
+
+    [Fact]
+    public void AppointmentCode_format_rejects_invalid_year_or_sequence()
+    {
+        Assert.Throws<ArgumentOutOfRangeException>(() => AppointmentCodeAllocator.Format(0, 1));
+        Assert.Throws<ArgumentOutOfRangeException>(() => AppointmentCodeAllocator.Format(10000, 1));
+        Assert.Throws<ArgumentOutOfRangeException>(() => AppointmentCodeAllocator.Format(2026, 0));
+    }
 }
