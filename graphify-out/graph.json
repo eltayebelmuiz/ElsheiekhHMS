@@ -1,17 +1,25 @@
 {
   "schemaVersion": "1.0",
-  "generatedAtUtc": "2026-09-22T01:53:28.0519643\u002B00:00",
-  "gitCommit": "46193ca78588bbb7fdb4fc86a3e0a842afa79c5f",
+  "generatedAtUtc": "2026-09-22T10:22:53.0381117\u002B00:00",
+  "gitCommit": "7332bf85e739979c7b8522b76569c686924ab3e6",
   "gitBranch": "main",
   "workingTreeDirty": true,
-  "gitStatusAtGeneration": "M DEVELOPMENT_ROADMAP.md\n M ElsheiekhHMS.Infrastructure/Configurations/Entities/AppointmentConfiguration.cs\n M ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs\n M ElsheiekhHMS.Infrastructure/Migrations/ElsheiekhHmsDbContextModelSnapshot.cs\n M ElsheiekhHMS.Infrastructure/Persistence/ElsheiekhHmsDbContext.cs\n M ElsheiekhHMS.Tests/Unit/Infrastructure/Allocation/AllocatorFormattingTests.cs\n M ElsheiekhHMS.Tests/Unit/Infrastructure/Allocation/AllocatorRegistrationTests.cs\n M ElsheiekhHMS.Tests/Unit/Infrastructure/ElsheiekhHmsDbContextModelTests.cs\n M ElsheiekhHMS.Tests/Unit/Infrastructure/ElsheiekhHmsDbContextTests.cs\n M README.md\n M docs/ARCHITECTURE.md\n M docs/DECISIONS.md\n M graphify-out/GRAPH_REPORT.md\n M graphify-out/graph.html\n M graphify-out/graph.json\n?? ElsheiekhHMS.Infrastructure/Migrations/20260922013639_AddAppointmentCodeAllocator.Designer.cs\n?? ElsheiekhHMS.Infrastructure/Migrations/20260922013639_AddAppointmentCodeAllocator.cs\n?? ElsheiekhHMS.Infrastructure/Persistence/Allocation/AppointmentCodeAllocation.cs\n?? ElsheiekhHMS.Infrastructure/Persistence/Allocation/AppointmentCodeAllocationConfiguration.cs\n?? ElsheiekhHMS.Infrastructure/Persistence/Allocation/AppointmentCodeAllocator.cs\n?? ElsheiekhHMS.Tests/Integration/Persistence/AppointmentCodeAllocatorSqlServerTests.cs\n?? Phases.md",
-  "sourceFingerprint": "6eacabb936da4b904af98ceb23fb626aab75c484b02dd7464673fb596e629d34",
+  "gitStatusAtGeneration": "M DEVELOPMENT_ROADMAP.md\n M ElsheiekhHMS.Application/Common/Auditing/AuditActions.cs\n M ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs\n M ElsheiekhHMS.Tests/Unit/Application/Auditing/AuditVocabularyTests.cs\n M README.md\n M docs/ARCHITECTURE.md\n M docs/DECISIONS.md\n M graphify-out/GRAPH_REPORT.md\n M graphify-out/graph.html\n M graphify-out/graph.json\n?? ElsheiekhHMS.Application/Appointments/AppointmentService.cs\n?? ElsheiekhHMS.Application/Appointments/Contracts/AppointmentActionRequest.cs\n?? ElsheiekhHMS.Application/Appointments/IAppointmentService.cs\n?? ElsheiekhHMS.Application/Appointments/Persistence/AppointmentPersistenceSaveStatus.cs\n?? ElsheiekhHMS.Application/Appointments/Persistence/IAppointmentPersistence.cs\n?? ElsheiekhHMS.Application/Appointments/Validation/AppointmentActionRequestValidator.cs\n?? ElsheiekhHMS.Infrastructure/Persistence/Appointments/AppointmentPersistence.cs\n?? ElsheiekhHMS.Tests/Integration/Persistence/AppointmentServiceSqlServerTests.cs\n?? ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentServiceTests.cs\n?? Phases.md",
+  "sourceFingerprint": "3002cbd200f8dbb62b498520e9a7ce051e12901733a104cca4699a5a43fabe72",
   "generatorFingerprint": "03eee0a8853a7e84af6cbe571d34e6f7d820505ac8f5670a719d0d63b113840c",
   "fingerprintAlgorithm": "SHA-256 of ordinal path \u002B NUL \u002B content SHA-256 records joined with LF; sourceManifest defines inputs; graphify-out excluded everywhere",
   "sourceManifest": [
     {
       "path": "ElsheiekhHMS.Application/ApplicationServiceExtensions.cs",
       "sha256": "82d36473bca735e76eee1cfc249f66ca3f6f8596483008daf0117427950000c1"
+    },
+    {
+      "path": "ElsheiekhHMS.Application/Appointments/AppointmentService.cs",
+      "sha256": "132e6519972f7ca26ddac3b2a14f9dd38c8f49637da8dee3a025d031bc2ca48a"
+    },
+    {
+      "path": "ElsheiekhHMS.Application/Appointments/Contracts/AppointmentActionRequest.cs",
+      "sha256": "e26718d0e088791998aed93f74ee2fbf691afbcfb373d09619665546afdedb67"
     },
     {
       "path": "ElsheiekhHMS.Application/Appointments/Contracts/AppointmentDetailsDto.cs",
@@ -38,6 +46,22 @@
       "sha256": "a4612ab4953cb40a045347759b381c290247cf851d4371d4b646f16f295f2257"
     },
     {
+      "path": "ElsheiekhHMS.Application/Appointments/IAppointmentService.cs",
+      "sha256": "44f2f685a1cba33bcc8f13e0634c98036f0cfdc58e7b6ffba9d246ac36e7a689"
+    },
+    {
+      "path": "ElsheiekhHMS.Application/Appointments/Persistence/AppointmentPersistenceSaveStatus.cs",
+      "sha256": "1a69a1f7e2dc4cfe1c33e5f2f965a91a6b2318955406b8e9c1f856ce3baa9258"
+    },
+    {
+      "path": "ElsheiekhHMS.Application/Appointments/Persistence/IAppointmentPersistence.cs",
+      "sha256": "f89650bc62c1f976e64ffa0f4132c0c95abf23d401ce5942b995d0b95e57f938"
+    },
+    {
+      "path": "ElsheiekhHMS.Application/Appointments/Validation/AppointmentActionRequestValidator.cs",
+      "sha256": "417da8a892abf3f574598ea679a93cd3dd5114059e1635420501505ff2366983"
+    },
+    {
       "path": "ElsheiekhHMS.Application/Appointments/Validation/AppointmentSearchRequestValidator.cs",
       "sha256": "0cb5a4b4edd8f5e6fe47ec0351358babc7403f8731ce9f5874d8c6298719a2d1"
     },
@@ -51,7 +75,7 @@
     },
     {
       "path": "ElsheiekhHMS.Application/Common/Auditing/AuditActions.cs",
-      "sha256": "36dadbc45481ce5006432871de54db9d559979ae3bf036d0ccd6759f8280a44a"
+      "sha256": "2b96665629593c00f23dc60441a6e4dfa2da30c587be5face94e87f5c05d166c"
     },
     {
       "path": "ElsheiekhHMS.Application/Common/Auditing/AuditActorKinds.cs",
@@ -431,7 +455,7 @@
     },
     {
       "path": "ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs",
-      "sha256": "4787681d43ae993def903a82c5d32173dc04489c8336209b8e3bb98d0745f49e"
+      "sha256": "c6b95b62c523e2bb29f458fbaf22234251a4f3bec29a480b28da887fcd0ed547"
     },
     {
       "path": "ElsheiekhHMS.Infrastructure/Migrations/20260921111137_InitialCreate.Designer.cs",
@@ -506,6 +530,10 @@
       "sha256": "472cbc0599be72a7227da219b048b163286f5d5818a12741fe06b957cb38ff98"
     },
     {
+      "path": "ElsheiekhHMS.Infrastructure/Persistence/Appointments/AppointmentPersistence.cs",
+      "sha256": "5dd22320ed58b7af0c510cce158e5b1d59c94d5b1e61ede7fc18fdc37bb62189"
+    },
+    {
       "path": "ElsheiekhHMS.Infrastructure/Persistence/Departments/DepartmentPersistence.cs",
       "sha256": "e0545eebd374c3bec49ca2f60186b49478837d8daa72261d16fa1b4b31de6b4e"
     },
@@ -524,6 +552,10 @@
     {
       "path": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentCodeAllocatorSqlServerTests.cs",
       "sha256": "17512f6118b84a982095d13291893675119508e8896553fb4d5b5cb0c5527668"
+    },
+    {
+      "path": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentServiceSqlServerTests.cs",
+      "sha256": "141cfc7d1edf0b0b16bfc9ca375ba88e02491e39c4e9ec8e51572e8a4dbf61b1"
     },
     {
       "path": "ElsheiekhHMS.Tests/Integration/Persistence/DepartmentServiceSqlServerTests.cs",
@@ -558,6 +590,10 @@
       "sha256": "c55159c6745a62da730ff37fd2431861395113ff3759bf3bdb4c3dde5d363100"
     },
     {
+      "path": "ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentServiceTests.cs",
+      "sha256": "3dc9f6202eb4cce22f99199b3df5982e2e909dbf962937e633c2b39b07693d47"
+    },
+    {
       "path": "ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentValidationTests.cs",
       "sha256": "298f6c32293c710661c242b6e09084ef6e23f78a2460b8c18c429a5af9936abd"
     },
@@ -567,7 +603,7 @@
     },
     {
       "path": "ElsheiekhHMS.Tests/Unit/Application/Auditing/AuditVocabularyTests.cs",
-      "sha256": "5c5e7d576c771c142cbd637c4e6ff640e519aae7f77382e5355b55a7cb124237"
+      "sha256": "6174511bfb61e01c72329f4563b52a5ec50d42e7a7ed7a1bf724137d2df7dd99"
     },
     {
       "path": "ElsheiekhHMS.Tests/Unit/Application/Common/Contracts/PageRequestTests.cs",
@@ -771,7 +807,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "63e54c60da5c4290b6031ce22a8be5f00b8bb12fe5fb2b10aafd41a6280134a3"
+      "sha256": "3bd9fe16202ee196ee9ddbc9a19a833dec12310a6c0c488c2d61fc0611908249"
     }
   ],
   "repository": {
@@ -781,16 +817,16 @@
   },
   "summary": {
     "projectCount": 5,
-    "sourceFileCount": 173,
+    "sourceFileCount": 182,
     "razorFileCount": 11,
-    "typeCount": 194,
-    "interfaceCount": 8,
+    "typeCount": 211,
+    "interfaceCount": 10,
     "testClassCount": 11,
     "testMethodCount": 76,
     "testCount": 113,
     "dynamicTheoryCount": 0,
-    "nodeCount": 458,
-    "edgeCount": 840
+    "nodeCount": 487,
+    "edgeCount": 907
   },
   "projects": [
     {
@@ -814,12 +850,18 @@
       ],
       "sourceFiles": [
         "ElsheiekhHMS.Application/ApplicationServiceExtensions.cs",
+        "ElsheiekhHMS.Application/Appointments/AppointmentService.cs",
+        "ElsheiekhHMS.Application/Appointments/Contracts/AppointmentActionRequest.cs",
         "ElsheiekhHMS.Application/Appointments/Contracts/AppointmentDetailsDto.cs",
         "ElsheiekhHMS.Application/Appointments/Contracts/AppointmentSearchRequest.cs",
         "ElsheiekhHMS.Application/Appointments/Contracts/AppointmentSortField.cs",
         "ElsheiekhHMS.Application/Appointments/Contracts/AppointmentSummaryDto.cs",
         "ElsheiekhHMS.Application/Appointments/Contracts/CancelAppointmentRequest.cs",
         "ElsheiekhHMS.Application/Appointments/Contracts/CreateAppointmentRequest.cs",
+        "ElsheiekhHMS.Application/Appointments/IAppointmentService.cs",
+        "ElsheiekhHMS.Application/Appointments/Persistence/AppointmentPersistenceSaveStatus.cs",
+        "ElsheiekhHMS.Application/Appointments/Persistence/IAppointmentPersistence.cs",
+        "ElsheiekhHMS.Application/Appointments/Validation/AppointmentActionRequestValidator.cs",
         "ElsheiekhHMS.Application/Appointments/Validation/AppointmentSearchRequestValidator.cs",
         "ElsheiekhHMS.Application/Appointments/Validation/CancelAppointmentRequestValidator.cs",
         "ElsheiekhHMS.Application/Appointments/Validation/CreateAppointmentRequestValidator.cs",
@@ -996,6 +1038,7 @@
         "ElsheiekhHMS.Infrastructure/Persistence/Allocation/QueueTicketAllocation.cs",
         "ElsheiekhHMS.Infrastructure/Persistence/Allocation/QueueTicketAllocationConfiguration.cs",
         "ElsheiekhHMS.Infrastructure/Persistence/Allocation/QueueTicketAllocator.cs",
+        "ElsheiekhHMS.Infrastructure/Persistence/Appointments/AppointmentPersistence.cs",
         "ElsheiekhHMS.Infrastructure/Persistence/Departments/DepartmentPersistence.cs",
         "ElsheiekhHMS.Infrastructure/Persistence/ElsheiekhHmsDbContext.cs",
         "ElsheiekhHMS.Infrastructure/Persistence/Patients/PatientPersistence.cs"
@@ -1039,6 +1082,7 @@
       ],
       "sourceFiles": [
         "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentCodeAllocatorSqlServerTests.cs",
+        "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentServiceSqlServerTests.cs",
         "ElsheiekhHMS.Tests/Integration/Persistence/DepartmentServiceSqlServerTests.cs",
         "ElsheiekhHMS.Tests/Integration/Persistence/ElsheiekhHmsDbContextSqlServerTests.cs",
         "ElsheiekhHMS.Tests/Integration/Persistence/IdentityAndAuditLogSqlServerTests.cs",
@@ -1047,6 +1091,7 @@
         "ElsheiekhHMS.Tests/Integration/Persistence/SqlServerTestDatabaseGuard.cs",
         "ElsheiekhHMS.Tests/Integration/Persistence/SqlServerTestDatabaseSafetyTests.cs",
         "ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentContractTests.cs",
+        "ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentServiceTests.cs",
         "ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentValidationTests.cs",
         "ElsheiekhHMS.Tests/Unit/Application/Architecture/ApplicationContractArchitectureTests.cs",
         "ElsheiekhHMS.Tests/Unit/Application/Auditing/AuditVocabularyTests.cs",
@@ -1123,6 +1168,38 @@
       "project": "ElsheiekhHMS.Application",
       "file": "ElsheiekhHMS.Application/ApplicationServiceExtensions.cs",
       "source_file": "ElsheiekhHMS.Application/ApplicationServiceExtensions.cs",
+      "external": false,
+      "community": 0,
+      "community_name": "ElsheiekhHMS.Application",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Appointments/AppointmentService.cs",
+      "name": "AppointmentService.cs",
+      "label": "AppointmentService.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Application",
+      "file": "ElsheiekhHMS.Application/Appointments/AppointmentService.cs",
+      "source_file": "ElsheiekhHMS.Application/Appointments/AppointmentService.cs",
+      "external": false,
+      "community": 0,
+      "community_name": "ElsheiekhHMS.Application",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Appointments/Contracts/AppointmentActionRequest.cs",
+      "name": "AppointmentActionRequest.cs",
+      "label": "AppointmentActionRequest.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Application",
+      "file": "ElsheiekhHMS.Application/Appointments/Contracts/AppointmentActionRequest.cs",
+      "source_file": "ElsheiekhHMS.Application/Appointments/Contracts/AppointmentActionRequest.cs",
       "external": false,
       "community": 0,
       "community_name": "ElsheiekhHMS.Application",
@@ -1219,6 +1296,70 @@
       "project": "ElsheiekhHMS.Application",
       "file": "ElsheiekhHMS.Application/Appointments/Contracts/CreateAppointmentRequest.cs",
       "source_file": "ElsheiekhHMS.Application/Appointments/Contracts/CreateAppointmentRequest.cs",
+      "external": false,
+      "community": 0,
+      "community_name": "ElsheiekhHMS.Application",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Appointments/IAppointmentService.cs",
+      "name": "IAppointmentService.cs",
+      "label": "IAppointmentService.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Application",
+      "file": "ElsheiekhHMS.Application/Appointments/IAppointmentService.cs",
+      "source_file": "ElsheiekhHMS.Application/Appointments/IAppointmentService.cs",
+      "external": false,
+      "community": 0,
+      "community_name": "ElsheiekhHMS.Application",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Appointments/Persistence/AppointmentPersistenceSaveStatus.cs",
+      "name": "AppointmentPersistenceSaveStatus.cs",
+      "label": "AppointmentPersistenceSaveStatus.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Application",
+      "file": "ElsheiekhHMS.Application/Appointments/Persistence/AppointmentPersistenceSaveStatus.cs",
+      "source_file": "ElsheiekhHMS.Application/Appointments/Persistence/AppointmentPersistenceSaveStatus.cs",
+      "external": false,
+      "community": 0,
+      "community_name": "ElsheiekhHMS.Application",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Appointments/Persistence/IAppointmentPersistence.cs",
+      "name": "IAppointmentPersistence.cs",
+      "label": "IAppointmentPersistence.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Application",
+      "file": "ElsheiekhHMS.Application/Appointments/Persistence/IAppointmentPersistence.cs",
+      "source_file": "ElsheiekhHMS.Application/Appointments/Persistence/IAppointmentPersistence.cs",
+      "external": false,
+      "community": 0,
+      "community_name": "ElsheiekhHMS.Application",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Appointments/Validation/AppointmentActionRequestValidator.cs",
+      "name": "AppointmentActionRequestValidator.cs",
+      "label": "AppointmentActionRequestValidator.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Application",
+      "file": "ElsheiekhHMS.Application/Appointments/Validation/AppointmentActionRequestValidator.cs",
+      "source_file": "ElsheiekhHMS.Application/Appointments/Validation/AppointmentActionRequestValidator.cs",
       "external": false,
       "community": 0,
       "community_name": "ElsheiekhHMS.Application",
@@ -3051,6 +3192,22 @@
       "dynamicTheories": 0
     },
     {
+      "id": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Persistence/Appointments/AppointmentPersistence.cs",
+      "name": "AppointmentPersistence.cs",
+      "label": "AppointmentPersistence.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Infrastructure",
+      "file": "ElsheiekhHMS.Infrastructure/Persistence/Appointments/AppointmentPersistence.cs",
+      "source_file": "ElsheiekhHMS.Infrastructure/Persistence/Appointments/AppointmentPersistence.cs",
+      "external": false,
+      "community": 2,
+      "community_name": "ElsheiekhHMS.Infrastructure",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
       "id": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Persistence/Departments/DepartmentPersistence.cs",
       "name": "DepartmentPersistence.cs",
       "label": "DepartmentPersistence.cs",
@@ -3107,6 +3264,22 @@
       "project": "ElsheiekhHMS.Tests",
       "file": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentCodeAllocatorSqlServerTests.cs",
       "source_file": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentCodeAllocatorSqlServerTests.cs",
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/AppointmentServiceSqlServerTests.cs",
+      "name": "AppointmentServiceSqlServerTests.cs",
+      "label": "AppointmentServiceSqlServerTests.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Tests",
+      "file": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentServiceSqlServerTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentServiceSqlServerTests.cs",
       "external": false,
       "community": 3,
       "community_name": "ElsheiekhHMS.Tests",
@@ -3235,6 +3408,22 @@
       "project": "ElsheiekhHMS.Tests",
       "file": "ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentContractTests.cs",
       "source_file": "ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentContractTests.cs",
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentServiceTests.cs",
+      "name": "AppointmentServiceTests.cs",
+      "label": "AppointmentServiceTests.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Tests",
+      "file": "ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentServiceTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentServiceTests.cs",
       "external": false,
       "community": 3,
       "community_name": "ElsheiekhHMS.Tests",
@@ -4074,6 +4263,21 @@
       "dynamicTheories": 0
     },
     {
+      "id": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Appointments",
+      "name": "ElsheiekhHMS.Application.Appointments",
+      "label": "ElsheiekhHMS.Application.Appointments",
+      "kind": "namespace",
+      "type": "namespace",
+      "project": "ElsheiekhHMS.Application",
+      "namespace": "ElsheiekhHMS.Application.Appointments",
+      "external": false,
+      "community": 0,
+      "community_name": "ElsheiekhHMS.Application",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
       "id": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Appointments.Contracts",
       "name": "ElsheiekhHMS.Application.Appointments.Contracts",
       "label": "ElsheiekhHMS.Application.Appointments.Contracts",
@@ -4081,6 +4285,21 @@
       "type": "namespace",
       "project": "ElsheiekhHMS.Application",
       "namespace": "ElsheiekhHMS.Application.Appointments.Contracts",
+      "external": false,
+      "community": 0,
+      "community_name": "ElsheiekhHMS.Application",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Appointments.Persistence",
+      "name": "ElsheiekhHMS.Application.Appointments.Persistence",
+      "label": "ElsheiekhHMS.Application.Appointments.Persistence",
+      "kind": "namespace",
+      "type": "namespace",
+      "project": "ElsheiekhHMS.Application",
+      "namespace": "ElsheiekhHMS.Application.Appointments.Persistence",
       "external": false,
       "community": 0,
       "community_name": "ElsheiekhHMS.Application",
@@ -4644,6 +4863,21 @@
       "dynamicTheories": 0
     },
     {
+      "id": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Persistence.Appointments",
+      "name": "ElsheiekhHMS.Infrastructure.Persistence.Appointments",
+      "label": "ElsheiekhHMS.Infrastructure.Persistence.Appointments",
+      "kind": "namespace",
+      "type": "namespace",
+      "project": "ElsheiekhHMS.Infrastructure",
+      "namespace": "ElsheiekhHMS.Infrastructure.Persistence.Appointments",
+      "external": false,
+      "community": 2,
+      "community_name": "ElsheiekhHMS.Infrastructure",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
       "id": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Persistence.Departments",
       "name": "ElsheiekhHMS.Infrastructure.Persistence.Departments",
       "label": "ElsheiekhHMS.Infrastructure.Persistence.Departments",
@@ -5123,6 +5357,54 @@
       "dynamicTheories": 0
     },
     {
+      "id": "type:ElsheiekhHMS.Application.Appointments.AppointmentService",
+      "name": "AppointmentService",
+      "label": "AppointmentService",
+      "kind": "class",
+      "type": "class",
+      "fullName": "ElsheiekhHMS.Application.Appointments.AppointmentService",
+      "project": "ElsheiekhHMS.Application",
+      "namespace": "ElsheiekhHMS.Application.Appointments",
+      "file": "ElsheiekhHMS.Application/Appointments/AppointmentService.cs",
+      "source_file": "ElsheiekhHMS.Application/Appointments/AppointmentService.cs",
+      "source_location": "L14",
+      "line": 14,
+      "accessibility": "public",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 0,
+      "community_name": "ElsheiekhHMS.Application",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Application.Appointments.Contracts.AppointmentActionRequest",
+      "name": "AppointmentActionRequest",
+      "label": "AppointmentActionRequest",
+      "kind": "record",
+      "type": "record",
+      "fullName": "ElsheiekhHMS.Application.Appointments.Contracts.AppointmentActionRequest",
+      "project": "ElsheiekhHMS.Application",
+      "namespace": "ElsheiekhHMS.Application.Appointments.Contracts",
+      "file": "ElsheiekhHMS.Application/Appointments/Contracts/AppointmentActionRequest.cs",
+      "source_file": "ElsheiekhHMS.Application/Appointments/Contracts/AppointmentActionRequest.cs",
+      "source_location": "L3",
+      "line": 3,
+      "accessibility": "public",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 0,
+      "community_name": "ElsheiekhHMS.Application",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
       "id": "type:ElsheiekhHMS.Application.Appointments.Contracts.AppointmentDetailsDto",
       "name": "AppointmentDetailsDto",
       "label": "AppointmentDetailsDto",
@@ -5255,6 +5537,102 @@
       "source_file": "ElsheiekhHMS.Application/Appointments/Contracts/CreateAppointmentRequest.cs",
       "source_location": "L5",
       "line": 5,
+      "accessibility": "public",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 0,
+      "community_name": "ElsheiekhHMS.Application",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Application.Appointments.IAppointmentService",
+      "name": "IAppointmentService",
+      "label": "IAppointmentService",
+      "kind": "interface",
+      "type": "interface",
+      "fullName": "ElsheiekhHMS.Application.Appointments.IAppointmentService",
+      "project": "ElsheiekhHMS.Application",
+      "namespace": "ElsheiekhHMS.Application.Appointments",
+      "file": "ElsheiekhHMS.Application/Appointments/IAppointmentService.cs",
+      "source_file": "ElsheiekhHMS.Application/Appointments/IAppointmentService.cs",
+      "source_location": "L7",
+      "line": 7,
+      "accessibility": "public",
+      "abstract": true,
+      "sealed": false,
+      "static": false,
+      "external": false,
+      "community": 0,
+      "community_name": "ElsheiekhHMS.Application",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Application.Appointments.Persistence.AppointmentPersistenceSaveStatus",
+      "name": "AppointmentPersistenceSaveStatus",
+      "label": "AppointmentPersistenceSaveStatus",
+      "kind": "enum",
+      "type": "enum",
+      "fullName": "ElsheiekhHMS.Application.Appointments.Persistence.AppointmentPersistenceSaveStatus",
+      "project": "ElsheiekhHMS.Application",
+      "namespace": "ElsheiekhHMS.Application.Appointments.Persistence",
+      "file": "ElsheiekhHMS.Application/Appointments/Persistence/AppointmentPersistenceSaveStatus.cs",
+      "source_file": "ElsheiekhHMS.Application/Appointments/Persistence/AppointmentPersistenceSaveStatus.cs",
+      "source_location": "L3",
+      "line": 3,
+      "accessibility": "public",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 0,
+      "community_name": "ElsheiekhHMS.Application",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Application.Appointments.Persistence.IAppointmentPersistence",
+      "name": "IAppointmentPersistence",
+      "label": "IAppointmentPersistence",
+      "kind": "interface",
+      "type": "interface",
+      "fullName": "ElsheiekhHMS.Application.Appointments.Persistence.IAppointmentPersistence",
+      "project": "ElsheiekhHMS.Application",
+      "namespace": "ElsheiekhHMS.Application.Appointments.Persistence",
+      "file": "ElsheiekhHMS.Application/Appointments/Persistence/IAppointmentPersistence.cs",
+      "source_file": "ElsheiekhHMS.Application/Appointments/Persistence/IAppointmentPersistence.cs",
+      "source_location": "L7",
+      "line": 7,
+      "accessibility": "public",
+      "abstract": true,
+      "sealed": false,
+      "static": false,
+      "external": false,
+      "community": 0,
+      "community_name": "ElsheiekhHMS.Application",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Application.Appointments.Validation.AppointmentActionRequestValidator",
+      "name": "AppointmentActionRequestValidator",
+      "label": "AppointmentActionRequestValidator",
+      "kind": "class",
+      "type": "class",
+      "fullName": "ElsheiekhHMS.Application.Appointments.Validation.AppointmentActionRequestValidator",
+      "project": "ElsheiekhHMS.Application",
+      "namespace": "ElsheiekhHMS.Application.Appointments.Validation",
+      "file": "ElsheiekhHMS.Application/Appointments/Validation/AppointmentActionRequestValidator.cs",
+      "source_file": "ElsheiekhHMS.Application/Appointments/Validation/AppointmentActionRequestValidator.cs",
+      "source_location": "L6",
+      "line": 6,
       "accessibility": "public",
       "abstract": false,
       "sealed": true,
@@ -7557,8 +7935,8 @@
       "namespace": "ElsheiekhHMS.Infrastructure",
       "file": "ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs",
       "source_file": "ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs",
-      "source_location": "L28",
-      "line": 28,
+      "source_location": "L31",
+      "line": 31,
       "accessibility": "public",
       "abstract": false,
       "sealed": false,
@@ -7907,6 +8285,54 @@
       "dynamicTheories": 0
     },
     {
+      "id": "type:ElsheiekhHMS.Infrastructure.Persistence.Appointments.AppointmentPersistence",
+      "name": "AppointmentPersistence",
+      "label": "AppointmentPersistence",
+      "kind": "class",
+      "type": "class",
+      "fullName": "ElsheiekhHMS.Infrastructure.Persistence.Appointments.AppointmentPersistence",
+      "project": "ElsheiekhHMS.Infrastructure",
+      "namespace": "ElsheiekhHMS.Infrastructure.Persistence.Appointments",
+      "file": "ElsheiekhHMS.Infrastructure/Persistence/Appointments/AppointmentPersistence.cs",
+      "source_file": "ElsheiekhHMS.Infrastructure/Persistence/Appointments/AppointmentPersistence.cs",
+      "source_location": "L15",
+      "line": 15,
+      "accessibility": "public",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 2,
+      "community_name": "ElsheiekhHMS.Infrastructure",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Infrastructure.Persistence.Appointments.AppointmentPersistence.AppointmentDetailsProjection",
+      "name": "AppointmentDetailsProjection",
+      "label": "AppointmentDetailsProjection",
+      "kind": "record",
+      "type": "record",
+      "fullName": "ElsheiekhHMS.Infrastructure.Persistence.Appointments.AppointmentPersistence.AppointmentDetailsProjection",
+      "project": "ElsheiekhHMS.Infrastructure",
+      "namespace": "ElsheiekhHMS.Infrastructure.Persistence.Appointments",
+      "file": "ElsheiekhHMS.Infrastructure/Persistence/Appointments/AppointmentPersistence.cs",
+      "source_file": "ElsheiekhHMS.Infrastructure/Persistence/Appointments/AppointmentPersistence.cs",
+      "source_location": "L230",
+      "line": 230,
+      "accessibility": "private",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 2,
+      "community_name": "ElsheiekhHMS.Infrastructure",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
       "id": "type:ElsheiekhHMS.Infrastructure.Persistence.Departments.DepartmentPersistence",
       "name": "DepartmentPersistence",
       "label": "DepartmentPersistence",
@@ -8039,6 +8465,102 @@
       "source_file": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentCodeAllocatorSqlServerTests.cs",
       "source_location": "L137",
       "line": 137,
+      "accessibility": "private",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentServiceSqlServerTests",
+      "name": "AppointmentServiceSqlServerTests",
+      "label": "AppointmentServiceSqlServerTests",
+      "kind": "class",
+      "type": "class",
+      "fullName": "ElsheiekhHMS.Tests.Integration.Persistence.AppointmentServiceSqlServerTests",
+      "project": "ElsheiekhHMS.Tests",
+      "namespace": "ElsheiekhHMS.Tests.Integration.Persistence",
+      "file": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentServiceSqlServerTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentServiceSqlServerTests.cs",
+      "source_location": "L18",
+      "line": 18,
+      "accessibility": "public",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentServiceSqlServerTests.FixedTimeProvider",
+      "name": "FixedTimeProvider",
+      "label": "FixedTimeProvider",
+      "kind": "class",
+      "type": "class",
+      "fullName": "ElsheiekhHMS.Tests.Integration.Persistence.AppointmentServiceSqlServerTests.FixedTimeProvider",
+      "project": "ElsheiekhHMS.Tests",
+      "namespace": "ElsheiekhHMS.Tests.Integration.Persistence",
+      "file": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentServiceSqlServerTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentServiceSqlServerTests.cs",
+      "source_location": "L159",
+      "line": 159,
+      "accessibility": "private",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentServiceSqlServerTests.SetupRecords",
+      "name": "SetupRecords",
+      "label": "SetupRecords",
+      "kind": "record",
+      "type": "record",
+      "fullName": "ElsheiekhHMS.Tests.Integration.Persistence.AppointmentServiceSqlServerTests.SetupRecords",
+      "project": "ElsheiekhHMS.Tests",
+      "namespace": "ElsheiekhHMS.Tests.Integration.Persistence",
+      "file": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentServiceSqlServerTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentServiceSqlServerTests.cs",
+      "source_location": "L146",
+      "line": 146,
+      "accessibility": "private",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentServiceSqlServerTests.TestCurrentUser",
+      "name": "TestCurrentUser",
+      "label": "TestCurrentUser",
+      "kind": "record",
+      "type": "record",
+      "fullName": "ElsheiekhHMS.Tests.Integration.Persistence.AppointmentServiceSqlServerTests.TestCurrentUser",
+      "project": "ElsheiekhHMS.Tests",
+      "namespace": "ElsheiekhHMS.Tests.Integration.Persistence",
+      "file": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentServiceSqlServerTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentServiceSqlServerTests.cs",
+      "source_location": "L153",
+      "line": 153,
       "accessibility": "private",
       "abstract": false,
       "sealed": true,
@@ -8448,6 +8970,126 @@
       "source_location": "L7",
       "line": 7,
       "accessibility": "public",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Tests.Unit.Application.Appointments.AppointmentServiceTests",
+      "name": "AppointmentServiceTests",
+      "label": "AppointmentServiceTests",
+      "kind": "class",
+      "type": "class",
+      "fullName": "ElsheiekhHMS.Tests.Unit.Application.Appointments.AppointmentServiceTests",
+      "project": "ElsheiekhHMS.Tests",
+      "namespace": "ElsheiekhHMS.Tests.Unit.Application.Appointments",
+      "file": "ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentServiceTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentServiceTests.cs",
+      "source_location": "L12",
+      "line": 12,
+      "accessibility": "public",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Tests.Unit.Application.Appointments.AppointmentServiceTests.FakePersistence",
+      "name": "FakePersistence",
+      "label": "FakePersistence",
+      "kind": "class",
+      "type": "class",
+      "fullName": "ElsheiekhHMS.Tests.Unit.Application.Appointments.AppointmentServiceTests.FakePersistence",
+      "project": "ElsheiekhHMS.Tests",
+      "namespace": "ElsheiekhHMS.Tests.Unit.Application.Appointments",
+      "file": "ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentServiceTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentServiceTests.cs",
+      "source_location": "L214",
+      "line": 214,
+      "accessibility": "private",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Tests.Unit.Application.Appointments.AppointmentServiceTests.FixedTimeProvider",
+      "name": "FixedTimeProvider",
+      "label": "FixedTimeProvider",
+      "kind": "class",
+      "type": "class",
+      "fullName": "ElsheiekhHMS.Tests.Unit.Application.Appointments.AppointmentServiceTests.FixedTimeProvider",
+      "project": "ElsheiekhHMS.Tests",
+      "namespace": "ElsheiekhHMS.Tests.Unit.Application.Appointments",
+      "file": "ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentServiceTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentServiceTests.cs",
+      "source_location": "L198",
+      "line": 198,
+      "accessibility": "private",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Tests.Unit.Application.Appointments.AppointmentServiceTests.RecordingAuditWriter",
+      "name": "RecordingAuditWriter",
+      "label": "RecordingAuditWriter",
+      "kind": "class",
+      "type": "class",
+      "fullName": "ElsheiekhHMS.Tests.Unit.Application.Appointments.AppointmentServiceTests.RecordingAuditWriter",
+      "project": "ElsheiekhHMS.Tests",
+      "namespace": "ElsheiekhHMS.Tests.Unit.Application.Appointments",
+      "file": "ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentServiceTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentServiceTests.cs",
+      "source_location": "L203",
+      "line": 203,
+      "accessibility": "private",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Tests.Unit.Application.Appointments.AppointmentServiceTests.TestCurrentUser",
+      "name": "TestCurrentUser",
+      "label": "TestCurrentUser",
+      "kind": "class",
+      "type": "class",
+      "fullName": "ElsheiekhHMS.Tests.Unit.Application.Appointments.AppointmentServiceTests.TestCurrentUser",
+      "project": "ElsheiekhHMS.Tests",
+      "namespace": "ElsheiekhHMS.Tests.Unit.Application.Appointments",
+      "file": "ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentServiceTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentServiceTests.cs",
+      "source_location": "L190",
+      "line": 190,
+      "accessibility": "private",
       "abstract": false,
       "sealed": true,
       "static": false,
@@ -9982,7 +10624,7 @@
       "label": "IEquatable",
       "kind": "interface",
       "type": "interface",
-      "fullName": "System.IEquatable\u003CElsheiekhHMS.Application.Appointments.Contracts.AppointmentDetailsDto\u003E",
+      "fullName": "System.IEquatable\u003CElsheiekhHMS.Application.Appointments.Contracts.AppointmentActionRequest\u003E",
       "namespace": "System",
       "external": true,
       "community": -1,
@@ -10013,6 +10655,24 @@
       "target": "type:ElsheiekhHMS.Application.ApplicationServiceExtensions",
       "type": "declares",
       "evidence": "ElsheiekhHMS.Application/ApplicationServiceExtensions.cs:L13",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Appointments/AppointmentService.cs",
+      "target": "type:ElsheiekhHMS.Application.Appointments.AppointmentService",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Application/Appointments/AppointmentService.cs:L14",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Appointments/Contracts/AppointmentActionRequest.cs",
+      "target": "type:ElsheiekhHMS.Application.Appointments.Contracts.AppointmentActionRequest",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Application/Appointments/Contracts/AppointmentActionRequest.cs:L3",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -10067,6 +10727,42 @@
       "target": "type:ElsheiekhHMS.Application.Appointments.Contracts.CreateAppointmentRequest",
       "type": "declares",
       "evidence": "ElsheiekhHMS.Application/Appointments/Contracts/CreateAppointmentRequest.cs:L5",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Appointments/IAppointmentService.cs",
+      "target": "type:ElsheiekhHMS.Application.Appointments.IAppointmentService",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Application/Appointments/IAppointmentService.cs:L7",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Appointments/Persistence/AppointmentPersistenceSaveStatus.cs",
+      "target": "type:ElsheiekhHMS.Application.Appointments.Persistence.AppointmentPersistenceSaveStatus",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Application/Appointments/Persistence/AppointmentPersistenceSaveStatus.cs:L3",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Appointments/Persistence/IAppointmentPersistence.cs",
+      "target": "type:ElsheiekhHMS.Application.Appointments.Persistence.IAppointmentPersistence",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Application/Appointments/Persistence/IAppointmentPersistence.cs:L7",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Appointments/Validation/AppointmentActionRequestValidator.cs",
+      "target": "type:ElsheiekhHMS.Application.Appointments.Validation.AppointmentActionRequestValidator",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Application/Appointments/Validation/AppointmentActionRequestValidator.cs:L6",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -10930,7 +11626,7 @@
       "source": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs",
       "target": "type:ElsheiekhHMS.Infrastructure.InfrastructureServiceExtensions",
       "type": "declares",
-      "evidence": "ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs:L28",
+      "evidence": "ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs:L31",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -11098,6 +11794,24 @@
       "weight": 1
     },
     {
+      "source": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Persistence/Appointments/AppointmentPersistence.cs",
+      "target": "type:ElsheiekhHMS.Infrastructure.Persistence.Appointments.AppointmentPersistence",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Infrastructure/Persistence/Appointments/AppointmentPersistence.cs:L15",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Persistence/Appointments/AppointmentPersistence.cs",
+      "target": "type:ElsheiekhHMS.Infrastructure.Persistence.Appointments.AppointmentPersistence.AppointmentDetailsProjection",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Infrastructure/Persistence/Appointments/AppointmentPersistence.cs:L230",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
       "source": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Persistence/Departments/DepartmentPersistence.cs",
       "target": "type:ElsheiekhHMS.Infrastructure.Persistence.Departments.DepartmentPersistence",
       "type": "declares",
@@ -11147,6 +11861,42 @@
       "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentCodeAllocatorSqlServerTests.FixedTimeProvider",
       "type": "declares",
       "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentCodeAllocatorSqlServerTests.cs:L137",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/AppointmentServiceSqlServerTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentServiceSqlServerTests",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentServiceSqlServerTests.cs:L18",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/AppointmentServiceSqlServerTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentServiceSqlServerTests.FixedTimeProvider",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentServiceSqlServerTests.cs:L159",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/AppointmentServiceSqlServerTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentServiceSqlServerTests.SetupRecords",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentServiceSqlServerTests.cs:L146",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/AppointmentServiceSqlServerTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentServiceSqlServerTests.TestCurrentUser",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentServiceSqlServerTests.cs:L153",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -11300,6 +12050,51 @@
       "target": "type:ElsheiekhHMS.Tests.Unit.Application.Appointments.AppointmentContractTests",
       "type": "declares",
       "evidence": "ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentContractTests.cs:L7",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentServiceTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Application.Appointments.AppointmentServiceTests",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentServiceTests.cs:L12",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentServiceTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Application.Appointments.AppointmentServiceTests.FakePersistence",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentServiceTests.cs:L214",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentServiceTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Application.Appointments.AppointmentServiceTests.FixedTimeProvider",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentServiceTests.cs:L198",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentServiceTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Application.Appointments.AppointmentServiceTests.RecordingAuditWriter",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentServiceTests.cs:L203",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentServiceTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Application.Appointments.AppointmentServiceTests.TestCurrentUser",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentServiceTests.cs:L190",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -11801,6 +12596,24 @@
     },
     {
       "source": "project:ElsheiekhHMS.Application",
+      "target": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Appointments/AppointmentService.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Application/ElsheiekhHMS.Application.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Application",
+      "target": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Appointments/Contracts/AppointmentActionRequest.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Application/ElsheiekhHMS.Application.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Application",
       "target": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Appointments/Contracts/AppointmentDetailsDto.cs",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Application/ElsheiekhHMS.Application.csproj",
@@ -11847,6 +12660,42 @@
     {
       "source": "project:ElsheiekhHMS.Application",
       "target": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Appointments/Contracts/CreateAppointmentRequest.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Application/ElsheiekhHMS.Application.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Application",
+      "target": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Appointments/IAppointmentService.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Application/ElsheiekhHMS.Application.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Application",
+      "target": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Appointments/Persistence/AppointmentPersistenceSaveStatus.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Application/ElsheiekhHMS.Application.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Application",
+      "target": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Appointments/Persistence/IAppointmentPersistence.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Application/ElsheiekhHMS.Application.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Application",
+      "target": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Appointments/Validation/AppointmentActionRequestValidator.cs",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Application/ElsheiekhHMS.Application.csproj",
       "relation": "contains",
@@ -12395,9 +13244,27 @@
     },
     {
       "source": "project:ElsheiekhHMS.Application",
+      "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Appointments",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Application/Appointments/AppointmentService.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Application",
       "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Appointments.Contracts",
       "type": "contains",
-      "evidence": "ElsheiekhHMS.Application/Appointments/Contracts/AppointmentDetailsDto.cs",
+      "evidence": "ElsheiekhHMS.Application/Appointments/Contracts/AppointmentActionRequest.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Application",
+      "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Appointments.Persistence",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Application/Appointments/Persistence/AppointmentPersistenceSaveStatus.cs",
       "relation": "contains",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -12406,7 +13273,7 @@
       "source": "project:ElsheiekhHMS.Application",
       "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Appointments.Validation",
       "type": "contains",
-      "evidence": "ElsheiekhHMS.Application/Appointments/Validation/AppointmentSearchRequestValidator.cs",
+      "evidence": "ElsheiekhHMS.Application/Appointments/Validation/AppointmentActionRequestValidator.cs",
       "relation": "contains",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -13142,6 +14009,15 @@
     },
     {
       "source": "project:ElsheiekhHMS.Infrastructure",
+      "target": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Persistence/Appointments/AppointmentPersistence.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Infrastructure/ElsheiekhHMS.Infrastructure.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Infrastructure",
       "target": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Persistence/Departments/DepartmentPersistence.cs",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Infrastructure/ElsheiekhHMS.Infrastructure.csproj",
@@ -13268,6 +14144,15 @@
     },
     {
       "source": "project:ElsheiekhHMS.Infrastructure",
+      "target": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Persistence.Appointments",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Infrastructure/Persistence/Appointments/AppointmentPersistence.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Infrastructure",
       "target": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Persistence.Departments",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Infrastructure/Persistence/Departments/DepartmentPersistence.cs",
@@ -13305,6 +14190,15 @@
     {
       "source": "project:ElsheiekhHMS.Tests",
       "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/AppointmentCodeAllocatorSqlServerTests.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Tests",
+      "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/AppointmentServiceSqlServerTests.cs",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
       "relation": "contains",
@@ -13377,6 +14271,15 @@
     {
       "source": "project:ElsheiekhHMS.Tests",
       "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentContractTests.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Tests",
+      "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentServiceTests.cs",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
       "relation": "contains",
@@ -14140,6 +15043,42 @@
       "weight": 1
     },
     {
+      "source": "type:ElsheiekhHMS.Application.Appointments.AppointmentService",
+      "target": "type:ElsheiekhHMS.Application.Appointments.IAppointmentService",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Application/Appointments/AppointmentService.cs:L14",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Application.Appointments.AppointmentService",
+      "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Appointments",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Application/Appointments/AppointmentService.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Application.Appointments.Contracts.AppointmentActionRequest",
+      "target": "type:System.IEquatable\u003CT\u003E",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Application/Appointments/Contracts/AppointmentActionRequest.cs:L3",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Application.Appointments.Contracts.AppointmentActionRequest",
+      "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Appointments.Contracts",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Application/Appointments/Contracts/AppointmentActionRequest.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
       "source": "type:ElsheiekhHMS.Application.Appointments.Contracts.AppointmentDetailsDto",
       "target": "type:System.IEquatable\u003CT\u003E",
       "type": "implements",
@@ -14234,6 +15173,51 @@
       "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Appointments.Contracts",
       "type": "namespace-membership",
       "evidence": "ElsheiekhHMS.Application/Appointments/Contracts/CreateAppointmentRequest.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Application.Appointments.IAppointmentService",
+      "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Appointments",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Application/Appointments/IAppointmentService.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Application.Appointments.Persistence.AppointmentPersistenceSaveStatus",
+      "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Appointments.Persistence",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Application/Appointments/Persistence/AppointmentPersistenceSaveStatus.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Application.Appointments.Persistence.IAppointmentPersistence",
+      "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Appointments.Persistence",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Application/Appointments/Persistence/IAppointmentPersistence.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Application.Appointments.Validation.AppointmentActionRequestValidator",
+      "target": "type:ElsheiekhHMS.Application.Common.Validation.IRequestValidator\u003CTRequest\u003E",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Application/Appointments/Validation/AppointmentActionRequestValidator.cs:L6",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Application.Appointments.Validation.AppointmentActionRequestValidator",
+      "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Appointments.Validation",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Application/Appointments/Validation/AppointmentActionRequestValidator.cs",
       "relation": "namespace-membership",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -15877,6 +16861,51 @@
       "weight": 1
     },
     {
+      "source": "type:ElsheiekhHMS.Infrastructure.Persistence.Appointments.AppointmentPersistence",
+      "target": "type:ElsheiekhHMS.Infrastructure.Persistence.Appointments.AppointmentPersistence.AppointmentDetailsProjection",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Infrastructure/Persistence/Appointments/AppointmentPersistence.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Infrastructure.Persistence.Appointments.AppointmentPersistence",
+      "target": "type:ElsheiekhHMS.Application.Appointments.Persistence.IAppointmentPersistence",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Infrastructure/Persistence/Appointments/AppointmentPersistence.cs:L15",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Infrastructure.Persistence.Appointments.AppointmentPersistence",
+      "target": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Persistence.Appointments",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Infrastructure/Persistence/Appointments/AppointmentPersistence.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Infrastructure.Persistence.Appointments.AppointmentPersistence.AppointmentDetailsProjection",
+      "target": "type:System.IEquatable\u003CT\u003E",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Infrastructure/Persistence/Appointments/AppointmentPersistence.cs:L230",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Infrastructure.Persistence.Appointments.AppointmentPersistence.AppointmentDetailsProjection",
+      "target": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Persistence.Appointments",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Infrastructure/Persistence/Appointments/AppointmentPersistence.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
       "source": "type:ElsheiekhHMS.Infrastructure.Persistence.Departments.DepartmentPersistence",
       "target": "type:ElsheiekhHMS.Application.Departments.Persistence.IDepartmentPersistence",
       "type": "implements",
@@ -15989,6 +17018,105 @@
       "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Integration.Persistence",
       "type": "namespace-membership",
       "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentCodeAllocatorSqlServerTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentServiceSqlServerTests",
+      "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentServiceSqlServerTests.FixedTimeProvider",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentServiceSqlServerTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentServiceSqlServerTests",
+      "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentServiceSqlServerTests.SetupRecords",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentServiceSqlServerTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentServiceSqlServerTests",
+      "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentServiceSqlServerTests.TestCurrentUser",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentServiceSqlServerTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentServiceSqlServerTests",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Integration.Persistence",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentServiceSqlServerTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentServiceSqlServerTests.FixedTimeProvider",
+      "target": "type:System.TimeProvider",
+      "type": "inherits",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentServiceSqlServerTests.cs:L159",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentServiceSqlServerTests.FixedTimeProvider",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Integration.Persistence",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentServiceSqlServerTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentServiceSqlServerTests.SetupRecords",
+      "target": "type:System.IEquatable\u003CT\u003E",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentServiceSqlServerTests.cs:L146",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentServiceSqlServerTests.SetupRecords",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Integration.Persistence",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentServiceSqlServerTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentServiceSqlServerTests.TestCurrentUser",
+      "target": "type:ElsheiekhHMS.Application.Common.Security.ICurrentUser",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentServiceSqlServerTests.cs:L153",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentServiceSqlServerTests.TestCurrentUser",
+      "target": "type:System.IEquatable\u003CT\u003E",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentServiceSqlServerTests.cs:L153",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentServiceSqlServerTests.TestCurrentUser",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Integration.Persistence",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentServiceSqlServerTests.cs",
       "relation": "namespace-membership",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -16313,6 +17441,123 @@
       "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Application.Appointments",
       "type": "namespace-membership",
       "evidence": "ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentContractTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Appointments.AppointmentServiceTests",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Application.Appointments.AppointmentServiceTests.FakePersistence",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentServiceTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Appointments.AppointmentServiceTests",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Application.Appointments.AppointmentServiceTests.FixedTimeProvider",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentServiceTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Appointments.AppointmentServiceTests",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Application.Appointments.AppointmentServiceTests.RecordingAuditWriter",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentServiceTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Appointments.AppointmentServiceTests",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Application.Appointments.AppointmentServiceTests.TestCurrentUser",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentServiceTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Appointments.AppointmentServiceTests",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Application.Appointments",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentServiceTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Appointments.AppointmentServiceTests.FakePersistence",
+      "target": "type:ElsheiekhHMS.Application.Appointments.Persistence.IAppointmentPersistence",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentServiceTests.cs:L214",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Appointments.AppointmentServiceTests.FakePersistence",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Application.Appointments",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentServiceTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Appointments.AppointmentServiceTests.FixedTimeProvider",
+      "target": "type:System.TimeProvider",
+      "type": "inherits",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentServiceTests.cs:L198",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Appointments.AppointmentServiceTests.FixedTimeProvider",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Application.Appointments",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentServiceTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Appointments.AppointmentServiceTests.RecordingAuditWriter",
+      "target": "type:ElsheiekhHMS.Application.Common.Auditing.IAuditEventWriter",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentServiceTests.cs:L203",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Appointments.AppointmentServiceTests.RecordingAuditWriter",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Application.Appointments",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentServiceTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Appointments.AppointmentServiceTests.TestCurrentUser",
+      "target": "type:ElsheiekhHMS.Application.Common.Security.ICurrentUser",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentServiceTests.cs:L190",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Appointments.AppointmentServiceTests.TestCurrentUser",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Application.Appointments",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentServiceTests.cs",
       "relation": "namespace-membership",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -17605,7 +18850,7 @@
       "statusSource": "README.md declaration, not independently certified completion",
       "declaredStatus": [
         {
-          "text": "\u003E **Current development stage:** Phase 07 \u2014 Application Services (07S, 07A, 07B, and 07C-P complete; Phase 07 remains in progress)",
+          "text": "\u003E **Current development stage:** Phase 07 \u2014 Application Services (07S, 07A, 07B, 07C-P, and 07C implementation complete; 07C closeout pending)",
           "source": "README.md:L5"
         },
         {
@@ -17697,40 +18942,44 @@
           "source": "README.md:L49"
         },
         {
+          "text": "\u003E **Phase 07C:** \u2705 Appointment Application Service implemented and verified; commit/closeout pending",
+          "source": "README.md:L51"
+        },
+        {
           "text": "| 01 | Solution \u0026 Architecture | \u2705 Complete |",
-          "source": "README.md:L366"
-        },
-        {
-          "text": "| 02 | Core Foundation | \u2705 Complete |",
-          "source": "README.md:L367"
-        },
-        {
-          "text": "| 03 | Domain Entities | \u2705 Complete |",
           "source": "README.md:L368"
         },
         {
-          "text": "| 04 | EF Core \u0026 Database | \u2705 Complete |",
+          "text": "| 02 | Core Foundation | \u2705 Complete |",
           "source": "README.md:L369"
         },
         {
-          "text": "| 05 | Identity \u0026 Security | \u2705 Complete (05A, 05B, 05C, 05C-A, 05D, and 05E) |",
+          "text": "| 03 | Domain Entities | \u2705 Complete |",
           "source": "README.md:L370"
         },
         {
-          "text": "| 06 | DTOs \u0026 Validation | \u2705 Complete (06A\u201306D) |",
+          "text": "| 04 | EF Core \u0026 Database | \u2705 Complete |",
           "source": "README.md:L371"
         },
         {
-          "text": "| 07 | Application Services | \uD83D\uDFE1 In progress (07S, 07A, 07B, and 07C-P complete) |",
+          "text": "| 05 | Identity \u0026 Security | \u2705 Complete (05A, 05B, 05C, 05C-A, 05D, and 05E) |",
           "source": "README.md:L372"
         },
         {
-          "text": "| 08 | Business Workflows | \u23F3 Not started |",
+          "text": "| 06 | DTOs \u0026 Validation | \u2705 Complete (06A\u201306D) |",
           "source": "README.md:L373"
         },
         {
-          "text": "| 09 | Enterprise Infrastructure | \u23F3 Not started |",
+          "text": "| 07 | Application Services | \uD83D\uDFE1 In progress (07S, 07A, 07B, and 07C-P complete) |",
           "source": "README.md:L374"
+        },
+        {
+          "text": "| 08 | Business Workflows | \u23F3 Not started |",
+          "source": "README.md:L375"
+        },
+        {
+          "text": "| 09 | Enterprise Infrastructure | \u23F3 Not started |",
+          "source": "README.md:L376"
         }
       ]
     }
@@ -17765,6 +19014,24 @@
       "target": "type:ElsheiekhHMS.Application.ApplicationServiceExtensions",
       "type": "declares",
       "evidence": "ElsheiekhHMS.Application/ApplicationServiceExtensions.cs:L13",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Appointments/AppointmentService.cs",
+      "target": "type:ElsheiekhHMS.Application.Appointments.AppointmentService",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Application/Appointments/AppointmentService.cs:L14",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Appointments/Contracts/AppointmentActionRequest.cs",
+      "target": "type:ElsheiekhHMS.Application.Appointments.Contracts.AppointmentActionRequest",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Application/Appointments/Contracts/AppointmentActionRequest.cs:L3",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -17819,6 +19086,42 @@
       "target": "type:ElsheiekhHMS.Application.Appointments.Contracts.CreateAppointmentRequest",
       "type": "declares",
       "evidence": "ElsheiekhHMS.Application/Appointments/Contracts/CreateAppointmentRequest.cs:L5",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Appointments/IAppointmentService.cs",
+      "target": "type:ElsheiekhHMS.Application.Appointments.IAppointmentService",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Application/Appointments/IAppointmentService.cs:L7",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Appointments/Persistence/AppointmentPersistenceSaveStatus.cs",
+      "target": "type:ElsheiekhHMS.Application.Appointments.Persistence.AppointmentPersistenceSaveStatus",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Application/Appointments/Persistence/AppointmentPersistenceSaveStatus.cs:L3",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Appointments/Persistence/IAppointmentPersistence.cs",
+      "target": "type:ElsheiekhHMS.Application.Appointments.Persistence.IAppointmentPersistence",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Application/Appointments/Persistence/IAppointmentPersistence.cs:L7",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Appointments/Validation/AppointmentActionRequestValidator.cs",
+      "target": "type:ElsheiekhHMS.Application.Appointments.Validation.AppointmentActionRequestValidator",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Application/Appointments/Validation/AppointmentActionRequestValidator.cs:L6",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -18682,7 +19985,7 @@
       "source": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs",
       "target": "type:ElsheiekhHMS.Infrastructure.InfrastructureServiceExtensions",
       "type": "declares",
-      "evidence": "ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs:L28",
+      "evidence": "ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs:L31",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -18850,6 +20153,24 @@
       "weight": 1
     },
     {
+      "source": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Persistence/Appointments/AppointmentPersistence.cs",
+      "target": "type:ElsheiekhHMS.Infrastructure.Persistence.Appointments.AppointmentPersistence",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Infrastructure/Persistence/Appointments/AppointmentPersistence.cs:L15",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Persistence/Appointments/AppointmentPersistence.cs",
+      "target": "type:ElsheiekhHMS.Infrastructure.Persistence.Appointments.AppointmentPersistence.AppointmentDetailsProjection",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Infrastructure/Persistence/Appointments/AppointmentPersistence.cs:L230",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
       "source": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Persistence/Departments/DepartmentPersistence.cs",
       "target": "type:ElsheiekhHMS.Infrastructure.Persistence.Departments.DepartmentPersistence",
       "type": "declares",
@@ -18899,6 +20220,42 @@
       "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentCodeAllocatorSqlServerTests.FixedTimeProvider",
       "type": "declares",
       "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentCodeAllocatorSqlServerTests.cs:L137",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/AppointmentServiceSqlServerTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentServiceSqlServerTests",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentServiceSqlServerTests.cs:L18",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/AppointmentServiceSqlServerTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentServiceSqlServerTests.FixedTimeProvider",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentServiceSqlServerTests.cs:L159",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/AppointmentServiceSqlServerTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentServiceSqlServerTests.SetupRecords",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentServiceSqlServerTests.cs:L146",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/AppointmentServiceSqlServerTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentServiceSqlServerTests.TestCurrentUser",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentServiceSqlServerTests.cs:L153",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -19052,6 +20409,51 @@
       "target": "type:ElsheiekhHMS.Tests.Unit.Application.Appointments.AppointmentContractTests",
       "type": "declares",
       "evidence": "ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentContractTests.cs:L7",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentServiceTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Application.Appointments.AppointmentServiceTests",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentServiceTests.cs:L12",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentServiceTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Application.Appointments.AppointmentServiceTests.FakePersistence",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentServiceTests.cs:L214",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentServiceTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Application.Appointments.AppointmentServiceTests.FixedTimeProvider",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentServiceTests.cs:L198",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentServiceTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Application.Appointments.AppointmentServiceTests.RecordingAuditWriter",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentServiceTests.cs:L203",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentServiceTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Application.Appointments.AppointmentServiceTests.TestCurrentUser",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentServiceTests.cs:L190",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -19553,6 +20955,24 @@
     },
     {
       "source": "project:ElsheiekhHMS.Application",
+      "target": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Appointments/AppointmentService.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Application/ElsheiekhHMS.Application.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Application",
+      "target": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Appointments/Contracts/AppointmentActionRequest.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Application/ElsheiekhHMS.Application.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Application",
       "target": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Appointments/Contracts/AppointmentDetailsDto.cs",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Application/ElsheiekhHMS.Application.csproj",
@@ -19599,6 +21019,42 @@
     {
       "source": "project:ElsheiekhHMS.Application",
       "target": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Appointments/Contracts/CreateAppointmentRequest.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Application/ElsheiekhHMS.Application.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Application",
+      "target": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Appointments/IAppointmentService.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Application/ElsheiekhHMS.Application.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Application",
+      "target": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Appointments/Persistence/AppointmentPersistenceSaveStatus.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Application/ElsheiekhHMS.Application.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Application",
+      "target": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Appointments/Persistence/IAppointmentPersistence.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Application/ElsheiekhHMS.Application.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Application",
+      "target": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Appointments/Validation/AppointmentActionRequestValidator.cs",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Application/ElsheiekhHMS.Application.csproj",
       "relation": "contains",
@@ -20147,9 +21603,27 @@
     },
     {
       "source": "project:ElsheiekhHMS.Application",
+      "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Appointments",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Application/Appointments/AppointmentService.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Application",
       "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Appointments.Contracts",
       "type": "contains",
-      "evidence": "ElsheiekhHMS.Application/Appointments/Contracts/AppointmentDetailsDto.cs",
+      "evidence": "ElsheiekhHMS.Application/Appointments/Contracts/AppointmentActionRequest.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Application",
+      "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Appointments.Persistence",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Application/Appointments/Persistence/AppointmentPersistenceSaveStatus.cs",
       "relation": "contains",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -20158,7 +21632,7 @@
       "source": "project:ElsheiekhHMS.Application",
       "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Appointments.Validation",
       "type": "contains",
-      "evidence": "ElsheiekhHMS.Application/Appointments/Validation/AppointmentSearchRequestValidator.cs",
+      "evidence": "ElsheiekhHMS.Application/Appointments/Validation/AppointmentActionRequestValidator.cs",
       "relation": "contains",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -20894,6 +22368,15 @@
     },
     {
       "source": "project:ElsheiekhHMS.Infrastructure",
+      "target": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Persistence/Appointments/AppointmentPersistence.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Infrastructure/ElsheiekhHMS.Infrastructure.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Infrastructure",
       "target": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Persistence/Departments/DepartmentPersistence.cs",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Infrastructure/ElsheiekhHMS.Infrastructure.csproj",
@@ -21020,6 +22503,15 @@
     },
     {
       "source": "project:ElsheiekhHMS.Infrastructure",
+      "target": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Persistence.Appointments",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Infrastructure/Persistence/Appointments/AppointmentPersistence.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Infrastructure",
       "target": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Persistence.Departments",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Infrastructure/Persistence/Departments/DepartmentPersistence.cs",
@@ -21057,6 +22549,15 @@
     {
       "source": "project:ElsheiekhHMS.Tests",
       "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/AppointmentCodeAllocatorSqlServerTests.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Tests",
+      "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/AppointmentServiceSqlServerTests.cs",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
       "relation": "contains",
@@ -21129,6 +22630,15 @@
     {
       "source": "project:ElsheiekhHMS.Tests",
       "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentContractTests.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Tests",
+      "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentServiceTests.cs",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
       "relation": "contains",
@@ -21892,6 +23402,42 @@
       "weight": 1
     },
     {
+      "source": "type:ElsheiekhHMS.Application.Appointments.AppointmentService",
+      "target": "type:ElsheiekhHMS.Application.Appointments.IAppointmentService",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Application/Appointments/AppointmentService.cs:L14",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Application.Appointments.AppointmentService",
+      "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Appointments",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Application/Appointments/AppointmentService.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Application.Appointments.Contracts.AppointmentActionRequest",
+      "target": "type:System.IEquatable\u003CT\u003E",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Application/Appointments/Contracts/AppointmentActionRequest.cs:L3",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Application.Appointments.Contracts.AppointmentActionRequest",
+      "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Appointments.Contracts",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Application/Appointments/Contracts/AppointmentActionRequest.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
       "source": "type:ElsheiekhHMS.Application.Appointments.Contracts.AppointmentDetailsDto",
       "target": "type:System.IEquatable\u003CT\u003E",
       "type": "implements",
@@ -21986,6 +23532,51 @@
       "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Appointments.Contracts",
       "type": "namespace-membership",
       "evidence": "ElsheiekhHMS.Application/Appointments/Contracts/CreateAppointmentRequest.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Application.Appointments.IAppointmentService",
+      "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Appointments",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Application/Appointments/IAppointmentService.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Application.Appointments.Persistence.AppointmentPersistenceSaveStatus",
+      "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Appointments.Persistence",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Application/Appointments/Persistence/AppointmentPersistenceSaveStatus.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Application.Appointments.Persistence.IAppointmentPersistence",
+      "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Appointments.Persistence",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Application/Appointments/Persistence/IAppointmentPersistence.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Application.Appointments.Validation.AppointmentActionRequestValidator",
+      "target": "type:ElsheiekhHMS.Application.Common.Validation.IRequestValidator\u003CTRequest\u003E",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Application/Appointments/Validation/AppointmentActionRequestValidator.cs:L6",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Application.Appointments.Validation.AppointmentActionRequestValidator",
+      "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Appointments.Validation",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Application/Appointments/Validation/AppointmentActionRequestValidator.cs",
       "relation": "namespace-membership",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -23629,6 +25220,51 @@
       "weight": 1
     },
     {
+      "source": "type:ElsheiekhHMS.Infrastructure.Persistence.Appointments.AppointmentPersistence",
+      "target": "type:ElsheiekhHMS.Infrastructure.Persistence.Appointments.AppointmentPersistence.AppointmentDetailsProjection",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Infrastructure/Persistence/Appointments/AppointmentPersistence.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Infrastructure.Persistence.Appointments.AppointmentPersistence",
+      "target": "type:ElsheiekhHMS.Application.Appointments.Persistence.IAppointmentPersistence",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Infrastructure/Persistence/Appointments/AppointmentPersistence.cs:L15",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Infrastructure.Persistence.Appointments.AppointmentPersistence",
+      "target": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Persistence.Appointments",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Infrastructure/Persistence/Appointments/AppointmentPersistence.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Infrastructure.Persistence.Appointments.AppointmentPersistence.AppointmentDetailsProjection",
+      "target": "type:System.IEquatable\u003CT\u003E",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Infrastructure/Persistence/Appointments/AppointmentPersistence.cs:L230",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Infrastructure.Persistence.Appointments.AppointmentPersistence.AppointmentDetailsProjection",
+      "target": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Persistence.Appointments",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Infrastructure/Persistence/Appointments/AppointmentPersistence.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
       "source": "type:ElsheiekhHMS.Infrastructure.Persistence.Departments.DepartmentPersistence",
       "target": "type:ElsheiekhHMS.Application.Departments.Persistence.IDepartmentPersistence",
       "type": "implements",
@@ -23741,6 +25377,105 @@
       "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Integration.Persistence",
       "type": "namespace-membership",
       "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentCodeAllocatorSqlServerTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentServiceSqlServerTests",
+      "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentServiceSqlServerTests.FixedTimeProvider",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentServiceSqlServerTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentServiceSqlServerTests",
+      "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentServiceSqlServerTests.SetupRecords",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentServiceSqlServerTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentServiceSqlServerTests",
+      "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentServiceSqlServerTests.TestCurrentUser",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentServiceSqlServerTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentServiceSqlServerTests",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Integration.Persistence",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentServiceSqlServerTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentServiceSqlServerTests.FixedTimeProvider",
+      "target": "type:System.TimeProvider",
+      "type": "inherits",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentServiceSqlServerTests.cs:L159",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentServiceSqlServerTests.FixedTimeProvider",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Integration.Persistence",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentServiceSqlServerTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentServiceSqlServerTests.SetupRecords",
+      "target": "type:System.IEquatable\u003CT\u003E",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentServiceSqlServerTests.cs:L146",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentServiceSqlServerTests.SetupRecords",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Integration.Persistence",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentServiceSqlServerTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentServiceSqlServerTests.TestCurrentUser",
+      "target": "type:ElsheiekhHMS.Application.Common.Security.ICurrentUser",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentServiceSqlServerTests.cs:L153",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentServiceSqlServerTests.TestCurrentUser",
+      "target": "type:System.IEquatable\u003CT\u003E",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentServiceSqlServerTests.cs:L153",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentServiceSqlServerTests.TestCurrentUser",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Integration.Persistence",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentServiceSqlServerTests.cs",
       "relation": "namespace-membership",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -24065,6 +25800,123 @@
       "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Application.Appointments",
       "type": "namespace-membership",
       "evidence": "ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentContractTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Appointments.AppointmentServiceTests",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Application.Appointments.AppointmentServiceTests.FakePersistence",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentServiceTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Appointments.AppointmentServiceTests",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Application.Appointments.AppointmentServiceTests.FixedTimeProvider",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentServiceTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Appointments.AppointmentServiceTests",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Application.Appointments.AppointmentServiceTests.RecordingAuditWriter",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentServiceTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Appointments.AppointmentServiceTests",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Application.Appointments.AppointmentServiceTests.TestCurrentUser",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentServiceTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Appointments.AppointmentServiceTests",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Application.Appointments",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentServiceTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Appointments.AppointmentServiceTests.FakePersistence",
+      "target": "type:ElsheiekhHMS.Application.Appointments.Persistence.IAppointmentPersistence",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentServiceTests.cs:L214",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Appointments.AppointmentServiceTests.FakePersistence",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Application.Appointments",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentServiceTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Appointments.AppointmentServiceTests.FixedTimeProvider",
+      "target": "type:System.TimeProvider",
+      "type": "inherits",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentServiceTests.cs:L198",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Appointments.AppointmentServiceTests.FixedTimeProvider",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Application.Appointments",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentServiceTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Appointments.AppointmentServiceTests.RecordingAuditWriter",
+      "target": "type:ElsheiekhHMS.Application.Common.Auditing.IAuditEventWriter",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentServiceTests.cs:L203",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Appointments.AppointmentServiceTests.RecordingAuditWriter",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Application.Appointments",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentServiceTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Appointments.AppointmentServiceTests.TestCurrentUser",
+      "target": "type:ElsheiekhHMS.Application.Common.Security.ICurrentUser",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentServiceTests.cs:L190",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Appointments.AppointmentServiceTests.TestCurrentUser",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Application.Appointments",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentServiceTests.cs",
       "relation": "namespace-membership",
       "confidence": "EXTRACTED",
       "weight": 1

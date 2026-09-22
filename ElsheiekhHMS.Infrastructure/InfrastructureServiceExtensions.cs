@@ -3,6 +3,8 @@ using ElsheiekhHMS.Infrastructure.Auditing;
 using ElsheiekhHMS.Application.Common.Auditing;
 using ElsheiekhHMS.Application.Departments;
 using ElsheiekhHMS.Application.Departments.Persistence;
+using ElsheiekhHMS.Application.Appointments;
+using ElsheiekhHMS.Application.Appointments.Persistence;
 using ElsheiekhHMS.Application.Patients;
 using ElsheiekhHMS.Application.Patients.Persistence;
 using ElsheiekhHMS.Infrastructure.Identity;
@@ -10,6 +12,7 @@ using ElsheiekhHMS.Infrastructure.Identity.Entities;
 using ElsheiekhHMS.Infrastructure.Persistence.Allocation;
 using ElsheiekhHMS.Infrastructure.Persistence.Patients;
 using ElsheiekhHMS.Infrastructure.Persistence.Departments;
+using ElsheiekhHMS.Infrastructure.Persistence.Appointments;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -47,6 +50,8 @@ public static class InfrastructureServiceExtensions
         services.AddScoped<IPatientService, PatientService>();
         services.AddScoped<IDepartmentPersistence, DepartmentPersistence>();
         services.AddScoped<IDepartmentService, DepartmentService>();
+        services.AddScoped<IAppointmentPersistence, AppointmentPersistence>();
+        services.AddScoped<IAppointmentService, AppointmentService>();
         services.AddDbContext<ElsheiekhHmsDbContext>((serviceProvider, options) =>
         {
             options.UseSqlServer(connectionString);

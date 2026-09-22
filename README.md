@@ -2,7 +2,7 @@
 
 Enterprise Hospital Management System built with **.NET 10, ASP.NET Core, Blazor, Entity Framework Core, SQL Server, and ASP.NET Core Identity**.
 
-> **Current development stage:** Phase 07 — Application Services (07S, 07A, 07B, and 07C-P complete; Phase 07 remains in progress)
+> **Current development stage:** Phase 07 — Application Services (07S, 07A, 07B, 07C-P, and 07C implementation complete; 07C closeout pending)
 >
 > **Phase 01:** ✅ Complete
 >
@@ -48,7 +48,9 @@ Enterprise Hospital Management System built with **.NET 10, ASP.NET Core, Blazor
 >
 > **Phase 07C-P:** ✅ AppointmentCode allocator prerequisite complete; migration applied and physical schema verified
 >
-> **Next gate:** Resume the approved 07C Appointment Service sub-phase; 07D remains unstarted
+> **Phase 07C:** ✅ Appointment Application Service implemented and verified; commit/closeout pending
+>
+> **Next gate:** 07C closeout; 07D remains unstarted
 
 ---
 
@@ -816,10 +818,10 @@ Phase 07 — Application Services (in progress)
 CURRENT STATUS:
 Phase 04A foundation, 04B scalar mappings, 04C relational metadata, 04D-A environment readiness,
 04D-B0 design-time tooling, 04D-B migration generation/inspection, 04D-C local schema verification,
-04E isolated SQL Server persistence integration tests, 05A Identity foundation, 05B Roles & Authorization, 05C current-user/entity auditing, 05C-A AuditLog foundation, 05D Identity/AuditLog migration and SQL verification, 05E security integration/hardening, 06A–06D DTOs & Validation, 07S allocator infrastructure, 07A Patient Application Service, 07B Department Application Service, and 07C-P AppointmentCode allocator infrastructure are complete.
+04E isolated SQL Server persistence integration tests, 05A Identity foundation, 05B Roles & Authorization, 05C current-user/entity auditing, 05C-A AuditLog foundation, 05D Identity/AuditLog migration and SQL verification, 05E security integration/hardening, 06A–06D DTOs & Validation, 07S allocator infrastructure, 07A Patient Application Service, 07B Department Application Service, 07C-P AppointmentCode allocator infrastructure, and the 07C Appointment Application Service implementation are complete; 07C closeout remains pending.
 The six approved entity configurations, explicit historical-safe relationships, approved indexes/uniqueness,
 soft-delete filters, three opted-in rowversion mappings, and the Infrastructure migration/snapshot are present.
-Full restore, build, and tests passed (327 tests). The integration fixture uses only the exact
+Full restore, build, and tests passed (339 tests). The integration fixture uses only the exact
 `ElsheiekhHMS_IntegrationTests` LocalDB target and removes it after each run; `ElsheiekhHMS_Dev`
 was updated only through the approved additive migration. `ApplicationUser`, the
 same-context Identity foundation, approved account-security state model, options, role stores, and focused model tests are present.
@@ -832,10 +834,10 @@ physical Identity/AuditLog schema verification, migration-history verification, 
 temporary pending-model suppression are complete. Phase 05E adds Identity cookie composition, request-level security-stamp/account-state validation,
 Interactive Server circuit revalidation, scoped stable-user propagation, antiforgery/security-header hardening, and an explicit secret-backed administrator bootstrap primitive.
 Event-producing security and business workflows, retention duration, IP/UserAgent capture, clinical/read auditing, and UI remain deferred.
-The 07S migration `AddPhase07AllocatorInfrastructure` is applied exactly once to `ElsheiekhHMS_Dev`; allocator tables and queue uniqueness were physically verified. Patient phone remains non-unique. 07A provides the first approved application service, a narrow EF-free persistence port, bounded projections, stable UserId authorization, and transactional Patient/AuditLog writes. Its two reviewed decisions are that allocator access remains on the narrow persistence port and registration audits target the durable PatientCode before the single save. 07B adds the bounded Department service, the minimal Department search contract, SystemAdministrator-only configuration authorization through the existing `CanConfigureSystem` capability, and transactional Department/AuditLog writes; Department names remain non-unique and reactivation remains out of scope. 07C-P adds the Infrastructure-only UTC year-scoped AppointmentCode allocator; `AddAppointmentCodeAllocator` is applied exactly once to `ElsheiekhHMS_Dev` and its physical schema was verified.
+The 07S migration `AddPhase07AllocatorInfrastructure` is applied exactly once to `ElsheiekhHMS_Dev`; allocator tables and queue uniqueness were physically verified. Patient phone remains non-unique. 07A provides the first approved application service, a narrow EF-free persistence port, bounded projections, stable UserId authorization, and transactional Patient/AuditLog writes. Its two reviewed decisions are that allocator access remains on the narrow persistence port and registration audits target the durable PatientCode before the single save. 07B adds the bounded Department service, the minimal Department search contract, SystemAdministrator-only configuration authorization through the existing `CanConfigureSystem` capability, and transactional Department/AuditLog writes; Department names remain non-unique and reactivation remains out of scope. 07C-P adds the Infrastructure-only UTC year-scoped AppointmentCode allocator; `AddAppointmentCodeAllocator` is applied exactly once to `ElsheiekhHMS_Dev` and its physical schema was verified. 07C adds the EF-free Appointment service, Africa/Kigali civil-time validation, active Patient/Department/Doctor checks, bounded appointment projections, lifecycle orchestration, stable UserId authorization, and transactional Appointment/AuditLog writes. Same Department and scheduled-instant collisions are serialized with a transaction-scoped SQL Server application lock; Cancelled, NoShow, and Completed history does not block a slot. Provider-scoped and Patient self-service operations remain deferred.
 
 NEXT ACTION:
-Resume the approved 07C Appointment Application Service sub-phase; 07D has not started.
+Perform 07C closeout/commit review; 07D has not started.
 
 DO NOT:
 Do not begin the next Phase 07 sub-phase without its corresponding approval.

@@ -3,7 +3,7 @@
 **Version:** 1.0.0
 **Date:** September 20, 2026
 **Owner:** Eltayeb Elmuiz
-**Status:** Active — Phase 07 Application Services in progress; 07S, 07A, 07B, and 07C-P complete
+**Status:** Active — Phase 07 Application Services in progress; 07S, 07A, 07B, 07C-P, and 07C implementation complete; 07C closeout pending
 
 ---
 
@@ -956,7 +956,7 @@ year-scoped, UTC-based `AP-YYYY-NNNNN` allocator backed by the dedicated
 `AppointmentCodeAllocations` table and serializable atomic allocation. The additive
 `AddAppointmentCodeAllocator` migration adds that table and the physical unique
 `UX_Appointments_AppointmentCode` index; it was applied exactly once to the development
-database and physically verified. AppointmentService 07C is ready to resume and 07D remains unstarted.
+database and physically verified. AppointmentService 07C is implemented and verified; closeout is pending and 07D remains unstarted.
 
 ### Objective
 Implement all application-layer services. Services orchestrate validation, authorization checks, business rules, repository calls, and audit logging.
@@ -971,7 +971,7 @@ Phase 06 complete.
 | PatientService | IPatientService | Application/Patients/ | ✅ Complete (07A) |
 | DoctorService | IDoctorService | Infrastructure/Services/ | Planned |
 | DepartmentService | IDepartmentService | Application/Departments/ | ✅ Complete (07B) |
-| AppointmentService | IAppointmentService | Infrastructure/Services/ | Planned |
+| AppointmentService | IAppointmentService | Application/Appointments/ | ✅ Implemented (07C; closeout pending) |
 | LabService | ILabService | Infrastructure/Services/ | Planned |
 | WalkInQueueService | IWalkInQueueService | Infrastructure/Services/ | Planned |
 | AuditLogService | IAuditLogService | Infrastructure/Services/ | Planned |
@@ -1901,10 +1901,10 @@ public async Task<ServiceResult<T>> DoSomethingAsync(Dto dto, string actorEmail)
 ## 16. Current Project Checkpoint
 
 ```
-Last completed phase:  Phase 07B — Department Application Service
+Last completed phase:  Phase 07C-P — AppointmentCode Allocator Prerequisite
 Current phase:         Phase 07 — Application Services (in progress)
 Next phase:            Phase 07 — Application Services
-Next action:           Resume the approved 07C Appointment Application Service sub-phase; 07D has not started
+Next action:           Perform 07C closeout/commit review; 07D has not started
 Known blockers:        None
 Important notes:
   - The current working codebase is the five-project .NET 10 ElsheiekhHMS solution
@@ -1915,7 +1915,7 @@ Important notes:
   - Enterprise table system active on Patient/Index
   - _PatientSearch partial complete and in use in WalkInQueue/Add
   - Display board and future UI modules remain later workflow/UI scope
-  - 07A Patient Application Service and 07B Department service are complete
+  - 07A Patient Application Service, 07B Department service, and 07C Appointment service implementation are complete; 07C closeout is pending
   - Arabic/RTL removed — English-only confirmed
   - 05C-A stable audit vocabulary, bounded append-only model, server-controlled writer, and focused tests are complete
   - 05D additive Identity/AuditLog migration, development/integration SQL verification, and pending-model suppression reassessment are complete

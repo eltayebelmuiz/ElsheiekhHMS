@@ -22,6 +22,11 @@ public static class AuditActions
     public const string DepartmentCreated = "DEPARTMENT_CREATED";
     public const string DepartmentUpdated = "DEPARTMENT_UPDATED";
     public const string DepartmentDeactivated = "DEPARTMENT_DEACTIVATED";
+    public const string AppointmentScheduled = "APPOINTMENT_SCHEDULED";
+    public const string AppointmentCancelled = "APPOINTMENT_CANCELLED";
+    public const string AppointmentNoShow = "APPOINTMENT_NO_SHOW";
+    public const string AppointmentCheckedIn = "APPOINTMENT_CHECKED_IN";
+    public const string AppointmentCompleted = "APPOINTMENT_COMPLETED";
 
     public static IReadOnlyList<string> All { get; } =
     [
@@ -44,6 +49,11 @@ public static class AuditActions
         PatientIdentifiersUpdated,
         DepartmentCreated,
         DepartmentUpdated,
-        DepartmentDeactivated
+        DepartmentDeactivated,
+        AppointmentScheduled,
+        AppointmentCancelled,
+        AppointmentNoShow,
+        AppointmentCheckedIn,
+        AppointmentCompleted
     ];
 }

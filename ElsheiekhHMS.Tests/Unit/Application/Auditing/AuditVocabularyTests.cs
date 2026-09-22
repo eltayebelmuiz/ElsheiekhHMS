@@ -37,7 +37,12 @@ public sealed class AuditVocabularyTests
                 "PATIENT_IDENTIFIERS_UPDATED",
                 "DEPARTMENT_CREATED",
                 "DEPARTMENT_UPDATED",
-                "DEPARTMENT_DEACTIVATED"
+                "DEPARTMENT_DEACTIVATED",
+                "APPOINTMENT_SCHEDULED",
+                "APPOINTMENT_CANCELLED",
+                "APPOINTMENT_NO_SHOW",
+                "APPOINTMENT_CHECKED_IN",
+                "APPOINTMENT_COMPLETED"
             ],
             AuditActions.All);
     }

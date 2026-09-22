@@ -573,3 +573,52 @@ integration database; AppointmentService and 07D remain separately gated.
 [AppointmentCode allocator](../ElsheiekhHMS.Infrastructure/Persistence/Allocation/AppointmentCodeAllocator.cs);
 [AddAppointmentCodeAllocator migration](../ElsheiekhHMS.Infrastructure/Migrations/20260922013639_AddAppointmentCodeAllocator.cs);
 [Development roadmap](../DEVELOPMENT_ROADMAP.md).
+
+## ADR-021 — Phase 07C Appointment application service boundaries
+
+**Status:** Implemented; closeout pending
+**Phase:** 07C
+
+### Context
+
+Appointment scheduling needs an EF-free application boundary over the existing
+Phase 06 contracts and the approved 07C-P AppointmentCode allocator. Booking
+times are hospital-local civil values while appointment state and audit writes
+must remain concurrency-safe and historical.
+
+### Decision
+
+Implement `IAppointmentService` with bounded reads (`GetByIdAsync`,
+`SearchAsync`) and the approved schedule/lifecycle writes (`CreateAsync`,
+`ScheduleAsync`, `CancelAsync`, `MarkNoShowAsync`, `CheckInAsync`, and
+`CompleteAsync`). Application interprets civil booking values in the configured
+`Africa/Kigali` timezone, rejects invalid/ambiguous/past instants, and supplies
+UTC action timestamps to the Core aggregate. New bookings require an existing
+Patient, an active Department, and an active Doctor assigned to that Department.
+
+Appointment collisions are defined as the same Department and scheduled
+instant while an existing appointment is Scheduled, Confirmed, or CheckedIn;
+Cancelled, NoShow, and Completed records do not block a slot. Infrastructure
+performs the authoritative check inside a serializable transaction and acquires
+a transaction-scoped SQL Server application lock for the Department/date/time
+key, avoiding a new schema constraint while preventing concurrent duplicate
+slots under the current model.
+
+Each mutation stages its business AuditLog event with the stable UserId actor and
+durable AppointmentCode target, then performs exactly one SaveChanges operation
+for the Appointment/AuditLog pair. Provider-scoped and Patient self-service
+operations remain deferred because no safe ownership mapping exists.
+
+### Consequences
+
+Application remains EF-free. Core, ApplicationUser, the database schema,
+migrations, snapshot, and package set remain unchanged. No rescheduling, queue
+creation, encounter creation, FacilityId, generic repository, Unit of Work,
+MediatR, CQRS, broker, or cache is introduced. Search uses direct projections,
+server-side filtering/sorting, bounded pagination, and cancellation propagation.
+
+### Evidence / Notes
+
+[Appointment service](../ElsheiekhHMS.Application/Appointments/);
+[Appointment persistence](../ElsheiekhHMS.Infrastructure/Persistence/Appointments/);
+[Phase 03D scheduling design](../docs/superpowers/specs/2026-09-21-phase03d-appointment-walk-in-queue-design.md).
