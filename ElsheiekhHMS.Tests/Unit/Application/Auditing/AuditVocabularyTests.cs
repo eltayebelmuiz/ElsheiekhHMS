@@ -42,7 +42,15 @@ public sealed class AuditVocabularyTests
                 "APPOINTMENT_CANCELLED",
                 "APPOINTMENT_NO_SHOW",
                 "APPOINTMENT_CHECKED_IN",
-                "APPOINTMENT_COMPLETED"
+                "APPOINTMENT_COMPLETED",
+                "QUEUE_ENTRY_CREATED",
+                "QUEUE_ENTRY_CALLED",
+                "QUEUE_ENTRY_STARTED",
+                "QUEUE_ENTRY_SKIPPED",
+                "QUEUE_ENTRY_HELD",
+                "QUEUE_ENTRY_RESUMED",
+                "QUEUE_ENTRY_COMPLETED",
+                "QUEUE_ENTRY_CANCELLED"
             ],
             AuditActions.All);
     }

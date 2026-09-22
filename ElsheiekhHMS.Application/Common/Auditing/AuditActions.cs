@@ -27,6 +27,14 @@ public static class AuditActions
     public const string AppointmentNoShow = "APPOINTMENT_NO_SHOW";
     public const string AppointmentCheckedIn = "APPOINTMENT_CHECKED_IN";
     public const string AppointmentCompleted = "APPOINTMENT_COMPLETED";
+    public const string QueueEntryCreated = "QUEUE_ENTRY_CREATED";
+    public const string QueueEntryCalled = "QUEUE_ENTRY_CALLED";
+    public const string QueueEntryStarted = "QUEUE_ENTRY_STARTED";
+    public const string QueueEntrySkipped = "QUEUE_ENTRY_SKIPPED";
+    public const string QueueEntryHeld = "QUEUE_ENTRY_HELD";
+    public const string QueueEntryResumed = "QUEUE_ENTRY_RESUMED";
+    public const string QueueEntryCompleted = "QUEUE_ENTRY_COMPLETED";
+    public const string QueueEntryCancelled = "QUEUE_ENTRY_CANCELLED";
 
     public static IReadOnlyList<string> All { get; } =
     [
@@ -54,6 +62,14 @@ public static class AuditActions
         AppointmentCancelled,
         AppointmentNoShow,
         AppointmentCheckedIn,
-        AppointmentCompleted
+        AppointmentCompleted,
+        QueueEntryCreated,
+        QueueEntryCalled,
+        QueueEntryStarted,
+        QueueEntrySkipped,
+        QueueEntryHeld,
+        QueueEntryResumed,
+        QueueEntryCompleted,
+        QueueEntryCancelled
     ];
 }

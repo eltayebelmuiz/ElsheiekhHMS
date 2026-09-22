@@ -622,3 +622,50 @@ server-side filtering/sorting, bounded pagination, and cancellation propagation.
 [Appointment service](../ElsheiekhHMS.Application/Appointments/);
 [Appointment persistence](../ElsheiekhHMS.Infrastructure/Persistence/Appointments/);
 [Phase 03D scheduling design](../docs/superpowers/specs/2026-09-21-phase03d-appointment-walk-in-queue-design.md).
+
+## ADR-022 — Phase 07D Queue application service boundaries
+
+**Status:** Implemented; closeout pending
+**Phase:** 07D
+
+### Context
+
+Walk-in queue operations require an EF-free application boundary over the
+approved queue DTOs, the existing `WalkInQueueEntry` lifecycle, and the 07S
+database-backed daily ticket allocator. Queue records represent operational
+waiting workflow and retain only the registered Patient reference.
+
+### Decision
+
+Implement `IQueueService` with bounded reads (`GetByIdAsync`, `SearchAsync`),
+queue creation (`AddAsync`), nurse call, doctor routing, hold/resume,
+completion, and cancellation operations. QueueDate is derived from the
+server-supplied UTC clock in the hospital timezone `Africa/Kigali`; tickets are
+allocated by the existing `QueueTicketAllocator` and are never generated with
+`MAX+1` or process-local state. New entries require an existing Patient and an
+active Department. Active duplicate entries for the same Patient and local
+queue date are rejected; Completed and Cancelled history does not block a
+future entry.
+
+Infrastructure performs the duplicate check inside a serializable transaction
+with a transaction-scoped SQL Server application lock keyed by Patient/date,
+then persists the Queue/AuditLog pair with one `SaveChangesAsync`. Reads use
+direct projections, server-side filters/sorting/pagination, and cancellation.
+Only authenticated users with stable UserId and the existing Administrator or
+Receptionist roles may use this service; Patient self-service and
+Provider-scoped access remain deferred because no safe ownership mapping exists.
+
+### Consequences
+
+Core, ApplicationUser, schema, migrations, snapshot, and package set remain
+unchanged. No queue position, anonymous demographics, automatic Patient or
+Encounter creation, appointment check-in integration, generic repository,
+Unit of Work, MediatR, CQRS, cache, broker, or provider model is introduced.
+Queue lifecycle and historical Department references remain governed by the
+existing Core aggregate.
+
+### Evidence / Notes
+
+[Queue service](../ElsheiekhHMS.Application/Queue/);
+[Queue persistence](../ElsheiekhHMS.Infrastructure/Persistence/Queue/);
+[Queue domain design](../docs/superpowers/specs/2026-09-21-phase03d-appointment-walk-in-queue-design.md).

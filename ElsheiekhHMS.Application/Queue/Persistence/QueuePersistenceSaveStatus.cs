@@ -1,0 +1,9 @@
+namespace ElsheiekhHMS.Application.Queue.Persistence;
+
+public enum QueuePersistenceSaveStatus
+{
+    Saved,
+    DuplicateActive,
+    ConcurrencyConflict,
+    TicketAllocationFailure
+}

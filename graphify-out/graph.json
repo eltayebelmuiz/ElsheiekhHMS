@@ -1,11 +1,11 @@
 {
   "schemaVersion": "1.0",
-  "generatedAtUtc": "2026-09-22T10:22:53.0381117\u002B00:00",
-  "gitCommit": "7332bf85e739979c7b8522b76569c686924ab3e6",
+  "generatedAtUtc": "2026-09-22T10:51:40.1285401\u002B00:00",
+  "gitCommit": "315e2005549c29622e1e998bf59d820de4b7aed8",
   "gitBranch": "main",
   "workingTreeDirty": true,
-  "gitStatusAtGeneration": "M DEVELOPMENT_ROADMAP.md\n M ElsheiekhHMS.Application/Common/Auditing/AuditActions.cs\n M ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs\n M ElsheiekhHMS.Tests/Unit/Application/Auditing/AuditVocabularyTests.cs\n M README.md\n M docs/ARCHITECTURE.md\n M docs/DECISIONS.md\n M graphify-out/GRAPH_REPORT.md\n M graphify-out/graph.html\n M graphify-out/graph.json\n?? ElsheiekhHMS.Application/Appointments/AppointmentService.cs\n?? ElsheiekhHMS.Application/Appointments/Contracts/AppointmentActionRequest.cs\n?? ElsheiekhHMS.Application/Appointments/IAppointmentService.cs\n?? ElsheiekhHMS.Application/Appointments/Persistence/AppointmentPersistenceSaveStatus.cs\n?? ElsheiekhHMS.Application/Appointments/Persistence/IAppointmentPersistence.cs\n?? ElsheiekhHMS.Application/Appointments/Validation/AppointmentActionRequestValidator.cs\n?? ElsheiekhHMS.Infrastructure/Persistence/Appointments/AppointmentPersistence.cs\n?? ElsheiekhHMS.Tests/Integration/Persistence/AppointmentServiceSqlServerTests.cs\n?? ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentServiceTests.cs\n?? Phases.md",
-  "sourceFingerprint": "3002cbd200f8dbb62b498520e9a7ce051e12901733a104cca4699a5a43fabe72",
+  "gitStatusAtGeneration": "M DEVELOPMENT_ROADMAP.md\n M ElsheiekhHMS.Application/Common/Auditing/AuditActions.cs\n M ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs\n M ElsheiekhHMS.Tests/Unit/Application/Auditing/AuditVocabularyTests.cs\n M README.md\n M docs/ARCHITECTURE.md\n M docs/DECISIONS.md\n M graphify-out/GRAPH_REPORT.md\n M graphify-out/graph.html\n M graphify-out/graph.json\n?? ElsheiekhHMS.Application/Queue/Contracts/QueueEntryActionRequest.cs\n?? ElsheiekhHMS.Application/Queue/IQueueService.cs\n?? ElsheiekhHMS.Application/Queue/Persistence/IQueuePersistence.cs\n?? ElsheiekhHMS.Application/Queue/Persistence/QueuePersistenceSaveStatus.cs\n?? ElsheiekhHMS.Application/Queue/QueueService.cs\n?? ElsheiekhHMS.Application/Queue/Validation/QueueEntryActionRequestValidator.cs\n?? ElsheiekhHMS.Infrastructure/Persistence/Queue/QueuePersistence.cs\n?? ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs\n?? ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs\n?? Phases.md",
+  "sourceFingerprint": "1d109c1f69670ef258e6029b202f0eaeed0c01eb0619495969771cb1d62b390e",
   "generatorFingerprint": "03eee0a8853a7e84af6cbe571d34e6f7d820505ac8f5670a719d0d63b113840c",
   "fingerprintAlgorithm": "SHA-256 of ordinal path \u002B NUL \u002B content SHA-256 records joined with LF; sourceManifest defines inputs; graphify-out excluded everywhere",
   "sourceManifest": [
@@ -75,7 +75,7 @@
     },
     {
       "path": "ElsheiekhHMS.Application/Common/Auditing/AuditActions.cs",
-      "sha256": "2b96665629593c00f23dc60441a6e4dfa2da30c587be5face94e87f5c05d166c"
+      "sha256": "0ca46d9f53739c133fd7624d6014d68f53100247f69a5a24200f59fb00a8839a"
     },
     {
       "path": "ElsheiekhHMS.Application/Common/Auditing/AuditActorKinds.cs",
@@ -270,6 +270,10 @@
       "sha256": "e929ff4f41ec4c744a447667c3ebcd2dc448eab660cb0e91cb62dddf7151365d"
     },
     {
+      "path": "ElsheiekhHMS.Application/Queue/Contracts/QueueEntryActionRequest.cs",
+      "sha256": "06a68b6c47d61fdb4b2f4de1ed77d2ee509e36b389a1e777c0c0aeea41c301de"
+    },
+    {
       "path": "ElsheiekhHMS.Application/Queue/Contracts/QueueEntryDetailsDto.cs",
       "sha256": "bf97cdf6257a23a3b9bfcfc63ca92cbdafed591e697e67b335717b1106f70a03"
     },
@@ -290,8 +294,28 @@
       "sha256": "0f6a21ac5164200ddf32b98c9740f1869c72436941ede360fa311fc0c4183e0b"
     },
     {
+      "path": "ElsheiekhHMS.Application/Queue/IQueueService.cs",
+      "sha256": "7fb83dbdb214d2614225ce0c236a34fd7c0769670b485413508279b5f5c9a737"
+    },
+    {
+      "path": "ElsheiekhHMS.Application/Queue/Persistence/IQueuePersistence.cs",
+      "sha256": "f2e68862a02bef7e1261347672beb1050114d66f5a30802251366fafbaad198e"
+    },
+    {
+      "path": "ElsheiekhHMS.Application/Queue/Persistence/QueuePersistenceSaveStatus.cs",
+      "sha256": "1d7e2167b325a4944b3ca9fc06b03092303ea2f7e5c8d457933ae2fc9a19d793"
+    },
+    {
+      "path": "ElsheiekhHMS.Application/Queue/QueueService.cs",
+      "sha256": "54c434976eea878c74181d5ae5b3d0b9c8b854984e63e9d6d807209f1b65e037"
+    },
+    {
       "path": "ElsheiekhHMS.Application/Queue/Validation/AddWalkInQueueEntryRequestValidator.cs",
       "sha256": "b83f37c0941434ad3dca2ba4d73f773419028a800ea734a5b6067d943c6d4c7e"
+    },
+    {
+      "path": "ElsheiekhHMS.Application/Queue/Validation/QueueEntryActionRequestValidator.cs",
+      "sha256": "d04ede30125d19497c1bcf5739d5c3c87469545e26e276b6accec237603a051e"
     },
     {
       "path": "ElsheiekhHMS.Application/Queue/Validation/QueueSearchRequestValidator.cs",
@@ -455,7 +479,7 @@
     },
     {
       "path": "ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs",
-      "sha256": "c6b95b62c523e2bb29f458fbaf22234251a4f3bec29a480b28da887fcd0ed547"
+      "sha256": "6989d80a00aed3aed1eab700f717640a7b68b29c41d9f88b9dd2e9bad2f20b69"
     },
     {
       "path": "ElsheiekhHMS.Infrastructure/Migrations/20260921111137_InitialCreate.Designer.cs",
@@ -546,6 +570,10 @@
       "sha256": "3379c0e4cd34e7455d2b570cedcb4d262c1e606e5764bba3e6d2ddf93230d462"
     },
     {
+      "path": "ElsheiekhHMS.Infrastructure/Persistence/Queue/QueuePersistence.cs",
+      "sha256": "a3634713fc1352143a54b9ff168f405fb476ccbb5c9e09d6a465177dfd182bb3"
+    },
+    {
       "path": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
       "sha256": "6cc9fd9be55e6b7f477c82f95a8127514f07cf172c2f7bf08d55643ce49c04a0"
     },
@@ -572,6 +600,10 @@
     {
       "path": "ElsheiekhHMS.Tests/Integration/Persistence/PatientServiceSqlServerTests.cs",
       "sha256": "684033a133439ea41bbd96ce4faffb559ade1415e1f1423a1bfb50800ffec264"
+    },
+    {
+      "path": "ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs",
+      "sha256": "e5b66aac8015dc03763a0e65a691def5aaead080e4375551a6cb2766371c1b7c"
     },
     {
       "path": "ElsheiekhHMS.Tests/Integration/Persistence/SqlServerTestDatabaseFixture.cs",
@@ -603,7 +635,7 @@
     },
     {
       "path": "ElsheiekhHMS.Tests/Unit/Application/Auditing/AuditVocabularyTests.cs",
-      "sha256": "6174511bfb61e01c72329f4563b52a5ec50d42e7a7ed7a1bf724137d2df7dd99"
+      "sha256": "aa86f6c85a7f810717f2bad576bba0b77babb52be0c2467646fce5a4ad426bb1"
     },
     {
       "path": "ElsheiekhHMS.Tests/Unit/Application/Common/Contracts/PageRequestTests.cs",
@@ -644,6 +676,10 @@
     {
       "path": "ElsheiekhHMS.Tests/Unit/Application/Queue/QueueContractTests.cs",
       "sha256": "6d5aad46182975ce56dd78f157a960388fba89dc8fff3a1f304e00ff3ef2c0bf"
+    },
+    {
+      "path": "ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs",
+      "sha256": "f61058393ef93f14c636bffcc64aa4be4ba666947c5bb7900e00ca2bc00168a8"
     },
     {
       "path": "ElsheiekhHMS.Tests/Unit/Application/Queue/QueueValidationTests.cs",
@@ -807,7 +843,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "3bd9fe16202ee196ee9ddbc9a19a833dec12310a6c0c488c2d61fc0611908249"
+      "sha256": "54e1ef1483f604745ced8511e1ce3f9a6e31e22f471d2f48f5c97fdb59b09617"
     }
   ],
   "repository": {
@@ -817,16 +853,16 @@
   },
   "summary": {
     "projectCount": 5,
-    "sourceFileCount": 182,
+    "sourceFileCount": 191,
     "razorFileCount": 11,
-    "typeCount": 211,
-    "interfaceCount": 10,
+    "typeCount": 228,
+    "interfaceCount": 12,
     "testClassCount": 11,
     "testMethodCount": 76,
     "testCount": 113,
     "dynamicTheoryCount": 0,
-    "nodeCount": 487,
-    "edgeCount": 907
+    "nodeCount": 516,
+    "edgeCount": 974
   },
   "projects": [
     {
@@ -913,12 +949,18 @@
         "ElsheiekhHMS.Application/Patients/Validation/UpdatePatientDemographicsRequestValidator.cs",
         "ElsheiekhHMS.Application/Patients/Validation/UpdatePatientIdentifiersRequestValidator.cs",
         "ElsheiekhHMS.Application/Queue/Contracts/AddWalkInQueueEntryRequest.cs",
+        "ElsheiekhHMS.Application/Queue/Contracts/QueueEntryActionRequest.cs",
         "ElsheiekhHMS.Application/Queue/Contracts/QueueEntryDetailsDto.cs",
         "ElsheiekhHMS.Application/Queue/Contracts/QueueEntrySummaryDto.cs",
         "ElsheiekhHMS.Application/Queue/Contracts/QueueSearchRequest.cs",
         "ElsheiekhHMS.Application/Queue/Contracts/QueueSortField.cs",
         "ElsheiekhHMS.Application/Queue/Contracts/SendToDoctorRequest.cs",
+        "ElsheiekhHMS.Application/Queue/IQueueService.cs",
+        "ElsheiekhHMS.Application/Queue/Persistence/IQueuePersistence.cs",
+        "ElsheiekhHMS.Application/Queue/Persistence/QueuePersistenceSaveStatus.cs",
+        "ElsheiekhHMS.Application/Queue/QueueService.cs",
         "ElsheiekhHMS.Application/Queue/Validation/AddWalkInQueueEntryRequestValidator.cs",
+        "ElsheiekhHMS.Application/Queue/Validation/QueueEntryActionRequestValidator.cs",
         "ElsheiekhHMS.Application/Queue/Validation/QueueSearchRequestValidator.cs",
         "ElsheiekhHMS.Application/Queue/Validation/SendToDoctorRequestValidator.cs"
       ]
@@ -1041,7 +1083,8 @@
         "ElsheiekhHMS.Infrastructure/Persistence/Appointments/AppointmentPersistence.cs",
         "ElsheiekhHMS.Infrastructure/Persistence/Departments/DepartmentPersistence.cs",
         "ElsheiekhHMS.Infrastructure/Persistence/ElsheiekhHmsDbContext.cs",
-        "ElsheiekhHMS.Infrastructure/Persistence/Patients/PatientPersistence.cs"
+        "ElsheiekhHMS.Infrastructure/Persistence/Patients/PatientPersistence.cs",
+        "ElsheiekhHMS.Infrastructure/Persistence/Queue/QueuePersistence.cs"
       ]
     },
     {
@@ -1087,6 +1130,7 @@
         "ElsheiekhHMS.Tests/Integration/Persistence/ElsheiekhHmsDbContextSqlServerTests.cs",
         "ElsheiekhHMS.Tests/Integration/Persistence/IdentityAndAuditLogSqlServerTests.cs",
         "ElsheiekhHMS.Tests/Integration/Persistence/PatientServiceSqlServerTests.cs",
+        "ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs",
         "ElsheiekhHMS.Tests/Integration/Persistence/SqlServerTestDatabaseFixture.cs",
         "ElsheiekhHMS.Tests/Integration/Persistence/SqlServerTestDatabaseGuard.cs",
         "ElsheiekhHMS.Tests/Integration/Persistence/SqlServerTestDatabaseSafetyTests.cs",
@@ -1105,6 +1149,7 @@
         "ElsheiekhHMS.Tests/Unit/Application/Patients/PatientServiceTests.cs",
         "ElsheiekhHMS.Tests/Unit/Application/Patients/PatientValidationTests.cs",
         "ElsheiekhHMS.Tests/Unit/Application/Queue/QueueContractTests.cs",
+        "ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs",
         "ElsheiekhHMS.Tests/Unit/Application/Queue/QueueValidationTests.cs",
         "ElsheiekhHMS.Tests/Unit/Application/Security/SecurityVocabularyTests.cs",
         "ElsheiekhHMS.Tests/Unit/Domain/Common/AuditableEntityTests.cs",
@@ -2184,6 +2229,22 @@
       "dynamicTheories": 0
     },
     {
+      "id": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Queue/Contracts/QueueEntryActionRequest.cs",
+      "name": "QueueEntryActionRequest.cs",
+      "label": "QueueEntryActionRequest.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Application",
+      "file": "ElsheiekhHMS.Application/Queue/Contracts/QueueEntryActionRequest.cs",
+      "source_file": "ElsheiekhHMS.Application/Queue/Contracts/QueueEntryActionRequest.cs",
+      "external": false,
+      "community": 0,
+      "community_name": "ElsheiekhHMS.Application",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
       "id": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Queue/Contracts/QueueEntryDetailsDto.cs",
       "name": "QueueEntryDetailsDto.cs",
       "label": "QueueEntryDetailsDto.cs",
@@ -2264,6 +2325,70 @@
       "dynamicTheories": 0
     },
     {
+      "id": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Queue/IQueueService.cs",
+      "name": "IQueueService.cs",
+      "label": "IQueueService.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Application",
+      "file": "ElsheiekhHMS.Application/Queue/IQueueService.cs",
+      "source_file": "ElsheiekhHMS.Application/Queue/IQueueService.cs",
+      "external": false,
+      "community": 0,
+      "community_name": "ElsheiekhHMS.Application",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Queue/Persistence/IQueuePersistence.cs",
+      "name": "IQueuePersistence.cs",
+      "label": "IQueuePersistence.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Application",
+      "file": "ElsheiekhHMS.Application/Queue/Persistence/IQueuePersistence.cs",
+      "source_file": "ElsheiekhHMS.Application/Queue/Persistence/IQueuePersistence.cs",
+      "external": false,
+      "community": 0,
+      "community_name": "ElsheiekhHMS.Application",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Queue/Persistence/QueuePersistenceSaveStatus.cs",
+      "name": "QueuePersistenceSaveStatus.cs",
+      "label": "QueuePersistenceSaveStatus.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Application",
+      "file": "ElsheiekhHMS.Application/Queue/Persistence/QueuePersistenceSaveStatus.cs",
+      "source_file": "ElsheiekhHMS.Application/Queue/Persistence/QueuePersistenceSaveStatus.cs",
+      "external": false,
+      "community": 0,
+      "community_name": "ElsheiekhHMS.Application",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Queue/QueueService.cs",
+      "name": "QueueService.cs",
+      "label": "QueueService.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Application",
+      "file": "ElsheiekhHMS.Application/Queue/QueueService.cs",
+      "source_file": "ElsheiekhHMS.Application/Queue/QueueService.cs",
+      "external": false,
+      "community": 0,
+      "community_name": "ElsheiekhHMS.Application",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
       "id": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Queue/Validation/AddWalkInQueueEntryRequestValidator.cs",
       "name": "AddWalkInQueueEntryRequestValidator.cs",
       "label": "AddWalkInQueueEntryRequestValidator.cs",
@@ -2272,6 +2397,22 @@
       "project": "ElsheiekhHMS.Application",
       "file": "ElsheiekhHMS.Application/Queue/Validation/AddWalkInQueueEntryRequestValidator.cs",
       "source_file": "ElsheiekhHMS.Application/Queue/Validation/AddWalkInQueueEntryRequestValidator.cs",
+      "external": false,
+      "community": 0,
+      "community_name": "ElsheiekhHMS.Application",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Queue/Validation/QueueEntryActionRequestValidator.cs",
+      "name": "QueueEntryActionRequestValidator.cs",
+      "label": "QueueEntryActionRequestValidator.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Application",
+      "file": "ElsheiekhHMS.Application/Queue/Validation/QueueEntryActionRequestValidator.cs",
+      "source_file": "ElsheiekhHMS.Application/Queue/Validation/QueueEntryActionRequestValidator.cs",
       "external": false,
       "community": 0,
       "community_name": "ElsheiekhHMS.Application",
@@ -3256,6 +3397,22 @@
       "dynamicTheories": 0
     },
     {
+      "id": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Persistence/Queue/QueuePersistence.cs",
+      "name": "QueuePersistence.cs",
+      "label": "QueuePersistence.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Infrastructure",
+      "file": "ElsheiekhHMS.Infrastructure/Persistence/Queue/QueuePersistence.cs",
+      "source_file": "ElsheiekhHMS.Infrastructure/Persistence/Queue/QueuePersistence.cs",
+      "external": false,
+      "community": 2,
+      "community_name": "ElsheiekhHMS.Infrastructure",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
       "id": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/AppointmentCodeAllocatorSqlServerTests.cs",
       "name": "AppointmentCodeAllocatorSqlServerTests.cs",
       "label": "AppointmentCodeAllocatorSqlServerTests.cs",
@@ -3344,6 +3501,22 @@
       "project": "ElsheiekhHMS.Tests",
       "file": "ElsheiekhHMS.Tests/Integration/Persistence/PatientServiceSqlServerTests.cs",
       "source_file": "ElsheiekhHMS.Tests/Integration/Persistence/PatientServiceSqlServerTests.cs",
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs",
+      "name": "QueueServiceSqlServerTests.cs",
+      "label": "QueueServiceSqlServerTests.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Tests",
+      "file": "ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs",
       "external": false,
       "community": 3,
       "community_name": "ElsheiekhHMS.Tests",
@@ -3632,6 +3805,22 @@
       "project": "ElsheiekhHMS.Tests",
       "file": "ElsheiekhHMS.Tests/Unit/Application/Queue/QueueContractTests.cs",
       "source_file": "ElsheiekhHMS.Tests/Unit/Application/Queue/QueueContractTests.cs",
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs",
+      "name": "QueueServiceTests.cs",
+      "label": "QueueServiceTests.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Tests",
+      "file": "ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs",
       "external": false,
       "community": 3,
       "community_name": "ElsheiekhHMS.Tests",
@@ -4518,6 +4707,21 @@
       "dynamicTheories": 0
     },
     {
+      "id": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Queue",
+      "name": "ElsheiekhHMS.Application.Queue",
+      "label": "ElsheiekhHMS.Application.Queue",
+      "kind": "namespace",
+      "type": "namespace",
+      "project": "ElsheiekhHMS.Application",
+      "namespace": "ElsheiekhHMS.Application.Queue",
+      "external": false,
+      "community": 0,
+      "community_name": "ElsheiekhHMS.Application",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
       "id": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Queue.Contracts",
       "name": "ElsheiekhHMS.Application.Queue.Contracts",
       "label": "ElsheiekhHMS.Application.Queue.Contracts",
@@ -4525,6 +4729,21 @@
       "type": "namespace",
       "project": "ElsheiekhHMS.Application",
       "namespace": "ElsheiekhHMS.Application.Queue.Contracts",
+      "external": false,
+      "community": 0,
+      "community_name": "ElsheiekhHMS.Application",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Queue.Persistence",
+      "name": "ElsheiekhHMS.Application.Queue.Persistence",
+      "label": "ElsheiekhHMS.Application.Queue.Persistence",
+      "kind": "namespace",
+      "type": "namespace",
+      "project": "ElsheiekhHMS.Application",
+      "namespace": "ElsheiekhHMS.Application.Queue.Persistence",
       "external": false,
       "community": 0,
       "community_name": "ElsheiekhHMS.Application",
@@ -4900,6 +5119,21 @@
       "type": "namespace",
       "project": "ElsheiekhHMS.Infrastructure",
       "namespace": "ElsheiekhHMS.Infrastructure.Persistence.Patients",
+      "external": false,
+      "community": 2,
+      "community_name": "ElsheiekhHMS.Infrastructure",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Persistence.Queue",
+      "name": "ElsheiekhHMS.Infrastructure.Persistence.Queue",
+      "label": "ElsheiekhHMS.Infrastructure.Persistence.Queue",
+      "kind": "namespace",
+      "type": "namespace",
+      "project": "ElsheiekhHMS.Infrastructure",
+      "namespace": "ElsheiekhHMS.Infrastructure.Persistence.Queue",
       "external": false,
       "community": 2,
       "community_name": "ElsheiekhHMS.Infrastructure",
@@ -6869,6 +7103,30 @@
       "dynamicTheories": 0
     },
     {
+      "id": "type:ElsheiekhHMS.Application.Queue.Contracts.QueueEntryActionRequest",
+      "name": "QueueEntryActionRequest",
+      "label": "QueueEntryActionRequest",
+      "kind": "record",
+      "type": "record",
+      "fullName": "ElsheiekhHMS.Application.Queue.Contracts.QueueEntryActionRequest",
+      "project": "ElsheiekhHMS.Application",
+      "namespace": "ElsheiekhHMS.Application.Queue.Contracts",
+      "file": "ElsheiekhHMS.Application/Queue/Contracts/QueueEntryActionRequest.cs",
+      "source_file": "ElsheiekhHMS.Application/Queue/Contracts/QueueEntryActionRequest.cs",
+      "source_location": "L3",
+      "line": 3,
+      "accessibility": "public",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 0,
+      "community_name": "ElsheiekhHMS.Application",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
       "id": "type:ElsheiekhHMS.Application.Queue.Contracts.QueueEntryDetailsDto",
       "name": "QueueEntryDetailsDto",
       "label": "QueueEntryDetailsDto",
@@ -6989,6 +7247,102 @@
       "dynamicTheories": 0
     },
     {
+      "id": "type:ElsheiekhHMS.Application.Queue.IQueueService",
+      "name": "IQueueService",
+      "label": "IQueueService",
+      "kind": "interface",
+      "type": "interface",
+      "fullName": "ElsheiekhHMS.Application.Queue.IQueueService",
+      "project": "ElsheiekhHMS.Application",
+      "namespace": "ElsheiekhHMS.Application.Queue",
+      "file": "ElsheiekhHMS.Application/Queue/IQueueService.cs",
+      "source_file": "ElsheiekhHMS.Application/Queue/IQueueService.cs",
+      "source_location": "L7",
+      "line": 7,
+      "accessibility": "public",
+      "abstract": true,
+      "sealed": false,
+      "static": false,
+      "external": false,
+      "community": 0,
+      "community_name": "ElsheiekhHMS.Application",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Application.Queue.Persistence.IQueuePersistence",
+      "name": "IQueuePersistence",
+      "label": "IQueuePersistence",
+      "kind": "interface",
+      "type": "interface",
+      "fullName": "ElsheiekhHMS.Application.Queue.Persistence.IQueuePersistence",
+      "project": "ElsheiekhHMS.Application",
+      "namespace": "ElsheiekhHMS.Application.Queue.Persistence",
+      "file": "ElsheiekhHMS.Application/Queue/Persistence/IQueuePersistence.cs",
+      "source_file": "ElsheiekhHMS.Application/Queue/Persistence/IQueuePersistence.cs",
+      "source_location": "L7",
+      "line": 7,
+      "accessibility": "public",
+      "abstract": true,
+      "sealed": false,
+      "static": false,
+      "external": false,
+      "community": 0,
+      "community_name": "ElsheiekhHMS.Application",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Application.Queue.Persistence.QueuePersistenceSaveStatus",
+      "name": "QueuePersistenceSaveStatus",
+      "label": "QueuePersistenceSaveStatus",
+      "kind": "enum",
+      "type": "enum",
+      "fullName": "ElsheiekhHMS.Application.Queue.Persistence.QueuePersistenceSaveStatus",
+      "project": "ElsheiekhHMS.Application",
+      "namespace": "ElsheiekhHMS.Application.Queue.Persistence",
+      "file": "ElsheiekhHMS.Application/Queue/Persistence/QueuePersistenceSaveStatus.cs",
+      "source_file": "ElsheiekhHMS.Application/Queue/Persistence/QueuePersistenceSaveStatus.cs",
+      "source_location": "L3",
+      "line": 3,
+      "accessibility": "public",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 0,
+      "community_name": "ElsheiekhHMS.Application",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Application.Queue.QueueService",
+      "name": "QueueService",
+      "label": "QueueService",
+      "kind": "class",
+      "type": "class",
+      "fullName": "ElsheiekhHMS.Application.Queue.QueueService",
+      "project": "ElsheiekhHMS.Application",
+      "namespace": "ElsheiekhHMS.Application.Queue",
+      "file": "ElsheiekhHMS.Application/Queue/QueueService.cs",
+      "source_file": "ElsheiekhHMS.Application/Queue/QueueService.cs",
+      "source_location": "L15",
+      "line": 15,
+      "accessibility": "public",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 0,
+      "community_name": "ElsheiekhHMS.Application",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
       "id": "type:ElsheiekhHMS.Application.Queue.Validation.AddWalkInQueueEntryRequestValidator",
       "name": "AddWalkInQueueEntryRequestValidator",
       "label": "AddWalkInQueueEntryRequestValidator",
@@ -6999,6 +7353,30 @@
       "namespace": "ElsheiekhHMS.Application.Queue.Validation",
       "file": "ElsheiekhHMS.Application/Queue/Validation/AddWalkInQueueEntryRequestValidator.cs",
       "source_file": "ElsheiekhHMS.Application/Queue/Validation/AddWalkInQueueEntryRequestValidator.cs",
+      "source_location": "L6",
+      "line": 6,
+      "accessibility": "public",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 0,
+      "community_name": "ElsheiekhHMS.Application",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Application.Queue.Validation.QueueEntryActionRequestValidator",
+      "name": "QueueEntryActionRequestValidator",
+      "label": "QueueEntryActionRequestValidator",
+      "kind": "class",
+      "type": "class",
+      "fullName": "ElsheiekhHMS.Application.Queue.Validation.QueueEntryActionRequestValidator",
+      "project": "ElsheiekhHMS.Application",
+      "namespace": "ElsheiekhHMS.Application.Queue.Validation",
+      "file": "ElsheiekhHMS.Application/Queue/Validation/QueueEntryActionRequestValidator.cs",
+      "source_file": "ElsheiekhHMS.Application/Queue/Validation/QueueEntryActionRequestValidator.cs",
       "source_location": "L6",
       "line": 6,
       "accessibility": "public",
@@ -7935,8 +8313,8 @@
       "namespace": "ElsheiekhHMS.Infrastructure",
       "file": "ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs",
       "source_file": "ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs",
-      "source_location": "L31",
-      "line": 31,
+      "source_location": "L34",
+      "line": 34,
       "accessibility": "public",
       "abstract": false,
       "sealed": false,
@@ -8429,6 +8807,54 @@
       "dynamicTheories": 0
     },
     {
+      "id": "type:ElsheiekhHMS.Infrastructure.Persistence.Queue.QueuePersistence",
+      "name": "QueuePersistence",
+      "label": "QueuePersistence",
+      "kind": "class",
+      "type": "class",
+      "fullName": "ElsheiekhHMS.Infrastructure.Persistence.Queue.QueuePersistence",
+      "project": "ElsheiekhHMS.Infrastructure",
+      "namespace": "ElsheiekhHMS.Infrastructure.Persistence.Queue",
+      "file": "ElsheiekhHMS.Infrastructure/Persistence/Queue/QueuePersistence.cs",
+      "source_file": "ElsheiekhHMS.Infrastructure/Persistence/Queue/QueuePersistence.cs",
+      "source_location": "L15",
+      "line": 15,
+      "accessibility": "public",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 2,
+      "community_name": "ElsheiekhHMS.Infrastructure",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Infrastructure.Persistence.Queue.QueuePersistence.QueueEntryDetailsProjection",
+      "name": "QueueEntryDetailsProjection",
+      "label": "QueueEntryDetailsProjection",
+      "kind": "record",
+      "type": "record",
+      "fullName": "ElsheiekhHMS.Infrastructure.Persistence.Queue.QueuePersistence.QueueEntryDetailsProjection",
+      "project": "ElsheiekhHMS.Infrastructure",
+      "namespace": "ElsheiekhHMS.Infrastructure.Persistence.Queue",
+      "file": "ElsheiekhHMS.Infrastructure/Persistence/Queue/QueuePersistence.cs",
+      "source_file": "ElsheiekhHMS.Infrastructure/Persistence/Queue/QueuePersistence.cs",
+      "source_location": "L243",
+      "line": 243,
+      "accessibility": "private",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 2,
+      "community_name": "ElsheiekhHMS.Infrastructure",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
       "id": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentCodeAllocatorSqlServerTests",
       "name": "AppointmentCodeAllocatorSqlServerTests",
       "label": "AppointmentCodeAllocatorSqlServerTests",
@@ -8849,6 +9275,102 @@
       "source_file": "ElsheiekhHMS.Tests/Integration/Persistence/PatientServiceSqlServerTests.cs",
       "source_location": "L89",
       "line": 89,
+      "accessibility": "private",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Tests.Integration.Persistence.QueueServiceSqlServerTests",
+      "name": "QueueServiceSqlServerTests",
+      "label": "QueueServiceSqlServerTests",
+      "kind": "class",
+      "type": "class",
+      "fullName": "ElsheiekhHMS.Tests.Integration.Persistence.QueueServiceSqlServerTests",
+      "project": "ElsheiekhHMS.Tests",
+      "namespace": "ElsheiekhHMS.Tests.Integration.Persistence",
+      "file": "ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs",
+      "source_location": "L17",
+      "line": 17,
+      "accessibility": "public",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Tests.Integration.Persistence.QueueServiceSqlServerTests.FixedTimeProvider",
+      "name": "FixedTimeProvider",
+      "label": "FixedTimeProvider",
+      "kind": "class",
+      "type": "class",
+      "fullName": "ElsheiekhHMS.Tests.Integration.Persistence.QueueServiceSqlServerTests.FixedTimeProvider",
+      "project": "ElsheiekhHMS.Tests",
+      "namespace": "ElsheiekhHMS.Tests.Integration.Persistence",
+      "file": "ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs",
+      "source_location": "L136",
+      "line": 136,
+      "accessibility": "private",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Tests.Integration.Persistence.QueueServiceSqlServerTests.SetupRecords",
+      "name": "SetupRecords",
+      "label": "SetupRecords",
+      "kind": "record",
+      "type": "record",
+      "fullName": "ElsheiekhHMS.Tests.Integration.Persistence.QueueServiceSqlServerTests.SetupRecords",
+      "project": "ElsheiekhHMS.Tests",
+      "namespace": "ElsheiekhHMS.Tests.Integration.Persistence",
+      "file": "ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs",
+      "source_location": "L128",
+      "line": 128,
+      "accessibility": "private",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Tests.Integration.Persistence.QueueServiceSqlServerTests.TestCurrentUser",
+      "name": "TestCurrentUser",
+      "label": "TestCurrentUser",
+      "kind": "record",
+      "type": "record",
+      "fullName": "ElsheiekhHMS.Tests.Integration.Persistence.QueueServiceSqlServerTests.TestCurrentUser",
+      "project": "ElsheiekhHMS.Tests",
+      "namespace": "ElsheiekhHMS.Tests.Integration.Persistence",
+      "file": "ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs",
+      "source_location": "L130",
+      "line": 130,
       "accessibility": "private",
       "abstract": false,
       "sealed": true,
@@ -9598,6 +10120,126 @@
       "source_location": "L7",
       "line": 7,
       "accessibility": "public",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Tests.Unit.Application.Queue.QueueServiceTests",
+      "name": "QueueServiceTests",
+      "label": "QueueServiceTests",
+      "kind": "class",
+      "type": "class",
+      "fullName": "ElsheiekhHMS.Tests.Unit.Application.Queue.QueueServiceTests",
+      "project": "ElsheiekhHMS.Tests",
+      "namespace": "ElsheiekhHMS.Tests.Unit.Application.Queue",
+      "file": "ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs",
+      "source_location": "L13",
+      "line": 13,
+      "accessibility": "public",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Tests.Unit.Application.Queue.QueueServiceTests.FakePersistence",
+      "name": "FakePersistence",
+      "label": "FakePersistence",
+      "kind": "class",
+      "type": "class",
+      "fullName": "ElsheiekhHMS.Tests.Unit.Application.Queue.QueueServiceTests.FakePersistence",
+      "project": "ElsheiekhHMS.Tests",
+      "namespace": "ElsheiekhHMS.Tests.Unit.Application.Queue",
+      "file": "ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs",
+      "source_location": "L190",
+      "line": 190,
+      "accessibility": "private",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Tests.Unit.Application.Queue.QueueServiceTests.FixedTimeProvider",
+      "name": "FixedTimeProvider",
+      "label": "FixedTimeProvider",
+      "kind": "class",
+      "type": "class",
+      "fullName": "ElsheiekhHMS.Tests.Unit.Application.Queue.QueueServiceTests.FixedTimeProvider",
+      "project": "ElsheiekhHMS.Tests",
+      "namespace": "ElsheiekhHMS.Tests.Unit.Application.Queue",
+      "file": "ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs",
+      "source_location": "L173",
+      "line": 173,
+      "accessibility": "private",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Tests.Unit.Application.Queue.QueueServiceTests.RecordingAuditWriter",
+      "name": "RecordingAuditWriter",
+      "label": "RecordingAuditWriter",
+      "kind": "class",
+      "type": "class",
+      "fullName": "ElsheiekhHMS.Tests.Unit.Application.Queue.QueueServiceTests.RecordingAuditWriter",
+      "project": "ElsheiekhHMS.Tests",
+      "namespace": "ElsheiekhHMS.Tests.Unit.Application.Queue",
+      "file": "ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs",
+      "source_location": "L178",
+      "line": 178,
+      "accessibility": "private",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Tests.Unit.Application.Queue.QueueServiceTests.TestCurrentUser",
+      "name": "TestCurrentUser",
+      "label": "TestCurrentUser",
+      "kind": "class",
+      "type": "class",
+      "fullName": "ElsheiekhHMS.Tests.Unit.Application.Queue.QueueServiceTests.TestCurrentUser",
+      "project": "ElsheiekhHMS.Tests",
+      "namespace": "ElsheiekhHMS.Tests.Unit.Application.Queue",
+      "file": "ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs",
+      "source_location": "L165",
+      "line": 165,
+      "accessibility": "private",
       "abstract": false,
       "sealed": true,
       "static": false,
@@ -11227,6 +11869,15 @@
       "weight": 1
     },
     {
+      "source": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Queue/Contracts/QueueEntryActionRequest.cs",
+      "target": "type:ElsheiekhHMS.Application.Queue.Contracts.QueueEntryActionRequest",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Application/Queue/Contracts/QueueEntryActionRequest.cs:L3",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
       "source": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Queue/Contracts/QueueEntryDetailsDto.cs",
       "target": "type:ElsheiekhHMS.Application.Queue.Contracts.QueueEntryDetailsDto",
       "type": "declares",
@@ -11272,10 +11923,55 @@
       "weight": 1
     },
     {
+      "source": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Queue/IQueueService.cs",
+      "target": "type:ElsheiekhHMS.Application.Queue.IQueueService",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Application/Queue/IQueueService.cs:L7",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Queue/Persistence/IQueuePersistence.cs",
+      "target": "type:ElsheiekhHMS.Application.Queue.Persistence.IQueuePersistence",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Application/Queue/Persistence/IQueuePersistence.cs:L7",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Queue/Persistence/QueuePersistenceSaveStatus.cs",
+      "target": "type:ElsheiekhHMS.Application.Queue.Persistence.QueuePersistenceSaveStatus",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Application/Queue/Persistence/QueuePersistenceSaveStatus.cs:L3",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Queue/QueueService.cs",
+      "target": "type:ElsheiekhHMS.Application.Queue.QueueService",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Application/Queue/QueueService.cs:L15",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
       "source": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Queue/Validation/AddWalkInQueueEntryRequestValidator.cs",
       "target": "type:ElsheiekhHMS.Application.Queue.Validation.AddWalkInQueueEntryRequestValidator",
       "type": "declares",
       "evidence": "ElsheiekhHMS.Application/Queue/Validation/AddWalkInQueueEntryRequestValidator.cs:L6",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Queue/Validation/QueueEntryActionRequestValidator.cs",
+      "target": "type:ElsheiekhHMS.Application.Queue.Validation.QueueEntryActionRequestValidator",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Application/Queue/Validation/QueueEntryActionRequestValidator.cs:L6",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -11626,7 +12322,7 @@
       "source": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs",
       "target": "type:ElsheiekhHMS.Infrastructure.InfrastructureServiceExtensions",
       "type": "declares",
-      "evidence": "ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs:L31",
+      "evidence": "ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs:L34",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -11848,6 +12544,24 @@
       "weight": 1
     },
     {
+      "source": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Persistence/Queue/QueuePersistence.cs",
+      "target": "type:ElsheiekhHMS.Infrastructure.Persistence.Queue.QueuePersistence",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Infrastructure/Persistence/Queue/QueuePersistence.cs:L15",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Persistence/Queue/QueuePersistence.cs",
+      "target": "type:ElsheiekhHMS.Infrastructure.Persistence.Queue.QueuePersistence.QueueEntryDetailsProjection",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Infrastructure/Persistence/Queue/QueuePersistence.cs:L243",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
       "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/AppointmentCodeAllocatorSqlServerTests.cs",
       "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentCodeAllocatorSqlServerTests",
       "type": "declares",
@@ -12005,6 +12719,42 @@
       "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.PatientServiceSqlServerTests.TestCurrentUser",
       "type": "declares",
       "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/PatientServiceSqlServerTests.cs:L89",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.QueueServiceSqlServerTests",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs:L17",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.QueueServiceSqlServerTests.FixedTimeProvider",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs:L136",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.QueueServiceSqlServerTests.SetupRecords",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs:L128",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.QueueServiceSqlServerTests.TestCurrentUser",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs:L130",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -12284,6 +13034,51 @@
       "target": "type:ElsheiekhHMS.Tests.Unit.Application.Queue.QueueContractTests",
       "type": "declares",
       "evidence": "ElsheiekhHMS.Tests/Unit/Application/Queue/QueueContractTests.cs:L7",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Application.Queue.QueueServiceTests",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs:L13",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Application.Queue.QueueServiceTests.FakePersistence",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs:L190",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Application.Queue.QueueServiceTests.FixedTimeProvider",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs:L173",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Application.Queue.QueueServiceTests.RecordingAuditWriter",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs:L178",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Application.Queue.QueueServiceTests.TestCurrentUser",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs:L165",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -13163,6 +13958,15 @@
     },
     {
       "source": "project:ElsheiekhHMS.Application",
+      "target": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Queue/Contracts/QueueEntryActionRequest.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Application/ElsheiekhHMS.Application.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Application",
       "target": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Queue/Contracts/QueueEntryDetailsDto.cs",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Application/ElsheiekhHMS.Application.csproj",
@@ -13208,7 +14012,52 @@
     },
     {
       "source": "project:ElsheiekhHMS.Application",
+      "target": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Queue/IQueueService.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Application/ElsheiekhHMS.Application.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Application",
+      "target": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Queue/Persistence/IQueuePersistence.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Application/ElsheiekhHMS.Application.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Application",
+      "target": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Queue/Persistence/QueuePersistenceSaveStatus.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Application/ElsheiekhHMS.Application.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Application",
+      "target": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Queue/QueueService.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Application/ElsheiekhHMS.Application.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Application",
       "target": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Queue/Validation/AddWalkInQueueEntryRequestValidator.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Application/ElsheiekhHMS.Application.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Application",
+      "target": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Queue/Validation/QueueEntryActionRequestValidator.cs",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Application/ElsheiekhHMS.Application.csproj",
       "relation": "contains",
@@ -13397,9 +14246,27 @@
     },
     {
       "source": "project:ElsheiekhHMS.Application",
+      "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Queue",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Application/Queue/IQueueService.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Application",
       "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Queue.Contracts",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Application/Queue/Contracts/AddWalkInQueueEntryRequest.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Application",
+      "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Queue.Persistence",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Application/Queue/Persistence/IQueuePersistence.cs",
       "relation": "contains",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -14045,6 +14912,15 @@
     },
     {
       "source": "project:ElsheiekhHMS.Infrastructure",
+      "target": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Persistence/Queue/QueuePersistence.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Infrastructure/ElsheiekhHMS.Infrastructure.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Infrastructure",
       "target": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs",
@@ -14171,6 +15047,15 @@
     },
     {
       "source": "project:ElsheiekhHMS.Infrastructure",
+      "target": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Persistence.Queue",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Infrastructure/Persistence/Queue/QueuePersistence.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Infrastructure",
       "target": "project:ElsheiekhHMS.Application",
       "type": "project-reference",
       "evidence": "ElsheiekhHMS.Infrastructure/ElsheiekhHMS.Infrastructure.csproj",
@@ -14235,6 +15120,15 @@
     {
       "source": "project:ElsheiekhHMS.Tests",
       "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/PatientServiceSqlServerTests.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Tests",
+      "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
       "relation": "contains",
@@ -14397,6 +15291,15 @@
     {
       "source": "project:ElsheiekhHMS.Tests",
       "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Queue/QueueContractTests.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Tests",
+      "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
       "relation": "contains",
@@ -15970,6 +16873,24 @@
       "weight": 1
     },
     {
+      "source": "type:ElsheiekhHMS.Application.Queue.Contracts.QueueEntryActionRequest",
+      "target": "type:System.IEquatable\u003CT\u003E",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Application/Queue/Contracts/QueueEntryActionRequest.cs:L3",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Application.Queue.Contracts.QueueEntryActionRequest",
+      "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Queue.Contracts",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Application/Queue/Contracts/QueueEntryActionRequest.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
       "source": "type:ElsheiekhHMS.Application.Queue.Contracts.QueueEntryDetailsDto",
       "target": "type:System.IEquatable\u003CT\u003E",
       "type": "implements",
@@ -16051,6 +16972,51 @@
       "weight": 1
     },
     {
+      "source": "type:ElsheiekhHMS.Application.Queue.IQueueService",
+      "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Queue",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Application/Queue/IQueueService.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Application.Queue.Persistence.IQueuePersistence",
+      "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Queue.Persistence",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Application/Queue/Persistence/IQueuePersistence.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Application.Queue.Persistence.QueuePersistenceSaveStatus",
+      "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Queue.Persistence",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Application/Queue/Persistence/QueuePersistenceSaveStatus.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Application.Queue.QueueService",
+      "target": "type:ElsheiekhHMS.Application.Queue.IQueueService",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Application/Queue/QueueService.cs:L15",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Application.Queue.QueueService",
+      "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Queue",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Application/Queue/QueueService.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
       "source": "type:ElsheiekhHMS.Application.Queue.Validation.AddWalkInQueueEntryRequestValidator",
       "target": "type:ElsheiekhHMS.Application.Common.Validation.IRequestValidator\u003CTRequest\u003E",
       "type": "implements",
@@ -16064,6 +17030,24 @@
       "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Queue.Validation",
       "type": "namespace-membership",
       "evidence": "ElsheiekhHMS.Application/Queue/Validation/AddWalkInQueueEntryRequestValidator.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Application.Queue.Validation.QueueEntryActionRequestValidator",
+      "target": "type:ElsheiekhHMS.Application.Common.Validation.IRequestValidator\u003CTRequest\u003E",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Application/Queue/Validation/QueueEntryActionRequestValidator.cs:L6",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Application.Queue.Validation.QueueEntryActionRequestValidator",
+      "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Queue.Validation",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Application/Queue/Validation/QueueEntryActionRequestValidator.cs",
       "relation": "namespace-membership",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -16987,6 +17971,51 @@
       "weight": 1
     },
     {
+      "source": "type:ElsheiekhHMS.Infrastructure.Persistence.Queue.QueuePersistence",
+      "target": "type:ElsheiekhHMS.Infrastructure.Persistence.Queue.QueuePersistence.QueueEntryDetailsProjection",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Infrastructure/Persistence/Queue/QueuePersistence.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Infrastructure.Persistence.Queue.QueuePersistence",
+      "target": "type:ElsheiekhHMS.Application.Queue.Persistence.IQueuePersistence",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Infrastructure/Persistence/Queue/QueuePersistence.cs:L15",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Infrastructure.Persistence.Queue.QueuePersistence",
+      "target": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Persistence.Queue",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Infrastructure/Persistence/Queue/QueuePersistence.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Infrastructure.Persistence.Queue.QueuePersistence.QueueEntryDetailsProjection",
+      "target": "type:System.IEquatable\u003CT\u003E",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Infrastructure/Persistence/Queue/QueuePersistence.cs:L243",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Infrastructure.Persistence.Queue.QueuePersistence.QueueEntryDetailsProjection",
+      "target": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Persistence.Queue",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Infrastructure/Persistence/Queue/QueuePersistence.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
       "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentCodeAllocatorSqlServerTests",
       "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentCodeAllocatorSqlServerTests.FixedTimeProvider",
       "type": "contains",
@@ -17396,6 +18425,105 @@
       "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Integration.Persistence",
       "type": "namespace-membership",
       "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/PatientServiceSqlServerTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.QueueServiceSqlServerTests",
+      "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.QueueServiceSqlServerTests.FixedTimeProvider",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.QueueServiceSqlServerTests",
+      "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.QueueServiceSqlServerTests.SetupRecords",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.QueueServiceSqlServerTests",
+      "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.QueueServiceSqlServerTests.TestCurrentUser",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.QueueServiceSqlServerTests",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Integration.Persistence",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.QueueServiceSqlServerTests.FixedTimeProvider",
+      "target": "type:System.TimeProvider",
+      "type": "inherits",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs:L136",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.QueueServiceSqlServerTests.FixedTimeProvider",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Integration.Persistence",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.QueueServiceSqlServerTests.SetupRecords",
+      "target": "type:System.IEquatable\u003CT\u003E",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs:L128",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.QueueServiceSqlServerTests.SetupRecords",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Integration.Persistence",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.QueueServiceSqlServerTests.TestCurrentUser",
+      "target": "type:ElsheiekhHMS.Application.Common.Security.ICurrentUser",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs:L130",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.QueueServiceSqlServerTests.TestCurrentUser",
+      "target": "type:System.IEquatable\u003CT\u003E",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs:L130",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.QueueServiceSqlServerTests.TestCurrentUser",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Integration.Persistence",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs",
       "relation": "namespace-membership",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -17918,6 +19046,123 @@
       "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Application.Queue",
       "type": "namespace-membership",
       "evidence": "ElsheiekhHMS.Tests/Unit/Application/Queue/QueueContractTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Queue.QueueServiceTests",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Application.Queue.QueueServiceTests.FakePersistence",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Queue.QueueServiceTests",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Application.Queue.QueueServiceTests.FixedTimeProvider",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Queue.QueueServiceTests",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Application.Queue.QueueServiceTests.RecordingAuditWriter",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Queue.QueueServiceTests",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Application.Queue.QueueServiceTests.TestCurrentUser",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Queue.QueueServiceTests",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Application.Queue",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Queue.QueueServiceTests.FakePersistence",
+      "target": "type:ElsheiekhHMS.Application.Queue.Persistence.IQueuePersistence",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs:L190",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Queue.QueueServiceTests.FakePersistence",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Application.Queue",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Queue.QueueServiceTests.FixedTimeProvider",
+      "target": "type:System.TimeProvider",
+      "type": "inherits",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs:L173",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Queue.QueueServiceTests.FixedTimeProvider",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Application.Queue",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Queue.QueueServiceTests.RecordingAuditWriter",
+      "target": "type:ElsheiekhHMS.Application.Common.Auditing.IAuditEventWriter",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs:L178",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Queue.QueueServiceTests.RecordingAuditWriter",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Application.Queue",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Queue.QueueServiceTests.TestCurrentUser",
+      "target": "type:ElsheiekhHMS.Application.Common.Security.ICurrentUser",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs:L165",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Queue.QueueServiceTests.TestCurrentUser",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Application.Queue",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs",
       "relation": "namespace-membership",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -18850,7 +20095,7 @@
       "statusSource": "README.md declaration, not independently certified completion",
       "declaredStatus": [
         {
-          "text": "\u003E **Current development stage:** Phase 07 \u2014 Application Services (07S, 07A, 07B, 07C-P, and 07C implementation complete; 07C closeout pending)",
+          "text": "\u003E **Current development stage:** Phase 07 \u2014 Application Services (07S, 07A, 07B, 07C-P, 07C, and 07D implementation complete; 07D closeout pending)",
           "source": "README.md:L5"
         },
         {
@@ -18942,44 +20187,48 @@
           "source": "README.md:L49"
         },
         {
-          "text": "\u003E **Phase 07C:** \u2705 Appointment Application Service implemented and verified; commit/closeout pending",
+          "text": "\u003E **Phase 07C:** \u2705 Appointment Application Service complete",
           "source": "README.md:L51"
         },
         {
+          "text": "\u003E **Phase 07D:** \u2705 Queue Application Service implemented and verified; closeout pending",
+          "source": "README.md:L53"
+        },
+        {
           "text": "| 01 | Solution \u0026 Architecture | \u2705 Complete |",
-          "source": "README.md:L368"
-        },
-        {
-          "text": "| 02 | Core Foundation | \u2705 Complete |",
-          "source": "README.md:L369"
-        },
-        {
-          "text": "| 03 | Domain Entities | \u2705 Complete |",
           "source": "README.md:L370"
         },
         {
-          "text": "| 04 | EF Core \u0026 Database | \u2705 Complete |",
+          "text": "| 02 | Core Foundation | \u2705 Complete |",
           "source": "README.md:L371"
         },
         {
-          "text": "| 05 | Identity \u0026 Security | \u2705 Complete (05A, 05B, 05C, 05C-A, 05D, and 05E) |",
+          "text": "| 03 | Domain Entities | \u2705 Complete |",
           "source": "README.md:L372"
         },
         {
-          "text": "| 06 | DTOs \u0026 Validation | \u2705 Complete (06A\u201306D) |",
+          "text": "| 04 | EF Core \u0026 Database | \u2705 Complete |",
           "source": "README.md:L373"
         },
         {
-          "text": "| 07 | Application Services | \uD83D\uDFE1 In progress (07S, 07A, 07B, and 07C-P complete) |",
+          "text": "| 05 | Identity \u0026 Security | \u2705 Complete (05A, 05B, 05C, 05C-A, 05D, and 05E) |",
           "source": "README.md:L374"
         },
         {
-          "text": "| 08 | Business Workflows | \u23F3 Not started |",
+          "text": "| 06 | DTOs \u0026 Validation | \u2705 Complete (06A\u201306D) |",
           "source": "README.md:L375"
         },
         {
-          "text": "| 09 | Enterprise Infrastructure | \u23F3 Not started |",
+          "text": "| 07 | Application Services | \uD83D\uDFE1 In progress (07S, 07A, 07B, and 07C-P complete) |",
           "source": "README.md:L376"
+        },
+        {
+          "text": "| 08 | Business Workflows | \u23F3 Not started |",
+          "source": "README.md:L377"
+        },
+        {
+          "text": "| 09 | Enterprise Infrastructure | \u23F3 Not started |",
+          "source": "README.md:L378"
         }
       ]
     }
@@ -19586,6 +20835,15 @@
       "weight": 1
     },
     {
+      "source": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Queue/Contracts/QueueEntryActionRequest.cs",
+      "target": "type:ElsheiekhHMS.Application.Queue.Contracts.QueueEntryActionRequest",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Application/Queue/Contracts/QueueEntryActionRequest.cs:L3",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
       "source": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Queue/Contracts/QueueEntryDetailsDto.cs",
       "target": "type:ElsheiekhHMS.Application.Queue.Contracts.QueueEntryDetailsDto",
       "type": "declares",
@@ -19631,10 +20889,55 @@
       "weight": 1
     },
     {
+      "source": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Queue/IQueueService.cs",
+      "target": "type:ElsheiekhHMS.Application.Queue.IQueueService",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Application/Queue/IQueueService.cs:L7",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Queue/Persistence/IQueuePersistence.cs",
+      "target": "type:ElsheiekhHMS.Application.Queue.Persistence.IQueuePersistence",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Application/Queue/Persistence/IQueuePersistence.cs:L7",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Queue/Persistence/QueuePersistenceSaveStatus.cs",
+      "target": "type:ElsheiekhHMS.Application.Queue.Persistence.QueuePersistenceSaveStatus",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Application/Queue/Persistence/QueuePersistenceSaveStatus.cs:L3",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Queue/QueueService.cs",
+      "target": "type:ElsheiekhHMS.Application.Queue.QueueService",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Application/Queue/QueueService.cs:L15",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
       "source": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Queue/Validation/AddWalkInQueueEntryRequestValidator.cs",
       "target": "type:ElsheiekhHMS.Application.Queue.Validation.AddWalkInQueueEntryRequestValidator",
       "type": "declares",
       "evidence": "ElsheiekhHMS.Application/Queue/Validation/AddWalkInQueueEntryRequestValidator.cs:L6",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Queue/Validation/QueueEntryActionRequestValidator.cs",
+      "target": "type:ElsheiekhHMS.Application.Queue.Validation.QueueEntryActionRequestValidator",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Application/Queue/Validation/QueueEntryActionRequestValidator.cs:L6",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -19985,7 +21288,7 @@
       "source": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs",
       "target": "type:ElsheiekhHMS.Infrastructure.InfrastructureServiceExtensions",
       "type": "declares",
-      "evidence": "ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs:L31",
+      "evidence": "ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs:L34",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -20207,6 +21510,24 @@
       "weight": 1
     },
     {
+      "source": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Persistence/Queue/QueuePersistence.cs",
+      "target": "type:ElsheiekhHMS.Infrastructure.Persistence.Queue.QueuePersistence",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Infrastructure/Persistence/Queue/QueuePersistence.cs:L15",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Persistence/Queue/QueuePersistence.cs",
+      "target": "type:ElsheiekhHMS.Infrastructure.Persistence.Queue.QueuePersistence.QueueEntryDetailsProjection",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Infrastructure/Persistence/Queue/QueuePersistence.cs:L243",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
       "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/AppointmentCodeAllocatorSqlServerTests.cs",
       "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentCodeAllocatorSqlServerTests",
       "type": "declares",
@@ -20364,6 +21685,42 @@
       "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.PatientServiceSqlServerTests.TestCurrentUser",
       "type": "declares",
       "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/PatientServiceSqlServerTests.cs:L89",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.QueueServiceSqlServerTests",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs:L17",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.QueueServiceSqlServerTests.FixedTimeProvider",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs:L136",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.QueueServiceSqlServerTests.SetupRecords",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs:L128",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.QueueServiceSqlServerTests.TestCurrentUser",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs:L130",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -20643,6 +22000,51 @@
       "target": "type:ElsheiekhHMS.Tests.Unit.Application.Queue.QueueContractTests",
       "type": "declares",
       "evidence": "ElsheiekhHMS.Tests/Unit/Application/Queue/QueueContractTests.cs:L7",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Application.Queue.QueueServiceTests",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs:L13",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Application.Queue.QueueServiceTests.FakePersistence",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs:L190",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Application.Queue.QueueServiceTests.FixedTimeProvider",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs:L173",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Application.Queue.QueueServiceTests.RecordingAuditWriter",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs:L178",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Application.Queue.QueueServiceTests.TestCurrentUser",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs:L165",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -21522,6 +22924,15 @@
     },
     {
       "source": "project:ElsheiekhHMS.Application",
+      "target": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Queue/Contracts/QueueEntryActionRequest.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Application/ElsheiekhHMS.Application.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Application",
       "target": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Queue/Contracts/QueueEntryDetailsDto.cs",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Application/ElsheiekhHMS.Application.csproj",
@@ -21567,7 +22978,52 @@
     },
     {
       "source": "project:ElsheiekhHMS.Application",
+      "target": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Queue/IQueueService.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Application/ElsheiekhHMS.Application.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Application",
+      "target": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Queue/Persistence/IQueuePersistence.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Application/ElsheiekhHMS.Application.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Application",
+      "target": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Queue/Persistence/QueuePersistenceSaveStatus.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Application/ElsheiekhHMS.Application.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Application",
+      "target": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Queue/QueueService.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Application/ElsheiekhHMS.Application.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Application",
       "target": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Queue/Validation/AddWalkInQueueEntryRequestValidator.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Application/ElsheiekhHMS.Application.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Application",
+      "target": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Queue/Validation/QueueEntryActionRequestValidator.cs",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Application/ElsheiekhHMS.Application.csproj",
       "relation": "contains",
@@ -21756,9 +23212,27 @@
     },
     {
       "source": "project:ElsheiekhHMS.Application",
+      "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Queue",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Application/Queue/IQueueService.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Application",
       "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Queue.Contracts",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Application/Queue/Contracts/AddWalkInQueueEntryRequest.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Application",
+      "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Queue.Persistence",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Application/Queue/Persistence/IQueuePersistence.cs",
       "relation": "contains",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -22404,6 +23878,15 @@
     },
     {
       "source": "project:ElsheiekhHMS.Infrastructure",
+      "target": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Persistence/Queue/QueuePersistence.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Infrastructure/ElsheiekhHMS.Infrastructure.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Infrastructure",
       "target": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs",
@@ -22530,6 +24013,15 @@
     },
     {
       "source": "project:ElsheiekhHMS.Infrastructure",
+      "target": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Persistence.Queue",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Infrastructure/Persistence/Queue/QueuePersistence.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Infrastructure",
       "target": "project:ElsheiekhHMS.Application",
       "type": "project-reference",
       "evidence": "ElsheiekhHMS.Infrastructure/ElsheiekhHMS.Infrastructure.csproj",
@@ -22594,6 +24086,15 @@
     {
       "source": "project:ElsheiekhHMS.Tests",
       "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/PatientServiceSqlServerTests.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Tests",
+      "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
       "relation": "contains",
@@ -22756,6 +24257,15 @@
     {
       "source": "project:ElsheiekhHMS.Tests",
       "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Queue/QueueContractTests.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Tests",
+      "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
       "relation": "contains",
@@ -24329,6 +25839,24 @@
       "weight": 1
     },
     {
+      "source": "type:ElsheiekhHMS.Application.Queue.Contracts.QueueEntryActionRequest",
+      "target": "type:System.IEquatable\u003CT\u003E",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Application/Queue/Contracts/QueueEntryActionRequest.cs:L3",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Application.Queue.Contracts.QueueEntryActionRequest",
+      "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Queue.Contracts",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Application/Queue/Contracts/QueueEntryActionRequest.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
       "source": "type:ElsheiekhHMS.Application.Queue.Contracts.QueueEntryDetailsDto",
       "target": "type:System.IEquatable\u003CT\u003E",
       "type": "implements",
@@ -24410,6 +25938,51 @@
       "weight": 1
     },
     {
+      "source": "type:ElsheiekhHMS.Application.Queue.IQueueService",
+      "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Queue",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Application/Queue/IQueueService.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Application.Queue.Persistence.IQueuePersistence",
+      "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Queue.Persistence",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Application/Queue/Persistence/IQueuePersistence.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Application.Queue.Persistence.QueuePersistenceSaveStatus",
+      "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Queue.Persistence",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Application/Queue/Persistence/QueuePersistenceSaveStatus.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Application.Queue.QueueService",
+      "target": "type:ElsheiekhHMS.Application.Queue.IQueueService",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Application/Queue/QueueService.cs:L15",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Application.Queue.QueueService",
+      "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Queue",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Application/Queue/QueueService.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
       "source": "type:ElsheiekhHMS.Application.Queue.Validation.AddWalkInQueueEntryRequestValidator",
       "target": "type:ElsheiekhHMS.Application.Common.Validation.IRequestValidator\u003CTRequest\u003E",
       "type": "implements",
@@ -24423,6 +25996,24 @@
       "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Queue.Validation",
       "type": "namespace-membership",
       "evidence": "ElsheiekhHMS.Application/Queue/Validation/AddWalkInQueueEntryRequestValidator.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Application.Queue.Validation.QueueEntryActionRequestValidator",
+      "target": "type:ElsheiekhHMS.Application.Common.Validation.IRequestValidator\u003CTRequest\u003E",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Application/Queue/Validation/QueueEntryActionRequestValidator.cs:L6",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Application.Queue.Validation.QueueEntryActionRequestValidator",
+      "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Queue.Validation",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Application/Queue/Validation/QueueEntryActionRequestValidator.cs",
       "relation": "namespace-membership",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -25346,6 +26937,51 @@
       "weight": 1
     },
     {
+      "source": "type:ElsheiekhHMS.Infrastructure.Persistence.Queue.QueuePersistence",
+      "target": "type:ElsheiekhHMS.Infrastructure.Persistence.Queue.QueuePersistence.QueueEntryDetailsProjection",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Infrastructure/Persistence/Queue/QueuePersistence.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Infrastructure.Persistence.Queue.QueuePersistence",
+      "target": "type:ElsheiekhHMS.Application.Queue.Persistence.IQueuePersistence",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Infrastructure/Persistence/Queue/QueuePersistence.cs:L15",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Infrastructure.Persistence.Queue.QueuePersistence",
+      "target": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Persistence.Queue",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Infrastructure/Persistence/Queue/QueuePersistence.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Infrastructure.Persistence.Queue.QueuePersistence.QueueEntryDetailsProjection",
+      "target": "type:System.IEquatable\u003CT\u003E",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Infrastructure/Persistence/Queue/QueuePersistence.cs:L243",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Infrastructure.Persistence.Queue.QueuePersistence.QueueEntryDetailsProjection",
+      "target": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Persistence.Queue",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Infrastructure/Persistence/Queue/QueuePersistence.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
       "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentCodeAllocatorSqlServerTests",
       "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentCodeAllocatorSqlServerTests.FixedTimeProvider",
       "type": "contains",
@@ -25755,6 +27391,105 @@
       "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Integration.Persistence",
       "type": "namespace-membership",
       "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/PatientServiceSqlServerTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.QueueServiceSqlServerTests",
+      "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.QueueServiceSqlServerTests.FixedTimeProvider",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.QueueServiceSqlServerTests",
+      "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.QueueServiceSqlServerTests.SetupRecords",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.QueueServiceSqlServerTests",
+      "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.QueueServiceSqlServerTests.TestCurrentUser",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.QueueServiceSqlServerTests",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Integration.Persistence",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.QueueServiceSqlServerTests.FixedTimeProvider",
+      "target": "type:System.TimeProvider",
+      "type": "inherits",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs:L136",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.QueueServiceSqlServerTests.FixedTimeProvider",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Integration.Persistence",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.QueueServiceSqlServerTests.SetupRecords",
+      "target": "type:System.IEquatable\u003CT\u003E",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs:L128",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.QueueServiceSqlServerTests.SetupRecords",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Integration.Persistence",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.QueueServiceSqlServerTests.TestCurrentUser",
+      "target": "type:ElsheiekhHMS.Application.Common.Security.ICurrentUser",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs:L130",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.QueueServiceSqlServerTests.TestCurrentUser",
+      "target": "type:System.IEquatable\u003CT\u003E",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs:L130",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.QueueServiceSqlServerTests.TestCurrentUser",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Integration.Persistence",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs",
       "relation": "namespace-membership",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -26277,6 +28012,123 @@
       "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Application.Queue",
       "type": "namespace-membership",
       "evidence": "ElsheiekhHMS.Tests/Unit/Application/Queue/QueueContractTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Queue.QueueServiceTests",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Application.Queue.QueueServiceTests.FakePersistence",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Queue.QueueServiceTests",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Application.Queue.QueueServiceTests.FixedTimeProvider",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Queue.QueueServiceTests",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Application.Queue.QueueServiceTests.RecordingAuditWriter",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Queue.QueueServiceTests",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Application.Queue.QueueServiceTests.TestCurrentUser",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Queue.QueueServiceTests",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Application.Queue",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Queue.QueueServiceTests.FakePersistence",
+      "target": "type:ElsheiekhHMS.Application.Queue.Persistence.IQueuePersistence",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs:L190",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Queue.QueueServiceTests.FakePersistence",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Application.Queue",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Queue.QueueServiceTests.FixedTimeProvider",
+      "target": "type:System.TimeProvider",
+      "type": "inherits",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs:L173",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Queue.QueueServiceTests.FixedTimeProvider",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Application.Queue",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Queue.QueueServiceTests.RecordingAuditWriter",
+      "target": "type:ElsheiekhHMS.Application.Common.Auditing.IAuditEventWriter",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs:L178",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Queue.QueueServiceTests.RecordingAuditWriter",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Application.Queue",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Queue.QueueServiceTests.TestCurrentUser",
+      "target": "type:ElsheiekhHMS.Application.Common.Security.ICurrentUser",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs:L165",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Queue.QueueServiceTests.TestCurrentUser",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Application.Queue",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs",
       "relation": "namespace-membership",
       "confidence": "EXTRACTED",
       "weight": 1
