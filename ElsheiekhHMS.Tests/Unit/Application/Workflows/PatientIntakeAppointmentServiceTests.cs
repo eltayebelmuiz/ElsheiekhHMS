@@ -218,6 +218,25 @@ public sealed class PatientIntakeAppointmentServiceTests
         Assert.Equal(0, appointments.CreateCalls);
     }
 
+    [Theory]
+    [InlineData(RoleNames.Patient, "stable-user")]
+    [InlineData("", null)]
+    public async Task Patient_and_anonymous_users_are_rejected_without_service_calls(
+        string role,
+        string? userId)
+    {
+        var patients = new FakePatientService { Details = Patient(7) };
+        var appointments = new FakeAppointmentService();
+
+        var result = await CreateService(patients, appointments, [role], userId)
+            .IntakeAndScheduleAsync(ExistingRequest(7));
+
+        Assert.Equal("workflow.intake.forbidden", Assert.Single(result.Errors).Code);
+        Assert.Equal(0, patients.GetByIdCalls);
+        Assert.Equal(0, patients.RegisterCalls);
+        Assert.Equal(0, appointments.CreateCalls);
+    }
+
     [Fact]
     public async Task Cancellation_is_propagated_to_the_first_service()
     {
@@ -251,8 +270,9 @@ public sealed class PatientIntakeAppointmentServiceTests
     private static PatientIntakeAppointmentService CreateService(
         FakePatientService patients,
         FakeAppointmentService appointments,
-        IReadOnlyCollection<string>? roles = null) =>
-        new(patients, appointments, new TestCurrentUser("stable-user", roles ?? [RoleNames.Receptionist]));
+        IReadOnlyCollection<string>? roles = null,
+        string? userId = "stable-user") =>
+        new(patients, appointments, new TestCurrentUser(userId, roles ?? [RoleNames.Receptionist]));
 
     private static PatientIntakeAppointmentRequest ExistingRequest(int patientId) =>
         new(patientId, null, AppointmentRequest(patientId));

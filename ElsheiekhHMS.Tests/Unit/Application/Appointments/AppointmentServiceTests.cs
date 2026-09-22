@@ -149,6 +149,34 @@ public sealed class AppointmentServiceTests
         Assert.Equal(0, persistence.SaveChangesCalls);
     }
 
+    [Theory]
+    [InlineData(RoleNames.SystemAdministrator, "stable-user")]
+    [InlineData(RoleNames.Patient, "stable-user")]
+    [InlineData("", null)]
+    public async Task Non_operational_roles_and_anonymous_users_are_rejected_before_every_operation(
+        string role,
+        string? userId)
+    {
+        var persistence = new FakePersistence();
+        var service = CreateService(persistence, new RecordingAuditWriter(), [role], userId);
+
+        var errorCodes = new[]
+        {
+            Assert.Single((await service.GetByIdAsync(7)).Errors).Code,
+            Assert.Single((await service.SearchAsync(new AppointmentSearchRequest(
+                new DateOnly(2026, 9, 22), new DateOnly(2026, 9, 23)))).Errors).Code,
+            Assert.Single((await service.CreateAsync(ValidRequest())).Errors).Code,
+            Assert.Single((await service.CancelAsync(new CancelAppointmentRequest(7, "request", "AQID"))).Errors).Code,
+            Assert.Single((await service.MarkNoShowAsync(new AppointmentActionRequest(7, "AQID"))).Errors).Code,
+            Assert.Single((await service.CheckInAsync(new AppointmentActionRequest(7, "AQID"))).Errors).Code,
+            Assert.Single((await service.CompleteAsync(new AppointmentActionRequest(7, "AQID"))).Errors).Code
+        };
+
+        Assert.All(errorCodes, code => Assert.Equal("appointment.forbidden", code));
+        Assert.Equal(0, persistence.SaveChangesCalls);
+        Assert.Equal(0, persistence.SearchCalls);
+    }
+
     [Fact]
     public async Task Search_cancellation_is_propagated_before_persistence()
     {
@@ -165,10 +193,11 @@ public sealed class AppointmentServiceTests
     private static AppointmentService CreateService(
         FakePersistence persistence,
         RecordingAuditWriter audit,
-        IReadOnlyCollection<string>? roles = null) => new(
+        IReadOnlyCollection<string>? roles = null,
+        string? userId = "stable-user") => new(
             persistence,
             audit,
-            new TestCurrentUser("stable-user", roles ?? [RoleNames.Receptionist]),
+            new TestCurrentUser(userId, roles ?? [RoleNames.Receptionist]),
             new FixedTimeProvider(NowUtc));
 
     private static CreateAppointmentRequest ValidRequest(

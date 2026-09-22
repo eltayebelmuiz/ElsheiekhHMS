@@ -26,6 +26,7 @@
     <ProjectReference Include="..\ElsheiekhHMS.Core\ElsheiekhHMS.Core.csproj" />
     <ProjectReference Include="..\ElsheiekhHMS.Application\ElsheiekhHMS.Application.csproj" />
     <ProjectReference Include="..\ElsheiekhHMS.Infrastructure\ElsheiekhHMS.Infrastructure.csproj" />
+    <ProjectReference Include="..\ElsheiekhHMS.Web\ElsheiekhHMS.Web.csproj" />
   </ItemGroup>
 
 </Project>
