@@ -336,3 +336,17 @@ Encounter behavior, backend/schema/package change, or direct EF access is added.
 Concurrency tokens are carried through lifecycle mutations and stale-operation
 feedback remains safe. External browser QA is tracked in
 `docs/UI_APPOINTMENT_QA_CHECKLIST.md`.
+
+Phase 12F adds only Web-owned Queue operations over the frozen
+`IQueueService` and `IAppointmentArrivalQueueService` contracts. The Queue
+registry uses bounded server-side date/status/priority/record-ID filters,
+sorting, and paging. Walk-in creation is an explicit Patient lookup plus
+Department record selection; QueueDate, sequence/ticket, status, and queue
+position remain backend-owned. Appointment-linked handoff is a separate
+read-only-context workflow that calls `CheckInAndQueueAsync` only, so Patient
+and Department are derived from the Appointment and historical links cannot be
+requeued. Queue details expose only valid operational lifecycle actions and
+carry concurrency tokens without exposing them. No Encounter, consultation,
+Provider ownership, Patient self-service, direct EF access, backend/schema,
+migration, or package change is introduced. External browser QA is tracked in
+`docs/UI_QUEUE_QA_CHECKLIST.md`.

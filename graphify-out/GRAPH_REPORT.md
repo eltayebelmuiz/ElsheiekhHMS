@@ -2,11 +2,11 @@
 
 ## Snapshot
 
-- **generatedAtUtc:** `2026-09-22T19:14:43.8343108+00:00`
+- **generatedAtUtc:** `2026-09-22T19:35:14.8343576+00:00`
 - **gitBranch:** `main`
-- **gitCommit:** `9b07de072b6fafdb43a0ca77677d9765e4847ada`
+- **gitCommit:** `4a1ab782aadeaac5ecede00a3ae135e43d642c89`
 - **workingTreeDirty:** `True`
-- **sourceFingerprint:** `94e146b7f7b6f80ea96abd77121fd33763163346c63b281b0a35358db8642174`
+- **sourceFingerprint:** `1a89abd8cc60cd739d6448d78e784ce607a462aab4459560c812095f0e2b1b6d`
 - Framework: net10.0
 - Structural extraction only: **0 LLM API calls / 0 LLM tokens**. No statistical community clustering is claimed; project ownership supplies the visual groups.
 
@@ -250,7 +250,7 @@ Evaluated direct PackageReference items only. Framework/SDK auto-references and 
 
 Declared by README; not inferred from the existence of classes:
 
-- > **Current development stage:** Phase 12E — Appointment management UI complete; backend remains accepted and frozen — README.md:L5
+- > **Current development stage:** Phase 12F — Queue and Appointment→Queue UI complete; backend remains accepted and frozen — README.md:L5
 - > **Phase 01:** ✅ Complete — README.md:L7
 - > **Phase 02 Setup:** ✅ Complete and verified — README.md:L9
 - > **Phase 03A / 03B / 03C:** ✅ Complete — README.md:L11
@@ -291,15 +291,16 @@ Declared by README; not inferred from the existence of classes:
 - > **Phase 12C:** ✅ Patient registry, server-side search/pagination, registration, details, and concurrency-safe edit UI complete; external browser QA remains required — README.md:L82
 - > **Phase 12D:** ✅ Department registry, search/filter/sort, create, details, edit, and one-way deactivation UI complete; external browser QA remains required — README.md:L84
 - > **Phase 12E:** ✅ Appointment registry, bounded Patient lookup, scheduling, lifecycle details/actions, Kigali presentation, and concurrency-safe mutation UI complete; external browser QA remains required — README.md:L86
--  /  01  /  Solution & Architecture  /  ✅ Complete  /  — README.md:L403
--  /  02  /  Core Foundation  /  ✅ Complete  /  — README.md:L404
--  /  03  /  Domain Entities  /  ✅ Complete  /  — README.md:L405
--  /  04  /  EF Core & Database  /  ✅ Complete  /  — README.md:L406
--  /  05  /  Identity & Security  /  ✅ Complete (05A, 05B, 05C, 05C-A, 05D, and 05E)  /  — README.md:L407
--  /  06  /  DTOs & Validation  /  ✅ Complete (06A–06D)  /  — README.md:L408
--  /  07  /  Application Services  /  ✅ Complete for approved scope (07S, 07A, 07B, 07C-P, 07C, 07D; 07E deferred)  /  — README.md:L409
--  /  08  /  Business Workflows  /  ✅ Complete (08A, 08B-P, 08B)  /  — README.md:L410
--  /  09  /  Enterprise Infrastructure  /  ✅ Complete (09A, 09B)  /  — README.md:L411
+- > **Phase 12F:** ✅ Queue registry, explicit walk-in workflow, queue lifecycle UI, and Appointment→Queue handoff UI complete; external browser QA remains required — README.md:L88
+-  /  01  /  Solution & Architecture  /  ✅ Complete  /  — README.md:L405
+-  /  02  /  Core Foundation  /  ✅ Complete  /  — README.md:L406
+-  /  03  /  Domain Entities  /  ✅ Complete  /  — README.md:L407
+-  /  04  /  EF Core & Database  /  ✅ Complete  /  — README.md:L408
+-  /  05  /  Identity & Security  /  ✅ Complete (05A, 05B, 05C, 05C-A, 05D, and 05E)  /  — README.md:L409
+-  /  06  /  DTOs & Validation  /  ✅ Complete (06A–06D)  /  — README.md:L410
+-  /  07  /  Application Services  /  ✅ Complete for approved scope (07S, 07A, 07B, 07C-P, 07C, 07D; 07E deferred)  /  — README.md:L411
+-  /  08  /  Business Workflows  /  ✅ Complete (08A, 08B-P, 08B)  /  — README.md:L412
+-  /  09  /  Enterprise Infrastructure  /  ✅ Complete (09A, 09B)  /  — README.md:L413
 
 ## Important Files
 
@@ -534,6 +535,10 @@ Declared by README; not inferred from the existence of classes:
 - [ElsheiekhHMS.Web/Components/Pages/Patients/PatientDetails.razor](../ElsheiekhHMS.Web/Components/Pages/Patients/PatientDetails.razor) — ElsheiekhHMS.Web
 - [ElsheiekhHMS.Web/Components/Pages/Patients/PatientEdit.razor](../ElsheiekhHMS.Web/Components/Pages/Patients/PatientEdit.razor) — ElsheiekhHMS.Web
 - [ElsheiekhHMS.Web/Components/Pages/Patients/PatientRegistry.razor](../ElsheiekhHMS.Web/Components/Pages/Patients/PatientRegistry.razor) — ElsheiekhHMS.Web
+- [ElsheiekhHMS.Web/Components/Pages/Queue/AppointmentQueueHandoff.razor](../ElsheiekhHMS.Web/Components/Pages/Queue/AppointmentQueueHandoff.razor) — ElsheiekhHMS.Web
+- [ElsheiekhHMS.Web/Components/Pages/Queue/QueueCreate.razor](../ElsheiekhHMS.Web/Components/Pages/Queue/QueueCreate.razor) — ElsheiekhHMS.Web
+- [ElsheiekhHMS.Web/Components/Pages/Queue/QueueDetails.razor](../ElsheiekhHMS.Web/Components/Pages/Queue/QueueDetails.razor) — ElsheiekhHMS.Web
+- [ElsheiekhHMS.Web/Components/Pages/Queue/QueueRegistry.razor](../ElsheiekhHMS.Web/Components/Pages/Queue/QueueRegistry.razor) — ElsheiekhHMS.Web
 - [ElsheiekhHMS.Web/Components/Routes.razor](../ElsheiekhHMS.Web/Components/Routes.razor) — ElsheiekhHMS.Web
 - [ElsheiekhHMS.Web/Components/Shared/AppAlert.razor](../ElsheiekhHMS.Web/Components/Shared/AppAlert.razor) — ElsheiekhHMS.Web
 - [ElsheiekhHMS.Web/Components/Shared/ConfirmDialog.razor](../ElsheiekhHMS.Web/Components/Shared/ConfirmDialog.razor) — ElsheiekhHMS.Web

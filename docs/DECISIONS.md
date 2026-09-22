@@ -1033,3 +1033,32 @@ Encounter behavior, patient self-service, provider ownership, Core/Application/
 Infrastructure/schema/package change is introduced. Appointment-to-Queue UI is
 deferred to Phase 12F. External browser review is tracked in
 `docs/UI_APPOINTMENT_QA_CHECKLIST.md`.
+
+## ADR-035 — Phase 12F Queue and Appointment→Queue UI
+
+**Status:** Complete
+**Phase:** 12F
+
+### Decision
+
+Implement Queue presentation and workflows entirely in Web over the frozen
+`IQueueService` and `IAppointmentArrivalQueueService` contracts. Provide a
+bounded operational Queue registry, explicit walk-in creation using Patient
+lookup and Department record selection, Queue details, valid status actions,
+and a single Appointment Details → Appointment→Queue handoff entry point.
+Walk-in creation calls `IQueueService.AddAsync`; linked creation calls only
+`IAppointmentArrivalQueueService.CheckInAndQueueAsync`. QueueDate is displayed
+and searched using the approved Africa/Kigali operational date, while creation
+date, ticket sequence, status, duplicate protection, and persistence remain
+backend-owned.
+
+### Consequences
+
+The linked handoff presents Appointment Patient/Department as read-only and
+never submits caller-selected values to the workflow. Existing linked Queue
+entries, including Completed and Cancelled history, remain authoritative and
+cannot be requeued. Queue lifecycle actions preserve concurrency tokens and do
+not complete Appointments, create Encounters, or imply consultation. No
+QueuePosition, drag ordering, polling, Provider ownership, Patient
+self-service, direct EF access, backend/schema/package change is introduced.
+External browser review is tracked in `docs/UI_QUEUE_QA_CHECKLIST.md`.

@@ -206,6 +206,8 @@ h3 { font-size: 1rem; }
 .hms-inline-action { margin: 0 0 var(--hms-space-4); }
 .hms-appointment-table { min-width: 78rem; }
 .hms-lookup-table { min-width: 42rem; }
+.hms-queue-table { min-width: 70rem; }
+.hms-queue-number { font-size: 1.1rem; font-weight: 800; letter-spacing: .04em; }
 .hms-helper-text { line-height: 1.5; }
 @media (max-width: 900px) {
     .hms-form__grid--search { grid-template-columns: 1fr 1fr; }

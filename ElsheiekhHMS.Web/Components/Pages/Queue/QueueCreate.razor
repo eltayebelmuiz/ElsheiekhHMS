@@ -1,0 +1,36 @@
+@page "/queue/new"
+@rendermode InteractiveServer
+@attribute [Authorize(Policy = PolicyNames.CanManageAppointments)]
+
+@inject IQueueService QueueService
+@inject IPatientService PatientService
+@inject NavigationManager Navigation
+
+<PageTitle>Add walk-in</PageTitle>
+<PageHeader Eyebrow="Queue operations" Title="Add walk-in" Description="Create a walk-in queue entry for today. QueueDate, ticket sequence, and status are assigned by the backend."><Actions><a class="btn btn-outline-secondary" href="/queue">Cancel</a></Actions></PageHeader>
+
+<section class="hms-panel" aria-labelledby="walkin-patient-heading"><div class="hms-panel__header"><div><p class="hms-eyebrow">Walk-in workflow</p><h2 id="walkin-patient-heading">Find the patient record</h2></div></div>
+    <form class="hms-form" @onsubmit="SearchPatientsAsync" @onsubmit:preventDefault><div class="hms-form__grid hms-form__grid--search-options"><div class="hms-field"><label for="walkin-patient-search">Name, code, or phone</label><input id="walkin-patient-search" class="form-control" type="search" @bind="_patientSearch" maxlength="100" /></div><div class="hms-form__actions hms-form__actions--inline"><button type="submit" class="btn btn-outline-primary" disabled="@_patientLoading">@(_patientLoading ? "Searching…" : "Find patient")</button></div></div></form>
+    @if (_patientLookupMessage is not null){<p class="hms-helper-text" role="status">@_patientLookupMessage</p>}
+    @if (_patientResults is { Items.Count: > 0 }){<div class="hms-table-wrap"><table class="table hms-table hms-lookup-table"><caption class="visually-hidden">Patient choices for walk-in</caption><thead><tr><th scope="col">Patient code</th><th scope="col">Name</th><th scope="col">Phone</th><th scope="col"><span class="visually-hidden">Action</span></th></tr></thead><tbody>@foreach(var patient in _patientResults.Items){<tr><td>@patient.PatientCode</td><td>@patient.FullName</td><td>@patient.Phone</td><td class="hms-table__actions"><button type="button" class="btn btn-sm btn-outline-primary" @onclick="() => SelectPatient(patient)">Select</button></td></tr>}</tbody></table></div>}
+    @if (_selectedPatient is not null){<AppAlert Tone="AppAlert.AlertTone.Success" Title="Patient selected" Message="@($"{_selectedPatient.PatientCode} · {_selectedPatient.FullName}")" />}
+</section>
+
+@if (_errorMessage is not null){<AppAlert Tone="AppAlert.AlertTone.Danger" Title="Walk-in was not added" Message="@_errorMessage" />}
+<EditForm Model="_model" OnSubmit="AddAsync" class="hms-panel hms-form-panel"><DataAnnotationsValidator /><ValidationSummary /><section aria-labelledby="walkin-details-heading"><h2 id="walkin-details-heading">Queue details</h2><div class="hms-form__grid"><Field Label="Department record ID" Id="walkin-department-id" Required="true"><InputNumber id="walkin-department-id" class="form-control" @bind-Value="_model.DepartmentId" /></Field><Field Label="Priority" Id="walkin-priority" Required="true"><InputSelect id="walkin-priority" class="form-select" @bind-Value="_model.Priority">@foreach(var priority in Enum.GetValues<QueuePriority>()){<option value="@priority">@priority</option>}</InputSelect></Field></div><div class="hms-field"><label for="walkin-notes">Operational notes <span class="hms-helper-text">Optional</span></label><InputTextArea id="walkin-notes" class="form-control" rows="4" maxlength="2000" @bind-Value="_model.Notes" /></div></section><p class="hms-helper-text">The queue date is assigned from the current Africa/Kigali date. The ticket and sequence are generated atomically by the backend.</p><div class="hms-form__actions"><button type="submit" class="btn btn-primary" disabled="@_saving">@(_saving ? "Adding…" : "Add to queue")</button><a class="btn btn-outline-secondary" href="/queue">Cancel</a></div></EditForm>
+
+@code {
+    private readonly WalkInModel _model = new();
+    private string? _patientSearch;
+    private PagedResult<PatientSummaryDto>? _patientResults;
+    private PatientSummaryDto? _selectedPatient;
+    private bool _patientLoading;
+    private string? _patientLookupMessage;
+    private bool _saving;
+    private string? _errorMessage;
+    private async Task SearchPatientsAsync(){_patientLoading=true;_patientLookupMessage=null;try{var result=await PatientService.SearchAsync(new PatientSearchRequest(_patientSearch,page:new PageRequest(1,10)));if(result.IsSuccess&&result.Value is not null){_patientResults=result.Value;_patientLookupMessage=result.Value.Items.Count==0?"No patient records matched that search.":null;}else{_patientResults=null;_patientLookupMessage="The patient lookup could not be completed.";}}catch(OperationCanceledException){throw;}catch{_patientResults=null;_patientLookupMessage="The patient lookup could not be completed. Try again.";}finally{_patientLoading=false;}}
+    private void SelectPatient(PatientSummaryDto patient){_selectedPatient=patient;_model.PatientId=patient.Id;}
+    private async Task AddAsync(){_errorMessage=null;if(_selectedPatient is null){_errorMessage="Select a patient record before adding the walk-in.";return;}if(_model.DepartmentId<=0){_errorMessage="Department record ID must be a positive whole number.";return;}_saving=true;try{var result=await QueueService.AddAsync(new AddWalkInQueueEntryRequest(_model.PatientId,_model.DepartmentId,_model.Priority,_model.Notes));if(result.IsSuccess&&result.Value is not null)Navigation.NavigateTo($"/queue/{result.Value.Id}?created=true");else _errorMessage=ErrorMessage(result.Errors);}catch(OperationCanceledException){throw;}catch{_errorMessage="The queue operation could not be completed. Try again.";}finally{_saving=false;}}
+    private static string ErrorMessage(IReadOnlyList<ServiceError> errors) => errors.FirstOrDefault()?.Code switch { "queue.duplicate_active" => "This patient already has an active queue entry for today.", "queue.department.inactive" => "The selected department is inactive for new queue entries.", _ => errors.FirstOrDefault()?.Message ?? "Review the walk-in details and try again." };
+    private sealed class WalkInModel{public int PatientId{get;set;}public int DepartmentId{get;set;}public QueuePriority Priority{get;set;}=QueuePriority.Normal;public string? Notes{get;set;}}
+}

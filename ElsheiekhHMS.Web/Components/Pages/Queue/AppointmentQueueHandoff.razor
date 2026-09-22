@@ -1,0 +1,34 @@
+@page "/appointments/{AppointmentId:int}/queue"
+@rendermode InteractiveServer
+@attribute [Authorize(Policy = PolicyNames.CanManageAppointments)]
+
+@inject IAppointmentService AppointmentService
+@inject IQueueService QueueService
+@inject IAppointmentArrivalQueueService ArrivalQueueService
+@inject NavigationManager Navigation
+
+<PageTitle>Appointment queue handoff</PageTitle>
+@if(_loading){<LoadingState Message="Loading appointment handoff" />}
+else if(_appointment is null){<ErrorState Title="Appointment handoff unavailable" Message="@(_errorMessage??"The appointment could not be loaded. Try again.")"><Actions><a class="btn btn-outline-secondary" href="/appointments">Return to appointments</a></Actions></ErrorState>}
+else
+{
+    <PageHeader Eyebrow="Appointment arrival" Title="Add appointment to queue" Description="Use the approved appointment arrival workflow. Patient and Department context is read-only and comes from the Appointment."><Actions><a class="btn btn-outline-secondary" href="@($"/appointments/{AppointmentId}")">Back to appointment</a></Actions></PageHeader>
+    @if(_errorMessage is not null){<AppAlert Tone="AppAlert.AlertTone.Danger" Title="Queue handoff needs attention" Message="@_errorMessage" />}
+    @if(_handoff is not null && _handoff.Outcome == AppointmentArrivalQueueOutcome.PartialSuccess){<AppAlert Tone="AppAlert.AlertTone.Warning" Title="Appointment checked in; queue handoff incomplete" Message="@(_handoff.QueueError?.Message??"The queue entry could not be created. You can retry this handoff.")" />}
+    <section class="hms-panel" aria-labelledby="handoff-context-heading"><div class="hms-panel__header"><div><p class="hms-eyebrow">Authoritative Appointment context</p><h2 id="handoff-context-heading">@_appointment.AppointmentCode</h2></div><StatusBadge Text="@_appointment.Status.ToString()" Tone="StatusBadge.StatusTone.Information" /></div><dl class="hms-detail-list"><dt>Patient</dt><dd>Patient record #@_appointment.PatientId</dd><dt>Department</dt><dd>Department record #@_appointment.DepartmentId</dd><dt>Scheduled time</dt><dd>@_appointment.ScheduledDate.ToString("dd MMM yyyy") · @_appointment.ScheduledTime.ToString("HH\\:mm") (Africa/Kigali)</dd><dt>Queue state</dt><dd>@(_existingQueue is null ? "Not linked" : $"Already linked as {_existingQueue.QueueNumber}")</dd></dl></section>
+    @if(_existingQueue is not null){<AppAlert Tone="AppAlert.AlertTone.Information" Title="Appointment already queued" Message="The historical Appointment link remains authoritative; it will not be requeued." /><div class="hms-form__actions"><a class="btn btn-outline-primary" href="@($"/queue/{_existingQueue.Id}")">View queue entry</a></div>}
+    else if(_appointment.Status is AppointmentStatus.Scheduled or AppointmentStatus.Confirmed or AppointmentStatus.CheckedIn)
+    {
+        <EditForm Model="_model" OnSubmit="HandoffAsync" class="hms-panel hms-form-panel"><DataAnnotationsValidator /><ValidationSummary /><section aria-labelledby="handoff-details-heading"><h2 id="handoff-details-heading">Queue handoff</h2><div class="hms-form__grid"><Field Label="Priority" Id="handoff-priority" Required="true"><InputSelect id="handoff-priority" class="form-select" @bind-Value="_model.Priority">@foreach(var priority in Enum.GetValues<QueuePriority>()){<option value="@priority">@priority</option>}</InputSelect></Field></div><div class="hms-field"><label for="handoff-notes">Queue notes <span class="hms-helper-text">Optional</span></label><InputTextArea id="handoff-notes" class="form-control" rows="4" maxlength="2000" @bind-Value="_model.Notes" /></div></section><p class="hms-helper-text">This action may check in a Scheduled or Confirmed Appointment, then creates one linked Queue entry. It never accepts a caller-selected Patient or Department.</p><div class="hms-form__actions"><button type="submit" class="btn btn-primary" disabled="@_saving">@(_saving ? "Handing off…" : "Add appointment to queue")</button></div></EditForm>
+    }
+    else{<AppAlert Tone="AppAlert.AlertTone.Information" Title="Appointment is not eligible" Message="Only Scheduled, Confirmed, or Checked in Appointments can enter the queue workflow." />}
+}
+
+@code {
+    [Parameter] public int AppointmentId {get;set;}
+    private AppointmentDetailsDto? _appointment; private QueueEntryDetailsDto? _existingQueue; private AppointmentArrivalQueueResult? _handoff; private bool _loading; private bool _saving; private string? _errorMessage; private readonly HandoffModel _model=new();
+    protected override async Task OnParametersSetAsync(){_loading=true;_errorMessage=null;try{var appointment=await AppointmentService.GetByIdAsync(AppointmentId);if(!appointment.IsSuccess||appointment.Value is null){_errorMessage=appointment.Errors.FirstOrDefault()?.Message??"The appointment was not found.";return;}_appointment=appointment.Value;var linked=await QueueService.GetByAppointmentIdAsync(AppointmentId);if(linked.IsSuccess)_existingQueue=linked.Value;else if(!linked.Errors.Any(error=>error.Code=="queue.not_found"))_errorMessage=linked.Errors.FirstOrDefault()?.Message??"The linked queue state could not be loaded.";}catch(OperationCanceledException){throw;}catch{_errorMessage="The appointment handoff could not be loaded. Try again.";}finally{_loading=false;}}
+    private async Task HandoffAsync(){if(_appointment is null||string.IsNullOrWhiteSpace(_appointment.ConcurrencyToken))return;_saving=true;_errorMessage=null;_handoff=null;try{var result=await ArrivalQueueService.CheckInAndQueueAsync(new AppointmentArrivalQueueRequest(AppointmentId,_appointment.ConcurrencyToken,_model.Priority,_model.Notes));if(result.IsSuccess&&result.Value is not null){_handoff=result.Value;if(result.Value.Queue is not null)Navigation.NavigateTo($"/queue/{result.Value.Queue.Id}?created=true");else if(result.Value.Outcome==AppointmentArrivalQueueOutcome.ExistingHandoff)_existingQueue=result.Value.Queue;else _appointment=result.Value.Appointment;}else _errorMessage=ErrorMessage(result.Errors);}catch(OperationCanceledException){throw;}catch{_errorMessage="The appointment queue handoff could not be completed. Try again.";}finally{_saving=false;}}
+    private static string ErrorMessage(IReadOnlyList<ServiceError> errors)=>errors.FirstOrDefault()?.Code switch{"arrival.appointment.not_eligible"=>"This Appointment is not eligible for queue handoff.","queue.duplicate_active"=>"This patient already has an active queue entry for today.","queue.duplicate_appointment"=>"This Appointment already has a queue entry.","appointment.concurrency_conflict"=>"This Appointment changed in another operation. Reload it before retrying.",_=>errors.FirstOrDefault()?.Message??"The queue handoff could not be completed."};
+    private sealed class HandoffModel{public QueuePriority Priority{get;set;}=QueuePriority.Normal;public string? Notes{get;set;}}
+}

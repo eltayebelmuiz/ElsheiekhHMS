@@ -80,6 +80,12 @@ Appointment-linked Queue entry must be created through the approved workflow so
 PatientId and DepartmentId come from the Appointment. Do not add clinical,
 billing, laboratory, pharmacy, inpatient, or Provider navigation until their
 backend scope is approved.
+Phase 12F adds the Queue registry, explicit bounded Patient walk-in lookup,
+operational Queue details/lifecycle actions, and the Appointment→Queue handoff
+over the existing Application contracts. QueueDate, sequence/ticket, and
+status remain server-owned; the linked handoff never accepts caller-selected
+Patient or Department values and never requeues a historical Appointment link.
+External browser review is tracked in `docs/UI_QUEUE_QA_CHECKLIST.md`.
 
 ## Tooling guidance
 
