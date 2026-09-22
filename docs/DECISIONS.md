@@ -777,3 +777,40 @@ automatically during appointment lifecycle operations.
 [WalkInQueueEntry](../ElsheiekhHMS.Core/Domain/Scheduling/Entities/WalkInQueueEntry.cs);
 [queue persistence mapping](../ElsheiekhHMS.Infrastructure/Configurations/Entities/WalkInQueueEntryConfiguration.cs);
 [AddAppointmentQueueLink migration](../ElsheiekhHMS.Infrastructure/Migrations/20260922115337_AddAppointmentQueueLink.cs).
+
+## ADR-026 — Phase 08B appointment arrival and queue handoff
+
+**Status:** Implemented; ready for closeout
+**Phase:** 08B
+
+### Decision
+
+Implement `CheckInAndQueueAsync` as a thin, EF-free Application workflow for
+Administrators and Receptionists with a stable UserId. The workflow loads the
+authoritative Appointment through `IAppointmentService`, checks it in through
+the existing `CheckInAsync` operation when it is Scheduled or Confirmed, and
+then creates or recovers the Appointment-linked queue entry through
+`IQueueService`. PatientId and DepartmentId always come from the Appointment;
+QueueService remains authoritative for the Africa/Kigali operational QueueDate,
+active Patient/day duplicate protection, allocation, persistence, and audit.
+
+Already CheckedIn appointments skip a second check-in. Existing linked queue
+entries, including Completed or Cancelled history, are returned as an
+`ExistingHandoff`. A Queue failure after check-in returns `PartialSuccess` and
+keeps the Appointment CheckedIn so the caller can retry. A duplicate-link race
+re-queries the indexed AppointmentId link and returns the winner when available.
+No unrelated walk-in queue entry is attached, no cross-service transaction is
+introduced, and no extra workflow audit event is written.
+
+### Consequences
+
+The workflow adds only Application contracts/service registration and tests. Core,
+ApplicationUser, EF schema, migrations, model snapshot, and packages remain
+unchanged. Appointment completion, no-show, cancellation, Encounter creation,
+Provider ownership, and Patient self-service remain separate concerns.
+
+### Evidence / Notes
+
+[AppointmentArrivalQueueService](../ElsheiekhHMS.Application/Workflows/AppointmentArrival/AppointmentArrivalQueueService.cs);
+[focused workflow tests](../ElsheiekhHMS.Tests/Unit/Application/Workflows/AppointmentArrivalQueueServiceTests.cs);
+[isolated SQL workflow test](../ElsheiekhHMS.Tests/Integration/Persistence/AppointmentArrivalQueueSqlServerTests.cs).

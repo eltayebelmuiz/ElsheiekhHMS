@@ -10,6 +10,7 @@ using ElsheiekhHMS.Application.Queue.Persistence;
 using ElsheiekhHMS.Application.Patients;
 using ElsheiekhHMS.Application.Patients.Persistence;
 using ElsheiekhHMS.Application.Workflows.PatientIntake;
+using ElsheiekhHMS.Application.Workflows.AppointmentArrival;
 using ElsheiekhHMS.Infrastructure.Identity;
 using ElsheiekhHMS.Infrastructure.Identity.Entities;
 using ElsheiekhHMS.Infrastructure.Persistence.Allocation;
@@ -59,6 +60,7 @@ public static class InfrastructureServiceExtensions
         services.AddScoped<IQueuePersistence, QueuePersistence>();
         services.AddScoped<IQueueService, QueueService>();
         services.AddScoped<IPatientIntakeAppointmentService, PatientIntakeAppointmentService>();
+        services.AddScoped<IAppointmentArrivalQueueService, AppointmentArrivalQueueService>();
         services.AddDbContext<ElsheiekhHmsDbContext>((serviceProvider, options) =>
         {
             options.UseSqlServer(connectionString);

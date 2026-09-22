@@ -11,12 +11,12 @@
 <footer>Architectural index, not authoritative source. Check freshness with <code>tools/graphify.ps1 -Check</code> before relying on this snapshot. No network requests or external libraries.</footer>
 <script id="graph-data" type="application/json">{
   "schemaVersion": "1.0",
-  "generatedAtUtc": "2026-09-22T12:05:08.7366735\u002B00:00",
-  "gitCommit": "e504734134a2ee25f1fe03d0dea8d9cc25a142b3",
+  "generatedAtUtc": "2026-09-22T12:29:50.3032244\u002B00:00",
+  "gitCommit": "c22323c482d9659c95f848be016e13a351502362",
   "gitBranch": "main",
   "workingTreeDirty": true,
-  "gitStatusAtGeneration": "M DEVELOPMENT_ROADMAP.md\n M ElsheiekhHMS.Application/Queue/Contracts/AddWalkInQueueEntryRequest.cs\n M ElsheiekhHMS.Application/Queue/Contracts/QueueEntryDetailsDto.cs\n M ElsheiekhHMS.Application/Queue/Contracts/QueueEntrySummaryDto.cs\n M ElsheiekhHMS.Application/Queue/IQueueService.cs\n M ElsheiekhHMS.Application/Queue/Persistence/IQueuePersistence.cs\n M ElsheiekhHMS.Application/Queue/Persistence/QueuePersistenceSaveStatus.cs\n M ElsheiekhHMS.Application/Queue/QueueService.cs\n M ElsheiekhHMS.Application/Queue/Validation/AddWalkInQueueEntryRequestValidator.cs\n M ElsheiekhHMS.Core/Domain/Scheduling/Entities/WalkInQueueEntry.cs\n M ElsheiekhHMS.Infrastructure/Configurations/Entities/WalkInQueueEntryConfiguration.cs\n M ElsheiekhHMS.Infrastructure/Migrations/ElsheiekhHmsDbContextModelSnapshot.cs\n M ElsheiekhHMS.Infrastructure/Persistence/Queue/QueuePersistence.cs\n M ElsheiekhHMS.Tests/Integration/Persistence/ElsheiekhHmsDbContextSqlServerTests.cs\n M ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs\n M ElsheiekhHMS.Tests/Unit/Application/Queue/QueueContractTests.cs\n M ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs\n M ElsheiekhHMS.Tests/Unit/Domain/Scheduling/WalkInQueueEntryTests.cs\n M ElsheiekhHMS.Tests/Unit/Infrastructure/ElsheiekhHmsDbContextModelTests.cs\n M README.md\n M docs/ARCHITECTURE.md\n M docs/DECISIONS.md\n M graphify-out/GRAPH_REPORT.md\n M graphify-out/graph.html\n M graphify-out/graph.json\n?? ElsheiekhHMS.Infrastructure/Migrations/20260922115337_AddAppointmentQueueLink.Designer.cs\n?? ElsheiekhHMS.Infrastructure/Migrations/20260922115337_AddAppointmentQueueLink.cs\n?? Phases.md",
-  "sourceFingerprint": "d692ed4addac7690484cd35c330f729423bfd3fc80acef78d92541308b015672",
+  "gitStatusAtGeneration": "M DEVELOPMENT_ROADMAP.md\n M ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs\n M README.md\n M docs/ARCHITECTURE.md\n M docs/DECISIONS.md\n M graphify-out/GRAPH_REPORT.md\n M graphify-out/graph.html\n M graphify-out/graph.json\n?? ElsheiekhHMS.Application/Workflows/AppointmentArrival/AppointmentArrivalQueueOutcome.cs\n?? ElsheiekhHMS.Application/Workflows/AppointmentArrival/AppointmentArrivalQueueRequest.cs\n?? ElsheiekhHMS.Application/Workflows/AppointmentArrival/AppointmentArrivalQueueResult.cs\n?? ElsheiekhHMS.Application/Workflows/AppointmentArrival/AppointmentArrivalQueueService.cs\n?? ElsheiekhHMS.Application/Workflows/AppointmentArrival/IAppointmentArrivalQueueService.cs\n?? ElsheiekhHMS.Tests/Integration/Persistence/AppointmentArrivalQueueSqlServerTests.cs\n?? ElsheiekhHMS.Tests/Unit/Application/Workflows/AppointmentArrivalQueueServiceTests.cs",
+  "sourceFingerprint": "752d86d1267400c05ddd375637600f4157ff663eba093b3a1c1b5b8c685f84eb",
   "generatorFingerprint": "03eee0a8853a7e84af6cbe571d34e6f7d820505ac8f5670a719d0d63b113840c",
   "fingerprintAlgorithm": "SHA-256 of ordinal path \u002B NUL \u002B content SHA-256 records joined with LF; sourceManifest defines inputs; graphify-out excluded everywhere",
   "sourceManifest": [
@@ -337,6 +337,26 @@
       "sha256": "20e5ec8a52ddb3581cc50ebcb29dd11762c2c0d4a1f0432c7151f85a231c7f1c"
     },
     {
+      "path": "ElsheiekhHMS.Application/Workflows/AppointmentArrival/AppointmentArrivalQueueOutcome.cs",
+      "sha256": "ffe94eede15111956ab55b69dd0bbe44f16b0afa43b3ebcc3967f14473755fd7"
+    },
+    {
+      "path": "ElsheiekhHMS.Application/Workflows/AppointmentArrival/AppointmentArrivalQueueRequest.cs",
+      "sha256": "4e84dc4e1129eccab1f9825f1deb0da54ee8cc269c070b53d06d6df00476ed99"
+    },
+    {
+      "path": "ElsheiekhHMS.Application/Workflows/AppointmentArrival/AppointmentArrivalQueueResult.cs",
+      "sha256": "89c076d8c4c24fbacfb8b91ff209bcfd97eb2324aa1866c583de6093d5eaec35"
+    },
+    {
+      "path": "ElsheiekhHMS.Application/Workflows/AppointmentArrival/AppointmentArrivalQueueService.cs",
+      "sha256": "e157117008fe447bc6ce6d1d9627511450668e75509b2ab56073ce2e156eaa59"
+    },
+    {
+      "path": "ElsheiekhHMS.Application/Workflows/AppointmentArrival/IAppointmentArrivalQueueService.cs",
+      "sha256": "44f3a4abe6e71c38ec1a9dfc46ac5dad5fd39f635462c8d54bfcb48706989f26"
+    },
+    {
       "path": "ElsheiekhHMS.Application/Workflows/PatientIntake/IPatientIntakeAppointmentService.cs",
       "sha256": "febabbbfbfa87bb81038095d9af7c4d30c5ef61700dcbd94c7f542c9c04766c1"
     },
@@ -506,7 +526,7 @@
     },
     {
       "path": "ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs",
-      "sha256": "97adad16174fcc5a2d33e43a726691c157c3c0176b814f62051fa99cd2b7c1f1"
+      "sha256": "cbe0a04f6ef7d8496e643383e5f6c10992bda6dd8926ea6a4ebcc338d20131fc"
     },
     {
       "path": "ElsheiekhHMS.Infrastructure/Migrations/20260921111137_InitialCreate.Designer.cs",
@@ -611,6 +631,10 @@
     {
       "path": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
       "sha256": "6cc9fd9be55e6b7f477c82f95a8127514f07cf172c2f7bf08d55643ce49c04a0"
+    },
+    {
+      "path": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentArrivalQueueSqlServerTests.cs",
+      "sha256": "26457313fe11e2f760fe062e38e0a4263b1c2858e6cb7a2630dd721453acd3ab"
     },
     {
       "path": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentCodeAllocatorSqlServerTests.cs",
@@ -723,6 +747,10 @@
     {
       "path": "ElsheiekhHMS.Tests/Unit/Application/Security/SecurityVocabularyTests.cs",
       "sha256": "1ba8f17a78c211856252d747907a1b4ee0090ec90f069d03bb91306cb8a900f0"
+    },
+    {
+      "path": "ElsheiekhHMS.Tests/Unit/Application/Workflows/AppointmentArrivalQueueServiceTests.cs",
+      "sha256": "896cea857de4399962251987f512bd0ee4c8d47e25a0a38e372d7ac844dc21a8"
     },
     {
       "path": "ElsheiekhHMS.Tests/Unit/Application/Workflows/PatientIntakeAppointmentServiceTests.cs",
@@ -882,7 +910,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "ea46bee4e4883a2a5ef2880db46fa63ff5057b0020d51b6e698938c51dfda07c"
+      "sha256": "5bcfbd4cdcca6d08a736cc8c61a1a399514f759f893e0bd9c62377f48d6ef079"
     }
   ],
   "repository": {
@@ -892,16 +920,16 @@
   },
   "summary": {
     "projectCount": 5,
-    "sourceFileCount": 198,
+    "sourceFileCount": 205,
     "razorFileCount": 11,
-    "typeCount": 240,
-    "interfaceCount": 13,
+    "typeCount": 252,
+    "interfaceCount": 14,
     "testClassCount": 11,
     "testMethodCount": 76,
     "testCount": 113,
     "dynamicTheoryCount": 0,
-    "nodeCount": 537,
-    "edgeCount": 1020
+    "nodeCount": 557,
+    "edgeCount": 1067
   },
   "projects": [
     {
@@ -1002,6 +1030,11 @@
         "ElsheiekhHMS.Application/Queue/Validation/QueueEntryActionRequestValidator.cs",
         "ElsheiekhHMS.Application/Queue/Validation/QueueSearchRequestValidator.cs",
         "ElsheiekhHMS.Application/Queue/Validation/SendToDoctorRequestValidator.cs",
+        "ElsheiekhHMS.Application/Workflows/AppointmentArrival/AppointmentArrivalQueueOutcome.cs",
+        "ElsheiekhHMS.Application/Workflows/AppointmentArrival/AppointmentArrivalQueueRequest.cs",
+        "ElsheiekhHMS.Application/Workflows/AppointmentArrival/AppointmentArrivalQueueResult.cs",
+        "ElsheiekhHMS.Application/Workflows/AppointmentArrival/AppointmentArrivalQueueService.cs",
+        "ElsheiekhHMS.Application/Workflows/AppointmentArrival/IAppointmentArrivalQueueService.cs",
         "ElsheiekhHMS.Application/Workflows/PatientIntake/IPatientIntakeAppointmentService.cs",
         "ElsheiekhHMS.Application/Workflows/PatientIntake/PatientIntakeAppointmentRequest.cs",
         "ElsheiekhHMS.Application/Workflows/PatientIntake/PatientIntakeAppointmentResult.cs",
@@ -1169,6 +1202,7 @@
         }
       ],
       "sourceFiles": [
+        "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentArrivalQueueSqlServerTests.cs",
         "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentCodeAllocatorSqlServerTests.cs",
         "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentServiceSqlServerTests.cs",
         "ElsheiekhHMS.Tests/Integration/Persistence/DepartmentServiceSqlServerTests.cs",
@@ -1197,6 +1231,7 @@
         "ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs",
         "ElsheiekhHMS.Tests/Unit/Application/Queue/QueueValidationTests.cs",
         "ElsheiekhHMS.Tests/Unit/Application/Security/SecurityVocabularyTests.cs",
+        "ElsheiekhHMS.Tests/Unit/Application/Workflows/AppointmentArrivalQueueServiceTests.cs",
         "ElsheiekhHMS.Tests/Unit/Application/Workflows/PatientIntakeAppointmentServiceTests.cs",
         "ElsheiekhHMS.Tests/Unit/Domain/Common/AuditableEntityTests.cs",
         "ElsheiekhHMS.Tests/Unit/Domain/Common/BaseEntityTests.cs",
@@ -2499,6 +2534,86 @@
       "dynamicTheories": 0
     },
     {
+      "id": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Workflows/AppointmentArrival/AppointmentArrivalQueueOutcome.cs",
+      "name": "AppointmentArrivalQueueOutcome.cs",
+      "label": "AppointmentArrivalQueueOutcome.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Application",
+      "file": "ElsheiekhHMS.Application/Workflows/AppointmentArrival/AppointmentArrivalQueueOutcome.cs",
+      "source_file": "ElsheiekhHMS.Application/Workflows/AppointmentArrival/AppointmentArrivalQueueOutcome.cs",
+      "external": false,
+      "community": 0,
+      "community_name": "ElsheiekhHMS.Application",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Workflows/AppointmentArrival/AppointmentArrivalQueueRequest.cs",
+      "name": "AppointmentArrivalQueueRequest.cs",
+      "label": "AppointmentArrivalQueueRequest.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Application",
+      "file": "ElsheiekhHMS.Application/Workflows/AppointmentArrival/AppointmentArrivalQueueRequest.cs",
+      "source_file": "ElsheiekhHMS.Application/Workflows/AppointmentArrival/AppointmentArrivalQueueRequest.cs",
+      "external": false,
+      "community": 0,
+      "community_name": "ElsheiekhHMS.Application",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Workflows/AppointmentArrival/AppointmentArrivalQueueResult.cs",
+      "name": "AppointmentArrivalQueueResult.cs",
+      "label": "AppointmentArrivalQueueResult.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Application",
+      "file": "ElsheiekhHMS.Application/Workflows/AppointmentArrival/AppointmentArrivalQueueResult.cs",
+      "source_file": "ElsheiekhHMS.Application/Workflows/AppointmentArrival/AppointmentArrivalQueueResult.cs",
+      "external": false,
+      "community": 0,
+      "community_name": "ElsheiekhHMS.Application",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Workflows/AppointmentArrival/AppointmentArrivalQueueService.cs",
+      "name": "AppointmentArrivalQueueService.cs",
+      "label": "AppointmentArrivalQueueService.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Application",
+      "file": "ElsheiekhHMS.Application/Workflows/AppointmentArrival/AppointmentArrivalQueueService.cs",
+      "source_file": "ElsheiekhHMS.Application/Workflows/AppointmentArrival/AppointmentArrivalQueueService.cs",
+      "external": false,
+      "community": 0,
+      "community_name": "ElsheiekhHMS.Application",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Workflows/AppointmentArrival/IAppointmentArrivalQueueService.cs",
+      "name": "IAppointmentArrivalQueueService.cs",
+      "label": "IAppointmentArrivalQueueService.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Application",
+      "file": "ElsheiekhHMS.Application/Workflows/AppointmentArrival/IAppointmentArrivalQueueService.cs",
+      "source_file": "ElsheiekhHMS.Application/Workflows/AppointmentArrival/IAppointmentArrivalQueueService.cs",
+      "external": false,
+      "community": 0,
+      "community_name": "ElsheiekhHMS.Application",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
       "id": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Workflows/PatientIntake/IPatientIntakeAppointmentService.cs",
       "name": "IPatientIntakeAppointmentService.cs",
       "label": "IPatientIntakeAppointmentService.cs",
@@ -3555,6 +3670,22 @@
       "dynamicTheories": 0
     },
     {
+      "id": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/AppointmentArrivalQueueSqlServerTests.cs",
+      "name": "AppointmentArrivalQueueSqlServerTests.cs",
+      "label": "AppointmentArrivalQueueSqlServerTests.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Tests",
+      "file": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentArrivalQueueSqlServerTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentArrivalQueueSqlServerTests.cs",
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
       "id": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/AppointmentCodeAllocatorSqlServerTests.cs",
       "name": "AppointmentCodeAllocatorSqlServerTests.cs",
       "label": "AppointmentCodeAllocatorSqlServerTests.cs",
@@ -3995,6 +4126,22 @@
       "project": "ElsheiekhHMS.Tests",
       "file": "ElsheiekhHMS.Tests/Unit/Application/Security/SecurityVocabularyTests.cs",
       "source_file": "ElsheiekhHMS.Tests/Unit/Application/Security/SecurityVocabularyTests.cs",
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Workflows/AppointmentArrivalQueueServiceTests.cs",
+      "name": "AppointmentArrivalQueueServiceTests.cs",
+      "label": "AppointmentArrivalQueueServiceTests.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Tests",
+      "file": "ElsheiekhHMS.Tests/Unit/Application/Workflows/AppointmentArrivalQueueServiceTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Unit/Application/Workflows/AppointmentArrivalQueueServiceTests.cs",
       "external": false,
       "community": 3,
       "community_name": "ElsheiekhHMS.Tests",
@@ -4917,6 +5064,21 @@
       "type": "namespace",
       "project": "ElsheiekhHMS.Application",
       "namespace": "ElsheiekhHMS.Application.Queue.Validation",
+      "external": false,
+      "community": 0,
+      "community_name": "ElsheiekhHMS.Application",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Workflows.AppointmentArrival",
+      "name": "ElsheiekhHMS.Application.Workflows.AppointmentArrival",
+      "label": "ElsheiekhHMS.Application.Workflows.AppointmentArrival",
+      "kind": "namespace",
+      "type": "namespace",
+      "project": "ElsheiekhHMS.Application",
+      "namespace": "ElsheiekhHMS.Application.Workflows.AppointmentArrival",
       "external": false,
       "community": 0,
       "community_name": "ElsheiekhHMS.Application",
@@ -7675,6 +7837,126 @@
       "dynamicTheories": 0
     },
     {
+      "id": "type:ElsheiekhHMS.Application.Workflows.AppointmentArrival.AppointmentArrivalQueueOutcome",
+      "name": "AppointmentArrivalQueueOutcome",
+      "label": "AppointmentArrivalQueueOutcome",
+      "kind": "enum",
+      "type": "enum",
+      "fullName": "ElsheiekhHMS.Application.Workflows.AppointmentArrival.AppointmentArrivalQueueOutcome",
+      "project": "ElsheiekhHMS.Application",
+      "namespace": "ElsheiekhHMS.Application.Workflows.AppointmentArrival",
+      "file": "ElsheiekhHMS.Application/Workflows/AppointmentArrival/AppointmentArrivalQueueOutcome.cs",
+      "source_file": "ElsheiekhHMS.Application/Workflows/AppointmentArrival/AppointmentArrivalQueueOutcome.cs",
+      "source_location": "L3",
+      "line": 3,
+      "accessibility": "public",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 0,
+      "community_name": "ElsheiekhHMS.Application",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Application.Workflows.AppointmentArrival.AppointmentArrivalQueueRequest",
+      "name": "AppointmentArrivalQueueRequest",
+      "label": "AppointmentArrivalQueueRequest",
+      "kind": "record",
+      "type": "record",
+      "fullName": "ElsheiekhHMS.Application.Workflows.AppointmentArrival.AppointmentArrivalQueueRequest",
+      "project": "ElsheiekhHMS.Application",
+      "namespace": "ElsheiekhHMS.Application.Workflows.AppointmentArrival",
+      "file": "ElsheiekhHMS.Application/Workflows/AppointmentArrival/AppointmentArrivalQueueRequest.cs",
+      "source_file": "ElsheiekhHMS.Application/Workflows/AppointmentArrival/AppointmentArrivalQueueRequest.cs",
+      "source_location": "L5",
+      "line": 5,
+      "accessibility": "public",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 0,
+      "community_name": "ElsheiekhHMS.Application",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Application.Workflows.AppointmentArrival.AppointmentArrivalQueueResult",
+      "name": "AppointmentArrivalQueueResult",
+      "label": "AppointmentArrivalQueueResult",
+      "kind": "record",
+      "type": "record",
+      "fullName": "ElsheiekhHMS.Application.Workflows.AppointmentArrival.AppointmentArrivalQueueResult",
+      "project": "ElsheiekhHMS.Application",
+      "namespace": "ElsheiekhHMS.Application.Workflows.AppointmentArrival",
+      "file": "ElsheiekhHMS.Application/Workflows/AppointmentArrival/AppointmentArrivalQueueResult.cs",
+      "source_file": "ElsheiekhHMS.Application/Workflows/AppointmentArrival/AppointmentArrivalQueueResult.cs",
+      "source_location": "L7",
+      "line": 7,
+      "accessibility": "public",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 0,
+      "community_name": "ElsheiekhHMS.Application",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Application.Workflows.AppointmentArrival.AppointmentArrivalQueueService",
+      "name": "AppointmentArrivalQueueService",
+      "label": "AppointmentArrivalQueueService",
+      "kind": "class",
+      "type": "class",
+      "fullName": "ElsheiekhHMS.Application.Workflows.AppointmentArrival.AppointmentArrivalQueueService",
+      "project": "ElsheiekhHMS.Application",
+      "namespace": "ElsheiekhHMS.Application.Workflows.AppointmentArrival",
+      "file": "ElsheiekhHMS.Application/Workflows/AppointmentArrival/AppointmentArrivalQueueService.cs",
+      "source_file": "ElsheiekhHMS.Application/Workflows/AppointmentArrival/AppointmentArrivalQueueService.cs",
+      "source_location": "L12",
+      "line": 12,
+      "accessibility": "public",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 0,
+      "community_name": "ElsheiekhHMS.Application",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Application.Workflows.AppointmentArrival.IAppointmentArrivalQueueService",
+      "name": "IAppointmentArrivalQueueService",
+      "label": "IAppointmentArrivalQueueService",
+      "kind": "interface",
+      "type": "interface",
+      "fullName": "ElsheiekhHMS.Application.Workflows.AppointmentArrival.IAppointmentArrivalQueueService",
+      "project": "ElsheiekhHMS.Application",
+      "namespace": "ElsheiekhHMS.Application.Workflows.AppointmentArrival",
+      "file": "ElsheiekhHMS.Application/Workflows/AppointmentArrival/IAppointmentArrivalQueueService.cs",
+      "source_file": "ElsheiekhHMS.Application/Workflows/AppointmentArrival/IAppointmentArrivalQueueService.cs",
+      "source_location": "L5",
+      "line": 5,
+      "accessibility": "public",
+      "abstract": true,
+      "sealed": false,
+      "static": false,
+      "external": false,
+      "community": 0,
+      "community_name": "ElsheiekhHMS.Application",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
       "id": "type:ElsheiekhHMS.Application.Workflows.PatientIntake.IPatientIntakeAppointmentService",
       "name": "IPatientIntakeAppointmentService",
       "label": "IPatientIntakeAppointmentService",
@@ -8669,8 +8951,8 @@
       "namespace": "ElsheiekhHMS.Infrastructure",
       "file": "ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs",
       "source_file": "ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs",
-      "source_location": "L35",
-      "line": 35,
+      "source_location": "L36",
+      "line": 36,
       "accessibility": "public",
       "abstract": false,
       "sealed": false,
@@ -9230,6 +9512,78 @@
       "external": false,
       "community": 2,
       "community_name": "ElsheiekhHMS.Infrastructure",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentArrivalQueueSqlServerTests",
+      "name": "AppointmentArrivalQueueSqlServerTests",
+      "label": "AppointmentArrivalQueueSqlServerTests",
+      "kind": "class",
+      "type": "class",
+      "fullName": "ElsheiekhHMS.Tests.Integration.Persistence.AppointmentArrivalQueueSqlServerTests",
+      "project": "ElsheiekhHMS.Tests",
+      "namespace": "ElsheiekhHMS.Tests.Integration.Persistence",
+      "file": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentArrivalQueueSqlServerTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentArrivalQueueSqlServerTests.cs",
+      "source_location": "L21",
+      "line": 21,
+      "accessibility": "public",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentArrivalQueueSqlServerTests.FixedTimeProvider",
+      "name": "FixedTimeProvider",
+      "label": "FixedTimeProvider",
+      "kind": "class",
+      "type": "class",
+      "fullName": "ElsheiekhHMS.Tests.Integration.Persistence.AppointmentArrivalQueueSqlServerTests.FixedTimeProvider",
+      "project": "ElsheiekhHMS.Tests",
+      "namespace": "ElsheiekhHMS.Tests.Integration.Persistence",
+      "file": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentArrivalQueueSqlServerTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentArrivalQueueSqlServerTests.cs",
+      "source_location": "L83",
+      "line": 83,
+      "accessibility": "private",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentArrivalQueueSqlServerTests.TestCurrentUser",
+      "name": "TestCurrentUser",
+      "label": "TestCurrentUser",
+      "kind": "record",
+      "type": "record",
+      "fullName": "ElsheiekhHMS.Tests.Integration.Persistence.AppointmentArrivalQueueSqlServerTests.TestCurrentUser",
+      "project": "ElsheiekhHMS.Tests",
+      "namespace": "ElsheiekhHMS.Tests.Integration.Persistence",
+      "file": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentArrivalQueueSqlServerTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentArrivalQueueSqlServerTests.cs",
+      "source_location": "L77",
+      "line": 77,
+      "accessibility": "private",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
       "testMethods": [],
       "staticTestCases": 0,
       "dynamicTheories": 0
@@ -10668,6 +11022,102 @@
       "source_location": "L5",
       "line": 5,
       "accessibility": "public",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Tests.Unit.Application.Workflows.AppointmentArrivalQueueServiceTests",
+      "name": "AppointmentArrivalQueueServiceTests",
+      "label": "AppointmentArrivalQueueServiceTests",
+      "kind": "class",
+      "type": "class",
+      "fullName": "ElsheiekhHMS.Tests.Unit.Application.Workflows.AppointmentArrivalQueueServiceTests",
+      "project": "ElsheiekhHMS.Tests",
+      "namespace": "ElsheiekhHMS.Tests.Unit.Application.Workflows",
+      "file": "ElsheiekhHMS.Tests/Unit/Application/Workflows/AppointmentArrivalQueueServiceTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Unit/Application/Workflows/AppointmentArrivalQueueServiceTests.cs",
+      "source_location": "L13",
+      "line": 13,
+      "accessibility": "public",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Tests.Unit.Application.Workflows.AppointmentArrivalQueueServiceTests.FakeAppointmentService",
+      "name": "FakeAppointmentService",
+      "label": "FakeAppointmentService",
+      "kind": "class",
+      "type": "class",
+      "fullName": "ElsheiekhHMS.Tests.Unit.Application.Workflows.AppointmentArrivalQueueServiceTests.FakeAppointmentService",
+      "project": "ElsheiekhHMS.Tests",
+      "namespace": "ElsheiekhHMS.Tests.Unit.Application.Workflows",
+      "file": "ElsheiekhHMS.Tests/Unit/Application/Workflows/AppointmentArrivalQueueServiceTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Unit/Application/Workflows/AppointmentArrivalQueueServiceTests.cs",
+      "source_location": "L185",
+      "line": 185,
+      "accessibility": "private",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Tests.Unit.Application.Workflows.AppointmentArrivalQueueServiceTests.FakeQueueService",
+      "name": "FakeQueueService",
+      "label": "FakeQueueService",
+      "kind": "class",
+      "type": "class",
+      "fullName": "ElsheiekhHMS.Tests.Unit.Application.Workflows.AppointmentArrivalQueueServiceTests.FakeQueueService",
+      "project": "ElsheiekhHMS.Tests",
+      "namespace": "ElsheiekhHMS.Tests.Unit.Application.Workflows",
+      "file": "ElsheiekhHMS.Tests/Unit/Application/Workflows/AppointmentArrivalQueueServiceTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Unit/Application/Workflows/AppointmentArrivalQueueServiceTests.cs",
+      "source_location": "L216",
+      "line": 216,
+      "accessibility": "private",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Tests.Unit.Application.Workflows.AppointmentArrivalQueueServiceTests.TestCurrentUser",
+      "name": "TestCurrentUser",
+      "label": "TestCurrentUser",
+      "kind": "record",
+      "type": "record",
+      "fullName": "ElsheiekhHMS.Tests.Unit.Application.Workflows.AppointmentArrivalQueueServiceTests.TestCurrentUser",
+      "project": "ElsheiekhHMS.Tests",
+      "namespace": "ElsheiekhHMS.Tests.Unit.Application.Workflows",
+      "file": "ElsheiekhHMS.Tests/Unit/Application/Workflows/AppointmentArrivalQueueServiceTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Unit/Application/Workflows/AppointmentArrivalQueueServiceTests.cs",
+      "source_location": "L179",
+      "line": 179,
+      "accessibility": "private",
       "abstract": false,
       "sealed": true,
       "static": false,
@@ -12489,6 +12939,51 @@
       "weight": 1
     },
     {
+      "source": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Workflows/AppointmentArrival/AppointmentArrivalQueueOutcome.cs",
+      "target": "type:ElsheiekhHMS.Application.Workflows.AppointmentArrival.AppointmentArrivalQueueOutcome",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Application/Workflows/AppointmentArrival/AppointmentArrivalQueueOutcome.cs:L3",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Workflows/AppointmentArrival/AppointmentArrivalQueueRequest.cs",
+      "target": "type:ElsheiekhHMS.Application.Workflows.AppointmentArrival.AppointmentArrivalQueueRequest",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Application/Workflows/AppointmentArrival/AppointmentArrivalQueueRequest.cs:L5",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Workflows/AppointmentArrival/AppointmentArrivalQueueResult.cs",
+      "target": "type:ElsheiekhHMS.Application.Workflows.AppointmentArrival.AppointmentArrivalQueueResult",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Application/Workflows/AppointmentArrival/AppointmentArrivalQueueResult.cs:L7",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Workflows/AppointmentArrival/AppointmentArrivalQueueService.cs",
+      "target": "type:ElsheiekhHMS.Application.Workflows.AppointmentArrival.AppointmentArrivalQueueService",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Application/Workflows/AppointmentArrival/AppointmentArrivalQueueService.cs:L12",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Workflows/AppointmentArrival/IAppointmentArrivalQueueService.cs",
+      "target": "type:ElsheiekhHMS.Application.Workflows.AppointmentArrival.IAppointmentArrivalQueueService",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Application/Workflows/AppointmentArrival/IAppointmentArrivalQueueService.cs:L5",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
       "source": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Workflows/PatientIntake/IPatientIntakeAppointmentService.cs",
       "target": "type:ElsheiekhHMS.Application.Workflows.PatientIntake.IPatientIntakeAppointmentService",
       "type": "declares",
@@ -12861,7 +13356,7 @@
       "source": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs",
       "target": "type:ElsheiekhHMS.Infrastructure.InfrastructureServiceExtensions",
       "type": "declares",
-      "evidence": "ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs:L35",
+      "evidence": "ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs:L36",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -13114,6 +13609,33 @@
       "target": "type:ElsheiekhHMS.Infrastructure.Persistence.Queue.QueuePersistence.QueueEntryDetailsProjection",
       "type": "declares",
       "evidence": "ElsheiekhHMS.Infrastructure/Persistence/Queue/QueuePersistence.cs:L277",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/AppointmentArrivalQueueSqlServerTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentArrivalQueueSqlServerTests",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentArrivalQueueSqlServerTests.cs:L21",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/AppointmentArrivalQueueSqlServerTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentArrivalQueueSqlServerTests.FixedTimeProvider",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentArrivalQueueSqlServerTests.cs:L83",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/AppointmentArrivalQueueSqlServerTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentArrivalQueueSqlServerTests.TestCurrentUser",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentArrivalQueueSqlServerTests.cs:L77",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -13654,6 +14176,42 @@
       "target": "type:ElsheiekhHMS.Tests.Unit.Application.Security.SecurityVocabularyTests",
       "type": "declares",
       "evidence": "ElsheiekhHMS.Tests/Unit/Application/Security/SecurityVocabularyTests.cs:L5",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Workflows/AppointmentArrivalQueueServiceTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Application.Workflows.AppointmentArrivalQueueServiceTests",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Workflows/AppointmentArrivalQueueServiceTests.cs:L13",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Workflows/AppointmentArrivalQueueServiceTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Application.Workflows.AppointmentArrivalQueueServiceTests.FakeAppointmentService",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Workflows/AppointmentArrivalQueueServiceTests.cs:L185",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Workflows/AppointmentArrivalQueueServiceTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Application.Workflows.AppointmentArrivalQueueServiceTests.FakeQueueService",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Workflows/AppointmentArrivalQueueServiceTests.cs:L216",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Workflows/AppointmentArrivalQueueServiceTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Application.Workflows.AppointmentArrivalQueueServiceTests.TestCurrentUser",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Workflows/AppointmentArrivalQueueServiceTests.cs:L179",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -14677,6 +15235,51 @@
     },
     {
       "source": "project:ElsheiekhHMS.Application",
+      "target": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Workflows/AppointmentArrival/AppointmentArrivalQueueOutcome.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Application/ElsheiekhHMS.Application.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Application",
+      "target": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Workflows/AppointmentArrival/AppointmentArrivalQueueRequest.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Application/ElsheiekhHMS.Application.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Application",
+      "target": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Workflows/AppointmentArrival/AppointmentArrivalQueueResult.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Application/ElsheiekhHMS.Application.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Application",
+      "target": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Workflows/AppointmentArrival/AppointmentArrivalQueueService.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Application/ElsheiekhHMS.Application.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Application",
+      "target": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Workflows/AppointmentArrival/IAppointmentArrivalQueueService.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Application/ElsheiekhHMS.Application.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Application",
       "target": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Workflows/PatientIntake/IPatientIntakeAppointmentService.cs",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Application/ElsheiekhHMS.Application.csproj",
@@ -14905,6 +15508,15 @@
       "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Queue.Validation",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Application/Queue/Validation/AddWalkInQueueEntryRequestValidator.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Application",
+      "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Workflows.AppointmentArrival",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Application/Workflows/AppointmentArrival/AppointmentArrivalQueueOutcome.cs",
       "relation": "contains",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -15730,6 +16342,15 @@
     },
     {
       "source": "project:ElsheiekhHMS.Tests",
+      "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/AppointmentArrivalQueueSqlServerTests.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Tests",
       "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/AppointmentCodeAllocatorSqlServerTests.cs",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
@@ -15982,6 +16603,15 @@
     },
     {
       "source": "project:ElsheiekhHMS.Tests",
+      "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Workflows/AppointmentArrivalQueueServiceTests.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Tests",
       "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Workflows/PatientIntakeAppointmentServiceTests.cs",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
@@ -16182,7 +16812,7 @@
       "source": "project:ElsheiekhHMS.Tests",
       "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Integration.Persistence",
       "type": "contains",
-      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentCodeAllocatorSqlServerTests.cs",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentArrivalQueueSqlServerTests.cs",
       "relation": "contains",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -16281,7 +16911,7 @@
       "source": "project:ElsheiekhHMS.Tests",
       "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Application.Workflows",
       "type": "contains",
-      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Workflows/PatientIntakeAppointmentServiceTests.cs",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Workflows/AppointmentArrivalQueueServiceTests.cs",
       "relation": "contains",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -17799,6 +18429,78 @@
       "weight": 1
     },
     {
+      "source": "type:ElsheiekhHMS.Application.Workflows.AppointmentArrival.AppointmentArrivalQueueOutcome",
+      "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Workflows.AppointmentArrival",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Application/Workflows/AppointmentArrival/AppointmentArrivalQueueOutcome.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Application.Workflows.AppointmentArrival.AppointmentArrivalQueueRequest",
+      "target": "type:System.IEquatable\u003CT\u003E",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Application/Workflows/AppointmentArrival/AppointmentArrivalQueueRequest.cs:L5",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Application.Workflows.AppointmentArrival.AppointmentArrivalQueueRequest",
+      "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Workflows.AppointmentArrival",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Application/Workflows/AppointmentArrival/AppointmentArrivalQueueRequest.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Application.Workflows.AppointmentArrival.AppointmentArrivalQueueResult",
+      "target": "type:System.IEquatable\u003CT\u003E",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Application/Workflows/AppointmentArrival/AppointmentArrivalQueueResult.cs:L7",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Application.Workflows.AppointmentArrival.AppointmentArrivalQueueResult",
+      "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Workflows.AppointmentArrival",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Application/Workflows/AppointmentArrival/AppointmentArrivalQueueResult.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Application.Workflows.AppointmentArrival.AppointmentArrivalQueueService",
+      "target": "type:ElsheiekhHMS.Application.Workflows.AppointmentArrival.IAppointmentArrivalQueueService",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Application/Workflows/AppointmentArrival/AppointmentArrivalQueueService.cs:L12",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Application.Workflows.AppointmentArrival.AppointmentArrivalQueueService",
+      "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Workflows.AppointmentArrival",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Application/Workflows/AppointmentArrival/AppointmentArrivalQueueService.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Application.Workflows.AppointmentArrival.IAppointmentArrivalQueueService",
+      "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Workflows.AppointmentArrival",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Application/Workflows/AppointmentArrival/IAppointmentArrivalQueueService.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
       "source": "type:ElsheiekhHMS.Application.Workflows.PatientIntake.IPatientIntakeAppointmentService",
       "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Workflows.PatientIntake",
       "type": "namespace-membership",
@@ -18811,6 +19513,78 @@
       "target": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Persistence.Queue",
       "type": "namespace-membership",
       "evidence": "ElsheiekhHMS.Infrastructure/Persistence/Queue/QueuePersistence.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentArrivalQueueSqlServerTests",
+      "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentArrivalQueueSqlServerTests.FixedTimeProvider",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentArrivalQueueSqlServerTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentArrivalQueueSqlServerTests",
+      "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentArrivalQueueSqlServerTests.TestCurrentUser",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentArrivalQueueSqlServerTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentArrivalQueueSqlServerTests",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Integration.Persistence",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentArrivalQueueSqlServerTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentArrivalQueueSqlServerTests.FixedTimeProvider",
+      "target": "type:System.TimeProvider",
+      "type": "inherits",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentArrivalQueueSqlServerTests.cs:L83",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentArrivalQueueSqlServerTests.FixedTimeProvider",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Integration.Persistence",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentArrivalQueueSqlServerTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentArrivalQueueSqlServerTests.TestCurrentUser",
+      "target": "type:ElsheiekhHMS.Application.Common.Security.ICurrentUser",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentArrivalQueueSqlServerTests.cs:L77",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentArrivalQueueSqlServerTests.TestCurrentUser",
+      "target": "type:System.IEquatable\u003CT\u003E",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentArrivalQueueSqlServerTests.cs:L77",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentArrivalQueueSqlServerTests.TestCurrentUser",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Integration.Persistence",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentArrivalQueueSqlServerTests.cs",
       "relation": "namespace-membership",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -19981,6 +20755,105 @@
       "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Application.Security",
       "type": "namespace-membership",
       "evidence": "ElsheiekhHMS.Tests/Unit/Application/Security/SecurityVocabularyTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Workflows.AppointmentArrivalQueueServiceTests",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Application.Workflows.AppointmentArrivalQueueServiceTests.FakeAppointmentService",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Workflows/AppointmentArrivalQueueServiceTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Workflows.AppointmentArrivalQueueServiceTests",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Application.Workflows.AppointmentArrivalQueueServiceTests.FakeQueueService",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Workflows/AppointmentArrivalQueueServiceTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Workflows.AppointmentArrivalQueueServiceTests",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Application.Workflows.AppointmentArrivalQueueServiceTests.TestCurrentUser",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Workflows/AppointmentArrivalQueueServiceTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Workflows.AppointmentArrivalQueueServiceTests",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Application.Workflows",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Workflows/AppointmentArrivalQueueServiceTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Workflows.AppointmentArrivalQueueServiceTests.FakeAppointmentService",
+      "target": "type:ElsheiekhHMS.Application.Appointments.IAppointmentService",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Workflows/AppointmentArrivalQueueServiceTests.cs:L185",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Workflows.AppointmentArrivalQueueServiceTests.FakeAppointmentService",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Application.Workflows",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Workflows/AppointmentArrivalQueueServiceTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Workflows.AppointmentArrivalQueueServiceTests.FakeQueueService",
+      "target": "type:ElsheiekhHMS.Application.Queue.IQueueService",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Workflows/AppointmentArrivalQueueServiceTests.cs:L216",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Workflows.AppointmentArrivalQueueServiceTests.FakeQueueService",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Application.Workflows",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Workflows/AppointmentArrivalQueueServiceTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Workflows.AppointmentArrivalQueueServiceTests.TestCurrentUser",
+      "target": "type:ElsheiekhHMS.Application.Common.Security.ICurrentUser",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Workflows/AppointmentArrivalQueueServiceTests.cs:L179",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Workflows.AppointmentArrivalQueueServiceTests.TestCurrentUser",
+      "target": "type:System.IEquatable\u003CT\u003E",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Workflows/AppointmentArrivalQueueServiceTests.cs:L179",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Workflows.AppointmentArrivalQueueServiceTests.TestCurrentUser",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Application.Workflows",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Workflows/AppointmentArrivalQueueServiceTests.cs",
       "relation": "namespace-membership",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -20985,7 +21858,7 @@
       "statusSource": "README.md declaration, not independently certified completion",
       "declaredStatus": [
         {
-          "text": "\u003E **Current development stage:** Phase 08 \u2014 08A complete; 08B-P Appointment\u2194Queue durable-link prerequisite complete; 08B arrival/queue handoff remains deferred",
+          "text": "\u003E **Current development stage:** Phase 08 \u2014 08A and 08B-P complete; 08B Appointment Arrival \u0026 Queue Handoff implemented and ready for closeout",
           "source": "README.md:L5"
         },
         {
@@ -21101,44 +21974,48 @@
           "source": "README.md:L61"
         },
         {
-          "text": "\u003E **Phase 08:** \uD83D\uDD04 In progress; 08A and 08B-P complete; 08B Staff Appointment Arrival \u0026 Queue Handoff not started",
+          "text": "\u003E **Phase 08B:** \u2705 Appointment Arrival \u0026 Queue Handoff implemented and verified; final closeout remains",
           "source": "README.md:L63"
         },
         {
+          "text": "\u003E **Phase 08:** \uD83D\uDD04 In progress; 08A, 08B-P, and 08B implementation complete; Phase 08 closeout remains",
+          "source": "README.md:L65"
+        },
+        {
           "text": "| 01 | Solution \u0026 Architecture | \u2705 Complete |",
-          "source": "README.md:L380"
-        },
-        {
-          "text": "| 02 | Core Foundation | \u2705 Complete |",
-          "source": "README.md:L381"
-        },
-        {
-          "text": "| 03 | Domain Entities | \u2705 Complete |",
           "source": "README.md:L382"
         },
         {
-          "text": "| 04 | EF Core \u0026 Database | \u2705 Complete |",
+          "text": "| 02 | Core Foundation | \u2705 Complete |",
           "source": "README.md:L383"
         },
         {
-          "text": "| 05 | Identity \u0026 Security | \u2705 Complete (05A, 05B, 05C, 05C-A, 05D, and 05E) |",
+          "text": "| 03 | Domain Entities | \u2705 Complete |",
           "source": "README.md:L384"
         },
         {
-          "text": "| 06 | DTOs \u0026 Validation | \u2705 Complete (06A\u201306D) |",
+          "text": "| 04 | EF Core \u0026 Database | \u2705 Complete |",
           "source": "README.md:L385"
         },
         {
-          "text": "| 07 | Application Services | \u2705 Complete for approved scope (07S, 07A, 07B, 07C-P, 07C, 07D; 07E deferred) |",
+          "text": "| 05 | Identity \u0026 Security | \u2705 Complete (05A, 05B, 05C, 05C-A, 05D, and 05E) |",
           "source": "README.md:L386"
         },
         {
-          "text": "| 08 | Business Workflows | \u23F3 Not started |",
+          "text": "| 06 | DTOs \u0026 Validation | \u2705 Complete (06A\u201306D) |",
           "source": "README.md:L387"
         },
         {
-          "text": "| 09 | Enterprise Infrastructure | \u23F3 Not started |",
+          "text": "| 07 | Application Services | \u2705 Complete for approved scope (07S, 07A, 07B, 07C-P, 07C, 07D; 07E deferred) |",
           "source": "README.md:L388"
+        },
+        {
+          "text": "| 08 | Business Workflows | \u23F3 Not started |",
+          "source": "README.md:L389"
+        },
+        {
+          "text": "| 09 | Enterprise Infrastructure | \u23F3 Not started |",
+          "source": "README.md:L390"
         }
       ]
     }
@@ -21889,6 +22766,51 @@
       "weight": 1
     },
     {
+      "source": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Workflows/AppointmentArrival/AppointmentArrivalQueueOutcome.cs",
+      "target": "type:ElsheiekhHMS.Application.Workflows.AppointmentArrival.AppointmentArrivalQueueOutcome",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Application/Workflows/AppointmentArrival/AppointmentArrivalQueueOutcome.cs:L3",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Workflows/AppointmentArrival/AppointmentArrivalQueueRequest.cs",
+      "target": "type:ElsheiekhHMS.Application.Workflows.AppointmentArrival.AppointmentArrivalQueueRequest",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Application/Workflows/AppointmentArrival/AppointmentArrivalQueueRequest.cs:L5",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Workflows/AppointmentArrival/AppointmentArrivalQueueResult.cs",
+      "target": "type:ElsheiekhHMS.Application.Workflows.AppointmentArrival.AppointmentArrivalQueueResult",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Application/Workflows/AppointmentArrival/AppointmentArrivalQueueResult.cs:L7",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Workflows/AppointmentArrival/AppointmentArrivalQueueService.cs",
+      "target": "type:ElsheiekhHMS.Application.Workflows.AppointmentArrival.AppointmentArrivalQueueService",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Application/Workflows/AppointmentArrival/AppointmentArrivalQueueService.cs:L12",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Workflows/AppointmentArrival/IAppointmentArrivalQueueService.cs",
+      "target": "type:ElsheiekhHMS.Application.Workflows.AppointmentArrival.IAppointmentArrivalQueueService",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Application/Workflows/AppointmentArrival/IAppointmentArrivalQueueService.cs:L5",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
       "source": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Workflows/PatientIntake/IPatientIntakeAppointmentService.cs",
       "target": "type:ElsheiekhHMS.Application.Workflows.PatientIntake.IPatientIntakeAppointmentService",
       "type": "declares",
@@ -22261,7 +23183,7 @@
       "source": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs",
       "target": "type:ElsheiekhHMS.Infrastructure.InfrastructureServiceExtensions",
       "type": "declares",
-      "evidence": "ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs:L35",
+      "evidence": "ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs:L36",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -22514,6 +23436,33 @@
       "target": "type:ElsheiekhHMS.Infrastructure.Persistence.Queue.QueuePersistence.QueueEntryDetailsProjection",
       "type": "declares",
       "evidence": "ElsheiekhHMS.Infrastructure/Persistence/Queue/QueuePersistence.cs:L277",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/AppointmentArrivalQueueSqlServerTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentArrivalQueueSqlServerTests",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentArrivalQueueSqlServerTests.cs:L21",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/AppointmentArrivalQueueSqlServerTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentArrivalQueueSqlServerTests.FixedTimeProvider",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentArrivalQueueSqlServerTests.cs:L83",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/AppointmentArrivalQueueSqlServerTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentArrivalQueueSqlServerTests.TestCurrentUser",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentArrivalQueueSqlServerTests.cs:L77",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -23054,6 +24003,42 @@
       "target": "type:ElsheiekhHMS.Tests.Unit.Application.Security.SecurityVocabularyTests",
       "type": "declares",
       "evidence": "ElsheiekhHMS.Tests/Unit/Application/Security/SecurityVocabularyTests.cs:L5",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Workflows/AppointmentArrivalQueueServiceTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Application.Workflows.AppointmentArrivalQueueServiceTests",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Workflows/AppointmentArrivalQueueServiceTests.cs:L13",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Workflows/AppointmentArrivalQueueServiceTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Application.Workflows.AppointmentArrivalQueueServiceTests.FakeAppointmentService",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Workflows/AppointmentArrivalQueueServiceTests.cs:L185",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Workflows/AppointmentArrivalQueueServiceTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Application.Workflows.AppointmentArrivalQueueServiceTests.FakeQueueService",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Workflows/AppointmentArrivalQueueServiceTests.cs:L216",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Workflows/AppointmentArrivalQueueServiceTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Application.Workflows.AppointmentArrivalQueueServiceTests.TestCurrentUser",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Workflows/AppointmentArrivalQueueServiceTests.cs:L179",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -24077,6 +25062,51 @@
     },
     {
       "source": "project:ElsheiekhHMS.Application",
+      "target": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Workflows/AppointmentArrival/AppointmentArrivalQueueOutcome.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Application/ElsheiekhHMS.Application.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Application",
+      "target": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Workflows/AppointmentArrival/AppointmentArrivalQueueRequest.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Application/ElsheiekhHMS.Application.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Application",
+      "target": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Workflows/AppointmentArrival/AppointmentArrivalQueueResult.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Application/ElsheiekhHMS.Application.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Application",
+      "target": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Workflows/AppointmentArrival/AppointmentArrivalQueueService.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Application/ElsheiekhHMS.Application.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Application",
+      "target": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Workflows/AppointmentArrival/IAppointmentArrivalQueueService.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Application/ElsheiekhHMS.Application.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Application",
       "target": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Workflows/PatientIntake/IPatientIntakeAppointmentService.cs",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Application/ElsheiekhHMS.Application.csproj",
@@ -24305,6 +25335,15 @@
       "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Queue.Validation",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Application/Queue/Validation/AddWalkInQueueEntryRequestValidator.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Application",
+      "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Workflows.AppointmentArrival",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Application/Workflows/AppointmentArrival/AppointmentArrivalQueueOutcome.cs",
       "relation": "contains",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -25130,6 +26169,15 @@
     },
     {
       "source": "project:ElsheiekhHMS.Tests",
+      "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/AppointmentArrivalQueueSqlServerTests.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Tests",
       "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/AppointmentCodeAllocatorSqlServerTests.cs",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
@@ -25382,6 +26430,15 @@
     },
     {
       "source": "project:ElsheiekhHMS.Tests",
+      "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Workflows/AppointmentArrivalQueueServiceTests.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Tests",
       "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Workflows/PatientIntakeAppointmentServiceTests.cs",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
@@ -25582,7 +26639,7 @@
       "source": "project:ElsheiekhHMS.Tests",
       "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Integration.Persistence",
       "type": "contains",
-      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentCodeAllocatorSqlServerTests.cs",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentArrivalQueueSqlServerTests.cs",
       "relation": "contains",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -25681,7 +26738,7 @@
       "source": "project:ElsheiekhHMS.Tests",
       "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Application.Workflows",
       "type": "contains",
-      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Workflows/PatientIntakeAppointmentServiceTests.cs",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Workflows/AppointmentArrivalQueueServiceTests.cs",
       "relation": "contains",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -27199,6 +28256,78 @@
       "weight": 1
     },
     {
+      "source": "type:ElsheiekhHMS.Application.Workflows.AppointmentArrival.AppointmentArrivalQueueOutcome",
+      "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Workflows.AppointmentArrival",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Application/Workflows/AppointmentArrival/AppointmentArrivalQueueOutcome.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Application.Workflows.AppointmentArrival.AppointmentArrivalQueueRequest",
+      "target": "type:System.IEquatable\u003CT\u003E",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Application/Workflows/AppointmentArrival/AppointmentArrivalQueueRequest.cs:L5",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Application.Workflows.AppointmentArrival.AppointmentArrivalQueueRequest",
+      "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Workflows.AppointmentArrival",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Application/Workflows/AppointmentArrival/AppointmentArrivalQueueRequest.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Application.Workflows.AppointmentArrival.AppointmentArrivalQueueResult",
+      "target": "type:System.IEquatable\u003CT\u003E",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Application/Workflows/AppointmentArrival/AppointmentArrivalQueueResult.cs:L7",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Application.Workflows.AppointmentArrival.AppointmentArrivalQueueResult",
+      "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Workflows.AppointmentArrival",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Application/Workflows/AppointmentArrival/AppointmentArrivalQueueResult.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Application.Workflows.AppointmentArrival.AppointmentArrivalQueueService",
+      "target": "type:ElsheiekhHMS.Application.Workflows.AppointmentArrival.IAppointmentArrivalQueueService",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Application/Workflows/AppointmentArrival/AppointmentArrivalQueueService.cs:L12",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Application.Workflows.AppointmentArrival.AppointmentArrivalQueueService",
+      "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Workflows.AppointmentArrival",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Application/Workflows/AppointmentArrival/AppointmentArrivalQueueService.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Application.Workflows.AppointmentArrival.IAppointmentArrivalQueueService",
+      "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Workflows.AppointmentArrival",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Application/Workflows/AppointmentArrival/IAppointmentArrivalQueueService.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
       "source": "type:ElsheiekhHMS.Application.Workflows.PatientIntake.IPatientIntakeAppointmentService",
       "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Workflows.PatientIntake",
       "type": "namespace-membership",
@@ -28211,6 +29340,78 @@
       "target": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Persistence.Queue",
       "type": "namespace-membership",
       "evidence": "ElsheiekhHMS.Infrastructure/Persistence/Queue/QueuePersistence.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentArrivalQueueSqlServerTests",
+      "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentArrivalQueueSqlServerTests.FixedTimeProvider",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentArrivalQueueSqlServerTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentArrivalQueueSqlServerTests",
+      "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentArrivalQueueSqlServerTests.TestCurrentUser",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentArrivalQueueSqlServerTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentArrivalQueueSqlServerTests",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Integration.Persistence",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentArrivalQueueSqlServerTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentArrivalQueueSqlServerTests.FixedTimeProvider",
+      "target": "type:System.TimeProvider",
+      "type": "inherits",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentArrivalQueueSqlServerTests.cs:L83",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentArrivalQueueSqlServerTests.FixedTimeProvider",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Integration.Persistence",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentArrivalQueueSqlServerTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentArrivalQueueSqlServerTests.TestCurrentUser",
+      "target": "type:ElsheiekhHMS.Application.Common.Security.ICurrentUser",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentArrivalQueueSqlServerTests.cs:L77",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentArrivalQueueSqlServerTests.TestCurrentUser",
+      "target": "type:System.IEquatable\u003CT\u003E",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentArrivalQueueSqlServerTests.cs:L77",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentArrivalQueueSqlServerTests.TestCurrentUser",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Integration.Persistence",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentArrivalQueueSqlServerTests.cs",
       "relation": "namespace-membership",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -29381,6 +30582,105 @@
       "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Application.Security",
       "type": "namespace-membership",
       "evidence": "ElsheiekhHMS.Tests/Unit/Application/Security/SecurityVocabularyTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Workflows.AppointmentArrivalQueueServiceTests",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Application.Workflows.AppointmentArrivalQueueServiceTests.FakeAppointmentService",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Workflows/AppointmentArrivalQueueServiceTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Workflows.AppointmentArrivalQueueServiceTests",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Application.Workflows.AppointmentArrivalQueueServiceTests.FakeQueueService",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Workflows/AppointmentArrivalQueueServiceTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Workflows.AppointmentArrivalQueueServiceTests",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Application.Workflows.AppointmentArrivalQueueServiceTests.TestCurrentUser",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Workflows/AppointmentArrivalQueueServiceTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Workflows.AppointmentArrivalQueueServiceTests",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Application.Workflows",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Workflows/AppointmentArrivalQueueServiceTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Workflows.AppointmentArrivalQueueServiceTests.FakeAppointmentService",
+      "target": "type:ElsheiekhHMS.Application.Appointments.IAppointmentService",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Workflows/AppointmentArrivalQueueServiceTests.cs:L185",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Workflows.AppointmentArrivalQueueServiceTests.FakeAppointmentService",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Application.Workflows",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Workflows/AppointmentArrivalQueueServiceTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Workflows.AppointmentArrivalQueueServiceTests.FakeQueueService",
+      "target": "type:ElsheiekhHMS.Application.Queue.IQueueService",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Workflows/AppointmentArrivalQueueServiceTests.cs:L216",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Workflows.AppointmentArrivalQueueServiceTests.FakeQueueService",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Application.Workflows",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Workflows/AppointmentArrivalQueueServiceTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Workflows.AppointmentArrivalQueueServiceTests.TestCurrentUser",
+      "target": "type:ElsheiekhHMS.Application.Common.Security.ICurrentUser",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Workflows/AppointmentArrivalQueueServiceTests.cs:L179",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Workflows.AppointmentArrivalQueueServiceTests.TestCurrentUser",
+      "target": "type:System.IEquatable\u003CT\u003E",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Workflows/AppointmentArrivalQueueServiceTests.cs:L179",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Workflows.AppointmentArrivalQueueServiceTests.TestCurrentUser",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Application.Workflows",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Workflows/AppointmentArrivalQueueServiceTests.cs",
       "relation": "namespace-membership",
       "confidence": "EXTRACTED",
       "weight": 1
