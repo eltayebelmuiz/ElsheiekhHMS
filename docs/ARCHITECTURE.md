@@ -312,3 +312,11 @@ directly. Duplicate-candidate review is not exposed by the accepted contract,
 so the UI does not invent a warning or registration blocker. Patient
 self-service, clinical history, and schema/backend changes remain deferred;
 external browser QA is tracked in `docs/UI_PATIENT_QA_CHECKLIST.md`.
+
+Phase 12D adds only Web-owned Department management screens over the frozen
+Application contract. The SystemAdministrator-only registry uses server-side
+search, active-status filtering, sorting, paging, create, details, edit, and
+one-way deactivation. No Department reactivation, hard delete, provider
+assignment, appointment/queue relationship editing, or backend/schema change is
+introduced. External browser QA is tracked in
+`docs/UI_DEPARTMENT_QA_CHECKLIST.md`.

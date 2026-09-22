@@ -1,0 +1,59 @@
+@page "/departments/{DepartmentId:int}"
+@rendermode InteractiveServer
+@attribute [Authorize(Policy = PolicyNames.CanConfigureSystem)]
+
+@inject IDepartmentService DepartmentService
+
+<PageTitle>Department details</PageTitle>
+@if (_loading){<LoadingState Message="Loading department details" />}
+else if (_errorMessage is not null){<ErrorState Title="Department details unavailable" Message="@_errorMessage"><Actions><a class="btn btn-outline-secondary" href="/departments">Return to departments</a></Actions></ErrorState>}
+else if (_department is not null)
+{
+    <PageHeader Eyebrow="System configuration" Title="@_department.Name" Description="Department details and operational status."><Actions><a class="btn btn-outline-secondary" href="/departments">Back to departments</a>@if (_department.IsActive){<a class="btn btn-outline-primary" href="@($"/departments/{DepartmentId}/edit")">Edit</a>}</Actions></PageHeader>
+    @if (_created){<AppAlert Tone="AppAlert.AlertTone.Success" Title="Department created" Message="The department was created successfully." />}
+    @if (_updated){<AppAlert Tone="AppAlert.AlertTone.Success" Title="Department updated" Message="The department information was updated successfully." />}
+    @if (_deactivated){<AppAlert Tone="AppAlert.AlertTone.Success" Title="Department deactivated" Message="The department is now inactive for applicable new workflows." />}
+    @if (_errorMessage is not null){<AppAlert Tone="AppAlert.AlertTone.Danger" Title="Action not completed" Message="@_errorMessage" />}
+    <section class="hms-panel hms-department-details" aria-labelledby="department-details-heading"><div class="hms-panel__header"><div><p class="hms-eyebrow">Department record</p><h2 id="department-details-heading">@_department.Name</h2></div><StatusBadge Text="@(_department.IsActive ? "Active" : "Inactive")" Tone="@(_department.IsActive ? StatusBadge.StatusTone.Success : StatusBadge.StatusTone.Neutral)" /></div><dl class="hms-detail-list"><dt>Description</dt><dd>@(_department.Description ?? "Not recorded")</dd><dt>Phone extension</dt><dd>@(_department.PhoneExtension ?? "Not recorded")</dd><dt>Status</dt><dd>@(_department.IsActive ? "Active" : "Inactive")</dd></dl>
+        @if (_department.IsActive){<div class="hms-form__actions"><button type="button" class="btn btn-danger" @onclick="OpenDeactivate">Deactivate department</button></div>}
+    </section>
+}
+<ConfirmDialog IsOpen="_showDeactivate" Title="Deactivate department?" Message="This department will become inactive for applicable new operational workflows. Historical records are preserved." ConfirmText="Deactivate" OnConfirm="DeactivateAsync" OnCancel="CloseDeactivate" />
+
+@code {
+    [Parameter] public int DepartmentId { get; set; }
+    [SupplyParameterFromQuery(Name = "created")] private bool _created { get; set; }
+    [SupplyParameterFromQuery(Name = "updated")] private bool _updated { get; set; }
+    private DepartmentDetailsDto? _department;
+    private bool _loading;
+    private bool _showDeactivate;
+    private bool _deactivated;
+    private string? _errorMessage;
+
+    protected override async Task OnParametersSetAsync()
+    {
+        _loading = true; _errorMessage = null;
+        try
+        {
+            var result = await DepartmentService.GetByIdAsync(DepartmentId);
+            if (result.IsSuccess) _department = result.Value; else _errorMessage = result.Errors.FirstOrDefault()?.Message ?? "The department was not found.";
+        }
+        catch (OperationCanceledException) { throw; }
+        catch { _errorMessage = "The department details could not be loaded. Try again."; }
+        finally { _loading = false; }
+    }
+
+    private void OpenDeactivate() { _errorMessage = null; _showDeactivate = true; }
+    private void CloseDeactivate() => _showDeactivate = false;
+    private async Task DeactivateAsync()
+    {
+        _showDeactivate = false; _errorMessage = null;
+        try
+        {
+            var result = await DepartmentService.DeactivateAsync(DepartmentId);
+            if (result.IsSuccess && result.Value is not null) { _department = result.Value; _deactivated = true; } else _errorMessage = result.Errors.FirstOrDefault()?.Message ?? "The department could not be deactivated.";
+        }
+        catch (OperationCanceledException) { throw; }
+        catch { _errorMessage = "The department operation could not be completed. Try again."; }
+    }
+}

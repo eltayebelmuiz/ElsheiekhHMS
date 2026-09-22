@@ -2,11 +2,11 @@
 
 ## Snapshot
 
-- **generatedAtUtc:** `2026-09-22T18:32:56.9413550+00:00`
+- **generatedAtUtc:** `2026-09-22T18:49:30.3877386+00:00`
 - **gitBranch:** `main`
-- **gitCommit:** `fe932b042999aa77f822e7a1220b42537f72bf5c`
+- **gitCommit:** `8a21f1eb2cafbc318484602ad3a1855790717946`
 - **workingTreeDirty:** `True`
-- **sourceFingerprint:** `710aad0a87e1499e854519d48d97efc194e6db2e728fde618a1be67e14b2db43`
+- **sourceFingerprint:** `b2f2cf3a7c6aa133e3dac43fc45de9a586f8b27379d23c55aa655626546a2800`
 - Framework: net10.0
 - Structural extraction only: **0 LLM API calls / 0 LLM tokens**. No statistical community clustering is claimed; project ownership supplies the visual groups.
 
@@ -250,7 +250,7 @@ Evaluated direct PackageReference items only. Framework/SDK auto-references and 
 
 Declared by README; not inferred from the existence of classes:
 
-- > **Current development stage:** Phase 12C — Patient management UI complete; backend remains accepted and frozen — README.md:L5
+- > **Current development stage:** Phase 12D — Department management UI complete; backend remains accepted and frozen — README.md:L5
 - > **Phase 01:** ✅ Complete — README.md:L7
 - > **Phase 02 Setup:** ✅ Complete and verified — README.md:L9
 - > **Phase 03A / 03B / 03C:** ✅ Complete — README.md:L11
@@ -289,15 +289,16 @@ Declared by README; not inferred from the existence of classes:
 - > **Phase 12A:** ✅ Blazor UI architecture, application shell, navigation foundation, design tokens, reusable feedback/form/list patterns, and accessibility baseline established — README.md:L77
 - > **Phase 12B:** ✅ Authentication presentation, anonymous/authenticated shell separation, current-user/logout controls, unauthorized UX, and role-aware navigation complete; external browser QA remains required — README.md:L80
 - > **Phase 12C:** ✅ Patient registry, server-side search/pagination, registration, details, and concurrency-safe edit UI complete; external browser QA remains required — README.md:L82
--  /  01  /  Solution & Architecture  /  ✅ Complete  /  — README.md:L399
--  /  02  /  Core Foundation  /  ✅ Complete  /  — README.md:L400
--  /  03  /  Domain Entities  /  ✅ Complete  /  — README.md:L401
--  /  04  /  EF Core & Database  /  ✅ Complete  /  — README.md:L402
--  /  05  /  Identity & Security  /  ✅ Complete (05A, 05B, 05C, 05C-A, 05D, and 05E)  /  — README.md:L403
--  /  06  /  DTOs & Validation  /  ✅ Complete (06A–06D)  /  — README.md:L404
--  /  07  /  Application Services  /  ✅ Complete for approved scope (07S, 07A, 07B, 07C-P, 07C, 07D; 07E deferred)  /  — README.md:L405
--  /  08  /  Business Workflows  /  ✅ Complete (08A, 08B-P, 08B)  /  — README.md:L406
--  /  09  /  Enterprise Infrastructure  /  ✅ Complete (09A, 09B)  /  — README.md:L407
+- > **Phase 12D:** ✅ Department registry, search/filter/sort, create, details, edit, and one-way deactivation UI complete; external browser QA remains required — README.md:L84
+-  /  01  /  Solution & Architecture  /  ✅ Complete  /  — README.md:L401
+-  /  02  /  Core Foundation  /  ✅ Complete  /  — README.md:L402
+-  /  03  /  Domain Entities  /  ✅ Complete  /  — README.md:L403
+-  /  04  /  EF Core & Database  /  ✅ Complete  /  — README.md:L404
+-  /  05  /  Identity & Security  /  ✅ Complete (05A, 05B, 05C, 05C-A, 05D, and 05E)  /  — README.md:L405
+-  /  06  /  DTOs & Validation  /  ✅ Complete (06A–06D)  /  — README.md:L406
+-  /  07  /  Application Services  /  ✅ Complete for approved scope (07S, 07A, 07B, 07C-P, 07C, 07D; 07E deferred)  /  — README.md:L407
+-  /  08  /  Business Workflows  /  ✅ Complete (08A, 08B-P, 08B)  /  — README.md:L408
+-  /  09  /  Enterprise Infrastructure  /  ✅ Complete (09A, 09B)  /  — README.md:L409
 
 ## Important Files
 
@@ -517,6 +518,10 @@ Declared by README; not inferred from the existence of classes:
 - [ElsheiekhHMS.Web/Components/Layout/NavMenu.razor](../ElsheiekhHMS.Web/Components/Layout/NavMenu.razor) — ElsheiekhHMS.Web
 - [ElsheiekhHMS.Web/Components/Layout/ReconnectModal.razor](../ElsheiekhHMS.Web/Components/Layout/ReconnectModal.razor) — ElsheiekhHMS.Web
 - [ElsheiekhHMS.Web/Components/Pages/AccessDenied.razor](../ElsheiekhHMS.Web/Components/Pages/AccessDenied.razor) — ElsheiekhHMS.Web
+- [ElsheiekhHMS.Web/Components/Pages/Departments/DepartmentCreate.razor](../ElsheiekhHMS.Web/Components/Pages/Departments/DepartmentCreate.razor) — ElsheiekhHMS.Web
+- [ElsheiekhHMS.Web/Components/Pages/Departments/DepartmentDetails.razor](../ElsheiekhHMS.Web/Components/Pages/Departments/DepartmentDetails.razor) — ElsheiekhHMS.Web
+- [ElsheiekhHMS.Web/Components/Pages/Departments/DepartmentEdit.razor](../ElsheiekhHMS.Web/Components/Pages/Departments/DepartmentEdit.razor) — ElsheiekhHMS.Web
+- [ElsheiekhHMS.Web/Components/Pages/Departments/DepartmentRegistry.razor](../ElsheiekhHMS.Web/Components/Pages/Departments/DepartmentRegistry.razor) — ElsheiekhHMS.Web
 - [ElsheiekhHMS.Web/Components/Pages/Error.razor](../ElsheiekhHMS.Web/Components/Pages/Error.razor) — ElsheiekhHMS.Web
 - [ElsheiekhHMS.Web/Components/Pages/Home.razor](../ElsheiekhHMS.Web/Components/Pages/Home.razor) — ElsheiekhHMS.Web
 - [ElsheiekhHMS.Web/Components/Pages/Login.razor](../ElsheiekhHMS.Web/Components/Pages/Login.razor) — ElsheiekhHMS.Web

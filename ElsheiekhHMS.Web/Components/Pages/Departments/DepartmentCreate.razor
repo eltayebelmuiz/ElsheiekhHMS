@@ -1,0 +1,36 @@
+@page "/departments/new"
+@rendermode InteractiveServer
+@attribute [Authorize(Policy = PolicyNames.CanConfigureSystem)]
+
+@inject IDepartmentService DepartmentService
+@inject NavigationManager Navigation
+
+<PageTitle>Add department</PageTitle>
+<PageHeader Eyebrow="System configuration" Title="Add department" Description="Create a department for approved hospital workflows."><Actions><a class="btn btn-outline-secondary" href="/departments">Cancel</a></Actions></PageHeader>
+@if (_errorMessage is not null){<AppAlert Tone="AppAlert.AlertTone.Danger" Title="Department was not created" Message="@_errorMessage" />}
+<EditForm Model="_model" OnValidSubmit="CreateAsync" class="hms-panel hms-form-panel"><DataAnnotationsValidator /><ValidationSummary />
+    <div class="hms-form__grid"><Field Label="Department name" Id="create-department-name" Required="true"><InputText id="create-department-name" class="form-control" @bind-Value="_model.Name" /></Field><Field Label="Phone extension" Id="create-department-extension"><InputText id="create-department-extension" class="form-control" @bind-Value="_model.PhoneExtension" /></Field></div>
+    <div class="hms-field"><label for="create-department-description">Description</label><InputTextArea id="create-department-description" class="form-control" rows="4" @bind-Value="_model.Description" /></div>
+    <div class="hms-form__actions"><button type="submit" class="btn btn-primary" disabled="@_saving">@(_saving ? "Saving…" : "Save department")</button><a class="btn btn-outline-secondary" href="/departments">Cancel</a></div>
+</EditForm>
+
+@code {
+    private readonly DepartmentModel _model = new();
+    private bool _saving;
+    private string? _errorMessage;
+
+    private async Task CreateAsync()
+    {
+        _saving = true; _errorMessage = null;
+        try
+        {
+            var result = await DepartmentService.CreateAsync(new CreateDepartmentRequest(_model.Name, _model.Description, _model.PhoneExtension));
+            if (result.IsSuccess && result.Value is not null) Navigation.NavigateTo($"/departments/{result.Value.Id}?created=true"); else _errorMessage = result.Errors.FirstOrDefault()?.Message ?? "Review the form and try again.";
+        }
+        catch (OperationCanceledException) { throw; }
+        catch { _errorMessage = "The department operation could not be completed. Try again."; }
+        finally { _saving = false; }
+    }
+
+    private sealed class DepartmentModel { public string Name { get; set; } = string.Empty; public string? Description { get; set; } public string? PhoneExtension { get; set; } }
+}

@@ -1,0 +1,58 @@
+@page "/departments/{DepartmentId:int}/edit"
+@rendermode InteractiveServer
+@attribute [Authorize(Policy = PolicyNames.CanConfigureSystem)]
+
+@inject IDepartmentService DepartmentService
+@inject NavigationManager Navigation
+
+<PageTitle>Edit department</PageTitle>
+@if (_loading){<LoadingState Message="Loading department for editing" />}
+else if (_errorMessage is not null && _department is null){<ErrorState Title="Department edit unavailable" Message="@_errorMessage"><Actions><a class="btn btn-outline-secondary" href="/departments">Return to departments</a></Actions></ErrorState>}
+else if (_department is not null && _department.IsActive)
+{
+    <PageHeader Eyebrow="System configuration" Title="@($"Edit {_department.Name}")" Description="Update the department's approved details."><Actions><a class="btn btn-outline-secondary" href="@($"/departments/{DepartmentId}")">Cancel</a></Actions></PageHeader>
+    @if (_errorMessage is not null){<AppAlert Tone="AppAlert.AlertTone.Danger" Title="Changes not saved" Message="@_errorMessage" />}
+    <EditForm Model="_model" OnValidSubmit="UpdateAsync" class="hms-panel hms-form-panel"><DataAnnotationsValidator /><ValidationSummary /><div class="hms-form__grid"><Field Label="Department name" Id="edit-department-name" Required="true"><InputText id="edit-department-name" class="form-control" @bind-Value="_model.Name" /></Field><Field Label="Phone extension" Id="edit-department-extension"><InputText id="edit-department-extension" class="form-control" @bind-Value="_model.PhoneExtension" /></Field></div><div class="hms-field"><label for="edit-department-description">Description</label><InputTextArea id="edit-department-description" class="form-control" rows="4" @bind-Value="_model.Description" /></div><div class="hms-form__actions"><button type="submit" class="btn btn-primary" disabled="@_saving">@(_saving ? "Saving…" : "Save changes")</button><a class="btn btn-outline-secondary" href="@($"/departments/{DepartmentId}")">Cancel</a></div></EditForm>
+}
+else if (_department is not null)
+{
+    <PageHeader Eyebrow="System configuration" Title="@_department.Name" Description="This department is inactive and cannot be edited."><Actions><a class="btn btn-outline-secondary" href="@($"/departments/{DepartmentId}")">Back to details</a></Actions></PageHeader><AppAlert Tone="AppAlert.AlertTone.Warning" Title="Inactive department" Message="Reactivation is not an approved operation." />
+}
+
+@code {
+    [Parameter] public int DepartmentId { get; set; }
+    private DepartmentDetailsDto? _department;
+    private readonly DepartmentModel _model = new();
+    private bool _loading;
+    private bool _saving;
+    private string? _errorMessage;
+
+    protected override async Task OnParametersSetAsync()
+    {
+        _loading = true; _errorMessage = null;
+        try
+        {
+            var result = await DepartmentService.GetByIdAsync(DepartmentId);
+            if (!result.IsSuccess || result.Value is null) { _errorMessage = result.Errors.FirstOrDefault()?.Message ?? "The department was not found."; return; }
+            _department = result.Value; _model.Name = _department.Name; _model.Description = _department.Description; _model.PhoneExtension = _department.PhoneExtension;
+        }
+        catch (OperationCanceledException) { throw; }
+        catch { _errorMessage = "The department details could not be loaded. Try again."; }
+        finally { _loading = false; }
+    }
+
+    private async Task UpdateAsync()
+    {
+        _saving = true; _errorMessage = null;
+        try
+        {
+            var result = await DepartmentService.UpdateAsync(DepartmentId, new UpdateDepartmentRequest(_model.Name, _model.Description, _model.PhoneExtension));
+            if (result.IsSuccess) Navigation.NavigateTo($"/departments/{DepartmentId}?updated=true"); else _errorMessage = result.Errors.FirstOrDefault()?.Message ?? "Review the form and try again.";
+        }
+        catch (OperationCanceledException) { throw; }
+        catch { _errorMessage = "The department operation could not be completed. Try again."; }
+        finally { _saving = false; }
+    }
+
+    private sealed class DepartmentModel { public string Name { get; set; } = string.Empty; public string? Description { get; set; } public string? PhoneExtension { get; set; } }
+}

@@ -982,3 +982,24 @@ globally unique. Patient ownership/self-service, clinical history, delete
 actions, Queue/Appointment workflows, and all backend/Core/schema/package
 changes remain deferred. External browser review is tracked in
 `docs/UI_PATIENT_QA_CHECKLIST.md`.
+
+## ADR-033 — Phase 12D Department management UI
+
+**Status:** Complete
+**Phase:** 12D
+
+### Decision
+
+Implement the Department UI entirely in Web over `IDepartmentService`, with
+existing `CanConfigureSystem` authorization remaining authoritative. The scope
+is a SystemAdministrator-only paged registry with server-side text search,
+active-status filtering, Name/IsActive sorting, create, details, edit, and a
+confirmation-protected one-way deactivation action.
+
+### Consequences
+
+Department has no approved concurrency token, so the UI invents none. Inactive
+departments cannot be edited or reactivated; no delete, provider assignment,
+appointment/queue relationship editing, analytics, schema, backend, or package
+change is introduced. External browser review is tracked in
+`docs/UI_DEPARTMENT_QA_CHECKLIST.md`.

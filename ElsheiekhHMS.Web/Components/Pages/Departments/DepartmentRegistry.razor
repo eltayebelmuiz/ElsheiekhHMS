@@ -1,0 +1,81 @@
+@page "/departments"
+@rendermode InteractiveServer
+@attribute [Authorize(Policy = PolicyNames.CanConfigureSystem)]
+
+@inject IDepartmentService DepartmentService
+
+<PageTitle>Departments</PageTitle>
+<PageHeader Eyebrow="System configuration" Title="Departments" Description="Manage the hospital departments used by approved operational workflows.">
+    <Actions><a class="btn btn-primary" href="/departments/new">Add department</a></Actions>
+</PageHeader>
+
+<section class="hms-panel" aria-labelledby="department-search-heading">
+    <div class="hms-panel__header"><div><p class="hms-eyebrow">Department registry</p><h2 id="department-search-heading">Find departments</h2></div>@if (_page is not null){<span class="hms-result-count">@_page.TotalCount department@( _page.TotalCount == 1 ? "" : "s")</span>}</div>
+    <form class="hms-form" @onsubmit="SearchAsync" @onsubmit:preventDefault>
+        <div class="hms-form__grid hms-form__grid--search-options">
+            <div class="hms-field"><label for="department-search-text">Name, description, or extension</label><input id="department-search-text" class="form-control" type="search" @bind="_searchText" maxlength="100" /></div>
+            <div class="hms-field"><label for="department-status">Status</label><select id="department-status" class="form-select" @bind="_status"><option value="">All departments</option><option value="true">Active only</option><option value="false">Inactive only</option></select></div>
+            <div class="hms-field"><label for="department-sort">Sort by</label><select id="department-sort" class="form-select" @bind="_sortBy"><option value="@DepartmentSortField.Name">Name</option><option value="@DepartmentSortField.IsActive">Status</option></select></div>
+            <div class="hms-field"><label for="department-direction">Direction</label><select id="department-direction" class="form-select" @bind="_sortDirection"><option value="@SortDirection.Ascending">Ascending</option><option value="@SortDirection.Descending">Descending</option></select></div>
+            <div class="hms-form__actions hms-form__actions--inline"><button type="submit" class="btn btn-primary" disabled="@_loading">Search</button><button type="button" class="btn btn-outline-secondary" @onclick="ClearAsync" disabled="@_loading">Clear</button></div>
+        </div>
+    </form>
+</section>
+
+@if (_loading)
+{
+    <LoadingState Message="Loading departments" />
+}
+else if (_error)
+{
+    <ErrorState Title="Departments unavailable" Message="The department registry could not be loaded. Try again."><Actions><button type="button" class="btn btn-outline-secondary" @onclick="SearchAsync">Retry</button></Actions></ErrorState>
+}
+else if (_page is { Items.Count: 0 })
+{
+    <EmptyState Title="No departments have been configured yet" Message="Add a department to begin configuring hospital workflows." HasSearch="@HasSearch" />
+}
+else if (_page is not null)
+{
+    <section class="hms-panel" aria-labelledby="department-results-heading">
+        <div class="hms-panel__header"><div><p class="hms-eyebrow">Results</p><h2 id="department-results-heading">Department records</h2></div><span class="hms-helper-text">Page @_page.PageNumber of @TotalPages</span></div>
+        <div class="hms-table-wrap"><table class="table hms-table hms-department-table"><caption class="visually-hidden">Department registry results</caption><thead><tr><th scope="col">Name</th><th scope="col">Phone extension</th><th scope="col">Status</th><th scope="col"><span class="visually-hidden">Actions</span></th></tr></thead><tbody>
+        @foreach (var department in _page.Items)
+        {
+            <tr><td><a class="hms-table__primary" href="@($"/departments/{department.Id}")">@department.Name</a></td><td>@(department.PhoneExtension ?? "Not recorded")</td><td><StatusBadge Text="@(department.IsActive ? "Active" : "Inactive")" Tone="@(department.IsActive ? StatusBadge.StatusTone.Success : StatusBadge.StatusTone.Neutral)" /></td><td class="hms-table__actions"><a class="btn btn-sm btn-outline-secondary" href="@($"/departments/{department.Id}")">View</a>@if (department.IsActive){<a class="btn btn-sm btn-outline-primary" href="@($"/departments/{department.Id}/edit")">Edit</a>}</td></tr>
+        }
+        </tbody></table></div>
+        <Pagination CurrentPage="@_page.PageNumber" TotalPages="@TotalPages" PageChanged="GoToPageAsync" />
+    </section>
+}
+
+@code {
+    private PagedResult<DepartmentSummaryDto>? _page;
+    private string? _searchText;
+    private string? _status;
+    private DepartmentSortField _sortBy = DepartmentSortField.Name;
+    private SortDirection _sortDirection = SortDirection.Ascending;
+    private int _pageNumber = 1;
+    private bool _loading;
+    private bool _error;
+    private int TotalPages => _page is null || _page.PageSize == 0 ? 1 : Math.Max(1, (int)Math.Ceiling((double)_page.TotalCount / _page.PageSize));
+    private bool HasSearch => !string.IsNullOrWhiteSpace(_searchText) || _status is not null;
+
+    protected override Task OnInitializedAsync() => SearchAsync();
+
+    private async Task SearchAsync()
+    {
+        _loading = true; _error = false;
+        try
+        {
+            bool? active = _status switch { "true" => true, "false" => false, _ => null };
+            var result = await DepartmentService.SearchAsync(new DepartmentSearchRequest(_searchText, active, new PageRequest(_pageNumber, 25), _sortBy, _sortDirection));
+            if (result.IsSuccess) _page = result.Value; else { _page = null; _error = true; }
+        }
+        catch (OperationCanceledException) { throw; }
+        catch { _page = null; _error = true; }
+        finally { _loading = false; }
+    }
+
+    private async Task ClearAsync() { _searchText = null; _status = null; _pageNumber = 1; await SearchAsync(); }
+    private async Task GoToPageAsync(int page) { _pageNumber = Math.Clamp(page, 1, TotalPages); await SearchAsync(); }
+}
