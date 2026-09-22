@@ -5,6 +5,8 @@ using ElsheiekhHMS.Web.Components;
 using ElsheiekhHMS.Web.Security;
 using ElsheiekhHMS.Infrastructure.Identity;
 using ElsheiekhHMS.Infrastructure.Identity.Entities;
+using ElsheiekhHMS.Infrastructure.Health;
+using ElsheiekhHMS.Infrastructure.Observability;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Identity;
@@ -80,11 +82,14 @@ builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
 
 // Basic application health check.
-builder.Services.AddHealthChecks();
+builder.Services.AddHealthChecks()
+    .AddCheck<HmsLivenessHealthCheck>("hms_liveness", tags: ["live"])
+    .AddCheck<SqlServerReadinessHealthCheck>("sql_server", tags: ["ready"]);
 
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
+app.UseMiddleware<RequestObservabilityMiddleware>();
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Error", createScopeForErrors: true);
@@ -111,7 +116,7 @@ app.UseAuthorization();
 app.UseAntiforgery();
 
 app.MapStaticAssets();
-app.MapHealthChecks("/health").AllowAnonymous();
+app.MapHmsHealthEndpoints();
 
 app.MapRazorComponents<App>()
     .AddInteractiveServerRenderMode();

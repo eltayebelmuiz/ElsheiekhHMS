@@ -11,12 +11,12 @@
 <footer>Architectural index, not authoritative source. Check freshness with <code>tools/graphify.ps1 -Check</code> before relying on this snapshot. No network requests or external libraries.</footer>
 <script id="graph-data" type="application/json">{
   "schemaVersion": "1.0",
-  "generatedAtUtc": "2026-09-22T13:02:15.8990921\u002B00:00",
-  "gitCommit": "5e9b78f894cf7dc7b08202de99ccd4261f404749",
+  "generatedAtUtc": "2026-09-22T13:33:03.9560005\u002B00:00",
+  "gitCommit": "dcbd3a9625aeeb5afa69ed5b104bd8bf6aadc1ad",
   "gitBranch": "main",
   "workingTreeDirty": true,
-  "gitStatusAtGeneration": "M DEVELOPMENT_ROADMAP.md\n M README.md\n M docs/ARCHITECTURE.md\n M docs/DECISIONS.md\n M graphify-out/GRAPH_REPORT.md\n M graphify-out/graph.html\n M graphify-out/graph.json",
-  "sourceFingerprint": "94abffa665739efddd56beee6215de141ecb0f3ebe716b91541f109e3903d216",
+  "gitStatusAtGeneration": "M DEVELOPMENT_ROADMAP.md\n M ElsheiekhHMS.Infrastructure/ElsheiekhHMS.Infrastructure.csproj\n M ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj\n M ElsheiekhHMS.Web/Program.cs\n M README.md\n M docs/ARCHITECTURE.md\n M docs/DECISIONS.md\n M graphify-out/GRAPH_REPORT.md\n M graphify-out/graph.html\n M graphify-out/graph.json\n?? ElsheiekhHMS.Infrastructure/Health/HmsHealthChecks.cs\n?? ElsheiekhHMS.Infrastructure/Observability/RequestObservabilityMiddleware.cs\n?? ElsheiekhHMS.Tests/Integration/Persistence/SqlServerReadinessHealthCheckTests.cs\n?? ElsheiekhHMS.Tests/Unit/Infrastructure/Health/HealthCheckTests.cs\n?? ElsheiekhHMS.Tests/Unit/Infrastructure/Observability/RequestObservabilityMiddlewareTests.cs",
+  "sourceFingerprint": "d97c30c1eb34a5f825c7f194fc2c932d60ad863fa6b8fc6c5df1b7b9cdda028c",
   "generatorFingerprint": "03eee0a8853a7e84af6cbe571d34e6f7d820505ac8f5670a719d0d63b113840c",
   "fingerprintAlgorithm": "SHA-256 of ordinal path \u002B NUL \u002B content SHA-256 records joined with LF; sourceManifest defines inputs; graphify-out excluded everywhere",
   "sourceManifest": [
@@ -498,7 +498,11 @@
     },
     {
       "path": "ElsheiekhHMS.Infrastructure/ElsheiekhHMS.Infrastructure.csproj",
-      "sha256": "946c0766534ff665bd9df51b45a91683cf0bb6f4d083ea104491fbccef9a6daf"
+      "sha256": "3b1c7e9ff7b1e6f111f6d3b235d2df0c8eee32c5485248863dd2ac75c7d0e7c2"
+    },
+    {
+      "path": "ElsheiekhHMS.Infrastructure/Health/HmsHealthChecks.cs",
+      "sha256": "253b67737a4f8be10005f1bbd9dd2182c99af06b962264cfa50b55872a48a1cd"
     },
     {
       "path": "ElsheiekhHMS.Infrastructure/Identity/AccountLoginEligibility.cs",
@@ -573,6 +577,10 @@
       "sha256": "8b23e0c9ab4eea0e4b3ec7125bf53c0076894d2a7f3e611ff61515476a8909ee"
     },
     {
+      "path": "ElsheiekhHMS.Infrastructure/Observability/RequestObservabilityMiddleware.cs",
+      "sha256": "867cddd84d3b97731cc639627b6a17a315e5751eac38d0f74cc3c4f31114f640"
+    },
+    {
       "path": "ElsheiekhHMS.Infrastructure/Persistence/Allocation/AppointmentCodeAllocation.cs",
       "sha256": "77ad6e3e6242b77e29b521827887d654994e7daf2da21bf0dd9c286d4d6fb17e"
     },
@@ -630,7 +638,7 @@
     },
     {
       "path": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
-      "sha256": "6cc9fd9be55e6b7f477c82f95a8127514f07cf172c2f7bf08d55643ce49c04a0"
+      "sha256": "77d2c9acb6247658e576011dd01805dbc1784caad7cad4d59c9d7a2e17fc0590"
     },
     {
       "path": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentArrivalQueueSqlServerTests.cs",
@@ -663,6 +671,10 @@
     {
       "path": "ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs",
       "sha256": "c07e9e7e7aba84a6baffb669f4db79f3cebef1dfd24f03f35ae8149475980333"
+    },
+    {
+      "path": "ElsheiekhHMS.Tests/Integration/Persistence/SqlServerReadinessHealthCheckTests.cs",
+      "sha256": "3f06591bb3a552b4747219e01499bd18e8c77398dbd35358a39be0e83df69e37"
     },
     {
       "path": "ElsheiekhHMS.Tests/Integration/Persistence/SqlServerTestDatabaseFixture.cs",
@@ -821,6 +833,10 @@
       "sha256": "9ee249d02042b1573d4f2cfcba568abb2b951e7765d28eb571f00980f9b1ecb6"
     },
     {
+      "path": "ElsheiekhHMS.Tests/Unit/Infrastructure/Health/HealthCheckTests.cs",
+      "sha256": "2a588cf1a067e9c4ed0ce6c9ba8407ae3b13c6c09e78cf5eb16286316afd5ed9"
+    },
+    {
       "path": "ElsheiekhHMS.Tests/Unit/Infrastructure/Identity/AccountLoginEligibilityTests.cs",
       "sha256": "cb0d2493a41f3017f388aa9a6c0be841c029a9bdc6d7166072a48a81f8a8e1b7"
     },
@@ -839,6 +855,10 @@
     {
       "path": "ElsheiekhHMS.Tests/Unit/Infrastructure/Identity/IdentityRoleSeederTests.cs",
       "sha256": "e33b28c6ce5644cff19e00b9656d1cb34ac3dccb9f39d4b001b9a0dbbd65f1dd"
+    },
+    {
+      "path": "ElsheiekhHMS.Tests/Unit/Infrastructure/Observability/RequestObservabilityMiddlewareTests.cs",
+      "sha256": "3b53dda0993c74044ea8f7b4b9d9ff4043ad9dd3bb8d7032244450d56c11c5dc"
     },
     {
       "path": "ElsheiekhHMS.Web/Components/App.razor",
@@ -890,7 +910,7 @@
     },
     {
       "path": "ElsheiekhHMS.Web/Program.cs",
-      "sha256": "dc797361847ff7991fb2530630f608dd31c365a1f4b05195b47c348272cb777a"
+      "sha256": "ed4fa03711f299a9f76ea8e75a52f42ed9ec94b02b1e315fdd9d4139bc05cfa4"
     },
     {
       "path": "ElsheiekhHMS.Web/Security/AuthorizationConfiguration.cs",
@@ -910,7 +930,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "d488f66b7d5a59e10d0992f32f15821f3fc4f2878a82ff6b4c53b53374311395"
+      "sha256": "6e1cef2d572039b942ca32e2a021fd023b303c98c7ceb6e11ff92df208c0c315"
     }
   ],
   "repository": {
@@ -920,16 +940,16 @@
   },
   "summary": {
     "projectCount": 5,
-    "sourceFileCount": 205,
+    "sourceFileCount": 210,
     "razorFileCount": 11,
-    "typeCount": 252,
+    "typeCount": 265,
     "interfaceCount": 14,
     "testClassCount": 11,
     "testMethodCount": 76,
     "testCount": 113,
     "dynamicTheoryCount": 0,
-    "nodeCount": 557,
-    "edgeCount": 1067
+    "nodeCount": 580,
+    "edgeCount": 1110
   },
   "projects": [
     {
@@ -1108,16 +1128,6 @@
           "name": "Microsoft.EntityFrameworkCore.SqlServer",
           "version": "10.0.12",
           "evidence": "MSBuild evaluated PackageReference"
-        },
-        {
-          "name": "Microsoft.Extensions.Configuration.Abstractions",
-          "version": "10.0.12",
-          "evidence": "MSBuild evaluated PackageReference"
-        },
-        {
-          "name": "Microsoft.Extensions.DependencyInjection.Abstractions",
-          "version": "10.0.12",
-          "evidence": "MSBuild evaluated PackageReference"
         }
       ],
       "sourceFiles": [
@@ -1131,6 +1141,7 @@
         "ElsheiekhHMS.Infrastructure/Configurations/Entities/DoctorScheduleConfiguration.cs",
         "ElsheiekhHMS.Infrastructure/Configurations/Entities/PatientConfiguration.cs",
         "ElsheiekhHMS.Infrastructure/Configurations/Entities/WalkInQueueEntryConfiguration.cs",
+        "ElsheiekhHMS.Infrastructure/Health/HmsHealthChecks.cs",
         "ElsheiekhHMS.Infrastructure/Identity/AccountLoginEligibility.cs",
         "ElsheiekhHMS.Infrastructure/Identity/AdministratorBootstrapper.cs",
         "ElsheiekhHMS.Infrastructure/Identity/Configurations/ApplicationUserConfiguration.cs",
@@ -1149,6 +1160,7 @@
         "ElsheiekhHMS.Infrastructure/Migrations/20260922115337_AddAppointmentQueueLink.cs",
         "ElsheiekhHMS.Infrastructure/Migrations/20260922115337_AddAppointmentQueueLink.Designer.cs",
         "ElsheiekhHMS.Infrastructure/Migrations/ElsheiekhHmsDbContextModelSnapshot.cs",
+        "ElsheiekhHMS.Infrastructure/Observability/RequestObservabilityMiddleware.cs",
         "ElsheiekhHMS.Infrastructure/Persistence/Allocation/AppointmentCodeAllocation.cs",
         "ElsheiekhHMS.Infrastructure/Persistence/Allocation/AppointmentCodeAllocationConfiguration.cs",
         "ElsheiekhHMS.Infrastructure/Persistence/Allocation/AppointmentCodeAllocator.cs",
@@ -1210,6 +1222,7 @@
         "ElsheiekhHMS.Tests/Integration/Persistence/IdentityAndAuditLogSqlServerTests.cs",
         "ElsheiekhHMS.Tests/Integration/Persistence/PatientServiceSqlServerTests.cs",
         "ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs",
+        "ElsheiekhHMS.Tests/Integration/Persistence/SqlServerReadinessHealthCheckTests.cs",
         "ElsheiekhHMS.Tests/Integration/Persistence/SqlServerTestDatabaseFixture.cs",
         "ElsheiekhHMS.Tests/Integration/Persistence/SqlServerTestDatabaseGuard.cs",
         "ElsheiekhHMS.Tests/Integration/Persistence/SqlServerTestDatabaseSafetyTests.cs",
@@ -1249,11 +1262,13 @@
         "ElsheiekhHMS.Tests/Unit/Infrastructure/Auditing/AuditLogModelTests.cs",
         "ElsheiekhHMS.Tests/Unit/Infrastructure/ElsheiekhHmsDbContextModelTests.cs",
         "ElsheiekhHMS.Tests/Unit/Infrastructure/ElsheiekhHmsDbContextTests.cs",
+        "ElsheiekhHMS.Tests/Unit/Infrastructure/Health/HealthCheckTests.cs",
         "ElsheiekhHMS.Tests/Unit/Infrastructure/Identity/AccountLoginEligibilityTests.cs",
         "ElsheiekhHMS.Tests/Unit/Infrastructure/Identity/ApplicationUserTests.cs",
         "ElsheiekhHMS.Tests/Unit/Infrastructure/Identity/IdentityModelTests.cs",
         "ElsheiekhHMS.Tests/Unit/Infrastructure/Identity/IdentityOptionsTests.cs",
-        "ElsheiekhHMS.Tests/Unit/Infrastructure/Identity/IdentityRoleSeederTests.cs"
+        "ElsheiekhHMS.Tests/Unit/Infrastructure/Identity/IdentityRoleSeederTests.cs",
+        "ElsheiekhHMS.Tests/Unit/Infrastructure/Observability/RequestObservabilityMiddlewareTests.cs"
       ]
     },
     {
@@ -3158,6 +3173,22 @@
       "dynamicTheories": 0
     },
     {
+      "id": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Health/HmsHealthChecks.cs",
+      "name": "HmsHealthChecks.cs",
+      "label": "HmsHealthChecks.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Infrastructure",
+      "file": "ElsheiekhHMS.Infrastructure/Health/HmsHealthChecks.cs",
+      "source_file": "ElsheiekhHMS.Infrastructure/Health/HmsHealthChecks.cs",
+      "external": false,
+      "community": 2,
+      "community_name": "ElsheiekhHMS.Infrastructure",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
       "id": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Identity/AccountLoginEligibility.cs",
       "name": "AccountLoginEligibility.cs",
       "label": "AccountLoginEligibility.cs",
@@ -3438,6 +3469,22 @@
       "project": "ElsheiekhHMS.Infrastructure",
       "file": "ElsheiekhHMS.Infrastructure/Migrations/ElsheiekhHmsDbContextModelSnapshot.cs",
       "source_file": "ElsheiekhHMS.Infrastructure/Migrations/ElsheiekhHmsDbContextModelSnapshot.cs",
+      "external": false,
+      "community": 2,
+      "community_name": "ElsheiekhHMS.Infrastructure",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Observability/RequestObservabilityMiddleware.cs",
+      "name": "RequestObservabilityMiddleware.cs",
+      "label": "RequestObservabilityMiddleware.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Infrastructure",
+      "file": "ElsheiekhHMS.Infrastructure/Observability/RequestObservabilityMiddleware.cs",
+      "source_file": "ElsheiekhHMS.Infrastructure/Observability/RequestObservabilityMiddleware.cs",
       "external": false,
       "community": 2,
       "community_name": "ElsheiekhHMS.Infrastructure",
@@ -3790,6 +3837,22 @@
       "project": "ElsheiekhHMS.Tests",
       "file": "ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs",
       "source_file": "ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs",
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/SqlServerReadinessHealthCheckTests.cs",
+      "name": "SqlServerReadinessHealthCheckTests.cs",
+      "label": "SqlServerReadinessHealthCheckTests.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Tests",
+      "file": "ElsheiekhHMS.Tests/Integration/Persistence/SqlServerReadinessHealthCheckTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Integration/Persistence/SqlServerReadinessHealthCheckTests.cs",
       "external": false,
       "community": 3,
       "community_name": "ElsheiekhHMS.Tests",
@@ -4422,6 +4485,22 @@
       "dynamicTheories": 0
     },
     {
+      "id": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Infrastructure/Health/HealthCheckTests.cs",
+      "name": "HealthCheckTests.cs",
+      "label": "HealthCheckTests.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Tests",
+      "file": "ElsheiekhHMS.Tests/Unit/Infrastructure/Health/HealthCheckTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Unit/Infrastructure/Health/HealthCheckTests.cs",
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
       "id": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Infrastructure/Identity/AccountLoginEligibilityTests.cs",
       "name": "AccountLoginEligibilityTests.cs",
       "label": "AccountLoginEligibilityTests.cs",
@@ -4494,6 +4573,22 @@
       "project": "ElsheiekhHMS.Tests",
       "file": "ElsheiekhHMS.Tests/Unit/Infrastructure/Identity/IdentityRoleSeederTests.cs",
       "source_file": "ElsheiekhHMS.Tests/Unit/Infrastructure/Identity/IdentityRoleSeederTests.cs",
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Infrastructure/Observability/RequestObservabilityMiddlewareTests.cs",
+      "name": "RequestObservabilityMiddlewareTests.cs",
+      "label": "RequestObservabilityMiddlewareTests.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Tests",
+      "file": "ElsheiekhHMS.Tests/Unit/Infrastructure/Observability/RequestObservabilityMiddlewareTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Unit/Infrastructure/Observability/RequestObservabilityMiddlewareTests.cs",
       "external": false,
       "community": 3,
       "community_name": "ElsheiekhHMS.Tests",
@@ -5327,6 +5422,21 @@
       "dynamicTheories": 0
     },
     {
+      "id": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Health",
+      "name": "ElsheiekhHMS.Infrastructure.Health",
+      "label": "ElsheiekhHMS.Infrastructure.Health",
+      "kind": "namespace",
+      "type": "namespace",
+      "project": "ElsheiekhHMS.Infrastructure",
+      "namespace": "ElsheiekhHMS.Infrastructure.Health",
+      "external": false,
+      "community": 2,
+      "community_name": "ElsheiekhHMS.Infrastructure",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
       "id": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Identity",
       "name": "ElsheiekhHMS.Infrastructure.Identity",
       "label": "ElsheiekhHMS.Infrastructure.Identity",
@@ -5379,6 +5489,21 @@
       "type": "namespace",
       "project": "ElsheiekhHMS.Infrastructure",
       "namespace": "ElsheiekhHMS.Infrastructure.Migrations",
+      "external": false,
+      "community": 2,
+      "community_name": "ElsheiekhHMS.Infrastructure",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Observability",
+      "name": "ElsheiekhHMS.Infrastructure.Observability",
+      "label": "ElsheiekhHMS.Infrastructure.Observability",
+      "kind": "namespace",
+      "type": "namespace",
+      "project": "ElsheiekhHMS.Infrastructure",
+      "namespace": "ElsheiekhHMS.Infrastructure.Observability",
       "external": false,
       "community": 2,
       "community_name": "ElsheiekhHMS.Infrastructure",
@@ -5792,6 +5917,21 @@
       "dynamicTheories": 0
     },
     {
+      "id": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Infrastructure.Health",
+      "name": "ElsheiekhHMS.Tests.Unit.Infrastructure.Health",
+      "label": "ElsheiekhHMS.Tests.Unit.Infrastructure.Health",
+      "kind": "namespace",
+      "type": "namespace",
+      "project": "ElsheiekhHMS.Tests",
+      "namespace": "ElsheiekhHMS.Tests.Unit.Infrastructure.Health",
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
       "id": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Infrastructure.Identity",
       "name": "ElsheiekhHMS.Tests.Unit.Infrastructure.Identity",
       "label": "ElsheiekhHMS.Tests.Unit.Infrastructure.Identity",
@@ -5799,6 +5939,21 @@
       "type": "namespace",
       "project": "ElsheiekhHMS.Tests",
       "namespace": "ElsheiekhHMS.Tests.Unit.Infrastructure.Identity",
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Infrastructure.Observability",
+      "name": "ElsheiekhHMS.Tests.Unit.Infrastructure.Observability",
+      "label": "ElsheiekhHMS.Tests.Unit.Infrastructure.Observability",
+      "kind": "namespace",
+      "type": "namespace",
+      "project": "ElsheiekhHMS.Tests",
+      "namespace": "ElsheiekhHMS.Tests.Unit.Infrastructure.Observability",
       "external": false,
       "community": 3,
       "community_name": "ElsheiekhHMS.Tests",
@@ -8797,6 +8952,78 @@
       "dynamicTheories": 0
     },
     {
+      "id": "type:ElsheiekhHMS.Infrastructure.Health.HmsHealthEndpointExtensions",
+      "name": "HmsHealthEndpointExtensions",
+      "label": "HmsHealthEndpointExtensions",
+      "kind": "class",
+      "type": "class",
+      "fullName": "ElsheiekhHMS.Infrastructure.Health.HmsHealthEndpointExtensions",
+      "project": "ElsheiekhHMS.Infrastructure",
+      "namespace": "ElsheiekhHMS.Infrastructure.Health",
+      "file": "ElsheiekhHMS.Infrastructure/Health/HmsHealthChecks.cs",
+      "source_file": "ElsheiekhHMS.Infrastructure/Health/HmsHealthChecks.cs",
+      "source_location": "L51",
+      "line": 51,
+      "accessibility": "public",
+      "abstract": false,
+      "sealed": false,
+      "static": true,
+      "external": false,
+      "community": 2,
+      "community_name": "ElsheiekhHMS.Infrastructure",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Infrastructure.Health.HmsLivenessHealthCheck",
+      "name": "HmsLivenessHealthCheck",
+      "label": "HmsLivenessHealthCheck",
+      "kind": "class",
+      "type": "class",
+      "fullName": "ElsheiekhHMS.Infrastructure.Health.HmsLivenessHealthCheck",
+      "project": "ElsheiekhHMS.Infrastructure",
+      "namespace": "ElsheiekhHMS.Infrastructure.Health",
+      "file": "ElsheiekhHMS.Infrastructure/Health/HmsHealthChecks.cs",
+      "source_file": "ElsheiekhHMS.Infrastructure/Health/HmsHealthChecks.cs",
+      "source_location": "L12",
+      "line": 12,
+      "accessibility": "public",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 2,
+      "community_name": "ElsheiekhHMS.Infrastructure",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Infrastructure.Health.SqlServerReadinessHealthCheck",
+      "name": "SqlServerReadinessHealthCheck",
+      "label": "SqlServerReadinessHealthCheck",
+      "kind": "class",
+      "type": "class",
+      "fullName": "ElsheiekhHMS.Infrastructure.Health.SqlServerReadinessHealthCheck",
+      "project": "ElsheiekhHMS.Infrastructure",
+      "namespace": "ElsheiekhHMS.Infrastructure.Health",
+      "file": "ElsheiekhHMS.Infrastructure/Health/HmsHealthChecks.cs",
+      "source_file": "ElsheiekhHMS.Infrastructure/Health/HmsHealthChecks.cs",
+      "source_location": "L20",
+      "line": 20,
+      "accessibility": "public",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 2,
+      "community_name": "ElsheiekhHMS.Infrastructure",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
       "id": "type:ElsheiekhHMS.Infrastructure.Identity.AccountLoginEligibility",
       "name": "AccountLoginEligibility",
       "label": "AccountLoginEligibility",
@@ -9100,6 +9327,30 @@
       "accessibility": "public",
       "abstract": false,
       "sealed": false,
+      "static": false,
+      "external": false,
+      "community": 2,
+      "community_name": "ElsheiekhHMS.Infrastructure",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Infrastructure.Observability.RequestObservabilityMiddleware",
+      "name": "RequestObservabilityMiddleware",
+      "label": "RequestObservabilityMiddleware",
+      "kind": "class",
+      "type": "class",
+      "fullName": "ElsheiekhHMS.Infrastructure.Observability.RequestObservabilityMiddleware",
+      "project": "ElsheiekhHMS.Infrastructure",
+      "namespace": "ElsheiekhHMS.Infrastructure.Observability",
+      "file": "ElsheiekhHMS.Infrastructure/Observability/RequestObservabilityMiddleware.cs",
+      "source_file": "ElsheiekhHMS.Infrastructure/Observability/RequestObservabilityMiddleware.cs",
+      "source_location": "L8",
+      "line": 8,
+      "accessibility": "public",
+      "abstract": false,
+      "sealed": true,
       "static": false,
       "external": false,
       "community": 2,
@@ -10129,6 +10380,30 @@
       "source_file": "ElsheiekhHMS.Tests/Integration/Persistence/SqlServerTestDatabaseFixture.cs",
       "source_location": "L8",
       "line": 8,
+      "accessibility": "public",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Tests.Integration.Persistence.SqlServerReadinessHealthCheckTests",
+      "name": "SqlServerReadinessHealthCheckTests",
+      "label": "SqlServerReadinessHealthCheckTests",
+      "kind": "class",
+      "type": "class",
+      "fullName": "ElsheiekhHMS.Tests.Integration.Persistence.SqlServerReadinessHealthCheckTests",
+      "project": "ElsheiekhHMS.Tests",
+      "namespace": "ElsheiekhHMS.Tests.Integration.Persistence",
+      "file": "ElsheiekhHMS.Tests/Integration/Persistence/SqlServerReadinessHealthCheckTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Integration/Persistence/SqlServerReadinessHealthCheckTests.cs",
+      "source_location": "L10",
+      "line": 10,
       "accessibility": "public",
       "abstract": false,
       "sealed": true,
@@ -11812,6 +12087,102 @@
       "dynamicTheories": 0
     },
     {
+      "id": "type:ElsheiekhHMS.Tests.Unit.Infrastructure.Health.HealthCheckTests",
+      "name": "HealthCheckTests",
+      "label": "HealthCheckTests",
+      "kind": "class",
+      "type": "class",
+      "fullName": "ElsheiekhHMS.Tests.Unit.Infrastructure.Health.HealthCheckTests",
+      "project": "ElsheiekhHMS.Tests",
+      "namespace": "ElsheiekhHMS.Tests.Unit.Infrastructure.Health",
+      "file": "ElsheiekhHMS.Tests/Unit/Infrastructure/Health/HealthCheckTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Unit/Infrastructure/Health/HealthCheckTests.cs",
+      "source_location": "L8",
+      "line": 8,
+      "accessibility": "public",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Tests.Unit.Infrastructure.Health.HealthCheckTests.ThrowingScope",
+      "name": "ThrowingScope",
+      "label": "ThrowingScope",
+      "kind": "class",
+      "type": "class",
+      "fullName": "ElsheiekhHMS.Tests.Unit.Infrastructure.Health.HealthCheckTests.ThrowingScope",
+      "project": "ElsheiekhHMS.Tests",
+      "namespace": "ElsheiekhHMS.Tests.Unit.Infrastructure.Health",
+      "file": "ElsheiekhHMS.Tests/Unit/Infrastructure/Health/HealthCheckTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Unit/Infrastructure/Health/HealthCheckTests.cs",
+      "source_location": "L37",
+      "line": 37,
+      "accessibility": "private",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Tests.Unit.Infrastructure.Health.HealthCheckTests.ThrowingScopeFactory",
+      "name": "ThrowingScopeFactory",
+      "label": "ThrowingScopeFactory",
+      "kind": "class",
+      "type": "class",
+      "fullName": "ElsheiekhHMS.Tests.Unit.Infrastructure.Health.HealthCheckTests.ThrowingScopeFactory",
+      "project": "ElsheiekhHMS.Tests",
+      "namespace": "ElsheiekhHMS.Tests.Unit.Infrastructure.Health",
+      "file": "ElsheiekhHMS.Tests/Unit/Infrastructure/Health/HealthCheckTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Unit/Infrastructure/Health/HealthCheckTests.cs",
+      "source_location": "L32",
+      "line": 32,
+      "accessibility": "private",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Tests.Unit.Infrastructure.Health.HealthCheckTests.ThrowingServiceProvider",
+      "name": "ThrowingServiceProvider",
+      "label": "ThrowingServiceProvider",
+      "kind": "class",
+      "type": "class",
+      "fullName": "ElsheiekhHMS.Tests.Unit.Infrastructure.Health.HealthCheckTests.ThrowingServiceProvider",
+      "project": "ElsheiekhHMS.Tests",
+      "namespace": "ElsheiekhHMS.Tests.Unit.Infrastructure.Health",
+      "file": "ElsheiekhHMS.Tests/Unit/Infrastructure/Health/HealthCheckTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Unit/Infrastructure/Health/HealthCheckTests.cs",
+      "source_location": "L43",
+      "line": 43,
+      "accessibility": "private",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
       "id": "type:ElsheiekhHMS.Tests.Unit.Infrastructure.Identity.AccountLoginEligibilityTests",
       "name": "AccountLoginEligibilityTests",
       "label": "AccountLoginEligibilityTests",
@@ -11980,6 +12351,102 @@
       "dynamicTheories": 0
     },
     {
+      "id": "type:ElsheiekhHMS.Tests.Unit.Infrastructure.Observability.RequestObservabilityMiddlewareTests",
+      "name": "RequestObservabilityMiddlewareTests",
+      "label": "RequestObservabilityMiddlewareTests",
+      "kind": "class",
+      "type": "class",
+      "fullName": "ElsheiekhHMS.Tests.Unit.Infrastructure.Observability.RequestObservabilityMiddlewareTests",
+      "project": "ElsheiekhHMS.Tests",
+      "namespace": "ElsheiekhHMS.Tests.Unit.Infrastructure.Observability",
+      "file": "ElsheiekhHMS.Tests/Unit/Infrastructure/Observability/RequestObservabilityMiddlewareTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Unit/Infrastructure/Observability/RequestObservabilityMiddlewareTests.cs",
+      "source_location": "L9",
+      "line": 9,
+      "accessibility": "public",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Tests.Unit.Infrastructure.Observability.RequestObservabilityMiddlewareTests.CapturingLogger",
+      "name": "CapturingLogger",
+      "label": "CapturingLogger",
+      "kind": "class",
+      "type": "class",
+      "fullName": "ElsheiekhHMS.Tests.Unit.Infrastructure.Observability.RequestObservabilityMiddlewareTests.CapturingLogger",
+      "project": "ElsheiekhHMS.Tests",
+      "namespace": "ElsheiekhHMS.Tests.Unit.Infrastructure.Observability",
+      "file": "ElsheiekhHMS.Tests/Unit/Infrastructure/Observability/RequestObservabilityMiddlewareTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Unit/Infrastructure/Observability/RequestObservabilityMiddlewareTests.cs",
+      "source_location": "L107",
+      "line": 107,
+      "accessibility": "private",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Tests.Unit.Infrastructure.Observability.RequestObservabilityMiddlewareTests.LogRecord",
+      "name": "LogRecord",
+      "label": "LogRecord",
+      "kind": "record",
+      "type": "record",
+      "fullName": "ElsheiekhHMS.Tests.Unit.Infrastructure.Observability.RequestObservabilityMiddlewareTests.LogRecord",
+      "project": "ElsheiekhHMS.Tests",
+      "namespace": "ElsheiekhHMS.Tests.Unit.Infrastructure.Observability",
+      "file": "ElsheiekhHMS.Tests/Unit/Infrastructure/Observability/RequestObservabilityMiddlewareTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Unit/Infrastructure/Observability/RequestObservabilityMiddlewareTests.cs",
+      "source_location": "L138",
+      "line": 138,
+      "accessibility": "private",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Tests.Unit.Infrastructure.Observability.RequestObservabilityMiddlewareTests.NoopDisposable",
+      "name": "NoopDisposable",
+      "label": "NoopDisposable",
+      "kind": "class",
+      "type": "class",
+      "fullName": "ElsheiekhHMS.Tests.Unit.Infrastructure.Observability.RequestObservabilityMiddlewareTests.NoopDisposable",
+      "project": "ElsheiekhHMS.Tests",
+      "namespace": "ElsheiekhHMS.Tests.Unit.Infrastructure.Observability",
+      "file": "ElsheiekhHMS.Tests/Unit/Infrastructure/Observability/RequestObservabilityMiddlewareTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Unit/Infrastructure/Observability/RequestObservabilityMiddlewareTests.cs",
+      "source_location": "L143",
+      "line": 143,
+      "accessibility": "private",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
       "id": "type:ElsheiekhHMS.Web.Security.AuthorizationConfiguration",
       "name": "AuthorizationConfiguration",
       "label": "AuthorizationConfiguration",
@@ -12067,36 +12534,6 @@
       "dynamicTheories": 0
     },
     {
-      "id": "type:Microsoft.AspNetCore.Identity.IRoleStore\u003CTRole\u003E",
-      "name": "IRoleStore",
-      "label": "IRoleStore",
-      "kind": "interface",
-      "type": "interface",
-      "fullName": "Microsoft.AspNetCore.Identity.IRoleStore\u003CMicrosoft.AspNetCore.Identity.IdentityRole\u003E",
-      "namespace": "Microsoft.AspNetCore.Identity",
-      "external": true,
-      "community": -1,
-      "community_name": "Solution / external",
-      "testMethods": [],
-      "staticTestCases": 0,
-      "dynamicTheories": 0
-    },
-    {
-      "id": "type:Microsoft.AspNetCore.Identity.IdentityUser",
-      "name": "IdentityUser",
-      "label": "IdentityUser",
-      "kind": "class",
-      "type": "class",
-      "fullName": "Microsoft.AspNetCore.Identity.IdentityUser",
-      "namespace": "Microsoft.AspNetCore.Identity",
-      "external": true,
-      "community": -1,
-      "community_name": "Solution / external",
-      "testMethods": [],
-      "staticTestCases": 0,
-      "dynamicTheories": 0
-    },
-    {
       "id": "type:Microsoft.EntityFrameworkCore.Diagnostics.SaveChangesInterceptor",
       "name": "SaveChangesInterceptor",
       "label": "SaveChangesInterceptor",
@@ -12157,13 +12594,28 @@
       "dynamicTheories": 0
     },
     {
-      "id": "type:Microsoft.Extensions.Logging.ILogger\u003CTCategoryName\u003E",
-      "name": "ILogger",
-      "label": "ILogger",
+      "id": "type:Microsoft.Extensions.DependencyInjection.IServiceScope",
+      "name": "IServiceScope",
+      "label": "IServiceScope",
       "kind": "interface",
       "type": "interface",
-      "fullName": "Microsoft.Extensions.Logging.ILogger\u003CT\u003E",
-      "namespace": "Microsoft.Extensions.Logging",
+      "fullName": "Microsoft.Extensions.DependencyInjection.IServiceScope",
+      "namespace": "Microsoft.Extensions.DependencyInjection",
+      "external": true,
+      "community": -1,
+      "community_name": "Solution / external",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:Microsoft.Extensions.DependencyInjection.IServiceScopeFactory",
+      "name": "IServiceScopeFactory",
+      "label": "IServiceScopeFactory",
+      "kind": "interface",
+      "type": "interface",
+      "fullName": "Microsoft.Extensions.DependencyInjection.IServiceScopeFactory",
+      "namespace": "Microsoft.Extensions.DependencyInjection",
       "external": true,
       "community": -1,
       "community_name": "Solution / external",
@@ -12187,12 +12639,42 @@
       "dynamicTheories": 0
     },
     {
+      "id": "type:System.IDisposable",
+      "name": "IDisposable",
+      "label": "IDisposable",
+      "kind": "interface",
+      "type": "interface",
+      "fullName": "System.IDisposable",
+      "namespace": "System",
+      "external": true,
+      "community": -1,
+      "community_name": "Solution / external",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
       "id": "type:System.IEquatable\u003CT\u003E",
       "name": "IEquatable",
       "label": "IEquatable",
       "kind": "interface",
       "type": "interface",
       "fullName": "System.IEquatable\u003CElsheiekhHMS.Application.Appointments.Contracts.AppointmentActionRequest\u003E",
+      "namespace": "System",
+      "external": true,
+      "community": -1,
+      "community_name": "Solution / external",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:System.IServiceProvider",
+      "name": "IServiceProvider",
+      "label": "IServiceProvider",
+      "kind": "interface",
+      "type": "interface",
+      "fullName": "System.IServiceProvider",
       "namespace": "System",
       "external": true,
       "community": -1,
@@ -13299,6 +13781,33 @@
       "weight": 1
     },
     {
+      "source": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Health/HmsHealthChecks.cs",
+      "target": "type:ElsheiekhHMS.Infrastructure.Health.HmsHealthEndpointExtensions",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Infrastructure/Health/HmsHealthChecks.cs:L51",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Health/HmsHealthChecks.cs",
+      "target": "type:ElsheiekhHMS.Infrastructure.Health.HmsLivenessHealthCheck",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Infrastructure/Health/HmsHealthChecks.cs:L12",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Health/HmsHealthChecks.cs",
+      "target": "type:ElsheiekhHMS.Infrastructure.Health.SqlServerReadinessHealthCheck",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Infrastructure/Health/HmsHealthChecks.cs:L20",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
       "source": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Identity/AccountLoginEligibility.cs",
       "target": "type:ElsheiekhHMS.Infrastructure.Identity.AccountLoginEligibility",
       "type": "declares",
@@ -13456,6 +13965,15 @@
       "target": "type:ElsheiekhHMS.Infrastructure.Migrations.ElsheiekhHmsDbContextModelSnapshot",
       "type": "declares",
       "evidence": "ElsheiekhHMS.Infrastructure/Migrations/ElsheiekhHmsDbContextModelSnapshot.cs:L13",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Observability/RequestObservabilityMiddleware.cs",
+      "target": "type:ElsheiekhHMS.Infrastructure.Observability.RequestObservabilityMiddleware",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Infrastructure/Observability/RequestObservabilityMiddleware.cs:L8",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -13834,6 +14352,15 @@
       "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.QueueServiceSqlServerTests.TestCurrentUser",
       "type": "declares",
       "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs:L165",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/SqlServerReadinessHealthCheckTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.SqlServerReadinessHealthCheckTests",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/SqlServerReadinessHealthCheckTests.cs:L10",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -14442,6 +14969,42 @@
       "weight": 1
     },
     {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Infrastructure/Health/HealthCheckTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Infrastructure.Health.HealthCheckTests",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Infrastructure/Health/HealthCheckTests.cs:L8",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Infrastructure/Health/HealthCheckTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Infrastructure.Health.HealthCheckTests.ThrowingScope",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Infrastructure/Health/HealthCheckTests.cs:L37",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Infrastructure/Health/HealthCheckTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Infrastructure.Health.HealthCheckTests.ThrowingScopeFactory",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Infrastructure/Health/HealthCheckTests.cs:L32",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Infrastructure/Health/HealthCheckTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Infrastructure.Health.HealthCheckTests.ThrowingServiceProvider",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Infrastructure/Health/HealthCheckTests.cs:L43",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
       "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Infrastructure/Identity/AccountLoginEligibilityTests.cs",
       "target": "type:ElsheiekhHMS.Tests.Unit.Infrastructure.Identity.AccountLoginEligibilityTests",
       "type": "declares",
@@ -14500,6 +15063,42 @@
       "target": "type:ElsheiekhHMS.Tests.Unit.Infrastructure.Identity.IdentityRoleSeederTests.NullLogger\u003CT\u003E",
       "type": "declares",
       "evidence": "ElsheiekhHMS.Tests/Unit/Infrastructure/Identity/IdentityRoleSeederTests.cs:L84",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Infrastructure/Observability/RequestObservabilityMiddlewareTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Infrastructure.Observability.RequestObservabilityMiddlewareTests",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Infrastructure/Observability/RequestObservabilityMiddlewareTests.cs:L9",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Infrastructure/Observability/RequestObservabilityMiddlewareTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Infrastructure.Observability.RequestObservabilityMiddlewareTests.CapturingLogger",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Infrastructure/Observability/RequestObservabilityMiddlewareTests.cs:L107",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Infrastructure/Observability/RequestObservabilityMiddlewareTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Infrastructure.Observability.RequestObservabilityMiddlewareTests.LogRecord",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Infrastructure/Observability/RequestObservabilityMiddlewareTests.cs:L138",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Infrastructure/Observability/RequestObservabilityMiddlewareTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Infrastructure.Observability.RequestObservabilityMiddlewareTests.NoopDisposable",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Infrastructure/Observability/RequestObservabilityMiddlewareTests.cs:L143",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -15901,6 +16500,15 @@
     },
     {
       "source": "project:ElsheiekhHMS.Infrastructure",
+      "target": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Health/HmsHealthChecks.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Infrastructure/ElsheiekhHMS.Infrastructure.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Infrastructure",
       "target": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Identity/AccountLoginEligibility.cs",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Infrastructure/ElsheiekhHMS.Infrastructure.csproj",
@@ -16055,6 +16663,15 @@
     {
       "source": "project:ElsheiekhHMS.Infrastructure",
       "target": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Migrations/ElsheiekhHmsDbContextModelSnapshot.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Infrastructure/ElsheiekhHMS.Infrastructure.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Infrastructure",
+      "target": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Observability/RequestObservabilityMiddleware.cs",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Infrastructure/ElsheiekhHMS.Infrastructure.csproj",
       "relation": "contains",
@@ -16234,6 +16851,15 @@
     },
     {
       "source": "project:ElsheiekhHMS.Infrastructure",
+      "target": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Health",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Infrastructure/Health/HmsHealthChecks.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Infrastructure",
       "target": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Identity",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Infrastructure/Identity/AccountLoginEligibility.cs",
@@ -16264,6 +16890,15 @@
       "target": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Migrations",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Infrastructure/Migrations/20260921111137_InitialCreate.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Infrastructure",
+      "target": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Observability",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Infrastructure/Observability/RequestObservabilityMiddleware.cs",
       "relation": "contains",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -16406,6 +17041,15 @@
     {
       "source": "project:ElsheiekhHMS.Tests",
       "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Tests",
+      "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/SqlServerReadinessHealthCheckTests.cs",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
       "relation": "contains",
@@ -16765,6 +17409,15 @@
     },
     {
       "source": "project:ElsheiekhHMS.Tests",
+      "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Infrastructure/Health/HealthCheckTests.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Tests",
       "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Infrastructure/Identity/AccountLoginEligibilityTests.cs",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
@@ -16802,6 +17455,15 @@
     {
       "source": "project:ElsheiekhHMS.Tests",
       "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Infrastructure/Identity/IdentityRoleSeederTests.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Tests",
+      "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Infrastructure/Observability/RequestObservabilityMiddlewareTests.cs",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
       "relation": "contains",
@@ -16999,9 +17661,27 @@
     },
     {
       "source": "project:ElsheiekhHMS.Tests",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Infrastructure.Health",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Infrastructure/Health/HealthCheckTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Tests",
       "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Infrastructure.Identity",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Tests/Unit/Infrastructure/Identity/AccountLoginEligibilityTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Tests",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Infrastructure.Observability",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Infrastructure/Observability/RequestObservabilityMiddlewareTests.cs",
       "relation": "contains",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -19050,6 +19730,33 @@
       "weight": 1
     },
     {
+      "source": "type:ElsheiekhHMS.Infrastructure.Health.HmsHealthEndpointExtensions",
+      "target": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Health",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Infrastructure/Health/HmsHealthChecks.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Infrastructure.Health.HmsLivenessHealthCheck",
+      "target": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Health",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Infrastructure/Health/HmsHealthChecks.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Infrastructure.Health.SqlServerReadinessHealthCheck",
+      "target": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Health",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Infrastructure/Health/HmsHealthChecks.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
       "source": "type:ElsheiekhHMS.Infrastructure.Identity.AccountLoginEligibility",
       "target": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Identity",
       "type": "namespace-membership",
@@ -19091,15 +19798,6 @@
       "type": "namespace-membership",
       "evidence": "ElsheiekhHMS.Infrastructure/Identity/Entities/AccountSecurityState.cs",
       "relation": "namespace-membership",
-      "confidence": "EXTRACTED",
-      "weight": 1
-    },
-    {
-      "source": "type:ElsheiekhHMS.Infrastructure.Identity.Entities.ApplicationUser",
-      "target": "type:Microsoft.AspNetCore.Identity.IdentityUser",
-      "type": "inherits",
-      "evidence": "ElsheiekhHMS.Infrastructure/Identity/Entities/ApplicationUser.cs:L5",
-      "relation": "inherits",
       "confidence": "EXTRACTED",
       "weight": 1
     },
@@ -19234,6 +19932,15 @@
       "target": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Migrations",
       "type": "namespace-membership",
       "evidence": "ElsheiekhHMS.Infrastructure/Migrations/20260921111137_InitialCreate.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Infrastructure.Observability.RequestObservabilityMiddleware",
+      "target": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Observability",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Infrastructure/Observability/RequestObservabilityMiddleware.cs",
       "relation": "namespace-membership",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -20107,6 +20814,15 @@
       "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Integration.Persistence",
       "type": "namespace-membership",
       "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/SqlServerTestDatabaseFixture.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.SqlServerReadinessHealthCheckTests",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Integration.Persistence",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/SqlServerReadinessHealthCheckTests.cs",
       "relation": "namespace-membership",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -21687,6 +22403,96 @@
       "weight": 1
     },
     {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Infrastructure.Health.HealthCheckTests",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Infrastructure.Health.HealthCheckTests.ThrowingScope",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Infrastructure/Health/HealthCheckTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Infrastructure.Health.HealthCheckTests",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Infrastructure.Health.HealthCheckTests.ThrowingScopeFactory",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Infrastructure/Health/HealthCheckTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Infrastructure.Health.HealthCheckTests",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Infrastructure.Health.HealthCheckTests.ThrowingServiceProvider",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Infrastructure/Health/HealthCheckTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Infrastructure.Health.HealthCheckTests",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Infrastructure.Health",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Infrastructure/Health/HealthCheckTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Infrastructure.Health.HealthCheckTests.ThrowingScope",
+      "target": "type:Microsoft.Extensions.DependencyInjection.IServiceScope",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Infrastructure/Health/HealthCheckTests.cs:L37",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Infrastructure.Health.HealthCheckTests.ThrowingScope",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Infrastructure.Health",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Infrastructure/Health/HealthCheckTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Infrastructure.Health.HealthCheckTests.ThrowingScopeFactory",
+      "target": "type:Microsoft.Extensions.DependencyInjection.IServiceScopeFactory",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Infrastructure/Health/HealthCheckTests.cs:L32",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Infrastructure.Health.HealthCheckTests.ThrowingScopeFactory",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Infrastructure.Health",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Infrastructure/Health/HealthCheckTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Infrastructure.Health.HealthCheckTests.ThrowingServiceProvider",
+      "target": "type:System.IServiceProvider",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Infrastructure/Health/HealthCheckTests.cs:L43",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Infrastructure.Health.HealthCheckTests.ThrowingServiceProvider",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Infrastructure.Health",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Infrastructure/Health/HealthCheckTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
       "source": "type:ElsheiekhHMS.Tests.Unit.Infrastructure.Identity.AccountLoginEligibilityTests",
       "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Infrastructure.Identity",
       "type": "namespace-membership",
@@ -21751,15 +22557,6 @@
     },
     {
       "source": "type:ElsheiekhHMS.Tests.Unit.Infrastructure.Identity.IdentityRoleSeederTests.InMemoryRoleStore",
-      "target": "type:Microsoft.AspNetCore.Identity.IRoleStore\u003CTRole\u003E",
-      "type": "implements",
-      "evidence": "ElsheiekhHMS.Tests/Unit/Infrastructure/Identity/IdentityRoleSeederTests.cs:L98",
-      "relation": "implements",
-      "confidence": "EXTRACTED",
-      "weight": 1
-    },
-    {
-      "source": "type:ElsheiekhHMS.Tests.Unit.Infrastructure.Identity.IdentityRoleSeederTests.InMemoryRoleStore",
       "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Infrastructure.Identity",
       "type": "namespace-membership",
       "evidence": "ElsheiekhHMS.Tests/Unit/Infrastructure/Identity/IdentityRoleSeederTests.cs",
@@ -21769,18 +22566,90 @@
     },
     {
       "source": "type:ElsheiekhHMS.Tests.Unit.Infrastructure.Identity.IdentityRoleSeederTests.NullLogger\u003CT\u003E",
-      "target": "type:Microsoft.Extensions.Logging.ILogger\u003CTCategoryName\u003E",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Infrastructure.Identity",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Infrastructure/Identity/IdentityRoleSeederTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Infrastructure.Observability.RequestObservabilityMiddlewareTests",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Infrastructure.Observability.RequestObservabilityMiddlewareTests.CapturingLogger",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Infrastructure/Observability/RequestObservabilityMiddlewareTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Infrastructure.Observability.RequestObservabilityMiddlewareTests",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Infrastructure.Observability.RequestObservabilityMiddlewareTests.LogRecord",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Infrastructure/Observability/RequestObservabilityMiddlewareTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Infrastructure.Observability.RequestObservabilityMiddlewareTests",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Infrastructure.Observability.RequestObservabilityMiddlewareTests.NoopDisposable",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Infrastructure/Observability/RequestObservabilityMiddlewareTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Infrastructure.Observability.RequestObservabilityMiddlewareTests",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Infrastructure.Observability",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Infrastructure/Observability/RequestObservabilityMiddlewareTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Infrastructure.Observability.RequestObservabilityMiddlewareTests.CapturingLogger",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Infrastructure.Observability",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Infrastructure/Observability/RequestObservabilityMiddlewareTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Infrastructure.Observability.RequestObservabilityMiddlewareTests.LogRecord",
+      "target": "type:System.IEquatable\u003CT\u003E",
       "type": "implements",
-      "evidence": "ElsheiekhHMS.Tests/Unit/Infrastructure/Identity/IdentityRoleSeederTests.cs:L84",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Infrastructure/Observability/RequestObservabilityMiddlewareTests.cs:L138",
       "relation": "implements",
       "confidence": "EXTRACTED",
       "weight": 1
     },
     {
-      "source": "type:ElsheiekhHMS.Tests.Unit.Infrastructure.Identity.IdentityRoleSeederTests.NullLogger\u003CT\u003E",
-      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Infrastructure.Identity",
+      "source": "type:ElsheiekhHMS.Tests.Unit.Infrastructure.Observability.RequestObservabilityMiddlewareTests.LogRecord",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Infrastructure.Observability",
       "type": "namespace-membership",
-      "evidence": "ElsheiekhHMS.Tests/Unit/Infrastructure/Identity/IdentityRoleSeederTests.cs",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Infrastructure/Observability/RequestObservabilityMiddlewareTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Infrastructure.Observability.RequestObservabilityMiddlewareTests.NoopDisposable",
+      "target": "type:System.IDisposable",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Infrastructure/Observability/RequestObservabilityMiddlewareTests.cs:L143",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Infrastructure.Observability.RequestObservabilityMiddlewareTests.NoopDisposable",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Infrastructure.Observability",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Infrastructure/Observability/RequestObservabilityMiddlewareTests.cs",
       "relation": "namespace-membership",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -21858,7 +22727,7 @@
       "statusSource": "README.md declaration, not independently certified completion",
       "declaredStatus": [
         {
-          "text": "\u003E **Current development stage:** Phase 08 \u2014 Business Workflows complete; 08C is not required; Phase 09 has not started",
+          "text": "\u003E **Current development stage:** Phase 09 \u2014 Enterprise Infrastructure complete; Phase 10 not started",
           "source": "README.md:L5"
         },
         {
@@ -21982,40 +22851,56 @@
           "source": "README.md:L65"
         },
         {
+          "text": "\u003E **Phase 09A:** \u2705 Structured Application Observability complete",
+          "source": "README.md:L67"
+        },
+        {
+          "text": "\u003E **Phase 09B:** \u2705 SQL Server readiness health checks complete",
+          "source": "README.md:L69"
+        },
+        {
+          "text": "\u003E **Phase 09:** \u2705 Enterprise Infrastructure complete; 09A and 09B complete; 09C is not required",
+          "source": "README.md:L71"
+        },
+        {
+          "text": "\u003E **Phase 10:** \u23F3 Not started",
+          "source": "README.md:L73"
+        },
+        {
           "text": "| 01 | Solution \u0026 Architecture | \u2705 Complete |",
-          "source": "README.md:L382"
+          "source": "README.md:L390"
         },
         {
           "text": "| 02 | Core Foundation | \u2705 Complete |",
-          "source": "README.md:L383"
+          "source": "README.md:L391"
         },
         {
           "text": "| 03 | Domain Entities | \u2705 Complete |",
-          "source": "README.md:L384"
+          "source": "README.md:L392"
         },
         {
           "text": "| 04 | EF Core \u0026 Database | \u2705 Complete |",
-          "source": "README.md:L385"
+          "source": "README.md:L393"
         },
         {
           "text": "| 05 | Identity \u0026 Security | \u2705 Complete (05A, 05B, 05C, 05C-A, 05D, and 05E) |",
-          "source": "README.md:L386"
+          "source": "README.md:L394"
         },
         {
           "text": "| 06 | DTOs \u0026 Validation | \u2705 Complete (06A\u201306D) |",
-          "source": "README.md:L387"
+          "source": "README.md:L395"
         },
         {
           "text": "| 07 | Application Services | \u2705 Complete for approved scope (07S, 07A, 07B, 07C-P, 07C, 07D; 07E deferred) |",
-          "source": "README.md:L388"
+          "source": "README.md:L396"
         },
         {
           "text": "| 08 | Business Workflows | \u23F3 Not started |",
-          "source": "README.md:L389"
+          "source": "README.md:L397"
         },
         {
           "text": "| 09 | Enterprise Infrastructure | \u23F3 Not started |",
-          "source": "README.md:L390"
+          "source": "README.md:L398"
         }
       ]
     }
@@ -22031,8 +22916,14 @@
       "Architecture checks are structural observations, not a full semantic security or dependency audit."
     ],
     "warnings": [
+      "Unresolved base omitted: ElsheiekhHMS.Infrastructure.Health.HmsLivenessHealthCheck : IHealthCheck",
+      "Unresolved base omitted: ElsheiekhHMS.Infrastructure.Health.SqlServerReadinessHealthCheck : IHealthCheck",
+      "Unresolved base omitted: ElsheiekhHMS.Infrastructure.Identity.Entities.ApplicationUser : IdentityUser",
       "Unresolved base omitted: ElsheiekhHMS.Tests.Integration.Persistence.SqlServerPersistenceCollection : ICollectionFixture\u003CElsheiekhHMS.Tests.Integration.Persistence.SqlServerTestDatabaseFixture\u003E",
       "Unresolved base omitted: ElsheiekhHMS.Tests.Integration.Persistence.SqlServerTestDatabaseFixture : IAsyncLifetime",
+      "Unresolved base omitted: ElsheiekhHMS.Tests.Unit.Infrastructure.Identity.IdentityRoleSeederTests.NullLogger\u003CT\u003E : Microsoft.Extensions.Logging.ILogger\u003CT\u003E",
+      "Unresolved base omitted: ElsheiekhHMS.Tests.Unit.Infrastructure.Identity.IdentityRoleSeederTests.InMemoryRoleStore : IRoleStore\u003CIdentityRole\u003E",
+      "Unresolved base omitted: ElsheiekhHMS.Tests.Unit.Infrastructure.Observability.RequestObservabilityMiddlewareTests.CapturingLogger : ILogger\u003CElsheiekhHMS.Infrastructure.Observability.RequestObservabilityMiddleware\u003E",
       "Unresolved base omitted: ElsheiekhHMS.Web.Security.HmsRevalidatingAuthenticationStateProvider : RevalidatingServerAuthenticationStateProvider"
     ],
     "llmApiCalls": 0,
@@ -23126,6 +24017,33 @@
       "weight": 1
     },
     {
+      "source": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Health/HmsHealthChecks.cs",
+      "target": "type:ElsheiekhHMS.Infrastructure.Health.HmsHealthEndpointExtensions",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Infrastructure/Health/HmsHealthChecks.cs:L51",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Health/HmsHealthChecks.cs",
+      "target": "type:ElsheiekhHMS.Infrastructure.Health.HmsLivenessHealthCheck",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Infrastructure/Health/HmsHealthChecks.cs:L12",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Health/HmsHealthChecks.cs",
+      "target": "type:ElsheiekhHMS.Infrastructure.Health.SqlServerReadinessHealthCheck",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Infrastructure/Health/HmsHealthChecks.cs:L20",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
       "source": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Identity/AccountLoginEligibility.cs",
       "target": "type:ElsheiekhHMS.Infrastructure.Identity.AccountLoginEligibility",
       "type": "declares",
@@ -23283,6 +24201,15 @@
       "target": "type:ElsheiekhHMS.Infrastructure.Migrations.ElsheiekhHmsDbContextModelSnapshot",
       "type": "declares",
       "evidence": "ElsheiekhHMS.Infrastructure/Migrations/ElsheiekhHmsDbContextModelSnapshot.cs:L13",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Observability/RequestObservabilityMiddleware.cs",
+      "target": "type:ElsheiekhHMS.Infrastructure.Observability.RequestObservabilityMiddleware",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Infrastructure/Observability/RequestObservabilityMiddleware.cs:L8",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -23661,6 +24588,15 @@
       "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.QueueServiceSqlServerTests.TestCurrentUser",
       "type": "declares",
       "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs:L165",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/SqlServerReadinessHealthCheckTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.SqlServerReadinessHealthCheckTests",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/SqlServerReadinessHealthCheckTests.cs:L10",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -24269,6 +25205,42 @@
       "weight": 1
     },
     {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Infrastructure/Health/HealthCheckTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Infrastructure.Health.HealthCheckTests",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Infrastructure/Health/HealthCheckTests.cs:L8",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Infrastructure/Health/HealthCheckTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Infrastructure.Health.HealthCheckTests.ThrowingScope",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Infrastructure/Health/HealthCheckTests.cs:L37",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Infrastructure/Health/HealthCheckTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Infrastructure.Health.HealthCheckTests.ThrowingScopeFactory",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Infrastructure/Health/HealthCheckTests.cs:L32",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Infrastructure/Health/HealthCheckTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Infrastructure.Health.HealthCheckTests.ThrowingServiceProvider",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Infrastructure/Health/HealthCheckTests.cs:L43",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
       "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Infrastructure/Identity/AccountLoginEligibilityTests.cs",
       "target": "type:ElsheiekhHMS.Tests.Unit.Infrastructure.Identity.AccountLoginEligibilityTests",
       "type": "declares",
@@ -24327,6 +25299,42 @@
       "target": "type:ElsheiekhHMS.Tests.Unit.Infrastructure.Identity.IdentityRoleSeederTests.NullLogger\u003CT\u003E",
       "type": "declares",
       "evidence": "ElsheiekhHMS.Tests/Unit/Infrastructure/Identity/IdentityRoleSeederTests.cs:L84",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Infrastructure/Observability/RequestObservabilityMiddlewareTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Infrastructure.Observability.RequestObservabilityMiddlewareTests",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Infrastructure/Observability/RequestObservabilityMiddlewareTests.cs:L9",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Infrastructure/Observability/RequestObservabilityMiddlewareTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Infrastructure.Observability.RequestObservabilityMiddlewareTests.CapturingLogger",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Infrastructure/Observability/RequestObservabilityMiddlewareTests.cs:L107",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Infrastructure/Observability/RequestObservabilityMiddlewareTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Infrastructure.Observability.RequestObservabilityMiddlewareTests.LogRecord",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Infrastructure/Observability/RequestObservabilityMiddlewareTests.cs:L138",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Infrastructure/Observability/RequestObservabilityMiddlewareTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Infrastructure.Observability.RequestObservabilityMiddlewareTests.NoopDisposable",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Infrastructure/Observability/RequestObservabilityMiddlewareTests.cs:L143",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -25728,6 +26736,15 @@
     },
     {
       "source": "project:ElsheiekhHMS.Infrastructure",
+      "target": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Health/HmsHealthChecks.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Infrastructure/ElsheiekhHMS.Infrastructure.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Infrastructure",
       "target": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Identity/AccountLoginEligibility.cs",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Infrastructure/ElsheiekhHMS.Infrastructure.csproj",
@@ -25882,6 +26899,15 @@
     {
       "source": "project:ElsheiekhHMS.Infrastructure",
       "target": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Migrations/ElsheiekhHmsDbContextModelSnapshot.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Infrastructure/ElsheiekhHMS.Infrastructure.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Infrastructure",
+      "target": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Observability/RequestObservabilityMiddleware.cs",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Infrastructure/ElsheiekhHMS.Infrastructure.csproj",
       "relation": "contains",
@@ -26061,6 +27087,15 @@
     },
     {
       "source": "project:ElsheiekhHMS.Infrastructure",
+      "target": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Health",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Infrastructure/Health/HmsHealthChecks.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Infrastructure",
       "target": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Identity",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Infrastructure/Identity/AccountLoginEligibility.cs",
@@ -26091,6 +27126,15 @@
       "target": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Migrations",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Infrastructure/Migrations/20260921111137_InitialCreate.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Infrastructure",
+      "target": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Observability",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Infrastructure/Observability/RequestObservabilityMiddleware.cs",
       "relation": "contains",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -26233,6 +27277,15 @@
     {
       "source": "project:ElsheiekhHMS.Tests",
       "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Tests",
+      "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/SqlServerReadinessHealthCheckTests.cs",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
       "relation": "contains",
@@ -26592,6 +27645,15 @@
     },
     {
       "source": "project:ElsheiekhHMS.Tests",
+      "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Infrastructure/Health/HealthCheckTests.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Tests",
       "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Infrastructure/Identity/AccountLoginEligibilityTests.cs",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
@@ -26629,6 +27691,15 @@
     {
       "source": "project:ElsheiekhHMS.Tests",
       "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Infrastructure/Identity/IdentityRoleSeederTests.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Tests",
+      "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Infrastructure/Observability/RequestObservabilityMiddlewareTests.cs",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
       "relation": "contains",
@@ -26826,9 +27897,27 @@
     },
     {
       "source": "project:ElsheiekhHMS.Tests",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Infrastructure.Health",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Infrastructure/Health/HealthCheckTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Tests",
       "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Infrastructure.Identity",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Tests/Unit/Infrastructure/Identity/AccountLoginEligibilityTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Tests",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Infrastructure.Observability",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Infrastructure/Observability/RequestObservabilityMiddlewareTests.cs",
       "relation": "contains",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -28877,6 +29966,33 @@
       "weight": 1
     },
     {
+      "source": "type:ElsheiekhHMS.Infrastructure.Health.HmsHealthEndpointExtensions",
+      "target": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Health",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Infrastructure/Health/HmsHealthChecks.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Infrastructure.Health.HmsLivenessHealthCheck",
+      "target": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Health",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Infrastructure/Health/HmsHealthChecks.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Infrastructure.Health.SqlServerReadinessHealthCheck",
+      "target": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Health",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Infrastructure/Health/HmsHealthChecks.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
       "source": "type:ElsheiekhHMS.Infrastructure.Identity.AccountLoginEligibility",
       "target": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Identity",
       "type": "namespace-membership",
@@ -28918,15 +30034,6 @@
       "type": "namespace-membership",
       "evidence": "ElsheiekhHMS.Infrastructure/Identity/Entities/AccountSecurityState.cs",
       "relation": "namespace-membership",
-      "confidence": "EXTRACTED",
-      "weight": 1
-    },
-    {
-      "source": "type:ElsheiekhHMS.Infrastructure.Identity.Entities.ApplicationUser",
-      "target": "type:Microsoft.AspNetCore.Identity.IdentityUser",
-      "type": "inherits",
-      "evidence": "ElsheiekhHMS.Infrastructure/Identity/Entities/ApplicationUser.cs:L5",
-      "relation": "inherits",
       "confidence": "EXTRACTED",
       "weight": 1
     },
@@ -29061,6 +30168,15 @@
       "target": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Migrations",
       "type": "namespace-membership",
       "evidence": "ElsheiekhHMS.Infrastructure/Migrations/20260921111137_InitialCreate.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Infrastructure.Observability.RequestObservabilityMiddleware",
+      "target": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Observability",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Infrastructure/Observability/RequestObservabilityMiddleware.cs",
       "relation": "namespace-membership",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -29934,6 +31050,15 @@
       "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Integration.Persistence",
       "type": "namespace-membership",
       "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/SqlServerTestDatabaseFixture.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.SqlServerReadinessHealthCheckTests",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Integration.Persistence",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/SqlServerReadinessHealthCheckTests.cs",
       "relation": "namespace-membership",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -31514,6 +32639,96 @@
       "weight": 1
     },
     {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Infrastructure.Health.HealthCheckTests",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Infrastructure.Health.HealthCheckTests.ThrowingScope",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Infrastructure/Health/HealthCheckTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Infrastructure.Health.HealthCheckTests",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Infrastructure.Health.HealthCheckTests.ThrowingScopeFactory",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Infrastructure/Health/HealthCheckTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Infrastructure.Health.HealthCheckTests",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Infrastructure.Health.HealthCheckTests.ThrowingServiceProvider",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Infrastructure/Health/HealthCheckTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Infrastructure.Health.HealthCheckTests",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Infrastructure.Health",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Infrastructure/Health/HealthCheckTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Infrastructure.Health.HealthCheckTests.ThrowingScope",
+      "target": "type:Microsoft.Extensions.DependencyInjection.IServiceScope",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Infrastructure/Health/HealthCheckTests.cs:L37",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Infrastructure.Health.HealthCheckTests.ThrowingScope",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Infrastructure.Health",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Infrastructure/Health/HealthCheckTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Infrastructure.Health.HealthCheckTests.ThrowingScopeFactory",
+      "target": "type:Microsoft.Extensions.DependencyInjection.IServiceScopeFactory",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Infrastructure/Health/HealthCheckTests.cs:L32",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Infrastructure.Health.HealthCheckTests.ThrowingScopeFactory",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Infrastructure.Health",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Infrastructure/Health/HealthCheckTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Infrastructure.Health.HealthCheckTests.ThrowingServiceProvider",
+      "target": "type:System.IServiceProvider",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Infrastructure/Health/HealthCheckTests.cs:L43",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Infrastructure.Health.HealthCheckTests.ThrowingServiceProvider",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Infrastructure.Health",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Infrastructure/Health/HealthCheckTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
       "source": "type:ElsheiekhHMS.Tests.Unit.Infrastructure.Identity.AccountLoginEligibilityTests",
       "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Infrastructure.Identity",
       "type": "namespace-membership",
@@ -31578,15 +32793,6 @@
     },
     {
       "source": "type:ElsheiekhHMS.Tests.Unit.Infrastructure.Identity.IdentityRoleSeederTests.InMemoryRoleStore",
-      "target": "type:Microsoft.AspNetCore.Identity.IRoleStore\u003CTRole\u003E",
-      "type": "implements",
-      "evidence": "ElsheiekhHMS.Tests/Unit/Infrastructure/Identity/IdentityRoleSeederTests.cs:L98",
-      "relation": "implements",
-      "confidence": "EXTRACTED",
-      "weight": 1
-    },
-    {
-      "source": "type:ElsheiekhHMS.Tests.Unit.Infrastructure.Identity.IdentityRoleSeederTests.InMemoryRoleStore",
       "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Infrastructure.Identity",
       "type": "namespace-membership",
       "evidence": "ElsheiekhHMS.Tests/Unit/Infrastructure/Identity/IdentityRoleSeederTests.cs",
@@ -31596,18 +32802,90 @@
     },
     {
       "source": "type:ElsheiekhHMS.Tests.Unit.Infrastructure.Identity.IdentityRoleSeederTests.NullLogger\u003CT\u003E",
-      "target": "type:Microsoft.Extensions.Logging.ILogger\u003CTCategoryName\u003E",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Infrastructure.Identity",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Infrastructure/Identity/IdentityRoleSeederTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Infrastructure.Observability.RequestObservabilityMiddlewareTests",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Infrastructure.Observability.RequestObservabilityMiddlewareTests.CapturingLogger",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Infrastructure/Observability/RequestObservabilityMiddlewareTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Infrastructure.Observability.RequestObservabilityMiddlewareTests",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Infrastructure.Observability.RequestObservabilityMiddlewareTests.LogRecord",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Infrastructure/Observability/RequestObservabilityMiddlewareTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Infrastructure.Observability.RequestObservabilityMiddlewareTests",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Infrastructure.Observability.RequestObservabilityMiddlewareTests.NoopDisposable",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Infrastructure/Observability/RequestObservabilityMiddlewareTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Infrastructure.Observability.RequestObservabilityMiddlewareTests",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Infrastructure.Observability",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Infrastructure/Observability/RequestObservabilityMiddlewareTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Infrastructure.Observability.RequestObservabilityMiddlewareTests.CapturingLogger",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Infrastructure.Observability",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Infrastructure/Observability/RequestObservabilityMiddlewareTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Infrastructure.Observability.RequestObservabilityMiddlewareTests.LogRecord",
+      "target": "type:System.IEquatable\u003CT\u003E",
       "type": "implements",
-      "evidence": "ElsheiekhHMS.Tests/Unit/Infrastructure/Identity/IdentityRoleSeederTests.cs:L84",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Infrastructure/Observability/RequestObservabilityMiddlewareTests.cs:L138",
       "relation": "implements",
       "confidence": "EXTRACTED",
       "weight": 1
     },
     {
-      "source": "type:ElsheiekhHMS.Tests.Unit.Infrastructure.Identity.IdentityRoleSeederTests.NullLogger\u003CT\u003E",
-      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Infrastructure.Identity",
+      "source": "type:ElsheiekhHMS.Tests.Unit.Infrastructure.Observability.RequestObservabilityMiddlewareTests.LogRecord",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Infrastructure.Observability",
       "type": "namespace-membership",
-      "evidence": "ElsheiekhHMS.Tests/Unit/Infrastructure/Identity/IdentityRoleSeederTests.cs",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Infrastructure/Observability/RequestObservabilityMiddlewareTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Infrastructure.Observability.RequestObservabilityMiddlewareTests.NoopDisposable",
+      "target": "type:System.IDisposable",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Infrastructure/Observability/RequestObservabilityMiddlewareTests.cs:L143",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Infrastructure.Observability.RequestObservabilityMiddlewareTests.NoopDisposable",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Infrastructure.Observability",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Infrastructure/Observability/RequestObservabilityMiddlewareTests.cs",
       "relation": "namespace-membership",
       "confidence": "EXTRACTED",
       "weight": 1

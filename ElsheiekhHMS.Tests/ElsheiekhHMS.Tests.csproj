@@ -19,6 +19,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\ElsheiekhHMS.Core\ElsheiekhHMS.Core.csproj" />
     <ProjectReference Include="..\ElsheiekhHMS.Application\ElsheiekhHMS.Application.csproj" />
     <ProjectReference Include="..\ElsheiekhHMS.Infrastructure\ElsheiekhHMS.Infrastructure.csproj" />

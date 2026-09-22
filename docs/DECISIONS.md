@@ -839,10 +839,41 @@ Provider-owned workflows remain deferred pending 07E Doctor↔ApplicationUser
 ownership and approved authorization contracts. Patient self-service remains
 deferred pending Patient ownership. Encounter/clinical, laboratory, billing,
 inpatient, pharmacy, and notification workflows require separate approved domain
-designs. Phase 09 is not started by this closeout.
+designs. At that closeout, Phase 09 had not started.
 
 ### Consequences
 
 This closeout changes project status documentation only. Core, Application,
 Infrastructure, Web, ApplicationUser, EF schema, migrations, model snapshot,
 packages, database state, and Phases.md remain unchanged.
+
+## ADR-028 — Phase 09A/09B built-in observability and SQL readiness
+
+**Status:** Implemented; complete
+**Phase:** 09A, 09B
+
+### Decision
+
+Use built-in ASP.NET Core and .NET primitives for proportional operational
+diagnostics and dependency readiness. Request middleware reuses W3C `Activity`
+correlation, records safe structured completion fields with monotonic duration,
+and includes only a stable authenticated UserId claim when present. Health checks
+separate anonymous process liveness (`/health/live` and preserved `/health`) from
+anonymous SQL Server readiness (`/health/ready`) using `DbContext.Database.CanConnectAsync`.
+Readiness does not migrate, seed, write, or expose database exception details.
+
+### Consequences
+
+No third-party observability package, schema change, migration, Core change,
+ApplicationUser change, retry/pooling/cache/broker/background infrastructure, or
+extra request database lookup is introduced. AuditLog remains the durable audit
+authority; request logs exclude bodies, query values, headers, cookies, tokens,
+security stamps, and medical identifiers. 09C is not required.
+
+### Evidence / Notes
+
+[Request observability middleware](../ElsheiekhHMS.Infrastructure/Observability/RequestObservabilityMiddleware.cs);
+[health checks and endpoint mapping](../ElsheiekhHMS.Infrastructure/Health/HmsHealthChecks.cs);
+[observability unit tests](../ElsheiekhHMS.Tests/Unit/Infrastructure/Observability/RequestObservabilityMiddlewareTests.cs);
+[health unit tests](../ElsheiekhHMS.Tests/Unit/Infrastructure/Health/HealthCheckTests.cs);
+[isolated SQL readiness test](../ElsheiekhHMS.Tests/Integration/Persistence/SqlServerReadinessHealthCheckTests.cs).

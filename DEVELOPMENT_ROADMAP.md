@@ -3,7 +3,7 @@
 **Version:** 1.0.0
 **Date:** September 20, 2026
 **Owner:** Eltayeb Elmuiz
-**Status:** Phase 08 Business Workflows complete; 08A, 08B-P, and 08B complete; 08C is not required; Phase 09 has not started; 07E Doctor/Provider Application Service remains deferred
+**Status:** Phase 09 complete; 09A structured observability and 09B SQL Server readiness complete; 09C is not required; Phase 10 has not started; 07E Doctor/Provider Application Service remains deferred
 
 ---
 
@@ -78,9 +78,9 @@ ElsheiekhHMS is a web-based, enterprise-grade Hospital Management System designe
 |-----------|---------|---------------|
 | Blazor Interactive Server | Future HMS UI expansion after backend readiness | Phase 12 |
 | EF Core InMemory | Integration test database | Phase 10 |
-| ILogger<T> structured logging | Observability | Phase 09 |
-| Health checks | Infrastructure monitoring | Phase 09 |
-| Background services | Notifications, cleanup jobs | Phase 09 |
+| ILogger<T> structured logging | Observability | Phase 09A |
+| Health checks | Infrastructure monitoring | Phase 09B |
+| Background services | Notifications, cleanup jobs | Future separately approved |
 
 ### Explicitly rejected technologies
 
@@ -255,7 +255,7 @@ If business rules exist only in Razor components or transport endpoints, they ca
 | 06 | DTOs & Validation | DTOs, input validation, shared pagination | ✅ Complete (06A–06D) | Approved validation contracts |
 | 07 | Application Services | Application use cases and orchestration | ✅ Complete for approved scope; 07E deferred | Tested application contracts |
 | 08 | Business Workflows | Queue, appointments, and approved cross-service workflows | ✅ Complete; 08C not required | Approved workflow services |
-| 09 | Enterprise Infrastructure | Remaining audit events, notifications, settings, integrations | ⏳ Not started | Approved cross-cutting services |
+| 09 | Enterprise Infrastructure | Built-in request observability and SQL Server readiness | ✅ Complete (09A–09B) | Phase 10 review |
 | 10 | Testing & Hardening | Unit, integration, security, performance | ⏳ Not started | Hardening evidence |
 | 11 | Backend Review | Full backend gate before UI | ⏳ Not started | Architecture audit passing |
 | 12 | Blazor UI | HMS presentation and workflows | ⏳ Not started | Approved Blazor UI |
@@ -1081,7 +1081,7 @@ git commit -m "Phase07: application services checkpoint"
 
 ## PHASE 08 — Business Workflows
 
-**Status: COMPLETE.** 08A Staff Patient Intake & Appointment Scheduling, 08B-P Appointment↔Queue durable-link prerequisite, and 08B Staff Appointment Arrival & Queue Handoff are complete. 08C is not required. Phase 09 has not started.
+**Status: COMPLETE.** 08A Staff Patient Intake & Appointment Scheduling, 08B-P Appointment↔Queue durable-link prerequisite, and 08B Staff Appointment Arrival & Queue Handoff are complete. 08C is not required. Phase 09 is complete with 09A and 09B implemented; 09C is not required.
 
 ### Objective
 Implement complete business workflows — multi-step processes that involve validation, status transitions, transactions, audit trails, and cross-entity coordination.
@@ -1190,144 +1190,55 @@ git commit -m "docs(phase08): close business workflows phase"
 
 ## PHASE 09 — Enterprise Infrastructure
 
+**Status: COMPLETE.** 09A Structured Application Observability and 09B SQL
+Server Readiness are complete. 09C is not required.
+
 ### Objective
-Implement cross-cutting infrastructure: audit logging service, notification system, security middleware, health checks, and structured logging.
+Provide proportional, built-in operational diagnostics and dependency readiness
+for the existing SQL Server-backed HMS. No third-party telemetry, retries,
+caching, messaging, background jobs, or deployment-platform infrastructure is
+introduced by this phase.
 
 ### Prerequisites
 Phase 08 complete.
 
-### Audit trail ✅ Complete
+### 09A — Structured Application Observability ✅ Implemented
 
-**`AuditLog` entity fields:** `UserId`, `UserName`, `UserRole`, `Action`, `EntityName`, `EntityId`, `OldValues` (JSON), `NewValues` (JSON), `Timestamp` (UTC), `IPAddress`
+- W3C `Activity` correlation is reused; a W3C activity is created only when needed.
+- Safe `ILogger` scopes carry `CorrelationId`, method, path, and an authenticated stable `UserId` claim.
+- Completion logs include monotonic duration and status-aware severity.
+- Request bodies, query values, headers, cookies, tokens, security stamps, and medical identifiers are excluded.
+- Existing exception handling remains authoritative; middleware does not swallow or duplicate exceptions.
 
-**Actions logged:** CREATE, UPDATE, SOFT_DELETE, LOGIN, FAILED_LOGIN, PERMISSION_CHANGE, STATUS_CHANGE, LAB_RESULT_ENTERED, PAYMENT_RECEIVED
+### 09B — SQL Server Readiness Health Checks ✅ Implemented
 
-**Rules:**
-- Written within the same database transaction as the triggering operation
-- Append-only — no update or delete endpoint
-- Passwords, tokens, PasswordHash, SecurityStamp excluded from OldValues/NewValues
-- Indexed on Timestamp and composite (EntityName, EntityId)
+- `/health/live` is anonymous process liveness and never queries the database.
+- `/health/ready` is anonymous SQL dependency readiness using `DbContext.Database.CanConnectAsync`.
+- Legacy `/health` is preserved as anonymous process liveness.
+- Responses are minimal and expose no database details; readiness performs no migration, seeding, or writes.
 
-### Notification system ✅ Complete
+### Explicitly deferred
 
-**Bell icon in topbar:** unread count badge, dropdown of last 10 unread, mark read on click, mark all read button
-
-**Polling:** every 30 seconds via JavaScript `fetch('/Notification/Unread')`
-
-**Controller endpoints:**
-- `GET /Notification/Unread` → JSON `{ count, notifications[] }`
-- `POST /Notification/MarkRead/{id}`
-- `POST /Notification/MarkAllRead`
-
-**Notification triggers:**
-- New patient registered → Reception
-- Lab result available → Ordering doctor
-- Emergency priority queue entry → Nurse + Doctor
-- Low medication stock → Pharmacist + Admin
-
-### Security middleware ✅ Complete
-
-**`IdempotencyMiddleware`** — 30s dedup window, HTTP 409 on duplicate
-**`RateLimitMiddleware`** — route-specific cooldowns, HTTP 429
-
-### Dashboard ✅ Complete
-
-**Role-aware KPI sections:**
-- Admin: all stats
-- Doctor: own appointments, own queue patients
-- Nurse: vitals pending, queue at nurse
-- Receptionist: today's patients, queue waiting
-- LabTech: pending lab orders
-
-### CSS architecture ✅ Complete
-
-```
-wwwroot/css/
-├── site.variables.css     ← Design tokens, color palette, spacing
-├── site.layout.css        ← Sidebar, topbar (LTR only)
-├── site.components.css    ← Cards, buttons, badges, patient search CSS
-├── site.forms-tables.css  ← Forms, inputs, sticky actions
-├── site.tables.css        ← Enterprise table system (548 lines)
-├── site.mobile.css        ← Responsive rules
-├── site.auth.css          ← Login page
-├── site.logo.css          ← Logo styles
-└── site.dark.css          ← Dark mode overrides
-```
-
-**Arabic/RTL removed:** All `[dir="rtl"]` blocks were removed. System is English-only LTR. Arabic UI is deferred to v2.
-
-### JavaScript architecture ✅ Complete
-
-**`wwwroot/js/site.js`** (1389 lines):
-- Sidebar toggle, mobile menu
-- Dark mode toggle
-- Clock display
-- Double-submit prevention
-- `confirmAction()` — modal for destructive actions
-- Notification polling and dropdown
-- `EntTable.init()` — enterprise table engine
-- `PS_init()` — patient search engine (multi-instance)
-- Walk-in queue auto-refresh
-
-### Enterprise table system ✅ Complete
-
-**`site.tables.css`** provides:
-- Sticky header + sticky first column
-- Zebra stripes, row hover
-- Kebab menu per row
-- Bulk selection with bulk action bar
-- Column chooser (localStorage)
-- Density switcher: Comfortable / Compact / Dense
-- Skeleton loading
-- Professional pagination
-- Empty and error states
-- Mobile card view (≤640px)
-- Dark mode
-
-**Usage:**
-```javascript
-EntTable.init('patientTable', {
-    onSearch: q => { /* server-side search */ },
-    onSort: (col, dir) => { /* server-side sort */ }
-});
-```
-
-### Patient search component ✅ Complete
-
-**`Views/Shared/_PatientSearch.cshtml`** — reusable partial
-
-```cshtml
-@await Html.PartialAsync("_PatientSearch", new PatientSearchModel
-{
-    FieldName   = "PatientId",
-    Label       = "Search Patient",
-    Required    = true,
-    InstanceId  = "queue"   // unique per page if multiple instances
-})
-```
-
-**Features:** debounced search (300ms), spinner, clear button, keyboard nav (↑↓ Enter Esc), match highlighting, status badges, avatar initials, empty state with register link, recent patients on focus, multi-instance support.
-
-**Backend required:** `GET /Patient/Search?q=&limit=5` → `{ id, fullName, patientCode, phone, status }`
+Rate limiting, forwarded headers, automatic retries, Polly, DbContext pooling,
+caches, Redis, brokers, background jobs, file storage, external notifications,
+and deployment-platform configuration remain out of scope. Broad testing belongs
+to Phase 10; final release/backend audit belongs to Phase 11.
 
 ### Definition of done
 
-- [ ] Audit trail writing on all write operations
-- [ ] Notification bell functional with polling
-- [ ] Security middleware registered and working
-- [ ] Dashboard showing role-appropriate KPIs
-- [ ] `_PatientSearch` partial working in Add queue form
-- [ ] Enterprise table working in Patient/Index
-- [ ] Arabic/RTL code fully removed
-- [ ] Dark mode toggle functional
+- [x] Request correlation and safe completion diagnostics
+- [x] SQL readiness separated from process liveness
+- [x] Focused observability and readiness tests
+- [x] No package, schema, migration, Core, or ApplicationUser changes
+- [x] Phase 09 closeout review
 
 ### Git checkpoint
+
 ```
-git commit -m "Phase09: audit trail, notifications, enterprise tables, patient search partial"
+git commit -m "feat(phase09): add observability and SQL readiness"
 ```
 
 ---
-
 ## PHASE 10 — Testing & Hardening
 
 ### Objective
@@ -1909,10 +1820,10 @@ public async Task<ServiceResult<T>> DoSomethingAsync(Dto dto, string actorEmail)
 ## 16. Current Project Checkpoint
 
 ```
-Last completed phase:  Phase 08 — Business Workflows
-Current phase:         Phase 08 — Business Workflows (complete)
-Next phase:            Phase 09 — Enterprise Infrastructure (not started)
-Next action:           Review Phase 09 readiness; 07E and ownership-dependent workflows remain explicitly deferred
+Last completed phase:  Phase 09 — Enterprise Infrastructure
+Current phase:         Phase 10 — Testing & Hardening (not started)
+Next phase:            Phase 10 — Testing & Hardening
+Next action:           Review Phase 10 testing and hardening scope; 07E and ownership-dependent workflows remain explicitly deferred
 Known blockers:        None
 Important notes:
   - The current working codebase is the five-project .NET 10 ElsheiekhHMS solution
@@ -1924,6 +1835,7 @@ Important notes:
   - _PatientSearch partial complete and in use in WalkInQueue/Add
   - Display board and future UI modules remain later workflow/UI scope
   - 08A, 08B-P, and 08B are complete; no 08C workflow is required
+  - 09A built-in request correlation/duration logging and 09B SQL readiness are implemented; 09C is not required
   - 07A Patient Application Service, 07B Department service, 07C Appointment service, and 07D Queue service are complete; Phase 07 is complete for the approved scope
   - Arabic/RTL removed — English-only confirmed
   - 05C-A stable audit vocabulary, bounded append-only model, server-controlled writer, and focused tests are complete
