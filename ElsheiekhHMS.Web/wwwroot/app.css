@@ -185,3 +185,34 @@ h3 { font-size: 1rem; }
 @media (prefers-reduced-motion: reduce) {
     *, *::before, *::after { animation-duration: .01ms !important; scroll-behavior: auto !important; transition-duration: .01ms !important; }
 }
+
+/* Patient operations */
+.hms-form__grid--search { grid-template-columns: minmax(16rem, 2fr) repeat(2, minmax(10rem, 1fr)); }
+.hms-form__grid--search-options { grid-template-columns: repeat(2, minmax(10rem, 1fr)) auto; align-items: end; }
+.hms-form__actions--inline { align-self: end; padding-bottom: .15rem; }
+.hms-table-wrap { overflow-x: auto; }
+.hms-table { min-width: 52rem; margin-bottom: 0; vertical-align: middle; }
+.hms-table th { white-space: nowrap; color: var(--hms-text-muted); font-size: .78rem; letter-spacing: .04em; text-transform: uppercase; }
+.hms-table__primary { font-weight: 700; }
+.hms-table__actions { display: flex; gap: .5rem; justify-content: flex-end; white-space: nowrap; }
+.hms-detail-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--hms-space-4); }
+.hms-detail-grid > :last-child { grid-column: 1 / -1; }
+.hms-detail-list { display: grid; grid-template-columns: minmax(9rem, .7fr) 1.3fr; gap: .7rem 1.25rem; margin: 0; }
+.hms-detail-list dt { color: var(--hms-text-muted); font-size: .86rem; }
+.hms-detail-list dd { margin: 0; font-weight: 600; overflow-wrap: anywhere; }
+.hms-form-panel > section + section { margin-top: var(--hms-space-6); padding-top: var(--hms-space-6); border-top: 1px solid var(--hms-border); }
+.hms-form-panel h2 { margin-bottom: var(--hms-space-4); font-size: 1.15rem; }
+.hms-form-panel .validation-summary-errors { color: var(--hms-danger-text); margin-bottom: var(--hms-space-4); }
+.hms-inline-action { margin: 0 0 var(--hms-space-4); }
+@media (max-width: 900px) {
+    .hms-form__grid--search { grid-template-columns: 1fr 1fr; }
+    .hms-form__grid--search > :first-child { grid-column: 1 / -1; }
+    .hms-detail-grid { grid-template-columns: 1fr; }
+    .hms-detail-grid > :last-child { grid-column: auto; }
+}
+@media (max-width: 600px) {
+    .hms-form__grid--search, .hms-form__grid--search-options { grid-template-columns: 1fr; }
+    .hms-form__grid--search > :first-child { grid-column: auto; }
+    .hms-detail-list { grid-template-columns: 1fr; gap: .25rem; }
+    .hms-detail-list dd { margin-bottom: .75rem; }
+}

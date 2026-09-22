@@ -959,3 +959,26 @@ navigation is a UX aid only. Bootstrap 5.3.3, the HMS token system, logical CSS
 properties, and text/CSS markers remain in place. External rendered QA is
 prepared through `docs/UI_QA_CHECKLIST.md`; feature CRUD and ownership-dependent
 Provider/Patient workflows remain deferred to later approved phases.
+
+## ADR-032 — Phase 12C Patient management UI
+
+**Status:** Complete
+**Phase:** 12C
+
+### Decision
+
+Implement the first operational Patient UI entirely in Web over the accepted
+`IPatientService` contract. The scope is an authorized Administrator/
+Receptionist registry with server-side search, sorting, paging, registration,
+details, and three concurrency-token-preserving edit sections for demographics,
+contact details, and identifiers. Use the existing Bootstrap/HMS design system
+and keep backend authorization and validation authoritative.
+
+### Consequences
+
+The UI does not invent duplicate-candidate warnings because the accepted
+registration contract exposes no candidate result, and it never treats phone as
+globally unique. Patient ownership/self-service, clinical history, delete
+actions, Queue/Appointment workflows, and all backend/Core/schema/package
+changes remain deferred. External browser review is tracked in
+`docs/UI_PATIENT_QA_CHECKLIST.md`.

@@ -33,8 +33,9 @@ already run.
 - Check reduced-motion behavior, contrast, labels, landmarks, and alert/status
   announcements.
 
-## Scope guard
+## Scope guard for the Phase 12B shell
 
-Do not expect Patient, Department, Appointment, Queue CRUD, Provider, or
-clinical screens in Phase 12B. Do not test or request a direct database call
+The Patient management screens are covered by `docs/UI_PATIENT_QA_CHECKLIST.md`.
+Department, Appointment, Queue, Provider, and clinical screens remain outside
+the completed Phase 12B shell. Do not test or request a direct database call
 from a Razor component.

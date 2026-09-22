@@ -1,0 +1,98 @@
+@page "/patients/{PatientId:int}/edit"
+@rendermode InteractiveServer
+@attribute [Authorize(Policy = PolicyNames.CanManagePatients)]
+
+@inject IPatientService PatientService
+@inject NavigationManager Navigation
+
+<PageTitle>Edit patient</PageTitle>
+@if (_loading)
+{
+    <LoadingState Message="Loading patient for editing" />
+}
+else if (_errorMessage is not null && _patient is null)
+{
+    <ErrorState Title="Patient edit unavailable" Message="@_errorMessage"><Actions><a class="btn btn-outline-secondary" href="/patients">Return to registry</a></Actions></ErrorState>
+}
+else if (_patient is not null)
+{
+    <PageHeader Eyebrow="Patient record" Title="@($"Edit {_patient.PatientCode}")" Description="Update approved patient information. Each section preserves optimistic concurrency protection.">
+        <Actions><a class="btn btn-outline-secondary" href="@($"/patients/{PatientId}")">Cancel</a></Actions>
+    </PageHeader>
+    @if (_successMessage is not null) { <AppAlert Tone="AppAlert.AlertTone.Success" Title="Changes saved" Message="@_successMessage" /> }
+    @if (_errorMessage is not null) { <AppAlert Tone="AppAlert.AlertTone.Danger" Title="Changes not saved" Message="@_errorMessage" /> }
+    @if (_concurrencyConflict) { <button type="button" class="btn btn-outline-secondary hms-inline-action" @onclick="ReloadAsync">Reload latest record</button> }
+    <EditForm Model="_demographics" OnValidSubmit="SaveDemographicsAsync" class="hms-panel hms-form-panel"><DataAnnotationsValidator /><section aria-labelledby="edit-demographics-heading"><div class="hms-panel__header"><div><p class="hms-eyebrow">Demographics</p><h2 id="edit-demographics-heading">Personal information</h2></div><span class="hms-helper-text">Concurrency protected</span></div><div class="hms-form__grid">
+        <Field Label="First name" Id="edit-first-name" Required="true"><InputText id="edit-first-name" class="form-control" @bind-Value="_demographics.FirstName" /></Field><Field Label="Middle name" Id="edit-middle-name"><InputText id="edit-middle-name" class="form-control" @bind-Value="_demographics.MiddleName" /></Field><Field Label="Third name" Id="edit-third-name"><InputText id="edit-third-name" class="form-control" @bind-Value="_demographics.ThirdName" /></Field><Field Label="Last name" Id="edit-last-name" Required="true"><InputText id="edit-last-name" class="form-control" @bind-Value="_demographics.LastName" /></Field><Field Label="Date of birth" Id="edit-date-of-birth" Required="true"><InputDate id="edit-date-of-birth" class="form-control" @bind-Value="_demographics.DateOfBirth" /></Field><Field Label="Gender" Id="edit-gender" Required="true"><InputSelect id="edit-gender" class="form-select" @bind-Value="_demographics.Gender">@foreach (var value in Enum.GetValues<Gender>()){<option value="@value">@value</option>}</InputSelect></Field><Field Label="Blood group" Id="edit-blood-group"><InputSelect id="edit-blood-group" class="form-select" @bind-Value="_demographics.BloodGroup"><option value="">Not recorded</option>@foreach (var value in Enum.GetValues<BloodGroup>()){<option value="@value">@BloodGroupLabel(value)</option>}</InputSelect></Field>
+    </div><div class="hms-form__actions"><button class="btn btn-primary" type="submit" disabled="@_saving">Save demographics</button></div></section></EditForm>
+    <EditForm Model="_contact" OnValidSubmit="SaveContactAsync" class="hms-panel hms-form-panel"><DataAnnotationsValidator /><section aria-labelledby="edit-contact-heading"><div class="hms-panel__header"><div><p class="hms-eyebrow">Contact</p><h2 id="edit-contact-heading">Contact information</h2></div></div><div class="hms-form__grid"><Field Label="Phone" Id="edit-phone" Required="true"><InputText id="edit-phone" class="form-control" @bind-Value="_contact.Phone" /></Field><Field Label="Address" Id="edit-address" Required="true"><InputText id="edit-address" class="form-control" @bind-Value="_contact.Address" /></Field><Field Label="City" Id="edit-city"><InputText id="edit-city" class="form-control" @bind-Value="_contact.City" /></Field><Field Label="Emergency contact name" Id="edit-emergency-name"><InputText id="edit-emergency-name" class="form-control" @bind-Value="_contact.EmergencyContactName" /></Field><Field Label="Emergency contact phone" Id="edit-emergency-phone"><InputText id="edit-emergency-phone" class="form-control" @bind-Value="_contact.EmergencyContactPhone" /></Field><Field Label="Emergency contact relationship" Id="edit-emergency-relationship"><InputText id="edit-emergency-relationship" class="form-control" @bind-Value="_contact.EmergencyContactRelationship" /></Field><Field Label="Insurance provider" Id="edit-insurance"><InputText id="edit-insurance" class="form-control" @bind-Value="_contact.InsuranceProvider" /></Field></div><div class="hms-form__actions"><button class="btn btn-primary" type="submit" disabled="@_saving">Save contact details</button></div></section></EditForm>
+    <EditForm Model="_identifiers" OnValidSubmit="SaveIdentifiersAsync" class="hms-panel hms-form-panel"><DataAnnotationsValidator /><section aria-labelledby="edit-identifiers-heading"><div class="hms-panel__header"><div><p class="hms-eyebrow">Identifiers</p><h2 id="edit-identifiers-heading">Identity references</h2></div></div><div class="hms-form__grid"><Field Label="National ID" Id="edit-national-id"><InputText id="edit-national-id" class="form-control" @bind-Value="_identifiers.NationalId" /></Field><Field Label="Passport number" Id="edit-passport"><InputText id="edit-passport" class="form-control" @bind-Value="_identifiers.PassportNumber" /></Field></div><div class="hms-form__actions"><button class="btn btn-primary" type="submit" disabled="@_saving">Save identifiers</button></div></section></EditForm>
+}
+
+@code {
+    [Parameter] public int PatientId { get; set; }
+    private PatientDetailsDto? _patient;
+    private readonly DemographicsModel _demographics = new();
+    private readonly ContactModel _contact = new();
+    private readonly IdentifiersModel _identifiers = new();
+    private bool _loading;
+    private bool _saving;
+    private string? _errorMessage;
+    private string? _successMessage;
+    private bool _concurrencyConflict;
+
+    protected override async Task OnParametersSetAsync()
+    {
+        _loading = true; _errorMessage = null; _concurrencyConflict = false;
+        try { await LoadAsync(); }
+        catch (OperationCanceledException) { throw; }
+        catch { _errorMessage = "The patient details could not be loaded. Try again."; }
+        finally { _loading = false; }
+    }
+
+    private async Task LoadAsync()
+    {
+        var result = await PatientService.GetByIdAsync(PatientId);
+        if (!result.IsSuccess || result.Value is null) { _errorMessage = result.Errors.FirstOrDefault()?.Message ?? "The patient was not found."; return; }
+        _patient = result.Value;
+        _demographics.FirstName = FirstPart(_patient.FullName, 0); _demographics.LastName = LastPart(_patient.FullName); _demographics.DateOfBirth = _patient.DateOfBirth; _demographics.Gender = _patient.Gender; _demographics.BloodGroup = _patient.BloodGroup; _demographics.MiddleName = _patient.MiddleName; _demographics.ThirdName = _patient.ThirdName;
+        _contact.Phone = _patient.Phone; _contact.Address = _patient.Address; _contact.City = _patient.City; _contact.EmergencyContactName = _patient.EmergencyContactName; _contact.EmergencyContactPhone = _patient.EmergencyContactPhone; _contact.EmergencyContactRelationship = _patient.EmergencyContactRelationship; _contact.InsuranceProvider = _patient.InsuranceProvider;
+        _identifiers.NationalId = _patient.NationalId; _identifiers.PassportNumber = _patient.PassportNumber;
+    }
+
+    private async Task SaveDemographicsAsync() => await SaveAsync(async token => await PatientService.UpdateDemographicsAsync(PatientId, new UpdatePatientDemographicsRequest(_demographics.FirstName, _demographics.MiddleName, _demographics.ThirdName, _demographics.LastName, _demographics.DateOfBirth, _demographics.Gender, _demographics.BloodGroup, token)));
+    private async Task SaveContactAsync() => await SaveAsync(async token => await PatientService.UpdateContactDetailsAsync(PatientId, new UpdatePatientContactDetailsRequest(_contact.Phone, _contact.Address, _contact.City, _contact.EmergencyContactName, _contact.EmergencyContactPhone, _contact.EmergencyContactRelationship, _contact.InsuranceProvider, token)));
+    private async Task SaveIdentifiersAsync() => await SaveAsync(async token => await PatientService.UpdateIdentifiersAsync(PatientId, new UpdatePatientIdentifiersRequest(_identifiers.NationalId, _identifiers.PassportNumber, token)));
+
+    private async Task SaveAsync(Func<string?, Task<ServiceResult<PatientDetailsDto>>> operation)
+    {
+        if (_patient is null) return; _saving = true; _errorMessage = null; _successMessage = null; _concurrencyConflict = false;
+        try
+        {
+            var result = await operation(_patient.ConcurrencyToken);
+            if (result.IsSuccess && result.Value is not null) { _patient = result.Value; _successMessage = "Patient information updated."; }
+            else if (result.Errors.Any(error => error.Code == "patient.concurrency_conflict")) { _errorMessage = "The patient record changed after you opened it. Reload the latest record before saving."; _concurrencyConflict = true; }
+            else _errorMessage = result.Errors.FirstOrDefault()?.Message ?? "The changes could not be saved.";
+        }
+        catch (OperationCanceledException) { throw; }
+        catch { _errorMessage = "The patient operation could not be completed. Try again."; }
+        finally { _saving = false; }
+    }
+
+    private async Task ReloadAsync()
+    {
+        _loading = true; _errorMessage = null; _successMessage = null; _concurrencyConflict = false;
+        try { await LoadAsync(); }
+        catch (OperationCanceledException) { throw; }
+        catch { _errorMessage = "The patient details could not be loaded. Try again."; }
+        finally { _loading = false; }
+    }
+
+    private static string FirstPart(string fullName, int index) => fullName.Split(' ', StringSplitOptions.RemoveEmptyEntries).ElementAtOrDefault(index) ?? string.Empty;
+    private static string LastPart(string fullName) => fullName.Split(' ', StringSplitOptions.RemoveEmptyEntries).LastOrDefault() ?? string.Empty;
+    private static string BloodGroupLabel(BloodGroup value) => value switch { BloodGroup.APositive => "A+", BloodGroup.ANegative => "A−", BloodGroup.BPositive => "B+", BloodGroup.BNegative => "B−", BloodGroup.ABPositive => "AB+", BloodGroup.ABNegative => "AB−", BloodGroup.OPositive => "O+", BloodGroup.ONegative => "O−", _ => value.ToString() };
+
+    private sealed class DemographicsModel { public string FirstName { get; set; } = string.Empty; public string? MiddleName { get; set; } public string? ThirdName { get; set; } public string LastName { get; set; } = string.Empty; public DateOnly DateOfBirth { get; set; } public Gender Gender { get; set; } public BloodGroup? BloodGroup { get; set; } }
+    private sealed class ContactModel { public string Phone { get; set; } = string.Empty; public string Address { get; set; } = string.Empty; public string? City { get; set; } public string? EmergencyContactName { get; set; } public string? EmergencyContactPhone { get; set; } public string? EmergencyContactRelationship { get; set; } public string? InsuranceProvider { get; set; } }
+    private sealed class IdentifiersModel { public string? NationalId { get; set; } public string? PassportNumber { get; set; } }
+}

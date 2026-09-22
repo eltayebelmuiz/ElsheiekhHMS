@@ -2,11 +2,11 @@
 
 ## Snapshot
 
-- **generatedAtUtc:** `2026-09-22T18:04:20.1892022+00:00`
+- **generatedAtUtc:** `2026-09-22T18:32:56.9413550+00:00`
 - **gitBranch:** `main`
-- **gitCommit:** `0132fe3e408cea9a9a107b8c615e44b89831be74`
+- **gitCommit:** `fe932b042999aa77f822e7a1220b42537f72bf5c`
 - **workingTreeDirty:** `True`
-- **sourceFingerprint:** `dc59d9798c37e473bd2d1f80638c3ec692aa073790912ae8b468dac446b65f1c`
+- **sourceFingerprint:** `710aad0a87e1499e854519d48d97efc194e6db2e728fde618a1be67e14b2db43`
 - Framework: net10.0
 - Structural extraction only: **0 LLM API calls / 0 LLM tokens**. No statistical community clustering is claimed; project ownership supplies the visual groups.
 
@@ -250,7 +250,7 @@ Evaluated direct PackageReference items only. Framework/SDK auto-references and 
 
 Declared by README; not inferred from the existence of classes:
 
-- > **Current development stage:** Phase 12B — authentication shell and navigation complete; backend remains accepted and frozen — README.md:L5
+- > **Current development stage:** Phase 12C — Patient management UI complete; backend remains accepted and frozen — README.md:L5
 - > **Phase 01:** ✅ Complete — README.md:L7
 - > **Phase 02 Setup:** ✅ Complete and verified — README.md:L9
 - > **Phase 03A / 03B / 03C:** ✅ Complete — README.md:L11
@@ -288,15 +288,16 @@ Declared by README; not inferred from the existence of classes:
 - > **Phase 11:** ✅ Backend Review complete; 11A passed, 11B was not required, and 11C accepted and froze the backend baseline — README.md:L75
 - > **Phase 12A:** ✅ Blazor UI architecture, application shell, navigation foundation, design tokens, reusable feedback/form/list patterns, and accessibility baseline established — README.md:L77
 - > **Phase 12B:** ✅ Authentication presentation, anonymous/authenticated shell separation, current-user/logout controls, unauthorized UX, and role-aware navigation complete; external browser QA remains required — README.md:L80
--  /  01  /  Solution & Architecture  /  ✅ Complete  /  — README.md:L397
--  /  02  /  Core Foundation  /  ✅ Complete  /  — README.md:L398
--  /  03  /  Domain Entities  /  ✅ Complete  /  — README.md:L399
--  /  04  /  EF Core & Database  /  ✅ Complete  /  — README.md:L400
--  /  05  /  Identity & Security  /  ✅ Complete (05A, 05B, 05C, 05C-A, 05D, and 05E)  /  — README.md:L401
--  /  06  /  DTOs & Validation  /  ✅ Complete (06A–06D)  /  — README.md:L402
--  /  07  /  Application Services  /  ✅ Complete for approved scope (07S, 07A, 07B, 07C-P, 07C, 07D; 07E deferred)  /  — README.md:L403
--  /  08  /  Business Workflows  /  ✅ Complete (08A, 08B-P, 08B)  /  — README.md:L404
--  /  09  /  Enterprise Infrastructure  /  ✅ Complete (09A, 09B)  /  — README.md:L405
+- > **Phase 12C:** ✅ Patient registry, server-side search/pagination, registration, details, and concurrency-safe edit UI complete; external browser QA remains required — README.md:L82
+-  /  01  /  Solution & Architecture  /  ✅ Complete  /  — README.md:L399
+-  /  02  /  Core Foundation  /  ✅ Complete  /  — README.md:L400
+-  /  03  /  Domain Entities  /  ✅ Complete  /  — README.md:L401
+-  /  04  /  EF Core & Database  /  ✅ Complete  /  — README.md:L402
+-  /  05  /  Identity & Security  /  ✅ Complete (05A, 05B, 05C, 05C-A, 05D, and 05E)  /  — README.md:L403
+-  /  06  /  DTOs & Validation  /  ✅ Complete (06A–06D)  /  — README.md:L404
+-  /  07  /  Application Services  /  ✅ Complete for approved scope (07S, 07A, 07B, 07C-P, 07C, 07D; 07E deferred)  /  — README.md:L405
+-  /  08  /  Business Workflows  /  ✅ Complete (08A, 08B-P, 08B)  /  — README.md:L406
+-  /  09  /  Enterprise Infrastructure  /  ✅ Complete (09A, 09B)  /  — README.md:L407
 
 ## Important Files
 
@@ -520,11 +521,16 @@ Declared by README; not inferred from the existence of classes:
 - [ElsheiekhHMS.Web/Components/Pages/Home.razor](../ElsheiekhHMS.Web/Components/Pages/Home.razor) — ElsheiekhHMS.Web
 - [ElsheiekhHMS.Web/Components/Pages/Login.razor](../ElsheiekhHMS.Web/Components/Pages/Login.razor) — ElsheiekhHMS.Web
 - [ElsheiekhHMS.Web/Components/Pages/NotFound.razor](../ElsheiekhHMS.Web/Components/Pages/NotFound.razor) — ElsheiekhHMS.Web
+- [ElsheiekhHMS.Web/Components/Pages/Patients/PatientCreate.razor](../ElsheiekhHMS.Web/Components/Pages/Patients/PatientCreate.razor) — ElsheiekhHMS.Web
+- [ElsheiekhHMS.Web/Components/Pages/Patients/PatientDetails.razor](../ElsheiekhHMS.Web/Components/Pages/Patients/PatientDetails.razor) — ElsheiekhHMS.Web
+- [ElsheiekhHMS.Web/Components/Pages/Patients/PatientEdit.razor](../ElsheiekhHMS.Web/Components/Pages/Patients/PatientEdit.razor) — ElsheiekhHMS.Web
+- [ElsheiekhHMS.Web/Components/Pages/Patients/PatientRegistry.razor](../ElsheiekhHMS.Web/Components/Pages/Patients/PatientRegistry.razor) — ElsheiekhHMS.Web
 - [ElsheiekhHMS.Web/Components/Routes.razor](../ElsheiekhHMS.Web/Components/Routes.razor) — ElsheiekhHMS.Web
 - [ElsheiekhHMS.Web/Components/Shared/AppAlert.razor](../ElsheiekhHMS.Web/Components/Shared/AppAlert.razor) — ElsheiekhHMS.Web
 - [ElsheiekhHMS.Web/Components/Shared/ConfirmDialog.razor](../ElsheiekhHMS.Web/Components/Shared/ConfirmDialog.razor) — ElsheiekhHMS.Web
 - [ElsheiekhHMS.Web/Components/Shared/EmptyState.razor](../ElsheiekhHMS.Web/Components/Shared/EmptyState.razor) — ElsheiekhHMS.Web
 - [ElsheiekhHMS.Web/Components/Shared/ErrorState.razor](../ElsheiekhHMS.Web/Components/Shared/ErrorState.razor) — ElsheiekhHMS.Web
+- [ElsheiekhHMS.Web/Components/Shared/Field.razor](../ElsheiekhHMS.Web/Components/Shared/Field.razor) — ElsheiekhHMS.Web
 - [ElsheiekhHMS.Web/Components/Shared/LoadingState.razor](../ElsheiekhHMS.Web/Components/Shared/LoadingState.razor) — ElsheiekhHMS.Web
 - [ElsheiekhHMS.Web/Components/Shared/PageHeader.razor](../ElsheiekhHMS.Web/Components/Shared/PageHeader.razor) — ElsheiekhHMS.Web
 - [ElsheiekhHMS.Web/Components/Shared/Pagination.razor](../ElsheiekhHMS.Web/Components/Shared/Pagination.razor) — ElsheiekhHMS.Web

@@ -1,0 +1,74 @@
+@page "/patients/new"
+@rendermode InteractiveServer
+@attribute [Authorize(Policy = PolicyNames.CanManagePatients)]
+
+@inject IPatientService PatientService
+@inject NavigationManager Navigation
+
+<PageTitle>Register patient</PageTitle>
+<PageHeader Eyebrow="Patient operations" Title="Register patient" Description="Create a patient record using the approved identity and contact fields.">
+    <Actions><a class="btn btn-outline-secondary" href="/patients">Cancel</a></Actions>
+</PageHeader>
+
+@if (_errorMessage is not null)
+{
+    <AppAlert Tone="AppAlert.AlertTone.Danger" Title="Patient was not registered" Message="@_errorMessage" />
+}
+<EditForm Model="_model" OnValidSubmit="RegisterAsync" class="hms-panel hms-form-panel">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+    <section aria-labelledby="personal-heading"><h2 id="personal-heading">Personal information</h2><div class="hms-form__grid">
+        <Field Label="First name" Id="create-first-name" Required="true"><InputText id="create-first-name" class="form-control" @bind-Value="_model.FirstName" /></Field>
+        <Field Label="Middle name" Id="create-middle-name"><InputText id="create-middle-name" class="form-control" @bind-Value="_model.MiddleName" /></Field>
+        <Field Label="Third name" Id="create-third-name"><InputText id="create-third-name" class="form-control" @bind-Value="_model.ThirdName" /></Field>
+        <Field Label="Last name" Id="create-last-name" Required="true"><InputText id="create-last-name" class="form-control" @bind-Value="_model.LastName" /></Field>
+        <Field Label="Date of birth" Id="create-date-of-birth" Required="true"><InputDate id="create-date-of-birth" class="form-control" @bind-Value="_model.DateOfBirth" /></Field>
+        <Field Label="Gender" Id="create-gender" Required="true"><InputSelect id="create-gender" class="form-select" @bind-Value="_model.Gender"><option value="">Select gender</option>@foreach (var value in Enum.GetValues<Gender>()){<option value="@value">@value</option>}</InputSelect></Field>
+        <Field Label="Blood group" Id="create-blood-group"><InputSelect id="create-blood-group" class="form-select" @bind-Value="_model.BloodGroup"><option value="">Not recorded</option>@foreach (var value in Enum.GetValues<BloodGroup>()){<option value="@value">@BloodGroupLabel(value)</option>}</InputSelect></Field>
+    </div></section>
+    <section aria-labelledby="contact-heading"><h2 id="contact-heading">Contact information</h2><div class="hms-form__grid">
+        <Field Label="Phone" Id="create-phone" Required="true"><InputText id="create-phone" class="form-control" @bind-Value="_model.Phone" /></Field>
+        <Field Label="Address" Id="create-address" Required="true"><InputText id="create-address" class="form-control" @bind-Value="_model.Address" /></Field>
+        <Field Label="City" Id="create-city"><InputText id="create-city" class="form-control" @bind-Value="_model.City" /></Field>
+        <Field Label="Emergency contact name" Id="create-emergency-name"><InputText id="create-emergency-name" class="form-control" @bind-Value="_model.EmergencyContactName" /></Field>
+        <Field Label="Emergency contact phone" Id="create-emergency-phone"><InputText id="create-emergency-phone" class="form-control" @bind-Value="_model.EmergencyContactPhone" /></Field>
+        <Field Label="Emergency contact relationship" Id="create-emergency-relationship"><InputText id="create-emergency-relationship" class="form-control" @bind-Value="_model.EmergencyContactRelationship" /></Field>
+        <Field Label="Insurance provider" Id="create-insurance"><InputText id="create-insurance" class="form-control" @bind-Value="_model.InsuranceProvider" /></Field>
+    </div></section>
+    <section aria-labelledby="identifier-heading"><h2 id="identifier-heading">Identifiers</h2><div class="hms-form__grid">
+        <Field Label="National ID" Id="create-national-id"><InputText id="create-national-id" class="form-control" @bind-Value="_model.NationalId" /></Field>
+        <Field Label="Passport number" Id="create-passport"><InputText id="create-passport" class="form-control" @bind-Value="_model.PassportNumber" /></Field>
+    </div></section>
+    <div class="hms-form__actions"><button type="submit" class="btn btn-primary" disabled="@_saving">@(_saving ? "Registering…" : "Register patient")</button><a class="btn btn-outline-secondary" href="/patients">Cancel</a></div>
+</EditForm>
+
+@code {
+    private readonly CreateModel _model = new();
+    private bool _saving;
+    private string? _errorMessage;
+
+    private async Task RegisterAsync()
+    {
+        _saving = true; _errorMessage = null;
+        try
+        {
+            var result = await PatientService.RegisterAsync(new RegisterPatientRequest(_model.FirstName, _model.MiddleName, _model.ThirdName, _model.LastName, _model.DateOfBirth, _model.Gender, _model.BloodGroup, _model.NationalId, _model.PassportNumber, _model.Phone, _model.Address, _model.City, _model.EmergencyContactName, _model.EmergencyContactPhone, _model.EmergencyContactRelationship, _model.InsuranceProvider));
+            if (result.IsSuccess && result.Value is not null) Navigation.NavigateTo($"/patients/{result.Value.Id}?created=true");
+            else _errorMessage = ErrorMessage(result.Errors);
+        }
+        catch (OperationCanceledException) { throw; }
+        catch { _errorMessage = "The patient operation could not be completed. Try again."; }
+        finally { _saving = false; }
+    }
+
+    private static string ErrorMessage(IReadOnlyList<ServiceError> errors) => errors.FirstOrDefault()?.Message ?? "Review the highlighted fields and try again.";
+    private static string BloodGroupLabel(BloodGroup value) => value switch { BloodGroup.APositive => "A+", BloodGroup.ANegative => "A−", BloodGroup.BPositive => "B+", BloodGroup.BNegative => "B−", BloodGroup.ABPositive => "AB+", BloodGroup.ABNegative => "AB−", BloodGroup.OPositive => "O+", BloodGroup.ONegative => "O−", _ => value.ToString() };
+
+    private sealed class CreateModel
+    {
+        public string FirstName { get; set; } = string.Empty; public string? MiddleName { get; set; } public string? ThirdName { get; set; } public string LastName { get; set; } = string.Empty;
+        public DateOnly DateOfBirth { get; set; } = DateOnly.FromDateTime(DateTime.Today.AddYears(-18)); public Gender Gender { get; set; } public BloodGroup? BloodGroup { get; set; }
+        public string? NationalId { get; set; } public string? PassportNumber { get; set; } public string Phone { get; set; } = string.Empty; public string Address { get; set; } = string.Empty; public string? City { get; set; }
+        public string? EmergencyContactName { get; set; } public string? EmergencyContactPhone { get; set; } public string? EmergencyContactRelationship { get; set; } public string? InsuranceProvider { get; set; }
+    }
+}

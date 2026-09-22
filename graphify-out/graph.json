@@ -1,11 +1,11 @@
 {
   "schemaVersion": "1.0",
-  "generatedAtUtc": "2026-09-22T18:04:20.1892022\u002B00:00",
-  "gitCommit": "0132fe3e408cea9a9a107b8c615e44b89831be74",
+  "generatedAtUtc": "2026-09-22T18:32:56.9413550\u002B00:00",
+  "gitCommit": "fe932b042999aa77f822e7a1220b42537f72bf5c",
   "gitBranch": "main",
   "workingTreeDirty": true,
-  "gitStatusAtGeneration": "M DEVELOPMENT_ROADMAP.md\n M ElsheiekhHMS.Web/Components/Layout/MainLayout.razor\n M ElsheiekhHMS.Web/Components/Layout/NavMenu.razor\n M ElsheiekhHMS.Web/Components/Routes.razor\n M ElsheiekhHMS.Web/Components/_Imports.razor\n M ElsheiekhHMS.Web/Program.cs\n M ElsheiekhHMS.Web/wwwroot/app.css\n M README.md\n M docs/ARCHITECTURE.md\n M docs/DECISIONS.md\n M graphify-out/GRAPH_REPORT.md\n M graphify-out/graph.html\n M graphify-out/graph.json\n?? ElsheiekhHMS.Web/Components/Layout/AnonymousLayout.razor\n?? ElsheiekhHMS.Web/Components/Pages/AccessDenied.razor\n?? ElsheiekhHMS.Web/Components/Pages/Login.razor\n?? ElsheiekhHMS.Web/Components/Shared/UserAccountMenu.razor\n?? docs/UI_DESIGN_SYSTEM.md\n?? docs/UI_QA_CHECKLIST.md",
-  "sourceFingerprint": "dc59d9798c37e473bd2d1f80638c3ec692aa073790912ae8b468dac446b65f1c",
+  "gitStatusAtGeneration": "M DEVELOPMENT_ROADMAP.md\n M ElsheiekhHMS.Web/Components/Layout/NavMenu.razor\n M ElsheiekhHMS.Web/Components/Pages/Home.razor\n M ElsheiekhHMS.Web/Components/_Imports.razor\n M ElsheiekhHMS.Web/wwwroot/app.css\n M README.md\n M docs/ARCHITECTURE.md\n M docs/DECISIONS.md\n M docs/UI_DESIGN_SYSTEM.md\n M docs/UI_QA_CHECKLIST.md\n M graphify-out/GRAPH_REPORT.md\n M graphify-out/graph.html\n M graphify-out/graph.json\n?? ElsheiekhHMS.Web/Components/Pages/Patients/PatientCreate.razor\n?? ElsheiekhHMS.Web/Components/Pages/Patients/PatientDetails.razor\n?? ElsheiekhHMS.Web/Components/Pages/Patients/PatientEdit.razor\n?? ElsheiekhHMS.Web/Components/Pages/Patients/PatientRegistry.razor\n?? ElsheiekhHMS.Web/Components/Shared/Field.razor\n?? docs/UI_PATIENT_QA_CHECKLIST.md",
+  "sourceFingerprint": "710aad0a87e1499e854519d48d97efc194e6db2e728fde618a1be67e14b2db43",
   "generatorFingerprint": "03eee0a8853a7e84af6cbe571d34e6f7d820505ac8f5670a719d0d63b113840c",
   "fingerprintAlgorithm": "SHA-256 of ordinal path \u002B NUL \u002B content SHA-256 records joined with LF; sourceManifest defines inputs; graphify-out excluded everywhere",
   "sourceManifest": [
@@ -879,7 +879,7 @@
     },
     {
       "path": "ElsheiekhHMS.Web/Components/Layout/NavMenu.razor",
-      "sha256": "c3b699d8c02dcebbd9c2aa68b908a454449a57e003f19c0e3bca5036d1ffd24b"
+      "sha256": "d670317abcaa0328335b870a10d729bfcacd30cd9cf0777e085d996c749fd89c"
     },
     {
       "path": "ElsheiekhHMS.Web/Components/Layout/ReconnectModal.razor",
@@ -895,7 +895,7 @@
     },
     {
       "path": "ElsheiekhHMS.Web/Components/Pages/Home.razor",
-      "sha256": "2b39b07727311f5ea7a8563a001f127e13e3f65574d6edcf8400b85c28e4674a"
+      "sha256": "6aee1025a50fbc0f0eda1b8e79b2b4218344485a9636d55cf4d91087e8985486"
     },
     {
       "path": "ElsheiekhHMS.Web/Components/Pages/Login.razor",
@@ -904,6 +904,22 @@
     {
       "path": "ElsheiekhHMS.Web/Components/Pages/NotFound.razor",
       "sha256": "758b050a37a4cd50ba7747e909068b0da04cfb5e7a9fe8b98a20fb4532596fdf"
+    },
+    {
+      "path": "ElsheiekhHMS.Web/Components/Pages/Patients/PatientCreate.razor",
+      "sha256": "dc46c3b45a1ef568f1b70c5b824082d0237b3cb19608d91cd9e2509bb9d3a029"
+    },
+    {
+      "path": "ElsheiekhHMS.Web/Components/Pages/Patients/PatientDetails.razor",
+      "sha256": "c6da992ef2838877bf650e8a9bbc6c4f786bab0be1878fdd2b8dcd251dbd7873"
+    },
+    {
+      "path": "ElsheiekhHMS.Web/Components/Pages/Patients/PatientEdit.razor",
+      "sha256": "4b734b9af4545dc8651f3b29c9bab9f67b3873844be13317e3796da5eb9f5b96"
+    },
+    {
+      "path": "ElsheiekhHMS.Web/Components/Pages/Patients/PatientRegistry.razor",
+      "sha256": "6b8c4027c4c77ad13a529304ac24dbcde602b7d780e60832f384a059e126b30a"
     },
     {
       "path": "ElsheiekhHMS.Web/Components/Routes.razor",
@@ -924,6 +940,10 @@
     {
       "path": "ElsheiekhHMS.Web/Components/Shared/ErrorState.razor",
       "sha256": "94baccd03bbe813d7377810c609fb230d30300f40939349470d5440986689709"
+    },
+    {
+      "path": "ElsheiekhHMS.Web/Components/Shared/Field.razor",
+      "sha256": "92828b8d64484a3ad85877c4191fba5030bea29a367f587212035c319655b6c1"
     },
     {
       "path": "ElsheiekhHMS.Web/Components/Shared/LoadingState.razor",
@@ -951,7 +971,7 @@
     },
     {
       "path": "ElsheiekhHMS.Web/Components/_Imports.razor",
-      "sha256": "ee918b26265e44cd342f98ac4b4e0accc34cdbbe49b7fe482744b58a6b57894f"
+      "sha256": "1f40f6e386d3e57c42e64128d78dbae769411612be8bdb72115596bc78844f7a"
     },
     {
       "path": "ElsheiekhHMS.Web/ElsheiekhHMS.Web.csproj",
@@ -979,7 +999,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "18e055db18d6133b459d01760b5aa8925b9c2074fff45bb2500200176e3ae6ed"
+      "sha256": "ec2f911295354c4565fb3bc1ef2d3d9853bb14cce4a6c7fdf2fbed92f304211a"
     }
   ],
   "repository": {
@@ -990,15 +1010,15 @@
   "summary": {
     "projectCount": 5,
     "sourceFileCount": 214,
-    "razorFileCount": 22,
+    "razorFileCount": 27,
     "typeCount": 279,
     "interfaceCount": 14,
     "testClassCount": 11,
     "testMethodCount": 76,
     "testCount": 113,
     "dynamicTheoryCount": 0,
-    "nodeCount": 612,
-    "edgeCount": 1174
+    "nodeCount": 617,
+    "edgeCount": 1179
   },
   "projects": [
     {
@@ -4875,6 +4895,70 @@
       "dynamicTheories": 0
     },
     {
+      "id": "file:ElsheiekhHMS.Web:ElsheiekhHMS.Web/Components/Pages/Patients/PatientCreate.razor",
+      "name": "PatientCreate.razor",
+      "label": "PatientCreate.razor",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Web",
+      "file": "ElsheiekhHMS.Web/Components/Pages/Patients/PatientCreate.razor",
+      "source_file": "ElsheiekhHMS.Web/Components/Pages/Patients/PatientCreate.razor",
+      "external": false,
+      "community": 4,
+      "community_name": "ElsheiekhHMS.Web",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "file:ElsheiekhHMS.Web:ElsheiekhHMS.Web/Components/Pages/Patients/PatientDetails.razor",
+      "name": "PatientDetails.razor",
+      "label": "PatientDetails.razor",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Web",
+      "file": "ElsheiekhHMS.Web/Components/Pages/Patients/PatientDetails.razor",
+      "source_file": "ElsheiekhHMS.Web/Components/Pages/Patients/PatientDetails.razor",
+      "external": false,
+      "community": 4,
+      "community_name": "ElsheiekhHMS.Web",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "file:ElsheiekhHMS.Web:ElsheiekhHMS.Web/Components/Pages/Patients/PatientEdit.razor",
+      "name": "PatientEdit.razor",
+      "label": "PatientEdit.razor",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Web",
+      "file": "ElsheiekhHMS.Web/Components/Pages/Patients/PatientEdit.razor",
+      "source_file": "ElsheiekhHMS.Web/Components/Pages/Patients/PatientEdit.razor",
+      "external": false,
+      "community": 4,
+      "community_name": "ElsheiekhHMS.Web",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "file:ElsheiekhHMS.Web:ElsheiekhHMS.Web/Components/Pages/Patients/PatientRegistry.razor",
+      "name": "PatientRegistry.razor",
+      "label": "PatientRegistry.razor",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Web",
+      "file": "ElsheiekhHMS.Web/Components/Pages/Patients/PatientRegistry.razor",
+      "source_file": "ElsheiekhHMS.Web/Components/Pages/Patients/PatientRegistry.razor",
+      "external": false,
+      "community": 4,
+      "community_name": "ElsheiekhHMS.Web",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
       "id": "file:ElsheiekhHMS.Web:ElsheiekhHMS.Web/Components/Routes.razor",
       "name": "Routes.razor",
       "label": "Routes.razor",
@@ -4947,6 +5031,22 @@
       "project": "ElsheiekhHMS.Web",
       "file": "ElsheiekhHMS.Web/Components/Shared/ErrorState.razor",
       "source_file": "ElsheiekhHMS.Web/Components/Shared/ErrorState.razor",
+      "external": false,
+      "community": 4,
+      "community_name": "ElsheiekhHMS.Web",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "file:ElsheiekhHMS.Web:ElsheiekhHMS.Web/Components/Shared/Field.razor",
+      "name": "Field.razor",
+      "label": "Field.razor",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Web",
+      "file": "ElsheiekhHMS.Web/Components/Shared/Field.razor",
+      "source_file": "ElsheiekhHMS.Web/Components/Shared/Field.razor",
       "external": false,
       "community": 4,
       "community_name": "ElsheiekhHMS.Web",
@@ -18669,6 +18769,42 @@
     },
     {
       "source": "project:ElsheiekhHMS.Web",
+      "target": "file:ElsheiekhHMS.Web:ElsheiekhHMS.Web/Components/Pages/Patients/PatientCreate.razor",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Web/ElsheiekhHMS.Web.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Web",
+      "target": "file:ElsheiekhHMS.Web:ElsheiekhHMS.Web/Components/Pages/Patients/PatientDetails.razor",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Web/ElsheiekhHMS.Web.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Web",
+      "target": "file:ElsheiekhHMS.Web:ElsheiekhHMS.Web/Components/Pages/Patients/PatientEdit.razor",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Web/ElsheiekhHMS.Web.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Web",
+      "target": "file:ElsheiekhHMS.Web:ElsheiekhHMS.Web/Components/Pages/Patients/PatientRegistry.razor",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Web/ElsheiekhHMS.Web.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Web",
       "target": "file:ElsheiekhHMS.Web:ElsheiekhHMS.Web/Components/Routes.razor",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Web/ElsheiekhHMS.Web.csproj",
@@ -18706,6 +18842,15 @@
     {
       "source": "project:ElsheiekhHMS.Web",
       "target": "file:ElsheiekhHMS.Web:ElsheiekhHMS.Web/Components/Shared/ErrorState.razor",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Web/ElsheiekhHMS.Web.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Web",
+      "target": "file:ElsheiekhHMS.Web:ElsheiekhHMS.Web/Components/Shared/Field.razor",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Web/ElsheiekhHMS.Web.csproj",
       "relation": "contains",
@@ -23981,7 +24126,7 @@
       "statusSource": "README.md declaration, not independently certified completion",
       "declaredStatus": [
         {
-          "text": "\u003E **Current development stage:** Phase 12B \u2014 authentication shell and navigation complete; backend remains accepted and frozen",
+          "text": "\u003E **Current development stage:** Phase 12C \u2014 Patient management UI complete; backend remains accepted and frozen",
           "source": "README.md:L5"
         },
         {
@@ -24133,40 +24278,44 @@
           "source": "README.md:L80"
         },
         {
+          "text": "\u003E **Phase 12C:** \u2705 Patient registry, server-side search/pagination, registration, details, and concurrency-safe edit UI complete; external browser QA remains required",
+          "source": "README.md:L82"
+        },
+        {
           "text": "| 01 | Solution \u0026 Architecture | \u2705 Complete |",
-          "source": "README.md:L397"
-        },
-        {
-          "text": "| 02 | Core Foundation | \u2705 Complete |",
-          "source": "README.md:L398"
-        },
-        {
-          "text": "| 03 | Domain Entities | \u2705 Complete |",
           "source": "README.md:L399"
         },
         {
-          "text": "| 04 | EF Core \u0026 Database | \u2705 Complete |",
+          "text": "| 02 | Core Foundation | \u2705 Complete |",
           "source": "README.md:L400"
         },
         {
-          "text": "| 05 | Identity \u0026 Security | \u2705 Complete (05A, 05B, 05C, 05C-A, 05D, and 05E) |",
+          "text": "| 03 | Domain Entities | \u2705 Complete |",
           "source": "README.md:L401"
         },
         {
-          "text": "| 06 | DTOs \u0026 Validation | \u2705 Complete (06A\u201306D) |",
+          "text": "| 04 | EF Core \u0026 Database | \u2705 Complete |",
           "source": "README.md:L402"
         },
         {
-          "text": "| 07 | Application Services | \u2705 Complete for approved scope (07S, 07A, 07B, 07C-P, 07C, 07D; 07E deferred) |",
+          "text": "| 05 | Identity \u0026 Security | \u2705 Complete (05A, 05B, 05C, 05C-A, 05D, and 05E) |",
           "source": "README.md:L403"
         },
         {
-          "text": "| 08 | Business Workflows | \u2705 Complete (08A, 08B-P, 08B) |",
+          "text": "| 06 | DTOs \u0026 Validation | \u2705 Complete (06A\u201306D) |",
           "source": "README.md:L404"
         },
         {
-          "text": "| 09 | Enterprise Infrastructure | \u2705 Complete (09A, 09B) |",
+          "text": "| 07 | Application Services | \u2705 Complete for approved scope (07S, 07A, 07B, 07C-P, 07C, 07D; 07E deferred) |",
           "source": "README.md:L405"
+        },
+        {
+          "text": "| 08 | Business Workflows | \u2705 Complete (08A, 08B-P, 08B) |",
+          "source": "README.md:L406"
+        },
+        {
+          "text": "| 09 | Enterprise Infrastructure | \u2705 Complete (09A, 09B) |",
+          "source": "README.md:L407"
         }
       ]
     }
@@ -29498,6 +29647,42 @@
     },
     {
       "source": "project:ElsheiekhHMS.Web",
+      "target": "file:ElsheiekhHMS.Web:ElsheiekhHMS.Web/Components/Pages/Patients/PatientCreate.razor",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Web/ElsheiekhHMS.Web.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Web",
+      "target": "file:ElsheiekhHMS.Web:ElsheiekhHMS.Web/Components/Pages/Patients/PatientDetails.razor",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Web/ElsheiekhHMS.Web.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Web",
+      "target": "file:ElsheiekhHMS.Web:ElsheiekhHMS.Web/Components/Pages/Patients/PatientEdit.razor",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Web/ElsheiekhHMS.Web.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Web",
+      "target": "file:ElsheiekhHMS.Web:ElsheiekhHMS.Web/Components/Pages/Patients/PatientRegistry.razor",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Web/ElsheiekhHMS.Web.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Web",
       "target": "file:ElsheiekhHMS.Web:ElsheiekhHMS.Web/Components/Routes.razor",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Web/ElsheiekhHMS.Web.csproj",
@@ -29535,6 +29720,15 @@
     {
       "source": "project:ElsheiekhHMS.Web",
       "target": "file:ElsheiekhHMS.Web:ElsheiekhHMS.Web/Components/Shared/ErrorState.razor",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Web/ElsheiekhHMS.Web.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Web",
+      "target": "file:ElsheiekhHMS.Web:ElsheiekhHMS.Web/Components/Shared/Field.razor",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Web/ElsheiekhHMS.Web.csproj",
       "relation": "contains",

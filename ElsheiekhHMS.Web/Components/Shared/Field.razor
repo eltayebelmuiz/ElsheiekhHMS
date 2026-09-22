@@ -1,0 +1,11 @@
+<div class="hms-field">
+    <label for="@Id">@Label @if (Required) { <span aria-hidden="true">*</span> }</label>
+    @ChildContent
+</div>
+
+@code {
+    [Parameter, EditorRequired] public string Label { get; set; } = string.Empty;
+    [Parameter, EditorRequired] public string Id { get; set; } = string.Empty;
+    [Parameter] public bool Required { get; set; }
+    [Parameter, EditorRequired] public RenderFragment ChildContent { get; set; } = default!;
+}

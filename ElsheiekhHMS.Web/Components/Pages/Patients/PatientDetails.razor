@@ -1,0 +1,61 @@
+@page "/patients/{PatientId:int}"
+@rendermode InteractiveServer
+@attribute [Authorize(Policy = PolicyNames.CanManagePatients)]
+
+@inject IPatientService PatientService
+
+<PageTitle>Patient details</PageTitle>
+@if (_loading)
+{
+    <LoadingState Message="Loading patient details" />
+}
+else if (_errorMessage is not null)
+{
+    <ErrorState Title="Patient details unavailable" Message="@_errorMessage"><Actions><a class="btn btn-outline-secondary" href="/patients">Return to registry</a></Actions></ErrorState>
+}
+else if (_patient is not null)
+{
+    <PageHeader Eyebrow="Patient record" Title="@_patient.FullName" Description="Patient details and approved demographic, contact, and identifier information.">
+        <Actions><a class="btn btn-primary" href="@($"/patients/{PatientId}/edit")">Edit patient</a><a class="btn btn-outline-secondary" href="/patients">Back to registry</a></Actions>
+    </PageHeader>
+    @if (_created)
+    {
+        <AppAlert Tone="AppAlert.AlertTone.Success" Title="Patient registered" Message="The patient record was registered successfully." />
+    }
+    @if (_updated)
+    {
+        <AppAlert Tone="AppAlert.AlertTone.Success" Title="Patient information updated" Message="The latest changes were saved successfully." />
+    }
+    <div class="hms-detail-grid">
+        <section class="hms-panel" aria-labelledby="identity-heading"><div class="hms-panel__header"><div><p class="hms-eyebrow">Identity</p><h2 id="identity-heading">@_patient.PatientCode</h2></div><StatusBadge Text="Active record" Tone="StatusBadge.StatusTone.Success" /></div><dl class="hms-detail-list"><dt>Full name</dt><dd>@_patient.FullName</dd><dt>Date of birth</dt><dd>@_patient.DateOfBirth.ToString("dd MMM yyyy")</dd><dt>Gender</dt><dd>@_patient.Gender</dd><dt>Blood group</dt><dd>@(_patient.BloodGroup?.ToString() ?? "Not recorded")</dd></dl></section>
+        <section class="hms-panel" aria-labelledby="contact-heading"><div class="hms-panel__header"><div><p class="hms-eyebrow">Contact</p><h2 id="contact-heading">Contact details</h2></div></div><dl class="hms-detail-list"><dt>Phone</dt><dd>@_patient.Phone</dd><dt>Address</dt><dd>@_patient.Address</dd><dt>City</dt><dd>@(_patient.City ?? "Not recorded")</dd><dt>Emergency contact</dt><dd>@FormatEmergencyContact()</dd><dt>Insurance provider</dt><dd>@(_patient.InsuranceProvider ?? "Not recorded")</dd></dl></section>
+        <section class="hms-panel" aria-labelledby="identifier-heading"><div class="hms-panel__header"><div><p class="hms-eyebrow">Identifiers</p><h2 id="identifier-heading">Identity references</h2></div></div><dl class="hms-detail-list"><dt>National ID</dt><dd>@(_patient.NationalId ?? "Not recorded")</dd><dt>Passport number</dt><dd>@(_patient.PassportNumber ?? "Not recorded")</dd></dl></section>
+    </div>
+}
+
+@code {
+    [Parameter] public int PatientId { get; set; }
+    [SupplyParameterFromQuery(Name = "created")] private bool _created { get; set; }
+    [SupplyParameterFromQuery(Name = "updated")] private bool _updated { get; set; }
+    private PatientDetailsDto? _patient;
+    private bool _loading;
+    private string? _errorMessage;
+
+    protected override async Task OnParametersSetAsync()
+    {
+        _loading = true; _errorMessage = null;
+        try
+        {
+            var result = await PatientService.GetByIdAsync(PatientId);
+            if (result.IsSuccess) _patient = result.Value;
+            else _errorMessage = result.Errors.FirstOrDefault()?.Message ?? "The patient was not found.";
+        }
+        catch (OperationCanceledException) { throw; }
+        catch { _errorMessage = "The patient details could not be loaded. Try again."; }
+        finally { _loading = false; }
+    }
+
+    private string FormatEmergencyContact() => _patient is null || string.IsNullOrWhiteSpace(_patient.EmergencyContactName)
+        ? "Not recorded"
+        : string.Join(" · ", new[] { _patient.EmergencyContactName, _patient.EmergencyContactPhone, _patient.EmergencyContactRelationship }.Where(value => !string.IsNullOrWhiteSpace(value)));
+}

@@ -18,11 +18,10 @@
     <AuthorizeView Roles="@($"{RoleNames.Administrator},{RoleNames.Receptionist}")">
         <div class="hms-nav__section">
             <p class="hms-nav__label">Operations</p>
-            <span class="hms-nav__link hms-nav__link--planned" aria-disabled="true" title="Available in the next UI module">
+            <NavLink class="hms-nav__link" href="/patients">
                 <span class="hms-nav__mark" aria-hidden="true">P</span>
                 <span>Patients</span>
-                <small>Next</small>
-            </span>
+            </NavLink>
             <span class="hms-nav__link hms-nav__link--planned" aria-disabled="true" title="Available in the next UI module">
                 <span class="hms-nav__mark" aria-hidden="true">A</span>
                 <span>Appointments</span>
@@ -49,6 +48,6 @@
 
     <div class="hms-nav__footer">
         <span>UI foundation</span>
-        <span>Phase 12B</span>
+        <span>Phase 12C</span>
     </div>
 </nav>

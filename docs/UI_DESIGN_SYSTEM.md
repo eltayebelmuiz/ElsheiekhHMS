@@ -62,8 +62,10 @@ stylesheet or add localization infrastructure without an approved requirement.
 
 Patient, Department, Appointment, and Queue screens must call Application
 contracts through DI; Razor components must not inject a DbContext or an
-Infrastructure persistence implementation. Patient ownership and Provider
-self-service remain deferred. Appointment check-in is not an Encounter, and an
+Infrastructure persistence implementation. Phase 12C provides the authorized
+staff Patient registry, registration, details, and concurrency-safe edit
+sections; its external browser handoff is `docs/UI_PATIENT_QA_CHECKLIST.md`.
+Patient ownership and Provider self-service remain deferred. Appointment check-in is not an Encounter, and an
 Appointment-linked Queue entry must be created through the approved workflow so
 PatientId and DepartmentId come from the Appointment. Do not add clinical,
 billing, laboratory, pharmacy, inpatient, or Provider navigation until their

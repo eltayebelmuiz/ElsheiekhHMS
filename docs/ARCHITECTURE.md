@@ -301,4 +301,14 @@ POST/antiforgery logout action. Identity cookie composition, account-state and
 security-stamp revalidation, fallback authorization, and service authorization
 remain authoritative. No registration, reset, external login, ownership, CRUD,
 schema, or package behavior was added. The external browser QA handoff is
-`docs/UI_QA_CHECKLIST.md`; the next approved UI gate is Phase 12C Patient UI.
+`docs/UI_QA_CHECKLIST.md`; the next approved UI gate after the shell was Phase
+12C Patient UI.
+
+Phase 12C adds only Web-owned Patient management screens over the frozen
+Application contract: an authorized-staff registry with server-side search,
+sorting, paging, registration, details, and concurrency-safe edit sections.
+Razor components inject `IPatientService` and never access EF or Infrastructure
+directly. Duplicate-candidate review is not exposed by the accepted contract,
+so the UI does not invent a warning or registration blocker. Patient
+self-service, clinical history, and schema/backend changes remain deferred;
+external browser QA is tracked in `docs/UI_PATIENT_QA_CHECKLIST.md`.
