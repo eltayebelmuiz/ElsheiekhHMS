@@ -2,11 +2,11 @@
 
 ## Snapshot
 
-- **generatedAtUtc:** `2026-09-22T12:29:50.3032244+00:00`
+- **generatedAtUtc:** `2026-09-22T13:02:15.8990921+00:00`
 - **gitBranch:** `main`
-- **gitCommit:** `c22323c482d9659c95f848be016e13a351502362`
+- **gitCommit:** `5e9b78f894cf7dc7b08202de99ccd4261f404749`
 - **workingTreeDirty:** `True`
-- **sourceFingerprint:** `752d86d1267400c05ddd375637600f4157ff663eba093b3a1c1b5b8c685f84eb`
+- **sourceFingerprint:** `94abffa665739efddd56beee6215de141ecb0f3ebe716b91541f109e3903d216`
 - Framework: net10.0
 - Structural extraction only: **0 LLM API calls / 0 LLM tokens**. No statistical community clustering is claimed; project ownership supplies the visual groups.
 
@@ -242,7 +242,7 @@ Evaluated direct PackageReference items only. Framework/SDK auto-references and 
 
 Declared by README; not inferred from the existence of classes:
 
-- > **Current development stage:** Phase 08 — 08A and 08B-P complete; 08B Appointment Arrival & Queue Handoff implemented and ready for closeout — README.md:L5
+- > **Current development stage:** Phase 08 — Business Workflows complete; 08C is not required; Phase 09 has not started — README.md:L5
 - > **Phase 01:** ✅ Complete — README.md:L7
 - > **Phase 02 Setup:** ✅ Complete and verified — README.md:L9
 - > **Phase 03A / 03B / 03C:** ✅ Complete — README.md:L11
@@ -271,8 +271,8 @@ Declared by README; not inferred from the existence of classes:
 - > **Phase 07:** ✅ Application Services complete for the approved scope; 07E is explicitly deferred — README.md:L57
 - > **Phase 08A:** ✅ Staff Patient Intake & Appointment Scheduling implemented, tested, and verified; partial-success retry semantics preserve newly registered Patients — README.md:L59
 - > **Phase 08B-P:** ✅ Appointment↔Queue durable-link prerequisite implemented; `AddAppointmentQueueLink` applied and physically verified — README.md:L61
-- > **Phase 08B:** ✅ Appointment Arrival & Queue Handoff implemented and verified; final closeout remains — README.md:L63
-- > **Phase 08:** 🔄 In progress; 08A, 08B-P, and 08B implementation complete; Phase 08 closeout remains — README.md:L65
+- > **Phase 08B:** ✅ Appointment Arrival & Queue Handoff implemented, verified, and closed out — README.md:L63
+- > **Phase 08:** ✅ Business Workflows complete; 08A, 08B-P, and 08B are complete; 08C is not required — README.md:L65
 -  /  01  /  Solution & Architecture  /  ✅ Complete  /  — README.md:L382
 -  /  02  /  Core Foundation  /  ✅ Complete  /  — README.md:L383
 -  /  03  /  Domain Entities  /  ✅ Complete  /  — README.md:L384

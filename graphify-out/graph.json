@@ -1,11 +1,11 @@
 {
   "schemaVersion": "1.0",
-  "generatedAtUtc": "2026-09-22T12:29:50.3032244\u002B00:00",
-  "gitCommit": "c22323c482d9659c95f848be016e13a351502362",
+  "generatedAtUtc": "2026-09-22T13:02:15.8990921\u002B00:00",
+  "gitCommit": "5e9b78f894cf7dc7b08202de99ccd4261f404749",
   "gitBranch": "main",
   "workingTreeDirty": true,
-  "gitStatusAtGeneration": "M DEVELOPMENT_ROADMAP.md\n M ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs\n M README.md\n M docs/ARCHITECTURE.md\n M docs/DECISIONS.md\n M graphify-out/GRAPH_REPORT.md\n M graphify-out/graph.html\n M graphify-out/graph.json\n?? ElsheiekhHMS.Application/Workflows/AppointmentArrival/AppointmentArrivalQueueOutcome.cs\n?? ElsheiekhHMS.Application/Workflows/AppointmentArrival/AppointmentArrivalQueueRequest.cs\n?? ElsheiekhHMS.Application/Workflows/AppointmentArrival/AppointmentArrivalQueueResult.cs\n?? ElsheiekhHMS.Application/Workflows/AppointmentArrival/AppointmentArrivalQueueService.cs\n?? ElsheiekhHMS.Application/Workflows/AppointmentArrival/IAppointmentArrivalQueueService.cs\n?? ElsheiekhHMS.Tests/Integration/Persistence/AppointmentArrivalQueueSqlServerTests.cs\n?? ElsheiekhHMS.Tests/Unit/Application/Workflows/AppointmentArrivalQueueServiceTests.cs",
-  "sourceFingerprint": "752d86d1267400c05ddd375637600f4157ff663eba093b3a1c1b5b8c685f84eb",
+  "gitStatusAtGeneration": "M DEVELOPMENT_ROADMAP.md\n M README.md\n M docs/ARCHITECTURE.md\n M docs/DECISIONS.md\n M graphify-out/GRAPH_REPORT.md\n M graphify-out/graph.html\n M graphify-out/graph.json",
+  "sourceFingerprint": "94abffa665739efddd56beee6215de141ecb0f3ebe716b91541f109e3903d216",
   "generatorFingerprint": "03eee0a8853a7e84af6cbe571d34e6f7d820505ac8f5670a719d0d63b113840c",
   "fingerprintAlgorithm": "SHA-256 of ordinal path \u002B NUL \u002B content SHA-256 records joined with LF; sourceManifest defines inputs; graphify-out excluded everywhere",
   "sourceManifest": [
@@ -899,7 +899,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "5bcfbd4cdcca6d08a736cc8c61a1a399514f759f893e0bd9c62377f48d6ef079"
+      "sha256": "d488f66b7d5a59e10d0992f32f15821f3fc4f2878a82ff6b4c53b53374311395"
     }
   ],
   "repository": {
@@ -21847,7 +21847,7 @@
       "statusSource": "README.md declaration, not independently certified completion",
       "declaredStatus": [
         {
-          "text": "\u003E **Current development stage:** Phase 08 \u2014 08A and 08B-P complete; 08B Appointment Arrival \u0026 Queue Handoff implemented and ready for closeout",
+          "text": "\u003E **Current development stage:** Phase 08 \u2014 Business Workflows complete; 08C is not required; Phase 09 has not started",
           "source": "README.md:L5"
         },
         {
@@ -21963,11 +21963,11 @@
           "source": "README.md:L61"
         },
         {
-          "text": "\u003E **Phase 08B:** \u2705 Appointment Arrival \u0026 Queue Handoff implemented and verified; final closeout remains",
+          "text": "\u003E **Phase 08B:** \u2705 Appointment Arrival \u0026 Queue Handoff implemented, verified, and closed out",
           "source": "README.md:L63"
         },
         {
-          "text": "\u003E **Phase 08:** \uD83D\uDD04 In progress; 08A, 08B-P, and 08B implementation complete; Phase 08 closeout remains",
+          "text": "\u003E **Phase 08:** \u2705 Business Workflows complete; 08A, 08B-P, and 08B are complete; 08C is not required",
           "source": "README.md:L65"
         },
         {

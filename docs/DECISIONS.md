@@ -742,7 +742,7 @@ self-service workflows remain deferred.
 
 ## ADR-025 — Phase 08B-P durable Appointment↔Queue prerequisite
 
-**Status:** Implemented; ready for 08B handoff orchestration
+**Status:** Implemented; complete
 **Phase:** 08B-P
 
 ### Decision
@@ -780,7 +780,7 @@ automatically during appointment lifecycle operations.
 
 ## ADR-026 — Phase 08B appointment arrival and queue handoff
 
-**Status:** Implemented; ready for closeout
+**Status:** Implemented; complete
 **Phase:** 08B
 
 ### Decision
@@ -814,3 +814,35 @@ Provider ownership, and Patient self-service remain separate concerns.
 [AppointmentArrivalQueueService](../ElsheiekhHMS.Application/Workflows/AppointmentArrival/AppointmentArrivalQueueService.cs);
 [focused workflow tests](../ElsheiekhHMS.Tests/Unit/Application/Workflows/AppointmentArrivalQueueServiceTests.cs);
 [isolated SQL workflow test](../ElsheiekhHMS.Tests/Integration/Persistence/AppointmentArrivalQueueSqlServerTests.cs).
+
+## ADR-027 — Phase 08 Business Workflows closeout
+
+**Status:** Complete
+**Phase:** 08
+
+### Decision
+
+Close Phase 08 with the approved workflow scope complete: 08A provides staff
+Patient intake and Appointment scheduling, 08B-P provides the durable
+Appointment↔Queue link, and 08B provides explicit staff arrival/check-in and
+Appointment-linked Queue handoff. The resulting operational flow is Patient
+registration or existing Patient selection → Appointment scheduling → explicit
+staff arrival/check-in → linked Queue handoff → Queue lifecycle.
+
+No 08C workflow is required. Queue progression, Patient/Department/Appointment
+service behavior, appointment cancellation, and queue cancellation remain owned
+by their existing Phase 07 services. Appointment cancellation does not
+automatically cancel Queue history; the current cancellation path only permits
+Scheduled or Confirmed appointments, while handoff occurs after CheckIn.
+
+Provider-owned workflows remain deferred pending 07E Doctor↔ApplicationUser
+ownership and approved authorization contracts. Patient self-service remains
+deferred pending Patient ownership. Encounter/clinical, laboratory, billing,
+inpatient, pharmacy, and notification workflows require separate approved domain
+designs. Phase 09 is not started by this closeout.
+
+### Consequences
+
+This closeout changes project status documentation only. Core, Application,
+Infrastructure, Web, ApplicationUser, EF schema, migrations, model snapshot,
+packages, database state, and Phases.md remain unchanged.

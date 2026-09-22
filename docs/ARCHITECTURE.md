@@ -75,7 +75,7 @@ Blazor presentation
 
 This is a **planned runtime collaboration**, not a Core-to-Infrastructure project dependency. Application orchestrates domain behavior and technical calls; Core does not invoke an EF implementation. Concrete contracts are introduced with justified use cases.
 
-The host, layer registration entry points, Core foundations, approved Phase 04A–04C EF Core persistence model, inspected Phase 04D-B migration/snapshot, verified Phase 04D-C local SQL Server schema, Phase 04E isolated persistence integration tests, Phase 05A Identity foundation, Phase 05B role/policy foundation, Phase 05D Identity/AuditLog migration and SQL verification, the Phase 07S allocator infrastructure prerequisite, the approved 07A Patient Application Service, the implemented 07B Department Application Service, the implemented 07C-P AppointmentCode allocator prerequisite, the implemented 07C Appointment Application Service, the implemented 07D Queue Application Service, the implemented 08B-P Appointment↔Queue durable-link prerequisite, and the implemented 08B Appointment Arrival & Queue Handoff workflow now exist. Phase 07 is complete for the approved service scope. The conditional 07E Doctor/Provider Application Service is explicitly deferred because Phase06 Doctor/Provider contracts, a service contract, Doctor↔ApplicationUser ownership mapping and persistence, and ownership-aware authorization are not approved; Phase 08 remains in progress pending 08B closeout. The frontend interacts with the application and must not become the business layer.
+The host, layer registration entry points, Core foundations, approved Phase 04A–04C EF Core persistence model, inspected Phase 04D-B migration/snapshot, verified Phase 04D-C local SQL Server schema, Phase 04E isolated persistence integration tests, Phase 05A Identity foundation, Phase 05B role/policy foundation, Phase 05D Identity/AuditLog migration and SQL verification, the Phase 07S allocator infrastructure prerequisite, the approved 07A Patient Application Service, the implemented 07B Department Application Service, the implemented 07C-P AppointmentCode allocator prerequisite, the implemented 07C Appointment Application Service, the implemented 07D Queue Application Service, the implemented 08B-P Appointment↔Queue durable-link prerequisite, and the implemented 08B Appointment Arrival & Queue Handoff workflow now exist. Phase 07 is complete for the approved service scope, and Phase 08 is complete with 08A, 08B-P, and 08B; no 08C workflow is required. The conditional 07E Doctor/Provider Application Service is explicitly deferred because Phase06 Doctor/Provider contracts, a service contract, Doctor↔ApplicationUser ownership mapping and persistence, and ownership-aware authorization are not approved. The frontend interacts with the application and must not become the business layer.
 
 ## 5. Core foundation
 
@@ -120,7 +120,19 @@ Future Blazor pages own presentation, navigation, input, and loading/error state
 
 ### Phase 07 closeout
 
-Phase 07 Application Services is complete for the approved scope: 07S, 07A, 07B, 07C-P, 07C, and 07D are complete. 07E Doctor/Provider Application Service is deferred. Before 07E implementation, the project must approve Phase06-style Doctor/Provider contracts, service operations, a Doctor↔ApplicationUser relationship, ownership persistence, ownership-aware authorization, any required schema migration, and its tests. The existing Doctor domain entity, Department relationship, Appointment relationship, and EF persistence model are present; Doctor is not missing. Phase 08 Business Workflows is in progress: 08A, 08B-P, and 08B implementation are complete; final 08B closeout remains.
+Phase 07 Application Services is complete for the approved scope: 07S, 07A, 07B, 07C-P, 07C, and 07D are complete. 07E Doctor/Provider Application Service is deferred. Before 07E implementation, the project must approve Phase06-style Doctor/Provider contracts, service operations, a Doctor↔ApplicationUser relationship, ownership persistence, ownership-aware authorization, any required schema migration, and its tests. The existing Doctor domain entity, Department relationship, Appointment relationship, and EF persistence model are present; Doctor is not missing. Phase 08 Business Workflows is complete: 08A, 08B-P, and 08B are complete, and no 08C workflow is required. Phase 09 has not started.
+
+### Phase 08 closeout
+
+The approved operational flow is Patient registration or existing Patient selection,
+Appointment scheduling, explicit staff arrival/check-in, Appointment-linked Queue
+handoff, and Queue lifecycle. Check-in alone does not create a Queue entry; 08B
+coordinates the handoff. Queue is operational history and is not an Encounter.
+Appointment cancellation does not automatically cancel Queue history, and the
+existing cancellation path cannot cancel a CheckedIn Appointment. Provider-owned
+workflows remain blocked by 07E, Patient self-service remains blocked by missing
+Patient ownership, and clinical, laboratory, billing, inpatient, pharmacy, and
+notification workflows require separate approved domain designs.
 
 ## 7. Testing architecture
 

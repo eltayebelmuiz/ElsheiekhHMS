@@ -3,7 +3,7 @@
 **Version:** 1.0.0
 **Date:** September 20, 2026
 **Owner:** Eltayeb Elmuiz
-**Status:** Phase 08A and 08B-P complete; 08B Appointment Arrival & Queue Handoff implemented and ready for closeout; Phase 08 remains in progress; 07E Doctor/Provider Application Service remains deferred
+**Status:** Phase 08 Business Workflows complete; 08A, 08B-P, and 08B complete; 08C is not required; Phase 09 has not started; 07E Doctor/Provider Application Service remains deferred
 
 ---
 
@@ -253,8 +253,8 @@ If business rules exist only in Razor components or transport endpoints, they ca
 | 04 | EF Core & Database | AppDbContext, Fluent config, migrations | ✅ Complete | Database created and migrated |
 | 05 | Identity & Security | ApplicationUser, roles, policies, entity auditing, AuditLog foundation, migration, authentication hardening | ✅ Complete (05A–05E) | Identity/security foundations |
 | 06 | DTOs & Validation | DTOs, input validation, shared pagination | ✅ Complete (06A–06D) | Approved validation contracts |
-| 07 | Application Services | Application use cases and orchestration | ⏳ Not started | Tested application contracts |
-| 08 | Business Workflows | Queue, appointments, EMR, billing | ⏳ Not started | Approved workflow services |
+| 07 | Application Services | Application use cases and orchestration | ✅ Complete for approved scope; 07E deferred | Tested application contracts |
+| 08 | Business Workflows | Queue, appointments, and approved cross-service workflows | ✅ Complete; 08C not required | Approved workflow services |
 | 09 | Enterprise Infrastructure | Remaining audit events, notifications, settings, integrations | ⏳ Not started | Approved cross-cutting services |
 | 10 | Testing & Hardening | Unit, integration, security, performance | ⏳ Not started | Hardening evidence |
 | 11 | Backend Review | Full backend gate before UI | ⏳ Not started | Architecture audit passing |
@@ -1081,7 +1081,7 @@ git commit -m "Phase07: application services checkpoint"
 
 ## PHASE 08 — Business Workflows
 
-**Status: IN PROGRESS.** 08A Staff Patient Intake & Appointment Scheduling, 08B-P Appointment↔Queue durable-link prerequisite, and 08B Staff Appointment Arrival & Queue Handoff implementation are complete; final 08B closeout remains.
+**Status: COMPLETE.** 08A Staff Patient Intake & Appointment Scheduling, 08B-P Appointment↔Queue durable-link prerequisite, and 08B Staff Appointment Arrival & Queue Handoff are complete. 08C is not required. Phase 09 has not started.
 
 ### Objective
 Implement complete business workflows — multi-step processes that involve validation, status transitions, transactions, audit trails, and cross-entity coordination.
@@ -1124,22 +1124,24 @@ builder.Entity<WalkInQueue>(e => {
 // Department and WaitTime lines caused CS1061 — removed
 ```
 
-### Appointment booking workflow ⏳ Planned
+### Approved appointment and arrival workflow ✅ Complete
 
 ```
-Validate patient exists
-→ Validate doctor exists and is Active
-→ Validate date/time is in the future
-→ Check for scheduling conflicts (same doctor, same time slot)
-→ Create appointment (status: Scheduled)
-→ Notify doctor
-→ Audit log
+Register a new Patient or select an existing Patient
+→ Schedule an Appointment through the approved Appointment service
+→ Staff explicitly checks in the Appointment
+→ 08B hands the Appointment to an Appointment-linked Queue entry
+→ QueueService owns the Queue lifecycle and audit trail
+
+Appointment CheckIn alone does not create a Queue entry. Appointment cancellation
+does not automatically cancel Queue history; the existing cancellation path applies
+only to Scheduled or Confirmed appointments, while handoff occurs after CheckIn.
 ```
 
-### Lab test workflow ⏳ Planned
+### Future clinical and financial workflows ⏳ Deferred
 
 ```
-Doctor orders test from catalog
+Doctor orders test from catalog (future separately approved domain work)
 → LabOrder created (status: Ordered)
 → Lab Tech collects sample (status: SampleCollected)
 → Processing begins (status: Processing)
@@ -1148,7 +1150,7 @@ Doctor orders test from catalog
 → Fee added to patient invoice
 ```
 
-### Billing workflow ⏳ Planned
+Billing remains future separately approved domain work.
 
 ```
 Invoice created for patient
@@ -1172,17 +1174,16 @@ Invoice created for patient
 
 ### Definition of done
 
-- [ ] Walk-in queue workflow fully operational with all 6 status values
-- [ ] Queue entry invalid transitions rejected with clear error message
-- [ ] AppDbContext WalkInQueue config has no Department or WaitTime references
-- [ ] Appointment conflict detection working
-- [ ] Lab test workflow: all 5 status transitions functional
-- [ ] Billing: partial payments correctly tracked
-- [ ] All workflow steps logged in AuditLog within same transaction
+- [x] Walk-in queue lifecycle and invalid-transition handling are owned by QueueService
+- [x] Appointment conflict detection and lifecycle are owned by AppointmentService
+- [x] Staff intake/scheduling is implemented by 08A
+- [x] Explicit appointment arrival and linked queue handoff is implemented by 08B
+- [x] No unjustified 08C workflow remains
+- [ ] Clinical, laboratory, billing, inpatient, pharmacy, and notification workflows remain future work requiring separate approved domain designs
 
 ### Git checkpoint
 ```
-git commit -m "Phase08: queue workflow, appointment booking, lab workflow, billing complete"
+git commit -m "docs(phase08): close business workflows phase"
 ```
 
 ---
@@ -1908,10 +1909,10 @@ public async Task<ServiceResult<T>> DoSomethingAsync(Dto dto, string actorEmail)
 ## 16. Current Project Checkpoint
 
 ```
-Last completed phase:  Phase 07 — Application Services (approved scope)
-Current phase:         Phase 08 — Business Workflows (not started)
-Next phase:            Phase 08 — Business Workflows
-Next action:           Review Phase 08 readiness; 07E remains explicitly deferred
+Last completed phase:  Phase 08 — Business Workflows
+Current phase:         Phase 08 — Business Workflows (complete)
+Next phase:            Phase 09 — Enterprise Infrastructure (not started)
+Next action:           Review Phase 09 readiness; 07E and ownership-dependent workflows remain explicitly deferred
 Known blockers:        None
 Important notes:
   - The current working codebase is the five-project .NET 10 ElsheiekhHMS solution
@@ -1922,6 +1923,7 @@ Important notes:
   - Enterprise table system active on Patient/Index
   - _PatientSearch partial complete and in use in WalkInQueue/Add
   - Display board and future UI modules remain later workflow/UI scope
+  - 08A, 08B-P, and 08B are complete; no 08C workflow is required
   - 07A Patient Application Service, 07B Department service, 07C Appointment service, and 07D Queue service are complete; Phase 07 is complete for the approved scope
   - Arabic/RTL removed — English-only confirmed
   - 05C-A stable audit vocabulary, bounded append-only model, server-controlled writer, and focused tests are complete
