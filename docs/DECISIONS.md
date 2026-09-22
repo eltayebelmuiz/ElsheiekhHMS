@@ -495,3 +495,43 @@ package change is required. Later Phase 07 services remain separately gated.
 [07A Patient service](../ElsheiekhHMS.Application/Patients/);
 [narrow persistence port](../ElsheiekhHMS.Application/Patients/Persistence/);
 [07S allocator decision](#adr-017--phase-07s-database-backed-identifier-allocation).
+
+## ADR-019 — Phase 07B Department service boundaries
+
+**Status:** Accepted
+**Phase:** 07B
+
+### Context
+
+Department is organization master data with active/inactive lifecycle behavior. The
+application needs bounded management use cases without adding a generic repository, a
+schema change, or a new authorization vocabulary.
+
+### Decision
+
+Implement `IDepartmentService` with only `GetByIdAsync`, `SearchAsync`, `CreateAsync`,
+`UpdateAsync`, and `DeactivateAsync`, backed by the narrow EF-free
+`IDepartmentPersistence` port. Search uses direct projections, server-side filtering,
+sorting, and bounded pagination. Use the existing `CanConfigureSystem` capability mapping:
+only `SystemAdministrator` may manage Department configuration. Create, update, and
+deactivate stage `DEPARTMENT_CREATED`, `DEPARTMENT_UPDATED`, and `DEPARTMENT_DEACTIVATED`
+AuditLog events with stable UserId attribution and commit the state change plus audit entry
+with one `SaveChangesAsync`.
+
+Department names remain non-unique because the existing EF model has no approved unique
+constraint. Deactivation preserves historical references; reactivation and hard delete are
+outside 07B. Department has no concurrency token, so none is introduced.
+
+### Consequences
+
+Application remains EF-free and no Core, ApplicationUser, schema, migration, snapshot,
+package, generic repository, Unit of Work, MediatR, CQRS, cache, broker, or workflow change
+is required. The minimal `DepartmentSearchRequest` contract fills the missing Phase06 list
+query shape without reopening the broader Phase06 contract family.
+
+### Evidence / Notes
+
+[Department service](../ElsheiekhHMS.Application/Departments/);
+[Department persistence](../ElsheiekhHMS.Infrastructure/Persistence/Departments/);
+[Department EF configuration](../ElsheiekhHMS.Infrastructure/Configurations/Entities/DepartmentConfiguration.cs);
+[authorization policy mapping](../ElsheiekhHMS.Web/Security/AuthorizationConfiguration.cs).

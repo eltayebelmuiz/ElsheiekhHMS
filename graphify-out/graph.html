@@ -11,12 +11,12 @@
 <footer>Architectural index, not authoritative source. Check freshness with <code>tools/graphify.ps1 -Check</code> before relying on this snapshot. No network requests or external libraries.</footer>
 <script id="graph-data" type="application/json">{
   "schemaVersion": "1.0",
-  "generatedAtUtc": "2026-09-22T00:34:58.8426864\u002B00:00",
-  "gitCommit": "d65a907ce83fb53e0c38131fda9c59d3f2b2c145",
+  "generatedAtUtc": "2026-09-22T01:16:28.9087658\u002B00:00",
+  "gitCommit": "3f97dbd46f99287b452cc40fa4e77dec70c48566",
   "gitBranch": "main",
   "workingTreeDirty": true,
-  "gitStatusAtGeneration": "M DEVELOPMENT_ROADMAP.md\n M ElsheiekhHMS.Application/Common/Auditing/AuditActions.cs\n M ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs\n M ElsheiekhHMS.Tests/Unit/Application/Architecture/ApplicationContractArchitectureTests.cs\n M ElsheiekhHMS.Tests/Unit/Application/Auditing/AuditVocabularyTests.cs\n M README.md\n M docs/ARCHITECTURE.md\n M docs/DECISIONS.md\n M graphify-out/GRAPH_REPORT.md\n M graphify-out/graph.html\n M graphify-out/graph.json\n?? ElsheiekhHMS.Application/Common/Results/ServiceError.cs\n?? ElsheiekhHMS.Application/Common/Results/ServiceResult.cs\n?? ElsheiekhHMS.Application/Patients/IPatientService.cs\n?? ElsheiekhHMS.Application/Patients/PatientService.cs\n?? ElsheiekhHMS.Application/Patients/Persistence/IPatientPersistence.cs\n?? ElsheiekhHMS.Application/Patients/Persistence/PatientPersistenceSaveStatus.cs\n?? ElsheiekhHMS.Infrastructure/Persistence/Patients/PatientPersistence.cs\n?? ElsheiekhHMS.Tests/Integration/Persistence/PatientServiceSqlServerTests.cs\n?? ElsheiekhHMS.Tests/Unit/Application/Common/Results/ServiceResultTests.cs\n?? ElsheiekhHMS.Tests/Unit/Application/Patients/PatientServiceTests.cs\n?? Phases.md",
-  "sourceFingerprint": "32a6634f3d8a7773575d6a497abcb0dfdac519080c2308858e311177de1a039a",
+  "gitStatusAtGeneration": "M DEVELOPMENT_ROADMAP.md\n M ElsheiekhHMS.Application/Common/Auditing/AuditActions.cs\n M ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs\n M ElsheiekhHMS.Tests/Unit/Application/Auditing/AuditVocabularyTests.cs\n M ElsheiekhHMS.Tests/Unit/Application/Departments/DepartmentValidationTests.cs\n M README.md\n M docs/ARCHITECTURE.md\n M docs/DECISIONS.md\n M graphify-out/GRAPH_REPORT.md\n M graphify-out/graph.html\n M graphify-out/graph.json\n?? ElsheiekhHMS.Application/Departments/Contracts/DepartmentSearchRequest.cs\n?? ElsheiekhHMS.Application/Departments/Contracts/DepartmentSortField.cs\n?? ElsheiekhHMS.Application/Departments/DepartmentService.cs\n?? ElsheiekhHMS.Application/Departments/IDepartmentService.cs\n?? ElsheiekhHMS.Application/Departments/Persistence/IDepartmentPersistence.cs\n?? ElsheiekhHMS.Application/Departments/Validation/DepartmentSearchRequestValidator.cs\n?? ElsheiekhHMS.Infrastructure/Persistence/Departments/DepartmentPersistence.cs\n?? ElsheiekhHMS.Tests/Integration/Persistence/DepartmentServiceSqlServerTests.cs\n?? ElsheiekhHMS.Tests/Unit/Application/Departments/DepartmentServiceTests.cs\n?? Phases.md",
+  "sourceFingerprint": "f6d459c395b5ecd816a61811a41e4ba60c9b038c67c41924d7207a66fdddd396",
   "generatorFingerprint": "03eee0a8853a7e84af6cbe571d34e6f7d820505ac8f5670a719d0d63b113840c",
   "fingerprintAlgorithm": "SHA-256 of ordinal path \u002B NUL \u002B content SHA-256 records joined with LF; sourceManifest defines inputs; graphify-out excluded everywhere",
   "sourceManifest": [
@@ -62,7 +62,7 @@
     },
     {
       "path": "ElsheiekhHMS.Application/Common/Auditing/AuditActions.cs",
-      "sha256": "e1c0bdfa3838d32121ba604fae0ae2f93bf7e93bf3e5635699b908e60c048c4c"
+      "sha256": "36dadbc45481ce5006432871de54db9d559979ae3bf036d0ccd6759f8280a44a"
     },
     {
       "path": "ElsheiekhHMS.Application/Common/Auditing/AuditActorKinds.cs",
@@ -141,6 +141,14 @@
       "sha256": "87bc5db130598a826443a935f0b296021f2289357981ce126d6c319c27e3b3dc"
     },
     {
+      "path": "ElsheiekhHMS.Application/Departments/Contracts/DepartmentSearchRequest.cs",
+      "sha256": "804c92d3925255d515104f72e3814562234dd136a3a4a31aeae7f5dd3c779855"
+    },
+    {
+      "path": "ElsheiekhHMS.Application/Departments/Contracts/DepartmentSortField.cs",
+      "sha256": "04375db9e3119765106428e3cbc1c28965f1a5317309dd659de82921b8b1fd8c"
+    },
+    {
       "path": "ElsheiekhHMS.Application/Departments/Contracts/DepartmentSummaryDto.cs",
       "sha256": "909026f354e13b44a082e7bd042caa66237a7157ae7980c2caef1e504785e226"
     },
@@ -149,8 +157,24 @@
       "sha256": "7ade947265c52d88a6a0d5570fb92ee057111406837679f4f29482ce29c4368b"
     },
     {
+      "path": "ElsheiekhHMS.Application/Departments/DepartmentService.cs",
+      "sha256": "949d69dcd0485ed99e72f565fcf2032ae52961e85df2e9ca9efc06cf8e9b6f54"
+    },
+    {
+      "path": "ElsheiekhHMS.Application/Departments/IDepartmentService.cs",
+      "sha256": "7f63bb12bdd651ceaa9467cc4f059a43bf5fbcf0ac24a4ced00c7bd94bd55ac1"
+    },
+    {
+      "path": "ElsheiekhHMS.Application/Departments/Persistence/IDepartmentPersistence.cs",
+      "sha256": "2b52e21eaffa35b298906f05dfc90bec91f83be2c09f78d25c5d30294c34b59c"
+    },
+    {
       "path": "ElsheiekhHMS.Application/Departments/Validation/CreateDepartmentRequestValidator.cs",
       "sha256": "52e2d87ae232a3b7b5301547b6dda773e2e5adba7a4d0e85cae1653bae398726"
+    },
+    {
+      "path": "ElsheiekhHMS.Application/Departments/Validation/DepartmentSearchRequestValidator.cs",
+      "sha256": "efcea4c1b7e76a960a401d2b305d943adaf4b5aa5e28a4eb84bafed3887d363c"
     },
     {
       "path": "ElsheiekhHMS.Application/Departments/Validation/UpdateDepartmentRequestValidator.cs",
@@ -418,7 +442,7 @@
     },
     {
       "path": "ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs",
-      "sha256": "70176ada8266f107bb3edf64a1ec56cfe43ce8a9f3cc709964c80045ca16bbf9"
+      "sha256": "0d2ad1a3f19e38fb9828884d39213feca352cd57cec01cfc99e6c5cd1e0593f1"
     },
     {
       "path": "ElsheiekhHMS.Infrastructure/Migrations/20260921111137_InitialCreate.Designer.cs",
@@ -473,6 +497,10 @@
       "sha256": "472cbc0599be72a7227da219b048b163286f5d5818a12741fe06b957cb38ff98"
     },
     {
+      "path": "ElsheiekhHMS.Infrastructure/Persistence/Departments/DepartmentPersistence.cs",
+      "sha256": "e0545eebd374c3bec49ca2f60186b49478837d8daa72261d16fa1b4b31de6b4e"
+    },
+    {
       "path": "ElsheiekhHMS.Infrastructure/Persistence/ElsheiekhHmsDbContext.cs",
       "sha256": "bc020a8f0155f1275dc217915db3f19a505da8db4fa65d107baf4c950cad5f50"
     },
@@ -483,6 +511,10 @@
     {
       "path": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
       "sha256": "6cc9fd9be55e6b7f477c82f95a8127514f07cf172c2f7bf08d55643ce49c04a0"
+    },
+    {
+      "path": "ElsheiekhHMS.Tests/Integration/Persistence/DepartmentServiceSqlServerTests.cs",
+      "sha256": "b5bb9318d48c9bf587b1ee5d52ff606c5c6dc3bf14ac5031b73958b9efbb616b"
     },
     {
       "path": "ElsheiekhHMS.Tests/Integration/Persistence/ElsheiekhHmsDbContextSqlServerTests.cs",
@@ -522,7 +554,7 @@
     },
     {
       "path": "ElsheiekhHMS.Tests/Unit/Application/Auditing/AuditVocabularyTests.cs",
-      "sha256": "376e94475b1855d38c04024f924cff53f10a84ca3fec862671479bdc4ee9f790"
+      "sha256": "5c5e7d576c771c142cbd637c4e6ff640e519aae7f77382e5355b55a7cb124237"
     },
     {
       "path": "ElsheiekhHMS.Tests/Unit/Application/Common/Contracts/PageRequestTests.cs",
@@ -541,8 +573,12 @@
       "sha256": "bce12a29f2004ab6ae0f0d802adfd59b5a626b79f0a47ad2083af59ea1967a42"
     },
     {
+      "path": "ElsheiekhHMS.Tests/Unit/Application/Departments/DepartmentServiceTests.cs",
+      "sha256": "211ff6d3336e2904023c7078323baead0ae4ab561fce5c6e72bdc0dc1cb95182"
+    },
+    {
       "path": "ElsheiekhHMS.Tests/Unit/Application/Departments/DepartmentValidationTests.cs",
-      "sha256": "c2271562e2f90a15e4620a1f0f91d3fa625a86d5c585598b1dc6cf651d41c476"
+      "sha256": "a9273609c5ee6d2af4ba8a0035fa618f65a639166ad459b8f95e550bfac3423a"
     },
     {
       "path": "ElsheiekhHMS.Tests/Unit/Application/Patients/PatientContractTests.cs",
@@ -722,7 +758,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "9cf7b0932cea33eb4530373c37e1da0b050a39418607701381e8927960b0d1e8"
+      "sha256": "43df65f9d3891e93f2e1e94e8d6bc5040305d5c9eed9c7ef803c38bb835fd06c"
     }
   ],
   "repository": {
@@ -732,16 +768,16 @@
   },
   "summary": {
     "projectCount": 5,
-    "sourceFileCount": 158,
+    "sourceFileCount": 167,
     "razorFileCount": 11,
-    "typeCount": 173,
-    "interfaceCount": 6,
+    "typeCount": 188,
+    "interfaceCount": 8,
     "testClassCount": 11,
     "testMethodCount": 76,
     "testCount": 113,
     "dynamicTheoryCount": 0,
-    "nodeCount": 419,
-    "edgeCount": 758
+    "nodeCount": 446,
+    "edgeCount": 817
   },
   "projects": [
     {
@@ -794,9 +830,15 @@
         "ElsheiekhHMS.Application/Departments/Contracts/CreateDepartmentRequest.cs",
         "ElsheiekhHMS.Application/Departments/Contracts/DepartmentDetailsDto.cs",
         "ElsheiekhHMS.Application/Departments/Contracts/DepartmentOptionDto.cs",
+        "ElsheiekhHMS.Application/Departments/Contracts/DepartmentSearchRequest.cs",
+        "ElsheiekhHMS.Application/Departments/Contracts/DepartmentSortField.cs",
         "ElsheiekhHMS.Application/Departments/Contracts/DepartmentSummaryDto.cs",
         "ElsheiekhHMS.Application/Departments/Contracts/UpdateDepartmentRequest.cs",
+        "ElsheiekhHMS.Application/Departments/DepartmentService.cs",
+        "ElsheiekhHMS.Application/Departments/IDepartmentService.cs",
+        "ElsheiekhHMS.Application/Departments/Persistence/IDepartmentPersistence.cs",
         "ElsheiekhHMS.Application/Departments/Validation/CreateDepartmentRequestValidator.cs",
+        "ElsheiekhHMS.Application/Departments/Validation/DepartmentSearchRequestValidator.cs",
         "ElsheiekhHMS.Application/Departments/Validation/UpdateDepartmentRequestValidator.cs",
         "ElsheiekhHMS.Application/Patients/Contracts/PatientDetailsDto.cs",
         "ElsheiekhHMS.Application/Patients/Contracts/PatientSearchRequest.cs",
@@ -936,6 +978,7 @@
         "ElsheiekhHMS.Infrastructure/Persistence/Allocation/QueueTicketAllocation.cs",
         "ElsheiekhHMS.Infrastructure/Persistence/Allocation/QueueTicketAllocationConfiguration.cs",
         "ElsheiekhHMS.Infrastructure/Persistence/Allocation/QueueTicketAllocator.cs",
+        "ElsheiekhHMS.Infrastructure/Persistence/Departments/DepartmentPersistence.cs",
         "ElsheiekhHMS.Infrastructure/Persistence/ElsheiekhHmsDbContext.cs",
         "ElsheiekhHMS.Infrastructure/Persistence/Patients/PatientPersistence.cs"
       ]
@@ -977,6 +1020,7 @@
         }
       ],
       "sourceFiles": [
+        "ElsheiekhHMS.Tests/Integration/Persistence/DepartmentServiceSqlServerTests.cs",
         "ElsheiekhHMS.Tests/Integration/Persistence/ElsheiekhHmsDbContextSqlServerTests.cs",
         "ElsheiekhHMS.Tests/Integration/Persistence/IdentityAndAuditLogSqlServerTests.cs",
         "ElsheiekhHMS.Tests/Integration/Persistence/PatientServiceSqlServerTests.cs",
@@ -991,6 +1035,7 @@
         "ElsheiekhHMS.Tests/Unit/Application/Common/Results/ServiceResultTests.cs",
         "ElsheiekhHMS.Tests/Unit/Application/Common/Validation/ValidationResultTests.cs",
         "ElsheiekhHMS.Tests/Unit/Application/Departments/DepartmentContractTests.cs",
+        "ElsheiekhHMS.Tests/Unit/Application/Departments/DepartmentServiceTests.cs",
         "ElsheiekhHMS.Tests/Unit/Application/Departments/DepartmentValidationTests.cs",
         "ElsheiekhHMS.Tests/Unit/Application/Patients/PatientContractTests.cs",
         "ElsheiekhHMS.Tests/Unit/Application/Patients/PatientServiceTests.cs",
@@ -1531,6 +1576,38 @@
       "dynamicTheories": 0
     },
     {
+      "id": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Departments/Contracts/DepartmentSearchRequest.cs",
+      "name": "DepartmentSearchRequest.cs",
+      "label": "DepartmentSearchRequest.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Application",
+      "file": "ElsheiekhHMS.Application/Departments/Contracts/DepartmentSearchRequest.cs",
+      "source_file": "ElsheiekhHMS.Application/Departments/Contracts/DepartmentSearchRequest.cs",
+      "external": false,
+      "community": 0,
+      "community_name": "ElsheiekhHMS.Application",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Departments/Contracts/DepartmentSortField.cs",
+      "name": "DepartmentSortField.cs",
+      "label": "DepartmentSortField.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Application",
+      "file": "ElsheiekhHMS.Application/Departments/Contracts/DepartmentSortField.cs",
+      "source_file": "ElsheiekhHMS.Application/Departments/Contracts/DepartmentSortField.cs",
+      "external": false,
+      "community": 0,
+      "community_name": "ElsheiekhHMS.Application",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
       "id": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Departments/Contracts/DepartmentSummaryDto.cs",
       "name": "DepartmentSummaryDto.cs",
       "label": "DepartmentSummaryDto.cs",
@@ -1563,6 +1640,54 @@
       "dynamicTheories": 0
     },
     {
+      "id": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Departments/DepartmentService.cs",
+      "name": "DepartmentService.cs",
+      "label": "DepartmentService.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Application",
+      "file": "ElsheiekhHMS.Application/Departments/DepartmentService.cs",
+      "source_file": "ElsheiekhHMS.Application/Departments/DepartmentService.cs",
+      "external": false,
+      "community": 0,
+      "community_name": "ElsheiekhHMS.Application",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Departments/IDepartmentService.cs",
+      "name": "IDepartmentService.cs",
+      "label": "IDepartmentService.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Application",
+      "file": "ElsheiekhHMS.Application/Departments/IDepartmentService.cs",
+      "source_file": "ElsheiekhHMS.Application/Departments/IDepartmentService.cs",
+      "external": false,
+      "community": 0,
+      "community_name": "ElsheiekhHMS.Application",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Departments/Persistence/IDepartmentPersistence.cs",
+      "name": "IDepartmentPersistence.cs",
+      "label": "IDepartmentPersistence.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Application",
+      "file": "ElsheiekhHMS.Application/Departments/Persistence/IDepartmentPersistence.cs",
+      "source_file": "ElsheiekhHMS.Application/Departments/Persistence/IDepartmentPersistence.cs",
+      "external": false,
+      "community": 0,
+      "community_name": "ElsheiekhHMS.Application",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
       "id": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Departments/Validation/CreateDepartmentRequestValidator.cs",
       "name": "CreateDepartmentRequestValidator.cs",
       "label": "CreateDepartmentRequestValidator.cs",
@@ -1571,6 +1696,22 @@
       "project": "ElsheiekhHMS.Application",
       "file": "ElsheiekhHMS.Application/Departments/Validation/CreateDepartmentRequestValidator.cs",
       "source_file": "ElsheiekhHMS.Application/Departments/Validation/CreateDepartmentRequestValidator.cs",
+      "external": false,
+      "community": 0,
+      "community_name": "ElsheiekhHMS.Application",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Departments/Validation/DepartmentSearchRequestValidator.cs",
+      "name": "DepartmentSearchRequestValidator.cs",
+      "label": "DepartmentSearchRequestValidator.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Application",
+      "file": "ElsheiekhHMS.Application/Departments/Validation/DepartmentSearchRequestValidator.cs",
+      "source_file": "ElsheiekhHMS.Application/Departments/Validation/DepartmentSearchRequestValidator.cs",
       "external": false,
       "community": 0,
       "community_name": "ElsheiekhHMS.Application",
@@ -2811,6 +2952,22 @@
       "dynamicTheories": 0
     },
     {
+      "id": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Persistence/Departments/DepartmentPersistence.cs",
+      "name": "DepartmentPersistence.cs",
+      "label": "DepartmentPersistence.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Infrastructure",
+      "file": "ElsheiekhHMS.Infrastructure/Persistence/Departments/DepartmentPersistence.cs",
+      "source_file": "ElsheiekhHMS.Infrastructure/Persistence/Departments/DepartmentPersistence.cs",
+      "external": false,
+      "community": 2,
+      "community_name": "ElsheiekhHMS.Infrastructure",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
       "id": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Persistence/ElsheiekhHmsDbContext.cs",
       "name": "ElsheiekhHmsDbContext.cs",
       "label": "ElsheiekhHmsDbContext.cs",
@@ -2838,6 +2995,22 @@
       "external": false,
       "community": 2,
       "community_name": "ElsheiekhHMS.Infrastructure",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/DepartmentServiceSqlServerTests.cs",
+      "name": "DepartmentServiceSqlServerTests.cs",
+      "label": "DepartmentServiceSqlServerTests.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Tests",
+      "file": "ElsheiekhHMS.Tests/Integration/Persistence/DepartmentServiceSqlServerTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Integration/Persistence/DepartmentServiceSqlServerTests.cs",
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
       "testMethods": [],
       "staticTestCases": 0,
       "dynamicTheories": 0
@@ -3059,6 +3232,22 @@
       "project": "ElsheiekhHMS.Tests",
       "file": "ElsheiekhHMS.Tests/Unit/Application/Departments/DepartmentContractTests.cs",
       "source_file": "ElsheiekhHMS.Tests/Unit/Application/Departments/DepartmentContractTests.cs",
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Departments/DepartmentServiceTests.cs",
+      "name": "DepartmentServiceTests.cs",
+      "label": "DepartmentServiceTests.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Tests",
+      "file": "ElsheiekhHMS.Tests/Unit/Application/Departments/DepartmentServiceTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Unit/Application/Departments/DepartmentServiceTests.cs",
       "external": false,
       "community": 3,
       "community_name": "ElsheiekhHMS.Tests",
@@ -3875,6 +4064,21 @@
       "dynamicTheories": 0
     },
     {
+      "id": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Departments",
+      "name": "ElsheiekhHMS.Application.Departments",
+      "label": "ElsheiekhHMS.Application.Departments",
+      "kind": "namespace",
+      "type": "namespace",
+      "project": "ElsheiekhHMS.Application",
+      "namespace": "ElsheiekhHMS.Application.Departments",
+      "external": false,
+      "community": 0,
+      "community_name": "ElsheiekhHMS.Application",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
       "id": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Departments.Contracts",
       "name": "ElsheiekhHMS.Application.Departments.Contracts",
       "label": "ElsheiekhHMS.Application.Departments.Contracts",
@@ -3882,6 +4086,21 @@
       "type": "namespace",
       "project": "ElsheiekhHMS.Application",
       "namespace": "ElsheiekhHMS.Application.Departments.Contracts",
+      "external": false,
+      "community": 0,
+      "community_name": "ElsheiekhHMS.Application",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Departments.Persistence",
+      "name": "ElsheiekhHMS.Application.Departments.Persistence",
+      "label": "ElsheiekhHMS.Application.Departments.Persistence",
+      "kind": "namespace",
+      "type": "namespace",
+      "project": "ElsheiekhHMS.Application",
+      "namespace": "ElsheiekhHMS.Application.Departments.Persistence",
       "external": false,
       "community": 0,
       "community_name": "ElsheiekhHMS.Application",
@@ -4302,6 +4521,21 @@
       "type": "namespace",
       "project": "ElsheiekhHMS.Infrastructure",
       "namespace": "ElsheiekhHMS.Infrastructure.Persistence.Allocation",
+      "external": false,
+      "community": 2,
+      "community_name": "ElsheiekhHMS.Infrastructure",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Persistence.Departments",
+      "name": "ElsheiekhHMS.Infrastructure.Persistence.Departments",
+      "label": "ElsheiekhHMS.Infrastructure.Persistence.Departments",
+      "kind": "namespace",
+      "type": "namespace",
+      "project": "ElsheiekhHMS.Infrastructure",
+      "namespace": "ElsheiekhHMS.Infrastructure.Persistence.Departments",
       "external": false,
       "community": 2,
       "community_name": "ElsheiekhHMS.Infrastructure",
@@ -5470,6 +5704,54 @@
       "dynamicTheories": 0
     },
     {
+      "id": "type:ElsheiekhHMS.Application.Departments.Contracts.DepartmentSearchRequest",
+      "name": "DepartmentSearchRequest",
+      "label": "DepartmentSearchRequest",
+      "kind": "record",
+      "type": "record",
+      "fullName": "ElsheiekhHMS.Application.Departments.Contracts.DepartmentSearchRequest",
+      "project": "ElsheiekhHMS.Application",
+      "namespace": "ElsheiekhHMS.Application.Departments.Contracts",
+      "file": "ElsheiekhHMS.Application/Departments/Contracts/DepartmentSearchRequest.cs",
+      "source_file": "ElsheiekhHMS.Application/Departments/Contracts/DepartmentSearchRequest.cs",
+      "source_location": "L5",
+      "line": 5,
+      "accessibility": "public",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 0,
+      "community_name": "ElsheiekhHMS.Application",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Application.Departments.Contracts.DepartmentSortField",
+      "name": "DepartmentSortField",
+      "label": "DepartmentSortField",
+      "kind": "enum",
+      "type": "enum",
+      "fullName": "ElsheiekhHMS.Application.Departments.Contracts.DepartmentSortField",
+      "project": "ElsheiekhHMS.Application",
+      "namespace": "ElsheiekhHMS.Application.Departments.Contracts",
+      "file": "ElsheiekhHMS.Application/Departments/Contracts/DepartmentSortField.cs",
+      "source_file": "ElsheiekhHMS.Application/Departments/Contracts/DepartmentSortField.cs",
+      "source_location": "L3",
+      "line": 3,
+      "accessibility": "public",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 0,
+      "community_name": "ElsheiekhHMS.Application",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
       "id": "type:ElsheiekhHMS.Application.Departments.Contracts.DepartmentSummaryDto",
       "name": "DepartmentSummaryDto",
       "label": "DepartmentSummaryDto",
@@ -5518,6 +5800,78 @@
       "dynamicTheories": 0
     },
     {
+      "id": "type:ElsheiekhHMS.Application.Departments.DepartmentService",
+      "name": "DepartmentService",
+      "label": "DepartmentService",
+      "kind": "class",
+      "type": "class",
+      "fullName": "ElsheiekhHMS.Application.Departments.DepartmentService",
+      "project": "ElsheiekhHMS.Application",
+      "namespace": "ElsheiekhHMS.Application.Departments",
+      "file": "ElsheiekhHMS.Application/Departments/DepartmentService.cs",
+      "source_file": "ElsheiekhHMS.Application/Departments/DepartmentService.cs",
+      "source_location": "L14",
+      "line": 14,
+      "accessibility": "public",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 0,
+      "community_name": "ElsheiekhHMS.Application",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Application.Departments.IDepartmentService",
+      "name": "IDepartmentService",
+      "label": "IDepartmentService",
+      "kind": "interface",
+      "type": "interface",
+      "fullName": "ElsheiekhHMS.Application.Departments.IDepartmentService",
+      "project": "ElsheiekhHMS.Application",
+      "namespace": "ElsheiekhHMS.Application.Departments",
+      "file": "ElsheiekhHMS.Application/Departments/IDepartmentService.cs",
+      "source_file": "ElsheiekhHMS.Application/Departments/IDepartmentService.cs",
+      "source_location": "L7",
+      "line": 7,
+      "accessibility": "public",
+      "abstract": true,
+      "sealed": false,
+      "static": false,
+      "external": false,
+      "community": 0,
+      "community_name": "ElsheiekhHMS.Application",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Application.Departments.Persistence.IDepartmentPersistence",
+      "name": "IDepartmentPersistence",
+      "label": "IDepartmentPersistence",
+      "kind": "interface",
+      "type": "interface",
+      "fullName": "ElsheiekhHMS.Application.Departments.Persistence.IDepartmentPersistence",
+      "project": "ElsheiekhHMS.Application",
+      "namespace": "ElsheiekhHMS.Application.Departments.Persistence",
+      "file": "ElsheiekhHMS.Application/Departments/Persistence/IDepartmentPersistence.cs",
+      "source_file": "ElsheiekhHMS.Application/Departments/Persistence/IDepartmentPersistence.cs",
+      "source_location": "L7",
+      "line": 7,
+      "accessibility": "public",
+      "abstract": true,
+      "sealed": false,
+      "static": false,
+      "external": false,
+      "community": 0,
+      "community_name": "ElsheiekhHMS.Application",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
       "id": "type:ElsheiekhHMS.Application.Departments.Validation.CreateDepartmentRequestValidator",
       "name": "CreateDepartmentRequestValidator",
       "label": "CreateDepartmentRequestValidator",
@@ -5528,6 +5882,30 @@
       "namespace": "ElsheiekhHMS.Application.Departments.Validation",
       "file": "ElsheiekhHMS.Application/Departments/Validation/CreateDepartmentRequestValidator.cs",
       "source_file": "ElsheiekhHMS.Application/Departments/Validation/CreateDepartmentRequestValidator.cs",
+      "source_location": "L6",
+      "line": 6,
+      "accessibility": "public",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 0,
+      "community_name": "ElsheiekhHMS.Application",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Application.Departments.Validation.DepartmentSearchRequestValidator",
+      "name": "DepartmentSearchRequestValidator",
+      "label": "DepartmentSearchRequestValidator",
+      "kind": "class",
+      "type": "class",
+      "fullName": "ElsheiekhHMS.Application.Departments.Validation.DepartmentSearchRequestValidator",
+      "project": "ElsheiekhHMS.Application",
+      "namespace": "ElsheiekhHMS.Application.Departments.Validation",
+      "file": "ElsheiekhHMS.Application/Departments/Validation/DepartmentSearchRequestValidator.cs",
+      "source_file": "ElsheiekhHMS.Application/Departments/Validation/DepartmentSearchRequestValidator.cs",
       "source_location": "L6",
       "line": 6,
       "accessibility": "public",
@@ -7064,8 +7442,8 @@
       "namespace": "ElsheiekhHMS.Infrastructure",
       "file": "ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs",
       "source_file": "ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs",
-      "source_location": "L25",
-      "line": 25,
+      "source_location": "L28",
+      "line": 28,
       "accessibility": "public",
       "abstract": false,
       "sealed": false,
@@ -7318,6 +7696,30 @@
       "dynamicTheories": 0
     },
     {
+      "id": "type:ElsheiekhHMS.Infrastructure.Persistence.Departments.DepartmentPersistence",
+      "name": "DepartmentPersistence",
+      "label": "DepartmentPersistence",
+      "kind": "class",
+      "type": "class",
+      "fullName": "ElsheiekhHMS.Infrastructure.Persistence.Departments.DepartmentPersistence",
+      "project": "ElsheiekhHMS.Infrastructure",
+      "namespace": "ElsheiekhHMS.Infrastructure.Persistence.Departments",
+      "file": "ElsheiekhHMS.Infrastructure/Persistence/Departments/DepartmentPersistence.cs",
+      "source_file": "ElsheiekhHMS.Infrastructure/Persistence/Departments/DepartmentPersistence.cs",
+      "source_location": "L9",
+      "line": 9,
+      "accessibility": "public",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 2,
+      "community_name": "ElsheiekhHMS.Infrastructure",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
       "id": "type:ElsheiekhHMS.Infrastructure.Persistence.ElsheiekhHmsDbContext",
       "name": "ElsheiekhHmsDbContext",
       "label": "ElsheiekhHmsDbContext",
@@ -7385,6 +7787,78 @@
       "external": false,
       "community": 2,
       "community_name": "ElsheiekhHMS.Infrastructure",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Tests.Integration.Persistence.DepartmentServiceSqlServerTests",
+      "name": "DepartmentServiceSqlServerTests",
+      "label": "DepartmentServiceSqlServerTests",
+      "kind": "class",
+      "type": "class",
+      "fullName": "ElsheiekhHMS.Tests.Integration.Persistence.DepartmentServiceSqlServerTests",
+      "project": "ElsheiekhHMS.Tests",
+      "namespace": "ElsheiekhHMS.Tests.Integration.Persistence",
+      "file": "ElsheiekhHMS.Tests/Integration/Persistence/DepartmentServiceSqlServerTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Integration/Persistence/DepartmentServiceSqlServerTests.cs",
+      "source_location": "L12",
+      "line": 12,
+      "accessibility": "public",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Tests.Integration.Persistence.DepartmentServiceSqlServerTests.FixedTimeProvider",
+      "name": "FixedTimeProvider",
+      "label": "FixedTimeProvider",
+      "kind": "class",
+      "type": "class",
+      "fullName": "ElsheiekhHMS.Tests.Integration.Persistence.DepartmentServiceSqlServerTests.FixedTimeProvider",
+      "project": "ElsheiekhHMS.Tests",
+      "namespace": "ElsheiekhHMS.Tests.Integration.Persistence",
+      "file": "ElsheiekhHMS.Tests/Integration/Persistence/DepartmentServiceSqlServerTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Integration/Persistence/DepartmentServiceSqlServerTests.cs",
+      "source_location": "L120",
+      "line": 120,
+      "accessibility": "private",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Tests.Integration.Persistence.DepartmentServiceSqlServerTests.TestCurrentUser",
+      "name": "TestCurrentUser",
+      "label": "TestCurrentUser",
+      "kind": "record",
+      "type": "record",
+      "fullName": "ElsheiekhHMS.Tests.Integration.Persistence.DepartmentServiceSqlServerTests.TestCurrentUser",
+      "project": "ElsheiekhHMS.Tests",
+      "namespace": "ElsheiekhHMS.Tests.Integration.Persistence",
+      "file": "ElsheiekhHMS.Tests/Integration/Persistence/DepartmentServiceSqlServerTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Integration/Persistence/DepartmentServiceSqlServerTests.cs",
+      "source_location": "L112",
+      "line": 112,
+      "accessibility": "private",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
       "testMethods": [],
       "staticTestCases": 0,
       "dynamicTheories": 0
@@ -7898,6 +8372,126 @@
       "dynamicTheories": 0
     },
     {
+      "id": "type:ElsheiekhHMS.Tests.Unit.Application.Departments.DepartmentServiceTests",
+      "name": "DepartmentServiceTests",
+      "label": "DepartmentServiceTests",
+      "kind": "class",
+      "type": "class",
+      "fullName": "ElsheiekhHMS.Tests.Unit.Application.Departments.DepartmentServiceTests",
+      "project": "ElsheiekhHMS.Tests",
+      "namespace": "ElsheiekhHMS.Tests.Unit.Application.Departments",
+      "file": "ElsheiekhHMS.Tests/Unit/Application/Departments/DepartmentServiceTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Unit/Application/Departments/DepartmentServiceTests.cs",
+      "source_location": "L12",
+      "line": 12,
+      "accessibility": "public",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Tests.Unit.Application.Departments.DepartmentServiceTests.FakeDepartmentPersistence",
+      "name": "FakeDepartmentPersistence",
+      "label": "FakeDepartmentPersistence",
+      "kind": "class",
+      "type": "class",
+      "fullName": "ElsheiekhHMS.Tests.Unit.Application.Departments.DepartmentServiceTests.FakeDepartmentPersistence",
+      "project": "ElsheiekhHMS.Tests",
+      "namespace": "ElsheiekhHMS.Tests.Unit.Application.Departments",
+      "file": "ElsheiekhHMS.Tests/Unit/Application/Departments/DepartmentServiceTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Unit/Application/Departments/DepartmentServiceTests.cs",
+      "source_location": "L267",
+      "line": 267,
+      "accessibility": "private",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Tests.Unit.Application.Departments.DepartmentServiceTests.FixedTimeProvider",
+      "name": "FixedTimeProvider",
+      "label": "FixedTimeProvider",
+      "kind": "class",
+      "type": "class",
+      "fullName": "ElsheiekhHMS.Tests.Unit.Application.Departments.DepartmentServiceTests.FixedTimeProvider",
+      "project": "ElsheiekhHMS.Tests",
+      "namespace": "ElsheiekhHMS.Tests.Unit.Application.Departments",
+      "file": "ElsheiekhHMS.Tests/Unit/Application/Departments/DepartmentServiceTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Unit/Application/Departments/DepartmentServiceTests.cs",
+      "source_location": "L250",
+      "line": 250,
+      "accessibility": "private",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Tests.Unit.Application.Departments.DepartmentServiceTests.RecordingAuditWriter",
+      "name": "RecordingAuditWriter",
+      "label": "RecordingAuditWriter",
+      "kind": "class",
+      "type": "class",
+      "fullName": "ElsheiekhHMS.Tests.Unit.Application.Departments.DepartmentServiceTests.RecordingAuditWriter",
+      "project": "ElsheiekhHMS.Tests",
+      "namespace": "ElsheiekhHMS.Tests.Unit.Application.Departments",
+      "file": "ElsheiekhHMS.Tests/Unit/Application/Departments/DepartmentServiceTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Unit/Application/Departments/DepartmentServiceTests.cs",
+      "source_location": "L255",
+      "line": 255,
+      "accessibility": "private",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Tests.Unit.Application.Departments.DepartmentServiceTests.TestCurrentUser",
+      "name": "TestCurrentUser",
+      "label": "TestCurrentUser",
+      "kind": "class",
+      "type": "class",
+      "fullName": "ElsheiekhHMS.Tests.Unit.Application.Departments.DepartmentServiceTests.TestCurrentUser",
+      "project": "ElsheiekhHMS.Tests",
+      "namespace": "ElsheiekhHMS.Tests.Unit.Application.Departments",
+      "file": "ElsheiekhHMS.Tests/Unit/Application/Departments/DepartmentServiceTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Unit/Application/Departments/DepartmentServiceTests.cs",
+      "source_location": "L240",
+      "line": 240,
+      "accessibility": "private",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
       "id": "type:ElsheiekhHMS.Tests.Unit.Application.Departments.DepartmentValidationTests",
       "name": "DepartmentValidationTests",
       "label": "DepartmentValidationTests",
@@ -7908,8 +8502,8 @@
       "namespace": "ElsheiekhHMS.Tests.Unit.Application.Departments",
       "file": "ElsheiekhHMS.Tests/Unit/Application/Departments/DepartmentValidationTests.cs",
       "source_file": "ElsheiekhHMS.Tests/Unit/Application/Departments/DepartmentValidationTests.cs",
-      "source_location": "L6",
-      "line": 6,
+      "source_location": "L7",
+      "line": 7,
       "accessibility": "public",
       "abstract": false,
       "sealed": true,
@@ -9426,6 +10020,24 @@
       "weight": 1
     },
     {
+      "source": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Departments/Contracts/DepartmentSearchRequest.cs",
+      "target": "type:ElsheiekhHMS.Application.Departments.Contracts.DepartmentSearchRequest",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Application/Departments/Contracts/DepartmentSearchRequest.cs:L5",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Departments/Contracts/DepartmentSortField.cs",
+      "target": "type:ElsheiekhHMS.Application.Departments.Contracts.DepartmentSortField",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Application/Departments/Contracts/DepartmentSortField.cs:L3",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
       "source": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Departments/Contracts/DepartmentSummaryDto.cs",
       "target": "type:ElsheiekhHMS.Application.Departments.Contracts.DepartmentSummaryDto",
       "type": "declares",
@@ -9444,10 +10056,46 @@
       "weight": 1
     },
     {
+      "source": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Departments/DepartmentService.cs",
+      "target": "type:ElsheiekhHMS.Application.Departments.DepartmentService",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Application/Departments/DepartmentService.cs:L14",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Departments/IDepartmentService.cs",
+      "target": "type:ElsheiekhHMS.Application.Departments.IDepartmentService",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Application/Departments/IDepartmentService.cs:L7",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Departments/Persistence/IDepartmentPersistence.cs",
+      "target": "type:ElsheiekhHMS.Application.Departments.Persistence.IDepartmentPersistence",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Application/Departments/Persistence/IDepartmentPersistence.cs:L7",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
       "source": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Departments/Validation/CreateDepartmentRequestValidator.cs",
       "target": "type:ElsheiekhHMS.Application.Departments.Validation.CreateDepartmentRequestValidator",
       "type": "declares",
       "evidence": "ElsheiekhHMS.Application/Departments/Validation/CreateDepartmentRequestValidator.cs:L6",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Departments/Validation/DepartmentSearchRequestValidator.cs",
+      "target": "type:ElsheiekhHMS.Application.Departments.Validation.DepartmentSearchRequestValidator",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Application/Departments/Validation/DepartmentSearchRequestValidator.cs:L6",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -10023,7 +10671,7 @@
       "source": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs",
       "target": "type:ElsheiekhHMS.Infrastructure.InfrastructureServiceExtensions",
       "type": "declares",
-      "evidence": "ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs:L25",
+      "evidence": "ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs:L28",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -10146,6 +10794,15 @@
       "weight": 1
     },
     {
+      "source": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Persistence/Departments/DepartmentPersistence.cs",
+      "target": "type:ElsheiekhHMS.Infrastructure.Persistence.Departments.DepartmentPersistence",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Infrastructure/Persistence/Departments/DepartmentPersistence.cs:L9",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
       "source": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Persistence/ElsheiekhHmsDbContext.cs",
       "target": "type:ElsheiekhHMS.Infrastructure.Persistence.ElsheiekhHmsDbContext",
       "type": "declares",
@@ -10168,6 +10825,33 @@
       "target": "type:ElsheiekhHMS.Infrastructure.Persistence.Patients.PatientPersistence.PatientDetailsProjection",
       "type": "declares",
       "evidence": "ElsheiekhHMS.Infrastructure/Persistence/Patients/PatientPersistence.cs:L155",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/DepartmentServiceSqlServerTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.DepartmentServiceSqlServerTests",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/DepartmentServiceSqlServerTests.cs:L12",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/DepartmentServiceSqlServerTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.DepartmentServiceSqlServerTests.FixedTimeProvider",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/DepartmentServiceSqlServerTests.cs:L120",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/DepartmentServiceSqlServerTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.DepartmentServiceSqlServerTests.TestCurrentUser",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/DepartmentServiceSqlServerTests.cs:L112",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -10362,10 +11046,55 @@
       "weight": 1
     },
     {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Departments/DepartmentServiceTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Application.Departments.DepartmentServiceTests",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Departments/DepartmentServiceTests.cs:L12",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Departments/DepartmentServiceTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Application.Departments.DepartmentServiceTests.FakeDepartmentPersistence",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Departments/DepartmentServiceTests.cs:L267",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Departments/DepartmentServiceTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Application.Departments.DepartmentServiceTests.FixedTimeProvider",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Departments/DepartmentServiceTests.cs:L250",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Departments/DepartmentServiceTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Application.Departments.DepartmentServiceTests.RecordingAuditWriter",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Departments/DepartmentServiceTests.cs:L255",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Departments/DepartmentServiceTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Application.Departments.DepartmentServiceTests.TestCurrentUser",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Departments/DepartmentServiceTests.cs:L240",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
       "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Departments/DepartmentValidationTests.cs",
       "target": "type:ElsheiekhHMS.Tests.Unit.Application.Departments.DepartmentValidationTests",
       "type": "declares",
-      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Departments/DepartmentValidationTests.cs:L6",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Departments/DepartmentValidationTests.cs:L7",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -11011,6 +11740,24 @@
     },
     {
       "source": "project:ElsheiekhHMS.Application",
+      "target": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Departments/Contracts/DepartmentSearchRequest.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Application/ElsheiekhHMS.Application.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Application",
+      "target": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Departments/Contracts/DepartmentSortField.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Application/ElsheiekhHMS.Application.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Application",
       "target": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Departments/Contracts/DepartmentSummaryDto.cs",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Application/ElsheiekhHMS.Application.csproj",
@@ -11029,7 +11776,43 @@
     },
     {
       "source": "project:ElsheiekhHMS.Application",
+      "target": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Departments/DepartmentService.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Application/ElsheiekhHMS.Application.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Application",
+      "target": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Departments/IDepartmentService.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Application/ElsheiekhHMS.Application.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Application",
+      "target": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Departments/Persistence/IDepartmentPersistence.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Application/ElsheiekhHMS.Application.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Application",
       "target": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Departments/Validation/CreateDepartmentRequestValidator.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Application/ElsheiekhHMS.Application.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Application",
+      "target": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Departments/Validation/DepartmentSearchRequestValidator.cs",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Application/ElsheiekhHMS.Application.csproj",
       "relation": "contains",
@@ -11353,9 +12136,27 @@
     },
     {
       "source": "project:ElsheiekhHMS.Application",
+      "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Departments",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Application/Departments/DepartmentService.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Application",
       "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Departments.Contracts",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Application/Departments/Contracts/CreateDepartmentRequest.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Application",
+      "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Departments.Persistence",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Application/Departments/Persistence/IDepartmentPersistence.cs",
       "relation": "contains",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -11974,6 +12775,15 @@
     },
     {
       "source": "project:ElsheiekhHMS.Infrastructure",
+      "target": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Persistence/Departments/DepartmentPersistence.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Infrastructure/ElsheiekhHMS.Infrastructure.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Infrastructure",
       "target": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Persistence/ElsheiekhHmsDbContext.cs",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Infrastructure/ElsheiekhHMS.Infrastructure.csproj",
@@ -12091,6 +12901,15 @@
     },
     {
       "source": "project:ElsheiekhHMS.Infrastructure",
+      "target": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Persistence.Departments",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Infrastructure/Persistence/Departments/DepartmentPersistence.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Infrastructure",
       "target": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Persistence.Patients",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Infrastructure/Persistence/Patients/PatientPersistence.cs",
@@ -12113,6 +12932,15 @@
       "type": "project-reference",
       "evidence": "ElsheiekhHMS.Infrastructure/ElsheiekhHMS.Infrastructure.csproj",
       "relation": "project-reference",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Tests",
+      "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/DepartmentServiceSqlServerTests.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
+      "relation": "contains",
       "confidence": "EXTRACTED",
       "weight": 1
     },
@@ -12236,6 +13064,15 @@
     {
       "source": "project:ElsheiekhHMS.Tests",
       "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Departments/DepartmentContractTests.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Tests",
+      "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Departments/DepartmentServiceTests.cs",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
       "relation": "contains",
@@ -12498,7 +13335,7 @@
       "source": "project:ElsheiekhHMS.Tests",
       "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Integration.Persistence",
       "type": "contains",
-      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/ElsheiekhHmsDbContextSqlServerTests.cs",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/DepartmentServiceSqlServerTests.cs",
       "relation": "contains",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -13332,6 +14169,33 @@
       "weight": 1
     },
     {
+      "source": "type:ElsheiekhHMS.Application.Departments.Contracts.DepartmentSearchRequest",
+      "target": "type:System.IEquatable\u003CT\u003E",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Application/Departments/Contracts/DepartmentSearchRequest.cs:L5",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Application.Departments.Contracts.DepartmentSearchRequest",
+      "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Departments.Contracts",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Application/Departments/Contracts/DepartmentSearchRequest.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Application.Departments.Contracts.DepartmentSortField",
+      "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Departments.Contracts",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Application/Departments/Contracts/DepartmentSortField.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
       "source": "type:ElsheiekhHMS.Application.Departments.Contracts.DepartmentSummaryDto",
       "target": "type:System.IEquatable\u003CT\u003E",
       "type": "implements",
@@ -13368,6 +14232,42 @@
       "weight": 1
     },
     {
+      "source": "type:ElsheiekhHMS.Application.Departments.DepartmentService",
+      "target": "type:ElsheiekhHMS.Application.Departments.IDepartmentService",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Application/Departments/DepartmentService.cs:L14",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Application.Departments.DepartmentService",
+      "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Departments",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Application/Departments/DepartmentService.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Application.Departments.IDepartmentService",
+      "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Departments",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Application/Departments/IDepartmentService.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Application.Departments.Persistence.IDepartmentPersistence",
+      "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Departments.Persistence",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Application/Departments/Persistence/IDepartmentPersistence.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
       "source": "type:ElsheiekhHMS.Application.Departments.Validation.CreateDepartmentRequestValidator",
       "target": "type:ElsheiekhHMS.Application.Common.Validation.IRequestValidator\u003CTRequest\u003E",
       "type": "implements",
@@ -13381,6 +14281,24 @@
       "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Departments.Validation",
       "type": "namespace-membership",
       "evidence": "ElsheiekhHMS.Application/Departments/Validation/CreateDepartmentRequestValidator.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Application.Departments.Validation.DepartmentSearchRequestValidator",
+      "target": "type:ElsheiekhHMS.Application.Common.Validation.IRequestValidator\u003CTRequest\u003E",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Application/Departments/Validation/DepartmentSearchRequestValidator.cs:L6",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Application.Departments.Validation.DepartmentSearchRequestValidator",
+      "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Departments.Validation",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Application/Departments/Validation/DepartmentSearchRequestValidator.cs",
       "relation": "namespace-membership",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -14529,6 +15447,24 @@
       "weight": 1
     },
     {
+      "source": "type:ElsheiekhHMS.Infrastructure.Persistence.Departments.DepartmentPersistence",
+      "target": "type:ElsheiekhHMS.Application.Departments.Persistence.IDepartmentPersistence",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Infrastructure/Persistence/Departments/DepartmentPersistence.cs:L9",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Infrastructure.Persistence.Departments.DepartmentPersistence",
+      "target": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Persistence.Departments",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Infrastructure/Persistence/Departments/DepartmentPersistence.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
       "source": "type:ElsheiekhHMS.Infrastructure.Persistence.ElsheiekhHmsDbContext",
       "target": "type:Microsoft.AspNetCore.Identity.EntityFrameworkCore.IdentityDbContext\u003CTUser\u003E",
       "type": "inherits",
@@ -14587,6 +15523,78 @@
       "target": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Persistence.Patients",
       "type": "namespace-membership",
       "evidence": "ElsheiekhHMS.Infrastructure/Persistence/Patients/PatientPersistence.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.DepartmentServiceSqlServerTests",
+      "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.DepartmentServiceSqlServerTests.FixedTimeProvider",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/DepartmentServiceSqlServerTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.DepartmentServiceSqlServerTests",
+      "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.DepartmentServiceSqlServerTests.TestCurrentUser",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/DepartmentServiceSqlServerTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.DepartmentServiceSqlServerTests",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Integration.Persistence",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/DepartmentServiceSqlServerTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.DepartmentServiceSqlServerTests.FixedTimeProvider",
+      "target": "type:System.TimeProvider",
+      "type": "inherits",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/DepartmentServiceSqlServerTests.cs:L120",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.DepartmentServiceSqlServerTests.FixedTimeProvider",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Integration.Persistence",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/DepartmentServiceSqlServerTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.DepartmentServiceSqlServerTests.TestCurrentUser",
+      "target": "type:ElsheiekhHMS.Application.Common.Security.ICurrentUser",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/DepartmentServiceSqlServerTests.cs:L112",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.DepartmentServiceSqlServerTests.TestCurrentUser",
+      "target": "type:System.IEquatable\u003CT\u003E",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/DepartmentServiceSqlServerTests.cs:L112",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.DepartmentServiceSqlServerTests.TestCurrentUser",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Integration.Persistence",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/DepartmentServiceSqlServerTests.cs",
       "relation": "namespace-membership",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -14929,6 +15937,123 @@
       "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Application.Departments",
       "type": "namespace-membership",
       "evidence": "ElsheiekhHMS.Tests/Unit/Application/Departments/DepartmentContractTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Departments.DepartmentServiceTests",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Application.Departments.DepartmentServiceTests.FakeDepartmentPersistence",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Departments/DepartmentServiceTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Departments.DepartmentServiceTests",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Application.Departments.DepartmentServiceTests.FixedTimeProvider",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Departments/DepartmentServiceTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Departments.DepartmentServiceTests",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Application.Departments.DepartmentServiceTests.RecordingAuditWriter",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Departments/DepartmentServiceTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Departments.DepartmentServiceTests",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Application.Departments.DepartmentServiceTests.TestCurrentUser",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Departments/DepartmentServiceTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Departments.DepartmentServiceTests",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Application.Departments",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Departments/DepartmentServiceTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Departments.DepartmentServiceTests.FakeDepartmentPersistence",
+      "target": "type:ElsheiekhHMS.Application.Departments.Persistence.IDepartmentPersistence",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Departments/DepartmentServiceTests.cs:L267",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Departments.DepartmentServiceTests.FakeDepartmentPersistence",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Application.Departments",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Departments/DepartmentServiceTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Departments.DepartmentServiceTests.FixedTimeProvider",
+      "target": "type:System.TimeProvider",
+      "type": "inherits",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Departments/DepartmentServiceTests.cs:L250",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Departments.DepartmentServiceTests.FixedTimeProvider",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Application.Departments",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Departments/DepartmentServiceTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Departments.DepartmentServiceTests.RecordingAuditWriter",
+      "target": "type:ElsheiekhHMS.Application.Common.Auditing.IAuditEventWriter",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Departments/DepartmentServiceTests.cs:L255",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Departments.DepartmentServiceTests.RecordingAuditWriter",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Application.Departments",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Departments/DepartmentServiceTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Departments.DepartmentServiceTests.TestCurrentUser",
+      "target": "type:ElsheiekhHMS.Application.Common.Security.ICurrentUser",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Departments/DepartmentServiceTests.cs:L240",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Departments.DepartmentServiceTests.TestCurrentUser",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Application.Departments",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Departments/DepartmentServiceTests.cs",
       "relation": "namespace-membership",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -16014,7 +17139,7 @@
       "statusSource": "README.md declaration, not independently certified completion",
       "declaredStatus": [
         {
-          "text": "\u003E **Current development stage:** Phase 07 \u2014 Application Services (07S and 07A complete; 07B remains separately gated)",
+          "text": "\u003E **Current development stage:** Phase 07 \u2014 Application Services (07S, 07A, and 07B complete; Phase 07 remains in progress)",
           "source": "README.md:L5"
         },
         {
@@ -16098,40 +17223,44 @@
           "source": "README.md:L45"
         },
         {
+          "text": "\u003E **Phase 07B:** \u2705 Department Application Service complete, implemented, tested, and reviewed",
+          "source": "README.md:L47"
+        },
+        {
           "text": "| 01 | Solution \u0026 Architecture | \u2705 Complete |",
-          "source": "README.md:L362"
-        },
-        {
-          "text": "| 02 | Core Foundation | \u2705 Complete |",
-          "source": "README.md:L363"
-        },
-        {
-          "text": "| 03 | Domain Entities | \u2705 Complete |",
           "source": "README.md:L364"
         },
         {
-          "text": "| 04 | EF Core \u0026 Database | \u2705 Complete |",
+          "text": "| 02 | Core Foundation | \u2705 Complete |",
           "source": "README.md:L365"
         },
         {
-          "text": "| 05 | Identity \u0026 Security | \u2705 Complete (05A, 05B, 05C, 05C-A, 05D, and 05E) |",
+          "text": "| 03 | Domain Entities | \u2705 Complete |",
           "source": "README.md:L366"
         },
         {
-          "text": "| 06 | DTOs \u0026 Validation | \u2705 Complete (06A\u201306D) |",
+          "text": "| 04 | EF Core \u0026 Database | \u2705 Complete |",
           "source": "README.md:L367"
         },
         {
-          "text": "| 07 | Application Services | \uD83D\uDFE1 In progress (07S and 07A complete; 07B not started) |",
+          "text": "| 05 | Identity \u0026 Security | \u2705 Complete (05A, 05B, 05C, 05C-A, 05D, and 05E) |",
           "source": "README.md:L368"
         },
         {
-          "text": "| 08 | Business Workflows | \u23F3 Not started |",
+          "text": "| 06 | DTOs \u0026 Validation | \u2705 Complete (06A\u201306D) |",
           "source": "README.md:L369"
         },
         {
-          "text": "| 09 | Enterprise Infrastructure | \u23F3 Not started |",
+          "text": "| 07 | Application Services | \uD83D\uDFE1 In progress (07S, 07A, and 07B complete) |",
           "source": "README.md:L370"
+        },
+        {
+          "text": "| 08 | Business Workflows | \u23F3 Not started |",
+          "source": "README.md:L371"
+        },
+        {
+          "text": "| 09 | Enterprise Infrastructure | \u23F3 Not started |",
+          "source": "README.md:L372"
         }
       ]
     }
@@ -16432,6 +17561,24 @@
       "weight": 1
     },
     {
+      "source": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Departments/Contracts/DepartmentSearchRequest.cs",
+      "target": "type:ElsheiekhHMS.Application.Departments.Contracts.DepartmentSearchRequest",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Application/Departments/Contracts/DepartmentSearchRequest.cs:L5",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Departments/Contracts/DepartmentSortField.cs",
+      "target": "type:ElsheiekhHMS.Application.Departments.Contracts.DepartmentSortField",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Application/Departments/Contracts/DepartmentSortField.cs:L3",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
       "source": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Departments/Contracts/DepartmentSummaryDto.cs",
       "target": "type:ElsheiekhHMS.Application.Departments.Contracts.DepartmentSummaryDto",
       "type": "declares",
@@ -16450,10 +17597,46 @@
       "weight": 1
     },
     {
+      "source": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Departments/DepartmentService.cs",
+      "target": "type:ElsheiekhHMS.Application.Departments.DepartmentService",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Application/Departments/DepartmentService.cs:L14",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Departments/IDepartmentService.cs",
+      "target": "type:ElsheiekhHMS.Application.Departments.IDepartmentService",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Application/Departments/IDepartmentService.cs:L7",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Departments/Persistence/IDepartmentPersistence.cs",
+      "target": "type:ElsheiekhHMS.Application.Departments.Persistence.IDepartmentPersistence",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Application/Departments/Persistence/IDepartmentPersistence.cs:L7",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
       "source": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Departments/Validation/CreateDepartmentRequestValidator.cs",
       "target": "type:ElsheiekhHMS.Application.Departments.Validation.CreateDepartmentRequestValidator",
       "type": "declares",
       "evidence": "ElsheiekhHMS.Application/Departments/Validation/CreateDepartmentRequestValidator.cs:L6",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Departments/Validation/DepartmentSearchRequestValidator.cs",
+      "target": "type:ElsheiekhHMS.Application.Departments.Validation.DepartmentSearchRequestValidator",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Application/Departments/Validation/DepartmentSearchRequestValidator.cs:L6",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -17029,7 +18212,7 @@
       "source": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs",
       "target": "type:ElsheiekhHMS.Infrastructure.InfrastructureServiceExtensions",
       "type": "declares",
-      "evidence": "ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs:L25",
+      "evidence": "ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs:L28",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -17152,6 +18335,15 @@
       "weight": 1
     },
     {
+      "source": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Persistence/Departments/DepartmentPersistence.cs",
+      "target": "type:ElsheiekhHMS.Infrastructure.Persistence.Departments.DepartmentPersistence",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Infrastructure/Persistence/Departments/DepartmentPersistence.cs:L9",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
       "source": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Persistence/ElsheiekhHmsDbContext.cs",
       "target": "type:ElsheiekhHMS.Infrastructure.Persistence.ElsheiekhHmsDbContext",
       "type": "declares",
@@ -17174,6 +18366,33 @@
       "target": "type:ElsheiekhHMS.Infrastructure.Persistence.Patients.PatientPersistence.PatientDetailsProjection",
       "type": "declares",
       "evidence": "ElsheiekhHMS.Infrastructure/Persistence/Patients/PatientPersistence.cs:L155",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/DepartmentServiceSqlServerTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.DepartmentServiceSqlServerTests",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/DepartmentServiceSqlServerTests.cs:L12",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/DepartmentServiceSqlServerTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.DepartmentServiceSqlServerTests.FixedTimeProvider",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/DepartmentServiceSqlServerTests.cs:L120",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/DepartmentServiceSqlServerTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.DepartmentServiceSqlServerTests.TestCurrentUser",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/DepartmentServiceSqlServerTests.cs:L112",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -17368,10 +18587,55 @@
       "weight": 1
     },
     {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Departments/DepartmentServiceTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Application.Departments.DepartmentServiceTests",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Departments/DepartmentServiceTests.cs:L12",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Departments/DepartmentServiceTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Application.Departments.DepartmentServiceTests.FakeDepartmentPersistence",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Departments/DepartmentServiceTests.cs:L267",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Departments/DepartmentServiceTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Application.Departments.DepartmentServiceTests.FixedTimeProvider",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Departments/DepartmentServiceTests.cs:L250",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Departments/DepartmentServiceTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Application.Departments.DepartmentServiceTests.RecordingAuditWriter",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Departments/DepartmentServiceTests.cs:L255",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Departments/DepartmentServiceTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Application.Departments.DepartmentServiceTests.TestCurrentUser",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Departments/DepartmentServiceTests.cs:L240",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
       "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Departments/DepartmentValidationTests.cs",
       "target": "type:ElsheiekhHMS.Tests.Unit.Application.Departments.DepartmentValidationTests",
       "type": "declares",
-      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Departments/DepartmentValidationTests.cs:L6",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Departments/DepartmentValidationTests.cs:L7",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -18017,6 +19281,24 @@
     },
     {
       "source": "project:ElsheiekhHMS.Application",
+      "target": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Departments/Contracts/DepartmentSearchRequest.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Application/ElsheiekhHMS.Application.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Application",
+      "target": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Departments/Contracts/DepartmentSortField.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Application/ElsheiekhHMS.Application.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Application",
       "target": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Departments/Contracts/DepartmentSummaryDto.cs",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Application/ElsheiekhHMS.Application.csproj",
@@ -18035,7 +19317,43 @@
     },
     {
       "source": "project:ElsheiekhHMS.Application",
+      "target": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Departments/DepartmentService.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Application/ElsheiekhHMS.Application.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Application",
+      "target": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Departments/IDepartmentService.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Application/ElsheiekhHMS.Application.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Application",
+      "target": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Departments/Persistence/IDepartmentPersistence.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Application/ElsheiekhHMS.Application.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Application",
       "target": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Departments/Validation/CreateDepartmentRequestValidator.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Application/ElsheiekhHMS.Application.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Application",
+      "target": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Departments/Validation/DepartmentSearchRequestValidator.cs",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Application/ElsheiekhHMS.Application.csproj",
       "relation": "contains",
@@ -18359,9 +19677,27 @@
     },
     {
       "source": "project:ElsheiekhHMS.Application",
+      "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Departments",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Application/Departments/DepartmentService.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Application",
       "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Departments.Contracts",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Application/Departments/Contracts/CreateDepartmentRequest.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Application",
+      "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Departments.Persistence",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Application/Departments/Persistence/IDepartmentPersistence.cs",
       "relation": "contains",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -18980,6 +20316,15 @@
     },
     {
       "source": "project:ElsheiekhHMS.Infrastructure",
+      "target": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Persistence/Departments/DepartmentPersistence.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Infrastructure/ElsheiekhHMS.Infrastructure.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Infrastructure",
       "target": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Persistence/ElsheiekhHmsDbContext.cs",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Infrastructure/ElsheiekhHMS.Infrastructure.csproj",
@@ -19097,6 +20442,15 @@
     },
     {
       "source": "project:ElsheiekhHMS.Infrastructure",
+      "target": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Persistence.Departments",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Infrastructure/Persistence/Departments/DepartmentPersistence.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Infrastructure",
       "target": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Persistence.Patients",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Infrastructure/Persistence/Patients/PatientPersistence.cs",
@@ -19119,6 +20473,15 @@
       "type": "project-reference",
       "evidence": "ElsheiekhHMS.Infrastructure/ElsheiekhHMS.Infrastructure.csproj",
       "relation": "project-reference",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Tests",
+      "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/DepartmentServiceSqlServerTests.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
+      "relation": "contains",
       "confidence": "EXTRACTED",
       "weight": 1
     },
@@ -19242,6 +20605,15 @@
     {
       "source": "project:ElsheiekhHMS.Tests",
       "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Departments/DepartmentContractTests.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Tests",
+      "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Departments/DepartmentServiceTests.cs",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
       "relation": "contains",
@@ -19504,7 +20876,7 @@
       "source": "project:ElsheiekhHMS.Tests",
       "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Integration.Persistence",
       "type": "contains",
-      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/ElsheiekhHmsDbContextSqlServerTests.cs",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/DepartmentServiceSqlServerTests.cs",
       "relation": "contains",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -20338,6 +21710,33 @@
       "weight": 1
     },
     {
+      "source": "type:ElsheiekhHMS.Application.Departments.Contracts.DepartmentSearchRequest",
+      "target": "type:System.IEquatable\u003CT\u003E",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Application/Departments/Contracts/DepartmentSearchRequest.cs:L5",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Application.Departments.Contracts.DepartmentSearchRequest",
+      "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Departments.Contracts",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Application/Departments/Contracts/DepartmentSearchRequest.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Application.Departments.Contracts.DepartmentSortField",
+      "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Departments.Contracts",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Application/Departments/Contracts/DepartmentSortField.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
       "source": "type:ElsheiekhHMS.Application.Departments.Contracts.DepartmentSummaryDto",
       "target": "type:System.IEquatable\u003CT\u003E",
       "type": "implements",
@@ -20374,6 +21773,42 @@
       "weight": 1
     },
     {
+      "source": "type:ElsheiekhHMS.Application.Departments.DepartmentService",
+      "target": "type:ElsheiekhHMS.Application.Departments.IDepartmentService",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Application/Departments/DepartmentService.cs:L14",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Application.Departments.DepartmentService",
+      "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Departments",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Application/Departments/DepartmentService.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Application.Departments.IDepartmentService",
+      "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Departments",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Application/Departments/IDepartmentService.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Application.Departments.Persistence.IDepartmentPersistence",
+      "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Departments.Persistence",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Application/Departments/Persistence/IDepartmentPersistence.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
       "source": "type:ElsheiekhHMS.Application.Departments.Validation.CreateDepartmentRequestValidator",
       "target": "type:ElsheiekhHMS.Application.Common.Validation.IRequestValidator\u003CTRequest\u003E",
       "type": "implements",
@@ -20387,6 +21822,24 @@
       "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Departments.Validation",
       "type": "namespace-membership",
       "evidence": "ElsheiekhHMS.Application/Departments/Validation/CreateDepartmentRequestValidator.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Application.Departments.Validation.DepartmentSearchRequestValidator",
+      "target": "type:ElsheiekhHMS.Application.Common.Validation.IRequestValidator\u003CTRequest\u003E",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Application/Departments/Validation/DepartmentSearchRequestValidator.cs:L6",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Application.Departments.Validation.DepartmentSearchRequestValidator",
+      "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Departments.Validation",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Application/Departments/Validation/DepartmentSearchRequestValidator.cs",
       "relation": "namespace-membership",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -21535,6 +22988,24 @@
       "weight": 1
     },
     {
+      "source": "type:ElsheiekhHMS.Infrastructure.Persistence.Departments.DepartmentPersistence",
+      "target": "type:ElsheiekhHMS.Application.Departments.Persistence.IDepartmentPersistence",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Infrastructure/Persistence/Departments/DepartmentPersistence.cs:L9",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Infrastructure.Persistence.Departments.DepartmentPersistence",
+      "target": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Persistence.Departments",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Infrastructure/Persistence/Departments/DepartmentPersistence.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
       "source": "type:ElsheiekhHMS.Infrastructure.Persistence.ElsheiekhHmsDbContext",
       "target": "type:Microsoft.AspNetCore.Identity.EntityFrameworkCore.IdentityDbContext\u003CTUser\u003E",
       "type": "inherits",
@@ -21593,6 +23064,78 @@
       "target": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Persistence.Patients",
       "type": "namespace-membership",
       "evidence": "ElsheiekhHMS.Infrastructure/Persistence/Patients/PatientPersistence.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.DepartmentServiceSqlServerTests",
+      "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.DepartmentServiceSqlServerTests.FixedTimeProvider",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/DepartmentServiceSqlServerTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.DepartmentServiceSqlServerTests",
+      "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.DepartmentServiceSqlServerTests.TestCurrentUser",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/DepartmentServiceSqlServerTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.DepartmentServiceSqlServerTests",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Integration.Persistence",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/DepartmentServiceSqlServerTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.DepartmentServiceSqlServerTests.FixedTimeProvider",
+      "target": "type:System.TimeProvider",
+      "type": "inherits",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/DepartmentServiceSqlServerTests.cs:L120",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.DepartmentServiceSqlServerTests.FixedTimeProvider",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Integration.Persistence",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/DepartmentServiceSqlServerTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.DepartmentServiceSqlServerTests.TestCurrentUser",
+      "target": "type:ElsheiekhHMS.Application.Common.Security.ICurrentUser",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/DepartmentServiceSqlServerTests.cs:L112",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.DepartmentServiceSqlServerTests.TestCurrentUser",
+      "target": "type:System.IEquatable\u003CT\u003E",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/DepartmentServiceSqlServerTests.cs:L112",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.DepartmentServiceSqlServerTests.TestCurrentUser",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Integration.Persistence",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/DepartmentServiceSqlServerTests.cs",
       "relation": "namespace-membership",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -21935,6 +23478,123 @@
       "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Application.Departments",
       "type": "namespace-membership",
       "evidence": "ElsheiekhHMS.Tests/Unit/Application/Departments/DepartmentContractTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Departments.DepartmentServiceTests",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Application.Departments.DepartmentServiceTests.FakeDepartmentPersistence",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Departments/DepartmentServiceTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Departments.DepartmentServiceTests",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Application.Departments.DepartmentServiceTests.FixedTimeProvider",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Departments/DepartmentServiceTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Departments.DepartmentServiceTests",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Application.Departments.DepartmentServiceTests.RecordingAuditWriter",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Departments/DepartmentServiceTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Departments.DepartmentServiceTests",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Application.Departments.DepartmentServiceTests.TestCurrentUser",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Departments/DepartmentServiceTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Departments.DepartmentServiceTests",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Application.Departments",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Departments/DepartmentServiceTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Departments.DepartmentServiceTests.FakeDepartmentPersistence",
+      "target": "type:ElsheiekhHMS.Application.Departments.Persistence.IDepartmentPersistence",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Departments/DepartmentServiceTests.cs:L267",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Departments.DepartmentServiceTests.FakeDepartmentPersistence",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Application.Departments",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Departments/DepartmentServiceTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Departments.DepartmentServiceTests.FixedTimeProvider",
+      "target": "type:System.TimeProvider",
+      "type": "inherits",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Departments/DepartmentServiceTests.cs:L250",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Departments.DepartmentServiceTests.FixedTimeProvider",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Application.Departments",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Departments/DepartmentServiceTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Departments.DepartmentServiceTests.RecordingAuditWriter",
+      "target": "type:ElsheiekhHMS.Application.Common.Auditing.IAuditEventWriter",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Departments/DepartmentServiceTests.cs:L255",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Departments.DepartmentServiceTests.RecordingAuditWriter",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Application.Departments",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Departments/DepartmentServiceTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Departments.DepartmentServiceTests.TestCurrentUser",
+      "target": "type:ElsheiekhHMS.Application.Common.Security.ICurrentUser",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Departments/DepartmentServiceTests.cs:L240",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Departments.DepartmentServiceTests.TestCurrentUser",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Application.Departments",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Departments/DepartmentServiceTests.cs",
       "relation": "namespace-membership",
       "confidence": "EXTRACTED",
       "weight": 1

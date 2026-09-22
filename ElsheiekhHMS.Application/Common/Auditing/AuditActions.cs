@@ -19,6 +19,9 @@ public static class AuditActions
     public const string PatientDemographicsUpdated = "PATIENT_DEMOGRAPHICS_UPDATED";
     public const string PatientContactUpdated = "PATIENT_CONTACT_UPDATED";
     public const string PatientIdentifiersUpdated = "PATIENT_IDENTIFIERS_UPDATED";
+    public const string DepartmentCreated = "DEPARTMENT_CREATED";
+    public const string DepartmentUpdated = "DEPARTMENT_UPDATED";
+    public const string DepartmentDeactivated = "DEPARTMENT_DEACTIVATED";
 
     public static IReadOnlyList<string> All { get; } =
     [
@@ -38,6 +41,9 @@ public static class AuditActions
         PatientRegistered,
         PatientDemographicsUpdated,
         PatientContactUpdated,
-        PatientIdentifiersUpdated
+        PatientIdentifiersUpdated,
+        DepartmentCreated,
+        DepartmentUpdated,
+        DepartmentDeactivated
     ];
 }

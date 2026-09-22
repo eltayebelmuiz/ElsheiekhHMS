@@ -1,4 +1,5 @@
 using ElsheiekhHMS.Application.Departments.Contracts;
+using ElsheiekhHMS.Application.Common.Contracts;
 using ElsheiekhHMS.Application.Departments.Validation;
 
 namespace ElsheiekhHMS.Tests.Unit.Application.Departments;
@@ -36,5 +37,33 @@ public sealed class DepartmentValidationTests
         Assert.DoesNotContain("IsActive", propertyNames);
         Assert.DoesNotContain("Activate", propertyNames);
         Assert.DoesNotContain("Deactivate", propertyNames);
+    }
+
+    [Fact]
+    public void Search_trims_text_and_accepts_bounded_page_and_sort()
+    {
+        var request = new DepartmentSearchRequest(
+            "  emergency  ", true, new PageRequest(2, 25), DepartmentSortField.Name);
+
+        var result = new DepartmentSearchRequestValidator().Validate(request);
+
+        Assert.True(result.IsValid);
+        Assert.Equal("emergency", request.SearchText);
+        Assert.True(request.IsActive);
+    }
+
+    [Fact]
+    public void Search_rejects_page_overflow_and_invalid_sort_values()
+    {
+        var request = new DepartmentSearchRequest(
+            new string('x', 101), null, new PageRequest(1, 251), (DepartmentSortField)99, (SortDirection)99);
+
+        var result = new DepartmentSearchRequestValidator().Validate(request);
+
+        Assert.False(result.IsValid);
+        Assert.Contains(result.Errors, error => error.Code == "department.search_text.maximum");
+        Assert.Contains(result.Errors, error => error.Code == "pagination.page_size.maximum");
+        Assert.Contains(result.Errors, error => error.Code == "department.sort.invalid");
+        Assert.Contains(result.Errors, error => error.Code == "department.sort_direction.invalid");
     }
 }

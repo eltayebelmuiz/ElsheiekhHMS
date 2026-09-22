@@ -3,7 +3,7 @@
 **Version:** 1.0.0
 **Date:** September 20, 2026
 **Owner:** Eltayeb Elmuiz
-**Status:** Active — Phase 07 Application Services in progress; 07S and 07A complete; 07B remains separately gated
+**Status:** Active — Phase 07 Application Services in progress; 07S, 07A, and 07B complete
 
 ---
 
@@ -913,7 +913,7 @@ git commit -m "Phase06: ViewModels, DTOs, ServiceResult usage pattern, PatientSe
 
 ## PHASE 07 — Application Services
 
-**Status: IN PROGRESS (07S and 07A complete).** The remaining material in this section is planned
+**Status: IN PROGRESS (07S, 07A, and 07B complete).** The remaining material in this section is planned
 design guidance; later Phase 07 services, repositories, Unit of Work, and workflows are not
 implemented in the current checkpoint.
 
@@ -936,6 +936,19 @@ non-unique and duplicate candidates never block registration. The two approved i
 decisions are recorded in ADR-018. No migration, snapshot, Core, Identity, or database change was
 required.
 
+### Phase 07B — Department Application Service
+
+**Status: COMPLETE.** Application now owns the narrow
+`IDepartmentService` contract, the minimal bounded `DepartmentSearchRequest` contract and
+validator, and the EF-free `IDepartmentPersistence` port. Infrastructure provides direct
+projected Department reads, server-side filtering/sorting/pagination, and tracked writes.
+Create, update, and deactivate stage `DEPARTMENT_CREATED`, `DEPARTMENT_UPDATED`, and
+`DEPARTMENT_DEACTIVATED` AuditLog events and commit each Department/AuditLog pair with one
+`SaveChangesAsync`. The existing `CanConfigureSystem` role mapping is preserved: only
+`SystemAdministrator` can manage Department configuration; Administrator, Receptionist,
+Provider, and Patient are not broadened. Department names remain non-unique, reactivation and
+hard delete are out of scope, and no schema or migration change is required.
+
 ### Objective
 Implement all application-layer services. Services orchestrate validation, authorization checks, business rules, repository calls, and audit logging.
 
@@ -948,7 +961,7 @@ Phase 06 complete.
 |---------|-----------|------|--------|
 | PatientService | IPatientService | Application/Patients/ | ✅ Complete (07A) |
 | DoctorService | IDoctorService | Infrastructure/Services/ | Planned |
-| DepartmentService | IDepartmentService | Application/Departments/ | Planned (07B) |
+| DepartmentService | IDepartmentService | Application/Departments/ | ✅ Complete (07B) |
 | AppointmentService | IAppointmentService | Infrastructure/Services/ | Planned |
 | LabService | ILabService | Infrastructure/Services/ | Planned |
 | WalkInQueueService | IWalkInQueueService | Infrastructure/Services/ | Planned |
@@ -1879,10 +1892,10 @@ public async Task<ServiceResult<T>> DoSomethingAsync(Dto dto, string actorEmail)
 ## 16. Current Project Checkpoint
 
 ```
-Last completed phase:  Phase 07A — Patient Application Service
+Last completed phase:  Phase 07B — Department Application Service
 Current phase:         Phase 07 — Application Services (in progress)
 Next phase:            Phase 07 — Application Services
-Next action:           Prepare and approve the next Phase 07B Department Application Service design gate
+Next action:           Prepare the next approved Phase 07 sub-phase design gate; 07C has not started
 Known blockers:        None
 Important notes:
   - The current working codebase is the five-project .NET 10 ElsheiekhHMS solution
@@ -1893,7 +1906,7 @@ Important notes:
   - Enterprise table system active on Patient/Index
   - _PatientSearch partial complete and in use in WalkInQueue/Add
   - Display board and future UI modules remain later workflow/UI scope
-  - 07A Patient Application Service is complete; 07B Department service is not started
+  - 07A Patient Application Service and 07B Department service are complete
   - Arabic/RTL removed — English-only confirmed
   - 05C-A stable audit vocabulary, bounded append-only model, server-controlled writer, and focused tests are complete
   - 05D additive Identity/AuditLog migration, development/integration SQL verification, and pending-model suppression reassessment are complete

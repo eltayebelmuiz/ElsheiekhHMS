@@ -34,7 +34,10 @@ public sealed class AuditVocabularyTests
                 "PATIENT_REGISTERED",
                 "PATIENT_DEMOGRAPHICS_UPDATED",
                 "PATIENT_CONTACT_UPDATED",
-                "PATIENT_IDENTIFIERS_UPDATED"
+                "PATIENT_IDENTIFIERS_UPDATED",
+                "DEPARTMENT_CREATED",
+                "DEPARTMENT_UPDATED",
+                "DEPARTMENT_DEACTIVATED"
             ],
             AuditActions.All);
     }
