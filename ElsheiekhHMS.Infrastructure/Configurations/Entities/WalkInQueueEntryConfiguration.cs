@@ -17,6 +17,7 @@ public sealed class WalkInQueueEntryConfiguration : IEntityTypeConfiguration<Wal
 
         builder.Property(entry => entry.PatientId).IsRequired();
         builder.Property(entry => entry.DepartmentId).IsRequired();
+        builder.Property(entry => entry.AppointmentId).IsRequired(false);
         builder.Property(entry => entry.DoctorId).IsRequired(false);
         builder.Property(entry => entry.QueueDate)
             .IsRequired()
@@ -54,6 +55,10 @@ public sealed class WalkInQueueEntryConfiguration : IEntityTypeConfiguration<Wal
             .WithMany()
             .HasForeignKey(entry => entry.DepartmentId)
             .OnDelete(DeleteBehavior.Restrict);
+        builder.HasOne<Appointment>()
+            .WithMany()
+            .HasForeignKey(entry => entry.AppointmentId)
+            .OnDelete(DeleteBehavior.Restrict);
         builder.HasOne<Doctor>()
             .WithMany()
             .HasForeignKey(entry => entry.DoctorId)
@@ -61,6 +66,10 @@ public sealed class WalkInQueueEntryConfiguration : IEntityTypeConfiguration<Wal
 
         builder.HasIndex(entry => entry.PatientId);
         builder.HasIndex(entry => entry.DoctorId);
+        builder.HasIndex(entry => entry.AppointmentId)
+            .IsUnique()
+            .HasFilter("[AppointmentId] IS NOT NULL")
+            .HasDatabaseName("UX_WalkInQueueEntries_AppointmentId");
         builder.HasIndex(entry => new
         {
             entry.DepartmentId,

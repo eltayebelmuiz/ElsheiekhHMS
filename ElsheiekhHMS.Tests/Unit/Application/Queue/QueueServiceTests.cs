@@ -68,6 +68,17 @@ public sealed class QueueServiceTests
     }
 
     [Fact]
+    public async Task Appointment_link_duplicate_is_translated_without_a_second_write()
+    {
+        var persistence = new FakePersistence { SaveStatus = QueuePersistenceSaveStatus.DuplicateAppointmentLink };
+        var result = await CreateService(persistence, new RecordingAuditWriter()).AddAppointmentAsync(
+            new AddAppointmentQueueEntryRequest(10, 20, 77, QueuePriority.Normal, null));
+
+        Assert.Equal("queue.duplicate_appointment", Assert.Single(result.Errors).Code);
+        Assert.Equal(1, persistence.SaveChangesCalls);
+    }
+
+    [Fact]
     public async Task Lifecycle_actions_use_core_transitions_and_audit_actions()
     {
         var entry = NewEntry();
@@ -201,6 +212,9 @@ public sealed class QueueServiceTests
         public int SearchCalls { get; private set; }
 
         public Task<QueueEntryDetailsDto?> GetDetailsAsync(int queueEntryId, CancellationToken cancellationToken) =>
+            Task.FromResult<QueueEntryDetailsDto?>(null);
+
+        public Task<QueueEntryDetailsDto?> GetDetailsByAppointmentIdAsync(int appointmentId, CancellationToken cancellationToken) =>
             Task.FromResult<QueueEntryDetailsDto?>(null);
 
         public Task<PagedResult<QueueEntrySummaryDto>> SearchAsync(QueueSearchRequest request, CancellationToken cancellationToken)

@@ -7,6 +7,7 @@ public sealed record QueueEntryDetailsDto(
     string QueueNumber,
     int PatientId,
     int DepartmentId,
+    int? AppointmentId,
     int? DoctorId,
     DateOnly QueueDate,
     QueuePriority Priority,

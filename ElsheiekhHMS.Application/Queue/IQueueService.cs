@@ -9,6 +9,8 @@ public interface IQueueService
     Task<ServiceResult<QueueEntryDetailsDto>> GetByIdAsync(int queueEntryId, CancellationToken cancellationToken = default);
     Task<ServiceResult<PagedResult<QueueEntrySummaryDto>>> SearchAsync(QueueSearchRequest request, CancellationToken cancellationToken = default);
     Task<ServiceResult<QueueEntryDetailsDto>> AddAsync(AddWalkInQueueEntryRequest request, CancellationToken cancellationToken = default);
+    Task<ServiceResult<QueueEntryDetailsDto>> AddAppointmentAsync(AddAppointmentQueueEntryRequest request, CancellationToken cancellationToken = default);
+    Task<ServiceResult<QueueEntryDetailsDto>> GetByAppointmentIdAsync(int appointmentId, CancellationToken cancellationToken = default);
     Task<ServiceResult<QueueEntryDetailsDto>> CallToNurseAsync(QueueEntryActionRequest request, CancellationToken cancellationToken = default);
     Task<ServiceResult<QueueEntryDetailsDto>> SendToDoctorAsync(SendToDoctorRequest request, CancellationToken cancellationToken = default);
     Task<ServiceResult<QueueEntryDetailsDto>> HoldAsync(QueueEntryActionRequest request, CancellationToken cancellationToken = default);

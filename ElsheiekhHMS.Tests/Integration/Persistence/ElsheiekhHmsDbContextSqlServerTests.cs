@@ -358,6 +358,55 @@ public sealed class ElsheiekhHmsDbContextSqlServerTests(
         Assert.Equal(QueuePriority.Urgent, reloaded.Priority);
         Assert.Equal(new DateOnly(2026, 10, 16), reloaded.QueueDate);
         Assert.Equal(QueueStatus.Waiting, reloaded.Status);
+        Assert.Null(reloaded.AppointmentId);
+    }
+
+    [Fact]
+    public async Task Appointment_linked_queue_entry_roundtrips_and_preserves_history_link()
+    {
+        var department = CreateDepartment();
+        var patient = CreatePatient();
+        Appointment appointment;
+        await using (var context = fixture.CreateContext())
+        {
+            context.Departments.Add(department);
+            context.Patients.Add(patient);
+            await context.SaveChangesAsync();
+            var doctor = CreateDoctor(department);
+            context.Doctors.Add(doctor);
+            await context.SaveChangesAsync();
+            appointment = CreateAppointment(patient.Id, doctor.Id, department.Id);
+            context.Appointments.Add(appointment);
+            await context.SaveChangesAsync();
+            context.WalkInQueueEntries.Add(CreateQueueEntry(patient.Id, department.Id, new DateOnly(2026, 11, 8), 13, appointment.Id));
+            await context.SaveChangesAsync();
+        }
+
+        await using var readContext = fixture.CreateContext();
+        var linked = await readContext.WalkInQueueEntries.SingleAsync(entry => entry.AppointmentId == appointment.Id);
+        Assert.Equal(appointment.Id, linked.AppointmentId);
+    }
+
+    [Fact]
+    public async Task Duplicate_non_null_appointment_links_are_rejected()
+    {
+        var department = CreateDepartment();
+        var patient = CreatePatient();
+        await using var context = fixture.CreateContext();
+        context.Departments.Add(department);
+        context.Patients.Add(patient);
+        await context.SaveChangesAsync();
+        var doctor = CreateDoctor(department);
+        context.Doctors.Add(doctor);
+        await context.SaveChangesAsync();
+        var appointment = CreateAppointment(patient.Id, doctor.Id, department.Id);
+        context.Appointments.Add(appointment);
+        await context.SaveChangesAsync();
+        context.WalkInQueueEntries.Add(CreateQueueEntry(patient.Id, department.Id, new DateOnly(2026, 11, 9), 14, appointment.Id));
+        await context.SaveChangesAsync();
+        context.WalkInQueueEntries.Add(CreateQueueEntry(patient.Id, department.Id, new DateOnly(2026, 11, 10), 15, appointment.Id));
+
+        await Assert.ThrowsAsync<DbUpdateException>(() => context.SaveChangesAsync());
     }
 
     [Fact]
@@ -814,7 +863,8 @@ public sealed class ElsheiekhHmsDbContextSqlServerTests(
         int patientId,
         int departmentId,
         DateOnly queueDate,
-        int sequenceNumber) =>
+        int sequenceNumber,
+        int? appointmentId = null) =>
         new(
             patientId,
             departmentId,
@@ -824,7 +874,8 @@ public sealed class ElsheiekhHmsDbContextSqlServerTests(
             QueuePriority.Normal,
             "integration queue",
             Utc(24),
-            "integration");
+            "integration",
+            appointmentId);
 
     private static string UniquePatientCode() => $"PT-2026-{Next():D5}";
 

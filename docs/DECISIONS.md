@@ -739,3 +739,41 @@ self-service workflows remain deferred.
 [08A workflow contract and implementation](../ElsheiekhHMS.Application/Workflows/PatientIntake/);
 [08A focused tests](../ElsheiekhHMS.Tests/Unit/Application/Workflows/PatientIntakeAppointmentServiceTests.cs);
 [Phase 08 scope review](../README.md#17-current-development-position).
+
+## ADR-025 — Phase 08B-P durable Appointment↔Queue prerequisite
+
+**Status:** Implemented; ready for 08B handoff orchestration
+**Phase:** 08B-P
+
+### Decision
+
+Add the smallest durable relationship required for a later appointment-arrival
+workflow: `WalkInQueueEntry.AppointmentId` is nullable, a queue entry may link to
+zero or one Appointment, and an Appointment may have at most one linked queue
+entry across its history. SQL Server enforces the latter with the filtered unique
+index `UX_WalkInQueueEntries_AppointmentId` where `AppointmentId IS NOT NULL`.
+The foreign key uses restrictive/no-action delete behavior so appointment history
+cannot cascade-delete queue history. Existing queue rows remain null; no links are
+backfilled by inference.
+
+QueueDate remains the Africa/Kigali local calendar date at actual queue creation,
+using the existing TimeProvider and allocator semantics. Existing active
+Patient/date duplicate protection and serializable application-lock behavior are
+preserved. Queue contracts expose the nullable link and provide controlled
+appointment-linked creation plus indexed lookup, while 08B orchestration,
+cross-aggregate validation, and any Patient/Provider ownership remain deferred.
+
+### Consequences
+
+`AddAppointmentQueueLink` is the only schema migration for this prerequisite and
+was applied to the approved development database after isolated integration
+verification. No old migration, Core base type, ApplicationUser, package, or
+Phases.md was changed. The next step is the separately gated 08B arrival/queue
+handoff workflow; this prerequisite does not create an Encounter or queue
+automatically during appointment lifecycle operations.
+
+### Evidence / Notes
+
+[WalkInQueueEntry](../ElsheiekhHMS.Core/Domain/Scheduling/Entities/WalkInQueueEntry.cs);
+[queue persistence mapping](../ElsheiekhHMS.Infrastructure/Configurations/Entities/WalkInQueueEntryConfiguration.cs);
+[AddAppointmentQueueLink migration](../ElsheiekhHMS.Infrastructure/Migrations/20260922115337_AddAppointmentQueueLink.cs).

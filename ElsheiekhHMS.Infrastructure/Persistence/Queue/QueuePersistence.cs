@@ -28,6 +28,34 @@ public sealed class QueuePersistence(
                 entry.QueueNumber,
                 entry.PatientId,
                 entry.DepartmentId,
+                entry.AppointmentId,
+                entry.DoctorId,
+                entry.QueueDate,
+                entry.Priority,
+                entry.Status,
+                entry.RegisteredAt,
+                entry.Notes,
+                entry.CalledAt,
+                entry.CompletedAt,
+                entry.RowVersion))
+            .SingleOrDefaultAsync(cancellationToken);
+
+        return projection?.ToDto();
+    }
+
+    public async Task<QueueEntryDetailsDto?> GetDetailsByAppointmentIdAsync(
+        int appointmentId,
+        CancellationToken cancellationToken)
+    {
+        var projection = await context.WalkInQueueEntries
+            .AsNoTracking()
+            .Where(entry => entry.AppointmentId == appointmentId)
+            .Select(entry => new QueueEntryDetailsProjection(
+                entry.Id,
+                entry.QueueNumber,
+                entry.PatientId,
+                entry.DepartmentId,
+                entry.AppointmentId,
                 entry.DoctorId,
                 entry.QueueDate,
                 entry.Priority,
@@ -65,6 +93,7 @@ public sealed class QueuePersistence(
                 entry.QueueNumber,
                 entry.PatientId,
                 entry.DepartmentId,
+                entry.AppointmentId,
                 entry.DoctorId,
                 entry.QueueDate,
                 entry.Priority,
@@ -166,6 +195,11 @@ public sealed class QueuePersistence(
             await transaction.RollbackAsync(CancellationToken.None);
             return QueuePersistenceSaveStatus.ConcurrencyConflict;
         }
+        catch (DbUpdateException exception) when (ContainsIndex(exception, "UX_WalkInQueueEntries_AppointmentId"))
+        {
+            await transaction.RollbackAsync(CancellationToken.None);
+            return QueuePersistenceSaveStatus.DuplicateAppointmentLink;
+        }
         catch (DbUpdateException exception) when (ContainsIndex(exception, "UX_WalkInQueueEntries_QueueDate_SequenceNumber"))
         {
             await transaction.RollbackAsync(CancellationToken.None);
@@ -245,6 +279,7 @@ public sealed class QueuePersistence(
         string QueueNumber,
         int PatientId,
         int DepartmentId,
+        int? AppointmentId,
         int? DoctorId,
         DateOnly QueueDate,
         QueuePriority Priority,
@@ -260,6 +295,7 @@ public sealed class QueuePersistence(
             QueueNumber,
             PatientId,
             DepartmentId,
+            AppointmentId,
             DoctorId,
             QueueDate,
             Priority,

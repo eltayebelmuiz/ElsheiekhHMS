@@ -7,6 +7,7 @@ namespace ElsheiekhHMS.Application.Queue.Persistence;
 public interface IQueuePersistence
 {
     Task<QueueEntryDetailsDto?> GetDetailsAsync(int queueEntryId, CancellationToken cancellationToken);
+    Task<QueueEntryDetailsDto?> GetDetailsByAppointmentIdAsync(int appointmentId, CancellationToken cancellationToken);
     Task<PagedResult<QueueEntrySummaryDto>> SearchAsync(QueueSearchRequest request, CancellationToken cancellationToken);
     Task<bool> PatientExistsAsync(int patientId, CancellationToken cancellationToken);
     Task<bool> DepartmentExistsAsync(int departmentId, CancellationToken cancellationToken);

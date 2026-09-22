@@ -81,44 +81,7 @@ public sealed class QueueService(
             return Failure<QueueEntryDetailsDto>(dateError.Code, dateError.Message, dateError.Field);
         }
 
-        try
-        {
-            if (!await persistence.PatientExistsAsync(request.PatientId, cancellationToken))
-            {
-                return Failure<QueueEntryDetailsDto>("queue.patient.not_found", "The patient was not found.", nameof(request.PatientId));
-            }
-
-            if (!await persistence.DepartmentExistsAsync(request.DepartmentId, cancellationToken))
-            {
-                return Failure<QueueEntryDetailsDto>("queue.department.not_found", "The department was not found.", nameof(request.DepartmentId));
-            }
-
-            if (!await persistence.DepartmentIsActiveAsync(request.DepartmentId, cancellationToken))
-            {
-                return Failure<QueueEntryDetailsDto>("queue.department.inactive", "The department is not active.", nameof(request.DepartmentId));
-            }
-
-            if (await persistence.HasActiveEntryAsync(request.PatientId, queueDate, cancellationToken))
-            {
-                return Failure<QueueEntryDetailsDto>("queue.duplicate_active", "The patient already has an active queue entry for today.", nameof(request.PatientId));
-            }
-
-            var ticket = await persistence.AllocateTicketAsync(queueDate, cancellationToken);
-            var entry = new WalkInQueueEntry(
-                request.PatientId,
-                request.DepartmentId,
-                ticket.QueueDate,
-                ticket.SequenceNumber,
-                ticket.QueueNumber,
-                request.Priority,
-                request.Notes,
-                utcNow,
-                currentUser.UserId);
-
-            persistence.Add(entry);
-            await RecordAuditAsync(AuditActions.QueueEntryCreated, entry.QueueNumber, null, cancellationToken);
-            return MapSaveStatus(await persistence.SaveChangesAsync(cancellationToken), entry);
-        }
+        try { return await AddCoreAsync(request.PatientId, request.DepartmentId, null, request.Priority, request.Notes, utcNow, queueDate, cancellationToken); }
         catch (OperationCanceledException) { throw; }
         catch (DomainException exception)
         {
@@ -129,6 +92,83 @@ public sealed class QueueService(
             return Failure<QueueEntryDetailsDto>("queue.ticket_allocation_failed", exception.Message);
         }
         catch (Exception) { return PersistenceFailure<QueueEntryDetailsDto>(); }
+    }
+
+    public async Task<ServiceResult<QueueEntryDetailsDto>> AddAppointmentAsync(
+        AddAppointmentQueueEntryRequest request,
+        CancellationToken cancellationToken = default)
+    {
+        if (!HasAccess()) return Forbidden<QueueEntryDetailsDto>();
+        cancellationToken.ThrowIfCancellationRequested();
+        var validation = new AddAppointmentQueueEntryRequestValidator().Validate(request);
+        if (!validation.IsValid) return ValidationFailure<QueueEntryDetailsDto>(validation);
+
+        var utcNow = timeProvider.GetUtcNow().ToUniversalTime();
+        if (!TryGetQueueDate(utcNow, out var queueDate, out var dateError))
+        {
+            return Failure<QueueEntryDetailsDto>(dateError.Code, dateError.Message, dateError.Field);
+        }
+
+        try { return await AddCoreAsync(request.PatientId, request.DepartmentId, request.AppointmentId, request.Priority, request.Notes, utcNow, queueDate, cancellationToken); }
+        catch (OperationCanceledException) { throw; }
+        catch (DomainException exception) { return Failure<QueueEntryDetailsDto>("queue.domain_validation", exception.Message); }
+        catch (InvalidOperationException exception) { return Failure<QueueEntryDetailsDto>("queue.ticket_allocation_failed", exception.Message); }
+        catch (Exception) { return PersistenceFailure<QueueEntryDetailsDto>(); }
+    }
+
+    public async Task<ServiceResult<QueueEntryDetailsDto>> GetByAppointmentIdAsync(
+        int appointmentId,
+        CancellationToken cancellationToken = default)
+    {
+        if (!HasAccess()) return Forbidden<QueueEntryDetailsDto>();
+        cancellationToken.ThrowIfCancellationRequested();
+        if (appointmentId <= 0) return Failure<QueueEntryDetailsDto>("queue.appointment_id.positive", "Appointment ID must be positive.", nameof(appointmentId));
+        try
+        {
+            var entry = await persistence.GetDetailsByAppointmentIdAsync(appointmentId, cancellationToken);
+            return entry is null
+                ? Failure<QueueEntryDetailsDto>("queue.not_found", "Queue entry was not found.")
+                : ServiceResult<QueueEntryDetailsDto>.Success(entry);
+        }
+        catch (OperationCanceledException) { throw; }
+        catch (Exception) { return PersistenceFailure<QueueEntryDetailsDto>(); }
+    }
+
+    private async Task<ServiceResult<QueueEntryDetailsDto>> AddCoreAsync(
+        int patientId,
+        int departmentId,
+        int? appointmentId,
+        QueuePriority priority,
+        string? notes,
+        DateTimeOffset utcNow,
+        DateOnly queueDate,
+        CancellationToken cancellationToken)
+    {
+        if (!await persistence.PatientExistsAsync(patientId, cancellationToken))
+            return Failure<QueueEntryDetailsDto>("queue.patient.not_found", "The patient was not found.", nameof(patientId));
+        if (!await persistence.DepartmentExistsAsync(departmentId, cancellationToken))
+            return Failure<QueueEntryDetailsDto>("queue.department.not_found", "The department was not found.", nameof(departmentId));
+        if (!await persistence.DepartmentIsActiveAsync(departmentId, cancellationToken))
+            return Failure<QueueEntryDetailsDto>("queue.department.inactive", "The department is not active.", nameof(departmentId));
+        if (await persistence.HasActiveEntryAsync(patientId, queueDate, cancellationToken))
+            return Failure<QueueEntryDetailsDto>("queue.duplicate_active", "The patient already has an active queue entry for today.", nameof(patientId));
+
+        var ticket = await persistence.AllocateTicketAsync(queueDate, cancellationToken);
+        var entry = new WalkInQueueEntry(
+            patientId,
+            departmentId,
+            ticket.QueueDate,
+            ticket.SequenceNumber,
+            ticket.QueueNumber,
+            priority,
+            notes,
+            utcNow,
+            currentUser.UserId,
+            appointmentId);
+
+        persistence.Add(entry);
+        await RecordAuditAsync(AuditActions.QueueEntryCreated, entry.QueueNumber, null, cancellationToken);
+        return MapSaveStatus(await persistence.SaveChangesAsync(cancellationToken), entry);
     }
 
     public Task<ServiceResult<QueueEntryDetailsDto>> CallToNurseAsync(
@@ -318,6 +358,7 @@ public sealed class QueueService(
         {
             QueuePersistenceSaveStatus.Saved => ServiceResult<QueueEntryDetailsDto>.Success(ToDetails(entry)),
             QueuePersistenceSaveStatus.DuplicateActive => Failure<QueueEntryDetailsDto>("queue.duplicate_active", "The patient already has an active queue entry for today."),
+            QueuePersistenceSaveStatus.DuplicateAppointmentLink => Failure<QueueEntryDetailsDto>("queue.duplicate_appointment", "The appointment already has a queue entry."),
             QueuePersistenceSaveStatus.ConcurrencyConflict => ConcurrencyFailure(),
             QueuePersistenceSaveStatus.TicketAllocationFailure => Failure<QueueEntryDetailsDto>("queue.ticket_allocation_failed", "A queue ticket could not be allocated."),
             _ => PersistenceFailure<QueueEntryDetailsDto>()
@@ -331,6 +372,7 @@ public sealed class QueueService(
         entry.QueueNumber,
         entry.PatientId,
         entry.DepartmentId,
+        entry.AppointmentId,
         entry.DoctorId,
         entry.QueueDate,
         entry.Priority,

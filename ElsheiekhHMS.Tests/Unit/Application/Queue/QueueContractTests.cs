@@ -22,6 +22,8 @@ public sealed class QueueContractTests
         var detailNames = typeof(QueueEntryDetailsDto).GetProperties().Select(property => property.Name);
 
         Assert.Contains("PatientId", summaryNames);
+        Assert.Contains("AppointmentId", summaryNames);
+        Assert.Contains("AppointmentId", detailNames);
         Assert.Contains("QueueNumber", summaryNames);
         Assert.Contains("ConcurrencyToken", detailNames);
         Assert.DoesNotContain("QueuePosition", summaryNames);

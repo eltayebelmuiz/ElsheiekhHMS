@@ -13,3 +13,16 @@ public sealed record AddWalkInQueueEntryRequest(
     private static string? Optional(string? value) =>
         string.IsNullOrWhiteSpace(value) ? null : value.Trim();
 }
+
+public sealed record AddAppointmentQueueEntryRequest(
+    int PatientId,
+    int DepartmentId,
+    int AppointmentId,
+    QueuePriority Priority,
+    string? Notes)
+{
+    public string? Notes { get; } = Optional(Notes);
+
+    private static string? Optional(string? value) =>
+        string.IsNullOrWhiteSpace(value) ? null : value.Trim();
+}

@@ -139,6 +139,12 @@ public sealed class ElsheiekhHmsDbContextModelTests
 
         var queue = context.Model.FindEntityType(typeof(WalkInQueueEntry))!;
         AssertIndex(queue, [nameof(WalkInQueueEntry.PatientId)], unique: false);
+        AssertIndex(queue, [nameof(WalkInQueueEntry.AppointmentId)], unique: true, filter: "[AppointmentId] IS NOT NULL");
+        Assert.True(queue.FindProperty(nameof(WalkInQueueEntry.AppointmentId))!.IsNullable);
+        Assert.Contains(queue.GetForeignKeys(), foreignKey =>
+            foreignKey.Properties.Select(property => property.Name).SequenceEqual([nameof(WalkInQueueEntry.AppointmentId)]) &&
+            foreignKey.PrincipalEntityType.ClrType == typeof(Appointment) &&
+            foreignKey.DeleteBehavior == DeleteBehavior.Restrict);
         AssertIndex(queue, [nameof(WalkInQueueEntry.DoctorId)], unique: false);
         AssertIndex(queue,
             [nameof(WalkInQueueEntry.DepartmentId), nameof(WalkInQueueEntry.QueueDate), nameof(WalkInQueueEntry.Status), nameof(WalkInQueueEntry.Priority), nameof(WalkInQueueEntry.RegisteredAt)],

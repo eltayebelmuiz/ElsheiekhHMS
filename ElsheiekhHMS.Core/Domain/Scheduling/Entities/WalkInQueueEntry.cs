@@ -16,10 +16,12 @@ public sealed class WalkInQueueEntry : SoftDeletableEntity, IHasConcurrencyToken
         QueuePriority priority,
         string? notes,
         DateTimeOffset registeredAt,
-        string? createdBy)
+        string? createdBy,
+        int? appointmentId = null)
     {
         ValidateId(patientId, "Patient ID");
         ValidateId(departmentId, "Department ID");
+        if (appointmentId.HasValue) ValidateId(appointmentId.Value, "Appointment ID");
         ValidateDate(queueDate);
         ValidateTicket(sequenceNumber, queueNumber);
         ValidateEnum(priority, "Queue priority");
@@ -27,6 +29,7 @@ public sealed class WalkInQueueEntry : SoftDeletableEntity, IHasConcurrencyToken
 
         PatientId = patientId;
         DepartmentId = departmentId;
+        AppointmentId = appointmentId;
         QueueDate = queueDate;
         SequenceNumber = sequenceNumber;
         QueueNumber = queueNumber;
@@ -41,6 +44,8 @@ public sealed class WalkInQueueEntry : SoftDeletableEntity, IHasConcurrencyToken
     public int PatientId { get; }
 
     public int DepartmentId { get; }
+
+    public int? AppointmentId { get; }
 
     public int? DoctorId { get; private set; }
 

@@ -38,6 +38,20 @@ public class WalkInQueueEntryTests
         Assert.IsAssignableFrom<IHasConcurrencyToken>(entry);
     }
 
+    [Fact]
+    public void Ordinary_walk_in_entry_has_no_appointment_link()
+    {
+        Assert.Null(CreateEntry().AppointmentId);
+    }
+
+    [Fact]
+    public void Appointment_linked_entry_preserves_appointment_id()
+    {
+        var entry = CreateEntry(appointmentId: 19);
+
+        Assert.Equal(19, entry.AppointmentId);
+    }
+
     [Theory]
     [InlineData(0, 3)]
     [InlineData(-1, 3)]
@@ -195,7 +209,8 @@ public class WalkInQueueEntryTests
         string queueNumber = "A-007",
         QueuePriority priority = QueuePriority.Normal,
         string? notes = null,
-        DateTimeOffset? registeredAt = null) =>
+        DateTimeOffset? registeredAt = null,
+        int? appointmentId = null) =>
         new(patientId, departmentId, queueDate ?? QueueDate, sequenceNumber,
-            queueNumber, priority, notes, registeredAt ?? RegisteredAt, "desk-1");
+            queueNumber, priority, notes, registeredAt ?? RegisteredAt, "desk-1", appointmentId);
 }

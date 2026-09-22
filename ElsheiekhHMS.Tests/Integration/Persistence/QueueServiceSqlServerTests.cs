@@ -59,6 +59,41 @@ public sealed class QueueServiceSqlServerTests(SqlServerTestDatabaseFixture fixt
     }
 
     [Fact]
+    public async Task Appointment_linked_add_and_lookup_roundtrip_through_queue_service()
+    {
+        var setup = await CreateRecordsAsync();
+        int appointmentId;
+        await using (var seed = fixture.CreateContext(setup.User, setup.Clock))
+        {
+            var department = await seed.Departments.SingleAsync(item => item.Id == setup.DepartmentId);
+            var doctor = new ElsheiekhHMS.Core.Domain.Staff.Entities.Doctor(
+                "DR-" + Guid.NewGuid().ToString("N")[..8], "Queue Doctor", "General", false,
+                100m, department.Id, NowUtc, setup.User.UserId);
+            seed.Doctors.Add(doctor);
+            await seed.SaveChangesAsync();
+            var appointment = new ElsheiekhHMS.Core.Domain.Scheduling.Entities.Appointment(
+                "AP-" + Guid.NewGuid().ToString("N")[..8], setup.PatientId, doctor.Id, department.Id,
+                new DateOnly(2026, 9, 24), new TimeOnly(9, 0),
+                ElsheiekhHMS.Core.Domain.Scheduling.Enums.AppointmentType.General,
+                null, NowUtc, setup.User.UserId);
+            seed.Appointments.Add(appointment);
+            await seed.SaveChangesAsync();
+            appointmentId = appointment.Id;
+        }
+
+        await using var context = fixture.CreateContext(setup.User, setup.Clock);
+        var service = CreateService(context, setup.User, setup.Clock);
+        var linked = await service.AddAppointmentAsync(new AddAppointmentQueueEntryRequest(
+            setup.PatientId, setup.DepartmentId, appointmentId, QueuePriority.Normal, "scheduled arrival"));
+        var found = await service.GetByAppointmentIdAsync(appointmentId);
+
+        Assert.True(linked.IsSuccess, string.Join(";", linked.Errors.Select(error => error.Code)));
+        Assert.Equal(appointmentId, linked.Value!.AppointmentId);
+        Assert.True(found.IsSuccess);
+        Assert.Equal(linked.Value.Id, found.Value!.Id);
+    }
+
+    [Fact]
     public async Task Cancelled_history_does_not_block_a_future_queue_entry()
     {
         var setup = await CreateRecordsAsync();

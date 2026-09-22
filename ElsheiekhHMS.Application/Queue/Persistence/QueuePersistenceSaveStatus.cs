@@ -4,6 +4,7 @@ public enum QueuePersistenceSaveStatus
 {
     Saved,
     DuplicateActive,
+    DuplicateAppointmentLink,
     ConcurrencyConflict,
     TicketAllocationFailure
 }
