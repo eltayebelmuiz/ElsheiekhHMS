@@ -1,11 +1,11 @@
 {
   "schemaVersion": "1.0",
-  "generatedAtUtc": "2026-09-22T21:32:15.5905314\u002B00:00",
-  "gitCommit": "cc20698b1bb868e9df8138c09fc06e6ce1d5dbf9",
+  "generatedAtUtc": "2026-09-22T21:40:01.0097534\u002B00:00",
+  "gitCommit": "e5b9be004f05ab94c3d4e51ed8a25fed069e24ce",
   "gitBranch": "main",
   "workingTreeDirty": true,
-  "gitStatusAtGeneration": "M ElsheiekhHMS.Web/Components/App.razor\n M ElsheiekhHMS.Web/Components/Layout/AnonymousLayout.razor\n M ElsheiekhHMS.Web/Components/Layout/MainLayout.razor\n M ElsheiekhHMS.Web/Components/Layout/MainLayout.razor.css\n M ElsheiekhHMS.Web/Components/Layout/NavMenu.razor.css\n M ElsheiekhHMS.Web/Components/Pages/Login.razor\n M ElsheiekhHMS.Web/Components/Shared/ConfirmDialog.razor\n M ElsheiekhHMS.Web/wwwroot/app.css\n M README.md\n M docs/UI_DESIGN_SYSTEM.md\n?? ElsheiekhHMS.Web/wwwroot/hms.js\n?? docs/UI_PRE_MANUAL_QA.md",
-  "sourceFingerprint": "bb62df0cb89e96168e7cf62fc06703747a1d92394da561c7497f228840e221df",
+  "gitStatusAtGeneration": "M ElsheiekhHMS.Web/Components/Layout/AnonymousLayout.razor\n M ElsheiekhHMS.Web/Components/Layout/MainLayout.razor",
+  "sourceFingerprint": "d0fe310403632c3dac53b132c3a97b1b18e95c674314397be27f752400a46a41",
   "generatorFingerprint": "03eee0a8853a7e84af6cbe571d34e6f7d820505ac8f5670a719d0d63b113840c",
   "fingerprintAlgorithm": "SHA-256 of ordinal path \u002B NUL \u002B content SHA-256 records joined with LF; sourceManifest defines inputs; graphify-out excluded everywhere",
   "sourceManifest": [
@@ -875,11 +875,11 @@
     },
     {
       "path": "ElsheiekhHMS.Web/Components/Layout/AnonymousLayout.razor",
-      "sha256": "0cd18dd6d7fb033222d75ac4137de1ffe65c986ba4c78d4e0f5b26222d222148"
+      "sha256": "dcc21aed2d92a7288b7cb50534c5708836ee0d58c493d8e73394d28fd2156ee9"
     },
     {
       "path": "ElsheiekhHMS.Web/Components/Layout/MainLayout.razor",
-      "sha256": "1bc854aac54323825a905934041414669885dfdee440510c81f494fa706783f9"
+      "sha256": "9367452497cdfa9e383e144f1b6b2eeb37ff0d57e17aea79e1ffe5f39a15411b"
     },
     {
       "path": "ElsheiekhHMS.Web/Components/Layout/NavMenu.razor",

@@ -1,6 +1,6 @@
 @inherits LayoutComponentBase
 
-<a class="hms-skip-link" href="#main-content">Skip to main content</a>
+<a class="hms-skip-link" data-enhance-nav="false" href="#main-content" onclick="event.preventDefault(); history.replaceState(null, '', '#main-content'); document.getElementById('main-content')?.focus();">Skip to main content</a>
 <div class="hms-anonymous-shell">
     <header class="hms-anonymous-header">
         <div class="hms-anonymous-header__inner">

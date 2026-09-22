@@ -1,6 +1,6 @@
 @inherits LayoutComponentBase
 
-<a class="hms-skip-link" href="#main-content">Skip to main content</a>
+<a class="hms-skip-link" data-enhance-nav="false" href="#main-content" onclick="event.preventDefault(); history.replaceState(null, '', '#main-content'); document.getElementById('main-content')?.focus();">Skip to main content</a>
 <input id="hms-sidebar-toggle" class="hms-visually-hidden" type="checkbox" tabindex="-1" aria-hidden="true" aria-controls="primary-navigation" />
 <div class="hms-shell">
     <aside class="hms-sidebar" aria-label="Application navigation">

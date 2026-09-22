@@ -2,11 +2,11 @@
 
 ## Snapshot
 
-- **generatedAtUtc:** `2026-09-22T21:32:15.5905314+00:00`
+- **generatedAtUtc:** `2026-09-22T21:40:01.0097534+00:00`
 - **gitBranch:** `main`
-- **gitCommit:** `cc20698b1bb868e9df8138c09fc06e6ce1d5dbf9`
+- **gitCommit:** `e5b9be004f05ab94c3d4e51ed8a25fed069e24ce`
 - **workingTreeDirty:** `True`
-- **sourceFingerprint:** `bb62df0cb89e96168e7cf62fc06703747a1d92394da561c7497f228840e221df`
+- **sourceFingerprint:** `d0fe310403632c3dac53b132c3a97b1b18e95c674314397be27f752400a46a41`
 - Framework: net10.0
 - Structural extraction only: **0 LLM API calls / 0 LLM tokens**. No statistical community clustering is claimed; project ownership supplies the visual groups.
 
