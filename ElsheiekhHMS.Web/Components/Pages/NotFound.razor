@@ -1,5 +1,11 @@
-﻿@page "/not-found"
+@page "/not-found"
 @layout MainLayout
 
-<h3>Not Found</h3>
-<p>Sorry, the content you are looking for does not exist.</p>
+<PageTitle>Not found</PageTitle>
+
+<PageHeader Eyebrow="Navigation" Title="We could not find that page" Description="The address may be outdated or the module may not be available in this phase." />
+<ErrorState Title="Page not found" Message="Return to the workspace and choose an available area." HeadingId="not-found-heading">
+    <Actions>
+        <a class="btn btn-primary" href="/">Return home</a>
+    </Actions>
+</ErrorState>

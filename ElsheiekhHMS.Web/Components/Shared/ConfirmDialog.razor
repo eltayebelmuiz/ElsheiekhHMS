@@ -1,0 +1,28 @@
+@if (IsOpen)
+{
+    <div class="hms-dialog-backdrop" role="presentation">
+        <section class="hms-dialog" role="dialog" aria-modal="true" aria-labelledby="@TitleId" aria-describedby="@MessageId">
+            <div class="hms-dialog__header">
+                <h2 id="@TitleId">@Title</h2>
+                <button type="button" class="hms-icon-button" aria-label="Close" @onclick="() => OnCancel.InvokeAsync()">×</button>
+            </div>
+            <p id="@MessageId">@Message</p>
+            <div class="hms-dialog__actions">
+                <button type="button" class="btn btn-secondary" @onclick="() => OnCancel.InvokeAsync()">@CancelText</button>
+                <button type="button" class="btn btn-danger" @onclick="() => OnConfirm.InvokeAsync()">@ConfirmText</button>
+            </div>
+        </section>
+    </div>
+}
+
+@code {
+    [Parameter] public bool IsOpen { get; set; }
+    [Parameter] public string Title { get; set; } = "Confirm action";
+    [Parameter] public string Message { get; set; } = "Are you sure you want to continue?";
+    [Parameter] public string ConfirmText { get; set; } = "Confirm";
+    [Parameter] public string CancelText { get; set; } = "Cancel";
+    [Parameter] public EventCallback OnConfirm { get; set; }
+    [Parameter] public EventCallback OnCancel { get; set; }
+    [Parameter] public string TitleId { get; set; } = "confirm-dialog-title";
+    [Parameter] public string MessageId { get; set; } = "confirm-dialog-message";
+}

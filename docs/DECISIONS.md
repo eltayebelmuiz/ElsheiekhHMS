@@ -911,3 +911,27 @@ schema, migration, model snapshot, package, or database change is introduced
 by this acceptance. Subsequent backend changes discovered during UI work
 require explicit justification and review rather than incidental UI-driven
 rewrites.
+
+## ADR-030 — Phase 12A Blazor UI foundation
+
+**Status:** Complete
+**Phase:** 12A
+
+### Decision
+
+Build the Phase 12A presentation foundation in `ElsheiekhHMS.Web` using the
+existing .NET 10 Blazor Web App Interactive Server host. Retain Bootstrap 5.3.3
+as a low-level CSS dependency and layer a Web-owned token and component system
+on top. Use semantic landmarks, CSS-only responsive navigation, logical CSS
+properties, and accessible text/CSS markers without adding an icon package or
+frontend framework. Role-aware navigation is presentation only; backend policy
+and service authorization remain authoritative.
+
+### Consequences
+
+The shell and reusable patterns are available for later module pages, but no
+Patient, Department, Appointment, Queue, Provider, Encounter, or dashboard
+workflow was implemented. Authentication account screens remain a Phase 12B
+responsibility. English/LTR is current scope; RTL/localization is future-ready
+through document direction and logical properties. The Appointment-to-Queue
+workflow boundary and Queue/Encounter boundary remain unchanged.

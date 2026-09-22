@@ -1,7 +1,83 @@
-﻿@page "/"
+@page "/"
+@rendermode InteractiveServer
 
-<PageTitle>Home</PageTitle>
+<PageTitle>Workspace</PageTitle>
 
-<h1>Hello, world!</h1>
+<PageHeader Eyebrow="Hospital operations" Title="Welcome to the workspace" Description="A calm, secure starting point for the EL-Shiekh Medical Complex team." />
 
-Welcome to your new app.
+<div class="hms-hero-grid">
+    <section class="hms-panel hms-panel--welcome" aria-labelledby="workspace-heading">
+        <div class="hms-panel__content">
+            <span class="hms-kicker">PHASE 12A · UI FOUNDATION</span>
+            <h2 id="workspace-heading">One operational view for every approved workflow.</h2>
+            <p>Patient, department, appointment, and queue screens will be introduced in their approved sequence. This foundation keeps each screen consistent, accessible, and connected to the existing application services.</p>
+            <AuthorizeView>
+                <Authorized>
+                    <AppAlert Tone="AppAlert.AlertTone.Success" Title="Session active" Message="Your account is authenticated. Access is still enforced by the backend service policies." />
+                </Authorized>
+                <NotAuthorized>
+                    <AppAlert Tone="AppAlert.AlertTone.Information" Title="Read-only welcome" Message="Sign in with an approved hospital account to access operational workflows." />
+                </NotAuthorized>
+            </AuthorizeView>
+        </div>
+        <div class="hms-hero-grid__aside" aria-hidden="true">
+            <span class="hms-hero-grid__seal">E</span>
+            <span>Trustworthy<br />care operations</span>
+        </div>
+    </section>
+
+    <section class="hms-panel" aria-labelledby="module-heading">
+        <div class="hms-panel__header">
+            <div>
+                <p class="hms-eyebrow">Navigation foundation</p>
+                <h2 id="module-heading">Approved modules</h2>
+            </div>
+            <StatusBadge Text="Foundation" Tone="StatusBadge.StatusTone.Information" />
+        </div>
+        <ul class="hms-module-list">
+            <li><span class="hms-module-list__mark">P</span><span>Patients</span><small>Next UI module</small></li>
+            <li><span class="hms-module-list__mark">D</span><span>Departments</span><small>Next UI module</small></li>
+            <li><span class="hms-module-list__mark">A</span><span>Appointments</span><small>Next UI module</small></li>
+            <li><span class="hms-module-list__mark">Q</span><span>Queue</span><small>Next UI module</small></li>
+        </ul>
+    </section>
+</div>
+
+<section class="hms-showcase" aria-labelledby="patterns-heading">
+    <PageHeader Eyebrow="Reusable patterns" Title="Operational UI language" Description="Small, composable building blocks for later module screens. The examples below contain no production data." HeadingId="patterns-heading" />
+    <div class="hms-showcase-grid">
+        <section class="hms-panel" aria-labelledby="feedback-heading">
+            <div class="hms-panel__header"><h2 id="feedback-heading">Feedback and status</h2><StatusBadge Text="Active" Tone="StatusBadge.StatusTone.Success" /></div>
+            <div class="hms-stack">
+                <AppAlert Tone="AppAlert.AlertTone.Information" Title="Information" Message="Use concise, safe guidance for routine state changes." />
+                <AppAlert Tone="AppAlert.AlertTone.Warning" Title="Review required" Message="Possible duplicate patients remain a warning and never block registration." />
+                <AppAlert Tone="AppAlert.AlertTone.Danger" Title="Conflict" Message="The record changed after it was opened. Reload before saving." />
+            </div>
+        </section>
+        <section class="hms-panel" aria-labelledby="list-heading">
+            <div class="hms-panel__header"><h2 id="list-heading">List and search</h2><span class="hms-result-count">0 results</span></div>
+            <SearchBox Label="Search records" Placeholder="Search by name or code" InputId="foundation-search" />
+            <EmptyState Title="No records yet" Message="Create an approved record to see it here." HasSearch="false" />
+        </section>
+    </div>
+</section>
+
+<section class="hms-panel hms-form-panel" aria-labelledby="form-heading">
+    <div class="hms-panel__header"><div><p class="hms-eyebrow">Form foundation</p><h2 id="form-heading">Clear input and safe actions</h2></div><span class="hms-helper-text">Presentation example</span></div>
+    <form class="hms-form">
+        <div class="hms-form__grid">
+            <div class="hms-field"><label for="example-name">Display name <span aria-hidden="true">*</span></label><input id="example-name" class="form-control" placeholder="Example value" required /><span class="hms-helper-text">Use the label and helper text pattern on module forms.</span></div>
+            <div class="hms-field"><label for="example-status">Status</label><select id="example-status" class="form-select"><option>Active</option><option>Inactive</option></select></div>
+        </div>
+        <div class="hms-form__actions"><button type="button" class="btn btn-primary" @onclick="ShowConfirmation">Preview action</button><button type="button" class="btn btn-outline-secondary">Cancel</button></div>
+    </form>
+</section>
+
+<ConfirmDialog IsOpen="@showConfirmation" Title="Preview a protected action" Message="Later modules will explain the record, impact, and available recovery before a destructive action." ConfirmText="Continue" OnConfirm="CloseConfirmation" OnCancel="CloseConfirmation" />
+
+@code {
+    private bool showConfirmation;
+
+    private void ShowConfirmation() => showConfirmation = true;
+    private void CloseConfirmation() => showConfirmation = false;
+}

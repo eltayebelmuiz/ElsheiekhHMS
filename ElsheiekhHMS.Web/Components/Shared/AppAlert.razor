@@ -1,0 +1,32 @@
+<div class="hms-alert hms-alert--@Tone.ToString().ToLowerInvariant()" role="@((Tone is AlertTone.Danger) ? "alert" : "status")">
+    <span class="hms-alert__marker" aria-hidden="true">@Marker</span>
+    <div>
+        @if (!string.IsNullOrWhiteSpace(Title))
+        {
+            <strong>@Title</strong>
+        }
+        <div>@Message</div>
+    </div>
+</div>
+
+@code {
+    [Parameter, EditorRequired] public string Message { get; set; } = string.Empty;
+    [Parameter] public string? Title { get; set; }
+    [Parameter] public AlertTone Tone { get; set; } = AlertTone.Information;
+
+    private string Marker => Tone switch
+    {
+        AlertTone.Success => "✓",
+        AlertTone.Warning => "!",
+        AlertTone.Danger => "!",
+        _ => "i"
+    };
+
+    public enum AlertTone
+    {
+        Information,
+        Success,
+        Warning,
+        Danger
+    }
+}

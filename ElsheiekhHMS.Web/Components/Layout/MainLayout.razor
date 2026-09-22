@@ -1,23 +1,52 @@
-﻿@inherits LayoutComponentBase
+@inherits LayoutComponentBase
 
-<div class="page">
-    <div class="sidebar">
+<input id="hms-sidebar-toggle" class="hms-visually-hidden" type="checkbox" aria-label="Toggle navigation" />
+<div class="hms-shell">
+    <aside class="hms-sidebar" aria-label="Application navigation">
         <NavMenu />
+    </aside>
+    <label class="hms-sidebar-scrim" for="hms-sidebar-toggle" aria-hidden="true"></label>
+
+    <div class="hms-shell__content">
+        <header class="hms-topbar">
+            <div class="hms-topbar__inner">
+                <label class="hms-menu-toggle" for="hms-sidebar-toggle">
+                    <span class="hms-menu-toggle__mark" aria-hidden="true">☰</span>
+                    <span>Menu</span>
+                </label>
+                <div class="hms-topbar__context">
+                    <span class="hms-topbar__product">EL-Shiekh Medical Complex</span>
+                    <span class="hms-topbar__section">Hospital Management System</span>
+                </div>
+                <div class="hms-user-area">
+                    <AuthorizeView>
+                        <Authorized Context="authState">
+                            <span class="hms-user-area__label">Signed in as</span>
+                            <strong>@(authState.User.Identity?.Name ?? "Authenticated user")</strong>
+                        </Authorized>
+                        <NotAuthorized>
+                            <a class="hms-user-area__signin" href="/login">Sign in</a>
+                        </NotAuthorized>
+                    </AuthorizeView>
+                </div>
+            </div>
+        </header>
+
+        <main id="main-content" class="hms-main" tabindex="-1">
+            <article class="hms-content">
+                @Body
+            </article>
+        </main>
+
+        <footer class="hms-footer">
+            <span>EL-Shiekh Medical Complex</span>
+            <span>Operational workspace</span>
+        </footer>
     </div>
-
-    <main>
-        <div class="top-row px-4">
-            <a href="https://learn.microsoft.com/aspnet/core/" target="_blank">About</a>
-        </div>
-
-        <article class="content px-4">
-            @Body
-        </article>
-    </main>
 </div>
 
 <div id="blazor-error-ui" data-nosnippet>
-    An unhandled error has occurred.
+    <span>An unexpected error interrupted this screen.</span>
     <a href="." class="reload">Reload</a>
-    <span class="dismiss">🗙</span>
+    <button type="button" class="dismiss" aria-label="Dismiss error">×</button>
 </div>

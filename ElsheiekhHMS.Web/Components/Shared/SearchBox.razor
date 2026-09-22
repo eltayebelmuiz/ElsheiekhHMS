@@ -1,0 +1,17 @@
+<div class="hms-search-box">
+    <label for="@InputId">@Label</label>
+    <div class="hms-search-box__control">
+        <span class="hms-search-box__marker" aria-hidden="true">⌕</span>
+        <input id="@InputId" class="form-control" type="search" value="@Value" placeholder="@Placeholder" @oninput="OnInput" />
+    </div>
+</div>
+
+@code {
+    [Parameter] public string? Value { get; set; }
+    [Parameter] public EventCallback<string?> ValueChanged { get; set; }
+    [Parameter] public string Label { get; set; } = "Search";
+    [Parameter] public string Placeholder { get; set; } = "Search records";
+    [Parameter] public string InputId { get; set; } = "search-input";
+
+    private Task OnInput(ChangeEventArgs args) => ValueChanged.InvokeAsync(args.Value?.ToString());
+}

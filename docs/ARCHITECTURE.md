@@ -280,3 +280,20 @@ Known conflicts are preserved for explicit reconciliation:
 - [Generated architecture report](../graphify-out/GRAPH_REPORT.md)
 - [Interactive architecture explorer](../graphify-out/graph.html)
 - [Detailed specification workspace](../speckit/my-project/)
+
+### Phase 12A UI foundation
+
+Phase 12A establishes the Web-owned Blazor foundation over the frozen backend:
+Interactive Server remains the approved render mode, Bootstrap 5.3.3 remains a
+low-level CSS dependency, and `app.css` provides the HMS token, typography,
+layout, responsive, accessibility, form, table/list, status, feedback, loading,
+empty, error, concurrency, and confirmation patterns. The shell uses semantic
+landmarks and CSS-only responsive navigation; role-aware visibility is a UX aid,
+while Application authorization remains authoritative. English/LTR remains the
+current product scope; the token and logical-property approach is ready for a
+future RTL/localization phase. No CRUD pages, Provider UI, Encounter workflow,
+API layer, backend project, schema, or package changes were introduced.
+
+The next approved UI gate is Phase 12B (authentication, application shell, and
+navigation). Patient, Department, Appointment, and Queue pages remain deferred
+to their subsequent modules.
