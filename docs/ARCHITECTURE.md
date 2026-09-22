@@ -144,7 +144,7 @@ liveness at `/health` and `/health/live` without SQL, and anonymous application
 readiness at `/health/ready` using `DbContext.Database.CanConnectAsync`. Readiness
 does not migrate, seed, write, or expose raw database errors. No third-party
 observability, retry, pooling, cache, broker, or background infrastructure was
-introduced. Phase 10 is in progress; 10A authorization/host-security, 10B SQL concurrency/atomicity, 10C lifecycle/workflow, and 10D controlled performance/production-readiness verification are complete for the implementation scope, while final Phase 10 closeout remains.
+introduced. Phase 10 is complete for the approved implementation scope; 10A authorization/host-security, 10B SQL concurrency/atomicity, 10C lifecycle/workflow, and 10D controlled performance/production-readiness verification are complete with 418 tests passing. Phase 11 Backend Review is the next phase and has not started. Accepted non-blocking limitations remain full production-error/antiforgery host assertions, deterministic application-lock timeout and Phase08B partial-success SQL failure injection, hard local latency assertions, and production certification of PRD performance targets.
 
 ## 7. Testing architecture
 

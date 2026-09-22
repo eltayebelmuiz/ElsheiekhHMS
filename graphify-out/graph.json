@@ -1,11 +1,11 @@
 {
   "schemaVersion": "1.0",
-  "generatedAtUtc": "2026-09-22T13:33:03.9560005\u002B00:00",
-  "gitCommit": "dcbd3a9625aeeb5afa69ed5b104bd8bf6aadc1ad",
+  "generatedAtUtc": "2026-09-22T15:59:29.1946880\u002B00:00",
+  "gitCommit": "7f35b373e11a4273a2593231fd896f0002704107",
   "gitBranch": "main",
   "workingTreeDirty": true,
-  "gitStatusAtGeneration": "M DEVELOPMENT_ROADMAP.md\n M ElsheiekhHMS.Infrastructure/ElsheiekhHMS.Infrastructure.csproj\n M ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj\n M ElsheiekhHMS.Web/Program.cs\n M README.md\n M docs/ARCHITECTURE.md\n M docs/DECISIONS.md\n M graphify-out/GRAPH_REPORT.md\n M graphify-out/graph.html\n M graphify-out/graph.json\n?? ElsheiekhHMS.Infrastructure/Health/HmsHealthChecks.cs\n?? ElsheiekhHMS.Infrastructure/Observability/RequestObservabilityMiddleware.cs\n?? ElsheiekhHMS.Tests/Integration/Persistence/SqlServerReadinessHealthCheckTests.cs\n?? ElsheiekhHMS.Tests/Unit/Infrastructure/Health/HealthCheckTests.cs\n?? ElsheiekhHMS.Tests/Unit/Infrastructure/Observability/RequestObservabilityMiddlewareTests.cs",
-  "sourceFingerprint": "d97c30c1eb34a5f825c7f194fc2c932d60ad863fa6b8fc6c5df1b7b9cdda028c",
+  "gitStatusAtGeneration": "M DEVELOPMENT_ROADMAP.md\n M README.md\n M docs/ARCHITECTURE.md\n M graphify-out/GRAPH_REPORT.md\n M graphify-out/graph.html\n M graphify-out/graph.json",
+  "sourceFingerprint": "57de8d1e9a7dfa128dff74b69d4be2067fb0d72576ba9686a437e72bb2dcc242",
   "generatorFingerprint": "03eee0a8853a7e84af6cbe571d34e6f7d820505ac8f5670a719d0d63b113840c",
   "fingerprintAlgorithm": "SHA-256 of ordinal path \u002B NUL \u002B content SHA-256 records joined with LF; sourceManifest defines inputs; graphify-out excluded everywhere",
   "sourceManifest": [
@@ -627,11 +627,11 @@
     },
     {
       "path": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
-      "sha256": "77d2c9acb6247658e576011dd01805dbc1784caad7cad4d59c9d7a2e17fc0590"
+      "sha256": "a75b4f5daa9c28e1a3ff342060d2d3035459f13591c82469bef312ffa9f9f7db"
     },
     {
       "path": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentArrivalQueueSqlServerTests.cs",
-      "sha256": "26457313fe11e2f760fe062e38e0a4263b1c2858e6cb7a2630dd721453acd3ab"
+      "sha256": "fbbff79a395ed62d3411a59c5f69f45fc8b9d565048dd5f546e9a125cd0f1809"
     },
     {
       "path": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentCodeAllocatorSqlServerTests.cs",
@@ -639,15 +639,19 @@
     },
     {
       "path": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentServiceSqlServerTests.cs",
-      "sha256": "141cfc7d1edf0b0b16bfc9ca375ba88e02491e39c4e9ec8e51572e8a4dbf61b1"
+      "sha256": "9b61faea12cfb58734a385219486abb63acb0fb1d8ac176b5b5b2c0599d3758e"
     },
     {
       "path": "ElsheiekhHMS.Tests/Integration/Persistence/DepartmentServiceSqlServerTests.cs",
-      "sha256": "b5bb9318d48c9bf587b1ee5d52ff606c5c6dc3bf14ac5031b73958b9efbb616b"
+      "sha256": "0d9314b84fc2d2e7ab762cdf48fb6880541d163dfc70191eccca70e1ea73b49f"
     },
     {
       "path": "ElsheiekhHMS.Tests/Integration/Persistence/ElsheiekhHmsDbContextSqlServerTests.cs",
       "sha256": "7afc1904643d2fc08f7228f40ee061cdde84f1e988a3c6a52cb38fae1fb49a79"
+    },
+    {
+      "path": "ElsheiekhHMS.Tests/Integration/Persistence/HmsHealthEndpointHostTests.cs",
+      "sha256": "9f5f45cd72362660212bf6e3bb5f085202a25488811bec07ba2df59373051993"
     },
     {
       "path": "ElsheiekhHMS.Tests/Integration/Persistence/IdentityAndAuditLogSqlServerTests.cs",
@@ -658,12 +662,16 @@
       "sha256": "684033a133439ea41bbd96ce4faffb559ade1415e1f1423a1bfb50800ffec264"
     },
     {
+      "path": "ElsheiekhHMS.Tests/Integration/Persistence/PerformanceSmokeSqlServerTests.cs",
+      "sha256": "8f1c630d8fa40960fb5633bbf7dee48d18c2b410a0ce75a769e521baaf7ff22b"
+    },
+    {
       "path": "ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs",
-      "sha256": "c07e9e7e7aba84a6baffb669f4db79f3cebef1dfd24f03f35ae8149475980333"
+      "sha256": "c6cf533a1cafc84b449b9f32db73512774ac454150cd8075dcb2febc55595843"
     },
     {
       "path": "ElsheiekhHMS.Tests/Integration/Persistence/SqlServerReadinessHealthCheckTests.cs",
-      "sha256": "3f06591bb3a552b4747219e01499bd18e8c77398dbd35358a39be0e83df69e37"
+      "sha256": "7b29969edfffc57fb4c8782737d38722e535064fbbc7c2a430d0413865dbcced"
     },
     {
       "path": "ElsheiekhHMS.Tests/Integration/Persistence/SqlServerTestDatabaseFixture.cs",
@@ -683,7 +691,7 @@
     },
     {
       "path": "ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentServiceTests.cs",
-      "sha256": "3dc9f6202eb4cce22f99199b3df5982e2e909dbf962937e633c2b39b07693d47"
+      "sha256": "a854ec923307bbe9125cf510e81f8374bb8f28a1eb4bf863e23d0b7716d8d2f3"
     },
     {
       "path": "ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentValidationTests.cs",
@@ -739,7 +747,7 @@
     },
     {
       "path": "ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs",
-      "sha256": "5c798457da145606ca43d4a745f00aac464ee1ba61372b4a49d89da92da11bba"
+      "sha256": "182a09aaef2447d2e7cc312761eb985690958c70bc2291e94c4655d1ec033daa"
     },
     {
       "path": "ElsheiekhHMS.Tests/Unit/Application/Queue/QueueValidationTests.cs",
@@ -755,7 +763,7 @@
     },
     {
       "path": "ElsheiekhHMS.Tests/Unit/Application/Workflows/PatientIntakeAppointmentServiceTests.cs",
-      "sha256": "7328bc08fe95d0d9d68faa34753ca8bfa9c55b52d5da9db8e3fcae4d4b97bcdc"
+      "sha256": "8a4a50c907266a31b767a89aba5b81994df16952e1ddf77091357e5843f8eee1"
     },
     {
       "path": "ElsheiekhHMS.Tests/Unit/Domain/Common/AuditableEntityTests.cs",
@@ -814,6 +822,10 @@
       "sha256": "0714f170ec85af653cdccd3207650558a014a3246953ce7c1f1449a33568fe97"
     },
     {
+      "path": "ElsheiekhHMS.Tests/Unit/Infrastructure/Configuration/InfrastructureConfigurationSafetyTests.cs",
+      "sha256": "76963fe0c1f884cc72cbb3e9a7e313abf7a0a6657d43bdd6620c22252d51a279"
+    },
+    {
       "path": "ElsheiekhHMS.Tests/Unit/Infrastructure/ElsheiekhHmsDbContextModelTests.cs",
       "sha256": "c2daf0e3fa6359b21f360b3f12f5fbad274353f5d1a8407c60540a3c54b4f589"
     },
@@ -848,6 +860,14 @@
     {
       "path": "ElsheiekhHMS.Tests/Unit/Infrastructure/Observability/RequestObservabilityMiddlewareTests.cs",
       "sha256": "3b53dda0993c74044ea8f7b4b9d9ff4043ad9dd3bb8d7032244450d56c11c5dc"
+    },
+    {
+      "path": "ElsheiekhHMS.Tests/Unit/Web/Security/AuthenticationStateValidationTests.cs",
+      "sha256": "273022d882f783b4f6b668c13e992ea1e97ab4d7be6abc98376bf3700a31b44b"
+    },
+    {
+      "path": "ElsheiekhHMS.Tests/Unit/Web/Security/AuthorizationConfigurationTests.cs",
+      "sha256": "895ee66126cbcc029534e5d823ccf7138917bfcec6b5ad17319fb2854c91196f"
     },
     {
       "path": "ElsheiekhHMS.Web/Components/App.razor",
@@ -919,7 +939,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "6e1cef2d572039b942ca32e2a021fd023b303c98c7ceb6e11ff92df208c0c315"
+      "sha256": "6d43c582cbaa4b3f5838c14fb3e3284e19d9e13120b370e72c65b1f23bed8aaf"
     }
   ],
   "repository": {
@@ -929,16 +949,16 @@
   },
   "summary": {
     "projectCount": 5,
-    "sourceFileCount": 210,
+    "sourceFileCount": 215,
     "razorFileCount": 11,
-    "typeCount": 265,
+    "typeCount": 280,
     "interfaceCount": 14,
     "testClassCount": 11,
     "testMethodCount": 76,
     "testCount": 113,
     "dynamicTheoryCount": 0,
-    "nodeCount": 580,
-    "edgeCount": 1110
+    "nodeCount": 603,
+    "edgeCount": 1167
   },
   "projects": [
     {
@@ -1178,7 +1198,8 @@
       "projectReferences": [
         "ElsheiekhHMS.Application/ElsheiekhHMS.Application.csproj",
         "ElsheiekhHMS.Core/ElsheiekhHMS.Core.csproj",
-        "ElsheiekhHMS.Infrastructure/ElsheiekhHMS.Infrastructure.csproj"
+        "ElsheiekhHMS.Infrastructure/ElsheiekhHMS.Infrastructure.csproj",
+        "ElsheiekhHMS.Web/ElsheiekhHMS.Web.csproj"
       ],
       "packageReferences": [
         {
@@ -1208,8 +1229,10 @@
         "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentServiceSqlServerTests.cs",
         "ElsheiekhHMS.Tests/Integration/Persistence/DepartmentServiceSqlServerTests.cs",
         "ElsheiekhHMS.Tests/Integration/Persistence/ElsheiekhHmsDbContextSqlServerTests.cs",
+        "ElsheiekhHMS.Tests/Integration/Persistence/HmsHealthEndpointHostTests.cs",
         "ElsheiekhHMS.Tests/Integration/Persistence/IdentityAndAuditLogSqlServerTests.cs",
         "ElsheiekhHMS.Tests/Integration/Persistence/PatientServiceSqlServerTests.cs",
+        "ElsheiekhHMS.Tests/Integration/Persistence/PerformanceSmokeSqlServerTests.cs",
         "ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs",
         "ElsheiekhHMS.Tests/Integration/Persistence/SqlServerReadinessHealthCheckTests.cs",
         "ElsheiekhHMS.Tests/Integration/Persistence/SqlServerTestDatabaseFixture.cs",
@@ -1249,6 +1272,7 @@
         "ElsheiekhHMS.Tests/Unit/Infrastructure/Allocation/AllocatorRegistrationTests.cs",
         "ElsheiekhHMS.Tests/Unit/Infrastructure/Auditing/AuditEventWriterTests.cs",
         "ElsheiekhHMS.Tests/Unit/Infrastructure/Auditing/AuditLogModelTests.cs",
+        "ElsheiekhHMS.Tests/Unit/Infrastructure/Configuration/InfrastructureConfigurationSafetyTests.cs",
         "ElsheiekhHMS.Tests/Unit/Infrastructure/ElsheiekhHmsDbContextModelTests.cs",
         "ElsheiekhHMS.Tests/Unit/Infrastructure/ElsheiekhHmsDbContextTests.cs",
         "ElsheiekhHMS.Tests/Unit/Infrastructure/Health/HealthCheckTests.cs",
@@ -1257,7 +1281,9 @@
         "ElsheiekhHMS.Tests/Unit/Infrastructure/Identity/IdentityModelTests.cs",
         "ElsheiekhHMS.Tests/Unit/Infrastructure/Identity/IdentityOptionsTests.cs",
         "ElsheiekhHMS.Tests/Unit/Infrastructure/Identity/IdentityRoleSeederTests.cs",
-        "ElsheiekhHMS.Tests/Unit/Infrastructure/Observability/RequestObservabilityMiddlewareTests.cs"
+        "ElsheiekhHMS.Tests/Unit/Infrastructure/Observability/RequestObservabilityMiddlewareTests.cs",
+        "ElsheiekhHMS.Tests/Unit/Web/Security/AuthenticationStateValidationTests.cs",
+        "ElsheiekhHMS.Tests/Unit/Web/Security/AuthorizationConfigurationTests.cs"
       ]
     },
     {
@@ -3786,6 +3812,22 @@
       "dynamicTheories": 0
     },
     {
+      "id": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/HmsHealthEndpointHostTests.cs",
+      "name": "HmsHealthEndpointHostTests.cs",
+      "label": "HmsHealthEndpointHostTests.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Tests",
+      "file": "ElsheiekhHMS.Tests/Integration/Persistence/HmsHealthEndpointHostTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Integration/Persistence/HmsHealthEndpointHostTests.cs",
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
       "id": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/IdentityAndAuditLogSqlServerTests.cs",
       "name": "IdentityAndAuditLogSqlServerTests.cs",
       "label": "IdentityAndAuditLogSqlServerTests.cs",
@@ -3810,6 +3852,22 @@
       "project": "ElsheiekhHMS.Tests",
       "file": "ElsheiekhHMS.Tests/Integration/Persistence/PatientServiceSqlServerTests.cs",
       "source_file": "ElsheiekhHMS.Tests/Integration/Persistence/PatientServiceSqlServerTests.cs",
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/PerformanceSmokeSqlServerTests.cs",
+      "name": "PerformanceSmokeSqlServerTests.cs",
+      "label": "PerformanceSmokeSqlServerTests.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Tests",
+      "file": "ElsheiekhHMS.Tests/Integration/Persistence/PerformanceSmokeSqlServerTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Integration/Persistence/PerformanceSmokeSqlServerTests.cs",
       "external": false,
       "community": 3,
       "community_name": "ElsheiekhHMS.Tests",
@@ -4442,6 +4500,22 @@
       "dynamicTheories": 0
     },
     {
+      "id": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Infrastructure/Configuration/InfrastructureConfigurationSafetyTests.cs",
+      "name": "InfrastructureConfigurationSafetyTests.cs",
+      "label": "InfrastructureConfigurationSafetyTests.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Tests",
+      "file": "ElsheiekhHMS.Tests/Unit/Infrastructure/Configuration/InfrastructureConfigurationSafetyTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Unit/Infrastructure/Configuration/InfrastructureConfigurationSafetyTests.cs",
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
       "id": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Infrastructure/ElsheiekhHmsDbContextModelTests.cs",
       "name": "ElsheiekhHmsDbContextModelTests.cs",
       "label": "ElsheiekhHmsDbContextModelTests.cs",
@@ -4578,6 +4652,38 @@
       "project": "ElsheiekhHMS.Tests",
       "file": "ElsheiekhHMS.Tests/Unit/Infrastructure/Observability/RequestObservabilityMiddlewareTests.cs",
       "source_file": "ElsheiekhHMS.Tests/Unit/Infrastructure/Observability/RequestObservabilityMiddlewareTests.cs",
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Web/Security/AuthenticationStateValidationTests.cs",
+      "name": "AuthenticationStateValidationTests.cs",
+      "label": "AuthenticationStateValidationTests.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Tests",
+      "file": "ElsheiekhHMS.Tests/Unit/Web/Security/AuthenticationStateValidationTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Unit/Web/Security/AuthenticationStateValidationTests.cs",
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Web/Security/AuthorizationConfigurationTests.cs",
+      "name": "AuthorizationConfigurationTests.cs",
+      "label": "AuthorizationConfigurationTests.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Tests",
+      "file": "ElsheiekhHMS.Tests/Unit/Web/Security/AuthorizationConfigurationTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Unit/Web/Security/AuthorizationConfigurationTests.cs",
       "external": false,
       "community": 3,
       "community_name": "ElsheiekhHMS.Tests",
@@ -5906,6 +6012,21 @@
       "dynamicTheories": 0
     },
     {
+      "id": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Infrastructure.Configuration",
+      "name": "ElsheiekhHMS.Tests.Unit.Infrastructure.Configuration",
+      "label": "ElsheiekhHMS.Tests.Unit.Infrastructure.Configuration",
+      "kind": "namespace",
+      "type": "namespace",
+      "project": "ElsheiekhHMS.Tests",
+      "namespace": "ElsheiekhHMS.Tests.Unit.Infrastructure.Configuration",
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
       "id": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Infrastructure.Health",
       "name": "ElsheiekhHMS.Tests.Unit.Infrastructure.Health",
       "label": "ElsheiekhHMS.Tests.Unit.Infrastructure.Health",
@@ -5943,6 +6064,21 @@
       "type": "namespace",
       "project": "ElsheiekhHMS.Tests",
       "namespace": "ElsheiekhHMS.Tests.Unit.Infrastructure.Observability",
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Web.Security",
+      "name": "ElsheiekhHMS.Tests.Unit.Web.Security",
+      "label": "ElsheiekhHMS.Tests.Unit.Web.Security",
+      "kind": "namespace",
+      "type": "namespace",
+      "project": "ElsheiekhHMS.Tests",
+      "namespace": "ElsheiekhHMS.Tests.Unit.Web.Security",
       "external": false,
       "community": 3,
       "community_name": "ElsheiekhHMS.Tests",
@@ -9767,8 +9903,8 @@
       "namespace": "ElsheiekhHMS.Tests.Integration.Persistence",
       "file": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentArrivalQueueSqlServerTests.cs",
       "source_file": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentArrivalQueueSqlServerTests.cs",
-      "source_location": "L21",
-      "line": 21,
+      "source_location": "L22",
+      "line": 22,
       "accessibility": "public",
       "abstract": false,
       "sealed": true,
@@ -9791,8 +9927,8 @@
       "namespace": "ElsheiekhHMS.Tests.Integration.Persistence",
       "file": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentArrivalQueueSqlServerTests.cs",
       "source_file": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentArrivalQueueSqlServerTests.cs",
-      "source_location": "L83",
-      "line": 83,
+      "source_location": "L118",
+      "line": 118,
       "accessibility": "private",
       "abstract": false,
       "sealed": true,
@@ -9815,8 +9951,8 @@
       "namespace": "ElsheiekhHMS.Tests.Integration.Persistence",
       "file": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentArrivalQueueSqlServerTests.cs",
       "source_file": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentArrivalQueueSqlServerTests.cs",
-      "source_location": "L77",
-      "line": 77,
+      "source_location": "L112",
+      "line": 112,
       "accessibility": "private",
       "abstract": false,
       "sealed": true,
@@ -9911,8 +10047,8 @@
       "namespace": "ElsheiekhHMS.Tests.Integration.Persistence",
       "file": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentServiceSqlServerTests.cs",
       "source_file": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentServiceSqlServerTests.cs",
-      "source_location": "L159",
-      "line": 159,
+      "source_location": "L297",
+      "line": 297,
       "accessibility": "private",
       "abstract": false,
       "sealed": true,
@@ -9935,8 +10071,8 @@
       "namespace": "ElsheiekhHMS.Tests.Integration.Persistence",
       "file": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentServiceSqlServerTests.cs",
       "source_file": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentServiceSqlServerTests.cs",
-      "source_location": "L146",
-      "line": 146,
+      "source_location": "L284",
+      "line": 284,
       "accessibility": "private",
       "abstract": false,
       "sealed": true,
@@ -9959,8 +10095,8 @@
       "namespace": "ElsheiekhHMS.Tests.Integration.Persistence",
       "file": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentServiceSqlServerTests.cs",
       "source_file": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentServiceSqlServerTests.cs",
-      "source_location": "L153",
-      "line": 153,
+      "source_location": "L291",
+      "line": 291,
       "accessibility": "private",
       "abstract": false,
       "sealed": true,
@@ -9983,8 +10119,8 @@
       "namespace": "ElsheiekhHMS.Tests.Integration.Persistence",
       "file": "ElsheiekhHMS.Tests/Integration/Persistence/DepartmentServiceSqlServerTests.cs",
       "source_file": "ElsheiekhHMS.Tests/Integration/Persistence/DepartmentServiceSqlServerTests.cs",
-      "source_location": "L12",
-      "line": 12,
+      "source_location": "L14",
+      "line": 14,
       "accessibility": "public",
       "abstract": false,
       "sealed": true,
@@ -10007,8 +10143,32 @@
       "namespace": "ElsheiekhHMS.Tests.Integration.Persistence",
       "file": "ElsheiekhHMS.Tests/Integration/Persistence/DepartmentServiceSqlServerTests.cs",
       "source_file": "ElsheiekhHMS.Tests/Integration/Persistence/DepartmentServiceSqlServerTests.cs",
-      "source_location": "L120",
-      "line": 120,
+      "source_location": "L159",
+      "line": 159,
+      "accessibility": "private",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Tests.Integration.Persistence.DepartmentServiceSqlServerTests.InvalidAuditWriter",
+      "name": "InvalidAuditWriter",
+      "label": "InvalidAuditWriter",
+      "kind": "class",
+      "type": "class",
+      "fullName": "ElsheiekhHMS.Tests.Integration.Persistence.DepartmentServiceSqlServerTests.InvalidAuditWriter",
+      "project": "ElsheiekhHMS.Tests",
+      "namespace": "ElsheiekhHMS.Tests.Integration.Persistence",
+      "file": "ElsheiekhHMS.Tests/Integration/Persistence/DepartmentServiceSqlServerTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Integration/Persistence/DepartmentServiceSqlServerTests.cs",
+      "source_location": "L164",
+      "line": 164,
       "accessibility": "private",
       "abstract": false,
       "sealed": true,
@@ -10031,8 +10191,8 @@
       "namespace": "ElsheiekhHMS.Tests.Integration.Persistence",
       "file": "ElsheiekhHMS.Tests/Integration/Persistence/DepartmentServiceSqlServerTests.cs",
       "source_file": "ElsheiekhHMS.Tests/Integration/Persistence/DepartmentServiceSqlServerTests.cs",
-      "source_location": "L112",
-      "line": 112,
+      "source_location": "L151",
+      "line": 151,
       "accessibility": "private",
       "abstract": false,
       "sealed": true,
@@ -10106,6 +10266,30 @@
       "source_location": "L196",
       "line": 196,
       "accessibility": "private",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Tests.Integration.Persistence.HmsHealthEndpointHostTests",
+      "name": "HmsHealthEndpointHostTests",
+      "label": "HmsHealthEndpointHostTests",
+      "kind": "class",
+      "type": "class",
+      "fullName": "ElsheiekhHMS.Tests.Integration.Persistence.HmsHealthEndpointHostTests",
+      "project": "ElsheiekhHMS.Tests",
+      "namespace": "ElsheiekhHMS.Tests.Integration.Persistence",
+      "file": "ElsheiekhHMS.Tests/Integration/Persistence/HmsHealthEndpointHostTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Integration/Persistence/HmsHealthEndpointHostTests.cs",
+      "source_location": "L13",
+      "line": 13,
+      "accessibility": "public",
       "abstract": false,
       "sealed": true,
       "static": false,
@@ -10261,6 +10445,126 @@
       "dynamicTheories": 0
     },
     {
+      "id": "type:ElsheiekhHMS.Tests.Integration.Persistence.PerformanceSmokeSqlServerTests",
+      "name": "PerformanceSmokeSqlServerTests",
+      "label": "PerformanceSmokeSqlServerTests",
+      "kind": "class",
+      "type": "class",
+      "fullName": "ElsheiekhHMS.Tests.Integration.Persistence.PerformanceSmokeSqlServerTests",
+      "project": "ElsheiekhHMS.Tests",
+      "namespace": "ElsheiekhHMS.Tests.Integration.Persistence",
+      "file": "ElsheiekhHMS.Tests/Integration/Persistence/PerformanceSmokeSqlServerTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Integration/Persistence/PerformanceSmokeSqlServerTests.cs",
+      "source_location": "L29",
+      "line": 29,
+      "accessibility": "public",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Tests.Integration.Persistence.PerformanceSmokeSqlServerTests.CommandCountingInterceptor",
+      "name": "CommandCountingInterceptor",
+      "label": "CommandCountingInterceptor",
+      "kind": "class",
+      "type": "class",
+      "fullName": "ElsheiekhHMS.Tests.Integration.Persistence.PerformanceSmokeSqlServerTests.CommandCountingInterceptor",
+      "project": "ElsheiekhHMS.Tests",
+      "namespace": "ElsheiekhHMS.Tests.Integration.Persistence",
+      "file": "ElsheiekhHMS.Tests/Integration/Persistence/PerformanceSmokeSqlServerTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Integration/Persistence/PerformanceSmokeSqlServerTests.cs",
+      "source_location": "L258",
+      "line": 258,
+      "accessibility": "private",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Tests.Integration.Persistence.PerformanceSmokeSqlServerTests.FixedTimeProvider",
+      "name": "FixedTimeProvider",
+      "label": "FixedTimeProvider",
+      "kind": "class",
+      "type": "class",
+      "fullName": "ElsheiekhHMS.Tests.Integration.Persistence.PerformanceSmokeSqlServerTests.FixedTimeProvider",
+      "project": "ElsheiekhHMS.Tests",
+      "namespace": "ElsheiekhHMS.Tests.Integration.Persistence",
+      "file": "ElsheiekhHMS.Tests/Integration/Persistence/PerformanceSmokeSqlServerTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Integration/Persistence/PerformanceSmokeSqlServerTests.cs",
+      "source_location": "L253",
+      "line": 253,
+      "accessibility": "private",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Tests.Integration.Persistence.PerformanceSmokeSqlServerTests.SmokeData",
+      "name": "SmokeData",
+      "label": "SmokeData",
+      "kind": "record",
+      "type": "record",
+      "fullName": "ElsheiekhHMS.Tests.Integration.Persistence.PerformanceSmokeSqlServerTests.SmokeData",
+      "project": "ElsheiekhHMS.Tests",
+      "namespace": "ElsheiekhHMS.Tests.Integration.Persistence",
+      "file": "ElsheiekhHMS.Tests/Integration/Persistence/PerformanceSmokeSqlServerTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Integration/Persistence/PerformanceSmokeSqlServerTests.cs",
+      "source_location": "L234",
+      "line": 234,
+      "accessibility": "private",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Tests.Integration.Persistence.PerformanceSmokeSqlServerTests.TestCurrentUser",
+      "name": "TestCurrentUser",
+      "label": "TestCurrentUser",
+      "kind": "record",
+      "type": "record",
+      "fullName": "ElsheiekhHMS.Tests.Integration.Persistence.PerformanceSmokeSqlServerTests.TestCurrentUser",
+      "project": "ElsheiekhHMS.Tests",
+      "namespace": "ElsheiekhHMS.Tests.Integration.Persistence",
+      "file": "ElsheiekhHMS.Tests/Integration/Persistence/PerformanceSmokeSqlServerTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Integration/Persistence/PerformanceSmokeSqlServerTests.cs",
+      "source_location": "L245",
+      "line": 245,
+      "accessibility": "private",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
       "id": "type:ElsheiekhHMS.Tests.Integration.Persistence.QueueServiceSqlServerTests",
       "name": "QueueServiceSqlServerTests",
       "label": "QueueServiceSqlServerTests",
@@ -10271,8 +10575,8 @@
       "namespace": "ElsheiekhHMS.Tests.Integration.Persistence",
       "file": "ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs",
       "source_file": "ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs",
-      "source_location": "L17",
-      "line": 17,
+      "source_location": "L19",
+      "line": 19,
       "accessibility": "public",
       "abstract": false,
       "sealed": true,
@@ -10295,8 +10599,8 @@
       "namespace": "ElsheiekhHMS.Tests.Integration.Persistence",
       "file": "ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs",
       "source_file": "ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs",
-      "source_location": "L171",
-      "line": 171,
+      "source_location": "L437",
+      "line": 437,
       "accessibility": "private",
       "abstract": false,
       "sealed": true,
@@ -10319,8 +10623,8 @@
       "namespace": "ElsheiekhHMS.Tests.Integration.Persistence",
       "file": "ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs",
       "source_file": "ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs",
-      "source_location": "L163",
-      "line": 163,
+      "source_location": "L429",
+      "line": 429,
       "accessibility": "private",
       "abstract": false,
       "sealed": true,
@@ -10343,8 +10647,8 @@
       "namespace": "ElsheiekhHMS.Tests.Integration.Persistence",
       "file": "ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs",
       "source_file": "ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs",
-      "source_location": "L165",
-      "line": 165,
+      "source_location": "L431",
+      "line": 431,
       "accessibility": "private",
       "abstract": false,
       "sealed": true,
@@ -10535,8 +10839,8 @@
       "namespace": "ElsheiekhHMS.Tests.Unit.Application.Appointments",
       "file": "ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentServiceTests.cs",
       "source_file": "ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentServiceTests.cs",
-      "source_location": "L214",
-      "line": 214,
+      "source_location": "L245",
+      "line": 245,
       "accessibility": "private",
       "abstract": false,
       "sealed": true,
@@ -10559,8 +10863,8 @@
       "namespace": "ElsheiekhHMS.Tests.Unit.Application.Appointments",
       "file": "ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentServiceTests.cs",
       "source_file": "ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentServiceTests.cs",
-      "source_location": "L198",
-      "line": 198,
+      "source_location": "L229",
+      "line": 229,
       "accessibility": "private",
       "abstract": false,
       "sealed": true,
@@ -10583,8 +10887,8 @@
       "namespace": "ElsheiekhHMS.Tests.Unit.Application.Appointments",
       "file": "ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentServiceTests.cs",
       "source_file": "ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentServiceTests.cs",
-      "source_location": "L203",
-      "line": 203,
+      "source_location": "L234",
+      "line": 234,
       "accessibility": "private",
       "abstract": false,
       "sealed": true,
@@ -10607,8 +10911,8 @@
       "namespace": "ElsheiekhHMS.Tests.Unit.Application.Appointments",
       "file": "ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentServiceTests.cs",
       "source_file": "ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentServiceTests.cs",
-      "source_location": "L190",
-      "line": 190,
+      "source_location": "L221",
+      "line": 221,
       "accessibility": "private",
       "abstract": false,
       "sealed": true,
@@ -11163,8 +11467,8 @@
       "namespace": "ElsheiekhHMS.Tests.Unit.Application.Queue",
       "file": "ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs",
       "source_file": "ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs",
-      "source_location": "L201",
-      "line": 201,
+      "source_location": "L202",
+      "line": 202,
       "accessibility": "private",
       "abstract": false,
       "sealed": true,
@@ -11187,8 +11491,8 @@
       "namespace": "ElsheiekhHMS.Tests.Unit.Application.Queue",
       "file": "ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs",
       "source_file": "ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs",
-      "source_location": "L184",
-      "line": 184,
+      "source_location": "L185",
+      "line": 185,
       "accessibility": "private",
       "abstract": false,
       "sealed": true,
@@ -11211,8 +11515,8 @@
       "namespace": "ElsheiekhHMS.Tests.Unit.Application.Queue",
       "file": "ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs",
       "source_file": "ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs",
-      "source_location": "L189",
-      "line": 189,
+      "source_location": "L190",
+      "line": 190,
       "accessibility": "private",
       "abstract": false,
       "sealed": true,
@@ -11235,8 +11539,8 @@
       "namespace": "ElsheiekhHMS.Tests.Unit.Application.Queue",
       "file": "ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs",
       "source_file": "ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs",
-      "source_location": "L176",
-      "line": 176,
+      "source_location": "L177",
+      "line": 177,
       "accessibility": "private",
       "abstract": false,
       "sealed": true,
@@ -11427,8 +11731,8 @@
       "namespace": "ElsheiekhHMS.Tests.Unit.Application.Workflows",
       "file": "ElsheiekhHMS.Tests/Unit/Application/Workflows/PatientIntakeAppointmentServiceTests.cs",
       "source_file": "ElsheiekhHMS.Tests/Unit/Application/Workflows/PatientIntakeAppointmentServiceTests.cs",
-      "source_location": "L329",
-      "line": 329,
+      "source_location": "L349",
+      "line": 349,
       "accessibility": "private",
       "abstract": false,
       "sealed": true,
@@ -11451,8 +11755,8 @@
       "namespace": "ElsheiekhHMS.Tests.Unit.Application.Workflows",
       "file": "ElsheiekhHMS.Tests/Unit/Application/Workflows/PatientIntakeAppointmentServiceTests.cs",
       "source_file": "ElsheiekhHMS.Tests/Unit/Application/Workflows/PatientIntakeAppointmentServiceTests.cs",
-      "source_location": "L289",
-      "line": 289,
+      "source_location": "L309",
+      "line": 309,
       "accessibility": "private",
       "abstract": false,
       "sealed": true,
@@ -11475,8 +11779,8 @@
       "namespace": "ElsheiekhHMS.Tests.Unit.Application.Workflows",
       "file": "ElsheiekhHMS.Tests/Unit/Application/Workflows/PatientIntakeAppointmentServiceTests.cs",
       "source_file": "ElsheiekhHMS.Tests/Unit/Application/Workflows/PatientIntakeAppointmentServiceTests.cs",
-      "source_location": "L281",
-      "line": 281,
+      "source_location": "L301",
+      "line": 301,
       "accessibility": "private",
       "abstract": false,
       "sealed": true,
@@ -12028,6 +12332,30 @@
       "dynamicTheories": 0
     },
     {
+      "id": "type:ElsheiekhHMS.Tests.Unit.Infrastructure.Configuration.InfrastructureConfigurationSafetyTests",
+      "name": "InfrastructureConfigurationSafetyTests",
+      "label": "InfrastructureConfigurationSafetyTests",
+      "kind": "class",
+      "type": "class",
+      "fullName": "ElsheiekhHMS.Tests.Unit.Infrastructure.Configuration.InfrastructureConfigurationSafetyTests",
+      "project": "ElsheiekhHMS.Tests",
+      "namespace": "ElsheiekhHMS.Tests.Unit.Infrastructure.Configuration",
+      "file": "ElsheiekhHMS.Tests/Unit/Infrastructure/Configuration/InfrastructureConfigurationSafetyTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Unit/Infrastructure/Configuration/InfrastructureConfigurationSafetyTests.cs",
+      "source_location": "L12",
+      "line": 12,
+      "accessibility": "public",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
       "id": "type:ElsheiekhHMS.Tests.Unit.Infrastructure.ElsheiekhHmsDbContextModelTests",
       "name": "ElsheiekhHmsDbContextModelTests",
       "label": "ElsheiekhHmsDbContextModelTests",
@@ -12436,6 +12764,174 @@
       "dynamicTheories": 0
     },
     {
+      "id": "type:ElsheiekhHMS.Tests.Unit.Web.Security.AuthenticationStateValidationTests",
+      "name": "AuthenticationStateValidationTests",
+      "label": "AuthenticationStateValidationTests",
+      "kind": "class",
+      "type": "class",
+      "fullName": "ElsheiekhHMS.Tests.Unit.Web.Security.AuthenticationStateValidationTests",
+      "project": "ElsheiekhHMS.Tests",
+      "namespace": "ElsheiekhHMS.Tests.Unit.Web.Security",
+      "file": "ElsheiekhHMS.Tests/Unit/Web/Security/AuthenticationStateValidationTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Unit/Web/Security/AuthenticationStateValidationTests.cs",
+      "source_location": "L15",
+      "line": 15,
+      "accessibility": "public",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Tests.Unit.Web.Security.AuthenticationStateValidationTests.EmptyUserStore",
+      "name": "EmptyUserStore",
+      "label": "EmptyUserStore",
+      "kind": "class",
+      "type": "class",
+      "fullName": "ElsheiekhHMS.Tests.Unit.Web.Security.AuthenticationStateValidationTests.EmptyUserStore",
+      "project": "ElsheiekhHMS.Tests",
+      "namespace": "ElsheiekhHMS.Tests.Unit.Web.Security",
+      "file": "ElsheiekhHMS.Tests/Unit/Web/Security/AuthenticationStateValidationTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Unit/Web/Security/AuthenticationStateValidationTests.cs",
+      "source_location": "L142",
+      "line": 142,
+      "accessibility": "private",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Tests.Unit.Web.Security.AuthenticationStateValidationTests.SingleScope",
+      "name": "SingleScope",
+      "label": "SingleScope",
+      "kind": "class",
+      "type": "class",
+      "fullName": "ElsheiekhHMS.Tests.Unit.Web.Security.AuthenticationStateValidationTests.SingleScope",
+      "project": "ElsheiekhHMS.Tests",
+      "namespace": "ElsheiekhHMS.Tests.Unit.Web.Security",
+      "file": "ElsheiekhHMS.Tests/Unit/Web/Security/AuthenticationStateValidationTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Unit/Web/Security/AuthenticationStateValidationTests.cs",
+      "source_location": "L129",
+      "line": 129,
+      "accessibility": "private",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Tests.Unit.Web.Security.AuthenticationStateValidationTests.SingleServiceProvider",
+      "name": "SingleServiceProvider",
+      "label": "SingleServiceProvider",
+      "kind": "class",
+      "type": "class",
+      "fullName": "ElsheiekhHMS.Tests.Unit.Web.Security.AuthenticationStateValidationTests.SingleServiceProvider",
+      "project": "ElsheiekhHMS.Tests",
+      "namespace": "ElsheiekhHMS.Tests.Unit.Web.Security",
+      "file": "ElsheiekhHMS.Tests/Unit/Web/Security/AuthenticationStateValidationTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Unit/Web/Security/AuthenticationStateValidationTests.cs",
+      "source_location": "L135",
+      "line": 135,
+      "accessibility": "private",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Tests.Unit.Web.Security.AuthenticationStateValidationTests.SingleServiceScopeFactory",
+      "name": "SingleServiceScopeFactory",
+      "label": "SingleServiceScopeFactory",
+      "kind": "class",
+      "type": "class",
+      "fullName": "ElsheiekhHMS.Tests.Unit.Web.Security.AuthenticationStateValidationTests.SingleServiceScopeFactory",
+      "project": "ElsheiekhHMS.Tests",
+      "namespace": "ElsheiekhHMS.Tests.Unit.Web.Security",
+      "file": "ElsheiekhHMS.Tests/Unit/Web/Security/AuthenticationStateValidationTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Unit/Web/Security/AuthenticationStateValidationTests.cs",
+      "source_location": "L124",
+      "line": 124,
+      "accessibility": "private",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Tests.Unit.Web.Security.AuthenticationStateValidationTests.StubUserManager",
+      "name": "StubUserManager",
+      "label": "StubUserManager",
+      "kind": "class",
+      "type": "class",
+      "fullName": "ElsheiekhHMS.Tests.Unit.Web.Security.AuthenticationStateValidationTests.StubUserManager",
+      "project": "ElsheiekhHMS.Tests",
+      "namespace": "ElsheiekhHMS.Tests.Unit.Web.Security",
+      "file": "ElsheiekhHMS.Tests/Unit/Web/Security/AuthenticationStateValidationTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Unit/Web/Security/AuthenticationStateValidationTests.cs",
+      "source_location": "L104",
+      "line": 104,
+      "accessibility": "private",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Tests.Unit.Web.Security.AuthorizationConfigurationTests",
+      "name": "AuthorizationConfigurationTests",
+      "label": "AuthorizationConfigurationTests",
+      "kind": "class",
+      "type": "class",
+      "fullName": "ElsheiekhHMS.Tests.Unit.Web.Security.AuthorizationConfigurationTests",
+      "project": "ElsheiekhHMS.Tests",
+      "namespace": "ElsheiekhHMS.Tests.Unit.Web.Security",
+      "file": "ElsheiekhHMS.Tests/Unit/Web/Security/AuthorizationConfigurationTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Unit/Web/Security/AuthorizationConfigurationTests.cs",
+      "source_location": "L10",
+      "line": 10,
+      "accessibility": "public",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
       "id": "type:ElsheiekhHMS.Web.Security.AuthorizationConfiguration",
       "name": "AuthorizationConfiguration",
       "label": "AuthorizationConfiguration",
@@ -12515,6 +13011,21 @@
       "type": "class",
       "fullName": "Microsoft.AspNetCore.Identity.EntityFrameworkCore.IdentityDbContext\u003CElsheiekhHMS.Infrastructure.Identity.Entities.ApplicationUser\u003E",
       "namespace": "Microsoft.AspNetCore.Identity.EntityFrameworkCore",
+      "external": true,
+      "community": -1,
+      "community_name": "Solution / external",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:Microsoft.EntityFrameworkCore.Diagnostics.DbCommandInterceptor",
+      "name": "DbCommandInterceptor",
+      "label": "DbCommandInterceptor",
+      "kind": "class",
+      "type": "class",
+      "fullName": "Microsoft.EntityFrameworkCore.Diagnostics.DbCommandInterceptor",
+      "namespace": "Microsoft.EntityFrameworkCore.Diagnostics",
       "external": true,
       "community": -1,
       "community_name": "Solution / external",
@@ -14124,7 +14635,7 @@
       "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/AppointmentArrivalQueueSqlServerTests.cs",
       "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentArrivalQueueSqlServerTests",
       "type": "declares",
-      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentArrivalQueueSqlServerTests.cs:L21",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentArrivalQueueSqlServerTests.cs:L22",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -14133,7 +14644,7 @@
       "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/AppointmentArrivalQueueSqlServerTests.cs",
       "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentArrivalQueueSqlServerTests.FixedTimeProvider",
       "type": "declares",
-      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentArrivalQueueSqlServerTests.cs:L83",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentArrivalQueueSqlServerTests.cs:L118",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -14142,7 +14653,7 @@
       "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/AppointmentArrivalQueueSqlServerTests.cs",
       "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentArrivalQueueSqlServerTests.TestCurrentUser",
       "type": "declares",
-      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentArrivalQueueSqlServerTests.cs:L77",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentArrivalQueueSqlServerTests.cs:L112",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -14178,7 +14689,7 @@
       "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/AppointmentServiceSqlServerTests.cs",
       "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentServiceSqlServerTests.FixedTimeProvider",
       "type": "declares",
-      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentServiceSqlServerTests.cs:L159",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentServiceSqlServerTests.cs:L297",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -14187,7 +14698,7 @@
       "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/AppointmentServiceSqlServerTests.cs",
       "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentServiceSqlServerTests.SetupRecords",
       "type": "declares",
-      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentServiceSqlServerTests.cs:L146",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentServiceSqlServerTests.cs:L284",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -14196,7 +14707,7 @@
       "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/AppointmentServiceSqlServerTests.cs",
       "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentServiceSqlServerTests.TestCurrentUser",
       "type": "declares",
-      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentServiceSqlServerTests.cs:L153",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentServiceSqlServerTests.cs:L291",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -14205,7 +14716,7 @@
       "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/DepartmentServiceSqlServerTests.cs",
       "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.DepartmentServiceSqlServerTests",
       "type": "declares",
-      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/DepartmentServiceSqlServerTests.cs:L12",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/DepartmentServiceSqlServerTests.cs:L14",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -14214,7 +14725,16 @@
       "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/DepartmentServiceSqlServerTests.cs",
       "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.DepartmentServiceSqlServerTests.FixedTimeProvider",
       "type": "declares",
-      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/DepartmentServiceSqlServerTests.cs:L120",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/DepartmentServiceSqlServerTests.cs:L159",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/DepartmentServiceSqlServerTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.DepartmentServiceSqlServerTests.InvalidAuditWriter",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/DepartmentServiceSqlServerTests.cs:L164",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -14223,7 +14743,7 @@
       "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/DepartmentServiceSqlServerTests.cs",
       "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.DepartmentServiceSqlServerTests.TestCurrentUser",
       "type": "declares",
-      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/DepartmentServiceSqlServerTests.cs:L112",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/DepartmentServiceSqlServerTests.cs:L151",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -14251,6 +14771,15 @@
       "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.ElsheiekhHmsDbContextSqlServerTests.TestCurrentUser",
       "type": "declares",
       "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/ElsheiekhHmsDbContextSqlServerTests.cs:L196",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/HmsHealthEndpointHostTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.HmsHealthEndpointHostTests",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/HmsHealthEndpointHostTests.cs:L13",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -14310,10 +14839,55 @@
       "weight": 1
     },
     {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/PerformanceSmokeSqlServerTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.PerformanceSmokeSqlServerTests",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/PerformanceSmokeSqlServerTests.cs:L29",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/PerformanceSmokeSqlServerTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.PerformanceSmokeSqlServerTests.CommandCountingInterceptor",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/PerformanceSmokeSqlServerTests.cs:L258",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/PerformanceSmokeSqlServerTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.PerformanceSmokeSqlServerTests.FixedTimeProvider",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/PerformanceSmokeSqlServerTests.cs:L253",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/PerformanceSmokeSqlServerTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.PerformanceSmokeSqlServerTests.SmokeData",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/PerformanceSmokeSqlServerTests.cs:L234",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/PerformanceSmokeSqlServerTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.PerformanceSmokeSqlServerTests.TestCurrentUser",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/PerformanceSmokeSqlServerTests.cs:L245",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
       "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs",
       "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.QueueServiceSqlServerTests",
       "type": "declares",
-      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs:L17",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs:L19",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -14322,7 +14896,7 @@
       "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs",
       "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.QueueServiceSqlServerTests.FixedTimeProvider",
       "type": "declares",
-      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs:L171",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs:L437",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -14331,7 +14905,7 @@
       "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs",
       "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.QueueServiceSqlServerTests.SetupRecords",
       "type": "declares",
-      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs:L163",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs:L429",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -14340,7 +14914,7 @@
       "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs",
       "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.QueueServiceSqlServerTests.TestCurrentUser",
       "type": "declares",
-      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs:L165",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs:L431",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -14412,7 +14986,7 @@
       "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentServiceTests.cs",
       "target": "type:ElsheiekhHMS.Tests.Unit.Application.Appointments.AppointmentServiceTests.FakePersistence",
       "type": "declares",
-      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentServiceTests.cs:L214",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentServiceTests.cs:L245",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -14421,7 +14995,7 @@
       "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentServiceTests.cs",
       "target": "type:ElsheiekhHMS.Tests.Unit.Application.Appointments.AppointmentServiceTests.FixedTimeProvider",
       "type": "declares",
-      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentServiceTests.cs:L198",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentServiceTests.cs:L229",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -14430,7 +15004,7 @@
       "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentServiceTests.cs",
       "target": "type:ElsheiekhHMS.Tests.Unit.Application.Appointments.AppointmentServiceTests.RecordingAuditWriter",
       "type": "declares",
-      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentServiceTests.cs:L203",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentServiceTests.cs:L234",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -14439,7 +15013,7 @@
       "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentServiceTests.cs",
       "target": "type:ElsheiekhHMS.Tests.Unit.Application.Appointments.AppointmentServiceTests.TestCurrentUser",
       "type": "declares",
-      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentServiceTests.cs:L190",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentServiceTests.cs:L221",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -14646,7 +15220,7 @@
       "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs",
       "target": "type:ElsheiekhHMS.Tests.Unit.Application.Queue.QueueServiceTests.FakePersistence",
       "type": "declares",
-      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs:L201",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs:L202",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -14655,7 +15229,7 @@
       "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs",
       "target": "type:ElsheiekhHMS.Tests.Unit.Application.Queue.QueueServiceTests.FixedTimeProvider",
       "type": "declares",
-      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs:L184",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs:L185",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -14664,7 +15238,7 @@
       "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs",
       "target": "type:ElsheiekhHMS.Tests.Unit.Application.Queue.QueueServiceTests.RecordingAuditWriter",
       "type": "declares",
-      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs:L189",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs:L190",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -14673,7 +15247,7 @@
       "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs",
       "target": "type:ElsheiekhHMS.Tests.Unit.Application.Queue.QueueServiceTests.TestCurrentUser",
       "type": "declares",
-      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs:L176",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs:L177",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -14745,7 +15319,7 @@
       "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Workflows/PatientIntakeAppointmentServiceTests.cs",
       "target": "type:ElsheiekhHMS.Tests.Unit.Application.Workflows.PatientIntakeAppointmentServiceTests.FakeAppointmentService",
       "type": "declares",
-      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Workflows/PatientIntakeAppointmentServiceTests.cs:L329",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Workflows/PatientIntakeAppointmentServiceTests.cs:L349",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -14754,7 +15328,7 @@
       "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Workflows/PatientIntakeAppointmentServiceTests.cs",
       "target": "type:ElsheiekhHMS.Tests.Unit.Application.Workflows.PatientIntakeAppointmentServiceTests.FakePatientService",
       "type": "declares",
-      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Workflows/PatientIntakeAppointmentServiceTests.cs:L289",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Workflows/PatientIntakeAppointmentServiceTests.cs:L309",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -14763,7 +15337,7 @@
       "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Workflows/PatientIntakeAppointmentServiceTests.cs",
       "target": "type:ElsheiekhHMS.Tests.Unit.Application.Workflows.PatientIntakeAppointmentServiceTests.TestCurrentUser",
       "type": "declares",
-      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Workflows/PatientIntakeAppointmentServiceTests.cs:L281",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Workflows/PatientIntakeAppointmentServiceTests.cs:L301",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -14940,6 +15514,15 @@
       "weight": 1
     },
     {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Infrastructure/Configuration/InfrastructureConfigurationSafetyTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Infrastructure.Configuration.InfrastructureConfigurationSafetyTests",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Infrastructure/Configuration/InfrastructureConfigurationSafetyTests.cs:L12",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
       "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Infrastructure/ElsheiekhHmsDbContextModelTests.cs",
       "target": "type:ElsheiekhHMS.Tests.Unit.Infrastructure.ElsheiekhHmsDbContextModelTests",
       "type": "declares",
@@ -15088,6 +15671,69 @@
       "target": "type:ElsheiekhHMS.Tests.Unit.Infrastructure.Observability.RequestObservabilityMiddlewareTests.NoopDisposable",
       "type": "declares",
       "evidence": "ElsheiekhHMS.Tests/Unit/Infrastructure/Observability/RequestObservabilityMiddlewareTests.cs:L143",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Web/Security/AuthenticationStateValidationTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Web.Security.AuthenticationStateValidationTests",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Web/Security/AuthenticationStateValidationTests.cs:L15",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Web/Security/AuthenticationStateValidationTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Web.Security.AuthenticationStateValidationTests.EmptyUserStore",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Web/Security/AuthenticationStateValidationTests.cs:L142",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Web/Security/AuthenticationStateValidationTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Web.Security.AuthenticationStateValidationTests.SingleScope",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Web/Security/AuthenticationStateValidationTests.cs:L129",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Web/Security/AuthenticationStateValidationTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Web.Security.AuthenticationStateValidationTests.SingleServiceProvider",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Web/Security/AuthenticationStateValidationTests.cs:L135",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Web/Security/AuthenticationStateValidationTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Web.Security.AuthenticationStateValidationTests.SingleServiceScopeFactory",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Web/Security/AuthenticationStateValidationTests.cs:L124",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Web/Security/AuthenticationStateValidationTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Web.Security.AuthenticationStateValidationTests.StubUserManager",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Web/Security/AuthenticationStateValidationTests.cs:L104",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Web/Security/AuthorizationConfigurationTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Web.Security.AuthorizationConfigurationTests",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Web/Security/AuthorizationConfigurationTests.cs:L10",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -17011,6 +17657,15 @@
     },
     {
       "source": "project:ElsheiekhHMS.Tests",
+      "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/HmsHealthEndpointHostTests.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Tests",
       "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/IdentityAndAuditLogSqlServerTests.cs",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
@@ -17021,6 +17676,15 @@
     {
       "source": "project:ElsheiekhHMS.Tests",
       "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/PatientServiceSqlServerTests.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Tests",
+      "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/PerformanceSmokeSqlServerTests.cs",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
       "relation": "contains",
@@ -17380,6 +18044,15 @@
     },
     {
       "source": "project:ElsheiekhHMS.Tests",
+      "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Infrastructure/Configuration/InfrastructureConfigurationSafetyTests.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Tests",
       "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Infrastructure/ElsheiekhHmsDbContextModelTests.cs",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
@@ -17453,6 +18126,24 @@
     {
       "source": "project:ElsheiekhHMS.Tests",
       "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Infrastructure/Observability/RequestObservabilityMiddlewareTests.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Tests",
+      "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Web/Security/AuthenticationStateValidationTests.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Tests",
+      "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Web/Security/AuthorizationConfigurationTests.cs",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
       "relation": "contains",
@@ -17650,6 +18341,15 @@
     },
     {
       "source": "project:ElsheiekhHMS.Tests",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Infrastructure.Configuration",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Infrastructure/Configuration/InfrastructureConfigurationSafetyTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Tests",
       "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Infrastructure.Health",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Tests/Unit/Infrastructure/Health/HealthCheckTests.cs",
@@ -17677,6 +18377,15 @@
     },
     {
       "source": "project:ElsheiekhHMS.Tests",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Web.Security",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Web/Security/AuthenticationStateValidationTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Tests",
       "target": "project:ElsheiekhHMS.Application",
       "type": "project-reference",
       "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
@@ -17696,6 +18405,15 @@
     {
       "source": "project:ElsheiekhHMS.Tests",
       "target": "project:ElsheiekhHMS.Infrastructure",
+      "type": "project-reference",
+      "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
+      "relation": "project-reference",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Tests",
+      "target": "project:ElsheiekhHMS.Web",
       "type": "project-reference",
       "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
       "relation": "project-reference",
@@ -20244,7 +20962,7 @@
       "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentArrivalQueueSqlServerTests.FixedTimeProvider",
       "target": "type:System.TimeProvider",
       "type": "inherits",
-      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentArrivalQueueSqlServerTests.cs:L83",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentArrivalQueueSqlServerTests.cs:L118",
       "relation": "inherits",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -20262,7 +20980,7 @@
       "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentArrivalQueueSqlServerTests.TestCurrentUser",
       "target": "type:ElsheiekhHMS.Application.Common.Security.ICurrentUser",
       "type": "implements",
-      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentArrivalQueueSqlServerTests.cs:L77",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentArrivalQueueSqlServerTests.cs:L112",
       "relation": "implements",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -20271,7 +20989,7 @@
       "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentArrivalQueueSqlServerTests.TestCurrentUser",
       "target": "type:System.IEquatable\u003CT\u003E",
       "type": "implements",
-      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentArrivalQueueSqlServerTests.cs:L77",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentArrivalQueueSqlServerTests.cs:L112",
       "relation": "implements",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -20361,7 +21079,7 @@
       "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentServiceSqlServerTests.FixedTimeProvider",
       "target": "type:System.TimeProvider",
       "type": "inherits",
-      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentServiceSqlServerTests.cs:L159",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentServiceSqlServerTests.cs:L297",
       "relation": "inherits",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -20379,7 +21097,7 @@
       "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentServiceSqlServerTests.SetupRecords",
       "target": "type:System.IEquatable\u003CT\u003E",
       "type": "implements",
-      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentServiceSqlServerTests.cs:L146",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentServiceSqlServerTests.cs:L284",
       "relation": "implements",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -20397,7 +21115,7 @@
       "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentServiceSqlServerTests.TestCurrentUser",
       "target": "type:ElsheiekhHMS.Application.Common.Security.ICurrentUser",
       "type": "implements",
-      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentServiceSqlServerTests.cs:L153",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentServiceSqlServerTests.cs:L291",
       "relation": "implements",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -20406,7 +21124,7 @@
       "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentServiceSqlServerTests.TestCurrentUser",
       "target": "type:System.IEquatable\u003CT\u003E",
       "type": "implements",
-      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentServiceSqlServerTests.cs:L153",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentServiceSqlServerTests.cs:L291",
       "relation": "implements",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -20423,6 +21141,15 @@
     {
       "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.DepartmentServiceSqlServerTests",
       "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.DepartmentServiceSqlServerTests.FixedTimeProvider",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/DepartmentServiceSqlServerTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.DepartmentServiceSqlServerTests",
+      "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.DepartmentServiceSqlServerTests.InvalidAuditWriter",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/DepartmentServiceSqlServerTests.cs",
       "relation": "contains",
@@ -20451,7 +21178,7 @@
       "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.DepartmentServiceSqlServerTests.FixedTimeProvider",
       "target": "type:System.TimeProvider",
       "type": "inherits",
-      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/DepartmentServiceSqlServerTests.cs:L120",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/DepartmentServiceSqlServerTests.cs:L159",
       "relation": "inherits",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -20466,10 +21193,28 @@
       "weight": 1
     },
     {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.DepartmentServiceSqlServerTests.InvalidAuditWriter",
+      "target": "type:ElsheiekhHMS.Application.Common.Auditing.IAuditEventWriter",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/DepartmentServiceSqlServerTests.cs:L164",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.DepartmentServiceSqlServerTests.InvalidAuditWriter",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Integration.Persistence",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/DepartmentServiceSqlServerTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
       "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.DepartmentServiceSqlServerTests.TestCurrentUser",
       "target": "type:ElsheiekhHMS.Application.Common.Security.ICurrentUser",
       "type": "implements",
-      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/DepartmentServiceSqlServerTests.cs:L112",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/DepartmentServiceSqlServerTests.cs:L151",
       "relation": "implements",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -20478,7 +21223,7 @@
       "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.DepartmentServiceSqlServerTests.TestCurrentUser",
       "target": "type:System.IEquatable\u003CT\u003E",
       "type": "implements",
-      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/DepartmentServiceSqlServerTests.cs:L112",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/DepartmentServiceSqlServerTests.cs:L151",
       "relation": "implements",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -20551,6 +21296,15 @@
       "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Integration.Persistence",
       "type": "namespace-membership",
       "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/ElsheiekhHmsDbContextSqlServerTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.HmsHealthEndpointHostTests",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Integration.Persistence",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/HmsHealthEndpointHostTests.cs",
       "relation": "namespace-membership",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -20700,6 +21454,132 @@
       "weight": 1
     },
     {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.PerformanceSmokeSqlServerTests",
+      "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.PerformanceSmokeSqlServerTests.CommandCountingInterceptor",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/PerformanceSmokeSqlServerTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.PerformanceSmokeSqlServerTests",
+      "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.PerformanceSmokeSqlServerTests.FixedTimeProvider",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/PerformanceSmokeSqlServerTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.PerformanceSmokeSqlServerTests",
+      "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.PerformanceSmokeSqlServerTests.SmokeData",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/PerformanceSmokeSqlServerTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.PerformanceSmokeSqlServerTests",
+      "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.PerformanceSmokeSqlServerTests.TestCurrentUser",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/PerformanceSmokeSqlServerTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.PerformanceSmokeSqlServerTests",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Integration.Persistence",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/PerformanceSmokeSqlServerTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.PerformanceSmokeSqlServerTests.CommandCountingInterceptor",
+      "target": "type:Microsoft.EntityFrameworkCore.Diagnostics.DbCommandInterceptor",
+      "type": "inherits",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/PerformanceSmokeSqlServerTests.cs:L258",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.PerformanceSmokeSqlServerTests.CommandCountingInterceptor",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Integration.Persistence",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/PerformanceSmokeSqlServerTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.PerformanceSmokeSqlServerTests.FixedTimeProvider",
+      "target": "type:System.TimeProvider",
+      "type": "inherits",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/PerformanceSmokeSqlServerTests.cs:L253",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.PerformanceSmokeSqlServerTests.FixedTimeProvider",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Integration.Persistence",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/PerformanceSmokeSqlServerTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.PerformanceSmokeSqlServerTests.SmokeData",
+      "target": "type:System.IEquatable\u003CT\u003E",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/PerformanceSmokeSqlServerTests.cs:L234",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.PerformanceSmokeSqlServerTests.SmokeData",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Integration.Persistence",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/PerformanceSmokeSqlServerTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.PerformanceSmokeSqlServerTests.TestCurrentUser",
+      "target": "type:ElsheiekhHMS.Application.Common.Security.ICurrentUser",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/PerformanceSmokeSqlServerTests.cs:L245",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.PerformanceSmokeSqlServerTests.TestCurrentUser",
+      "target": "type:System.IEquatable\u003CT\u003E",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/PerformanceSmokeSqlServerTests.cs:L245",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.PerformanceSmokeSqlServerTests.TestCurrentUser",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Integration.Persistence",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/PerformanceSmokeSqlServerTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
       "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.QueueServiceSqlServerTests",
       "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.QueueServiceSqlServerTests.FixedTimeProvider",
       "type": "contains",
@@ -20739,7 +21619,7 @@
       "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.QueueServiceSqlServerTests.FixedTimeProvider",
       "target": "type:System.TimeProvider",
       "type": "inherits",
-      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs:L171",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs:L437",
       "relation": "inherits",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -20757,7 +21637,7 @@
       "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.QueueServiceSqlServerTests.SetupRecords",
       "target": "type:System.IEquatable\u003CT\u003E",
       "type": "implements",
-      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs:L163",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs:L429",
       "relation": "implements",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -20775,7 +21655,7 @@
       "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.QueueServiceSqlServerTests.TestCurrentUser",
       "target": "type:ElsheiekhHMS.Application.Common.Security.ICurrentUser",
       "type": "implements",
-      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs:L165",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs:L431",
       "relation": "implements",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -20784,7 +21664,7 @@
       "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.QueueServiceSqlServerTests.TestCurrentUser",
       "target": "type:System.IEquatable\u003CT\u003E",
       "type": "implements",
-      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs:L165",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs:L431",
       "relation": "implements",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -20901,7 +21781,7 @@
       "source": "type:ElsheiekhHMS.Tests.Unit.Application.Appointments.AppointmentServiceTests.FakePersistence",
       "target": "type:ElsheiekhHMS.Application.Appointments.Persistence.IAppointmentPersistence",
       "type": "implements",
-      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentServiceTests.cs:L214",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentServiceTests.cs:L245",
       "relation": "implements",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -20919,7 +21799,7 @@
       "source": "type:ElsheiekhHMS.Tests.Unit.Application.Appointments.AppointmentServiceTests.FixedTimeProvider",
       "target": "type:System.TimeProvider",
       "type": "inherits",
-      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentServiceTests.cs:L198",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentServiceTests.cs:L229",
       "relation": "inherits",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -20937,7 +21817,7 @@
       "source": "type:ElsheiekhHMS.Tests.Unit.Application.Appointments.AppointmentServiceTests.RecordingAuditWriter",
       "target": "type:ElsheiekhHMS.Application.Common.Auditing.IAuditEventWriter",
       "type": "implements",
-      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentServiceTests.cs:L203",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentServiceTests.cs:L234",
       "relation": "implements",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -20955,7 +21835,7 @@
       "source": "type:ElsheiekhHMS.Tests.Unit.Application.Appointments.AppointmentServiceTests.TestCurrentUser",
       "target": "type:ElsheiekhHMS.Application.Common.Security.ICurrentUser",
       "type": "implements",
-      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentServiceTests.cs:L190",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentServiceTests.cs:L221",
       "relation": "implements",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -21378,7 +22258,7 @@
       "source": "type:ElsheiekhHMS.Tests.Unit.Application.Queue.QueueServiceTests.FakePersistence",
       "target": "type:ElsheiekhHMS.Application.Queue.Persistence.IQueuePersistence",
       "type": "implements",
-      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs:L201",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs:L202",
       "relation": "implements",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -21396,7 +22276,7 @@
       "source": "type:ElsheiekhHMS.Tests.Unit.Application.Queue.QueueServiceTests.FixedTimeProvider",
       "target": "type:System.TimeProvider",
       "type": "inherits",
-      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs:L184",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs:L185",
       "relation": "inherits",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -21414,7 +22294,7 @@
       "source": "type:ElsheiekhHMS.Tests.Unit.Application.Queue.QueueServiceTests.RecordingAuditWriter",
       "target": "type:ElsheiekhHMS.Application.Common.Auditing.IAuditEventWriter",
       "type": "implements",
-      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs:L189",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs:L190",
       "relation": "implements",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -21432,7 +22312,7 @@
       "source": "type:ElsheiekhHMS.Tests.Unit.Application.Queue.QueueServiceTests.TestCurrentUser",
       "target": "type:ElsheiekhHMS.Application.Common.Security.ICurrentUser",
       "type": "implements",
-      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs:L176",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs:L177",
       "relation": "implements",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -21603,7 +22483,7 @@
       "source": "type:ElsheiekhHMS.Tests.Unit.Application.Workflows.PatientIntakeAppointmentServiceTests.FakeAppointmentService",
       "target": "type:ElsheiekhHMS.Application.Appointments.IAppointmentService",
       "type": "implements",
-      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Workflows/PatientIntakeAppointmentServiceTests.cs:L329",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Workflows/PatientIntakeAppointmentServiceTests.cs:L349",
       "relation": "implements",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -21621,7 +22501,7 @@
       "source": "type:ElsheiekhHMS.Tests.Unit.Application.Workflows.PatientIntakeAppointmentServiceTests.FakePatientService",
       "target": "type:ElsheiekhHMS.Application.Patients.IPatientService",
       "type": "implements",
-      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Workflows/PatientIntakeAppointmentServiceTests.cs:L289",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Workflows/PatientIntakeAppointmentServiceTests.cs:L309",
       "relation": "implements",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -21639,7 +22519,7 @@
       "source": "type:ElsheiekhHMS.Tests.Unit.Application.Workflows.PatientIntakeAppointmentServiceTests.TestCurrentUser",
       "target": "type:ElsheiekhHMS.Application.Common.Security.ICurrentUser",
       "type": "implements",
-      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Workflows/PatientIntakeAppointmentServiceTests.cs:L281",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Workflows/PatientIntakeAppointmentServiceTests.cs:L301",
       "relation": "implements",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -22374,6 +23254,15 @@
       "weight": 1
     },
     {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Infrastructure.Configuration.InfrastructureConfigurationSafetyTests",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Infrastructure.Configuration",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Infrastructure/Configuration/InfrastructureConfigurationSafetyTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
       "source": "type:ElsheiekhHMS.Tests.Unit.Infrastructure.ElsheiekhHmsDbContextModelTests",
       "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Infrastructure",
       "type": "namespace-membership",
@@ -22644,6 +23533,141 @@
       "weight": 1
     },
     {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Web.Security.AuthenticationStateValidationTests",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Web.Security.AuthenticationStateValidationTests.EmptyUserStore",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Web/Security/AuthenticationStateValidationTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Web.Security.AuthenticationStateValidationTests",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Web.Security.AuthenticationStateValidationTests.SingleScope",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Web/Security/AuthenticationStateValidationTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Web.Security.AuthenticationStateValidationTests",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Web.Security.AuthenticationStateValidationTests.SingleServiceProvider",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Web/Security/AuthenticationStateValidationTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Web.Security.AuthenticationStateValidationTests",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Web.Security.AuthenticationStateValidationTests.SingleServiceScopeFactory",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Web/Security/AuthenticationStateValidationTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Web.Security.AuthenticationStateValidationTests",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Web.Security.AuthenticationStateValidationTests.StubUserManager",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Web/Security/AuthenticationStateValidationTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Web.Security.AuthenticationStateValidationTests",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Web.Security",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Web/Security/AuthenticationStateValidationTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Web.Security.AuthenticationStateValidationTests.EmptyUserStore",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Web.Security",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Web/Security/AuthenticationStateValidationTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Web.Security.AuthenticationStateValidationTests.SingleScope",
+      "target": "type:Microsoft.Extensions.DependencyInjection.IServiceScope",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Web/Security/AuthenticationStateValidationTests.cs:L129",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Web.Security.AuthenticationStateValidationTests.SingleScope",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Web.Security",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Web/Security/AuthenticationStateValidationTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Web.Security.AuthenticationStateValidationTests.SingleServiceProvider",
+      "target": "type:System.IServiceProvider",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Web/Security/AuthenticationStateValidationTests.cs:L135",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Web.Security.AuthenticationStateValidationTests.SingleServiceProvider",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Web.Security",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Web/Security/AuthenticationStateValidationTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Web.Security.AuthenticationStateValidationTests.SingleServiceScopeFactory",
+      "target": "type:Microsoft.Extensions.DependencyInjection.IServiceScopeFactory",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Web/Security/AuthenticationStateValidationTests.cs:L124",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Web.Security.AuthenticationStateValidationTests.SingleServiceScopeFactory",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Web.Security",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Web/Security/AuthenticationStateValidationTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Web.Security.AuthenticationStateValidationTests.StubUserManager",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Web.Security",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Web/Security/AuthenticationStateValidationTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Web.Security.AuthorizationConfigurationTests",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Web.Security",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Web/Security/AuthorizationConfigurationTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
       "source": "type:ElsheiekhHMS.Web.Security.AuthorizationConfiguration",
       "target": "namespace:ElsheiekhHMS.Web:ElsheiekhHMS.Web.Security",
       "type": "namespace-membership",
@@ -22691,7 +23715,9 @@
     "dependencyRules": {
       "coreIndependent": true,
       "circularProjectDependenciesDetected": false,
-      "unexpectedDependencies": [],
+      "unexpectedDependencies": [
+        "ElsheiekhHMS.Tests: observed references differ from documented HMS layer rules"
+      ],
       "forbiddenCoreUsings": [],
       "ruleSource": "Documented HMS layer policy; observed edges extracted separately"
     },
@@ -22709,6 +23735,7 @@
       "ElsheiekhHMS.Tests/Integration/Persistence/IdentityAndAuditLogSqlServerTests.cs",
       "ElsheiekhHMS.Tests/Unit/Infrastructure/Identity/IdentityOptionsTests.cs",
       "ElsheiekhHMS.Tests/Unit/Infrastructure/Identity/IdentityRoleSeederTests.cs",
+      "ElsheiekhHMS.Tests/Unit/Web/Security/AuthenticationStateValidationTests.cs",
       "ElsheiekhHMS.Web/Program.cs",
       "ElsheiekhHMS.Web/Security/HmsRevalidatingAuthenticationStateProvider.cs"
     ],
@@ -22716,7 +23743,7 @@
       "statusSource": "README.md declaration, not independently certified completion",
       "declaredStatus": [
         {
-          "text": "\u003E **Current development stage:** Phase 09 \u2014 Enterprise Infrastructure complete; Phase 10 not started",
+          "text": "\u003E **Current development stage:** Phase 10 \u2014 Testing \u0026 Hardening complete; Phase 11 Backend Review is next and not started",
           "source": "README.md:L5"
         },
         {
@@ -22852,7 +23879,7 @@
           "source": "README.md:L71"
         },
         {
-          "text": "\u003E **Phase 10:** \u23F3 Not started",
+          "text": "\u003E **Phase 10:** \u2705 Testing \u0026 Hardening complete; 10A, 10B, 10C, and 10D complete; 418 tests passing",
           "source": "README.md:L73"
         },
         {
@@ -22913,6 +23940,8 @@
       "Unresolved base omitted: ElsheiekhHMS.Tests.Unit.Infrastructure.Identity.IdentityRoleSeederTests.NullLogger\u003CT\u003E : Microsoft.Extensions.Logging.ILogger\u003CT\u003E",
       "Unresolved base omitted: ElsheiekhHMS.Tests.Unit.Infrastructure.Identity.IdentityRoleSeederTests.InMemoryRoleStore : IRoleStore\u003CIdentityRole\u003E",
       "Unresolved base omitted: ElsheiekhHMS.Tests.Unit.Infrastructure.Observability.RequestObservabilityMiddlewareTests.CapturingLogger : ILogger\u003CElsheiekhHMS.Infrastructure.Observability.RequestObservabilityMiddleware\u003E",
+      "Unresolved base omitted: ElsheiekhHMS.Tests.Unit.Web.Security.AuthenticationStateValidationTests.StubUserManager : UserManager\u003CElsheiekhHMS.Infrastructure.Identity.Entities.ApplicationUser\u003E",
+      "Unresolved base omitted: ElsheiekhHMS.Tests.Unit.Web.Security.AuthenticationStateValidationTests.EmptyUserStore : IUserStore\u003CElsheiekhHMS.Infrastructure.Identity.Entities.ApplicationUser\u003E",
       "Unresolved base omitted: ElsheiekhHMS.Web.Security.HmsRevalidatingAuthenticationStateProvider : RevalidatingServerAuthenticationStateProvider"
     ],
     "llmApiCalls": 0,
@@ -24360,7 +25389,7 @@
       "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/AppointmentArrivalQueueSqlServerTests.cs",
       "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentArrivalQueueSqlServerTests",
       "type": "declares",
-      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentArrivalQueueSqlServerTests.cs:L21",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentArrivalQueueSqlServerTests.cs:L22",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -24369,7 +25398,7 @@
       "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/AppointmentArrivalQueueSqlServerTests.cs",
       "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentArrivalQueueSqlServerTests.FixedTimeProvider",
       "type": "declares",
-      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentArrivalQueueSqlServerTests.cs:L83",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentArrivalQueueSqlServerTests.cs:L118",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -24378,7 +25407,7 @@
       "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/AppointmentArrivalQueueSqlServerTests.cs",
       "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentArrivalQueueSqlServerTests.TestCurrentUser",
       "type": "declares",
-      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentArrivalQueueSqlServerTests.cs:L77",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentArrivalQueueSqlServerTests.cs:L112",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -24414,7 +25443,7 @@
       "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/AppointmentServiceSqlServerTests.cs",
       "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentServiceSqlServerTests.FixedTimeProvider",
       "type": "declares",
-      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentServiceSqlServerTests.cs:L159",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentServiceSqlServerTests.cs:L297",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -24423,7 +25452,7 @@
       "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/AppointmentServiceSqlServerTests.cs",
       "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentServiceSqlServerTests.SetupRecords",
       "type": "declares",
-      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentServiceSqlServerTests.cs:L146",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentServiceSqlServerTests.cs:L284",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -24432,7 +25461,7 @@
       "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/AppointmentServiceSqlServerTests.cs",
       "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentServiceSqlServerTests.TestCurrentUser",
       "type": "declares",
-      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentServiceSqlServerTests.cs:L153",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentServiceSqlServerTests.cs:L291",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -24441,7 +25470,7 @@
       "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/DepartmentServiceSqlServerTests.cs",
       "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.DepartmentServiceSqlServerTests",
       "type": "declares",
-      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/DepartmentServiceSqlServerTests.cs:L12",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/DepartmentServiceSqlServerTests.cs:L14",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -24450,7 +25479,16 @@
       "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/DepartmentServiceSqlServerTests.cs",
       "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.DepartmentServiceSqlServerTests.FixedTimeProvider",
       "type": "declares",
-      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/DepartmentServiceSqlServerTests.cs:L120",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/DepartmentServiceSqlServerTests.cs:L159",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/DepartmentServiceSqlServerTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.DepartmentServiceSqlServerTests.InvalidAuditWriter",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/DepartmentServiceSqlServerTests.cs:L164",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -24459,7 +25497,7 @@
       "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/DepartmentServiceSqlServerTests.cs",
       "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.DepartmentServiceSqlServerTests.TestCurrentUser",
       "type": "declares",
-      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/DepartmentServiceSqlServerTests.cs:L112",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/DepartmentServiceSqlServerTests.cs:L151",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -24487,6 +25525,15 @@
       "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.ElsheiekhHmsDbContextSqlServerTests.TestCurrentUser",
       "type": "declares",
       "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/ElsheiekhHmsDbContextSqlServerTests.cs:L196",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/HmsHealthEndpointHostTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.HmsHealthEndpointHostTests",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/HmsHealthEndpointHostTests.cs:L13",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -24546,10 +25593,55 @@
       "weight": 1
     },
     {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/PerformanceSmokeSqlServerTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.PerformanceSmokeSqlServerTests",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/PerformanceSmokeSqlServerTests.cs:L29",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/PerformanceSmokeSqlServerTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.PerformanceSmokeSqlServerTests.CommandCountingInterceptor",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/PerformanceSmokeSqlServerTests.cs:L258",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/PerformanceSmokeSqlServerTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.PerformanceSmokeSqlServerTests.FixedTimeProvider",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/PerformanceSmokeSqlServerTests.cs:L253",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/PerformanceSmokeSqlServerTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.PerformanceSmokeSqlServerTests.SmokeData",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/PerformanceSmokeSqlServerTests.cs:L234",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/PerformanceSmokeSqlServerTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.PerformanceSmokeSqlServerTests.TestCurrentUser",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/PerformanceSmokeSqlServerTests.cs:L245",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
       "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs",
       "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.QueueServiceSqlServerTests",
       "type": "declares",
-      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs:L17",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs:L19",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -24558,7 +25650,7 @@
       "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs",
       "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.QueueServiceSqlServerTests.FixedTimeProvider",
       "type": "declares",
-      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs:L171",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs:L437",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -24567,7 +25659,7 @@
       "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs",
       "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.QueueServiceSqlServerTests.SetupRecords",
       "type": "declares",
-      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs:L163",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs:L429",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -24576,7 +25668,7 @@
       "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs",
       "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.QueueServiceSqlServerTests.TestCurrentUser",
       "type": "declares",
-      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs:L165",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs:L431",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -24648,7 +25740,7 @@
       "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentServiceTests.cs",
       "target": "type:ElsheiekhHMS.Tests.Unit.Application.Appointments.AppointmentServiceTests.FakePersistence",
       "type": "declares",
-      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentServiceTests.cs:L214",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentServiceTests.cs:L245",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -24657,7 +25749,7 @@
       "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentServiceTests.cs",
       "target": "type:ElsheiekhHMS.Tests.Unit.Application.Appointments.AppointmentServiceTests.FixedTimeProvider",
       "type": "declares",
-      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentServiceTests.cs:L198",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentServiceTests.cs:L229",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -24666,7 +25758,7 @@
       "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentServiceTests.cs",
       "target": "type:ElsheiekhHMS.Tests.Unit.Application.Appointments.AppointmentServiceTests.RecordingAuditWriter",
       "type": "declares",
-      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentServiceTests.cs:L203",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentServiceTests.cs:L234",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -24675,7 +25767,7 @@
       "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentServiceTests.cs",
       "target": "type:ElsheiekhHMS.Tests.Unit.Application.Appointments.AppointmentServiceTests.TestCurrentUser",
       "type": "declares",
-      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentServiceTests.cs:L190",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentServiceTests.cs:L221",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -24882,7 +25974,7 @@
       "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs",
       "target": "type:ElsheiekhHMS.Tests.Unit.Application.Queue.QueueServiceTests.FakePersistence",
       "type": "declares",
-      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs:L201",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs:L202",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -24891,7 +25983,7 @@
       "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs",
       "target": "type:ElsheiekhHMS.Tests.Unit.Application.Queue.QueueServiceTests.FixedTimeProvider",
       "type": "declares",
-      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs:L184",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs:L185",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -24900,7 +25992,7 @@
       "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs",
       "target": "type:ElsheiekhHMS.Tests.Unit.Application.Queue.QueueServiceTests.RecordingAuditWriter",
       "type": "declares",
-      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs:L189",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs:L190",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -24909,7 +26001,7 @@
       "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs",
       "target": "type:ElsheiekhHMS.Tests.Unit.Application.Queue.QueueServiceTests.TestCurrentUser",
       "type": "declares",
-      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs:L176",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs:L177",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -24981,7 +26073,7 @@
       "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Workflows/PatientIntakeAppointmentServiceTests.cs",
       "target": "type:ElsheiekhHMS.Tests.Unit.Application.Workflows.PatientIntakeAppointmentServiceTests.FakeAppointmentService",
       "type": "declares",
-      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Workflows/PatientIntakeAppointmentServiceTests.cs:L329",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Workflows/PatientIntakeAppointmentServiceTests.cs:L349",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -24990,7 +26082,7 @@
       "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Workflows/PatientIntakeAppointmentServiceTests.cs",
       "target": "type:ElsheiekhHMS.Tests.Unit.Application.Workflows.PatientIntakeAppointmentServiceTests.FakePatientService",
       "type": "declares",
-      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Workflows/PatientIntakeAppointmentServiceTests.cs:L289",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Workflows/PatientIntakeAppointmentServiceTests.cs:L309",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -24999,7 +26091,7 @@
       "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Workflows/PatientIntakeAppointmentServiceTests.cs",
       "target": "type:ElsheiekhHMS.Tests.Unit.Application.Workflows.PatientIntakeAppointmentServiceTests.TestCurrentUser",
       "type": "declares",
-      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Workflows/PatientIntakeAppointmentServiceTests.cs:L281",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Workflows/PatientIntakeAppointmentServiceTests.cs:L301",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -25176,6 +26268,15 @@
       "weight": 1
     },
     {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Infrastructure/Configuration/InfrastructureConfigurationSafetyTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Infrastructure.Configuration.InfrastructureConfigurationSafetyTests",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Infrastructure/Configuration/InfrastructureConfigurationSafetyTests.cs:L12",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
       "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Infrastructure/ElsheiekhHmsDbContextModelTests.cs",
       "target": "type:ElsheiekhHMS.Tests.Unit.Infrastructure.ElsheiekhHmsDbContextModelTests",
       "type": "declares",
@@ -25324,6 +26425,69 @@
       "target": "type:ElsheiekhHMS.Tests.Unit.Infrastructure.Observability.RequestObservabilityMiddlewareTests.NoopDisposable",
       "type": "declares",
       "evidence": "ElsheiekhHMS.Tests/Unit/Infrastructure/Observability/RequestObservabilityMiddlewareTests.cs:L143",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Web/Security/AuthenticationStateValidationTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Web.Security.AuthenticationStateValidationTests",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Web/Security/AuthenticationStateValidationTests.cs:L15",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Web/Security/AuthenticationStateValidationTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Web.Security.AuthenticationStateValidationTests.EmptyUserStore",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Web/Security/AuthenticationStateValidationTests.cs:L142",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Web/Security/AuthenticationStateValidationTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Web.Security.AuthenticationStateValidationTests.SingleScope",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Web/Security/AuthenticationStateValidationTests.cs:L129",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Web/Security/AuthenticationStateValidationTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Web.Security.AuthenticationStateValidationTests.SingleServiceProvider",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Web/Security/AuthenticationStateValidationTests.cs:L135",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Web/Security/AuthenticationStateValidationTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Web.Security.AuthenticationStateValidationTests.SingleServiceScopeFactory",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Web/Security/AuthenticationStateValidationTests.cs:L124",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Web/Security/AuthenticationStateValidationTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Web.Security.AuthenticationStateValidationTests.StubUserManager",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Web/Security/AuthenticationStateValidationTests.cs:L104",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Web/Security/AuthorizationConfigurationTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Web.Security.AuthorizationConfigurationTests",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Web/Security/AuthorizationConfigurationTests.cs:L10",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -27247,6 +28411,15 @@
     },
     {
       "source": "project:ElsheiekhHMS.Tests",
+      "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/HmsHealthEndpointHostTests.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Tests",
       "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/IdentityAndAuditLogSqlServerTests.cs",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
@@ -27257,6 +28430,15 @@
     {
       "source": "project:ElsheiekhHMS.Tests",
       "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/PatientServiceSqlServerTests.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Tests",
+      "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/PerformanceSmokeSqlServerTests.cs",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
       "relation": "contains",
@@ -27616,6 +28798,15 @@
     },
     {
       "source": "project:ElsheiekhHMS.Tests",
+      "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Infrastructure/Configuration/InfrastructureConfigurationSafetyTests.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Tests",
       "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Infrastructure/ElsheiekhHmsDbContextModelTests.cs",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
@@ -27689,6 +28880,24 @@
     {
       "source": "project:ElsheiekhHMS.Tests",
       "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Infrastructure/Observability/RequestObservabilityMiddlewareTests.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Tests",
+      "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Web/Security/AuthenticationStateValidationTests.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Tests",
+      "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Web/Security/AuthorizationConfigurationTests.cs",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
       "relation": "contains",
@@ -27886,6 +29095,15 @@
     },
     {
       "source": "project:ElsheiekhHMS.Tests",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Infrastructure.Configuration",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Infrastructure/Configuration/InfrastructureConfigurationSafetyTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Tests",
       "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Infrastructure.Health",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Tests/Unit/Infrastructure/Health/HealthCheckTests.cs",
@@ -27913,6 +29131,15 @@
     },
     {
       "source": "project:ElsheiekhHMS.Tests",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Web.Security",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Web/Security/AuthenticationStateValidationTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Tests",
       "target": "project:ElsheiekhHMS.Application",
       "type": "project-reference",
       "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
@@ -27932,6 +29159,15 @@
     {
       "source": "project:ElsheiekhHMS.Tests",
       "target": "project:ElsheiekhHMS.Infrastructure",
+      "type": "project-reference",
+      "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
+      "relation": "project-reference",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Tests",
+      "target": "project:ElsheiekhHMS.Web",
       "type": "project-reference",
       "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
       "relation": "project-reference",
@@ -30480,7 +31716,7 @@
       "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentArrivalQueueSqlServerTests.FixedTimeProvider",
       "target": "type:System.TimeProvider",
       "type": "inherits",
-      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentArrivalQueueSqlServerTests.cs:L83",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentArrivalQueueSqlServerTests.cs:L118",
       "relation": "inherits",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -30498,7 +31734,7 @@
       "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentArrivalQueueSqlServerTests.TestCurrentUser",
       "target": "type:ElsheiekhHMS.Application.Common.Security.ICurrentUser",
       "type": "implements",
-      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentArrivalQueueSqlServerTests.cs:L77",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentArrivalQueueSqlServerTests.cs:L112",
       "relation": "implements",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -30507,7 +31743,7 @@
       "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentArrivalQueueSqlServerTests.TestCurrentUser",
       "target": "type:System.IEquatable\u003CT\u003E",
       "type": "implements",
-      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentArrivalQueueSqlServerTests.cs:L77",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentArrivalQueueSqlServerTests.cs:L112",
       "relation": "implements",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -30597,7 +31833,7 @@
       "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentServiceSqlServerTests.FixedTimeProvider",
       "target": "type:System.TimeProvider",
       "type": "inherits",
-      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentServiceSqlServerTests.cs:L159",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentServiceSqlServerTests.cs:L297",
       "relation": "inherits",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -30615,7 +31851,7 @@
       "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentServiceSqlServerTests.SetupRecords",
       "target": "type:System.IEquatable\u003CT\u003E",
       "type": "implements",
-      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentServiceSqlServerTests.cs:L146",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentServiceSqlServerTests.cs:L284",
       "relation": "implements",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -30633,7 +31869,7 @@
       "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentServiceSqlServerTests.TestCurrentUser",
       "target": "type:ElsheiekhHMS.Application.Common.Security.ICurrentUser",
       "type": "implements",
-      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentServiceSqlServerTests.cs:L153",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentServiceSqlServerTests.cs:L291",
       "relation": "implements",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -30642,7 +31878,7 @@
       "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.AppointmentServiceSqlServerTests.TestCurrentUser",
       "target": "type:System.IEquatable\u003CT\u003E",
       "type": "implements",
-      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentServiceSqlServerTests.cs:L153",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentServiceSqlServerTests.cs:L291",
       "relation": "implements",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -30659,6 +31895,15 @@
     {
       "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.DepartmentServiceSqlServerTests",
       "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.DepartmentServiceSqlServerTests.FixedTimeProvider",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/DepartmentServiceSqlServerTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.DepartmentServiceSqlServerTests",
+      "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.DepartmentServiceSqlServerTests.InvalidAuditWriter",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/DepartmentServiceSqlServerTests.cs",
       "relation": "contains",
@@ -30687,7 +31932,7 @@
       "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.DepartmentServiceSqlServerTests.FixedTimeProvider",
       "target": "type:System.TimeProvider",
       "type": "inherits",
-      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/DepartmentServiceSqlServerTests.cs:L120",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/DepartmentServiceSqlServerTests.cs:L159",
       "relation": "inherits",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -30702,10 +31947,28 @@
       "weight": 1
     },
     {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.DepartmentServiceSqlServerTests.InvalidAuditWriter",
+      "target": "type:ElsheiekhHMS.Application.Common.Auditing.IAuditEventWriter",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/DepartmentServiceSqlServerTests.cs:L164",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.DepartmentServiceSqlServerTests.InvalidAuditWriter",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Integration.Persistence",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/DepartmentServiceSqlServerTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
       "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.DepartmentServiceSqlServerTests.TestCurrentUser",
       "target": "type:ElsheiekhHMS.Application.Common.Security.ICurrentUser",
       "type": "implements",
-      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/DepartmentServiceSqlServerTests.cs:L112",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/DepartmentServiceSqlServerTests.cs:L151",
       "relation": "implements",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -30714,7 +31977,7 @@
       "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.DepartmentServiceSqlServerTests.TestCurrentUser",
       "target": "type:System.IEquatable\u003CT\u003E",
       "type": "implements",
-      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/DepartmentServiceSqlServerTests.cs:L112",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/DepartmentServiceSqlServerTests.cs:L151",
       "relation": "implements",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -30787,6 +32050,15 @@
       "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Integration.Persistence",
       "type": "namespace-membership",
       "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/ElsheiekhHmsDbContextSqlServerTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.HmsHealthEndpointHostTests",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Integration.Persistence",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/HmsHealthEndpointHostTests.cs",
       "relation": "namespace-membership",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -30936,6 +32208,132 @@
       "weight": 1
     },
     {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.PerformanceSmokeSqlServerTests",
+      "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.PerformanceSmokeSqlServerTests.CommandCountingInterceptor",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/PerformanceSmokeSqlServerTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.PerformanceSmokeSqlServerTests",
+      "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.PerformanceSmokeSqlServerTests.FixedTimeProvider",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/PerformanceSmokeSqlServerTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.PerformanceSmokeSqlServerTests",
+      "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.PerformanceSmokeSqlServerTests.SmokeData",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/PerformanceSmokeSqlServerTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.PerformanceSmokeSqlServerTests",
+      "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.PerformanceSmokeSqlServerTests.TestCurrentUser",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/PerformanceSmokeSqlServerTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.PerformanceSmokeSqlServerTests",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Integration.Persistence",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/PerformanceSmokeSqlServerTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.PerformanceSmokeSqlServerTests.CommandCountingInterceptor",
+      "target": "type:Microsoft.EntityFrameworkCore.Diagnostics.DbCommandInterceptor",
+      "type": "inherits",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/PerformanceSmokeSqlServerTests.cs:L258",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.PerformanceSmokeSqlServerTests.CommandCountingInterceptor",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Integration.Persistence",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/PerformanceSmokeSqlServerTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.PerformanceSmokeSqlServerTests.FixedTimeProvider",
+      "target": "type:System.TimeProvider",
+      "type": "inherits",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/PerformanceSmokeSqlServerTests.cs:L253",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.PerformanceSmokeSqlServerTests.FixedTimeProvider",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Integration.Persistence",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/PerformanceSmokeSqlServerTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.PerformanceSmokeSqlServerTests.SmokeData",
+      "target": "type:System.IEquatable\u003CT\u003E",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/PerformanceSmokeSqlServerTests.cs:L234",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.PerformanceSmokeSqlServerTests.SmokeData",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Integration.Persistence",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/PerformanceSmokeSqlServerTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.PerformanceSmokeSqlServerTests.TestCurrentUser",
+      "target": "type:ElsheiekhHMS.Application.Common.Security.ICurrentUser",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/PerformanceSmokeSqlServerTests.cs:L245",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.PerformanceSmokeSqlServerTests.TestCurrentUser",
+      "target": "type:System.IEquatable\u003CT\u003E",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/PerformanceSmokeSqlServerTests.cs:L245",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.PerformanceSmokeSqlServerTests.TestCurrentUser",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Integration.Persistence",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/PerformanceSmokeSqlServerTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
       "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.QueueServiceSqlServerTests",
       "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.QueueServiceSqlServerTests.FixedTimeProvider",
       "type": "contains",
@@ -30975,7 +32373,7 @@
       "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.QueueServiceSqlServerTests.FixedTimeProvider",
       "target": "type:System.TimeProvider",
       "type": "inherits",
-      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs:L171",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs:L437",
       "relation": "inherits",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -30993,7 +32391,7 @@
       "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.QueueServiceSqlServerTests.SetupRecords",
       "target": "type:System.IEquatable\u003CT\u003E",
       "type": "implements",
-      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs:L163",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs:L429",
       "relation": "implements",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -31011,7 +32409,7 @@
       "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.QueueServiceSqlServerTests.TestCurrentUser",
       "target": "type:ElsheiekhHMS.Application.Common.Security.ICurrentUser",
       "type": "implements",
-      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs:L165",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs:L431",
       "relation": "implements",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -31020,7 +32418,7 @@
       "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.QueueServiceSqlServerTests.TestCurrentUser",
       "target": "type:System.IEquatable\u003CT\u003E",
       "type": "implements",
-      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs:L165",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs:L431",
       "relation": "implements",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -31137,7 +32535,7 @@
       "source": "type:ElsheiekhHMS.Tests.Unit.Application.Appointments.AppointmentServiceTests.FakePersistence",
       "target": "type:ElsheiekhHMS.Application.Appointments.Persistence.IAppointmentPersistence",
       "type": "implements",
-      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentServiceTests.cs:L214",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentServiceTests.cs:L245",
       "relation": "implements",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -31155,7 +32553,7 @@
       "source": "type:ElsheiekhHMS.Tests.Unit.Application.Appointments.AppointmentServiceTests.FixedTimeProvider",
       "target": "type:System.TimeProvider",
       "type": "inherits",
-      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentServiceTests.cs:L198",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentServiceTests.cs:L229",
       "relation": "inherits",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -31173,7 +32571,7 @@
       "source": "type:ElsheiekhHMS.Tests.Unit.Application.Appointments.AppointmentServiceTests.RecordingAuditWriter",
       "target": "type:ElsheiekhHMS.Application.Common.Auditing.IAuditEventWriter",
       "type": "implements",
-      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentServiceTests.cs:L203",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentServiceTests.cs:L234",
       "relation": "implements",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -31191,7 +32589,7 @@
       "source": "type:ElsheiekhHMS.Tests.Unit.Application.Appointments.AppointmentServiceTests.TestCurrentUser",
       "target": "type:ElsheiekhHMS.Application.Common.Security.ICurrentUser",
       "type": "implements",
-      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentServiceTests.cs:L190",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentServiceTests.cs:L221",
       "relation": "implements",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -31614,7 +33012,7 @@
       "source": "type:ElsheiekhHMS.Tests.Unit.Application.Queue.QueueServiceTests.FakePersistence",
       "target": "type:ElsheiekhHMS.Application.Queue.Persistence.IQueuePersistence",
       "type": "implements",
-      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs:L201",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs:L202",
       "relation": "implements",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -31632,7 +33030,7 @@
       "source": "type:ElsheiekhHMS.Tests.Unit.Application.Queue.QueueServiceTests.FixedTimeProvider",
       "target": "type:System.TimeProvider",
       "type": "inherits",
-      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs:L184",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs:L185",
       "relation": "inherits",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -31650,7 +33048,7 @@
       "source": "type:ElsheiekhHMS.Tests.Unit.Application.Queue.QueueServiceTests.RecordingAuditWriter",
       "target": "type:ElsheiekhHMS.Application.Common.Auditing.IAuditEventWriter",
       "type": "implements",
-      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs:L189",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs:L190",
       "relation": "implements",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -31668,7 +33066,7 @@
       "source": "type:ElsheiekhHMS.Tests.Unit.Application.Queue.QueueServiceTests.TestCurrentUser",
       "target": "type:ElsheiekhHMS.Application.Common.Security.ICurrentUser",
       "type": "implements",
-      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs:L176",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Queue/QueueServiceTests.cs:L177",
       "relation": "implements",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -31839,7 +33237,7 @@
       "source": "type:ElsheiekhHMS.Tests.Unit.Application.Workflows.PatientIntakeAppointmentServiceTests.FakeAppointmentService",
       "target": "type:ElsheiekhHMS.Application.Appointments.IAppointmentService",
       "type": "implements",
-      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Workflows/PatientIntakeAppointmentServiceTests.cs:L329",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Workflows/PatientIntakeAppointmentServiceTests.cs:L349",
       "relation": "implements",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -31857,7 +33255,7 @@
       "source": "type:ElsheiekhHMS.Tests.Unit.Application.Workflows.PatientIntakeAppointmentServiceTests.FakePatientService",
       "target": "type:ElsheiekhHMS.Application.Patients.IPatientService",
       "type": "implements",
-      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Workflows/PatientIntakeAppointmentServiceTests.cs:L289",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Workflows/PatientIntakeAppointmentServiceTests.cs:L309",
       "relation": "implements",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -31875,7 +33273,7 @@
       "source": "type:ElsheiekhHMS.Tests.Unit.Application.Workflows.PatientIntakeAppointmentServiceTests.TestCurrentUser",
       "target": "type:ElsheiekhHMS.Application.Common.Security.ICurrentUser",
       "type": "implements",
-      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Workflows/PatientIntakeAppointmentServiceTests.cs:L281",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Workflows/PatientIntakeAppointmentServiceTests.cs:L301",
       "relation": "implements",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -32610,6 +34008,15 @@
       "weight": 1
     },
     {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Infrastructure.Configuration.InfrastructureConfigurationSafetyTests",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Infrastructure.Configuration",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Infrastructure/Configuration/InfrastructureConfigurationSafetyTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
       "source": "type:ElsheiekhHMS.Tests.Unit.Infrastructure.ElsheiekhHmsDbContextModelTests",
       "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Infrastructure",
       "type": "namespace-membership",
@@ -32875,6 +34282,141 @@
       "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Infrastructure.Observability",
       "type": "namespace-membership",
       "evidence": "ElsheiekhHMS.Tests/Unit/Infrastructure/Observability/RequestObservabilityMiddlewareTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Web.Security.AuthenticationStateValidationTests",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Web.Security.AuthenticationStateValidationTests.EmptyUserStore",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Web/Security/AuthenticationStateValidationTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Web.Security.AuthenticationStateValidationTests",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Web.Security.AuthenticationStateValidationTests.SingleScope",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Web/Security/AuthenticationStateValidationTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Web.Security.AuthenticationStateValidationTests",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Web.Security.AuthenticationStateValidationTests.SingleServiceProvider",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Web/Security/AuthenticationStateValidationTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Web.Security.AuthenticationStateValidationTests",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Web.Security.AuthenticationStateValidationTests.SingleServiceScopeFactory",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Web/Security/AuthenticationStateValidationTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Web.Security.AuthenticationStateValidationTests",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Web.Security.AuthenticationStateValidationTests.StubUserManager",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Web/Security/AuthenticationStateValidationTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Web.Security.AuthenticationStateValidationTests",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Web.Security",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Web/Security/AuthenticationStateValidationTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Web.Security.AuthenticationStateValidationTests.EmptyUserStore",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Web.Security",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Web/Security/AuthenticationStateValidationTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Web.Security.AuthenticationStateValidationTests.SingleScope",
+      "target": "type:Microsoft.Extensions.DependencyInjection.IServiceScope",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Web/Security/AuthenticationStateValidationTests.cs:L129",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Web.Security.AuthenticationStateValidationTests.SingleScope",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Web.Security",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Web/Security/AuthenticationStateValidationTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Web.Security.AuthenticationStateValidationTests.SingleServiceProvider",
+      "target": "type:System.IServiceProvider",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Web/Security/AuthenticationStateValidationTests.cs:L135",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Web.Security.AuthenticationStateValidationTests.SingleServiceProvider",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Web.Security",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Web/Security/AuthenticationStateValidationTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Web.Security.AuthenticationStateValidationTests.SingleServiceScopeFactory",
+      "target": "type:Microsoft.Extensions.DependencyInjection.IServiceScopeFactory",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Web/Security/AuthenticationStateValidationTests.cs:L124",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Web.Security.AuthenticationStateValidationTests.SingleServiceScopeFactory",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Web.Security",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Web/Security/AuthenticationStateValidationTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Web.Security.AuthenticationStateValidationTests.StubUserManager",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Web.Security",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Web/Security/AuthenticationStateValidationTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Web.Security.AuthorizationConfigurationTests",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Web.Security",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Web/Security/AuthorizationConfigurationTests.cs",
       "relation": "namespace-membership",
       "confidence": "EXTRACTED",
       "weight": 1
