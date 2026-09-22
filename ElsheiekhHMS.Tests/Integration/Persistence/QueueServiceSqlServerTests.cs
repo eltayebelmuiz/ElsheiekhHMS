@@ -5,7 +5,9 @@ using ElsheiekhHMS.Application.Queue.Contracts;
 using ElsheiekhHMS.Core.Domain.Organization.Entities;
 using ElsheiekhHMS.Core.Domain.Patients.Entities;
 using ElsheiekhHMS.Core.Domain.Patients.Enums;
+using ElsheiekhHMS.Core.Domain.Scheduling.Entities;
 using ElsheiekhHMS.Core.Domain.Scheduling.Enums;
+using ElsheiekhHMS.Core.Domain.Staff.Entities;
 using ElsheiekhHMS.Infrastructure.Auditing;
 using ElsheiekhHMS.Infrastructure.Persistence;
 using ElsheiekhHMS.Infrastructure.Persistence.Allocation;
@@ -130,6 +132,189 @@ public sealed class QueueServiceSqlServerTests(SqlServerTestDatabaseFixture fixt
 
         Assert.True(results.Count(result => result.IsSuccess) == 1, diagnostic);
         Assert.True(results.Count(result => !result.IsSuccess && result.Errors.Any(error => error.Code == "queue.duplicate_active")) == 1, diagnostic);
+
+        await using var verification = fixture.CreateContext();
+        var queueDate = new DateOnly(2026, 9, 23);
+        var active = await verification.WalkInQueueEntries
+            .Where(entry =>
+                entry.PatientId == setup.PatientId &&
+                entry.QueueDate == queueDate &&
+                entry.Status != QueueStatus.Completed &&
+                entry.Status != QueueStatus.Cancelled)
+            .ToListAsync();
+
+        var winner = Assert.Single(active);
+        Assert.InRange(winner.SequenceNumber, 1, 999);
+        Assert.Equal($"A-{winner.SequenceNumber:D3}", winner.QueueNumber);
+        Assert.Equal(1, await verification.AuditLogs.CountAsync(log =>
+            log.Action == AuditActions.QueueEntryCreated &&
+            log.TargetId == winner.QueueNumber));
+    }
+
+    [Fact]
+    public async Task Concurrent_appointment_link_requests_leave_one_durable_link_and_audit()
+    {
+        var setup = await CreateRecordsAsync();
+        int appointmentId;
+        await using (var seed = fixture.CreateContext(setup.User, setup.Clock))
+        {
+            var doctor = new Doctor(
+                "DR-" + Guid.NewGuid().ToString("N")[..8],
+                "Queue Link Doctor",
+                "General",
+                false,
+                100m,
+                setup.DepartmentId,
+                NowUtc,
+                setup.User.UserId);
+            seed.Doctors.Add(doctor);
+            await seed.SaveChangesAsync();
+
+            var appointment = new Appointment(
+                "AP-" + Guid.NewGuid().ToString("N")[..8],
+                setup.PatientId,
+                doctor.Id,
+                setup.DepartmentId,
+                new DateOnly(2026, 9, 24),
+                new TimeOnly(9, 0),
+                AppointmentType.General,
+                null,
+                NowUtc,
+                setup.User.UserId);
+            seed.Appointments.Add(appointment);
+            await seed.SaveChangesAsync();
+            appointmentId = appointment.Id;
+        }
+
+        await using var firstContext = fixture.CreateContext(setup.User, setup.Clock);
+        await using var secondContext = fixture.CreateContext(setup.User, setup.Clock);
+        var firstService = CreateService(firstContext, setup.User, setup.Clock);
+        var secondService = CreateService(secondContext, setup.User, setup.Clock);
+        var request = new AddAppointmentQueueEntryRequest(
+            setup.PatientId,
+            setup.DepartmentId,
+            appointmentId,
+            QueuePriority.Normal,
+            "scheduled arrival");
+
+        var results = await Task.WhenAll(
+            firstService.AddAppointmentAsync(request),
+            secondService.AddAppointmentAsync(request));
+        var diagnostic = string.Join(" | ", results.Select(result => result.IsSuccess
+            ? "success"
+            : string.Join(",", result.Errors.Select(error => error.Code))));
+
+        Assert.True(results.Count(result => result.IsSuccess) == 1, diagnostic);
+        Assert.True(results.Count(result => !result.IsSuccess && result.Errors.Any(error =>
+            error.Code is "queue.duplicate_active" or "queue.duplicate_appointment")) == 1, diagnostic);
+
+        await using var verification = fixture.CreateContext();
+        var persistedAppointment = await verification.Appointments.SingleAsync(item => item.Id == appointmentId);
+        var linked = await verification.WalkInQueueEntries
+            .Where(entry => entry.AppointmentId == appointmentId)
+            .ToListAsync();
+
+        var winner = Assert.Single(linked);
+        Assert.Equal(persistedAppointment.PatientId, winner.PatientId);
+        Assert.Equal(persistedAppointment.DepartmentId, winner.DepartmentId);
+        Assert.Equal(new DateOnly(2026, 9, 23), winner.QueueDate);
+        Assert.Equal(1, await verification.AuditLogs.CountAsync(log =>
+            log.Action == AuditActions.QueueEntryCreated &&
+            log.TargetId == winner.QueueNumber));
+    }
+
+    [Fact]
+    public async Task Filtered_appointment_link_index_rejects_duplicate_and_allows_multiple_null_links()
+    {
+        var setup = await CreateRecordsAsync();
+        int appointmentId;
+        await using (var seed = fixture.CreateContext(setup.User, setup.Clock))
+        {
+            var doctor = new Doctor(
+                "DR-" + Guid.NewGuid().ToString("N")[..8],
+                "Index Doctor",
+                "General",
+                false,
+                100m,
+                setup.DepartmentId,
+                NowUtc,
+                setup.User.UserId);
+            seed.Doctors.Add(doctor);
+            await seed.SaveChangesAsync();
+            var appointment = new Appointment(
+                "AP-" + Guid.NewGuid().ToString("N")[..8],
+                setup.PatientId,
+                doctor.Id,
+                setup.DepartmentId,
+                new DateOnly(2026, 9, 25),
+                new TimeOnly(9, 0),
+                AppointmentType.General,
+                null,
+                NowUtc,
+                setup.User.UserId);
+            seed.Appointments.Add(appointment);
+            await seed.SaveChangesAsync();
+            appointmentId = appointment.Id;
+        }
+
+        await using (var first = fixture.CreateContext(setup.User, setup.Clock))
+        {
+            var service = CreateService(first, setup.User, setup.Clock);
+            var result = await service.AddAppointmentAsync(new AddAppointmentQueueEntryRequest(
+                setup.PatientId,
+                setup.DepartmentId,
+                appointmentId,
+                QueuePriority.Normal,
+                "index seed"));
+            Assert.True(result.IsSuccess, string.Join(";", result.Errors.Select(error => error.Code)));
+        }
+
+        await using (var duplicate = fixture.CreateContext(setup.User, setup.Clock))
+        {
+            duplicate.WalkInQueueEntries.Add(new WalkInQueueEntry(
+                setup.PatientId,
+                setup.DepartmentId,
+                new DateOnly(2026, 9, 26),
+                1,
+                "A-001",
+                QueuePriority.Normal,
+                null,
+                NowUtc,
+                setup.User.UserId,
+                appointmentId));
+
+            var exception = await Assert.ThrowsAsync<DbUpdateException>(() => duplicate.SaveChangesAsync());
+            Assert.Contains("UX_WalkInQueueEntries_AppointmentId", exception.ToString(), StringComparison.OrdinalIgnoreCase);
+        }
+
+        await using (var nullLinks = fixture.CreateContext(setup.User, setup.Clock))
+        {
+            nullLinks.WalkInQueueEntries.AddRange(
+                new WalkInQueueEntry(
+                    setup.PatientId,
+                    setup.DepartmentId,
+                    new DateOnly(2026, 9, 27),
+                    1,
+                    "A-001",
+                    QueuePriority.Normal,
+                    null,
+                    NowUtc,
+                    setup.User.UserId),
+                new WalkInQueueEntry(
+                    setup.PatientId,
+                    setup.DepartmentId,
+                    new DateOnly(2026, 9, 28),
+                    1,
+                    "A-001",
+                    QueuePriority.Normal,
+                    null,
+                    NowUtc,
+                    setup.User.UserId));
+
+            await nullLinks.SaveChangesAsync();
+            Assert.Equal(2, await nullLinks.WalkInQueueEntries.CountAsync(entry =>
+                entry.AppointmentId == null && entry.QueueDate >= new DateOnly(2026, 9, 27)));
+        }
     }
 
     private QueueService CreateService(

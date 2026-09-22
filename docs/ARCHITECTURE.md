@@ -144,7 +144,7 @@ liveness at `/health` and `/health/live` without SQL, and anonymous application
 readiness at `/health/ready` using `DbContext.Database.CanConnectAsync`. Readiness
 does not migrate, seed, write, or expose raw database errors. No third-party
 observability, retry, pooling, cache, broker, or background infrastructure was
-introduced. Phase 10 is not started.
+introduced. Phase 10 is in progress; 10A authorization/host-security verification and 10B SQL concurrency/atomicity verification are complete, while 10C and 10D are not started.
 
 ## 7. Testing architecture
 

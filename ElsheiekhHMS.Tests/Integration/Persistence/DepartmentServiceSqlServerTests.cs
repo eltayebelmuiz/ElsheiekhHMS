@@ -1,3 +1,5 @@
+using System.Reflection;
+using ElsheiekhHMS.Infrastructure.Auditing.Entities;
 using ElsheiekhHMS.Application.Common.Security;
 using ElsheiekhHMS.Application.Common.Auditing;
 using ElsheiekhHMS.Application.Departments;
@@ -99,6 +101,43 @@ public sealed class DepartmentServiceSqlServerTests(SqlServerTestDatabaseFixture
         Assert.Equal(2, await context.Departments.CountAsync(department => department.Name == name));
     }
 
+    [Fact]
+    public async Task Business_and_audit_rows_roll_back_together_when_sql_persistence_fails()
+    {
+        var currentUser = new TestCurrentUser("department-atomicity-user", [RoleNames.SystemAdministrator]);
+        var now = new FixedTimeProvider(new DateTimeOffset(2026, 9, 22, 10, 0, 0, TimeSpan.Zero));
+        var name = "Atomicity " + Guid.NewGuid().ToString("N")[..8];
+
+        await using (var context = fixture.CreateContext(currentUser, now))
+        {
+            var service = new DepartmentService(
+                new DepartmentPersistence(context),
+                new InvalidAuditWriter(context, now),
+                currentUser,
+                now);
+
+            var result = await service.CreateAsync(new CreateDepartmentRequest(name, "Rollback", null));
+
+            Assert.False(result.IsSuccess);
+            Assert.Equal("department.persistence_failure", Assert.Single(result.Errors).Code);
+        }
+
+        await using (var verification = fixture.CreateContext())
+        {
+            Assert.False(await verification.Departments.AnyAsync(department => department.Name == name));
+            Assert.False(await verification.AuditLogs.AnyAsync(log =>
+                log.TargetType == "Department" && log.TargetId == name));
+        }
+
+        await using (var recovery = fixture.CreateContext(currentUser, now))
+        {
+            var service = CreateService(recovery, currentUser, now);
+            var result = await service.CreateAsync(new CreateDepartmentRequest(name, "Recovery", null));
+
+            Assert.True(result.IsSuccess, string.Join(";", result.Errors.Select(error => error.Code)));
+        }
+    }
+
     private static DepartmentService CreateService(
         ElsheiekhHmsDbContext context,
         ICurrentUser currentUser,
@@ -120,5 +159,37 @@ public sealed class DepartmentServiceSqlServerTests(SqlServerTestDatabaseFixture
     private sealed class FixedTimeProvider(DateTimeOffset utcNow) : TimeProvider
     {
         public override DateTimeOffset GetUtcNow() => utcNow;
+    }
+
+    private sealed class InvalidAuditWriter(
+        ElsheiekhHmsDbContext context,
+        TimeProvider timeProvider) : IAuditEventWriter
+    {
+        public Task RecordAsync(
+            AuditEventRequest request,
+            CancellationToken cancellationToken = default)
+        {
+            cancellationToken.ThrowIfCancellationRequested();
+            var create = typeof(AuditLog).GetMethod(
+                "Create",
+                BindingFlags.Static | BindingFlags.NonPublic)
+                ?? throw new InvalidOperationException("AuditLog factory was not found.");
+            var audit = (AuditLog)create.Invoke(null,
+                [
+                    timeProvider.GetUtcNow(),
+                    AuditActorKinds.Human,
+                    "department-atomicity-user",
+                    "operator",
+                    AuditCategories.Business,
+                    new string('X', 65),
+                    request.TargetType,
+                    request.TargetId,
+                    request.Reason,
+                    null,
+                    null
+                ])!;
+            context.AuditLogs.Add(audit);
+            return Task.CompletedTask;
+        }
     }
 }

@@ -98,6 +98,23 @@ public sealed class AppointmentServiceSqlServerTests(SqlServerTestDatabaseFixtur
         var diagnostic = string.Join(" | ", results.Select(result => result.IsSuccess ? "success" : string.Join(",", result.Errors.Select(error => error.Code + ":" + error.Message))));
         Assert.True(results.Count(result => result.IsSuccess) == 1, diagnostic);
         Assert.True(results.Count(result => !result.IsSuccess && result.Errors.Any(error => error.Code == "appointment.collision")) == 1, diagnostic);
+
+        await using var verification = fixture.CreateContext();
+        var persisted = await verification.Appointments
+            .Where(appointment =>
+                appointment.DepartmentId == setup.DepartmentId &&
+                appointment.ScheduledDate == request.ScheduledDate &&
+                appointment.ScheduledTime == request.ScheduledTime &&
+                appointment.Status != AppointmentStatus.Cancelled &&
+                appointment.Status != AppointmentStatus.NoShow &&
+                appointment.Status != AppointmentStatus.Completed)
+            .ToListAsync();
+
+        var winner = Assert.Single(persisted);
+        Assert.Equal(AppointmentStatus.Scheduled, winner.Status);
+        Assert.Equal(1, await verification.AuditLogs.CountAsync(log =>
+            log.Action == AuditActions.AppointmentScheduled &&
+            log.TargetId == winner.AppointmentCode));
     }
 
     private AppointmentService CreateService(
