@@ -46,6 +46,14 @@ password reset, external login, and remember-me are not part of this shell.
 through an antiforgery-protected POST. Backend authentication, account state,
 security-stamp revalidation, and authorization remain authoritative.
 
+The pre-manual-QA polish adds a token-based light/dark preference that follows
+the system theme on first visit and stores only the explicit theme choice in
+local storage. The shell and anonymous header expose the same named keyboard
+control. The login password field has a local visibility toggle; no password is
+stored or logged. Operational print styles omit navigation and interactive
+controls. The consolidated review matrix and seeded role usernames are in
+`docs/UI_PRE_MANUAL_QA.md`.
+
 ## Accessibility and responsive behavior
 
 Use semantic landmarks, associated labels, native links/buttons/forms, visible

@@ -3,6 +3,8 @@
 Enterprise Hospital Management System built with **.NET 10, ASP.NET Core, Blazor, Entity Framework Core, SQL Server, and ASP.NET Core Identity**.
 
 > **Current development stage:** Pre-Phase13B — Development database inspection and safe test data seeding complete; Encounter implementation has not started
+
+> **Pre-Manual-QA:** ✅ UI/UX enhancement and accessibility polish complete; consolidated browser handoff is in `docs/UI_PRE_MANUAL_QA.md`; backend and test-data boundaries remain frozen
 >
 > **Phase 01:** ✅ Complete
 >

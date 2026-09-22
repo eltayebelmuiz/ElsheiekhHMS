@@ -7,6 +7,8 @@
 .hms-nav__label { color: var(--hms-sidebar-muted); font-size: .66rem; font-weight: 800; letter-spacing: .09em; margin: 0 var(--hms-space-3) var(--hms-space-2); text-transform: uppercase; }
 .hms-nav__link { align-items: center; border-radius: var(--hms-radius-sm); color: var(--hms-sidebar-text); display: flex; font-size: .88rem; gap: var(--hms-space-3); min-height: 2.7rem; padding: .55rem var(--hms-space-3); text-decoration: none; width: 100%; }
 .hms-nav__link:hover, .hms-nav__link.active { background: var(--hms-sidebar-active); color: white; }
+.hms-nav__link.active { box-shadow: inset 3px 0 0 var(--hms-accent); font-weight: 750; }
+.hms-nav__link:focus-visible { outline-color: var(--hms-focus); outline-offset: -2px; }
 .hms-nav__link--planned { color: var(--hms-sidebar-muted); cursor: default; }
 .hms-nav__link--planned:hover { background: transparent; color: var(--hms-sidebar-muted); }
 .hms-nav__link small { color: var(--hms-sidebar-muted); font-size: .65rem; margin-inline-start: auto; }

@@ -28,7 +28,10 @@
         </div>
         <div class="hms-field">
             <label for="login-password">Password</label>
-            <input id="login-password" name="password" class="form-control" type="password" autocomplete="current-password" required />
+            <div class="hms-password-field">
+                <input id="login-password" name="password" class="form-control" type="password" autocomplete="current-password" required />
+                <button type="button" class="hms-password-toggle" data-hms-password-toggle onclick="window.hmsUi.togglePassword('login-password', this)" aria-controls="login-password" aria-pressed="false">Show</button>
+            </div>
         </div>
         <button type="submit" class="btn btn-primary hms-login-form__submit">Sign in</button>
     </form>

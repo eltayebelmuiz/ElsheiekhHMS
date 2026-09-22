@@ -1,12 +1,19 @@
 @inherits LayoutComponentBase
 
+<a class="hms-skip-link" href="#main-content">Skip to main content</a>
 <div class="hms-anonymous-shell">
     <header class="hms-anonymous-header">
-        <a class="hms-anonymous-brand" href="/">
-            <span class="hms-anonymous-brand__mark" aria-hidden="true">E</span>
-            <span><strong>EL-Shiekh Medical Complex</strong><small>Hospital Management System</small></span>
-        </a>
+        <div class="hms-anonymous-header__inner">
+            <a class="hms-anonymous-brand" href="/">
+                <span class="hms-anonymous-brand__mark" aria-hidden="true">E</span>
+                <span><strong>EL-Shiekh Medical Complex</strong><small>Hospital Management System</small></span>
+            </a>
+            <button type="button" class="hms-theme-toggle" data-hms-theme-toggle onclick="window.hmsTheme.toggle()" title="Switch theme">
+                <span class="hms-theme-toggle__mark" aria-hidden="true">◐</span>
+                <span class="hms-theme-toggle__label">Theme</span>
+            </button>
+        </div>
     </header>
-    <main class="hms-anonymous-main" tabindex="-1">@Body</main>
+    <main id="main-content" class="hms-anonymous-main" tabindex="-1">@Body</main>
     <footer class="hms-anonymous-footer">Authorized hospital staff access only</footer>
 </div>

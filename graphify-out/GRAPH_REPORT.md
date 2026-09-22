@@ -2,11 +2,11 @@
 
 ## Snapshot
 
-- **generatedAtUtc:** `2026-09-22T21:17:12.9305513+00:00`
+- **generatedAtUtc:** `2026-09-22T21:32:15.5905314+00:00`
 - **gitBranch:** `main`
-- **gitCommit:** `dff902cf141e2803dda5b7f376757dabea9cca7e`
+- **gitCommit:** `cc20698b1bb868e9df8138c09fc06e6ce1d5dbf9`
 - **workingTreeDirty:** `True`
-- **sourceFingerprint:** `72ffa1720e5eb29bcaf70dce05c8e7dfc4666e5501fb5db6c170bfe3f0e44ec1`
+- **sourceFingerprint:** `bb62df0cb89e96168e7cf62fc06703747a1d92394da561c7497f228840e221df`
 - Framework: net10.0
 - Structural extraction only: **0 LLM API calls / 0 LLM tokens**. No statistical community clustering is claimed; project ownership supplies the visual groups.
 
@@ -252,59 +252,59 @@ Evaluated direct PackageReference items only. Framework/SDK auto-references and 
 Declared by README; not inferred from the existence of classes:
 
 - > **Current development stage:** Pre-Phase13B — Development database inspection and safe test data seeding complete; Encounter implementation has not started — README.md:L5
-- > **Phase 01:** ✅ Complete — README.md:L7
-- > **Phase 02 Setup:** ✅ Complete and verified — README.md:L9
-- > **Phase 03A / 03B / 03C:** ✅ Complete — README.md:L11
-- > **Phase 03D:** ✅ Implemented and verified — README.md:L13
-- > **Phase 04A:** ✅ EF Core foundation implemented and verified — README.md:L15
-- > **Phase 04B:** ✅ Entity Fluent mappings implemented and verified — README.md:L17
-- > **Phase 04C:** ✅ Relationships, filters, indexes, constraints, and concurrency metadata implemented and verified — README.md:L19
-- > **Phase 04D-A:** ✅ SQL Server environment readiness verified — README.md:L21
-- > **Phase 04D-B0:** ✅ EF design-time tooling verified — README.md:L23
-- > **Phase 04D-B:** ✅ Initial migration generated and inspected; database not created or updated — README.md:L25
-- > **Phase 04D-C:** ✅ Initial migration applied and local SQL Server schema verified — README.md:L27
-- > **Phase 04E:** ✅ Persistence integration tests implemented and verified — README.md:L29
-- > **Phase 05A:** ✅ Identity foundation and security-model amendment implemented and verified — README.md:L31
-- > **Phase 05B:** ✅ Roles, authorization policies, fallback policy, and password-free role seeder implemented and verified — README.md:L33
-- > **Phase 05C:** ✅ Current-user foundation and entity lifecycle auditing implemented and verified — README.md:L35
-- > **Phase 05C-A:** ✅ Durable security/business AuditLog model and writer foundation implemented and verified; event-producing workflows, retention policy, IP/UserAgent capture, and clinical/read auditing remain deferred — README.md:L37
-- > **Phase 05D:** ✅ Identity and AuditLog migration applied and verified against development and isolated integration SQL Server databases; pending-model suppression removed — README.md:L39
-- > **Phase 05E:** ✅ Security integration and hardening implemented and verified; account workflows, durable event producers, retention, IP/UserAgent capture, clinical/read auditing, and UI remain deferred — README.md:L41
-- > **Phase 07S:** ✅ Database-backed allocator prerequisite implemented, migration applied, physical schema verified, and regression suite passed — README.md:L43
-- > **Phase 07A:** ✅ Patient Application Service implemented, tested, and reviewed; registration and PatientCode allocation remain one-save transactional — README.md:L45
-- > **Phase 07B:** ✅ Department Application Service complete, implemented, tested, and reviewed — README.md:L47
-- > **Phase 07C-P:** ✅ AppointmentCode allocator prerequisite complete; migration applied and physical schema verified — README.md:L49
-- > **Phase 07C:** ✅ Appointment Application Service complete — README.md:L51
-- > **Phase 07D:** ✅ Queue Application Service complete, implemented, verified, and closed out — README.md:L53
-- > **Phase 07E:** ⏸ Doctor/Provider Application Service deferred; Doctor/Provider contracts and Doctor↔ApplicationUser ownership-aware authorization are not yet approved — README.md:L55
-- > **Phase 07:** ✅ Application Services complete for the approved scope; 07E is explicitly deferred — README.md:L57
-- > **Phase 08A:** ✅ Staff Patient Intake & Appointment Scheduling implemented, tested, and verified; partial-success retry semantics preserve newly registered Patients — README.md:L59
-- > **Phase 08B-P:** ✅ Appointment↔Queue durable-link prerequisite implemented; `AddAppointmentQueueLink` applied and physically verified — README.md:L61
-- > **Phase 08B:** ✅ Appointment Arrival & Queue Handoff implemented, verified, and closed out — README.md:L63
-- > **Phase 08:** ✅ Business Workflows complete; 08A, 08B-P, and 08B are complete; 08C is not required — README.md:L65
-- > **Phase 09A:** ✅ Structured Application Observability complete — README.md:L67
-- > **Phase 09B:** ✅ SQL Server readiness health checks complete — README.md:L69
-- > **Phase 09:** ✅ Enterprise Infrastructure complete; 09A and 09B complete; 09C is not required — README.md:L71
-- > **Phase 10:** ✅ Testing & Hardening complete; 10A, 10B, 10C, and 10D complete; 418 tests passing — README.md:L73
-- > **Phase 11:** ✅ Backend Review complete; 11A passed, 11B was not required, and 11C accepted and froze the backend baseline — README.md:L75
-- > **Phase 12A:** ✅ Blazor UI architecture, application shell, navigation foundation, design tokens, reusable feedback/form/list patterns, and accessibility baseline established — README.md:L77
-- > **Phase 12B:** ✅ Authentication presentation, anonymous/authenticated shell separation, current-user/logout controls, unauthorized UX, and role-aware navigation complete; external browser QA remains required — README.md:L80
-- > **Phase 12C:** ✅ Patient registry, server-side search/pagination, registration, details, and concurrency-safe edit UI complete; external browser QA remains required — README.md:L82
-- > **Phase 12D:** ✅ Department registry, search/filter/sort, create, details, edit, and one-way deactivation UI complete; external browser QA remains required — README.md:L84
-- > **Phase 12E:** ✅ Appointment registry, bounded Patient lookup, scheduling, lifecycle details/actions, Kigali presentation, and concurrency-safe mutation UI complete; external browser QA remains required — README.md:L86
-- > **Phase 12F:** ✅ Queue registry, explicit walk-in workflow, queue lifecycle UI, and Appointment→Queue handoff UI complete; external browser QA remains required — README.md:L88
-- > **Phase 12G:** ✅ Operational dashboard, cross-module UI hardening, accessibility source review, and consolidated QA handoff complete; external browser QA remains required — README.md:L90
-- > **Phase 12H:** ✅ Final UI acceptance, static-asset authentication-boundary fix, acceptance documentation, and frontend freeze complete; Antigravity and authenticated browser evidence remain environment-dependent — README.md:L92
-- > **Phase 13A:** ✅ Clinical Encounter architecture accepted; domain model and provider ownership decisions are documented, with implementation intentionally deferred to the Phase13B gate — README.md:L94
--  /  01  /  Solution & Architecture  /  ✅ Complete  /  — README.md:L413
--  /  02  /  Core Foundation  /  ✅ Complete  /  — README.md:L414
--  /  03  /  Domain Entities  /  ✅ Complete  /  — README.md:L415
--  /  04  /  EF Core & Database  /  ✅ Complete  /  — README.md:L416
--  /  05  /  Identity & Security  /  ✅ Complete (05A, 05B, 05C, 05C-A, 05D, and 05E)  /  — README.md:L417
--  /  06  /  DTOs & Validation  /  ✅ Complete (06A–06D)  /  — README.md:L418
--  /  07  /  Application Services  /  ✅ Complete for approved scope (07S, 07A, 07B, 07C-P, 07C, 07D; 07E deferred)  /  — README.md:L419
--  /  08  /  Business Workflows  /  ✅ Complete (08A, 08B-P, 08B)  /  — README.md:L420
--  /  09  /  Enterprise Infrastructure  /  ✅ Complete (09A, 09B)  /  — README.md:L421
+- > **Phase 01:** ✅ Complete — README.md:L9
+- > **Phase 02 Setup:** ✅ Complete and verified — README.md:L11
+- > **Phase 03A / 03B / 03C:** ✅ Complete — README.md:L13
+- > **Phase 03D:** ✅ Implemented and verified — README.md:L15
+- > **Phase 04A:** ✅ EF Core foundation implemented and verified — README.md:L17
+- > **Phase 04B:** ✅ Entity Fluent mappings implemented and verified — README.md:L19
+- > **Phase 04C:** ✅ Relationships, filters, indexes, constraints, and concurrency metadata implemented and verified — README.md:L21
+- > **Phase 04D-A:** ✅ SQL Server environment readiness verified — README.md:L23
+- > **Phase 04D-B0:** ✅ EF design-time tooling verified — README.md:L25
+- > **Phase 04D-B:** ✅ Initial migration generated and inspected; database not created or updated — README.md:L27
+- > **Phase 04D-C:** ✅ Initial migration applied and local SQL Server schema verified — README.md:L29
+- > **Phase 04E:** ✅ Persistence integration tests implemented and verified — README.md:L31
+- > **Phase 05A:** ✅ Identity foundation and security-model amendment implemented and verified — README.md:L33
+- > **Phase 05B:** ✅ Roles, authorization policies, fallback policy, and password-free role seeder implemented and verified — README.md:L35
+- > **Phase 05C:** ✅ Current-user foundation and entity lifecycle auditing implemented and verified — README.md:L37
+- > **Phase 05C-A:** ✅ Durable security/business AuditLog model and writer foundation implemented and verified; event-producing workflows, retention policy, IP/UserAgent capture, and clinical/read auditing remain deferred — README.md:L39
+- > **Phase 05D:** ✅ Identity and AuditLog migration applied and verified against development and isolated integration SQL Server databases; pending-model suppression removed — README.md:L41
+- > **Phase 05E:** ✅ Security integration and hardening implemented and verified; account workflows, durable event producers, retention, IP/UserAgent capture, clinical/read auditing, and UI remain deferred — README.md:L43
+- > **Phase 07S:** ✅ Database-backed allocator prerequisite implemented, migration applied, physical schema verified, and regression suite passed — README.md:L45
+- > **Phase 07A:** ✅ Patient Application Service implemented, tested, and reviewed; registration and PatientCode allocation remain one-save transactional — README.md:L47
+- > **Phase 07B:** ✅ Department Application Service complete, implemented, tested, and reviewed — README.md:L49
+- > **Phase 07C-P:** ✅ AppointmentCode allocator prerequisite complete; migration applied and physical schema verified — README.md:L51
+- > **Phase 07C:** ✅ Appointment Application Service complete — README.md:L53
+- > **Phase 07D:** ✅ Queue Application Service complete, implemented, verified, and closed out — README.md:L55
+- > **Phase 07E:** ⏸ Doctor/Provider Application Service deferred; Doctor/Provider contracts and Doctor↔ApplicationUser ownership-aware authorization are not yet approved — README.md:L57
+- > **Phase 07:** ✅ Application Services complete for the approved scope; 07E is explicitly deferred — README.md:L59
+- > **Phase 08A:** ✅ Staff Patient Intake & Appointment Scheduling implemented, tested, and verified; partial-success retry semantics preserve newly registered Patients — README.md:L61
+- > **Phase 08B-P:** ✅ Appointment↔Queue durable-link prerequisite implemented; `AddAppointmentQueueLink` applied and physically verified — README.md:L63
+- > **Phase 08B:** ✅ Appointment Arrival & Queue Handoff implemented, verified, and closed out — README.md:L65
+- > **Phase 08:** ✅ Business Workflows complete; 08A, 08B-P, and 08B are complete; 08C is not required — README.md:L67
+- > **Phase 09A:** ✅ Structured Application Observability complete — README.md:L69
+- > **Phase 09B:** ✅ SQL Server readiness health checks complete — README.md:L71
+- > **Phase 09:** ✅ Enterprise Infrastructure complete; 09A and 09B complete; 09C is not required — README.md:L73
+- > **Phase 10:** ✅ Testing & Hardening complete; 10A, 10B, 10C, and 10D complete; 418 tests passing — README.md:L75
+- > **Phase 11:** ✅ Backend Review complete; 11A passed, 11B was not required, and 11C accepted and froze the backend baseline — README.md:L77
+- > **Phase 12A:** ✅ Blazor UI architecture, application shell, navigation foundation, design tokens, reusable feedback/form/list patterns, and accessibility baseline established — README.md:L79
+- > **Phase 12B:** ✅ Authentication presentation, anonymous/authenticated shell separation, current-user/logout controls, unauthorized UX, and role-aware navigation complete; external browser QA remains required — README.md:L82
+- > **Phase 12C:** ✅ Patient registry, server-side search/pagination, registration, details, and concurrency-safe edit UI complete; external browser QA remains required — README.md:L84
+- > **Phase 12D:** ✅ Department registry, search/filter/sort, create, details, edit, and one-way deactivation UI complete; external browser QA remains required — README.md:L86
+- > **Phase 12E:** ✅ Appointment registry, bounded Patient lookup, scheduling, lifecycle details/actions, Kigali presentation, and concurrency-safe mutation UI complete; external browser QA remains required — README.md:L88
+- > **Phase 12F:** ✅ Queue registry, explicit walk-in workflow, queue lifecycle UI, and Appointment→Queue handoff UI complete; external browser QA remains required — README.md:L90
+- > **Phase 12G:** ✅ Operational dashboard, cross-module UI hardening, accessibility source review, and consolidated QA handoff complete; external browser QA remains required — README.md:L92
+- > **Phase 12H:** ✅ Final UI acceptance, static-asset authentication-boundary fix, acceptance documentation, and frontend freeze complete; Antigravity and authenticated browser evidence remain environment-dependent — README.md:L94
+- > **Phase 13A:** ✅ Clinical Encounter architecture accepted; domain model and provider ownership decisions are documented, with implementation intentionally deferred to the Phase13B gate — README.md:L96
+-  /  01  /  Solution & Architecture  /  ✅ Complete  /  — README.md:L415
+-  /  02  /  Core Foundation  /  ✅ Complete  /  — README.md:L416
+-  /  03  /  Domain Entities  /  ✅ Complete  /  — README.md:L417
+-  /  04  /  EF Core & Database  /  ✅ Complete  /  — README.md:L418
+-  /  05  /  Identity & Security  /  ✅ Complete (05A, 05B, 05C, 05C-A, 05D, and 05E)  /  — README.md:L419
+-  /  06  /  DTOs & Validation  /  ✅ Complete (06A–06D)  /  — README.md:L420
+-  /  07  /  Application Services  /  ✅ Complete for approved scope (07S, 07A, 07B, 07C-P, 07C, 07D; 07E deferred)  /  — README.md:L421
+-  /  08  /  Business Workflows  /  ✅ Complete (08A, 08B-P, 08B)  /  — README.md:L422
+-  /  09  /  Enterprise Infrastructure  /  ✅ Complete (09A, 09B)  /  — README.md:L423
 
 ## Important Files
 

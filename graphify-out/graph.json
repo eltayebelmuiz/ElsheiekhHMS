@@ -1,11 +1,11 @@
 {
   "schemaVersion": "1.0",
-  "generatedAtUtc": "2026-09-22T21:17:12.9305513\u002B00:00",
-  "gitCommit": "dff902cf141e2803dda5b7f376757dabea9cca7e",
+  "generatedAtUtc": "2026-09-22T21:32:15.5905314\u002B00:00",
+  "gitCommit": "cc20698b1bb868e9df8138c09fc06e6ce1d5dbf9",
   "gitBranch": "main",
   "workingTreeDirty": true,
-  "gitStatusAtGeneration": "M ElsheiekhHMS.Infrastructure/Development/DevelopmentDataSeeder.cs",
-  "sourceFingerprint": "72ffa1720e5eb29bcaf70dce05c8e7dfc4666e5501fb5db6c170bfe3f0e44ec1",
+  "gitStatusAtGeneration": "M ElsheiekhHMS.Web/Components/App.razor\n M ElsheiekhHMS.Web/Components/Layout/AnonymousLayout.razor\n M ElsheiekhHMS.Web/Components/Layout/MainLayout.razor\n M ElsheiekhHMS.Web/Components/Layout/MainLayout.razor.css\n M ElsheiekhHMS.Web/Components/Layout/NavMenu.razor.css\n M ElsheiekhHMS.Web/Components/Pages/Login.razor\n M ElsheiekhHMS.Web/Components/Shared/ConfirmDialog.razor\n M ElsheiekhHMS.Web/wwwroot/app.css\n M README.md\n M docs/UI_DESIGN_SYSTEM.md\n?? ElsheiekhHMS.Web/wwwroot/hms.js\n?? docs/UI_PRE_MANUAL_QA.md",
+  "sourceFingerprint": "bb62df0cb89e96168e7cf62fc06703747a1d92394da561c7497f228840e221df",
   "generatorFingerprint": "03eee0a8853a7e84af6cbe571d34e6f7d820505ac8f5670a719d0d63b113840c",
   "fingerprintAlgorithm": "SHA-256 of ordinal path \u002B NUL \u002B content SHA-256 records joined with LF; sourceManifest defines inputs; graphify-out excluded everywhere",
   "sourceManifest": [
@@ -871,15 +871,15 @@
     },
     {
       "path": "ElsheiekhHMS.Web/Components/App.razor",
-      "sha256": "0116f94b7dba794100a2852efc43d807558f45b7d20bc8ff069d40ac58977112"
+      "sha256": "851048fd0bc0fb75d5770b7c920627768cd8fd9a9e8801a30c997bc5475314ad"
     },
     {
       "path": "ElsheiekhHMS.Web/Components/Layout/AnonymousLayout.razor",
-      "sha256": "c06c04392917f0b3565db8c4f545db2249e8c146436128456d309ef23d0cce66"
+      "sha256": "0cd18dd6d7fb033222d75ac4137de1ffe65c986ba4c78d4e0f5b26222d222148"
     },
     {
       "path": "ElsheiekhHMS.Web/Components/Layout/MainLayout.razor",
-      "sha256": "f5e6afdafd1be86752c93687178bb32bb995b8f9a7b16ba691c5760a62e91932"
+      "sha256": "1bc854aac54323825a905934041414669885dfdee440510c81f494fa706783f9"
     },
     {
       "path": "ElsheiekhHMS.Web/Components/Layout/NavMenu.razor",
@@ -931,7 +931,7 @@
     },
     {
       "path": "ElsheiekhHMS.Web/Components/Pages/Login.razor",
-      "sha256": "d09ec6112a28d014515cfb22635f67624ca0002fdcdb39346fe4a105e2f8d8a3"
+      "sha256": "691f5a69f228a8c5c3f563740db7decb16ce82ee1f07cfe0ab2457310ddad46f"
     },
     {
       "path": "ElsheiekhHMS.Web/Components/Pages/NotFound.razor",
@@ -979,7 +979,7 @@
     },
     {
       "path": "ElsheiekhHMS.Web/Components/Shared/ConfirmDialog.razor",
-      "sha256": "d57111863010760c0c0bcf4651487e53ab558e77ceec91c8af5f417184bcafae"
+      "sha256": "17daba7d0bcd43bdb98fb11a8f69d652018a99bbc5caf00893b1b47416bfc14b"
     },
     {
       "path": "ElsheiekhHMS.Web/Components/Shared/EmptyState.razor",
@@ -1047,7 +1047,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "a6913a8970ef4e4f862dbc44ed6ff1ad7e10eab085ec24ac99e252cabe276705"
+      "sha256": "bdf850e97927d0c277b509c42292b31baed1681a5258e8d3798467dbfce30fc6"
     }
   ],
   "repository": {
@@ -24607,215 +24607,215 @@
         },
         {
           "text": "\u003E **Phase 01:** \u2705 Complete",
-          "source": "README.md:L7"
-        },
-        {
-          "text": "\u003E **Phase 02 Setup:** \u2705 Complete and verified",
           "source": "README.md:L9"
         },
         {
-          "text": "\u003E **Phase 03A / 03B / 03C:** \u2705 Complete",
+          "text": "\u003E **Phase 02 Setup:** \u2705 Complete and verified",
           "source": "README.md:L11"
         },
         {
-          "text": "\u003E **Phase 03D:** \u2705 Implemented and verified",
+          "text": "\u003E **Phase 03A / 03B / 03C:** \u2705 Complete",
           "source": "README.md:L13"
         },
         {
-          "text": "\u003E **Phase 04A:** \u2705 EF Core foundation implemented and verified",
+          "text": "\u003E **Phase 03D:** \u2705 Implemented and verified",
           "source": "README.md:L15"
         },
         {
-          "text": "\u003E **Phase 04B:** \u2705 Entity Fluent mappings implemented and verified",
+          "text": "\u003E **Phase 04A:** \u2705 EF Core foundation implemented and verified",
           "source": "README.md:L17"
         },
         {
-          "text": "\u003E **Phase 04C:** \u2705 Relationships, filters, indexes, constraints, and concurrency metadata implemented and verified",
+          "text": "\u003E **Phase 04B:** \u2705 Entity Fluent mappings implemented and verified",
           "source": "README.md:L19"
         },
         {
-          "text": "\u003E **Phase 04D-A:** \u2705 SQL Server environment readiness verified",
+          "text": "\u003E **Phase 04C:** \u2705 Relationships, filters, indexes, constraints, and concurrency metadata implemented and verified",
           "source": "README.md:L21"
         },
         {
-          "text": "\u003E **Phase 04D-B0:** \u2705 EF design-time tooling verified",
+          "text": "\u003E **Phase 04D-A:** \u2705 SQL Server environment readiness verified",
           "source": "README.md:L23"
         },
         {
-          "text": "\u003E **Phase 04D-B:** \u2705 Initial migration generated and inspected; database not created or updated",
+          "text": "\u003E **Phase 04D-B0:** \u2705 EF design-time tooling verified",
           "source": "README.md:L25"
         },
         {
-          "text": "\u003E **Phase 04D-C:** \u2705 Initial migration applied and local SQL Server schema verified",
+          "text": "\u003E **Phase 04D-B:** \u2705 Initial migration generated and inspected; database not created or updated",
           "source": "README.md:L27"
         },
         {
-          "text": "\u003E **Phase 04E:** \u2705 Persistence integration tests implemented and verified",
+          "text": "\u003E **Phase 04D-C:** \u2705 Initial migration applied and local SQL Server schema verified",
           "source": "README.md:L29"
         },
         {
-          "text": "\u003E **Phase 05A:** \u2705 Identity foundation and security-model amendment implemented and verified",
+          "text": "\u003E **Phase 04E:** \u2705 Persistence integration tests implemented and verified",
           "source": "README.md:L31"
         },
         {
-          "text": "\u003E **Phase 05B:** \u2705 Roles, authorization policies, fallback policy, and password-free role seeder implemented and verified",
+          "text": "\u003E **Phase 05A:** \u2705 Identity foundation and security-model amendment implemented and verified",
           "source": "README.md:L33"
         },
         {
-          "text": "\u003E **Phase 05C:** \u2705 Current-user foundation and entity lifecycle auditing implemented and verified",
+          "text": "\u003E **Phase 05B:** \u2705 Roles, authorization policies, fallback policy, and password-free role seeder implemented and verified",
           "source": "README.md:L35"
         },
         {
-          "text": "\u003E **Phase 05C-A:** \u2705 Durable security/business AuditLog model and writer foundation implemented and verified; event-producing workflows, retention policy, IP/UserAgent capture, and clinical/read auditing remain deferred",
+          "text": "\u003E **Phase 05C:** \u2705 Current-user foundation and entity lifecycle auditing implemented and verified",
           "source": "README.md:L37"
         },
         {
-          "text": "\u003E **Phase 05D:** \u2705 Identity and AuditLog migration applied and verified against development and isolated integration SQL Server databases; pending-model suppression removed",
+          "text": "\u003E **Phase 05C-A:** \u2705 Durable security/business AuditLog model and writer foundation implemented and verified; event-producing workflows, retention policy, IP/UserAgent capture, and clinical/read auditing remain deferred",
           "source": "README.md:L39"
         },
         {
-          "text": "\u003E **Phase 05E:** \u2705 Security integration and hardening implemented and verified; account workflows, durable event producers, retention, IP/UserAgent capture, clinical/read auditing, and UI remain deferred",
+          "text": "\u003E **Phase 05D:** \u2705 Identity and AuditLog migration applied and verified against development and isolated integration SQL Server databases; pending-model suppression removed",
           "source": "README.md:L41"
         },
         {
-          "text": "\u003E **Phase 07S:** \u2705 Database-backed allocator prerequisite implemented, migration applied, physical schema verified, and regression suite passed",
+          "text": "\u003E **Phase 05E:** \u2705 Security integration and hardening implemented and verified; account workflows, durable event producers, retention, IP/UserAgent capture, clinical/read auditing, and UI remain deferred",
           "source": "README.md:L43"
         },
         {
-          "text": "\u003E **Phase 07A:** \u2705 Patient Application Service implemented, tested, and reviewed; registration and PatientCode allocation remain one-save transactional",
+          "text": "\u003E **Phase 07S:** \u2705 Database-backed allocator prerequisite implemented, migration applied, physical schema verified, and regression suite passed",
           "source": "README.md:L45"
         },
         {
-          "text": "\u003E **Phase 07B:** \u2705 Department Application Service complete, implemented, tested, and reviewed",
+          "text": "\u003E **Phase 07A:** \u2705 Patient Application Service implemented, tested, and reviewed; registration and PatientCode allocation remain one-save transactional",
           "source": "README.md:L47"
         },
         {
-          "text": "\u003E **Phase 07C-P:** \u2705 AppointmentCode allocator prerequisite complete; migration applied and physical schema verified",
+          "text": "\u003E **Phase 07B:** \u2705 Department Application Service complete, implemented, tested, and reviewed",
           "source": "README.md:L49"
         },
         {
-          "text": "\u003E **Phase 07C:** \u2705 Appointment Application Service complete",
+          "text": "\u003E **Phase 07C-P:** \u2705 AppointmentCode allocator prerequisite complete; migration applied and physical schema verified",
           "source": "README.md:L51"
         },
         {
-          "text": "\u003E **Phase 07D:** \u2705 Queue Application Service complete, implemented, verified, and closed out",
+          "text": "\u003E **Phase 07C:** \u2705 Appointment Application Service complete",
           "source": "README.md:L53"
         },
         {
-          "text": "\u003E **Phase 07E:** \u23F8 Doctor/Provider Application Service deferred; Doctor/Provider contracts and Doctor\u2194ApplicationUser ownership-aware authorization are not yet approved",
+          "text": "\u003E **Phase 07D:** \u2705 Queue Application Service complete, implemented, verified, and closed out",
           "source": "README.md:L55"
         },
         {
-          "text": "\u003E **Phase 07:** \u2705 Application Services complete for the approved scope; 07E is explicitly deferred",
+          "text": "\u003E **Phase 07E:** \u23F8 Doctor/Provider Application Service deferred; Doctor/Provider contracts and Doctor\u2194ApplicationUser ownership-aware authorization are not yet approved",
           "source": "README.md:L57"
         },
         {
-          "text": "\u003E **Phase 08A:** \u2705 Staff Patient Intake \u0026 Appointment Scheduling implemented, tested, and verified; partial-success retry semantics preserve newly registered Patients",
+          "text": "\u003E **Phase 07:** \u2705 Application Services complete for the approved scope; 07E is explicitly deferred",
           "source": "README.md:L59"
         },
         {
-          "text": "\u003E **Phase 08B-P:** \u2705 Appointment\u2194Queue durable-link prerequisite implemented; \u0060AddAppointmentQueueLink\u0060 applied and physically verified",
+          "text": "\u003E **Phase 08A:** \u2705 Staff Patient Intake \u0026 Appointment Scheduling implemented, tested, and verified; partial-success retry semantics preserve newly registered Patients",
           "source": "README.md:L61"
         },
         {
-          "text": "\u003E **Phase 08B:** \u2705 Appointment Arrival \u0026 Queue Handoff implemented, verified, and closed out",
+          "text": "\u003E **Phase 08B-P:** \u2705 Appointment\u2194Queue durable-link prerequisite implemented; \u0060AddAppointmentQueueLink\u0060 applied and physically verified",
           "source": "README.md:L63"
         },
         {
-          "text": "\u003E **Phase 08:** \u2705 Business Workflows complete; 08A, 08B-P, and 08B are complete; 08C is not required",
+          "text": "\u003E **Phase 08B:** \u2705 Appointment Arrival \u0026 Queue Handoff implemented, verified, and closed out",
           "source": "README.md:L65"
         },
         {
-          "text": "\u003E **Phase 09A:** \u2705 Structured Application Observability complete",
+          "text": "\u003E **Phase 08:** \u2705 Business Workflows complete; 08A, 08B-P, and 08B are complete; 08C is not required",
           "source": "README.md:L67"
         },
         {
-          "text": "\u003E **Phase 09B:** \u2705 SQL Server readiness health checks complete",
+          "text": "\u003E **Phase 09A:** \u2705 Structured Application Observability complete",
           "source": "README.md:L69"
         },
         {
-          "text": "\u003E **Phase 09:** \u2705 Enterprise Infrastructure complete; 09A and 09B complete; 09C is not required",
+          "text": "\u003E **Phase 09B:** \u2705 SQL Server readiness health checks complete",
           "source": "README.md:L71"
         },
         {
-          "text": "\u003E **Phase 10:** \u2705 Testing \u0026 Hardening complete; 10A, 10B, 10C, and 10D complete; 418 tests passing",
+          "text": "\u003E **Phase 09:** \u2705 Enterprise Infrastructure complete; 09A and 09B complete; 09C is not required",
           "source": "README.md:L73"
         },
         {
-          "text": "\u003E **Phase 11:** \u2705 Backend Review complete; 11A passed, 11B was not required, and 11C accepted and froze the backend baseline",
+          "text": "\u003E **Phase 10:** \u2705 Testing \u0026 Hardening complete; 10A, 10B, 10C, and 10D complete; 418 tests passing",
           "source": "README.md:L75"
         },
         {
-          "text": "\u003E **Phase 12A:** \u2705 Blazor UI architecture, application shell, navigation foundation, design tokens, reusable feedback/form/list patterns, and accessibility baseline established",
+          "text": "\u003E **Phase 11:** \u2705 Backend Review complete; 11A passed, 11B was not required, and 11C accepted and froze the backend baseline",
           "source": "README.md:L77"
         },
         {
-          "text": "\u003E **Phase 12B:** \u2705 Authentication presentation, anonymous/authenticated shell separation, current-user/logout controls, unauthorized UX, and role-aware navigation complete; external browser QA remains required",
-          "source": "README.md:L80"
+          "text": "\u003E **Phase 12A:** \u2705 Blazor UI architecture, application shell, navigation foundation, design tokens, reusable feedback/form/list patterns, and accessibility baseline established",
+          "source": "README.md:L79"
         },
         {
-          "text": "\u003E **Phase 12C:** \u2705 Patient registry, server-side search/pagination, registration, details, and concurrency-safe edit UI complete; external browser QA remains required",
+          "text": "\u003E **Phase 12B:** \u2705 Authentication presentation, anonymous/authenticated shell separation, current-user/logout controls, unauthorized UX, and role-aware navigation complete; external browser QA remains required",
           "source": "README.md:L82"
         },
         {
-          "text": "\u003E **Phase 12D:** \u2705 Department registry, search/filter/sort, create, details, edit, and one-way deactivation UI complete; external browser QA remains required",
+          "text": "\u003E **Phase 12C:** \u2705 Patient registry, server-side search/pagination, registration, details, and concurrency-safe edit UI complete; external browser QA remains required",
           "source": "README.md:L84"
         },
         {
-          "text": "\u003E **Phase 12E:** \u2705 Appointment registry, bounded Patient lookup, scheduling, lifecycle details/actions, Kigali presentation, and concurrency-safe mutation UI complete; external browser QA remains required",
+          "text": "\u003E **Phase 12D:** \u2705 Department registry, search/filter/sort, create, details, edit, and one-way deactivation UI complete; external browser QA remains required",
           "source": "README.md:L86"
         },
         {
-          "text": "\u003E **Phase 12F:** \u2705 Queue registry, explicit walk-in workflow, queue lifecycle UI, and Appointment\u2192Queue handoff UI complete; external browser QA remains required",
+          "text": "\u003E **Phase 12E:** \u2705 Appointment registry, bounded Patient lookup, scheduling, lifecycle details/actions, Kigali presentation, and concurrency-safe mutation UI complete; external browser QA remains required",
           "source": "README.md:L88"
         },
         {
-          "text": "\u003E **Phase 12G:** \u2705 Operational dashboard, cross-module UI hardening, accessibility source review, and consolidated QA handoff complete; external browser QA remains required",
+          "text": "\u003E **Phase 12F:** \u2705 Queue registry, explicit walk-in workflow, queue lifecycle UI, and Appointment\u2192Queue handoff UI complete; external browser QA remains required",
           "source": "README.md:L90"
         },
         {
-          "text": "\u003E **Phase 12H:** \u2705 Final UI acceptance, static-asset authentication-boundary fix, acceptance documentation, and frontend freeze complete; Antigravity and authenticated browser evidence remain environment-dependent",
+          "text": "\u003E **Phase 12G:** \u2705 Operational dashboard, cross-module UI hardening, accessibility source review, and consolidated QA handoff complete; external browser QA remains required",
           "source": "README.md:L92"
         },
         {
-          "text": "\u003E **Phase 13A:** \u2705 Clinical Encounter architecture accepted; domain model and provider ownership decisions are documented, with implementation intentionally deferred to the Phase13B gate",
+          "text": "\u003E **Phase 12H:** \u2705 Final UI acceptance, static-asset authentication-boundary fix, acceptance documentation, and frontend freeze complete; Antigravity and authenticated browser evidence remain environment-dependent",
           "source": "README.md:L94"
         },
         {
+          "text": "\u003E **Phase 13A:** \u2705 Clinical Encounter architecture accepted; domain model and provider ownership decisions are documented, with implementation intentionally deferred to the Phase13B gate",
+          "source": "README.md:L96"
+        },
+        {
           "text": "| 01 | Solution \u0026 Architecture | \u2705 Complete |",
-          "source": "README.md:L413"
-        },
-        {
-          "text": "| 02 | Core Foundation | \u2705 Complete |",
-          "source": "README.md:L414"
-        },
-        {
-          "text": "| 03 | Domain Entities | \u2705 Complete |",
           "source": "README.md:L415"
         },
         {
-          "text": "| 04 | EF Core \u0026 Database | \u2705 Complete |",
+          "text": "| 02 | Core Foundation | \u2705 Complete |",
           "source": "README.md:L416"
         },
         {
-          "text": "| 05 | Identity \u0026 Security | \u2705 Complete (05A, 05B, 05C, 05C-A, 05D, and 05E) |",
+          "text": "| 03 | Domain Entities | \u2705 Complete |",
           "source": "README.md:L417"
         },
         {
-          "text": "| 06 | DTOs \u0026 Validation | \u2705 Complete (06A\u201306D) |",
+          "text": "| 04 | EF Core \u0026 Database | \u2705 Complete |",
           "source": "README.md:L418"
         },
         {
-          "text": "| 07 | Application Services | \u2705 Complete for approved scope (07S, 07A, 07B, 07C-P, 07C, 07D; 07E deferred) |",
+          "text": "| 05 | Identity \u0026 Security | \u2705 Complete (05A, 05B, 05C, 05C-A, 05D, and 05E) |",
           "source": "README.md:L419"
         },
         {
-          "text": "| 08 | Business Workflows | \u2705 Complete (08A, 08B-P, 08B) |",
+          "text": "| 06 | DTOs \u0026 Validation | \u2705 Complete (06A\u201306D) |",
           "source": "README.md:L420"
         },
         {
-          "text": "| 09 | Enterprise Infrastructure | \u2705 Complete (09A, 09B) |",
+          "text": "| 07 | Application Services | \u2705 Complete for approved scope (07S, 07A, 07B, 07C-P, 07C, 07D; 07E deferred) |",
           "source": "README.md:L421"
+        },
+        {
+          "text": "| 08 | Business Workflows | \u2705 Complete (08A, 08B-P, 08B) |",
+          "source": "README.md:L422"
+        },
+        {
+          "text": "| 09 | Enterprise Infrastructure | \u2705 Complete (09A, 09B) |",
+          "source": "README.md:L423"
         }
       ]
     }
