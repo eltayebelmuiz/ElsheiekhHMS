@@ -1003,3 +1003,33 @@ departments cannot be edited or reactivated; no delete, provider assignment,
 appointment/queue relationship editing, analytics, schema, backend, or package
 change is introduced. External browser review is tracked in
 `docs/UI_DEPARTMENT_QA_CHECKLIST.md`.
+
+## ADR-034 — Phase 12E Appointment management UI
+
+**Status:** Complete
+**Phase:** 12E
+
+### Decision
+
+Implement the initial Appointment management UI entirely in Web over the frozen
+`IAppointmentService` contract. Provide an authorized staff registry with the
+accepted bounded date/status/record-ID filters, server-side sorting and paging,
+bounded Patient search for scheduling, backend-generated AppointmentCode
+display, appointment details, and only the service's lifecycle operations:
+Check In, Cancel, Mark No-show, and Complete. Present the persisted civil date
+and time as Africa/Kigali operational time; the application service remains the
+authority for future-time validation, invalid/ambiguous local times, collision
+prevention, and transaction/audit behavior. Preserve concurrency tokens on
+mutations and use safe conflict feedback.
+
+### Consequences
+
+The frozen service has no Confirm operation, so no Confirm button is invented.
+The frozen DTOs expose only PatientId, DepartmentId, and DoctorId; the UI uses
+bounded Patient search and approved record identifiers for the other required
+scheduling inputs without adding a Doctor/Provider service, ownership mapping,
+or backend change. No rescheduling, hard delete, direct Queue creation,
+Encounter behavior, patient self-service, provider ownership, Core/Application/
+Infrastructure/schema/package change is introduced. Appointment-to-Queue UI is
+deferred to Phase 12F. External browser review is tracked in
+`docs/UI_APPOINTMENT_QA_CHECKLIST.md`.

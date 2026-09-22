@@ -68,6 +68,13 @@ sections; its external browser handoff is `docs/UI_PATIENT_QA_CHECKLIST.md`.
 Phase 12D adds the SystemAdministrator-only Department registry and one-way
 deactivation flow using the same patterns; its external handoff is
 `docs/UI_DEPARTMENT_QA_CHECKLIST.md`.
+Phase 12E adds the authorized staff Appointment registry, bounded Patient
+lookup, scheduling form, Kigali date/time presentation, details, and accepted
+lifecycle actions over the frozen Application contracts; its external handoff
+is `docs/UI_APPOINTMENT_QA_CHECKLIST.md`. The frozen DTOs expose only Patient,
+Department, and Doctor identifiers, so the UI does not invent provider names,
+ownership, or a new lookup service. Rescheduling, deletion, Queue creation,
+Encounter behavior, and patient self-service remain outside this phase.
 Patient ownership and Provider self-service remain deferred. Appointment check-in is not an Encounter, and an
 Appointment-linked Queue entry must be created through the approved workflow so
 PatientId and DepartmentId come from the Appointment. Do not add clinical,

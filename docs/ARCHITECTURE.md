@@ -320,3 +320,19 @@ one-way deactivation. No Department reactivation, hard delete, provider
 assignment, appointment/queue relationship editing, or backend/schema change is
 introduced. External browser QA is tracked in
 `docs/UI_DEPARTMENT_QA_CHECKLIST.md`.
+
+Phase 12E adds only Web-owned Appointment management screens over the frozen
+`IAppointmentService`, `IPatientService`, and existing presentation patterns.
+The authorized staff registry uses the accepted bounded date/status/record-ID
+search, server-side sorting and paging, bounded Patient lookup for scheduling,
+backend-generated AppointmentCode display, Kigali civil-time entry/presentation,
+details, and only the accepted Check In, Cancel, No-show, and Complete
+lifecycle actions. No Confirm action is invented because the frozen application
+service exposes no confirmation operation. Doctor and Department are passed as
+their approved domain record identifiers because the frozen Appointment DTO
+family exposes no human-readable lookup contract; no Doctor/Provider service or
+ownership model is introduced. No rescheduling, deletion, Queue creation,
+Encounter behavior, backend/schema/package change, or direct EF access is added.
+Concurrency tokens are carried through lifecycle mutations and stale-operation
+feedback remains safe. External browser QA is tracked in
+`docs/UI_APPOINTMENT_QA_CHECKLIST.md`.

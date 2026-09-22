@@ -3,7 +3,7 @@
 **Version:** 1.0.0
 **Date:** September 20, 2026
 **Owner:** Eltayeb Elmuiz
-**Status:** Phases 01–11 complete; Phase 12A, 12B, 12C, and 12D are complete; Phase 12E is next; 07E Doctor/Provider Application Service remains deferred
+**Status:** Phases 01–11 complete; Phase 12A, 12B, 12C, 12D, and 12E are complete; Phase 12F is next; 07E Doctor/Provider Application Service remains deferred
 
 ---
 
@@ -1827,10 +1827,10 @@ public async Task<ServiceResult<T>> DoSomethingAsync(Dto dto, string actorEmail)
 ## 16. Current Project Checkpoint
 
 ```
-Last completed phase:  Phase 12D — Department management UI
-Current phase:         Phase 12 — Blazor UI (12D complete; 12E is next)
-Next phase:            Phase 12E — Appointment UI
-Next action:           Begin Phase 12E using the established Web design system and approved Appointment Application contracts; 07E and ownership-dependent workflows remain explicitly deferred
+Last completed phase:  Phase 12E — Appointment management UI
+Current phase:         Phase 12 — Blazor UI (12E complete; 12F is next)
+Next phase:            Phase 12F — Queue and Appointment→Queue UI
+Next action:           Begin Phase 12F using the established Web design system and approved Queue/workflow Application contracts; 07E and ownership-dependent workflows remain explicitly deferred
 Known blockers:        None
 Important notes:
   - The current working codebase is the five-project .NET 10 ElsheiekhHMS solution

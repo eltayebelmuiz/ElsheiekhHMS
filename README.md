@@ -2,7 +2,7 @@
 
 Enterprise Hospital Management System built with **.NET 10, ASP.NET Core, Blazor, Entity Framework Core, SQL Server, and ASP.NET Core Identity**.
 
-> **Current development stage:** Phase 12D — Department management UI complete; backend remains accepted and frozen
+> **Current development stage:** Phase 12E — Appointment management UI complete; backend remains accepted and frozen
 >
 > **Phase 01:** ✅ Complete
 >
@@ -83,7 +83,9 @@ Enterprise Hospital Management System built with **.NET 10, ASP.NET Core, Blazor
 
 > **Phase 12D:** ✅ Department registry, search/filter/sort, create, details, edit, and one-way deactivation UI complete; external browser QA remains required
 >
-> **Next gate:** Phase 12E — Appointment UI; 07E remains deferred and provider/patient ownership workflows remain blocked
+> **Phase 12E:** ✅ Appointment registry, bounded Patient lookup, scheduling, lifecycle details/actions, Kigali presentation, and concurrency-safe mutation UI complete; external browser QA remains required
+>
+> **Next gate:** Phase 12F — Queue and Appointment→Queue UI; 07E remains deferred and provider/patient ownership workflows remain blocked
 
 ---
 
@@ -869,7 +871,7 @@ Phase 12C adds the authorized-staff Patient registry with bounded server-side se
 The 07S migration `AddPhase07AllocatorInfrastructure` is applied exactly once to `ElsheiekhHMS_Dev`; allocator tables and queue uniqueness were physically verified. Patient phone remains non-unique. 07A provides the first approved application service, a narrow EF-free persistence port, bounded projections, stable UserId authorization, and transactional Patient/AuditLog writes. Its two reviewed decisions are that allocator access remains on the narrow persistence port and registration audits target the durable PatientCode before the single save. 07B adds the bounded Department service, the minimal Department search contract, SystemAdministrator-only configuration authorization through the existing `CanConfigureSystem` capability, and transactional Department/AuditLog writes; Department names remain non-unique and reactivation remains out of scope. 07C-P adds the Infrastructure-only UTC year-scoped AppointmentCode allocator; `AddAppointmentCodeAllocator` is applied exactly once to `ElsheiekhHMS_Dev` and its physical schema was verified. 07C adds the EF-free Appointment service, Africa/Kigali civil-time validation, active Patient/Department/Doctor checks, bounded appointment projections, lifecycle orchestration, stable UserId authorization, and transactional Appointment/AuditLog writes. Same Department and scheduled-instant collisions are serialized with a transaction-scoped SQL Server application lock; Cancelled, NoShow, and Completed history does not block a slot. 07D adds the EF-free Queue service, Kigali operational-date calculation, registered-Patient and active-Department checks, atomic ticket allocation through the approved QueueTicket allocator, bounded queue projections, deterministic priority/arrival/sequence ordering, lifecycle orchestration, stable UserId authorization, and transactional Queue/AuditLog writes. Same Patient and Kigali queue-date duplicate-active requests are serialized with a transaction-scoped SQL Server application lock; Completed and Cancelled history does not block a future queue entry. 08A adds the EF-free staff intake orchestration over the existing Patient and Appointment services. It supports existing-Patient scheduling and new-Patient registration followed by scheduling, preserves the registered Patient when appointment scheduling fails, returns the Patient identity for retry, and adds no workflow-level audit event, queue interaction, schema, or ownership behavior. 08B-P adds the nullable restrictive Queue→Appointment relationship, filtered unique appointment link, controlled linked queue creation, and indexed lookup. 08B adds `CheckInAndQueueAsync`, reuses AppointmentService and QueueService, preserves partial-success retry semantics, recovers existing active or historical handoffs idempotently, and adds no cross-service transaction or workflow audit event. Provider-scoped and Patient self-service operations remain deferred. 07E is not implemented: before it can begin, the project must approve Phase06-style Doctor/Provider contracts, service operations, a Doctor↔ApplicationUser relationship, ownership persistence, ownership-aware authorization, any required schema migration, and its tests.
 
 NEXT ACTION:
-Prepare Phase 12E Appointment UI using the established Web design system and approved Appointment Application contracts. Keep 07E provider ownership and Patient self-service deferred until their prerequisites are approved; future clinical, laboratory, billing, inpatient, pharmacy, and notification workflows require separate domain designs.
+Prepare Phase 12F Queue and Appointment→Queue UI using the established Web design system and approved Queue/workflow Application contracts. Keep 07E provider ownership and Patient self-service deferred until their prerequisites are approved; future clinical, laboratory, billing, inpatient, pharmacy, and notification workflows require separate domain designs.
 
 DO NOT:
 Do not implement 07E before its deferred prerequisites are approved and established. Do not change backend behavior merely to simplify Phase 12 UI work; backend authorization and business rules remain authoritative.

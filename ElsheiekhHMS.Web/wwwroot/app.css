@@ -204,6 +204,9 @@ h3 { font-size: 1rem; }
 .hms-form-panel h2 { margin-bottom: var(--hms-space-4); font-size: 1.15rem; }
 .hms-form-panel .validation-summary-errors { color: var(--hms-danger-text); margin-bottom: var(--hms-space-4); }
 .hms-inline-action { margin: 0 0 var(--hms-space-4); }
+.hms-appointment-table { min-width: 78rem; }
+.hms-lookup-table { min-width: 42rem; }
+.hms-helper-text { line-height: 1.5; }
 @media (max-width: 900px) {
     .hms-form__grid--search { grid-template-columns: 1fr 1fr; }
     .hms-form__grid--search > :first-child { grid-column: 1 / -1; }
