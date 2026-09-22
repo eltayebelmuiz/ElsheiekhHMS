@@ -1,11 +1,11 @@
 {
   "schemaVersion": "1.0",
-  "generatedAtUtc": "2026-09-22T21:13:06.3080829\u002B00:00",
-  "gitCommit": "a1f8599ec397a7f019921f8538d61683267154c3",
+  "generatedAtUtc": "2026-09-22T21:17:12.9305513\u002B00:00",
+  "gitCommit": "dff902cf141e2803dda5b7f376757dabea9cca7e",
   "gitBranch": "main",
   "workingTreeDirty": true,
-  "gitStatusAtGeneration": "M ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs\n M ElsheiekhHMS.Web/Program.cs\n M README.md\n M graphify-out/GRAPH_REPORT.md\n M graphify-out/graph.html\n M graphify-out/graph.json\n?? ElsheiekhHMS.Infrastructure/Development/DevelopmentDataSeeder.cs\n?? docs/DEVELOPMENT_DATA.md\n?? tools/dev-data-inspection.sql",
-  "sourceFingerprint": "a93c6788c9acf9abb57a2a68fbae7f31eef911d64d50aee00b5bf6d5b353bedd",
+  "gitStatusAtGeneration": "M ElsheiekhHMS.Infrastructure/Development/DevelopmentDataSeeder.cs",
+  "sourceFingerprint": "72ffa1720e5eb29bcaf70dce05c8e7dfc4666e5501fb5db6c170bfe3f0e44ec1",
   "generatorFingerprint": "03eee0a8853a7e84af6cbe571d34e6f7d820505ac8f5670a719d0d63b113840c",
   "fingerprintAlgorithm": "SHA-256 of ordinal path \u002B NUL \u002B content SHA-256 records joined with LF; sourceManifest defines inputs; graphify-out excluded everywhere",
   "sourceManifest": [
@@ -483,7 +483,7 @@
     },
     {
       "path": "ElsheiekhHMS.Infrastructure/Development/DevelopmentDataSeeder.cs",
-      "sha256": "958bda272f28befb30237d7f0128e57b2142638cc8ee108919381d48c96ca24c"
+      "sha256": "812836fe36eace8a02c5a95a005773e34db9d1728f83bdb9f537f4aa3ba46350"
     },
     {
       "path": "ElsheiekhHMS.Infrastructure/ElsheiekhHMS.Infrastructure.csproj",
@@ -9642,8 +9642,8 @@
       "namespace": "ElsheiekhHMS.Infrastructure.Development",
       "file": "ElsheiekhHMS.Infrastructure/Development/DevelopmentDataSeeder.cs",
       "source_file": "ElsheiekhHMS.Infrastructure/Development/DevelopmentDataSeeder.cs",
-      "source_location": "L391",
-      "line": 391,
+      "source_location": "L425",
+      "line": 425,
       "accessibility": "private",
       "abstract": false,
       "sealed": true,
@@ -14863,7 +14863,7 @@
       "source": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Development/DevelopmentDataSeeder.cs",
       "target": "type:ElsheiekhHMS.Infrastructure.Development.DevelopmentDataSeeder.SeedCurrentUser",
       "type": "declares",
-      "evidence": "ElsheiekhHMS.Infrastructure/Development/DevelopmentDataSeeder.cs:L391",
+      "evidence": "ElsheiekhHMS.Infrastructure/Development/DevelopmentDataSeeder.cs:L425",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -21280,7 +21280,7 @@
       "source": "type:ElsheiekhHMS.Infrastructure.Development.DevelopmentDataSeeder.SeedCurrentUser",
       "target": "type:ElsheiekhHMS.Application.Common.Security.ICurrentUser",
       "type": "implements",
-      "evidence": "ElsheiekhHMS.Infrastructure/Development/DevelopmentDataSeeder.cs:L391",
+      "evidence": "ElsheiekhHMS.Infrastructure/Development/DevelopmentDataSeeder.cs:L425",
       "relation": "implements",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -25937,7 +25937,7 @@
       "source": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Development/DevelopmentDataSeeder.cs",
       "target": "type:ElsheiekhHMS.Infrastructure.Development.DevelopmentDataSeeder.SeedCurrentUser",
       "type": "declares",
-      "evidence": "ElsheiekhHMS.Infrastructure/Development/DevelopmentDataSeeder.cs:L391",
+      "evidence": "ElsheiekhHMS.Infrastructure/Development/DevelopmentDataSeeder.cs:L425",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -32354,7 +32354,7 @@
       "source": "type:ElsheiekhHMS.Infrastructure.Development.DevelopmentDataSeeder.SeedCurrentUser",
       "target": "type:ElsheiekhHMS.Application.Common.Security.ICurrentUser",
       "type": "implements",
-      "evidence": "ElsheiekhHMS.Infrastructure/Development/DevelopmentDataSeeder.cs:L391",
+      "evidence": "ElsheiekhHMS.Infrastructure/Development/DevelopmentDataSeeder.cs:L425",
       "relation": "implements",
       "confidence": "EXTRACTED",
       "weight": 1

@@ -318,7 +318,24 @@ public sealed class DevelopmentDataSeeder(
         for (var i = 1; i <= 6; i++)
         {
             var marker = $"{SeedMarker}-WALKIN-{i:D3}";
-            if (await context.WalkInQueueEntries.AnyAsync(q => q.Notes == marker, cancellationToken)) continue;
+            var existing = await context.WalkInQueueEntries
+                .SingleOrDefaultAsync(q => q.Notes == marker, cancellationToken);
+            if (existing is not null)
+            {
+                if (i == 3 && existing.Status == QueueStatus.AtDoctor)
+                {
+                    var current = await fakeQueueService.GetByIdAsync(existing.Id, cancellationToken);
+                    if (current.IsSuccess && current.Value is not null)
+                    {
+                        var completed = await fakeQueueService.CompleteAsync(
+                            new QueueEntryActionRequest(current.Value.Id, current.Value.ConcurrencyToken),
+                            cancellationToken);
+                        EnsureSuccess(completed, "complete walk-in queue seed 3");
+                    }
+                }
+
+                continue;
+            }
             var result = await fakeQueueService.AddAsync(
                 new AddWalkInQueueEntryRequest(patientIds[i - 1], departmentIds[(i - 1) % departmentIds.Count],
                     (QueuePriority)((i - 1) % 3), marker), cancellationToken);
@@ -366,6 +383,23 @@ public sealed class DevelopmentDataSeeder(
                 new AppointmentArrivalQueueRequest(appointmentId, appointment.Value.ConcurrencyToken,
                     QueuePriority.Urgent, marker), cancellationToken);
             EnsureSuccess(result, $"create appointment-linked queue seed {appointmentId}");
+        }
+
+        var linkedForDoctor = await context.WalkInQueueEntries
+            .Where(q => q.AppointmentId != null && q.Notes != null && q.Notes.StartsWith(SeedMarker + "-LINKED-"))
+            .OrderBy(q => q.Id)
+            .FirstOrDefaultAsync(cancellationToken);
+        if (linkedForDoctor?.Status == QueueStatus.Waiting)
+        {
+            var current = await fakeQueueService.GetByIdAsync(linkedForDoctor.Id, cancellationToken);
+            if (current.IsSuccess && current.Value is not null)
+            {
+                var doctor = doctors.First(d => d.DepartmentId == current.Value.DepartmentId);
+                var atDoctor = await fakeQueueService.SendToDoctorAsync(
+                    new SendToDoctorRequest(current.Value.Id, doctor.Id, current.Value.ConcurrencyToken),
+                    cancellationToken);
+                EnsureSuccess(atDoctor, "send appointment-linked queue seed to doctor");
+            }
         }
     }
 
