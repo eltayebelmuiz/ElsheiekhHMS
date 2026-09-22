@@ -935,3 +935,27 @@ workflow was implemented. Authentication account screens remain a Phase 12B
 responsibility. English/LTR is current scope; RTL/localization is future-ready
 through document direction and logical properties. The Appointment-to-Queue
 workflow boundary and Queue/Encounter boundary remain unchanged.
+
+## ADR-031 — Phase 12B authentication shell and navigation
+
+**Status:** Complete
+**Phase:** 12B
+
+### Decision
+
+Keep authentication presentation in `ElsheiekhHMS.Web` over the accepted
+Identity configuration. Use an anonymous layout for login and access-denied
+routes, the existing operational shell for authenticated routes, and a
+server-rendered account menu with an antiforgery-protected POST logout. Login
+uses administrator-assigned, case-insensitive Identity usernames with generic
+failure feedback and safe local return URLs. No public registration, reset,
+external provider, remember-me, or account-management workflow is introduced.
+
+### Consequences
+
+Backend authorization, account security state, security-stamp validation,
+stable UserId auditing, and session revalidation remain authoritative. Role-aware
+navigation is a UX aid only. Bootstrap 5.3.3, the HMS token system, logical CSS
+properties, and text/CSS markers remain in place. External rendered QA is
+prepared through `docs/UI_QA_CHECKLIST.md`; feature CRUD and ownership-dependent
+Provider/Patient workflows remain deferred to later approved phases.

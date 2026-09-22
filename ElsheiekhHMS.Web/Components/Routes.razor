@@ -2,16 +2,30 @@
     <Found Context="routeData">
         <AuthorizeRouteView RouteData="routeData" DefaultLayout="typeof(Layout.MainLayout)">
             <NotAuthorized>
-                <LayoutView Layout="typeof(Layout.MainLayout)">
-                    <ErrorState Title="Sign-in required" Message="Your session does not have access to this screen. Sign in with an approved hospital account or contact an administrator." HeadingId="access-denied-heading">
-                        <Actions>
-                            <a class="btn btn-primary" href="/login">Go to sign in</a>
-                        </Actions>
-                    </ErrorState>
-                </LayoutView>
+                <AuthorizeView>
+                    <Authorized Context="authenticatedState">
+                        <LayoutView Layout="typeof(Layout.AnonymousLayout)">
+                            <ErrorState Title="Access denied" Message="Your approved account does not have access to this screen. Return to the workspace or contact an administrator." HeadingId="access-denied-heading">
+                                <Actions>
+                                    <a class="btn btn-primary" href="/">Return to workspace</a>
+                                    <a class="btn btn-outline-secondary" href="/access-denied">Review access</a>
+                                </Actions>
+                            </ErrorState>
+                        </LayoutView>
+                    </Authorized>
+                    <NotAuthorized Context="anonymousState">
+                        <LayoutView Layout="typeof(Layout.AnonymousLayout)">
+                            <ErrorState Title="Sign-in required" Message="Your session does not have access to this screen. Sign in with an approved hospital account or contact an administrator." HeadingId="access-denied-heading">
+                                <Actions>
+                                    <a class="btn btn-primary" href="/login">Go to sign in</a>
+                                </Actions>
+                            </ErrorState>
+                        </LayoutView>
+                    </NotAuthorized>
+                </AuthorizeView>
             </NotAuthorized>
             <Authorizing>
-                <LayoutView Layout="typeof(Layout.MainLayout)">
+                <LayoutView Layout="typeof(Layout.AnonymousLayout)">
                     <LoadingState Message="Checking your session" />
                 </LayoutView>
             </Authorizing>

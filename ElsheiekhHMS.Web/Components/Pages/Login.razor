@@ -1,0 +1,59 @@
+@page "/login"
+@layout AnonymousLayout
+@attribute [AllowAnonymous]
+
+<PageTitle>Sign in</PageTitle>
+
+<section class="hms-login-card" aria-labelledby="login-heading">
+    <p class="hms-eyebrow">Secure staff access</p>
+    <h1 id="login-heading">Sign in to the HMS workspace</h1>
+    <p class="hms-login-card__intro">Use the administrator-assigned username for your EL-Shiekh Medical Complex account.</p>
+
+    @if (Error is not null)
+    {
+        <AppAlert Tone="AppAlert.AlertTone.Danger" Title="Sign-in was not completed" Message="@ErrorMessage" />
+    }
+    @if (LoggedOut)
+    {
+        <AppAlert Tone="AppAlert.AlertTone.Success" Title="Signed out" Message="Your session has ended safely." />
+    }
+
+    <form class="hms-login-form" method="post" action="/account/login">
+        <AntiforgeryToken />
+        <input type="hidden" name="returnUrl" value="@SafeReturnUrl" />
+        <div class="hms-field">
+            <label for="login-username">Username</label>
+            <input id="login-username" name="username" class="form-control" autocomplete="username" required maxlength="256" autofocus />
+            <span class="hms-helper-text">Usernames are case-insensitive for sign-in.</span>
+        </div>
+        <div class="hms-field">
+            <label for="login-password">Password</label>
+            <input id="login-password" name="password" class="form-control" type="password" autocomplete="current-password" required />
+        </div>
+        <button type="submit" class="btn btn-primary hms-login-form__submit">Sign in</button>
+    </form>
+
+    <p class="hms-login-card__support">Need access or believe your account is restricted? Contact a hospital administrator. Public registration is not available.</p>
+</section>
+
+@code {
+    [SupplyParameterFromQuery(Name = "error")]
+    private string? Error { get; set; }
+
+    [SupplyParameterFromQuery(Name = "returnUrl")]
+    private string? ReturnUrl { get; set; }
+
+    [SupplyParameterFromQuery(Name = "loggedOut")]
+    private bool LoggedOut { get; set; }
+
+    private string SafeReturnUrl => IsSafeLocalUrl(ReturnUrl) ? ReturnUrl! : "/";
+
+    private string ErrorMessage => Error switch
+    {
+        "required" => "Enter both your username and password.",
+        _ => "Check your username and password, or contact an administrator if account access is restricted."
+    };
+
+    private static bool IsSafeLocalUrl(string? value) =>
+        !string.IsNullOrWhiteSpace(value) && value.StartsWith('/') && !value.StartsWith("//");
+}

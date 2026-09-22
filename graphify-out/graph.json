@@ -1,11 +1,11 @@
 {
   "schemaVersion": "1.0",
-  "generatedAtUtc": "2026-09-22T17:24:22.4413112\u002B00:00",
-  "gitCommit": "a1e5ad06546736e4df6b4c4ca06025a69c3197e8",
+  "generatedAtUtc": "2026-09-22T18:04:20.1892022\u002B00:00",
+  "gitCommit": "0132fe3e408cea9a9a107b8c615e44b89831be74",
   "gitBranch": "main",
   "workingTreeDirty": true,
-  "gitStatusAtGeneration": "M DEVELOPMENT_ROADMAP.md\n M ElsheiekhHMS.Web/Components/App.razor\n M ElsheiekhHMS.Web/Components/Layout/MainLayout.razor\n M ElsheiekhHMS.Web/Components/Layout/MainLayout.razor.css\n M ElsheiekhHMS.Web/Components/Layout/NavMenu.razor\n M ElsheiekhHMS.Web/Components/Layout/NavMenu.razor.css\n M ElsheiekhHMS.Web/Components/Pages/Error.razor\n M ElsheiekhHMS.Web/Components/Pages/Home.razor\n M ElsheiekhHMS.Web/Components/Pages/NotFound.razor\n M ElsheiekhHMS.Web/Components/Routes.razor\n M ElsheiekhHMS.Web/Components/_Imports.razor\n M ElsheiekhHMS.Web/wwwroot/app.css\n M README.md\n M docs/ARCHITECTURE.md\n M docs/DECISIONS.md\n?? ElsheiekhHMS.Web/Components/Shared/AppAlert.razor\n?? ElsheiekhHMS.Web/Components/Shared/ConfirmDialog.razor\n?? ElsheiekhHMS.Web/Components/Shared/EmptyState.razor\n?? ElsheiekhHMS.Web/Components/Shared/ErrorState.razor\n?? ElsheiekhHMS.Web/Components/Shared/LoadingState.razor\n?? ElsheiekhHMS.Web/Components/Shared/PageHeader.razor\n?? ElsheiekhHMS.Web/Components/Shared/Pagination.razor\n?? ElsheiekhHMS.Web/Components/Shared/SearchBox.razor\n?? ElsheiekhHMS.Web/Components/Shared/StatusBadge.razor",
-  "sourceFingerprint": "043ac94342df5663385a26f4e921b34bc8c6ebc4d1d604b566258b99e24b5e28",
+  "gitStatusAtGeneration": "M DEVELOPMENT_ROADMAP.md\n M ElsheiekhHMS.Web/Components/Layout/MainLayout.razor\n M ElsheiekhHMS.Web/Components/Layout/NavMenu.razor\n M ElsheiekhHMS.Web/Components/Routes.razor\n M ElsheiekhHMS.Web/Components/_Imports.razor\n M ElsheiekhHMS.Web/Program.cs\n M ElsheiekhHMS.Web/wwwroot/app.css\n M README.md\n M docs/ARCHITECTURE.md\n M docs/DECISIONS.md\n M graphify-out/GRAPH_REPORT.md\n M graphify-out/graph.html\n M graphify-out/graph.json\n?? ElsheiekhHMS.Web/Components/Layout/AnonymousLayout.razor\n?? ElsheiekhHMS.Web/Components/Pages/AccessDenied.razor\n?? ElsheiekhHMS.Web/Components/Pages/Login.razor\n?? ElsheiekhHMS.Web/Components/Shared/UserAccountMenu.razor\n?? docs/UI_DESIGN_SYSTEM.md\n?? docs/UI_QA_CHECKLIST.md",
+  "sourceFingerprint": "dc59d9798c37e473bd2d1f80638c3ec692aa073790912ae8b468dac446b65f1c",
   "generatorFingerprint": "03eee0a8853a7e84af6cbe571d34e6f7d820505ac8f5670a719d0d63b113840c",
   "fingerprintAlgorithm": "SHA-256 of ordinal path \u002B NUL \u002B content SHA-256 records joined with LF; sourceManifest defines inputs; graphify-out excluded everywhere",
   "sourceManifest": [
@@ -870,16 +870,24 @@
       "sha256": "0116f94b7dba794100a2852efc43d807558f45b7d20bc8ff069d40ac58977112"
     },
     {
+      "path": "ElsheiekhHMS.Web/Components/Layout/AnonymousLayout.razor",
+      "sha256": "c06c04392917f0b3565db8c4f545db2249e8c146436128456d309ef23d0cce66"
+    },
+    {
       "path": "ElsheiekhHMS.Web/Components/Layout/MainLayout.razor",
-      "sha256": "a313131ed1563ee71f5b5967ca617c6b3c5fb3fef9d8bea8b211dedbbe3f2c5f"
+      "sha256": "c053bce8e8b44855eb531ab9006dc704f58d5e43a67c422d1cf81fc4bead5356"
     },
     {
       "path": "ElsheiekhHMS.Web/Components/Layout/NavMenu.razor",
-      "sha256": "fdf210cfd229ce3a55772be5ba55ff9cd026098e434c92e3a9c16d8f7ed661e0"
+      "sha256": "c3b699d8c02dcebbd9c2aa68b908a454449a57e003f19c0e3bca5036d1ffd24b"
     },
     {
       "path": "ElsheiekhHMS.Web/Components/Layout/ReconnectModal.razor",
       "sha256": "e1c8308c1ec6656c8f5cd50df3f1879b614e43109ad6b1e23ab26d6f1007c6db"
+    },
+    {
+      "path": "ElsheiekhHMS.Web/Components/Pages/AccessDenied.razor",
+      "sha256": "fa01c2d1b6dc14fa838bb19092de1ef1cf10e5ca9684fd8ad7241f24fc8d01a7"
     },
     {
       "path": "ElsheiekhHMS.Web/Components/Pages/Error.razor",
@@ -890,12 +898,16 @@
       "sha256": "2b39b07727311f5ea7a8563a001f127e13e3f65574d6edcf8400b85c28e4674a"
     },
     {
+      "path": "ElsheiekhHMS.Web/Components/Pages/Login.razor",
+      "sha256": "d09ec6112a28d014515cfb22635f67624ca0002fdcdb39346fe4a105e2f8d8a3"
+    },
+    {
       "path": "ElsheiekhHMS.Web/Components/Pages/NotFound.razor",
       "sha256": "758b050a37a4cd50ba7747e909068b0da04cfb5e7a9fe8b98a20fb4532596fdf"
     },
     {
       "path": "ElsheiekhHMS.Web/Components/Routes.razor",
-      "sha256": "2a88517ab3baa9b73b63aeb80d61e50c2b8b5ff11f01e472df395f83ac43bb4f"
+      "sha256": "b56f4aa774a9cd28729a1251c71d332f6c828ecb1de7a878e3e09003cb686736"
     },
     {
       "path": "ElsheiekhHMS.Web/Components/Shared/AppAlert.razor",
@@ -934,8 +946,12 @@
       "sha256": "a7776f142dd86dcf8106f6cc622988ed85254a30a833d1487911aba6618231da"
     },
     {
+      "path": "ElsheiekhHMS.Web/Components/Shared/UserAccountMenu.razor",
+      "sha256": "635d83829dca0340c92a49ca67d387fcaf909595e05cc02a15e28875c77d5d66"
+    },
+    {
       "path": "ElsheiekhHMS.Web/Components/_Imports.razor",
-      "sha256": "a07c39f7384c95b8226ca7de6821aa95f4eedb452c682e25e8dfce13475a7a10"
+      "sha256": "ee918b26265e44cd342f98ac4b4e0accc34cdbbe49b7fe482744b58a6b57894f"
     },
     {
       "path": "ElsheiekhHMS.Web/ElsheiekhHMS.Web.csproj",
@@ -943,7 +959,7 @@
     },
     {
       "path": "ElsheiekhHMS.Web/Program.cs",
-      "sha256": "ed4fa03711f299a9f76ea8e75a52f42ed9ec94b02b1e315fdd9d4139bc05cfa4"
+      "sha256": "7e966b1736cdfabf1e9ee042679b624753c71bbc6bd2ed98bb0ae6d6740f1dbb"
     },
     {
       "path": "ElsheiekhHMS.Web/Security/AuthorizationConfiguration.cs",
@@ -963,7 +979,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "3cd70ff9426bb365b6fff0e9a9d6ed161c183f409410bfec2fcffeed836bc8d9"
+      "sha256": "18e055db18d6133b459d01760b5aa8925b9c2074fff45bb2500200176e3ae6ed"
     }
   ],
   "repository": {
@@ -974,15 +990,15 @@
   "summary": {
     "projectCount": 5,
     "sourceFileCount": 214,
-    "razorFileCount": 18,
+    "razorFileCount": 22,
     "typeCount": 279,
     "interfaceCount": 14,
     "testClassCount": 11,
     "testMethodCount": 76,
     "testCount": 113,
     "dynamicTheoryCount": 0,
-    "nodeCount": 608,
-    "edgeCount": 1170
+    "nodeCount": 612,
+    "edgeCount": 1174
   },
   "projects": [
     {
@@ -4715,6 +4731,22 @@
       "dynamicTheories": 0
     },
     {
+      "id": "file:ElsheiekhHMS.Web:ElsheiekhHMS.Web/Components/Layout/AnonymousLayout.razor",
+      "name": "AnonymousLayout.razor",
+      "label": "AnonymousLayout.razor",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Web",
+      "file": "ElsheiekhHMS.Web/Components/Layout/AnonymousLayout.razor",
+      "source_file": "ElsheiekhHMS.Web/Components/Layout/AnonymousLayout.razor",
+      "external": false,
+      "community": 4,
+      "community_name": "ElsheiekhHMS.Web",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
       "id": "file:ElsheiekhHMS.Web:ElsheiekhHMS.Web/Components/Layout/MainLayout.razor",
       "name": "MainLayout.razor",
       "label": "MainLayout.razor",
@@ -4763,6 +4795,22 @@
       "dynamicTheories": 0
     },
     {
+      "id": "file:ElsheiekhHMS.Web:ElsheiekhHMS.Web/Components/Pages/AccessDenied.razor",
+      "name": "AccessDenied.razor",
+      "label": "AccessDenied.razor",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Web",
+      "file": "ElsheiekhHMS.Web/Components/Pages/AccessDenied.razor",
+      "source_file": "ElsheiekhHMS.Web/Components/Pages/AccessDenied.razor",
+      "external": false,
+      "community": 4,
+      "community_name": "ElsheiekhHMS.Web",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
       "id": "file:ElsheiekhHMS.Web:ElsheiekhHMS.Web/Components/Pages/Error.razor",
       "name": "Error.razor",
       "label": "Error.razor",
@@ -4787,6 +4835,22 @@
       "project": "ElsheiekhHMS.Web",
       "file": "ElsheiekhHMS.Web/Components/Pages/Home.razor",
       "source_file": "ElsheiekhHMS.Web/Components/Pages/Home.razor",
+      "external": false,
+      "community": 4,
+      "community_name": "ElsheiekhHMS.Web",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "file:ElsheiekhHMS.Web:ElsheiekhHMS.Web/Components/Pages/Login.razor",
+      "name": "Login.razor",
+      "label": "Login.razor",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Web",
+      "file": "ElsheiekhHMS.Web/Components/Pages/Login.razor",
+      "source_file": "ElsheiekhHMS.Web/Components/Pages/Login.razor",
       "external": false,
       "community": 4,
       "community_name": "ElsheiekhHMS.Web",
@@ -4963,6 +5027,22 @@
       "project": "ElsheiekhHMS.Web",
       "file": "ElsheiekhHMS.Web/Components/Shared/StatusBadge.razor",
       "source_file": "ElsheiekhHMS.Web/Components/Shared/StatusBadge.razor",
+      "external": false,
+      "community": 4,
+      "community_name": "ElsheiekhHMS.Web",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "file:ElsheiekhHMS.Web:ElsheiekhHMS.Web/Components/Shared/UserAccountMenu.razor",
+      "name": "UserAccountMenu.razor",
+      "label": "UserAccountMenu.razor",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Web",
+      "file": "ElsheiekhHMS.Web/Components/Shared/UserAccountMenu.razor",
+      "source_file": "ElsheiekhHMS.Web/Components/Shared/UserAccountMenu.razor",
       "external": false,
       "community": 4,
       "community_name": "ElsheiekhHMS.Web",
@@ -18508,6 +18588,15 @@
     },
     {
       "source": "project:ElsheiekhHMS.Web",
+      "target": "file:ElsheiekhHMS.Web:ElsheiekhHMS.Web/Components/Layout/AnonymousLayout.razor",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Web/ElsheiekhHMS.Web.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Web",
       "target": "file:ElsheiekhHMS.Web:ElsheiekhHMS.Web/Components/Layout/MainLayout.razor",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Web/ElsheiekhHMS.Web.csproj",
@@ -18535,6 +18624,15 @@
     },
     {
       "source": "project:ElsheiekhHMS.Web",
+      "target": "file:ElsheiekhHMS.Web:ElsheiekhHMS.Web/Components/Pages/AccessDenied.razor",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Web/ElsheiekhHMS.Web.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Web",
       "target": "file:ElsheiekhHMS.Web:ElsheiekhHMS.Web/Components/Pages/Error.razor",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Web/ElsheiekhHMS.Web.csproj",
@@ -18545,6 +18643,15 @@
     {
       "source": "project:ElsheiekhHMS.Web",
       "target": "file:ElsheiekhHMS.Web:ElsheiekhHMS.Web/Components/Pages/Home.razor",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Web/ElsheiekhHMS.Web.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Web",
+      "target": "file:ElsheiekhHMS.Web:ElsheiekhHMS.Web/Components/Pages/Login.razor",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Web/ElsheiekhHMS.Web.csproj",
       "relation": "contains",
@@ -18644,6 +18751,15 @@
     {
       "source": "project:ElsheiekhHMS.Web",
       "target": "file:ElsheiekhHMS.Web:ElsheiekhHMS.Web/Components/Shared/StatusBadge.razor",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Web/ElsheiekhHMS.Web.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Web",
+      "target": "file:ElsheiekhHMS.Web:ElsheiekhHMS.Web/Components/Shared/UserAccountMenu.razor",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Web/ElsheiekhHMS.Web.csproj",
       "relation": "contains",
@@ -23865,7 +23981,7 @@
       "statusSource": "README.md declaration, not independently certified completion",
       "declaredStatus": [
         {
-          "text": "\u003E **Current development stage:** Phase 12A \u2014 Blazor UI foundation complete; backend remains accepted and frozen",
+          "text": "\u003E **Current development stage:** Phase 12B \u2014 authentication shell and navigation complete; backend remains accepted and frozen",
           "source": "README.md:L5"
         },
         {
@@ -24013,40 +24129,44 @@
           "source": "README.md:L77"
         },
         {
+          "text": "\u003E **Phase 12B:** \u2705 Authentication presentation, anonymous/authenticated shell separation, current-user/logout controls, unauthorized UX, and role-aware navigation complete; external browser QA remains required",
+          "source": "README.md:L80"
+        },
+        {
           "text": "| 01 | Solution \u0026 Architecture | \u2705 Complete |",
-          "source": "README.md:L394"
-        },
-        {
-          "text": "| 02 | Core Foundation | \u2705 Complete |",
-          "source": "README.md:L395"
-        },
-        {
-          "text": "| 03 | Domain Entities | \u2705 Complete |",
-          "source": "README.md:L396"
-        },
-        {
-          "text": "| 04 | EF Core \u0026 Database | \u2705 Complete |",
           "source": "README.md:L397"
         },
         {
-          "text": "| 05 | Identity \u0026 Security | \u2705 Complete (05A, 05B, 05C, 05C-A, 05D, and 05E) |",
+          "text": "| 02 | Core Foundation | \u2705 Complete |",
           "source": "README.md:L398"
         },
         {
-          "text": "| 06 | DTOs \u0026 Validation | \u2705 Complete (06A\u201306D) |",
+          "text": "| 03 | Domain Entities | \u2705 Complete |",
           "source": "README.md:L399"
         },
         {
-          "text": "| 07 | Application Services | \u2705 Complete for approved scope (07S, 07A, 07B, 07C-P, 07C, 07D; 07E deferred) |",
+          "text": "| 04 | EF Core \u0026 Database | \u2705 Complete |",
           "source": "README.md:L400"
         },
         {
-          "text": "| 08 | Business Workflows | \u2705 Complete (08A, 08B-P, 08B) |",
+          "text": "| 05 | Identity \u0026 Security | \u2705 Complete (05A, 05B, 05C, 05C-A, 05D, and 05E) |",
           "source": "README.md:L401"
         },
         {
-          "text": "| 09 | Enterprise Infrastructure | \u2705 Complete (09A, 09B) |",
+          "text": "| 06 | DTOs \u0026 Validation | \u2705 Complete (06A\u201306D) |",
           "source": "README.md:L402"
+        },
+        {
+          "text": "| 07 | Application Services | \u2705 Complete for approved scope (07S, 07A, 07B, 07C-P, 07C, 07D; 07E deferred) |",
+          "source": "README.md:L403"
+        },
+        {
+          "text": "| 08 | Business Workflows | \u2705 Complete (08A, 08B-P, 08B) |",
+          "source": "README.md:L404"
+        },
+        {
+          "text": "| 09 | Enterprise Infrastructure | \u2705 Complete (09A, 09B) |",
+          "source": "README.md:L405"
         }
       ]
     }
@@ -29297,6 +29417,15 @@
     },
     {
       "source": "project:ElsheiekhHMS.Web",
+      "target": "file:ElsheiekhHMS.Web:ElsheiekhHMS.Web/Components/Layout/AnonymousLayout.razor",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Web/ElsheiekhHMS.Web.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Web",
       "target": "file:ElsheiekhHMS.Web:ElsheiekhHMS.Web/Components/Layout/MainLayout.razor",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Web/ElsheiekhHMS.Web.csproj",
@@ -29324,6 +29453,15 @@
     },
     {
       "source": "project:ElsheiekhHMS.Web",
+      "target": "file:ElsheiekhHMS.Web:ElsheiekhHMS.Web/Components/Pages/AccessDenied.razor",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Web/ElsheiekhHMS.Web.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Web",
       "target": "file:ElsheiekhHMS.Web:ElsheiekhHMS.Web/Components/Pages/Error.razor",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Web/ElsheiekhHMS.Web.csproj",
@@ -29334,6 +29472,15 @@
     {
       "source": "project:ElsheiekhHMS.Web",
       "target": "file:ElsheiekhHMS.Web:ElsheiekhHMS.Web/Components/Pages/Home.razor",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Web/ElsheiekhHMS.Web.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Web",
+      "target": "file:ElsheiekhHMS.Web:ElsheiekhHMS.Web/Components/Pages/Login.razor",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Web/ElsheiekhHMS.Web.csproj",
       "relation": "contains",
@@ -29433,6 +29580,15 @@
     {
       "source": "project:ElsheiekhHMS.Web",
       "target": "file:ElsheiekhHMS.Web:ElsheiekhHMS.Web/Components/Shared/StatusBadge.razor",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Web/ElsheiekhHMS.Web.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Web",
+      "target": "file:ElsheiekhHMS.Web:ElsheiekhHMS.Web/Components/Shared/UserAccountMenu.razor",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Web/ElsheiekhHMS.Web.csproj",
       "relation": "contains",

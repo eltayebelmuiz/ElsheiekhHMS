@@ -294,6 +294,11 @@ current product scope; the token and logical-property approach is ready for a
 future RTL/localization phase. No CRUD pages, Provider UI, Encounter workflow,
 API layer, backend project, schema, or package changes were introduced.
 
-The next approved UI gate is Phase 12B (authentication, application shell, and
-navigation). Patient, Department, Appointment, and Queue pages remain deferred
-to their subsequent modules.
+Phase 12B adds Web-owned authentication presentation over the frozen backend:
+`AnonymousLayout` keeps login and access-denied screens separate from the
+operational sidebar, while `MainLayout` presents the current account and a
+POST/antiforgery logout action. Identity cookie composition, account-state and
+security-stamp revalidation, fallback authorization, and service authorization
+remain authoritative. No registration, reset, external login, ownership, CRUD,
+schema, or package behavior was added. The external browser QA handoff is
+`docs/UI_QA_CHECKLIST.md`; the next approved UI gate is Phase 12C Patient UI.

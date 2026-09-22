@@ -139,6 +139,43 @@ h3 { font-size: 1rem; }
 .btn-outline-secondary { border-color: var(--hms-border-strong); color: var(--hms-text-secondary); }
 .btn-outline-secondary:hover { background: var(--hms-page); color: var(--hms-text); }
 
+/* Authentication surfaces use the same tokens as the operational shell while
+   keeping anonymous pages free of operational navigation. */
+.hms-anonymous-shell { align-items: stretch; background: var(--hms-page); display: flex; flex-direction: column; min-height: 100vh; }
+.hms-anonymous-header { background: var(--hms-surface); border-block-end: 1px solid var(--hms-border); padding: var(--hms-space-5) clamp(var(--hms-space-4), 5vw, var(--hms-space-10)); }
+.hms-anonymous-brand { align-items: center; color: var(--hms-text); display: inline-flex; gap: var(--hms-space-3); text-decoration: none; }
+.hms-anonymous-brand:hover { color: var(--hms-text); }
+.hms-anonymous-brand strong, .hms-anonymous-brand small { display: block; }
+.hms-anonymous-brand strong { font-size: .95rem; }
+.hms-anonymous-brand small { color: var(--hms-muted); font-size: .75rem; margin-block-start: .1rem; }
+.hms-anonymous-brand__mark { align-items: center; background: var(--hms-primary); border-radius: var(--hms-radius-sm); color: white; display: inline-flex; font-size: 1.2rem; font-weight: 800; height: 2.45rem; justify-content: center; width: 2.45rem; }
+.hms-anonymous-main { align-items: center; display: flex; flex: 1; justify-content: center; padding: clamp(var(--hms-space-6), 8vw, var(--hms-space-10)) var(--hms-space-4); }
+.hms-anonymous-footer { color: var(--hms-muted); font-size: .75rem; padding: var(--hms-space-4) clamp(var(--hms-space-4), 5vw, var(--hms-space-10)); text-align: center; }
+.hms-login-card, .hms-boundary-card { background: var(--hms-surface); border: 1px solid var(--hms-border); border-radius: var(--hms-radius-lg); box-shadow: var(--hms-shadow-md); max-width: 31rem; padding: clamp(var(--hms-space-6), 5vw, var(--hms-space-8)); width: 100%; }
+.hms-login-card__intro, .hms-login-card__support, .hms-boundary-card p { color: var(--hms-text-secondary); }
+.hms-login-card__intro { margin: var(--hms-space-3) 0 var(--hms-space-6); }
+.hms-login-card__support { font-size: .8rem; margin: var(--hms-space-5) 0 0; }
+.hms-login-form { display: grid; gap: var(--hms-space-5); }
+.hms-login-form__submit { min-height: 2.8rem; width: 100%; }
+.hms-account-menu { position: relative; }
+.hms-account-menu__summary { align-items: center; cursor: pointer; display: flex; gap: var(--hms-space-3); list-style: none; }
+.hms-account-menu__summary::-webkit-details-marker { display: none; }
+.hms-account-menu__summary::after { border-bottom: 2px solid currentColor; border-inline-end: 2px solid currentColor; content: ""; height: .45rem; margin-inline-start: var(--hms-space-2); transform: rotate(45deg) translateY(-.15rem); width: .45rem; }
+.hms-account-menu[open] .hms-account-menu__summary::after { transform: rotate(225deg) translate(-.1rem, -.05rem); }
+.hms-account-menu__avatar { align-items: center; background: var(--hms-primary); border-radius: 50%; color: white; display: inline-flex; flex: 0 0 2.15rem; font-size: .8rem; font-weight: 800; height: 2.15rem; justify-content: center; width: 2.15rem; }
+.hms-account-menu__identity { display: flex; flex-direction: column; min-width: 0; }
+.hms-account-menu__identity strong { color: var(--hms-text); font-size: .84rem; max-width: 12rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.hms-account-menu__identity small { color: var(--hms-muted); font-size: .68rem; }
+.hms-account-menu__panel { background: var(--hms-surface); border: 1px solid var(--hms-border); border-radius: var(--hms-radius-md); box-shadow: var(--hms-shadow-md); min-width: 16rem; padding: var(--hms-space-4); position: absolute; inset-inline-end: 0; inset-block-start: calc(100% + var(--hms-space-3)); z-index: 40; }
+.hms-account-menu__hint { color: var(--hms-text-secondary); font-size: .78rem; margin: 0 0 var(--hms-space-3); }
+.hms-account-menu__logout { width: 100%; }
+
+@media (max-width: 560px) {
+    .hms-account-menu__identity { display: none; }
+    .hms-account-menu__panel { inset-inline-end: -.5rem; min-width: 14rem; }
+    .hms-anonymous-brand strong { font-size: .88rem; }
+}
+
 @media (max-width: 800px) {
     .hms-page-header__row, .hms-panel--welcome { align-items: flex-start; flex-direction: column; }
     .hms-hero-grid, .hms-showcase-grid, .hms-form__grid { grid-template-columns: 1fr; }

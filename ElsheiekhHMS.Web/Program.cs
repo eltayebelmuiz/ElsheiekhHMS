@@ -9,6 +9,7 @@ using ElsheiekhHMS.Infrastructure.Health;
 using ElsheiekhHMS.Infrastructure.Observability;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Antiforgery;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Components.Authorization;
 using Microsoft.Extensions.Options;
@@ -27,6 +28,9 @@ builder.Services.AddAuthentication(options =>
         options.DefaultSignInScheme = IdentityConstants.ApplicationScheme;
     })
     .AddIdentityCookies();
+// Identity stores and options remain owned by Infrastructure. Web adds only the
+// framework sign-in coordinator required by the approved login presentation.
+builder.Services.AddScoped<SignInManager<ApplicationUser>>();
 builder.Services.ConfigureApplicationCookie(options =>
 {
     options.Cookie.HttpOnly = true;
@@ -114,6 +118,71 @@ app.UseAuthentication();
 app.UseAuthorization();
 
 app.UseAntiforgery();
+app.MapPost("/account/login", async (
+    HttpContext context,
+    IAntiforgery antiforgery,
+    SignInManager<ApplicationUser> signInManager,
+    UserManager<ApplicationUser> userManager,
+    AccountLoginEligibility eligibility,
+    ILoggerFactory loggerFactory) =>
+{
+    try
+    {
+        await antiforgery.ValidateRequestAsync(context);
+    }
+    catch (AntiforgeryValidationException)
+    {
+        return Results.BadRequest();
+    }
+
+    var logger = loggerFactory.CreateLogger("ElsheiekhHMS.Authentication");
+    var form = await context.Request.ReadFormAsync(context.RequestAborted);
+    var username = form["username"].ToString().Trim();
+    var password = form["password"].ToString();
+    var returnUrl = SafeLocalReturnUrl(form["returnUrl"].ToString());
+
+    if (string.IsNullOrWhiteSpace(username) || string.IsNullOrWhiteSpace(password))
+    {
+        return Results.Redirect(LoginFailureUrl("required", returnUrl));
+    }
+
+    var user = await userManager.FindByNameAsync(username);
+    if (user is null || !eligibility.CanEstablishSession(user))
+    {
+        logger.LogInformation("Login attempt was not accepted for the supplied username.");
+        return Results.Redirect(LoginFailureUrl("invalid", returnUrl));
+    }
+
+    var result = await signInManager.PasswordSignInAsync(
+        user,
+        password,
+        isPersistent: false,
+        lockoutOnFailure: true);
+    if (!result.Succeeded)
+    {
+        logger.LogInformation("Login attempt was not accepted by Identity.");
+        return Results.Redirect(LoginFailureUrl("invalid", returnUrl));
+    }
+
+    return Results.LocalRedirect(returnUrl);
+})
+    .AllowAnonymous();
+
+app.MapPost("/account/logout", async (HttpContext context, IAntiforgery antiforgery, SignInManager<ApplicationUser> signInManager) =>
+{
+    try
+    {
+        await antiforgery.ValidateRequestAsync(context);
+    }
+    catch (AntiforgeryValidationException)
+    {
+        return Results.BadRequest();
+    }
+
+    await signInManager.SignOutAsync();
+    return Results.Redirect("/login?loggedOut=true");
+})
+    .RequireAuthorization();
 
 app.MapStaticAssets();
 app.MapHmsHealthEndpoints();
@@ -122,3 +191,11 @@ app.MapRazorComponents<App>()
     .AddInteractiveServerRenderMode();
 
 app.Run();
+
+static string SafeLocalReturnUrl(string? value) =>
+    !string.IsNullOrWhiteSpace(value) && value.StartsWith('/') && !value.StartsWith("//")
+        ? value
+        : "/";
+
+static string LoginFailureUrl(string reason, string returnUrl) =>
+    $"/login?error={Uri.EscapeDataString(reason)}&returnUrl={Uri.EscapeDataString(returnUrl)}";

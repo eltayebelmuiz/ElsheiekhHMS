@@ -1,0 +1,15 @@
+@page "/access-denied"
+@layout AnonymousLayout
+@attribute [AllowAnonymous]
+
+<PageTitle>Access denied</PageTitle>
+
+<section class="hms-boundary-card" aria-labelledby="access-denied-heading">
+    <p class="hms-eyebrow">Access control</p>
+    <h1 id="access-denied-heading">You do not have access to this area</h1>
+    <p>The account is authenticated, but its approved role does not permit this operation. Backend authorization remains authoritative.</p>
+    <div class="hms-state__actions">
+        <a class="btn btn-primary" href="/">Return to workspace</a>
+        <a class="btn btn-outline-secondary" href="/login">Use another account</a>
+    </div>
+</section>

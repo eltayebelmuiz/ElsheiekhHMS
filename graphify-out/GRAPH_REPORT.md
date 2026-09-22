@@ -2,11 +2,11 @@
 
 ## Snapshot
 
-- **generatedAtUtc:** `2026-09-22T17:24:22.4413112+00:00`
+- **generatedAtUtc:** `2026-09-22T18:04:20.1892022+00:00`
 - **gitBranch:** `main`
-- **gitCommit:** `a1e5ad06546736e4df6b4c4ca06025a69c3197e8`
+- **gitCommit:** `0132fe3e408cea9a9a107b8c615e44b89831be74`
 - **workingTreeDirty:** `True`
-- **sourceFingerprint:** `043ac94342df5663385a26f4e921b34bc8c6ebc4d1d604b566258b99e24b5e28`
+- **sourceFingerprint:** `dc59d9798c37e473bd2d1f80638c3ec692aa073790912ae8b468dac446b65f1c`
 - Framework: net10.0
 - Structural extraction only: **0 LLM API calls / 0 LLM tokens**. No statistical community clustering is claimed; project ownership supplies the visual groups.
 
@@ -250,7 +250,7 @@ Evaluated direct PackageReference items only. Framework/SDK auto-references and 
 
 Declared by README; not inferred from the existence of classes:
 
-- > **Current development stage:** Phase 12A — Blazor UI foundation complete; backend remains accepted and frozen — README.md:L5
+- > **Current development stage:** Phase 12B — authentication shell and navigation complete; backend remains accepted and frozen — README.md:L5
 - > **Phase 01:** ✅ Complete — README.md:L7
 - > **Phase 02 Setup:** ✅ Complete and verified — README.md:L9
 - > **Phase 03A / 03B / 03C:** ✅ Complete — README.md:L11
@@ -287,15 +287,16 @@ Declared by README; not inferred from the existence of classes:
 - > **Phase 10:** ✅ Testing & Hardening complete; 10A, 10B, 10C, and 10D complete; 418 tests passing — README.md:L73
 - > **Phase 11:** ✅ Backend Review complete; 11A passed, 11B was not required, and 11C accepted and froze the backend baseline — README.md:L75
 - > **Phase 12A:** ✅ Blazor UI architecture, application shell, navigation foundation, design tokens, reusable feedback/form/list patterns, and accessibility baseline established — README.md:L77
--  /  01  /  Solution & Architecture  /  ✅ Complete  /  — README.md:L394
--  /  02  /  Core Foundation  /  ✅ Complete  /  — README.md:L395
--  /  03  /  Domain Entities  /  ✅ Complete  /  — README.md:L396
--  /  04  /  EF Core & Database  /  ✅ Complete  /  — README.md:L397
--  /  05  /  Identity & Security  /  ✅ Complete (05A, 05B, 05C, 05C-A, 05D, and 05E)  /  — README.md:L398
--  /  06  /  DTOs & Validation  /  ✅ Complete (06A–06D)  /  — README.md:L399
--  /  07  /  Application Services  /  ✅ Complete for approved scope (07S, 07A, 07B, 07C-P, 07C, 07D; 07E deferred)  /  — README.md:L400
--  /  08  /  Business Workflows  /  ✅ Complete (08A, 08B-P, 08B)  /  — README.md:L401
--  /  09  /  Enterprise Infrastructure  /  ✅ Complete (09A, 09B)  /  — README.md:L402
+- > **Phase 12B:** ✅ Authentication presentation, anonymous/authenticated shell separation, current-user/logout controls, unauthorized UX, and role-aware navigation complete; external browser QA remains required — README.md:L80
+-  /  01  /  Solution & Architecture  /  ✅ Complete  /  — README.md:L397
+-  /  02  /  Core Foundation  /  ✅ Complete  /  — README.md:L398
+-  /  03  /  Domain Entities  /  ✅ Complete  /  — README.md:L399
+-  /  04  /  EF Core & Database  /  ✅ Complete  /  — README.md:L400
+-  /  05  /  Identity & Security  /  ✅ Complete (05A, 05B, 05C, 05C-A, 05D, and 05E)  /  — README.md:L401
+-  /  06  /  DTOs & Validation  /  ✅ Complete (06A–06D)  /  — README.md:L402
+-  /  07  /  Application Services  /  ✅ Complete for approved scope (07S, 07A, 07B, 07C-P, 07C, 07D; 07E deferred)  /  — README.md:L403
+-  /  08  /  Business Workflows  /  ✅ Complete (08A, 08B-P, 08B)  /  — README.md:L404
+-  /  09  /  Enterprise Infrastructure  /  ✅ Complete (09A, 09B)  /  — README.md:L405
 
 ## Important Files
 
@@ -510,11 +511,14 @@ Declared by README; not inferred from the existence of classes:
 - [ElsheiekhHMS.Tests/Unit/Web/Security/AuthenticationStateValidationTests.cs](../ElsheiekhHMS.Tests/Unit/Web/Security/AuthenticationStateValidationTests.cs) — ElsheiekhHMS.Tests
 - [ElsheiekhHMS.Tests/Unit/Web/Security/AuthorizationConfigurationTests.cs](../ElsheiekhHMS.Tests/Unit/Web/Security/AuthorizationConfigurationTests.cs) — ElsheiekhHMS.Tests
 - [ElsheiekhHMS.Web/Components/App.razor](../ElsheiekhHMS.Web/Components/App.razor) — ElsheiekhHMS.Web
+- [ElsheiekhHMS.Web/Components/Layout/AnonymousLayout.razor](../ElsheiekhHMS.Web/Components/Layout/AnonymousLayout.razor) — ElsheiekhHMS.Web
 - [ElsheiekhHMS.Web/Components/Layout/MainLayout.razor](../ElsheiekhHMS.Web/Components/Layout/MainLayout.razor) — ElsheiekhHMS.Web
 - [ElsheiekhHMS.Web/Components/Layout/NavMenu.razor](../ElsheiekhHMS.Web/Components/Layout/NavMenu.razor) — ElsheiekhHMS.Web
 - [ElsheiekhHMS.Web/Components/Layout/ReconnectModal.razor](../ElsheiekhHMS.Web/Components/Layout/ReconnectModal.razor) — ElsheiekhHMS.Web
+- [ElsheiekhHMS.Web/Components/Pages/AccessDenied.razor](../ElsheiekhHMS.Web/Components/Pages/AccessDenied.razor) — ElsheiekhHMS.Web
 - [ElsheiekhHMS.Web/Components/Pages/Error.razor](../ElsheiekhHMS.Web/Components/Pages/Error.razor) — ElsheiekhHMS.Web
 - [ElsheiekhHMS.Web/Components/Pages/Home.razor](../ElsheiekhHMS.Web/Components/Pages/Home.razor) — ElsheiekhHMS.Web
+- [ElsheiekhHMS.Web/Components/Pages/Login.razor](../ElsheiekhHMS.Web/Components/Pages/Login.razor) — ElsheiekhHMS.Web
 - [ElsheiekhHMS.Web/Components/Pages/NotFound.razor](../ElsheiekhHMS.Web/Components/Pages/NotFound.razor) — ElsheiekhHMS.Web
 - [ElsheiekhHMS.Web/Components/Routes.razor](../ElsheiekhHMS.Web/Components/Routes.razor) — ElsheiekhHMS.Web
 - [ElsheiekhHMS.Web/Components/Shared/AppAlert.razor](../ElsheiekhHMS.Web/Components/Shared/AppAlert.razor) — ElsheiekhHMS.Web
@@ -526,6 +530,7 @@ Declared by README; not inferred from the existence of classes:
 - [ElsheiekhHMS.Web/Components/Shared/Pagination.razor](../ElsheiekhHMS.Web/Components/Shared/Pagination.razor) — ElsheiekhHMS.Web
 - [ElsheiekhHMS.Web/Components/Shared/SearchBox.razor](../ElsheiekhHMS.Web/Components/Shared/SearchBox.razor) — ElsheiekhHMS.Web
 - [ElsheiekhHMS.Web/Components/Shared/StatusBadge.razor](../ElsheiekhHMS.Web/Components/Shared/StatusBadge.razor) — ElsheiekhHMS.Web
+- [ElsheiekhHMS.Web/Components/Shared/UserAccountMenu.razor](../ElsheiekhHMS.Web/Components/Shared/UserAccountMenu.razor) — ElsheiekhHMS.Web
 - [ElsheiekhHMS.Web/Components/_Imports.razor](../ElsheiekhHMS.Web/Components/_Imports.razor) — ElsheiekhHMS.Web
 - [ElsheiekhHMS.Web/Program.cs](../ElsheiekhHMS.Web/Program.cs) — ElsheiekhHMS.Web
 - [ElsheiekhHMS.Web/Security/AuthorizationConfiguration.cs](../ElsheiekhHMS.Web/Security/AuthorizationConfiguration.cs) — ElsheiekhHMS.Web

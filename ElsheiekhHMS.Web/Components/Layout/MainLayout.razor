@@ -19,15 +19,7 @@
                     <span class="hms-topbar__section">Hospital Management System</span>
                 </div>
                 <div class="hms-user-area">
-                    <AuthorizeView>
-                        <Authorized Context="authState">
-                            <span class="hms-user-area__label">Signed in as</span>
-                            <strong>@(authState.User.Identity?.Name ?? "Authenticated user")</strong>
-                        </Authorized>
-                        <NotAuthorized>
-                            <a class="hms-user-area__signin" href="/login">Sign in</a>
-                        </NotAuthorized>
-                    </AuthorizeView>
+                    <UserAccountMenu />
                 </div>
             </div>
         </header>
