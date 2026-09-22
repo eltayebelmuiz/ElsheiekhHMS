@@ -1,11 +1,11 @@
 {
   "schemaVersion": "1.0",
-  "generatedAtUtc": "2026-09-22T15:59:29.1946880\u002B00:00",
-  "gitCommit": "7f35b373e11a4273a2593231fd896f0002704107",
+  "generatedAtUtc": "2026-09-22T16:46:37.6280044\u002B00:00",
+  "gitCommit": "65c698e16b50ee3f344dccdda33a7d8992df71d9",
   "gitBranch": "main",
   "workingTreeDirty": true,
-  "gitStatusAtGeneration": "M DEVELOPMENT_ROADMAP.md\n M README.md\n M docs/ARCHITECTURE.md\n M graphify-out/GRAPH_REPORT.md\n M graphify-out/graph.html\n M graphify-out/graph.json",
-  "sourceFingerprint": "57de8d1e9a7dfa128dff74b69d4be2067fb0d72576ba9686a437e72bb2dcc242",
+  "gitStatusAtGeneration": "M DEVELOPMENT_ROADMAP.md\n D ElsheiekhHMS.Application/Departments/Contracts/DepartmentOptionDto.cs\n M ElsheiekhHMS.Web/Components/Layout/NavMenu.razor\n D ElsheiekhHMS.Web/Components/Pages/Counter.razor\n D ElsheiekhHMS.Web/Components/Pages/Weather.razor\n M PRD.md\n M README.md\n M docs/ARCHITECTURE.md\n M docs/DECISIONS.md\n M graphify-out/GRAPH_REPORT.md\n M graphify-out/graph.html\n M graphify-out/graph.json",
+  "sourceFingerprint": "19119c144c3f44053a10bcd32c8e8b6f60139bac0e6bec9ac60acb635e9924c8",
   "generatorFingerprint": "03eee0a8853a7e84af6cbe571d34e6f7d820505ac8f5670a719d0d63b113840c",
   "fingerprintAlgorithm": "SHA-256 of ordinal path \u002B NUL \u002B content SHA-256 records joined with LF; sourceManifest defines inputs; graphify-out excluded everywhere",
   "sourceManifest": [
@@ -148,10 +148,6 @@
     {
       "path": "ElsheiekhHMS.Application/Departments/Contracts/DepartmentDetailsDto.cs",
       "sha256": "87652b02133d22737439d844b97a6449ba237cf5ac99c42fd98439c87b2d393f"
-    },
-    {
-      "path": "ElsheiekhHMS.Application/Departments/Contracts/DepartmentOptionDto.cs",
-      "sha256": "87bc5db130598a826443a935f0b296021f2289357981ce126d6c319c27e3b3dc"
     },
     {
       "path": "ElsheiekhHMS.Application/Departments/Contracts/DepartmentSearchRequest.cs",
@@ -879,15 +875,11 @@
     },
     {
       "path": "ElsheiekhHMS.Web/Components/Layout/NavMenu.razor",
-      "sha256": "9bb56fc6be759efc3aadcdf6f6fafe18b41b65cb2577d4b8d9603dd83d50b53c"
+      "sha256": "f5a91d19bce382f70a2a4abf12f0de51f35dde4d7839f4b7bb0dd0bfe568f4b6"
     },
     {
       "path": "ElsheiekhHMS.Web/Components/Layout/ReconnectModal.razor",
       "sha256": "e1c8308c1ec6656c8f5cd50df3f1879b614e43109ad6b1e23ab26d6f1007c6db"
-    },
-    {
-      "path": "ElsheiekhHMS.Web/Components/Pages/Counter.razor",
-      "sha256": "779f65d35e2683a6be0a75bdcfb898e1a24bc1d2ed3cfe40269a86ba685f2df9"
     },
     {
       "path": "ElsheiekhHMS.Web/Components/Pages/Error.razor",
@@ -900,10 +892,6 @@
     {
       "path": "ElsheiekhHMS.Web/Components/Pages/NotFound.razor",
       "sha256": "c267b98a248a516f8ca8c79dd8410d9f09d9ad302466e65c6b9b959b5ffc7cbd"
-    },
-    {
-      "path": "ElsheiekhHMS.Web/Components/Pages/Weather.razor",
-      "sha256": "9785353b05c2779c01380729e0a638a43074244dcf8b8a8a3b284ea03893d2ab"
     },
     {
       "path": "ElsheiekhHMS.Web/Components/Routes.razor",
@@ -939,7 +927,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "6d43c582cbaa4b3f5838c14fb3e3284e19d9e13120b370e72c65b1f23bed8aaf"
+      "sha256": "dc945798ff6d2040bbf60f60dfe7902b70c9044299b467427e2d11387a6fe5e2"
     }
   ],
   "repository": {
@@ -949,16 +937,16 @@
   },
   "summary": {
     "projectCount": 5,
-    "sourceFileCount": 215,
-    "razorFileCount": 11,
-    "typeCount": 280,
+    "sourceFileCount": 214,
+    "razorFileCount": 9,
+    "typeCount": 279,
     "interfaceCount": 14,
     "testClassCount": 11,
     "testMethodCount": 76,
     "testCount": 113,
     "dynamicTheoryCount": 0,
-    "nodeCount": 603,
-    "edgeCount": 1167
+    "nodeCount": 599,
+    "edgeCount": 1161
   },
   "projects": [
     {
@@ -1016,7 +1004,6 @@
         "ElsheiekhHMS.Application/Common/Validation/ValidationResult.cs",
         "ElsheiekhHMS.Application/Departments/Contracts/CreateDepartmentRequest.cs",
         "ElsheiekhHMS.Application/Departments/Contracts/DepartmentDetailsDto.cs",
-        "ElsheiekhHMS.Application/Departments/Contracts/DepartmentOptionDto.cs",
         "ElsheiekhHMS.Application/Departments/Contracts/DepartmentSearchRequest.cs",
         "ElsheiekhHMS.Application/Departments/Contracts/DepartmentSortField.cs",
         "ElsheiekhHMS.Application/Departments/Contracts/DepartmentSummaryDto.cs",
@@ -1868,22 +1855,6 @@
       "project": "ElsheiekhHMS.Application",
       "file": "ElsheiekhHMS.Application/Departments/Contracts/DepartmentDetailsDto.cs",
       "source_file": "ElsheiekhHMS.Application/Departments/Contracts/DepartmentDetailsDto.cs",
-      "external": false,
-      "community": 0,
-      "community_name": "ElsheiekhHMS.Application",
-      "testMethods": [],
-      "staticTestCases": 0,
-      "dynamicTheories": 0
-    },
-    {
-      "id": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Departments/Contracts/DepartmentOptionDto.cs",
-      "name": "DepartmentOptionDto.cs",
-      "label": "DepartmentOptionDto.cs",
-      "kind": "file",
-      "type": "file",
-      "project": "ElsheiekhHMS.Application",
-      "file": "ElsheiekhHMS.Application/Departments/Contracts/DepartmentOptionDto.cs",
-      "source_file": "ElsheiekhHMS.Application/Departments/Contracts/DepartmentOptionDto.cs",
       "external": false,
       "community": 0,
       "community_name": "ElsheiekhHMS.Application",
@@ -4756,22 +4727,6 @@
       "dynamicTheories": 0
     },
     {
-      "id": "file:ElsheiekhHMS.Web:ElsheiekhHMS.Web/Components/Pages/Counter.razor",
-      "name": "Counter.razor",
-      "label": "Counter.razor",
-      "kind": "file",
-      "type": "file",
-      "project": "ElsheiekhHMS.Web",
-      "file": "ElsheiekhHMS.Web/Components/Pages/Counter.razor",
-      "source_file": "ElsheiekhHMS.Web/Components/Pages/Counter.razor",
-      "external": false,
-      "community": 4,
-      "community_name": "ElsheiekhHMS.Web",
-      "testMethods": [],
-      "staticTestCases": 0,
-      "dynamicTheories": 0
-    },
-    {
       "id": "file:ElsheiekhHMS.Web:ElsheiekhHMS.Web/Components/Pages/Error.razor",
       "name": "Error.razor",
       "label": "Error.razor",
@@ -4812,22 +4767,6 @@
       "project": "ElsheiekhHMS.Web",
       "file": "ElsheiekhHMS.Web/Components/Pages/NotFound.razor",
       "source_file": "ElsheiekhHMS.Web/Components/Pages/NotFound.razor",
-      "external": false,
-      "community": 4,
-      "community_name": "ElsheiekhHMS.Web",
-      "testMethods": [],
-      "staticTestCases": 0,
-      "dynamicTheories": 0
-    },
-    {
-      "id": "file:ElsheiekhHMS.Web:ElsheiekhHMS.Web/Components/Pages/Weather.razor",
-      "name": "Weather.razor",
-      "label": "Weather.razor",
-      "kind": "file",
-      "type": "file",
-      "project": "ElsheiekhHMS.Web",
-      "file": "ElsheiekhHMS.Web/Components/Pages/Weather.razor",
-      "source_file": "ElsheiekhHMS.Web/Components/Pages/Weather.razor",
       "external": false,
       "community": 4,
       "community_name": "ElsheiekhHMS.Web",
@@ -7023,30 +6962,6 @@
       "namespace": "ElsheiekhHMS.Application.Departments.Contracts",
       "file": "ElsheiekhHMS.Application/Departments/Contracts/DepartmentDetailsDto.cs",
       "source_file": "ElsheiekhHMS.Application/Departments/Contracts/DepartmentDetailsDto.cs",
-      "source_location": "L3",
-      "line": 3,
-      "accessibility": "public",
-      "abstract": false,
-      "sealed": true,
-      "static": false,
-      "external": false,
-      "community": 0,
-      "community_name": "ElsheiekhHMS.Application",
-      "testMethods": [],
-      "staticTestCases": 0,
-      "dynamicTheories": 0
-    },
-    {
-      "id": "type:ElsheiekhHMS.Application.Departments.Contracts.DepartmentOptionDto",
-      "name": "DepartmentOptionDto",
-      "label": "DepartmentOptionDto",
-      "kind": "record",
-      "type": "record",
-      "fullName": "ElsheiekhHMS.Application.Departments.Contracts.DepartmentOptionDto",
-      "project": "ElsheiekhHMS.Application",
-      "namespace": "ElsheiekhHMS.Application.Departments.Contracts",
-      "file": "ElsheiekhHMS.Application/Departments/Contracts/DepartmentOptionDto.cs",
-      "source_file": "ElsheiekhHMS.Application/Departments/Contracts/DepartmentOptionDto.cs",
       "source_location": "L3",
       "line": 3,
       "accessibility": "public",
@@ -13516,15 +13431,6 @@
       "weight": 1
     },
     {
-      "source": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Departments/Contracts/DepartmentOptionDto.cs",
-      "target": "type:ElsheiekhHMS.Application.Departments.Contracts.DepartmentOptionDto",
-      "type": "declares",
-      "evidence": "ElsheiekhHMS.Application/Departments/Contracts/DepartmentOptionDto.cs:L3",
-      "relation": "declares",
-      "confidence": "EXTRACTED",
-      "weight": 1
-    },
-    {
       "source": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Departments/Contracts/DepartmentSearchRequest.cs",
       "target": "type:ElsheiekhHMS.Application.Departments.Contracts.DepartmentSearchRequest",
       "type": "declares",
@@ -16082,15 +15988,6 @@
     },
     {
       "source": "project:ElsheiekhHMS.Application",
-      "target": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Departments/Contracts/DepartmentOptionDto.cs",
-      "type": "contains",
-      "evidence": "ElsheiekhHMS.Application/ElsheiekhHMS.Application.csproj",
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "weight": 1
-    },
-    {
-      "source": "project:ElsheiekhHMS.Application",
       "target": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Departments/Contracts/DepartmentSearchRequest.cs",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Application/ElsheiekhHMS.Application.csproj",
@@ -18458,15 +18355,6 @@
     },
     {
       "source": "project:ElsheiekhHMS.Web",
-      "target": "file:ElsheiekhHMS.Web:ElsheiekhHMS.Web/Components/Pages/Counter.razor",
-      "type": "contains",
-      "evidence": "ElsheiekhHMS.Web/ElsheiekhHMS.Web.csproj",
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "weight": 1
-    },
-    {
-      "source": "project:ElsheiekhHMS.Web",
       "target": "file:ElsheiekhHMS.Web:ElsheiekhHMS.Web/Components/Pages/Error.razor",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Web/ElsheiekhHMS.Web.csproj",
@@ -18486,15 +18374,6 @@
     {
       "source": "project:ElsheiekhHMS.Web",
       "target": "file:ElsheiekhHMS.Web:ElsheiekhHMS.Web/Components/Pages/NotFound.razor",
-      "type": "contains",
-      "evidence": "ElsheiekhHMS.Web/ElsheiekhHMS.Web.csproj",
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "weight": 1
-    },
-    {
-      "source": "project:ElsheiekhHMS.Web",
-      "target": "file:ElsheiekhHMS.Web:ElsheiekhHMS.Web/Components/Pages/Weather.razor",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Web/ElsheiekhHMS.Web.csproj",
       "relation": "contains",
@@ -19100,24 +18979,6 @@
       "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Departments.Contracts",
       "type": "namespace-membership",
       "evidence": "ElsheiekhHMS.Application/Departments/Contracts/DepartmentDetailsDto.cs",
-      "relation": "namespace-membership",
-      "confidence": "EXTRACTED",
-      "weight": 1
-    },
-    {
-      "source": "type:ElsheiekhHMS.Application.Departments.Contracts.DepartmentOptionDto",
-      "target": "type:System.IEquatable\u003CT\u003E",
-      "type": "implements",
-      "evidence": "ElsheiekhHMS.Application/Departments/Contracts/DepartmentOptionDto.cs:L3",
-      "relation": "implements",
-      "confidence": "EXTRACTED",
-      "weight": 1
-    },
-    {
-      "source": "type:ElsheiekhHMS.Application.Departments.Contracts.DepartmentOptionDto",
-      "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Departments.Contracts",
-      "type": "namespace-membership",
-      "evidence": "ElsheiekhHMS.Application/Departments/Contracts/DepartmentOptionDto.cs",
       "relation": "namespace-membership",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -23743,7 +23604,7 @@
       "statusSource": "README.md declaration, not independently certified completion",
       "declaredStatus": [
         {
-          "text": "\u003E **Current development stage:** Phase 10 \u2014 Testing \u0026 Hardening complete; Phase 11 Backend Review is next and not started",
+          "text": "\u003E **Current development stage:** Phase 11 \u2014 Backend Review complete; backend accepted and frozen for Phase 12 UI",
           "source": "README.md:L5"
         },
         {
@@ -23883,40 +23744,44 @@
           "source": "README.md:L73"
         },
         {
+          "text": "\u003E **Phase 11:** \u2705 Backend Review complete; 11A passed, 11B was not required, and 11C accepted and froze the backend baseline",
+          "source": "README.md:L75"
+        },
+        {
           "text": "| 01 | Solution \u0026 Architecture | \u2705 Complete |",
-          "source": "README.md:L390"
-        },
-        {
-          "text": "| 02 | Core Foundation | \u2705 Complete |",
-          "source": "README.md:L391"
-        },
-        {
-          "text": "| 03 | Domain Entities | \u2705 Complete |",
           "source": "README.md:L392"
         },
         {
-          "text": "| 04 | EF Core \u0026 Database | \u2705 Complete |",
+          "text": "| 02 | Core Foundation | \u2705 Complete |",
           "source": "README.md:L393"
         },
         {
-          "text": "| 05 | Identity \u0026 Security | \u2705 Complete (05A, 05B, 05C, 05C-A, 05D, and 05E) |",
+          "text": "| 03 | Domain Entities | \u2705 Complete |",
           "source": "README.md:L394"
         },
         {
-          "text": "| 06 | DTOs \u0026 Validation | \u2705 Complete (06A\u201306D) |",
+          "text": "| 04 | EF Core \u0026 Database | \u2705 Complete |",
           "source": "README.md:L395"
         },
         {
-          "text": "| 07 | Application Services | \u2705 Complete for approved scope (07S, 07A, 07B, 07C-P, 07C, 07D; 07E deferred) |",
+          "text": "| 05 | Identity \u0026 Security | \u2705 Complete (05A, 05B, 05C, 05C-A, 05D, and 05E) |",
           "source": "README.md:L396"
         },
         {
-          "text": "| 08 | Business Workflows | \u23F3 Not started |",
+          "text": "| 06 | DTOs \u0026 Validation | \u2705 Complete (06A\u201306D) |",
           "source": "README.md:L397"
         },
         {
-          "text": "| 09 | Enterprise Infrastructure | \u23F3 Not started |",
+          "text": "| 07 | Application Services | \u2705 Complete for approved scope (07S, 07A, 07B, 07C-P, 07C, 07D; 07E deferred) |",
           "source": "README.md:L398"
+        },
+        {
+          "text": "| 08 | Business Workflows | \u2705 Complete (08A, 08B-P, 08B) |",
+          "source": "README.md:L399"
+        },
+        {
+          "text": "| 09 | Enterprise Infrastructure | \u2705 Complete (09A, 09B) |",
+          "source": "README.md:L400"
         }
       ]
     }
@@ -24265,15 +24130,6 @@
       "target": "type:ElsheiekhHMS.Application.Departments.Contracts.DepartmentDetailsDto",
       "type": "declares",
       "evidence": "ElsheiekhHMS.Application/Departments/Contracts/DepartmentDetailsDto.cs:L3",
-      "relation": "declares",
-      "confidence": "EXTRACTED",
-      "weight": 1
-    },
-    {
-      "source": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Departments/Contracts/DepartmentOptionDto.cs",
-      "target": "type:ElsheiekhHMS.Application.Departments.Contracts.DepartmentOptionDto",
-      "type": "declares",
-      "evidence": "ElsheiekhHMS.Application/Departments/Contracts/DepartmentOptionDto.cs:L3",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -26836,15 +26692,6 @@
     },
     {
       "source": "project:ElsheiekhHMS.Application",
-      "target": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Departments/Contracts/DepartmentOptionDto.cs",
-      "type": "contains",
-      "evidence": "ElsheiekhHMS.Application/ElsheiekhHMS.Application.csproj",
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "weight": 1
-    },
-    {
-      "source": "project:ElsheiekhHMS.Application",
       "target": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Departments/Contracts/DepartmentSearchRequest.cs",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Application/ElsheiekhHMS.Application.csproj",
@@ -29212,15 +29059,6 @@
     },
     {
       "source": "project:ElsheiekhHMS.Web",
-      "target": "file:ElsheiekhHMS.Web:ElsheiekhHMS.Web/Components/Pages/Counter.razor",
-      "type": "contains",
-      "evidence": "ElsheiekhHMS.Web/ElsheiekhHMS.Web.csproj",
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "weight": 1
-    },
-    {
-      "source": "project:ElsheiekhHMS.Web",
       "target": "file:ElsheiekhHMS.Web:ElsheiekhHMS.Web/Components/Pages/Error.razor",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Web/ElsheiekhHMS.Web.csproj",
@@ -29240,15 +29078,6 @@
     {
       "source": "project:ElsheiekhHMS.Web",
       "target": "file:ElsheiekhHMS.Web:ElsheiekhHMS.Web/Components/Pages/NotFound.razor",
-      "type": "contains",
-      "evidence": "ElsheiekhHMS.Web/ElsheiekhHMS.Web.csproj",
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "weight": 1
-    },
-    {
-      "source": "project:ElsheiekhHMS.Web",
-      "target": "file:ElsheiekhHMS.Web:ElsheiekhHMS.Web/Components/Pages/Weather.razor",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Web/ElsheiekhHMS.Web.csproj",
       "relation": "contains",
@@ -29854,24 +29683,6 @@
       "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Departments.Contracts",
       "type": "namespace-membership",
       "evidence": "ElsheiekhHMS.Application/Departments/Contracts/DepartmentDetailsDto.cs",
-      "relation": "namespace-membership",
-      "confidence": "EXTRACTED",
-      "weight": 1
-    },
-    {
-      "source": "type:ElsheiekhHMS.Application.Departments.Contracts.DepartmentOptionDto",
-      "target": "type:System.IEquatable\u003CT\u003E",
-      "type": "implements",
-      "evidence": "ElsheiekhHMS.Application/Departments/Contracts/DepartmentOptionDto.cs:L3",
-      "relation": "implements",
-      "confidence": "EXTRACTED",
-      "weight": 1
-    },
-    {
-      "source": "type:ElsheiekhHMS.Application.Departments.Contracts.DepartmentOptionDto",
-      "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Departments.Contracts",
-      "type": "namespace-membership",
-      "evidence": "ElsheiekhHMS.Application/Departments/Contracts/DepartmentOptionDto.cs",
       "relation": "namespace-membership",
       "confidence": "EXTRACTED",
       "weight": 1

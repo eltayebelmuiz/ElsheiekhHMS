@@ -877,3 +877,37 @@ security stamps, and medical identifiers. 09C is not required.
 [observability unit tests](../ElsheiekhHMS.Tests/Unit/Infrastructure/Observability/RequestObservabilityMiddlewareTests.cs);
 [health unit tests](../ElsheiekhHMS.Tests/Unit/Infrastructure/Health/HealthCheckTests.cs);
 [isolated SQL readiness test](../ElsheiekhHMS.Tests/Integration/Persistence/SqlServerReadinessHealthCheckTests.cs).
+
+## ADR-029 — Phase 11 backend acceptance and Phase 12 handoff
+
+**Status:** Complete
+**Phase:** 11A–11C
+
+### Decision
+
+Accept and freeze the approved backend baseline after the Phase 11A review,
+with no Phase 11B correction package required. Phase 12 consumes the existing
+Core, Application, Infrastructure, Identity, authorization, persistence,
+workflow, audit, observability, health, and test contracts. Backend business
+rules and authorization remain authoritative; UI validation and visibility are
+supplemental.
+
+Appointment-linked Queue creation is an explicit integration boundary:
+presentation code invokes `IAppointmentArrivalQueueService` and must not build a
+linked Queue request from caller-supplied PatientId or DepartmentId. The
+workflow loads the Appointment and supplies its authoritative Patient and
+Department. Walk-in Queue creation remains a separate contract.
+
+07E Doctor/Provider service, Doctor↔ApplicationUser ownership, Patient
+self-service, Provider self-service, and clinical workflows remain deferred
+until separately approved. Phase 12 may begin with the Patient, Department,
+Appointment, Queue, and Appointment→Queue modules whose backend contracts are
+ready.
+
+### Consequences
+
+No Core, Application behavior, Infrastructure behavior, ApplicationUser,
+schema, migration, model snapshot, package, or database change is introduced
+by this acceptance. Subsequent backend changes discovered during UI work
+require explicit justification and review rather than incidental UI-driven
+rewrites.

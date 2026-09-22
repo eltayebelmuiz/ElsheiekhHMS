@@ -3,7 +3,7 @@
 **Version:** 1.0.0
 **Date:** September 20, 2026
 **Owner:** Eltayeb Elmuiz
-**Status:** Phase 10 complete; 10A authorization/host-security, 10B SQL concurrency/atomicity, 10C lifecycle/workflow, and 10D controlled performance/production-readiness verification complete with 418 tests passing; Phase 11 Backend Review is next and not started; 07E Doctor/Provider Application Service remains deferred
+**Status:** Phases 01–11 complete; Phase 11A backend review passed, 11B was not required, and 11C accepted and froze the backend baseline with 418 tests passing; Phase 12 Blazor UI is next and not started; 07E Doctor/Provider Application Service remains deferred
 
 ---
 
@@ -117,7 +117,7 @@ The current checkout uses the `ElsheiekhHMS` namespace and project prefix.
 | Project | Responsibility | May Reference |
 |---------|---------------|---------------|
 | **Core** | Domain entities, enums, interfaces, exceptions, ServiceResult | Nothing |
-| **Infrastructure** | DbContext, EF configs, Identity, role seeder, repositories, services | Application + Core |
+| **Infrastructure** | DbContext, EF configs, Identity, role seeder, narrow persistence ports, services | Application + Core |
 | **Web** | Blazor components, authorization composition, middleware, wwwroot | Application + Infrastructure |
 | **Tests** | Domain, application, infrastructure, and persistence tests | Core + Application + Infrastructure |
 
@@ -256,8 +256,8 @@ If business rules exist only in Razor components or transport endpoints, they ca
 | 07 | Application Services | Application use cases and orchestration | ✅ Complete for approved scope; 07E deferred | Tested application contracts |
 | 08 | Business Workflows | Queue, appointments, and approved cross-service workflows | ✅ Complete; 08C not required | Approved workflow services |
 | 09 | Enterprise Infrastructure | Built-in request observability and SQL Server readiness | ✅ Complete (09A–09B) | Phase 10 review |
-| 10 | Testing & Hardening | Unit, integration, security, performance | ⏳ Not started | Hardening evidence |
-| 11 | Backend Review | Full backend gate before UI | ⏳ Not started | Architecture audit passing |
+| 10 | Testing & Hardening | Unit, integration, security, performance | ✅ Complete (10A–10D) | Hardening evidence |
+| 11 | Backend Review | Full backend gate before UI | ✅ Complete (11A–11C) | Accepted and frozen backend baseline |
 | 12 | Blazor UI | HMS presentation and workflows | ⏳ Not started | Approved Blazor UI |
 
 ---
@@ -1340,6 +1340,12 @@ git commit -m "Phase10: test suite, security hardening, architecture validation"
 
 ## PHASE 11 — Backend Review
 
+**Status: COMPLETE.** Phase 11A backend-wide review passed, Phase 11B was not
+required, and Phase 11C accepted and froze the backend baseline. Phase 12 is
+the next phase and remains not started. The checklist below records the review
+scope; the accepted implementation contracts and current source are
+authoritative where older planning examples differ.
+
 ### Objective
 Full architecture audit before beginning substantial Blazor UI work. This is the backend release gate.
 
@@ -1349,54 +1355,55 @@ Phase 10 complete, all tests passing.
 ### Audit checklist
 
 #### Architecture
-- [ ] Dependency direction: Core → nothing, Infrastructure → Core, Web → Core + Infrastructure
-- [ ] No circular dependencies
-- [ ] `AddApplication()` / `AddInfrastructure()` used in Program.cs
-- [ ] No business logic in controllers or components
+- [x] Dependency direction: Core → nothing, Application → Core, Infrastructure → Application + Core, Web → Application + Infrastructure
+- [x] No circular production dependencies
+- [x] `AddApplication()` / `AddInfrastructure()` used in Program.cs
+- [x] No business logic in controllers or components
 
 #### Domain model
-- [ ] All entities inherit appropriate base class
-- [ ] Navigation properties initialized to `new List<T>()`
-- [ ] Computed properties marked `[NotMapped]`
-- [ ] Doctor names accessed via `ApplicationUser`, not directly
-- [ ] `AuditLog` has no soft-delete fields
+- [x] Approved entities inherit the appropriate Core base class and enforce their intrinsic invariants
+- [x] Persistence navigation and computed-property mappings match the approved EF model
+- [x] Doctor↔ApplicationUser ownership is not assumed; 07E remains deferred
+- [x] `AuditLog` has no soft-delete fields
 
 #### Database
-- [ ] All migrations apply cleanly on fresh database
-- [ ] All unique indexes use `HasFilter` for nullable columns
-- [ ] No `float`/`double` in monetary fields
-- [ ] Global soft-delete filters applied to all soft-deletable entities
-- [ ] WalkInQueue config has no Department or WaitTime references
-- [ ] PassportNumber inserts use NULL not empty string
+- [x] All migrations apply cleanly on the verified database targets
+- [x] Nullable unique indexes use the approved filters
+- [x] No `float`/`double` in monetary fields
+- [x] Global soft-delete filters applied to all soft-deletable entities
+- [x] WalkInQueue config has no Department or WaitTime references
+- [x] PassportNumber inserts use NULL not empty string
 
 #### Security
-- [ ] `[Authorize]` on every controller
-- [ ] Password policy enforced (8 chars, uppercase, digit, special)
-- [ ] Lockout after 5 failed attempts, 15 minutes
-- [ ] Auth cookie: HttpOnly, SameSite=Lax
-- [ ] No secrets in appsettings.json or in code
+- [x] Backend services and Web endpoints enforce the approved policies; no controller-only boundary is assumed
+- [x] Password policy enforced (8 chars, uppercase, digit, special)
+- [x] Lockout after 5 failed attempts, 15 minutes
+- [x] Auth cookie: HttpOnly, SameSite=Lax
+- [x] No secrets in appsettings.json or in code
 
 #### Services
-- [ ] All services use `IsSuccess` / `ErrorMessage` — not `Succeeded` / `Error`
-- [ ] `Success()` / `Failure()` method names — not `Ok()` / `Fail()`
-- [ ] `SaveChangesAsync()` only in UnitOfWork
-- [ ] Doctor name always via `ApplicationUser` navigation
+- [x] All services use `IsSuccess` / `ErrorMessage` — not `Succeeded` / `Error`
+- [x] `Success()` / `Failure()` method names — not `Ok()` / `Fail()`
+- [x] Writes use narrow persistence ports with one intended save and no generic Unit of Work
+- [x] Provider/Doctor ownership is not inferred from Identity
 
 #### Audit trail
-- [ ] All write operations produce AuditLog entry
-- [ ] AuditLog never contains password fields
-- [ ] AuditLog written in same transaction as triggering operation
-- [ ] No update or delete endpoint for AuditLog
+- [x] Approved write operations produce AuditLog entries
+- [x] AuditLog never contains password fields
+- [x] AuditLog written in same transaction as the triggering mutation
+- [x] No update or delete endpoint for AuditLog
 
 #### Tests
-- [ ] All tests pass
-- [ ] Critical transition tests present
-- [ ] Authorization tests present
-- [ ] Architecture tests present
+- [x] All tests pass
+- [x] Critical transition tests present
+- [x] Authorization tests present
+- [x] Architecture tests present
 
 ### Phase gate — do NOT proceed to Phase 12 until
 
-All items above are checked. Zero compiler warnings. Zero test failures.
+All approved Phase 11A–11C gates are checked. The final closeout recorded zero
+compiler warnings, zero test failures, no pending model changes, and no backend
+blockers. Phase 12 is now the next phase.
 
 ### Git checkpoint
 ```
@@ -1636,7 +1643,7 @@ Core ──►  (nothing)
 | 09 | ✅ | ✅ | ✅ | ✅ | ✅ | N/A | ✅ audit |
 | 10 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ all |
 | 11 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ full review |
-| 12 | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ UI complete |
+| 12 | N/A | N/A | N/A | N/A | N/A | N/A | Not started |
 
 ---
 
@@ -1820,15 +1827,15 @@ public async Task<ServiceResult<T>> DoSomethingAsync(Dto dto, string actorEmail)
 ## 16. Current Project Checkpoint
 
 ```
-Last completed phase:  Phase 10 — Testing & Hardening
-Current phase:         Phase 10 — Testing & Hardening (complete; 10A, 10B, 10C, and 10D complete; 418 tests passing)
-Next phase:            Phase 11 — Backend Review (not started)
-Next action:           Begin the Phase 11 Backend Review gate; 07E and ownership-dependent workflows remain explicitly deferred
+Last completed phase:  Phase 11 — Backend Review
+Current phase:         Phase 11 — Backend Review (complete; 11A passed, 11B not required, 11C accepted and froze the backend baseline)
+Next phase:            Phase 12 — Blazor UI (not started)
+Next action:           Begin Phase 12 UI work using the accepted backend contracts; 07E and ownership-dependent workflows remain explicitly deferred
 Known blockers:        None
 Important notes:
   - The current working codebase is the five-project .NET 10 ElsheiekhHMS solution
   - The Web project uses the Blazor Interactive Server host
-  - PRD.md is complete and approved
+  - PRD.md remains Draft; its implementation baseline is reconciled to the current .NET 10 source while future product requirements remain separately scoped
   - SpecKit and Codex command files generated
   - seed_patients.sql corrected: integer enums, NULL passports, no IDENTITY_INSERT
   - Enterprise table system active on Patient/Index

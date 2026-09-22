@@ -134,6 +134,12 @@ workflows remain blocked by 07E, Patient self-service remains blocked by missing
 Patient ownership, and clinical, laboratory, billing, inpatient, pharmacy, and
 notification workflows require separate approved domain designs.
 
+For Appointment-linked Queue creation, presentation code must invoke the
+approved `IAppointmentArrivalQueueService` workflow. It must not construct a
+linked Queue entry from caller-supplied PatientId or DepartmentId; the workflow
+loads the Appointment and supplies its authoritative Patient and Department.
+Walk-in Queue creation remains a separate contract.
+
 ### Phase 09 status
 
 Phase 09 Enterprise Infrastructure is complete for the approved scope. 09A uses
@@ -144,7 +150,18 @@ liveness at `/health` and `/health/live` without SQL, and anonymous application
 readiness at `/health/ready` using `DbContext.Database.CanConnectAsync`. Readiness
 does not migrate, seed, write, or expose raw database errors. No third-party
 observability, retry, pooling, cache, broker, or background infrastructure was
-introduced. Phase 10 is complete for the approved implementation scope; 10A authorization/host-security, 10B SQL concurrency/atomicity, 10C lifecycle/workflow, and 10D controlled performance/production-readiness verification are complete with 418 tests passing. Phase 11 Backend Review is the next phase and has not started. Accepted non-blocking limitations remain full production-error/antiforgery host assertions, deterministic application-lock timeout and Phase08B partial-success SQL failure injection, hard local latency assertions, and production certification of PRD performance targets.
+introduced. Phase 10 is complete for the approved implementation scope; 10A authorization/host-security, 10B SQL concurrency/atomicity, 10C lifecycle/workflow, and 10D controlled performance/production-readiness verification are complete with 418 tests passing. Phase 11A backend-wide review passed, 11B was not required, and 11C accepted and froze the backend baseline for Phase 12. Accepted non-blocking limitations remain full production-error/antiforgery host assertions, deterministic application-lock timeout and Phase08B partial-success SQL failure injection, hard local latency assertions, and production certification of PRD performance targets.
+
+### Phase 11 backend acceptance and freeze
+
+The backend baseline is accepted for Phase 12. Existing Core, Application,
+Infrastructure, Identity, authorization, persistence, audit, workflow,
+observability, health, and test contracts are authoritative. Phase 12 must
+consume these contracts without incidental backend rewrites: business rules,
+backend authorization, stable UserId attribution, and concurrency behavior
+remain server-side responsibilities. Backend changes discovered during UI work
+require explicit justification and a separate review. Doctor/Provider service
+work and ownership-dependent Patient or Provider workflows remain deferred.
 
 ## 7. Testing architecture
 

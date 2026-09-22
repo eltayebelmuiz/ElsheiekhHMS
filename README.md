@@ -2,7 +2,7 @@
 
 Enterprise Hospital Management System built with **.NET 10, ASP.NET Core, Blazor, Entity Framework Core, SQL Server, and ASP.NET Core Identity**.
 
-> **Current development stage:** Phase 10 — Testing & Hardening complete; Phase 11 Backend Review is next and not started
+> **Current development stage:** Phase 11 — Backend Review complete; backend accepted and frozen for Phase 12 UI
 >
 > **Phase 01:** ✅ Complete
 >
@@ -72,7 +72,9 @@ Enterprise Hospital Management System built with **.NET 10, ASP.NET Core, Blazor
 >
 > **Phase 10:** ✅ Testing & Hardening complete; 10A, 10B, 10C, and 10D complete; 418 tests passing
 >
-> **Next gate:** Phase 11 Backend Review; 07E remains deferred and provider/patient ownership workflows remain blocked
+> **Phase 11:** ✅ Backend Review complete; 11A passed, 11B was not required, and 11C accepted and froze the backend baseline
+>
+> **Next gate:** Phase 12 — Blazor UI; 07E remains deferred and provider/patient ownership workflows remain blocked
 
 ---
 
@@ -394,10 +396,10 @@ Do not skip phases without reviewing the architectural impact.
 | 05 | Identity & Security | ✅ Complete (05A, 05B, 05C, 05C-A, 05D, and 05E) |
 | 06 | DTOs & Validation | ✅ Complete (06A–06D) |
 | 07 | Application Services | ✅ Complete for approved scope (07S, 07A, 07B, 07C-P, 07C, 07D; 07E deferred) |
-| 08 | Business Workflows | ⏳ Not started |
-| 09 | Enterprise Infrastructure | ⏳ Not started |
-| 10 | Testing & Hardening | ⏳ Not started |
-| 11 | Backend Review | ⏳ Not started |
+| 08 | Business Workflows | ✅ Complete (08A, 08B-P, 08B) |
+| 09 | Enterprise Infrastructure | ✅ Complete (09A, 09B) |
+| 10 | Testing & Hardening | ✅ Complete (10A–10D) |
+| 11 | Backend Review | ✅ Complete (11A–11C) |
 | 12 | Blazor UI | ⏳ Not started |
 
 ---
@@ -648,16 +650,14 @@ The following are intentionally postponed.
 
 ## Phase 03+
 
-No HMS domain entities yet:
+The approved backend now contains the Department, Doctor, DoctorSchedule, Patient,
+Appointment, and WalkInQueueEntry domain roots. These product areas remain future
+scope until separately designed and approved:
 
 ```text
-Patient
 Employee
-Doctor
 Nurse
-Department
 Specialty
-Appointment
 Encounter
 Diagnosis
 Admission
@@ -832,15 +832,15 @@ When opening this repository after a break, read this section first.
 
 ```text
 LAST COMPLETED PHASE:
-Phase 10 — Testing & Hardening
+Phase 11 — Backend Review
 
 CURRENT PHASE:
-Phase 10 — Testing & Hardening (complete; 10A, 10B, 10C, and 10D complete; 418 tests passing)
+Phase 11 — Backend Review (complete; 11A review, 11B not required, 11C acceptance and freeze complete)
 
 CURRENT STATUS:
 Phase 04A foundation, 04B scalar mappings, 04C relational metadata, 04D-A environment readiness,
 04D-B0 design-time tooling, 04D-B migration generation/inspection, 04D-C local schema verification,
-04E isolated SQL Server persistence integration tests, 05A Identity foundation, 05B Roles & Authorization, 05C current-user/entity auditing, 05C-A AuditLog foundation, 05D Identity/AuditLog migration and SQL verification, 05E security integration/hardening, 06A–06D DTOs & Validation, 07S allocator infrastructure, 07A Patient Application Service, 07B Department Application Service, 07C-P AppointmentCode allocator infrastructure, 07C Appointment Application Service, 07D Queue Application Service, the Phase 07 closeout, and Phase 08 Business Workflows are complete for the approved scope. Phase 08 includes 08A staff intake/scheduling, 08B-P the durable Appointment↔Queue link, and 08B arrival/queue handoff; no 08C is required. Phase 09A adds built-in request correlation/duration logging scopes and safe completion diagnostics. Phase 09B adds `/health/live` process liveness, `/health/ready` SQL dependency readiness, and preserves `/health` as liveness. Phase 10A authorization and host-security verification, 10B SQL concurrency/atomicity verification, 10C lifecycle/workflow verification, and 10D controlled performance/production-readiness smoke verification are complete; Phase 10 is formally closed with 418 tests passing. Its accepted non-blocking limitations are full production-error/antiforgery host assertions, deterministic application-lock and Phase08B partial-success SQL failure injection, hard local latency assertions, and production certification of PRD performance targets. 07E Doctor/Provider Application Service is explicitly deferred because the Phase06 Doctor/Provider contract family, service contract, Doctor↔ApplicationUser ownership mapping, ownership persistence design, and ownership-aware authorization scope are not approved.
+04E isolated SQL Server persistence integration tests, 05A Identity foundation, 05B Roles & Authorization, 05C current-user/entity auditing, 05C-A AuditLog foundation, 05D Identity/AuditLog migration and SQL verification, 05E security integration/hardening, 06A–06D DTOs & Validation, 07S allocator infrastructure, 07A Patient Application Service, 07B Department Application Service, 07C-P AppointmentCode allocator infrastructure, 07C Appointment Application Service, 07D Queue Application Service, the Phase 07 closeout, and Phase 08 Business Workflows are complete for the approved scope. Phase 08 includes 08A staff intake/scheduling, 08B-P the durable Appointment↔Queue link, and 08B arrival/queue handoff; no 08C is required. Phase 09A adds built-in request correlation/duration logging scopes and safe completion diagnostics. Phase 09B adds `/health/live` process liveness, `/health/ready` SQL dependency readiness, and preserves `/health` as liveness. Phase 10A authorization and host-security verification, 10B SQL concurrency/atomicity verification, 10C lifecycle/workflow verification, and 10D controlled performance/production-readiness smoke verification are complete; Phase 10 is formally closed with 418 tests passing. Phase 11A backend-wide review passed, 11B was not required, and 11C accepted and froze the backend baseline for Phase 12. Its accepted non-blocking limitations are full production-error/antiforgery host assertions, deterministic application-lock and Phase08B partial-success SQL failure injection, hard local latency assertions, and production certification of PRD performance targets. 07E Doctor/Provider Application Service is explicitly deferred because the Phase06 Doctor/Provider contract family, service contract, Doctor↔ApplicationUser ownership mapping, ownership persistence design, and ownership-aware authorization scope are not approved.
 The six approved entity configurations, explicit historical-safe relationships, approved indexes/uniqueness,
 soft-delete filters, three opted-in rowversion mappings, and the Infrastructure migration/snapshot are present.
 Full restore, build, and tests passed (418 tests). The integration fixture uses only the exact
@@ -859,10 +859,10 @@ Event-producing security and business workflows, retention duration, IP/UserAgen
 The 07S migration `AddPhase07AllocatorInfrastructure` is applied exactly once to `ElsheiekhHMS_Dev`; allocator tables and queue uniqueness were physically verified. Patient phone remains non-unique. 07A provides the first approved application service, a narrow EF-free persistence port, bounded projections, stable UserId authorization, and transactional Patient/AuditLog writes. Its two reviewed decisions are that allocator access remains on the narrow persistence port and registration audits target the durable PatientCode before the single save. 07B adds the bounded Department service, the minimal Department search contract, SystemAdministrator-only configuration authorization through the existing `CanConfigureSystem` capability, and transactional Department/AuditLog writes; Department names remain non-unique and reactivation remains out of scope. 07C-P adds the Infrastructure-only UTC year-scoped AppointmentCode allocator; `AddAppointmentCodeAllocator` is applied exactly once to `ElsheiekhHMS_Dev` and its physical schema was verified. 07C adds the EF-free Appointment service, Africa/Kigali civil-time validation, active Patient/Department/Doctor checks, bounded appointment projections, lifecycle orchestration, stable UserId authorization, and transactional Appointment/AuditLog writes. Same Department and scheduled-instant collisions are serialized with a transaction-scoped SQL Server application lock; Cancelled, NoShow, and Completed history does not block a slot. 07D adds the EF-free Queue service, Kigali operational-date calculation, registered-Patient and active-Department checks, atomic ticket allocation through the approved QueueTicket allocator, bounded queue projections, deterministic priority/arrival/sequence ordering, lifecycle orchestration, stable UserId authorization, and transactional Queue/AuditLog writes. Same Patient and Kigali queue-date duplicate-active requests are serialized with a transaction-scoped SQL Server application lock; Completed and Cancelled history does not block a future queue entry. 08A adds the EF-free staff intake orchestration over the existing Patient and Appointment services. It supports existing-Patient scheduling and new-Patient registration followed by scheduling, preserves the registered Patient when appointment scheduling fails, returns the Patient identity for retry, and adds no workflow-level audit event, queue interaction, schema, or ownership behavior. 08B-P adds the nullable restrictive Queue→Appointment relationship, filtered unique appointment link, controlled linked queue creation, and indexed lookup. 08B adds `CheckInAndQueueAsync`, reuses AppointmentService and QueueService, preserves partial-success retry semantics, recovers existing active or historical handoffs idempotently, and adds no cross-service transaction or workflow audit event. Provider-scoped and Patient self-service operations remain deferred. 07E is not implemented: before it can begin, the project must approve Phase06-style Doctor/Provider contracts, service operations, a Doctor↔ApplicationUser relationship, ownership persistence, ownership-aware authorization, any required schema migration, and its tests.
 
 NEXT ACTION:
-Begin the Phase 11 Backend Review gate. Keep 07E provider ownership and Patient self-service deferred until their prerequisites are approved; future clinical, laboratory, billing, inpatient, pharmacy, and notification workflows require separate domain designs.
+Begin Phase 12 Blazor UI using the accepted backend contracts. Keep 07E provider ownership and Patient self-service deferred until their prerequisites are approved; future clinical, laboratory, billing, inpatient, pharmacy, and notification workflows require separate domain designs.
 
 DO NOT:
-Do not implement 07E before its deferred prerequisites are approved and established. Do not begin Phase 11 backend review or Phase 12 UI work before their approved gates.
+Do not implement 07E before its deferred prerequisites are approved and established. Do not change backend behavior merely to simplify Phase 12 UI work; backend authorization and business rules remain authoritative.
 ```
 
 ---

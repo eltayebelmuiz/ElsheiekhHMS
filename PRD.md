@@ -15,10 +15,17 @@
 | **Last Updated** | September 20, 2026 |
 | **Owner / PM** | Eltayeb Elmuiz |
 | **Team Members** | Backend Dev / Frontend Dev / QA / Designer |
-| **Tech Stack** | ASP.NET Core 9 · Blazor Interactive Server · EF Core 9 · SQL Server · ASP.NET Identity |
+| **Tech Stack** | .NET 10 · ASP.NET Core 10 · Blazor Interactive Server · EF Core 10 · SQL Server · ASP.NET Identity |
 | **Repository** | [TBD] |
 | **Git Branch Prefix** | NNN-feature-name |
-| **PRD File Path** | docs/PRD.md |
+| **PRD File Path** | PRD.md |
+
+> **Implementation baseline note:** This Draft PRD describes the broader product
+> vision and future modules. The approved repository baseline currently targets
+> .NET 10/ASP.NET Core 10/EF Core 10 and implements the five canonical roles
+> `SystemAdministrator`, `Administrator`, `Receptionist`, `Provider`, and
+> `Patient`. Additional roles and clinical, billing, laboratory, pharmacy,
+> inpatient, notification, and portal requirements remain future product scope.
 
 ---
 
@@ -111,7 +118,7 @@ The system is considered successfully delivered when all P0 features are live, a
 ### Dependencies
 - Windows Server 2019/2022 available for production deployment
 - SQL Server Express 2019/2022 installed on the server
-- ASP.NET Core 9 Runtime installed on the server
+- ASP.NET Core 10 Runtime installed on the server
 - IIS 10 configured for the application
 - Hospital LAN with stable Ethernet connectivity between workstations and server
 
@@ -595,23 +602,23 @@ As a Cashier, I want to generate an invoice for a patient's visit with all servi
 ## Section 9 — Technical Architecture
 
 ### Frontend
-- **Blazor Interactive Server** (ASP.NET Core 9)
+- **Blazor Interactive Server** (ASP.NET Core 10)
 - SignalR-based real-time UI updates — no page reloads for queue and dashboard
 - Custom CSS system (site.variables.css, site.components.css, site.tables.css) — no Bootstrap dependency
 - Tabler Icons CDN for medical-appropriate iconography
 - Component structure: one folder per module under Components/Pages/
 
 ### Backend
-- **ASP.NET Core 9** application layer
+- **ASP.NET Core 10** application layer
 - Clean layered architecture: Core → Application → Infrastructure → Web
 - Core layer: zero external dependencies — pure domain entities, enums, interfaces, exceptions
 - Application layer: DTOs, service interfaces, validators, use-case implementations
-- Infrastructure layer: EF Core, Identity, repositories, audit service, file storage
+- Infrastructure layer: EF Core, Identity, narrow persistence ports, audit service; file storage remains future scope
 - Web layer: Blazor components only — no business logic, no direct DbContext access
 
 ### Database Architecture
 - **SQL Server Express 2019/2022** (production) / LocalDB (development)
-- EF Core 9 Code-First with Fluent API configuration per entity
+- EF Core 10 Code-First with Fluent API configuration per entity
 - Global soft-delete query filters on all clinical and operational entities
 - Optimistic concurrency (RowVersion) on Patient, Invoice, and Appointment
 - Decimal precision configured: monetary fields at (12,3), vitals at appropriate precision
@@ -620,14 +627,14 @@ As a Cashier, I want to generate an invoice for a patient's visit with all servi
 
 ### Auth & Authorization
 - **ASP.NET Core Identity** with ApplicationUser extending IdentityUser
-- Role-based authorization: 7 roles enforced via [Authorize(Roles = "...")] and policy checks
+- Current approved baseline: five canonical roles enforced through backend policy checks; broader product roles remain future scope
 - Permission-based checks for fine-grained actions (e.g. Patients.Edit.Vitals vs Patients.Edit.Full)
 - Cascading auth state in Blazor via CascadingAuthenticationState
 - Session cookie: 8-hour expiry, sliding renewal, HttpOnly, SameSite=Lax
 
 ### Infrastructure & Deployment
 - **IIS 10** on Windows Server 2019/2022
-- ASP.NET Core 9 Runtime installed as Windows hosting bundle
+- ASP.NET Core 10 Runtime installed as Windows hosting bundle
 - SQL Server Express on same server or dedicated LAN server
 - HTTPS via self-signed or domain certificate (Let's Encrypt if domain available)
 - Automated SQL Server backup via SQL Server Agent or Windows Task Scheduler
