@@ -125,12 +125,14 @@ public sealed class AppointmentServiceTests
         var appointment = NewAppointment();
         appointment.RowVersion = [1, 2, 3];
         var persistence = new FakePersistence { TrackedAppointment = appointment };
+        var audit = new RecordingAuditWriter();
 
-        var result = await CreateService(persistence, new RecordingAuditWriter()).CompleteAsync(new AppointmentActionRequest(7, "AQID"));
+        var result = await CreateService(persistence, audit).CompleteAsync(new AppointmentActionRequest(7, "AQID"));
 
         Assert.False(result.IsSuccess);
         Assert.Equal("appointment.domain_rule", Assert.Single(result.Errors).Code);
         Assert.Equal(0, persistence.SaveChangesCalls);
+        Assert.Empty(audit.Events);
     }
 
     [Fact]

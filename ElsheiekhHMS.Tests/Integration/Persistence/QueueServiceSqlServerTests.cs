@@ -317,6 +317,86 @@ public sealed class QueueServiceSqlServerTests(SqlServerTestDatabaseFixture fixt
         }
     }
 
+    [Fact]
+    public async Task Completed_history_allows_a_new_queue_entry_for_the_same_patient_and_date()
+    {
+        var setup = await CreateRecordsAsync();
+        int doctorId;
+        await using (var seed = fixture.CreateContext(setup.User, setup.Clock))
+        {
+            var doctor = new Doctor(
+                "DR-" + Guid.NewGuid().ToString("N")[..8],
+                "Queue Lifecycle Doctor",
+                "General",
+                false,
+                100m,
+                setup.DepartmentId,
+                NowUtc,
+                setup.User.UserId);
+            seed.Doctors.Add(doctor);
+            await seed.SaveChangesAsync();
+            doctorId = doctor.Id;
+        }
+
+        await using var context = fixture.CreateContext(setup.User, setup.Clock);
+        var service = CreateService(context, setup.User, setup.Clock);
+        var first = await service.AddAsync(new AddWalkInQueueEntryRequest(
+            setup.PatientId, setup.DepartmentId, QueuePriority.Normal, "first"));
+        Assert.True(first.IsSuccess);
+
+        var atNurse = await service.CallToNurseAsync(new QueueEntryActionRequest(
+            first.Value!.Id, first.Value.ConcurrencyToken));
+        var atDoctor = await service.SendToDoctorAsync(new SendToDoctorRequest(
+            first.Value.Id, doctorId, atNurse.Value!.ConcurrencyToken));
+        var completed = await service.CompleteAsync(new QueueEntryActionRequest(
+            first.Value.Id, atDoctor.Value!.ConcurrencyToken));
+        Assert.True(atNurse.IsSuccess);
+        Assert.True(atDoctor.IsSuccess);
+        Assert.True(completed.IsSuccess);
+
+        var replacement = await service.AddAsync(new AddWalkInQueueEntryRequest(
+            setup.PatientId, setup.DepartmentId, QueuePriority.Urgent, "replacement"));
+        Assert.True(replacement.IsSuccess, string.Join(";", replacement.Errors.Select(error => error.Code)));
+        Assert.NotEqual(first.Value.QueueNumber, replacement.Value!.QueueNumber);
+
+        await using var verification = fixture.CreateContext();
+        var entries = await verification.WalkInQueueEntries
+            .Where(entry => entry.PatientId == setup.PatientId && entry.QueueDate == new DateOnly(2026, 9, 23))
+            .OrderBy(entry => entry.Id)
+            .ToListAsync();
+        Assert.Equal(2, entries.Count);
+        Assert.Equal(QueueStatus.Completed, entries[0].Status);
+        Assert.Equal(QueueStatus.Waiting, entries[1].Status);
+        Assert.Equal(1, await verification.AuditLogs.CountAsync(log =>
+            log.Action == AuditActions.QueueEntryCompleted &&
+            log.TargetId == entries[0].QueueNumber));
+        Assert.Equal(1, await verification.AuditLogs.CountAsync(log =>
+            log.Action == AuditActions.QueueEntryCreated &&
+            log.TargetId == entries[1].QueueNumber));
+    }
+
+    [Fact]
+    public async Task Queue_date_follows_Kigali_calendar_on_both_sides_of_utc_midnight()
+    {
+        var before = await CreateRecordsAsync(new DateTimeOffset(2026, 9, 22, 21, 59, 0, TimeSpan.Zero));
+        await using (var beforeContext = fixture.CreateContext(before.User, before.Clock))
+        {
+            var result = await CreateService(beforeContext, before.User, before.Clock).AddAsync(
+                new AddWalkInQueueEntryRequest(before.PatientId, before.DepartmentId, QueuePriority.Normal, null));
+            Assert.True(result.IsSuccess);
+            Assert.Equal(new DateOnly(2026, 9, 22), result.Value!.QueueDate);
+        }
+
+        var after = await CreateRecordsAsync(new DateTimeOffset(2026, 9, 22, 22, 0, 0, TimeSpan.Zero));
+        await using (var afterContext = fixture.CreateContext(after.User, after.Clock))
+        {
+            var result = await CreateService(afterContext, after.User, after.Clock).AddAsync(
+                new AddWalkInQueueEntryRequest(after.PatientId, after.DepartmentId, QueuePriority.Normal, null));
+            Assert.True(result.IsSuccess);
+            Assert.Equal(new DateOnly(2026, 9, 23), result.Value!.QueueDate);
+        }
+    }
+
     private QueueService CreateService(
         ElsheiekhHmsDbContext context,
         ICurrentUser user,
@@ -326,12 +406,13 @@ public sealed class QueueServiceSqlServerTests(SqlServerTestDatabaseFixture fixt
         user,
         clock);
 
-    private async Task<SetupRecords> CreateRecordsAsync()
+    private async Task<SetupRecords> CreateRecordsAsync(DateTimeOffset? nowOverride = null)
     {
         var user = new TestCurrentUser("queue-service-user", [RoleNames.Receptionist]);
-        var clock = new FixedTimeProvider(NowUtc);
+        var now = nowOverride ?? NowUtc;
+        var clock = new FixedTimeProvider(now);
         await using var context = fixture.CreateContext(user, clock);
-        var department = new Department("Queue " + Guid.NewGuid().ToString("N")[..8], null, null, NowUtc, user.UserId);
+        var department = new Department("Queue " + Guid.NewGuid().ToString("N")[..8], null, null, now, user.UserId);
         context.Departments.Add(department);
         await context.SaveChangesAsync();
 
@@ -339,7 +420,7 @@ public sealed class QueueServiceSqlServerTests(SqlServerTestDatabaseFixture fixt
             $"PT-2026-{Random.Shared.Next(1, 100000):D5}", "Amina", "M", null, "Hassan",
             new DateOnly(1990, 1, 1), Gender.Female, BloodGroup.OPositive, null, null,
             "0900" + Guid.NewGuid().ToString("N")[..6], "Main street", "City", null, null, null, null,
-            new DateOnly(2026, 9, 22), NowUtc, user.UserId);
+            new DateOnly(2026, 9, 22), now, user.UserId);
         context.Patients.Add(patient);
         await context.SaveChangesAsync();
         return new SetupRecords(department.Id, patient.Id, user, clock);

@@ -115,6 +115,7 @@ public sealed class QueueServiceTests
         var invalid = await service.CompleteAsync(Action("AQID"));
         Assert.Equal("queue.domain_rule", Assert.Single(invalid.Errors).Code);
         Assert.Equal(3, persistence.SaveChangesCalls);
+        Assert.Equal(3, audit.Events.Count);
     }
 
     [Fact]

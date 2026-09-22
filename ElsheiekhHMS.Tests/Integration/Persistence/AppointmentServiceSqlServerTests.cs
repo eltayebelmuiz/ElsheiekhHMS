@@ -117,6 +117,122 @@ public sealed class AppointmentServiceSqlServerTests(SqlServerTestDatabaseFixtur
             log.TargetId == winner.AppointmentCode));
     }
 
+    [Fact]
+    public async Task No_show_check_in_and_complete_persist_lifecycle_state_and_audits()
+    {
+        var setup = await CreateRecordsAsync();
+        await using var context = fixture.CreateContext(setup.User, setup.Clock);
+        var service = CreateService(context, setup.User, setup.Clock);
+
+        var noShow = await service.CreateAsync(Request(
+            setup.PatientId, setup.DoctorId, setup.DepartmentId,
+            new DateOnly(2026, 9, 24), new TimeOnly(9, 0)));
+        var checkedIn = await service.CreateAsync(Request(
+            setup.PatientId, setup.DoctorId, setup.DepartmentId,
+            new DateOnly(2026, 9, 24), new TimeOnly(10, 0)));
+        Assert.True(noShow.IsSuccess);
+        Assert.True(checkedIn.IsSuccess);
+
+        var noShowResult = await service.MarkNoShowAsync(new AppointmentActionRequest(
+            noShow.Value!.Id, noShow.Value.ConcurrencyToken));
+        var checkInResult = await service.CheckInAsync(new AppointmentActionRequest(
+            checkedIn.Value!.Id, checkedIn.Value.ConcurrencyToken));
+        Assert.True(noShowResult.IsSuccess);
+        Assert.True(checkInResult.IsSuccess);
+        Assert.Equal(AppointmentStatus.NoShow, noShowResult.Value!.Status);
+        Assert.Equal(AppointmentStatus.CheckedIn, checkInResult.Value!.Status);
+
+        await using (var checkedInVerification = fixture.CreateContext())
+        {
+            var persisted = await checkedInVerification.Appointments.SingleAsync(item => item.Id == checkedIn.Value.Id);
+            Assert.Equal(AppointmentStatus.CheckedIn, persisted.Status);
+            Assert.Null(persisted.CancellationReason);
+            Assert.Null(persisted.CancelledAt);
+            Assert.Equal(1, await checkedInVerification.AuditLogs.CountAsync(log =>
+                log.Action == AuditActions.AppointmentCheckedIn &&
+                log.TargetId == persisted.AppointmentCode &&
+                log.ActorUserId == setup.User.UserId));
+        }
+
+        var completed = await service.CompleteAsync(new AppointmentActionRequest(
+            checkInResult.Value.Id, checkInResult.Value.ConcurrencyToken));
+        Assert.True(completed.IsSuccess);
+        Assert.Equal(AppointmentStatus.Completed, completed.Value!.Status);
+
+        await using var verification = fixture.CreateContext();
+        var noShowPersisted = await verification.Appointments.SingleAsync(item => item.Id == noShow.Value.Id);
+        var completedPersisted = await verification.Appointments.SingleAsync(item => item.Id == checkedIn.Value.Id);
+        Assert.Equal(AppointmentStatus.NoShow, noShowPersisted.Status);
+        Assert.Equal(AppointmentStatus.Completed, completedPersisted.Status);
+        Assert.Equal(1, await verification.AuditLogs.CountAsync(log =>
+            log.Action == AuditActions.AppointmentNoShow &&
+            log.TargetId == noShowPersisted.AppointmentCode &&
+            log.ActorUserId == setup.User.UserId));
+        Assert.Equal(1, await verification.AuditLogs.CountAsync(log =>
+            log.Action == AuditActions.AppointmentCompleted &&
+            log.TargetId == completedPersisted.AppointmentCode &&
+            log.ActorUserId == setup.User.UserId));
+        Assert.False(await verification.WalkInQueueEntries.AnyAsync(entry =>
+            entry.PatientId == setup.PatientId && entry.AppointmentId == checkedIn.Value.Id));
+    }
+
+    [Fact]
+    public async Task No_show_and_completed_history_allow_physical_slot_reuse()
+    {
+        var setup = await CreateRecordsAsync();
+        await using var context = fixture.CreateContext(setup.User, setup.Clock);
+        var service = CreateService(context, setup.User, setup.Clock);
+
+        var noShow = await service.CreateAsync(Request(
+            setup.PatientId, setup.DoctorId, setup.DepartmentId,
+            new DateOnly(2026, 9, 25), new TimeOnly(9, 0)));
+        Assert.True(noShow.IsSuccess);
+        var noShowTransition = await service.MarkNoShowAsync(new AppointmentActionRequest(
+            noShow.Value!.Id, noShow.Value.ConcurrencyToken));
+        Assert.True(noShowTransition.IsSuccess);
+
+        var noShowReplacement = await service.CreateAsync(Request(
+            setup.PatientId, setup.DoctorId, setup.DepartmentId,
+            new DateOnly(2026, 9, 25), new TimeOnly(9, 0)));
+        Assert.True(noShowReplacement.IsSuccess);
+
+        var completed = await service.CreateAsync(Request(
+            setup.PatientId, setup.DoctorId, setup.DepartmentId,
+            new DateOnly(2026, 9, 25), new TimeOnly(10, 0)));
+        Assert.True(completed.IsSuccess);
+        var checkedIn = await service.CheckInAsync(new AppointmentActionRequest(
+            completed.Value!.Id, completed.Value.ConcurrencyToken));
+        var completedResult = await service.CompleteAsync(new AppointmentActionRequest(
+            completed.Value.Id, checkedIn.Value!.ConcurrencyToken));
+        Assert.True(checkedIn.IsSuccess);
+        Assert.True(completedResult.IsSuccess);
+
+        var completedReplacement = await service.CreateAsync(Request(
+            setup.PatientId, setup.DoctorId, setup.DepartmentId,
+            new DateOnly(2026, 9, 25), new TimeOnly(10, 0)));
+        Assert.True(completedReplacement.IsSuccess);
+
+        await using var verification = fixture.CreateContext();
+        var sameSlot = await verification.Appointments
+            .Where(item => item.DepartmentId == setup.DepartmentId &&
+                           item.ScheduledDate == new DateOnly(2026, 9, 25))
+            .OrderBy(item => item.ScheduledTime)
+            .ToListAsync();
+        Assert.Equal(4, sameSlot.Count);
+        Assert.Equal(1, sameSlot.Count(item => item.Status == AppointmentStatus.NoShow));
+        Assert.Equal(1, sameSlot.Count(item => item.Status == AppointmentStatus.Completed));
+        Assert.Equal(2, sameSlot.Count(item => item.Status == AppointmentStatus.Scheduled));
+        Assert.Equal(4, await verification.AuditLogs.CountAsync(log =>
+            log.Action == AuditActions.AppointmentScheduled &&
+            sameSlot.Select(item => item.AppointmentCode).Contains(log.TargetId!)));
+        Assert.Equal(1, await verification.AuditLogs.CountAsync(log =>
+            log.Action == AuditActions.AppointmentNoShow &&
+            log.TargetId == noShow.Value.AppointmentCode));
+        Assert.Equal(1, await verification.AuditLogs.CountAsync(log =>
+            log.Action == AuditActions.AppointmentCompleted &&
+            log.TargetId == completed.Value.AppointmentCode));
+    }
+
     private AppointmentService CreateService(
         ElsheiekhHmsDbContext context,
         ICurrentUser user,
@@ -126,12 +242,17 @@ public sealed class AppointmentServiceSqlServerTests(SqlServerTestDatabaseFixtur
         user,
         clock);
 
-    private static CreateAppointmentRequest Request(int patientId, int doctorId, int departmentId) => new(
+    private static CreateAppointmentRequest Request(
+        int patientId,
+        int doctorId,
+        int departmentId,
+        DateOnly? scheduledDate = null,
+        TimeOnly? scheduledTime = null) => new(
         patientId,
         doctorId,
         departmentId,
-        new DateOnly(2026, 9, 23),
-        new TimeOnly(9, 0),
+        scheduledDate ?? new DateOnly(2026, 9, 23),
+        scheduledTime ?? new TimeOnly(9, 0),
         AppointmentType.General,
         "Routine visit");
 
