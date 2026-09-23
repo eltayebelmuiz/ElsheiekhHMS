@@ -3,13 +3,13 @@
 **Version:** 1.0.0
 **Date:** September 20, 2026
 **Owner:** Eltayeb Elmuiz
-**Status:** Phases 01–11 complete; Phase 12A–12H are complete and the frontend baseline is frozen; 07E Doctor/Provider Application Service remains deferred
+**Status:** Phases 01–12 and Phase 13A–13D are complete for their approved scopes; 07E Doctor/Provider Application Service remains deferred; Phase 13E is next
 
 ---
 
 ## 1. Document Purpose
 
-This is the authoritative 12-phase implementation roadmap for the Elshiekh Hospital Management System (ElsheiekhHMS). It consolidates every architectural decision, implementation rule, correction, and plan established across the full development history of this project.
+This is the authoritative implementation roadmap for the Elshiekh Hospital Management System (ElsheiekhHMS). It consolidates accepted architectural decisions, implementation rules, corrections, and the current clinical sequence. Historical examples in later sections describe product direction unless the current checkpoint marks them implemented.
 
 ### How to use this document
 
@@ -20,6 +20,21 @@ This is the authoritative 12-phase implementation roadmap for the Elshiekh Hospi
 **New team members:** Read Sections 2–6 first for context, then jump to the current phase.
 
 **This document supersedes all earlier partial specifications.** Where any other file in the repository contradicts this roadmap, this roadmap reflects the final decision.
+
+### Current authoritative checkpoint
+
+The repository is at commit `2fc6b2bbc6ff891556759fe6807e338477b22c35` on
+`main`, with 462 passing tests. Phase 13A clinical architecture, 13B Encounter
+domain modeling, 13C Provider↔Doctor ownership, and 13D Encounter persistence
+are complete. The latest migration is `AddEncounterPersistence`; the persisted
+table is `dbo.Encounters`. Encounter Application contracts, services, workflow,
+clinical extensions, and UI do not yet exist. The next approved milestone is
+Phase 13E — Encounter Application Contracts & Validation.
+
+The commercial product vision remains broader than the implemented baseline.
+Visit, HospitalService, ServiceRequest, billing, triage/vitals, laboratory,
+pharmacy, and Staff/Attendance architecture require their own requirements and
+design decisions before implementation.
 
 ---
 
@@ -258,9 +273,49 @@ If business rules exist only in Razor components or transport endpoints, they ca
 | 09 | Enterprise Infrastructure | Built-in request observability and SQL Server readiness | ✅ Complete (09A–09B) | Phase 10 review |
 | 10 | Testing & Hardening | Unit, integration, security, performance | ✅ Complete (10A–10D) | Hardening evidence |
 | 11 | Backend Review | Full backend gate before UI | ✅ Complete (11A–11C) | Accepted and frozen backend baseline |
-| 12 | Blazor UI | HMS presentation and workflows | ⏳ Not started | Approved Blazor UI |
+| 12 | Blazor UI | HMS presentation and workflows | ✅ Complete (12A–12H) | Frozen operational Blazor UI |
+| 13A–13D | Clinical Encounter foundation | Architecture, domain, provider ownership, persistence | ✅ Complete | Persisted `dbo.Encounters` |
+| 13E | Encounter Application Contracts & Validation | Bounded EF-free contracts and validators | ⏭ Next | Application contract boundary |
+| 13F–13J | Clinical workflow and acceptance | Start/complete, approved extensions, UI, hardening, acceptance | Planned | Separately gated clinical milestones |
 
 ---
+
+## 7A. Current Phase 13 clinical sequence
+
+Phase 13A–13D are complete and verified. The current next milestone is **13E —
+Encounter Application Contracts & Validation**: bounded DTOs, requests,
+validators, a narrow persistence port, and `ServiceResult` errors. It must not
+add EF references to Application, change Core, modify `ApplicationUser`, alter
+the schema, create a migration, or begin the Encounter workflow.
+
+The accepted sequence is:
+
+```text
+13D Encounter persistence
+  -> 13E Application contracts/validation
+  -> 13F Encounter service + explicit Queue->Encounter start/complete
+  -> 13G approved clinical extensions
+  -> 13H Encounter UI
+  -> 13I clinical testing/hardening
+  -> 13J final clinical acceptance
+```
+
+Before broader commercial service-driven work, a separate **Visit /
+HospitalService / ServiceRequest Architecture Gate** must resolve:
+
+- whether Visit is first-class and what creates/closes it;
+- appointment and walk-in relationships;
+- the number and lifecycle of ServiceRequests and Encounters;
+- configurable service policy, payment authorization, and triage requirements;
+- service-to-queue/routing semantics.
+
+This gate is design work only. It does not create those concepts prematurely.
+
+Detailed phase sections below retain historical planning examples for
+traceability. When they mention absent types such as `MedicalRecord`,
+`ApplicationUserId` on Doctor, or future billing/laboratory models, those are
+not current implementation claims; use the checkpoint above and actual source
+as the authority.
 
 ## PHASE 01 — Solution & Architecture
 
@@ -1827,11 +1882,11 @@ public async Task<ServiceResult<T>> DoSomethingAsync(Dto dto, string actorEmail)
 ## 16. Current Project Checkpoint
 
 ```
-Last completed phase:  Phase 12H — Final UI acceptance and frontend freeze
-Current phase:         Phase 12 — Blazor UI (12H complete; frontend baseline frozen)
-Next phase:            Roadmap decision after the frozen Phase 12 frontend
-Next action:           Review the frozen frontend baseline before selecting the next approved roadmap phase; 07E and ownership-dependent workflows remain explicitly deferred
-Known blockers:        None
+Last completed phase:  Phase 13D — Encounter persistence and migration
+Current phase:         Phase 13 — Clinical Encounter foundation
+Next phase:            Phase 13E — Encounter Application Contracts & Validation
+Next action:           Approve and implement only the bounded EF-free Encounter contract/validation milestone; do not start 13F or broader service architecture
+Known blockers:        None for 13E; Visit/HospitalService/ServiceRequest semantics remain a future architecture gate
 Important notes:
   - The current working codebase is the five-project .NET 10 ElsheiekhHMS solution
   - The Web project uses the Blazor Interactive Server host
@@ -1849,6 +1904,9 @@ Important notes:
   - 05D additive Identity/AuditLog migration, development/integration SQL verification, and pending-model suppression reassessment are complete
   - AuditLog event-producing workflows, retention duration, IP/UserAgent capture, clinical/read auditing, and UI remain deferred after 05E security integration
   - Phase 12G dashboard metrics use only bounded today queries through IAppointmentService and IQueueService; Phase 12H accepted and froze the frontend baseline after local anonymous browser verification
+  - Phase 13A–13D are complete; AddEncounterPersistence created and verified dbo.Encounters; the current full suite is 462 tests
+  - Encounter Application contracts, service/workflow, clinical extensions, and UI remain deferred to 13E–13H
+  - Visit, HospitalService, and ServiceRequest require a separate architecture gate before broader service-driven workflows
   - All CSS in wwwroot/css/ split into 8 files
   - site.js is 1389 lines including EntTable and PS_init engines
 ```

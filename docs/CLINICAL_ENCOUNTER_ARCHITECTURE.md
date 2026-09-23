@@ -1,14 +1,16 @@
 # Clinical Encounter Architecture
 
-Status: Phase 13C provider ownership foundation complete; no clinical production functionality is implemented.
+Status: Phase 13D Encounter persistence complete; Encounter application contracts,
+clinical workflow, extensions, and UI are not yet implemented.
 
 ## 1. Purpose
 
-This document defines the minimum safe clinical boundary that can follow the frozen operational
-baseline. It records evidence, proposed Encounter semantics, authorization prerequisites, and a
-sequenced Phase 13 roadmap. Phase13C has implemented the approved provider ownership mapping and
-resolution foundation; it does not authorize or implement an Encounter, clinical child records,
-Encounter persistence mapping, migration, clinical service, validator, or UI.
+This document defines the minimum safe clinical boundary that follows the frozen operational
+baseline. It records verified Encounter evidence, accepted semantics, authorization prerequisites,
+and the sequenced Phase 13 roadmap. Phase13B established the Core Encounter model, Phase13C
+implemented the approved Provider↔Doctor ownership mapping, and Phase13D implemented and verified
+Encounter persistence. No Encounter application contract, clinical service, clinical child record,
+or UI has been implemented.
 
 Source code and project files are authoritative. Accepted source tests and approved specifications
 follow them; historical planning examples in DEVELOPMENT_ROADMAP.md are not source evidence when
@@ -16,15 +18,16 @@ they describe models that are absent from the current checkout.
 
 ## 2. Current HMS baseline
 
-The repository has completed Phase 12H and Phase13C. The backend and frontend baselines were
-accepted and frozen before the clinical work; the current verified automated suite is 447 passing
-tests.
+The repository has completed Phase 12H and Phase13D. The backend and frontend baselines were
+accepted and frozen before clinical workflow work; the current verified automated suite is 462
+passing tests.
 The current operational path is:
 
 Patient -> Appointment or walk-in Queue -> appointment arrival/check-in handoff -> Queue operations
 
-The current system stops at operational queue history. It has no clinical Encounter or clinical
-authoring workflow. Patient self-service and provider-scoped clinical authoring remain deferred.
+The current system has persisted Encounter history but stops before clinical authoring. Encounter
+application contracts, resource-level clinical authorization, start/complete workflow, Patient
+self-service, and Provider-scoped clinical authoring remain deferred.
 
 ## 3. Existing relevant domain inventory
 
@@ -48,8 +51,22 @@ authoring workflow. Patient self-service and provider-scoped clinical authoring 
   concurrency. AuditLog is an Infrastructure append-only persistence record and is not a Core
   entity.
 
-No Encounter, VitalSigns, Diagnosis, ClinicalNote, Prescription, Medication, LabOrder,
-Radiology, or Billing domain type exists.
+Encounter exists in Core and persistence. No VitalSigns, Diagnosis, ClinicalNote, Prescription,
+Medication, LabOrder, Radiology, Billing, Visit, HospitalService, or ServiceRequest domain type
+exists.
+
+## 4A. Encounter persistence status
+
+Phase 13D is complete. `ElsheiekhHmsDbContext.Encounters` maps to
+`dbo.Encounters` through `EncounterConfiguration`, and migration
+`20260923140334_AddEncounterPersistence` (`AddEncounterPersistence`) is applied
+to the approved development database and verified against the guarded isolated
+SQL Server test database. The table contains required `PatientId`,
+`DepartmentId`, `DoctorId`, and `QueueEntryId`; `QueueEntryId` has a unique
+index; `RowVersion` is SQL `rowversion`; and all four foreign keys use
+restrictive/no-action delete behavior. `AppointmentId` and `ApplicationUserId`
+are absent. No soft-delete columns, clinical child tables, or billing columns
+were introduced. The current full test baseline is 462 passing tests.
 
 ## 4. Existing Doctor/Provider model
 
@@ -363,10 +380,11 @@ designed and approved.
 
 ## 34. Open decisions
 
-These are non-blocking for Phase 13B domain-model review but must be closed before clinical
-authoring:
+These are non-blocking for Phase 13E contract work but must be closed before the
+corresponding clinical authoring or broader workflow:
 
-- approve the exact Infrastructure Doctor<->ApplicationUser mapping and reassignment lifecycle;
+- the Infrastructure Doctor<->ApplicationUser mapping and administrative reassignment lifecycle
+  are resolved by Phase 13C; future changes require a new decision;
 - approve whether the first clinical extension is vitals, a minimal note, or neither;
 - define amendment/correction policy for completed records;
 - confirm whether an Encounter operational code is needed;
@@ -380,8 +398,9 @@ authoring:
 - 13C — Provider Ownership & Clinical Authorization: Infrastructure mapping, administrative
   assignment/unassignment, active-account resolution, ownership audit events, and migration are
   complete; clinical resource checks remain part of later clinical services.
-- 13D — Encounter Persistence & Migration: DbSet/configuration/FKs/indexes/RowVersion and an
-  additive migration after 13B/13C approval; verify isolated and development targets safely.
+- 13D — Encounter Persistence & Migration: **complete**. DbSet/configuration/FKs/indexes/RowVersion,
+  additive `AddEncounterPersistence`, isolated SQL verification, and development target migration
+  are complete.
 - 13E — Encounter Application Contracts & Validation: bounded DTOs, requests, validators,
   persistence port, and ServiceResult errors; no EF in Application.
 - 13F — Encounter Service & Queue Start Workflow: explicit Start/Complete with one-save
@@ -394,7 +413,7 @@ authoring:
 - 13J — Final Clinical Acceptance: documentation, Graphify if structural changes require it,
   freeze, and checkpoint.
 
-## 36. GO / NO-GO recommendation for Phase13B
+## 36. Historical GO / NO-GO recommendation for Phase13B
 
 GO for Phase13B domain-model design/implementation only. Encounter definition, Queue
 provenance, lifecycle, boundaries, and initial clinical scope are sufficiently bounded. NO-GO
@@ -431,12 +450,43 @@ The proposed initial Encounter is a non-soft-deletable clinical record with:
 - stable audit metadata and separate clinical author DoctorId semantics;
 - RowVersion concurrency token.
 
-The Encounter model remains a proposal only. Phase13C provider ownership code and EF mapping exist,
-but no Encounter persistence mapping exists.
+The Encounter model and persistence mapping are implemented and accepted. Phase13C provider
+ownership code and Phase13D EF mapping/migration exist; application contracts, clinical resource
+checks, workflow, and UI remain future gates.
 
 ## Final discovery decision
 
-There are no Critical architecture ambiguities blocking the completed Phase13B model or Phase13C
-ownership foundation. Provider ownership is now available as a prerequisite, but authenticated
-clinical authoring and Start Encounter remain blocked until Encounter persistence, resource checks,
-and workflow contracts are separately approved. Phase13C does not add clinical workflow behavior.
+There are no Critical architecture ambiguities blocking Phase13E contract work. Provider ownership
+and Encounter persistence are available as prerequisites, but authenticated clinical authoring and
+Start Encounter remain blocked until resource checks and workflow contracts are separately approved.
+Start Encounter must not complete Queue or Appointment. Complete Encounter must not complete Queue,
+Appointment, or billing. Visit and ServiceRequest semantics remain unapproved future architecture
+work.
+
+## Future compatibility boundary
+
+The current Encounter is expected to remain usable in a future service-driven
+architecture such as:
+
+```text
+Visit
+  -> ServiceRequest
+  -> authorization/payment when required
+  -> appropriate routing/queue
+  -> Encounter when consultation is required
+```
+
+Visit and ServiceRequest semantics are not yet approved. They must be added
+around the current Encounter provenance rather than by adding speculative
+`VisitId` or `ServiceRequestId` columns. Queue and Appointment remain distinct
+from Encounter, and Encounter start/completion do not cross-complete either
+operational record.
+
+## 37. Current Phase13E gate
+
+GO for Phase13E Encounter Application Contracts & Validation. The persisted
+model and Provider ownership prerequisite are present; the milestone is bounded
+to EF-free Application contracts, validators, a narrow persistence port, and
+ServiceResult errors. NO-GO for 13F clinical mutation workflow until resource
+authorization, actor/Doctor separation, concurrency handling, and one-save
+audit atomicity are represented in approved contracts.

@@ -27,6 +27,32 @@
 > `Patient`. Additional roles and clinical, billing, laboratory, pharmacy,
 > inpatient, notification, and portal requirements remain future product scope.
 
+### Current product foundation versus target direction
+
+This document is the product requirements document. It describes the commercial
+direction and requirements to resolve; it does not claim that every listed module
+is implemented. The verified repository foundation currently includes Patient,
+Department, Doctor, Appointment, operational Queue, Identity/security, audit
+infrastructure, Provider↔Doctor ownership, the Blazor operational baseline, and
+persisted clinical Encounter provenance. Encounter application contracts,
+clinical workflows, and clinical extensions are not yet implemented.
+
+The target product remains flexible: a patient may have a consultation-only
+journey, a lab-only journey, a consultation that orders laboratory work, or
+another directly permitted service. Do not encode every patient as
+`Reception → Nurse → Doctor → Lab → Pharmacy`. Patient, Appointment, future
+Visit, Queue, Encounter, and future ServiceRequest are distinct concepts.
+
+Visit, HospitalService, and ServiceRequest semantics are not yet approved. Their
+creation/closure rules, service policies, payment authorization boundary,
+triage requirements, and relationship to queues and Encounters must be designed
+before implementation. Billing, split payment using multiple Payment records,
+trusted digital-payment verification, time-specific vitals, clinical notes,
+diagnosis, laboratory/radiology, prescription/pharmacy, Staff/Attendance,
+notifications, reporting, and configuration remain target capabilities unless a
+later approved phase marks them implemented. This PRD deliberately does not
+freeze their EF schema prematurely.
+
 ---
 
 ## Section 2 — Problem & Purpose

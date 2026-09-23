@@ -1112,3 +1112,56 @@ browser coverage, screenshot archiving, and production SLA measurement remain
 accepted external or operational limitations. The frontend baseline is frozen
 in `docs/UI_PHASE12_ACCEPTANCE.md`; backend projects, contracts, schema,
 migrations, snapshots, and packages remain unchanged.
+
+## ADR-038 — Phase 13D Encounter persistence
+
+**Status:** Complete
+**Phase:** 13D
+
+### Decision
+
+Persist the accepted Core `Encounter` as `dbo.Encounters` through
+`ElsheiekhHmsDbContext` and the additive `AddEncounterPersistence` migration.
+The table stores required immutable PatientId, DepartmentId, DoctorId, and
+QueueEntryId provenance, InProgress/Completed status, UTC timestamps, audit
+metadata, and SQL rowversion concurrency. QueueEntryId is unique. All four
+foreign keys use restrictive/no-action delete behavior.
+
+### Consequences
+
+Encounter persistence does not add AppointmentId, VisitId, ServiceRequestId,
+ApplicationUserId, soft-delete fields, clinical child records, billing fields,
+or UI. Encounter remains separate from Appointment and Queue. Encounter start
+and completion are not implemented and must not complete Queue or Appointment.
+The migration and model snapshot are forward-only; old migrations remain
+immutable. Phase 13D was verified with isolated SQL tests, development-database
+migration checks, a clean pending-model check, and 462 passing tests.
+
+## ADR-039 — Phase 13E boundary and future service architecture gate
+
+**Status:** Accepted direction; implementation pending
+**Phase:** 13E and later
+
+### Decision
+
+The next milestone is Phase 13E — Encounter Application Contracts & Validation:
+bounded EF-free DTOs, requests, validators, a narrow persistence port, and
+ServiceResult errors over the existing Encounter model. Phase 13E does not
+change Core, ApplicationUser, schema, migrations, or the database, and does not
+start the clinical workflow.
+
+A separate Visit/HospitalService/ServiceRequest architecture gate must precede
+broader service-driven workflows. It must resolve Visit creation/closure,
+appointment and walk-in relationships, ServiceRequest and Encounter cardinality,
+service policy, payment authorization, triage requirements, and queue/routing
+semantics from product requirements. The commercial product vision does not
+authorize speculative entities or schema.
+
+### Consequences
+
+The current Encounter foundation remains intact and can participate later in a
+service-driven flow without direct speculative VisitId or ServiceRequestId
+columns. Provider ownership mapping remains distinct from Identity, stable
+Identity UserId remains the audit actor, and DoctorId remains clinical
+responsibility. Billing, triage/vitals, laboratory, pharmacy, and clinical
+extensions remain separately designed and approved scopes.
