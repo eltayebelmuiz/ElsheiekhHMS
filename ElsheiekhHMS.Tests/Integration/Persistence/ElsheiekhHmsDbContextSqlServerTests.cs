@@ -26,6 +26,7 @@ public sealed class ElsheiekhHmsDbContextSqlServerTests(
         Assert.Contains("20260921111137_InitialCreate", applied);
         Assert.Contains("20260921182651_AddPhase05IdentityAndAuditLog", applied);
         Assert.Contains("20260923133220_AddProviderOwnership", applied);
+        Assert.Contains("20260923140334_AddEncounterPersistence", applied);
         Assert.Empty(await context.Database.GetPendingMigrationsAsync());
     }
 

@@ -11,12 +11,12 @@
 <footer>Architectural index, not authoritative source. Check freshness with <code>tools/graphify.ps1 -Check</code> before relying on this snapshot. No network requests or external libraries.</footer>
 <script id="graph-data" type="application/json">{
   "schemaVersion": "1.0",
-  "generatedAtUtc": "2026-09-23T13:45:12.8108650\u002B00:00",
-  "gitCommit": "eb92377777230fa378e4b7be095f2d7fa170b284",
+  "generatedAtUtc": "2026-09-23T14:10:03.0259694\u002B00:00",
+  "gitCommit": "c1284dec9e289c320de223acd1cf5bb655a99800",
   "gitBranch": "main",
   "workingTreeDirty": true,
-  "gitStatusAtGeneration": "M ElsheiekhHMS.Application/Common/Auditing/AuditActions.cs\n M ElsheiekhHMS.Infrastructure/Development/DevelopmentDataSeeder.cs\n M ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs\n M ElsheiekhHMS.Infrastructure/Migrations/ElsheiekhHmsDbContextModelSnapshot.cs\n M ElsheiekhHMS.Infrastructure/Persistence/ElsheiekhHmsDbContext.cs\n M ElsheiekhHMS.Tests/Integration/Persistence/ElsheiekhHmsDbContextSqlServerTests.cs\n M ElsheiekhHMS.Tests/Unit/Application/Auditing/AuditVocabularyTests.cs\n M README.md\n M docs/CLINICAL_ENCOUNTER_ARCHITECTURE.md\n M graphify-out/GRAPH_REPORT.md\n M graphify-out/graph.html\n M graphify-out/graph.json\n?? ElsheiekhHMS.Application/Clinical/ProviderOwnership/Contracts/AssignProviderOwnershipRequest.cs\n?? ElsheiekhHMS.Application/Clinical/ProviderOwnership/Contracts/ProviderOwnershipDto.cs\n?? ElsheiekhHMS.Application/Clinical/ProviderOwnership/IProviderOwnershipService.cs\n?? ElsheiekhHMS.Application/Clinical/ProviderOwnership/Persistence/DoctorStatusSnapshot.cs\n?? ElsheiekhHMS.Application/Clinical/ProviderOwnership/Persistence/IProviderOwnershipPersistence.cs\n?? ElsheiekhHMS.Application/Clinical/ProviderOwnership/Persistence/ProviderAccountStatus.cs\n?? ElsheiekhHMS.Application/Clinical/ProviderOwnership/Persistence/ProviderOwnershipConflictException.cs\n?? ElsheiekhHMS.Application/Clinical/ProviderOwnership/ProviderOwnershipService.cs\n?? ElsheiekhHMS.Infrastructure/Identity/Configurations/DoctorApplicationUserLinkConfiguration.cs\n?? ElsheiekhHMS.Infrastructure/Identity/Entities/DoctorApplicationUserLink.cs\n?? ElsheiekhHMS.Infrastructure/Identity/ProviderOwnershipPersistence.cs\n?? ElsheiekhHMS.Infrastructure/Migrations/20260923133220_AddProviderOwnership.Designer.cs\n?? ElsheiekhHMS.Infrastructure/Migrations/20260923133220_AddProviderOwnership.cs\n?? ElsheiekhHMS.Tests/Integration/Persistence/ProviderOwnershipSqlServerTests.cs\n?? ElsheiekhHMS.Tests/Unit/Application/Clinical/ProviderOwnershipServiceTests.cs",
-  "sourceFingerprint": "8e0911e27b72cc8507e14a978f2699e9433276f17d83f820551d9ac7f06fb958",
+  "gitStatusAtGeneration": "M ElsheiekhHMS.Infrastructure/Migrations/ElsheiekhHmsDbContextModelSnapshot.cs\n M ElsheiekhHMS.Infrastructure/Persistence/ElsheiekhHmsDbContext.cs\n M ElsheiekhHMS.Tests/Integration/Persistence/ElsheiekhHmsDbContextSqlServerTests.cs\n M ElsheiekhHMS.Tests/Unit/Infrastructure/ElsheiekhHmsDbContextTests.cs\n?? ElsheiekhHMS.Infrastructure/Configurations/Entities/EncounterConfiguration.cs\n?? ElsheiekhHMS.Infrastructure/Migrations/20260923140334_AddEncounterPersistence.Designer.cs\n?? ElsheiekhHMS.Infrastructure/Migrations/20260923140334_AddEncounterPersistence.cs\n?? ElsheiekhHMS.Tests/Integration/Persistence/EncounterSqlServerTests.cs",
+  "sourceFingerprint": "2eec5547d9a79256e017568e8bc41c78cb8313a3f393d45b7ba7322ab9319387",
   "generatorFingerprint": "03eee0a8853a7e84af6cbe571d34e6f7d820505ac8f5670a719d0d63b113840c",
   "fingerprintAlgorithm": "SHA-256 of ordinal path \u002B NUL \u002B content SHA-256 records joined with LF; sourceManifest defines inputs; graphify-out excluded everywhere",
   "sourceManifest": [
@@ -525,6 +525,10 @@
       "sha256": "1e38b4cbf9a6f53e06481442b19ab5129165b683959423c2e8771f66ce921a88"
     },
     {
+      "path": "ElsheiekhHMS.Infrastructure/Configurations/Entities/EncounterConfiguration.cs",
+      "sha256": "7e5fc47d9cf69fbf323e94d5f854dfdf3ac384c62967f3ecb2f9cafc210e2d8a"
+    },
+    {
       "path": "ElsheiekhHMS.Infrastructure/Configurations/Entities/PatientConfiguration.cs",
       "sha256": "7bb1eccf42364bd99c5c99a81db48b526090ac3ce6f1ec5b9304edda12be8b82"
     },
@@ -633,8 +637,16 @@
       "sha256": "06cf42a1a2859228c8e2750c8276f40862c58e4e6edac126451f66866d67101f"
     },
     {
+      "path": "ElsheiekhHMS.Infrastructure/Migrations/20260923140334_AddEncounterPersistence.Designer.cs",
+      "sha256": "a9e81f92081f379a8077706d396eec3e186bb52d6f23ee899f79afb11ee11e6d"
+    },
+    {
+      "path": "ElsheiekhHMS.Infrastructure/Migrations/20260923140334_AddEncounterPersistence.cs",
+      "sha256": "1bf38075080e383f691cd99e6ee75885d59dcc851cc411e31cb20bbddde88a65"
+    },
+    {
       "path": "ElsheiekhHMS.Infrastructure/Migrations/ElsheiekhHmsDbContextModelSnapshot.cs",
-      "sha256": "4ce70f955c9da24742a5c329307ef0bf7d21e0291d7b93e3986105ba0bd48e68"
+      "sha256": "8c2223d9e199de86a071623602993c200a5b77dfbe8bd3b3feea54cbff6161c7"
     },
     {
       "path": "ElsheiekhHMS.Infrastructure/Observability/RequestObservabilityMiddleware.cs",
@@ -686,7 +698,7 @@
     },
     {
       "path": "ElsheiekhHMS.Infrastructure/Persistence/ElsheiekhHmsDbContext.cs",
-      "sha256": "1c4dd29f22fb2e34ba91d41d51602fb5e7e5fde1a61851be9d3120f0b4ed60c0"
+      "sha256": "87da2f48cdc0c7f39afff239d44c87c82913ce794b1b1981c720b634655d7eac"
     },
     {
       "path": "ElsheiekhHMS.Infrastructure/Persistence/Patients/PatientPersistence.cs",
@@ -718,7 +730,11 @@
     },
     {
       "path": "ElsheiekhHMS.Tests/Integration/Persistence/ElsheiekhHmsDbContextSqlServerTests.cs",
-      "sha256": "e366eb80f90ed3345e52f4cfcfd1f2350bc7a6150b21c36917764bb8da4fa707"
+      "sha256": "ce5f3ca1ed3157d20cd53ffc93378ae7c76b2cf63aabf7750d01d16bf7253387"
+    },
+    {
+      "path": "ElsheiekhHMS.Tests/Integration/Persistence/EncounterSqlServerTests.cs",
+      "sha256": "615d42276b7a23e7c51a3d35d44e7ca08c6e46f4996c9f442452d2be8cdeb0dd"
     },
     {
       "path": "ElsheiekhHMS.Tests/Integration/Persistence/HmsHealthEndpointHostTests.cs",
@@ -914,7 +930,7 @@
     },
     {
       "path": "ElsheiekhHMS.Tests/Unit/Infrastructure/ElsheiekhHmsDbContextTests.cs",
-      "sha256": "9ee249d02042b1573d4f2cfcba568abb2b951e7765d28eb571f00980f9b1ecb6"
+      "sha256": "7ec3a9c54d42cf4912ad6aa97ecf98361b88120b328fe8ebc2682bb0e977c352"
     },
     {
       "path": "ElsheiekhHMS.Tests/Unit/Infrastructure/Health/HealthCheckTests.cs",
@@ -1140,16 +1156,16 @@
   },
   "summary": {
     "projectCount": 5,
-    "sourceFileCount": 233,
+    "sourceFileCount": 237,
     "razorFileCount": 38,
-    "typeCount": 301,
+    "typeCount": 305,
     "interfaceCount": 16,
-    "testClassCount": 14,
-    "testMethodCount": 101,
-    "testCount": 142,
+    "testClassCount": 15,
+    "testMethodCount": 116,
+    "testCount": 157,
     "dynamicTheoryCount": 0,
-    "nodeCount": 677,
-    "edgeCount": 1309
+    "nodeCount": 685,
+    "edgeCount": 1339
   },
   "projects": [
     {
@@ -1348,6 +1364,7 @@
         "ElsheiekhHMS.Infrastructure/Configurations/Entities/DepartmentConfiguration.cs",
         "ElsheiekhHMS.Infrastructure/Configurations/Entities/DoctorConfiguration.cs",
         "ElsheiekhHMS.Infrastructure/Configurations/Entities/DoctorScheduleConfiguration.cs",
+        "ElsheiekhHMS.Infrastructure/Configurations/Entities/EncounterConfiguration.cs",
         "ElsheiekhHMS.Infrastructure/Configurations/Entities/PatientConfiguration.cs",
         "ElsheiekhHMS.Infrastructure/Configurations/Entities/WalkInQueueEntryConfiguration.cs",
         "ElsheiekhHMS.Infrastructure/Development/DevelopmentDataSeeder.cs",
@@ -1374,6 +1391,8 @@
         "ElsheiekhHMS.Infrastructure/Migrations/20260922115337_AddAppointmentQueueLink.Designer.cs",
         "ElsheiekhHMS.Infrastructure/Migrations/20260923133220_AddProviderOwnership.cs",
         "ElsheiekhHMS.Infrastructure/Migrations/20260923133220_AddProviderOwnership.Designer.cs",
+        "ElsheiekhHMS.Infrastructure/Migrations/20260923140334_AddEncounterPersistence.cs",
+        "ElsheiekhHMS.Infrastructure/Migrations/20260923140334_AddEncounterPersistence.Designer.cs",
         "ElsheiekhHMS.Infrastructure/Migrations/ElsheiekhHmsDbContextModelSnapshot.cs",
         "ElsheiekhHMS.Infrastructure/Observability/RequestObservabilityMiddleware.cs",
         "ElsheiekhHMS.Infrastructure/Persistence/Allocation/AppointmentCodeAllocation.cs",
@@ -1435,6 +1454,7 @@
         "ElsheiekhHMS.Tests/Integration/Persistence/AppointmentServiceSqlServerTests.cs",
         "ElsheiekhHMS.Tests/Integration/Persistence/DepartmentServiceSqlServerTests.cs",
         "ElsheiekhHMS.Tests/Integration/Persistence/ElsheiekhHmsDbContextSqlServerTests.cs",
+        "ElsheiekhHMS.Tests/Integration/Persistence/EncounterSqlServerTests.cs",
         "ElsheiekhHMS.Tests/Integration/Persistence/HmsHealthEndpointHostTests.cs",
         "ElsheiekhHMS.Tests/Integration/Persistence/IdentityAndAuditLogSqlServerTests.cs",
         "ElsheiekhHMS.Tests/Integration/Persistence/PatientServiceSqlServerTests.cs",
@@ -3509,6 +3529,22 @@
       "dynamicTheories": 0
     },
     {
+      "id": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Configurations/Entities/EncounterConfiguration.cs",
+      "name": "EncounterConfiguration.cs",
+      "label": "EncounterConfiguration.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Infrastructure",
+      "file": "ElsheiekhHMS.Infrastructure/Configurations/Entities/EncounterConfiguration.cs",
+      "source_file": "ElsheiekhHMS.Infrastructure/Configurations/Entities/EncounterConfiguration.cs",
+      "external": false,
+      "community": 2,
+      "community_name": "ElsheiekhHMS.Infrastructure",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
       "id": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Configurations/Entities/PatientConfiguration.cs",
       "name": "PatientConfiguration.cs",
       "label": "PatientConfiguration.cs",
@@ -3925,6 +3961,38 @@
       "dynamicTheories": 0
     },
     {
+      "id": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Migrations/20260923140334_AddEncounterPersistence.Designer.cs",
+      "name": "20260923140334_AddEncounterPersistence.Designer.cs",
+      "label": "20260923140334_AddEncounterPersistence.Designer.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Infrastructure",
+      "file": "ElsheiekhHMS.Infrastructure/Migrations/20260923140334_AddEncounterPersistence.Designer.cs",
+      "source_file": "ElsheiekhHMS.Infrastructure/Migrations/20260923140334_AddEncounterPersistence.Designer.cs",
+      "external": false,
+      "community": 2,
+      "community_name": "ElsheiekhHMS.Infrastructure",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Migrations/20260923140334_AddEncounterPersistence.cs",
+      "name": "20260923140334_AddEncounterPersistence.cs",
+      "label": "20260923140334_AddEncounterPersistence.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Infrastructure",
+      "file": "ElsheiekhHMS.Infrastructure/Migrations/20260923140334_AddEncounterPersistence.cs",
+      "source_file": "ElsheiekhHMS.Infrastructure/Migrations/20260923140334_AddEncounterPersistence.cs",
+      "external": false,
+      "community": 2,
+      "community_name": "ElsheiekhHMS.Infrastructure",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
       "id": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Migrations/ElsheiekhHmsDbContextModelSnapshot.cs",
       "name": "ElsheiekhHmsDbContextModelSnapshot.cs",
       "label": "ElsheiekhHmsDbContextModelSnapshot.cs",
@@ -4253,6 +4321,22 @@
       "project": "ElsheiekhHMS.Tests",
       "file": "ElsheiekhHMS.Tests/Integration/Persistence/ElsheiekhHmsDbContextSqlServerTests.cs",
       "source_file": "ElsheiekhHMS.Tests/Integration/Persistence/ElsheiekhHmsDbContextSqlServerTests.cs",
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/EncounterSqlServerTests.cs",
+      "name": "EncounterSqlServerTests.cs",
+      "label": "EncounterSqlServerTests.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Tests",
+      "file": "ElsheiekhHMS.Tests/Integration/Persistence/EncounterSqlServerTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Integration/Persistence/EncounterSqlServerTests.cs",
       "external": false,
       "community": 3,
       "community_name": "ElsheiekhHMS.Tests",
@@ -10294,6 +10378,30 @@
       "dynamicTheories": 0
     },
     {
+      "id": "type:ElsheiekhHMS.Infrastructure.Configurations.Entities.EncounterConfiguration",
+      "name": "EncounterConfiguration",
+      "label": "EncounterConfiguration",
+      "kind": "class",
+      "type": "class",
+      "fullName": "ElsheiekhHMS.Infrastructure.Configurations.Entities.EncounterConfiguration",
+      "project": "ElsheiekhHMS.Infrastructure",
+      "namespace": "ElsheiekhHMS.Infrastructure.Configurations.Entities",
+      "file": "ElsheiekhHMS.Infrastructure/Configurations/Entities/EncounterConfiguration.cs",
+      "source_file": "ElsheiekhHMS.Infrastructure/Configurations/Entities/EncounterConfiguration.cs",
+      "source_location": "L12",
+      "line": 12,
+      "accessibility": "public",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 2,
+      "community_name": "ElsheiekhHMS.Infrastructure",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
       "id": "type:ElsheiekhHMS.Infrastructure.Configurations.Entities.PatientConfiguration",
       "name": "PatientConfiguration",
       "label": "PatientConfiguration",
@@ -10750,6 +10858,30 @@
       "dynamicTheories": 0
     },
     {
+      "id": "type:ElsheiekhHMS.Infrastructure.Migrations.AddEncounterPersistence",
+      "name": "AddEncounterPersistence",
+      "label": "AddEncounterPersistence",
+      "kind": "class",
+      "type": "class",
+      "fullName": "ElsheiekhHMS.Infrastructure.Migrations.AddEncounterPersistence",
+      "project": "ElsheiekhHMS.Infrastructure",
+      "namespace": "ElsheiekhHMS.Infrastructure.Migrations",
+      "file": "ElsheiekhHMS.Infrastructure/Migrations/20260923140334_AddEncounterPersistence.cs",
+      "source_file": "ElsheiekhHMS.Infrastructure/Migrations/20260923140334_AddEncounterPersistence.cs",
+      "source_location": "L9",
+      "line": 9,
+      "accessibility": "public",
+      "abstract": false,
+      "sealed": false,
+      "static": false,
+      "external": false,
+      "community": 2,
+      "community_name": "ElsheiekhHMS.Infrastructure",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
       "id": "type:ElsheiekhHMS.Infrastructure.Migrations.AddPhase05IdentityAndAuditLog",
       "name": "AddPhase05IdentityAndAuditLog",
       "label": "AddPhase05IdentityAndAuditLog",
@@ -11192,8 +11324,8 @@
       "namespace": "ElsheiekhHMS.Infrastructure.Persistence",
       "file": "ElsheiekhHMS.Infrastructure/Persistence/ElsheiekhHmsDbContext.cs",
       "source_file": "ElsheiekhHMS.Infrastructure/Persistence/ElsheiekhHmsDbContext.cs",
-      "source_location": "L13",
-      "line": 13,
+      "source_location": "L14",
+      "line": 14,
       "accessibility": "public",
       "abstract": false,
       "sealed": true,
@@ -11648,8 +11780,8 @@
       "namespace": "ElsheiekhHMS.Tests.Integration.Persistence",
       "file": "ElsheiekhHMS.Tests/Integration/Persistence/ElsheiekhHmsDbContextSqlServerTests.cs",
       "source_file": "ElsheiekhHMS.Tests/Integration/Persistence/ElsheiekhHmsDbContextSqlServerTests.cs",
-      "source_location": "L209",
-      "line": 209,
+      "source_location": "L210",
+      "line": 210,
       "accessibility": "private",
       "abstract": false,
       "sealed": true,
@@ -11672,8 +11804,72 @@
       "namespace": "ElsheiekhHMS.Tests.Integration.Persistence",
       "file": "ElsheiekhHMS.Tests/Integration/Persistence/ElsheiekhHmsDbContextSqlServerTests.cs",
       "source_file": "ElsheiekhHMS.Tests/Integration/Persistence/ElsheiekhHmsDbContextSqlServerTests.cs",
-      "source_location": "L197",
-      "line": 197,
+      "source_location": "L198",
+      "line": 198,
+      "accessibility": "private",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Tests.Integration.Persistence.EncounterSqlServerTests",
+      "name": "EncounterSqlServerTests",
+      "label": "EncounterSqlServerTests",
+      "kind": "test-class",
+      "type": "test-class",
+      "fullName": "ElsheiekhHMS.Tests.Integration.Persistence.EncounterSqlServerTests",
+      "project": "ElsheiekhHMS.Tests",
+      "namespace": "ElsheiekhHMS.Tests.Integration.Persistence",
+      "file": "ElsheiekhHMS.Tests/Integration/Persistence/EncounterSqlServerTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Integration/Persistence/EncounterSqlServerTests.cs",
+      "source_location": "L14",
+      "line": 14,
+      "accessibility": "public",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [
+        "Completed_encounter_persists_domain_completion",
+        "Duplicate_queue_entry_is_rejected_by_the_unique_database_invariant",
+        "Encounter_queries_support_bounded_clinical_registry_shape",
+        "Encounter_roundtrips_all_persisted_values_and_rowversion",
+        "Encounter_rowversion_rejects_a_stale_update",
+        "Encounter_table_has_no_appointment_identity_or_soft_delete_columns",
+        "In_progress_encounter_keeps_completed_at_null",
+        "Invalid_department_foreign_key_is_rejected",
+        "Invalid_doctor_foreign_key_is_rejected",
+        "Invalid_patient_foreign_key_is_rejected",
+        "Invalid_queue_foreign_key_is_rejected",
+        "Referenced_department_cannot_be_deleted",
+        "Referenced_doctor_cannot_be_deleted",
+        "Referenced_patient_cannot_be_deleted",
+        "Referenced_queue_entry_cannot_be_deleted"
+      ],
+      "staticTestCases": 15,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Tests.Integration.Persistence.EncounterSqlServerTests.EncounterGraph",
+      "name": "EncounterGraph",
+      "label": "EncounterGraph",
+      "kind": "record",
+      "type": "record",
+      "fullName": "ElsheiekhHMS.Tests.Integration.Persistence.EncounterSqlServerTests.EncounterGraph",
+      "project": "ElsheiekhHMS.Tests",
+      "namespace": "ElsheiekhHMS.Tests.Integration.Persistence",
+      "file": "ElsheiekhHMS.Tests/Integration/Persistence/EncounterSqlServerTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Integration/Persistence/EncounterSqlServerTests.cs",
+      "source_location": "L287",
+      "line": 287,
       "accessibility": "private",
       "abstract": false,
       "sealed": true,
@@ -15925,6 +16121,15 @@
       "weight": 1
     },
     {
+      "source": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Configurations/Entities/EncounterConfiguration.cs",
+      "target": "type:ElsheiekhHMS.Infrastructure.Configurations.Entities.EncounterConfiguration",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Infrastructure/Configurations/Entities/EncounterConfiguration.cs:L12",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
       "source": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Configurations/Entities/PatientConfiguration.cs",
       "target": "type:ElsheiekhHMS.Infrastructure.Configurations.Entities.PatientConfiguration",
       "type": "declares",
@@ -16186,6 +16391,24 @@
       "weight": 1
     },
     {
+      "source": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Migrations/20260923140334_AddEncounterPersistence.Designer.cs",
+      "target": "type:ElsheiekhHMS.Infrastructure.Migrations.AddEncounterPersistence",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Infrastructure/Migrations/20260923140334_AddEncounterPersistence.Designer.cs:L9",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Migrations/20260923140334_AddEncounterPersistence.cs",
+      "target": "type:ElsheiekhHMS.Infrastructure.Migrations.AddEncounterPersistence",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Infrastructure/Migrations/20260923140334_AddEncounterPersistence.cs:L9",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
       "source": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Migrations/ElsheiekhHmsDbContextModelSnapshot.cs",
       "target": "type:ElsheiekhHMS.Infrastructure.Migrations.ElsheiekhHmsDbContextModelSnapshot",
       "type": "declares",
@@ -16315,7 +16538,7 @@
       "source": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Persistence/ElsheiekhHmsDbContext.cs",
       "target": "type:ElsheiekhHMS.Infrastructure.Persistence.ElsheiekhHmsDbContext",
       "type": "declares",
-      "evidence": "ElsheiekhHMS.Infrastructure/Persistence/ElsheiekhHmsDbContext.cs:L13",
+      "evidence": "ElsheiekhHMS.Infrastructure/Persistence/ElsheiekhHmsDbContext.cs:L14",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -16486,7 +16709,7 @@
       "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/ElsheiekhHmsDbContextSqlServerTests.cs",
       "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.ElsheiekhHmsDbContextSqlServerTests.FixedTimeProvider",
       "type": "declares",
-      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/ElsheiekhHmsDbContextSqlServerTests.cs:L209",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/ElsheiekhHmsDbContextSqlServerTests.cs:L210",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -16495,7 +16718,25 @@
       "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/ElsheiekhHmsDbContextSqlServerTests.cs",
       "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.ElsheiekhHmsDbContextSqlServerTests.TestCurrentUser",
       "type": "declares",
-      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/ElsheiekhHmsDbContextSqlServerTests.cs:L197",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/ElsheiekhHmsDbContextSqlServerTests.cs:L198",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/EncounterSqlServerTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.EncounterSqlServerTests",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/EncounterSqlServerTests.cs:L14",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/EncounterSqlServerTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.EncounterSqlServerTests.EncounterGraph",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/EncounterSqlServerTests.cs:L287",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -19022,6 +19263,15 @@
     },
     {
       "source": "project:ElsheiekhHMS.Infrastructure",
+      "target": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Configurations/Entities/EncounterConfiguration.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Infrastructure/ElsheiekhHMS.Infrastructure.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Infrastructure",
       "target": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Configurations/Entities/PatientConfiguration.cs",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Infrastructure/ElsheiekhHMS.Infrastructure.csproj",
@@ -19248,6 +19498,24 @@
     {
       "source": "project:ElsheiekhHMS.Infrastructure",
       "target": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Migrations/20260923133220_AddProviderOwnership.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Infrastructure/ElsheiekhHMS.Infrastructure.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Infrastructure",
+      "target": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Migrations/20260923140334_AddEncounterPersistence.Designer.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Infrastructure/ElsheiekhHMS.Infrastructure.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Infrastructure",
+      "target": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Migrations/20260923140334_AddEncounterPersistence.cs",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Infrastructure/ElsheiekhHMS.Infrastructure.csproj",
       "relation": "contains",
@@ -19617,6 +19885,15 @@
     {
       "source": "project:ElsheiekhHMS.Tests",
       "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/ElsheiekhHmsDbContextSqlServerTests.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Tests",
+      "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/EncounterSqlServerTests.cs",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
       "relation": "contains",
@@ -22801,6 +23078,24 @@
       "weight": 1
     },
     {
+      "source": "type:ElsheiekhHMS.Infrastructure.Configurations.Entities.EncounterConfiguration",
+      "target": "type:Microsoft.EntityFrameworkCore.IEntityTypeConfiguration\u003CTEntity\u003E",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Infrastructure/Configurations/Entities/EncounterConfiguration.cs:L12",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Infrastructure.Configurations.Entities.EncounterConfiguration",
+      "target": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Configurations.Entities",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Infrastructure/Configurations/Entities/EncounterConfiguration.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
       "source": "type:ElsheiekhHMS.Infrastructure.Configurations.Entities.PatientConfiguration",
       "target": "type:Microsoft.EntityFrameworkCore.IEntityTypeConfiguration\u003CTEntity\u003E",
       "type": "implements",
@@ -23048,6 +23343,24 @@
       "target": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Migrations",
       "type": "namespace-membership",
       "evidence": "ElsheiekhHMS.Infrastructure/Migrations/20260922115337_AddAppointmentQueueLink.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Infrastructure.Migrations.AddEncounterPersistence",
+      "target": "type:Microsoft.EntityFrameworkCore.Migrations.Migration",
+      "type": "inherits",
+      "evidence": "ElsheiekhHMS.Infrastructure/Migrations/20260923140334_AddEncounterPersistence.cs:L9",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Infrastructure.Migrations.AddEncounterPersistence",
+      "target": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Migrations",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Infrastructure/Migrations/20260923140334_AddEncounterPersistence.cs",
       "relation": "namespace-membership",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -23326,7 +23639,7 @@
       "source": "type:ElsheiekhHMS.Infrastructure.Persistence.ElsheiekhHmsDbContext",
       "target": "type:Microsoft.AspNetCore.Identity.EntityFrameworkCore.IdentityDbContext\u003CTUser\u003E",
       "type": "inherits",
-      "evidence": "ElsheiekhHMS.Infrastructure/Persistence/ElsheiekhHmsDbContext.cs:L13",
+      "evidence": "ElsheiekhHMS.Infrastructure/Persistence/ElsheiekhHmsDbContext.cs:L14",
       "relation": "inherits",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -23767,7 +24080,7 @@
       "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.ElsheiekhHmsDbContextSqlServerTests.FixedTimeProvider",
       "target": "type:System.TimeProvider",
       "type": "inherits",
-      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/ElsheiekhHmsDbContextSqlServerTests.cs:L209",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/ElsheiekhHmsDbContextSqlServerTests.cs:L210",
       "relation": "inherits",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -23785,7 +24098,7 @@
       "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.ElsheiekhHmsDbContextSqlServerTests.TestCurrentUser",
       "target": "type:ElsheiekhHMS.Application.Common.Security.ICurrentUser",
       "type": "implements",
-      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/ElsheiekhHmsDbContextSqlServerTests.cs:L197",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/ElsheiekhHmsDbContextSqlServerTests.cs:L198",
       "relation": "implements",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -23795,6 +24108,159 @@
       "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Integration.Persistence",
       "type": "namespace-membership",
       "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/ElsheiekhHmsDbContextSqlServerTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.EncounterSqlServerTests",
+      "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.EncounterSqlServerTests.EncounterGraph",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/EncounterSqlServerTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.EncounterSqlServerTests",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Integration.Persistence",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/EncounterSqlServerTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.EncounterSqlServerTests",
+      "target": "type:ElsheiekhHMS.Core.Common.AuditableEntity",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/EncounterSqlServerTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.EncounterSqlServerTests",
+      "target": "type:ElsheiekhHMS.Core.Common.BaseEntity",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/EncounterSqlServerTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.EncounterSqlServerTests",
+      "target": "type:ElsheiekhHMS.Core.Common.SoftDeletableEntity",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/EncounterSqlServerTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.EncounterSqlServerTests",
+      "target": "type:ElsheiekhHMS.Core.Domain.Clinical.Entities.Encounter",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/EncounterSqlServerTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.EncounterSqlServerTests",
+      "target": "type:ElsheiekhHMS.Core.Domain.Clinical.Enums.EncounterStatus",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/EncounterSqlServerTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.EncounterSqlServerTests",
+      "target": "type:ElsheiekhHMS.Core.Domain.Organization.Entities.Department",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/EncounterSqlServerTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.EncounterSqlServerTests",
+      "target": "type:ElsheiekhHMS.Core.Domain.Patients.Entities.Patient",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/EncounterSqlServerTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.EncounterSqlServerTests",
+      "target": "type:ElsheiekhHMS.Core.Domain.Patients.Enums.BloodGroup",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/EncounterSqlServerTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.EncounterSqlServerTests",
+      "target": "type:ElsheiekhHMS.Core.Domain.Patients.Enums.Gender",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/EncounterSqlServerTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.EncounterSqlServerTests",
+      "target": "type:ElsheiekhHMS.Core.Domain.Scheduling.Entities.WalkInQueueEntry",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/EncounterSqlServerTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.EncounterSqlServerTests",
+      "target": "type:ElsheiekhHMS.Core.Domain.Scheduling.Enums.QueuePriority",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/EncounterSqlServerTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.EncounterSqlServerTests",
+      "target": "type:ElsheiekhHMS.Core.Domain.Staff.Entities.Doctor",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/EncounterSqlServerTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.EncounterSqlServerTests",
+      "target": "type:ElsheiekhHMS.Infrastructure.Persistence.ElsheiekhHmsDbContext",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/EncounterSqlServerTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.EncounterSqlServerTests.EncounterGraph",
+      "target": "type:System.IEquatable\u003CT\u003E",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/EncounterSqlServerTests.cs:L287",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.EncounterSqlServerTests.EncounterGraph",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Integration.Persistence",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/EncounterSqlServerTests.cs",
       "relation": "namespace-membership",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -28006,6 +28472,15 @@
       "weight": 1
     },
     {
+      "source": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Configurations/Entities/EncounterConfiguration.cs",
+      "target": "type:ElsheiekhHMS.Infrastructure.Configurations.Entities.EncounterConfiguration",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Infrastructure/Configurations/Entities/EncounterConfiguration.cs:L12",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
       "source": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Configurations/Entities/PatientConfiguration.cs",
       "target": "type:ElsheiekhHMS.Infrastructure.Configurations.Entities.PatientConfiguration",
       "type": "declares",
@@ -28267,6 +28742,24 @@
       "weight": 1
     },
     {
+      "source": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Migrations/20260923140334_AddEncounterPersistence.Designer.cs",
+      "target": "type:ElsheiekhHMS.Infrastructure.Migrations.AddEncounterPersistence",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Infrastructure/Migrations/20260923140334_AddEncounterPersistence.Designer.cs:L9",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Migrations/20260923140334_AddEncounterPersistence.cs",
+      "target": "type:ElsheiekhHMS.Infrastructure.Migrations.AddEncounterPersistence",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Infrastructure/Migrations/20260923140334_AddEncounterPersistence.cs:L9",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
       "source": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Migrations/ElsheiekhHmsDbContextModelSnapshot.cs",
       "target": "type:ElsheiekhHMS.Infrastructure.Migrations.ElsheiekhHmsDbContextModelSnapshot",
       "type": "declares",
@@ -28396,7 +28889,7 @@
       "source": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Persistence/ElsheiekhHmsDbContext.cs",
       "target": "type:ElsheiekhHMS.Infrastructure.Persistence.ElsheiekhHmsDbContext",
       "type": "declares",
-      "evidence": "ElsheiekhHMS.Infrastructure/Persistence/ElsheiekhHmsDbContext.cs:L13",
+      "evidence": "ElsheiekhHMS.Infrastructure/Persistence/ElsheiekhHmsDbContext.cs:L14",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -28567,7 +29060,7 @@
       "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/ElsheiekhHmsDbContextSqlServerTests.cs",
       "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.ElsheiekhHmsDbContextSqlServerTests.FixedTimeProvider",
       "type": "declares",
-      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/ElsheiekhHmsDbContextSqlServerTests.cs:L209",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/ElsheiekhHmsDbContextSqlServerTests.cs:L210",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -28576,7 +29069,25 @@
       "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/ElsheiekhHmsDbContextSqlServerTests.cs",
       "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.ElsheiekhHmsDbContextSqlServerTests.TestCurrentUser",
       "type": "declares",
-      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/ElsheiekhHmsDbContextSqlServerTests.cs:L197",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/ElsheiekhHmsDbContextSqlServerTests.cs:L198",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/EncounterSqlServerTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.EncounterSqlServerTests",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/EncounterSqlServerTests.cs:L14",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/EncounterSqlServerTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.EncounterSqlServerTests.EncounterGraph",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/EncounterSqlServerTests.cs:L287",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -31103,6 +31614,15 @@
     },
     {
       "source": "project:ElsheiekhHMS.Infrastructure",
+      "target": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Configurations/Entities/EncounterConfiguration.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Infrastructure/ElsheiekhHMS.Infrastructure.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Infrastructure",
       "target": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Configurations/Entities/PatientConfiguration.cs",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Infrastructure/ElsheiekhHMS.Infrastructure.csproj",
@@ -31329,6 +31849,24 @@
     {
       "source": "project:ElsheiekhHMS.Infrastructure",
       "target": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Migrations/20260923133220_AddProviderOwnership.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Infrastructure/ElsheiekhHMS.Infrastructure.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Infrastructure",
+      "target": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Migrations/20260923140334_AddEncounterPersistence.Designer.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Infrastructure/ElsheiekhHMS.Infrastructure.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Infrastructure",
+      "target": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Migrations/20260923140334_AddEncounterPersistence.cs",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Infrastructure/ElsheiekhHMS.Infrastructure.csproj",
       "relation": "contains",
@@ -31698,6 +32236,15 @@
     {
       "source": "project:ElsheiekhHMS.Tests",
       "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/ElsheiekhHmsDbContextSqlServerTests.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Tests",
+      "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/EncounterSqlServerTests.cs",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
       "relation": "contains",
@@ -34882,6 +35429,24 @@
       "weight": 1
     },
     {
+      "source": "type:ElsheiekhHMS.Infrastructure.Configurations.Entities.EncounterConfiguration",
+      "target": "type:Microsoft.EntityFrameworkCore.IEntityTypeConfiguration\u003CTEntity\u003E",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Infrastructure/Configurations/Entities/EncounterConfiguration.cs:L12",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Infrastructure.Configurations.Entities.EncounterConfiguration",
+      "target": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Configurations.Entities",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Infrastructure/Configurations/Entities/EncounterConfiguration.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
       "source": "type:ElsheiekhHMS.Infrastructure.Configurations.Entities.PatientConfiguration",
       "target": "type:Microsoft.EntityFrameworkCore.IEntityTypeConfiguration\u003CTEntity\u003E",
       "type": "implements",
@@ -35129,6 +35694,24 @@
       "target": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Migrations",
       "type": "namespace-membership",
       "evidence": "ElsheiekhHMS.Infrastructure/Migrations/20260922115337_AddAppointmentQueueLink.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Infrastructure.Migrations.AddEncounterPersistence",
+      "target": "type:Microsoft.EntityFrameworkCore.Migrations.Migration",
+      "type": "inherits",
+      "evidence": "ElsheiekhHMS.Infrastructure/Migrations/20260923140334_AddEncounterPersistence.cs:L9",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Infrastructure.Migrations.AddEncounterPersistence",
+      "target": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Migrations",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Infrastructure/Migrations/20260923140334_AddEncounterPersistence.cs",
       "relation": "namespace-membership",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -35407,7 +35990,7 @@
       "source": "type:ElsheiekhHMS.Infrastructure.Persistence.ElsheiekhHmsDbContext",
       "target": "type:Microsoft.AspNetCore.Identity.EntityFrameworkCore.IdentityDbContext\u003CTUser\u003E",
       "type": "inherits",
-      "evidence": "ElsheiekhHMS.Infrastructure/Persistence/ElsheiekhHmsDbContext.cs:L13",
+      "evidence": "ElsheiekhHMS.Infrastructure/Persistence/ElsheiekhHmsDbContext.cs:L14",
       "relation": "inherits",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -35848,7 +36431,7 @@
       "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.ElsheiekhHmsDbContextSqlServerTests.FixedTimeProvider",
       "target": "type:System.TimeProvider",
       "type": "inherits",
-      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/ElsheiekhHmsDbContextSqlServerTests.cs:L209",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/ElsheiekhHmsDbContextSqlServerTests.cs:L210",
       "relation": "inherits",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -35866,7 +36449,7 @@
       "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.ElsheiekhHmsDbContextSqlServerTests.TestCurrentUser",
       "target": "type:ElsheiekhHMS.Application.Common.Security.ICurrentUser",
       "type": "implements",
-      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/ElsheiekhHmsDbContextSqlServerTests.cs:L197",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/ElsheiekhHmsDbContextSqlServerTests.cs:L198",
       "relation": "implements",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -35876,6 +36459,159 @@
       "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Integration.Persistence",
       "type": "namespace-membership",
       "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/ElsheiekhHmsDbContextSqlServerTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.EncounterSqlServerTests",
+      "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.EncounterSqlServerTests.EncounterGraph",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/EncounterSqlServerTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.EncounterSqlServerTests",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Integration.Persistence",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/EncounterSqlServerTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.EncounterSqlServerTests",
+      "target": "type:ElsheiekhHMS.Core.Common.AuditableEntity",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/EncounterSqlServerTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.EncounterSqlServerTests",
+      "target": "type:ElsheiekhHMS.Core.Common.BaseEntity",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/EncounterSqlServerTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.EncounterSqlServerTests",
+      "target": "type:ElsheiekhHMS.Core.Common.SoftDeletableEntity",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/EncounterSqlServerTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.EncounterSqlServerTests",
+      "target": "type:ElsheiekhHMS.Core.Domain.Clinical.Entities.Encounter",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/EncounterSqlServerTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.EncounterSqlServerTests",
+      "target": "type:ElsheiekhHMS.Core.Domain.Clinical.Enums.EncounterStatus",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/EncounterSqlServerTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.EncounterSqlServerTests",
+      "target": "type:ElsheiekhHMS.Core.Domain.Organization.Entities.Department",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/EncounterSqlServerTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.EncounterSqlServerTests",
+      "target": "type:ElsheiekhHMS.Core.Domain.Patients.Entities.Patient",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/EncounterSqlServerTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.EncounterSqlServerTests",
+      "target": "type:ElsheiekhHMS.Core.Domain.Patients.Enums.BloodGroup",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/EncounterSqlServerTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.EncounterSqlServerTests",
+      "target": "type:ElsheiekhHMS.Core.Domain.Patients.Enums.Gender",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/EncounterSqlServerTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.EncounterSqlServerTests",
+      "target": "type:ElsheiekhHMS.Core.Domain.Scheduling.Entities.WalkInQueueEntry",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/EncounterSqlServerTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.EncounterSqlServerTests",
+      "target": "type:ElsheiekhHMS.Core.Domain.Scheduling.Enums.QueuePriority",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/EncounterSqlServerTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.EncounterSqlServerTests",
+      "target": "type:ElsheiekhHMS.Core.Domain.Staff.Entities.Doctor",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/EncounterSqlServerTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.EncounterSqlServerTests",
+      "target": "type:ElsheiekhHMS.Infrastructure.Persistence.ElsheiekhHmsDbContext",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/EncounterSqlServerTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.EncounterSqlServerTests.EncounterGraph",
+      "target": "type:System.IEquatable\u003CT\u003E",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/EncounterSqlServerTests.cs:L287",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.EncounterSqlServerTests.EncounterGraph",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Integration.Persistence",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/EncounterSqlServerTests.cs",
       "relation": "namespace-membership",
       "confidence": "EXTRACTED",
       "weight": 1

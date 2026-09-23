@@ -1,4 +1,5 @@
 using ElsheiekhHMS.Core.Domain.Organization.Entities;
+using ElsheiekhHMS.Core.Domain.Clinical.Entities;
 using ElsheiekhHMS.Core.Domain.Patients.Entities;
 using ElsheiekhHMS.Core.Domain.Scheduling.Entities;
 using ElsheiekhHMS.Core.Domain.Staff.Entities;
@@ -24,6 +25,7 @@ public sealed class ElsheiekhHmsDbContext(
     public DbSet<QueueTicketAllocation> QueueTicketAllocations => Set<QueueTicketAllocation>();
     public DbSet<AppointmentCodeAllocation> AppointmentCodeAllocations => Set<AppointmentCodeAllocation>();
     public DbSet<DoctorApplicationUserLink> DoctorApplicationUserLinks => Set<DoctorApplicationUserLink>();
+    public DbSet<Encounter> Encounters => Set<Encounter>();
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
