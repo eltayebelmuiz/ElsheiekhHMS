@@ -1,11 +1,11 @@
 {
   "schemaVersion": "1.0",
-  "generatedAtUtc": "2026-09-22T21:40:01.0097534\u002B00:00",
-  "gitCommit": "e5b9be004f05ab94c3d4e51ed8a25fed069e24ce",
+  "generatedAtUtc": "2026-09-23T13:03:15.2346121\u002B00:00",
+  "gitCommit": "8a32e6396b0a199104bb9822d5a583b6ce261167",
   "gitBranch": "main",
   "workingTreeDirty": true,
-  "gitStatusAtGeneration": "M ElsheiekhHMS.Web/Components/Layout/AnonymousLayout.razor\n M ElsheiekhHMS.Web/Components/Layout/MainLayout.razor",
-  "sourceFingerprint": "d0fe310403632c3dac53b132c3a97b1b18e95c674314397be27f752400a46a41",
+  "gitStatusAtGeneration": "M README.md\n?? ElsheiekhHMS.Core/Domain/Clinical/Entities/Encounter.cs\n?? ElsheiekhHMS.Core/Domain/Clinical/Enums/EncounterStatus.cs\n?? ElsheiekhHMS.Tests/Unit/Domain/Clinical/EncounterTests.cs",
+  "sourceFingerprint": "310ce858a3d933077453196997584f0d03414ef93711ddced8475c05b8884f17",
   "generatorFingerprint": "03eee0a8853a7e84af6cbe571d34e6f7d820505ac8f5670a719d0d63b113840c",
   "fingerprintAlgorithm": "SHA-256 of ordinal path \u002B NUL \u002B content SHA-256 records joined with LF; sourceManifest defines inputs; graphify-out excluded everywhere",
   "sourceManifest": [
@@ -368,6 +368,14 @@
     {
       "path": "ElsheiekhHMS.Core/Common/SoftDeletableEntity.cs",
       "sha256": "27e1f18e1f51423ec32ff5bbf9821c8f7b89115566e896619626acb125555f0a"
+    },
+    {
+      "path": "ElsheiekhHMS.Core/Domain/Clinical/Entities/Encounter.cs",
+      "sha256": "87bdaf524f0ecc68600be1ac1116ea3608fdec9aed0fa2cccd4fde2bb28a9949"
+    },
+    {
+      "path": "ElsheiekhHMS.Core/Domain/Clinical/Enums/EncounterStatus.cs",
+      "sha256": "22d10ce756cfd13abc91d1706a942abf5af6681afbd704771e5cabe13942ae60"
     },
     {
       "path": "ElsheiekhHMS.Core/Domain/Organization/Entities/Department.cs",
@@ -766,6 +774,10 @@
       "sha256": "8a4a50c907266a31b767a89aba5b81994df16952e1ddf77091357e5843f8eee1"
     },
     {
+      "path": "ElsheiekhHMS.Tests/Unit/Domain/Clinical/EncounterTests.cs",
+      "sha256": "63456ae14554b919cbdcabf37eaca496e9b1d3225b1b5e934c583998fbd7d390"
+    },
+    {
       "path": "ElsheiekhHMS.Tests/Unit/Domain/Common/AuditableEntityTests.cs",
       "sha256": "eeca0c799319306eded7405b003afcde18ea75dfec1aa52f3ca0411f46463d8f"
     },
@@ -1047,7 +1059,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "bdf850e97927d0c277b509c42292b31baed1681a5258e8d3798467dbfce30fc6"
+      "sha256": "2edbfb1e3c3e6635eb5a9c4ce18a07abffb2ec9c36871d19d5b7d97f5bedfc8b"
     }
   ],
   "repository": {
@@ -1057,16 +1069,16 @@
   },
   "summary": {
     "projectCount": 5,
-    "sourceFileCount": 215,
+    "sourceFileCount": 218,
     "razorFileCount": 38,
-    "typeCount": 281,
+    "typeCount": 284,
     "interfaceCount": 14,
-    "testClassCount": 11,
-    "testMethodCount": 76,
-    "testCount": 113,
+    "testClassCount": 12,
+    "testMethodCount": 83,
+    "testCount": 123,
     "dynamicTheoryCount": 0,
-    "nodeCount": 632,
-    "edgeCount": 1198
+    "nodeCount": 641,
+    "edgeCount": 1219
   },
   "projects": [
     {
@@ -1192,6 +1204,8 @@
         "ElsheiekhHMS.Core/Common/AuditableEntity.cs",
         "ElsheiekhHMS.Core/Common/BaseEntity.cs",
         "ElsheiekhHMS.Core/Common/SoftDeletableEntity.cs",
+        "ElsheiekhHMS.Core/Domain/Clinical/Entities/Encounter.cs",
+        "ElsheiekhHMS.Core/Domain/Clinical/Enums/EncounterStatus.cs",
         "ElsheiekhHMS.Core/Domain/Organization/Entities/Department.cs",
         "ElsheiekhHMS.Core/Domain/Patients/Entities/Patient.cs",
         "ElsheiekhHMS.Core/Domain/Patients/Enums/BloodGroup.cs",
@@ -1366,6 +1380,7 @@
         "ElsheiekhHMS.Tests/Unit/Application/Security/SecurityVocabularyTests.cs",
         "ElsheiekhHMS.Tests/Unit/Application/Workflows/AppointmentArrivalQueueServiceTests.cs",
         "ElsheiekhHMS.Tests/Unit/Application/Workflows/PatientIntakeAppointmentServiceTests.cs",
+        "ElsheiekhHMS.Tests/Unit/Domain/Clinical/EncounterTests.cs",
         "ElsheiekhHMS.Tests/Unit/Domain/Common/AuditableEntityTests.cs",
         "ElsheiekhHMS.Tests/Unit/Domain/Common/BaseEntityTests.cs",
         "ElsheiekhHMS.Tests/Unit/Domain/Common/SoftDeletableEntityTests.cs",
@@ -2840,6 +2855,38 @@
       "project": "ElsheiekhHMS.Core",
       "file": "ElsheiekhHMS.Core/Common/SoftDeletableEntity.cs",
       "source_file": "ElsheiekhHMS.Core/Common/SoftDeletableEntity.cs",
+      "external": false,
+      "community": 1,
+      "community_name": "ElsheiekhHMS.Core",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "file:ElsheiekhHMS.Core:ElsheiekhHMS.Core/Domain/Clinical/Entities/Encounter.cs",
+      "name": "Encounter.cs",
+      "label": "Encounter.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Core",
+      "file": "ElsheiekhHMS.Core/Domain/Clinical/Entities/Encounter.cs",
+      "source_file": "ElsheiekhHMS.Core/Domain/Clinical/Entities/Encounter.cs",
+      "external": false,
+      "community": 1,
+      "community_name": "ElsheiekhHMS.Core",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "file:ElsheiekhHMS.Core:ElsheiekhHMS.Core/Domain/Clinical/Enums/EncounterStatus.cs",
+      "name": "EncounterStatus.cs",
+      "label": "EncounterStatus.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Core",
+      "file": "ElsheiekhHMS.Core/Domain/Clinical/Enums/EncounterStatus.cs",
+      "source_file": "ElsheiekhHMS.Core/Domain/Clinical/Enums/EncounterStatus.cs",
       "external": false,
       "community": 1,
       "community_name": "ElsheiekhHMS.Core",
@@ -4384,6 +4431,22 @@
       "dynamicTheories": 0
     },
     {
+      "id": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Domain/Clinical/EncounterTests.cs",
+      "name": "EncounterTests.cs",
+      "label": "EncounterTests.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Tests",
+      "file": "ElsheiekhHMS.Tests/Unit/Domain/Clinical/EncounterTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Unit/Domain/Clinical/EncounterTests.cs",
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
       "id": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Domain/Common/AuditableEntityTests.cs",
       "name": "AuditableEntityTests.cs",
       "label": "AuditableEntityTests.cs",
@@ -5847,6 +5910,36 @@
       "dynamicTheories": 0
     },
     {
+      "id": "namespace:ElsheiekhHMS.Core:ElsheiekhHMS.Core.Domain.Clinical.Entities",
+      "name": "ElsheiekhHMS.Core.Domain.Clinical.Entities",
+      "label": "ElsheiekhHMS.Core.Domain.Clinical.Entities",
+      "kind": "namespace",
+      "type": "namespace",
+      "project": "ElsheiekhHMS.Core",
+      "namespace": "ElsheiekhHMS.Core.Domain.Clinical.Entities",
+      "external": false,
+      "community": 1,
+      "community_name": "ElsheiekhHMS.Core",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "namespace:ElsheiekhHMS.Core:ElsheiekhHMS.Core.Domain.Clinical.Enums",
+      "name": "ElsheiekhHMS.Core.Domain.Clinical.Enums",
+      "label": "ElsheiekhHMS.Core.Domain.Clinical.Enums",
+      "kind": "namespace",
+      "type": "namespace",
+      "project": "ElsheiekhHMS.Core",
+      "namespace": "ElsheiekhHMS.Core.Domain.Clinical.Enums",
+      "external": false,
+      "community": 1,
+      "community_name": "ElsheiekhHMS.Core",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
       "id": "namespace:ElsheiekhHMS.Core:ElsheiekhHMS.Core.Domain.Organization.Entities",
       "name": "ElsheiekhHMS.Core.Domain.Organization.Entities",
       "label": "ElsheiekhHMS.Core.Domain.Organization.Entities",
@@ -6424,6 +6517,21 @@
       "type": "namespace",
       "project": "ElsheiekhHMS.Tests",
       "namespace": "ElsheiekhHMS.Tests.Unit.Application.Workflows",
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Domain.Clinical",
+      "name": "ElsheiekhHMS.Tests.Unit.Domain.Clinical",
+      "label": "ElsheiekhHMS.Tests.Unit.Domain.Clinical",
+      "kind": "namespace",
+      "type": "namespace",
+      "project": "ElsheiekhHMS.Tests",
+      "namespace": "ElsheiekhHMS.Tests.Unit.Domain.Clinical",
       "external": false,
       "community": 3,
       "community_name": "ElsheiekhHMS.Tests",
@@ -8951,6 +9059,54 @@
       "accessibility": "public",
       "abstract": true,
       "sealed": false,
+      "static": false,
+      "external": false,
+      "community": 1,
+      "community_name": "ElsheiekhHMS.Core",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Core.Domain.Clinical.Entities.Encounter",
+      "name": "Encounter",
+      "label": "Encounter",
+      "kind": "class",
+      "type": "class",
+      "fullName": "ElsheiekhHMS.Core.Domain.Clinical.Entities.Encounter",
+      "project": "ElsheiekhHMS.Core",
+      "namespace": "ElsheiekhHMS.Core.Domain.Clinical.Entities",
+      "file": "ElsheiekhHMS.Core/Domain/Clinical/Entities/Encounter.cs",
+      "source_file": "ElsheiekhHMS.Core/Domain/Clinical/Entities/Encounter.cs",
+      "source_location": "L8",
+      "line": 8,
+      "accessibility": "public",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 1,
+      "community_name": "ElsheiekhHMS.Core",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Core.Domain.Clinical.Enums.EncounterStatus",
+      "name": "EncounterStatus",
+      "label": "EncounterStatus",
+      "kind": "enum",
+      "type": "enum",
+      "fullName": "ElsheiekhHMS.Core.Domain.Clinical.Enums.EncounterStatus",
+      "project": "ElsheiekhHMS.Core",
+      "namespace": "ElsheiekhHMS.Core.Domain.Clinical.Enums",
+      "file": "ElsheiekhHMS.Core/Domain/Clinical/Enums/EncounterStatus.cs",
+      "source_file": "ElsheiekhHMS.Core/Domain/Clinical/Enums/EncounterStatus.cs",
+      "source_location": "L3",
+      "line": 3,
+      "accessibility": "public",
+      "abstract": false,
+      "sealed": true,
       "static": false,
       "external": false,
       "community": 1,
@@ -12372,6 +12528,38 @@
       "dynamicTheories": 0
     },
     {
+      "id": "type:ElsheiekhHMS.Tests.Unit.Domain.Clinical.EncounterTests",
+      "name": "EncounterTests",
+      "label": "EncounterTests",
+      "kind": "test-class",
+      "type": "test-class",
+      "fullName": "ElsheiekhHMS.Tests.Unit.Domain.Clinical.EncounterTests",
+      "project": "ElsheiekhHMS.Tests",
+      "namespace": "ElsheiekhHMS.Tests.Unit.Domain.Clinical",
+      "file": "ElsheiekhHMS.Tests/Unit/Domain/Clinical/EncounterTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Unit/Domain/Clinical/EncounterTests.cs",
+      "source_location": "L8",
+      "line": 8,
+      "accessibility": "public",
+      "abstract": false,
+      "sealed": false,
+      "static": false,
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [
+        "Complete_rejects_a_second_completion_without_replacing_metadata",
+        "Complete_rejects_a_time_before_start_without_mutating_encounter",
+        "Complete_rejects_non_utc_completion_time_without_mutating_encounter",
+        "Complete_transitions_to_completed_and_records_completion_metadata",
+        "Constructor_creates_in_progress_encounter_with_immutable_provenance",
+        "Constructor_rejects_non_utc_start_time",
+        "Constructor_rejects_nonpositive_provenance_ids"
+      ],
+      "staticTestCases": 10,
+      "dynamicTheories": 0
+    },
+    {
       "id": "type:ElsheiekhHMS.Tests.Unit.Domain.Common.AuditableEntityTests",
       "name": "AuditableEntityTests",
       "label": "AuditableEntityTests",
@@ -14608,6 +14796,24 @@
       "weight": 1
     },
     {
+      "source": "file:ElsheiekhHMS.Core:ElsheiekhHMS.Core/Domain/Clinical/Entities/Encounter.cs",
+      "target": "type:ElsheiekhHMS.Core.Domain.Clinical.Entities.Encounter",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Core/Domain/Clinical/Entities/Encounter.cs:L8",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Core:ElsheiekhHMS.Core/Domain/Clinical/Enums/EncounterStatus.cs",
+      "target": "type:ElsheiekhHMS.Core.Domain.Clinical.Enums.EncounterStatus",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Core/Domain/Clinical/Enums/EncounterStatus.cs:L3",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
       "source": "file:ElsheiekhHMS.Core:ElsheiekhHMS.Core/Domain/Organization/Entities/Department.cs",
       "target": "type:ElsheiekhHMS.Core.Domain.Organization.Entities.Department",
       "type": "declares",
@@ -15926,6 +16132,15 @@
       "target": "type:ElsheiekhHMS.Tests.Unit.Application.Workflows.PatientIntakeAppointmentServiceTests.TestCurrentUser",
       "type": "declares",
       "evidence": "ElsheiekhHMS.Tests/Unit/Application/Workflows/PatientIntakeAppointmentServiceTests.cs:L301",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Domain/Clinical/EncounterTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Domain.Clinical.EncounterTests",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Clinical/EncounterTests.cs:L8",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -17381,6 +17596,24 @@
     },
     {
       "source": "project:ElsheiekhHMS.Core",
+      "target": "file:ElsheiekhHMS.Core:ElsheiekhHMS.Core/Domain/Clinical/Entities/Encounter.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Core/ElsheiekhHMS.Core.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Core",
+      "target": "file:ElsheiekhHMS.Core:ElsheiekhHMS.Core/Domain/Clinical/Enums/EncounterStatus.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Core/ElsheiekhHMS.Core.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Core",
       "target": "file:ElsheiekhHMS.Core:ElsheiekhHMS.Core/Domain/Organization/Entities/Department.cs",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Core/ElsheiekhHMS.Core.csproj",
@@ -17537,6 +17770,24 @@
       "target": "namespace:ElsheiekhHMS.Core:ElsheiekhHMS.Core.Common",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Core/Common/AuditableEntity.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Core",
+      "target": "namespace:ElsheiekhHMS.Core:ElsheiekhHMS.Core.Domain.Clinical.Entities",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Core/Domain/Clinical/Entities/Encounter.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Core",
+      "target": "namespace:ElsheiekhHMS.Core:ElsheiekhHMS.Core.Domain.Clinical.Enums",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Core/Domain/Clinical/Enums/EncounterStatus.cs",
       "relation": "contains",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -18515,6 +18766,15 @@
     },
     {
       "source": "project:ElsheiekhHMS.Tests",
+      "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Domain/Clinical/EncounterTests.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Tests",
       "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Domain/Common/AuditableEntityTests.cs",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
@@ -18851,6 +19111,15 @@
       "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Application.Workflows",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Tests/Unit/Application/Workflows/AppointmentArrivalQueueServiceTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Tests",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Domain.Clinical",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Clinical/EncounterTests.cs",
       "relation": "contains",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -20822,6 +21091,42 @@
       "target": "namespace:ElsheiekhHMS.Core:ElsheiekhHMS.Core.Common",
       "type": "namespace-membership",
       "evidence": "ElsheiekhHMS.Core/Common/SoftDeletableEntity.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Core.Domain.Clinical.Entities.Encounter",
+      "target": "type:ElsheiekhHMS.Core.Interfaces.IHasConcurrencyToken",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Core/Domain/Clinical/Entities/Encounter.cs:L8",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Core.Domain.Clinical.Entities.Encounter",
+      "target": "type:ElsheiekhHMS.Core.Common.AuditableEntity",
+      "type": "inherits",
+      "evidence": "ElsheiekhHMS.Core/Domain/Clinical/Entities/Encounter.cs:L8",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Core.Domain.Clinical.Entities.Encounter",
+      "target": "namespace:ElsheiekhHMS.Core:ElsheiekhHMS.Core.Domain.Clinical.Entities",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Core/Domain/Clinical/Entities/Encounter.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Core.Domain.Clinical.Enums.EncounterStatus",
+      "target": "namespace:ElsheiekhHMS.Core:ElsheiekhHMS.Core.Domain.Clinical.Enums",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Core/Domain/Clinical/Enums/EncounterStatus.cs",
       "relation": "namespace-membership",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -23388,6 +23693,78 @@
       "type": "namespace-membership",
       "evidence": "ElsheiekhHMS.Tests/Unit/Application/Workflows/PatientIntakeAppointmentServiceTests.cs",
       "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Domain.Clinical.EncounterTests",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Domain.Clinical",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Clinical/EncounterTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Domain.Clinical.EncounterTests",
+      "target": "type:ElsheiekhHMS.Core.Common.AuditableEntity",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Clinical/EncounterTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Domain.Clinical.EncounterTests",
+      "target": "type:ElsheiekhHMS.Core.Common.BaseEntity",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Clinical/EncounterTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Domain.Clinical.EncounterTests",
+      "target": "type:ElsheiekhHMS.Core.Domain.Clinical.Entities.Encounter",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Clinical/EncounterTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Domain.Clinical.EncounterTests",
+      "target": "type:ElsheiekhHMS.Core.Domain.Clinical.Enums.EncounterStatus",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Clinical/EncounterTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Domain.Clinical.EncounterTests",
+      "target": "type:ElsheiekhHMS.Core.Exceptions.BusinessRuleException",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Clinical/EncounterTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Domain.Clinical.EncounterTests",
+      "target": "type:ElsheiekhHMS.Core.Exceptions.DomainException",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Clinical/EncounterTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Domain.Clinical.EncounterTests",
+      "target": "type:ElsheiekhHMS.Core.Exceptions.DomainValidationException",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Clinical/EncounterTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
       "confidence": "EXTRACTED",
       "weight": 1
     },
@@ -24602,7 +24979,7 @@
       "statusSource": "README.md declaration, not independently certified completion",
       "declaredStatus": [
         {
-          "text": "\u003E **Current development stage:** Pre-Phase13B \u2014 Development database inspection and safe test data seeding complete; Encounter implementation has not started",
+          "text": "\u003E **Current development stage:** Phase13B complete \u2014 Encounter domain foundation implemented and verified; provider ownership remains the next clinical gate",
           "source": "README.md:L5"
         },
         {
@@ -24782,40 +25159,44 @@
           "source": "README.md:L96"
         },
         {
+          "text": "\u003E **Phase 13B:** \u2705 Encounter domain model implemented and verified in Core with focused domain tests; persistence, provider ownership, and clinical workflows remain deferred",
+          "source": "README.md:L98"
+        },
+        {
           "text": "| 01 | Solution \u0026 Architecture | \u2705 Complete |",
-          "source": "README.md:L415"
-        },
-        {
-          "text": "| 02 | Core Foundation | \u2705 Complete |",
-          "source": "README.md:L416"
-        },
-        {
-          "text": "| 03 | Domain Entities | \u2705 Complete |",
           "source": "README.md:L417"
         },
         {
-          "text": "| 04 | EF Core \u0026 Database | \u2705 Complete |",
+          "text": "| 02 | Core Foundation | \u2705 Complete |",
           "source": "README.md:L418"
         },
         {
-          "text": "| 05 | Identity \u0026 Security | \u2705 Complete (05A, 05B, 05C, 05C-A, 05D, and 05E) |",
+          "text": "| 03 | Domain Entities | \u2705 Complete |",
           "source": "README.md:L419"
         },
         {
-          "text": "| 06 | DTOs \u0026 Validation | \u2705 Complete (06A\u201306D) |",
+          "text": "| 04 | EF Core \u0026 Database | \u2705 Complete |",
           "source": "README.md:L420"
         },
         {
-          "text": "| 07 | Application Services | \u2705 Complete for approved scope (07S, 07A, 07B, 07C-P, 07C, 07D; 07E deferred) |",
+          "text": "| 05 | Identity \u0026 Security | \u2705 Complete (05A, 05B, 05C, 05C-A, 05D, and 05E) |",
           "source": "README.md:L421"
         },
         {
-          "text": "| 08 | Business Workflows | \u2705 Complete (08A, 08B-P, 08B) |",
+          "text": "| 06 | DTOs \u0026 Validation | \u2705 Complete (06A\u201306D) |",
           "source": "README.md:L422"
         },
         {
-          "text": "| 09 | Enterprise Infrastructure | \u2705 Complete (09A, 09B) |",
+          "text": "| 07 | Application Services | \u2705 Complete for approved scope (07S, 07A, 07B, 07C-P, 07C, 07D; 07E deferred) |",
           "source": "README.md:L423"
+        },
+        {
+          "text": "| 08 | Business Workflows | \u2705 Complete (08A, 08B-P, 08B) |",
+          "source": "README.md:L424"
+        },
+        {
+          "text": "| 09 | Enterprise Infrastructure | \u2705 Complete (09A, 09B) |",
+          "source": "README.md:L425"
         }
       ]
     }
@@ -25677,6 +26058,24 @@
       "target": "type:ElsheiekhHMS.Core.Common.SoftDeletableEntity",
       "type": "declares",
       "evidence": "ElsheiekhHMS.Core/Common/SoftDeletableEntity.cs:L3",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Core:ElsheiekhHMS.Core/Domain/Clinical/Entities/Encounter.cs",
+      "target": "type:ElsheiekhHMS.Core.Domain.Clinical.Entities.Encounter",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Core/Domain/Clinical/Entities/Encounter.cs:L8",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Core:ElsheiekhHMS.Core/Domain/Clinical/Enums/EncounterStatus.cs",
+      "target": "type:ElsheiekhHMS.Core.Domain.Clinical.Enums.EncounterStatus",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Core/Domain/Clinical/Enums/EncounterStatus.cs:L3",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -27000,6 +27399,15 @@
       "target": "type:ElsheiekhHMS.Tests.Unit.Application.Workflows.PatientIntakeAppointmentServiceTests.TestCurrentUser",
       "type": "declares",
       "evidence": "ElsheiekhHMS.Tests/Unit/Application/Workflows/PatientIntakeAppointmentServiceTests.cs:L301",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Domain/Clinical/EncounterTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Domain.Clinical.EncounterTests",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Clinical/EncounterTests.cs:L8",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -28455,6 +28863,24 @@
     },
     {
       "source": "project:ElsheiekhHMS.Core",
+      "target": "file:ElsheiekhHMS.Core:ElsheiekhHMS.Core/Domain/Clinical/Entities/Encounter.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Core/ElsheiekhHMS.Core.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Core",
+      "target": "file:ElsheiekhHMS.Core:ElsheiekhHMS.Core/Domain/Clinical/Enums/EncounterStatus.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Core/ElsheiekhHMS.Core.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Core",
       "target": "file:ElsheiekhHMS.Core:ElsheiekhHMS.Core/Domain/Organization/Entities/Department.cs",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Core/ElsheiekhHMS.Core.csproj",
@@ -28611,6 +29037,24 @@
       "target": "namespace:ElsheiekhHMS.Core:ElsheiekhHMS.Core.Common",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Core/Common/AuditableEntity.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Core",
+      "target": "namespace:ElsheiekhHMS.Core:ElsheiekhHMS.Core.Domain.Clinical.Entities",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Core/Domain/Clinical/Entities/Encounter.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Core",
+      "target": "namespace:ElsheiekhHMS.Core:ElsheiekhHMS.Core.Domain.Clinical.Enums",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Core/Domain/Clinical/Enums/EncounterStatus.cs",
       "relation": "contains",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -29589,6 +30033,15 @@
     },
     {
       "source": "project:ElsheiekhHMS.Tests",
+      "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Domain/Clinical/EncounterTests.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Tests",
       "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Domain/Common/AuditableEntityTests.cs",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
@@ -29925,6 +30378,15 @@
       "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Application.Workflows",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Tests/Unit/Application/Workflows/AppointmentArrivalQueueServiceTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Tests",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Domain.Clinical",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Clinical/EncounterTests.cs",
       "relation": "contains",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -31896,6 +32358,42 @@
       "target": "namespace:ElsheiekhHMS.Core:ElsheiekhHMS.Core.Common",
       "type": "namespace-membership",
       "evidence": "ElsheiekhHMS.Core/Common/SoftDeletableEntity.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Core.Domain.Clinical.Entities.Encounter",
+      "target": "type:ElsheiekhHMS.Core.Interfaces.IHasConcurrencyToken",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Core/Domain/Clinical/Entities/Encounter.cs:L8",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Core.Domain.Clinical.Entities.Encounter",
+      "target": "type:ElsheiekhHMS.Core.Common.AuditableEntity",
+      "type": "inherits",
+      "evidence": "ElsheiekhHMS.Core/Domain/Clinical/Entities/Encounter.cs:L8",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Core.Domain.Clinical.Entities.Encounter",
+      "target": "namespace:ElsheiekhHMS.Core:ElsheiekhHMS.Core.Domain.Clinical.Entities",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Core/Domain/Clinical/Entities/Encounter.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Core.Domain.Clinical.Enums.EncounterStatus",
+      "target": "namespace:ElsheiekhHMS.Core:ElsheiekhHMS.Core.Domain.Clinical.Enums",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Core/Domain/Clinical/Enums/EncounterStatus.cs",
       "relation": "namespace-membership",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -34462,6 +34960,78 @@
       "type": "namespace-membership",
       "evidence": "ElsheiekhHMS.Tests/Unit/Application/Workflows/PatientIntakeAppointmentServiceTests.cs",
       "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Domain.Clinical.EncounterTests",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Domain.Clinical",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Clinical/EncounterTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Domain.Clinical.EncounterTests",
+      "target": "type:ElsheiekhHMS.Core.Common.AuditableEntity",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Clinical/EncounterTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Domain.Clinical.EncounterTests",
+      "target": "type:ElsheiekhHMS.Core.Common.BaseEntity",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Clinical/EncounterTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Domain.Clinical.EncounterTests",
+      "target": "type:ElsheiekhHMS.Core.Domain.Clinical.Entities.Encounter",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Clinical/EncounterTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Domain.Clinical.EncounterTests",
+      "target": "type:ElsheiekhHMS.Core.Domain.Clinical.Enums.EncounterStatus",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Clinical/EncounterTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Domain.Clinical.EncounterTests",
+      "target": "type:ElsheiekhHMS.Core.Exceptions.BusinessRuleException",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Clinical/EncounterTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Domain.Clinical.EncounterTests",
+      "target": "type:ElsheiekhHMS.Core.Exceptions.DomainException",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Clinical/EncounterTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Domain.Clinical.EncounterTests",
+      "target": "type:ElsheiekhHMS.Core.Exceptions.DomainValidationException",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Domain/Clinical/EncounterTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
       "confidence": "EXTRACTED",
       "weight": 1
     },

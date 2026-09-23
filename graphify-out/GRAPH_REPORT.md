@@ -2,11 +2,11 @@
 
 ## Snapshot
 
-- **generatedAtUtc:** `2026-09-22T21:40:01.0097534+00:00`
+- **generatedAtUtc:** `2026-09-23T13:03:15.2346121+00:00`
 - **gitBranch:** `main`
-- **gitCommit:** `e5b9be004f05ab94c3d4e51ed8a25fed069e24ce`
+- **gitCommit:** `8a32e6396b0a199104bb9822d5a583b6ce261167`
 - **workingTreeDirty:** `True`
-- **sourceFingerprint:** `d0fe310403632c3dac53b132c3a97b1b18e95c674314397be27f752400a46a41`
+- **sourceFingerprint:** `310ce858a3d933077453196997584f0d03414ef93711ddced8475c05b8884f17`
 - Framework: net10.0
 - Structural extraction only: **0 LLM API calls / 0 LLM tokens**. No statistical community clustering is claimed; project ownership supplies the visual groups.
 
@@ -37,6 +37,8 @@ ElsheiekhHMS.Web -> ElsheiekhHMS.Application, ElsheiekhHMS.Infrastructure
 - [ElsheiekhHMS.Core.Common.AuditableEntity](../ElsheiekhHMS.Core/Common/AuditableEntity.cs) — abstract-class, public
 - [ElsheiekhHMS.Core.Common.BaseEntity](../ElsheiekhHMS.Core/Common/BaseEntity.cs) — abstract-class, public
 - [ElsheiekhHMS.Core.Common.SoftDeletableEntity](../ElsheiekhHMS.Core/Common/SoftDeletableEntity.cs) — abstract-class, public
+- [ElsheiekhHMS.Core.Domain.Clinical.Entities.Encounter](../ElsheiekhHMS.Core/Domain/Clinical/Entities/Encounter.cs) — class, public
+- [ElsheiekhHMS.Core.Domain.Clinical.Enums.EncounterStatus](../ElsheiekhHMS.Core/Domain/Clinical/Enums/EncounterStatus.cs) — enum, public
 - [ElsheiekhHMS.Core.Domain.Organization.Entities.Department](../ElsheiekhHMS.Core/Domain/Organization/Entities/Department.cs) — class, public
 - [ElsheiekhHMS.Core.Domain.Patients.Entities.Patient](../ElsheiekhHMS.Core/Domain/Patients/Entities/Patient.cs) — class, public
 - [ElsheiekhHMS.Core.Domain.Patients.Enums.BloodGroup](../ElsheiekhHMS.Core/Domain/Patients/Enums/BloodGroup.cs) — enum, public
@@ -61,6 +63,7 @@ Derived -> base (includes private test helper types and resolved external bases)
 
 - `ElsheiekhHMS.Core.Common.AuditableEntity` -> `ElsheiekhHMS.Core.Common.BaseEntity` — ElsheiekhHMS.Core/Common/AuditableEntity.cs:L3
 - `ElsheiekhHMS.Core.Common.SoftDeletableEntity` -> `ElsheiekhHMS.Core.Common.AuditableEntity` — ElsheiekhHMS.Core/Common/SoftDeletableEntity.cs:L3
+- `ElsheiekhHMS.Core.Domain.Clinical.Entities.Encounter` -> `ElsheiekhHMS.Core.Common.AuditableEntity` — ElsheiekhHMS.Core/Domain/Clinical/Entities/Encounter.cs:L8
 - `ElsheiekhHMS.Core.Domain.Organization.Entities.Department` -> `ElsheiekhHMS.Core.Common.AuditableEntity` — ElsheiekhHMS.Core/Domain/Organization/Entities/Department.cs:L6
 - `ElsheiekhHMS.Core.Domain.Patients.Entities.Patient` -> `ElsheiekhHMS.Core.Common.SoftDeletableEntity` — ElsheiekhHMS.Core/Domain/Patients/Entities/Patient.cs:L8
 - `ElsheiekhHMS.Core.Domain.Scheduling.Entities.Appointment` -> `ElsheiekhHMS.Core.Common.SoftDeletableEntity` — ElsheiekhHMS.Core/Domain/Scheduling/Entities/Appointment.cs:L8
@@ -126,7 +129,7 @@ Derived -> base (includes private test helper types and resolved external bases)
 - `ElsheiekhHMS.Application.Workflows.PatientIntake.IPatientIntakeAppointmentService`
   - Implementations: ElsheiekhHMS.Application.Workflows.PatientIntake.PatientIntakeAppointmentService
 - `ElsheiekhHMS.Core.Interfaces.IHasConcurrencyToken`
-  - Implementations: ElsheiekhHMS.Core.Domain.Patients.Entities.Patient, ElsheiekhHMS.Core.Domain.Scheduling.Entities.Appointment, ElsheiekhHMS.Core.Domain.Scheduling.Entities.WalkInQueueEntry
+  - Implementations: ElsheiekhHMS.Core.Domain.Clinical.Entities.Encounter, ElsheiekhHMS.Core.Domain.Patients.Entities.Patient, ElsheiekhHMS.Core.Domain.Scheduling.Entities.Appointment, ElsheiekhHMS.Core.Domain.Scheduling.Entities.WalkInQueueEntry
 - `Microsoft.EntityFrameworkCore.IEntityTypeConfiguration<ElsheiekhHMS.Infrastructure.Auditing.Entities.AuditLog>`
   - Implementations: ElsheiekhHMS.Infrastructure.Auditing.Configurations.AuditLogConfiguration, ElsheiekhHMS.Infrastructure.Configurations.Entities.AppointmentConfiguration, ElsheiekhHMS.Infrastructure.Configurations.Entities.DepartmentConfiguration, ElsheiekhHMS.Infrastructure.Configurations.Entities.DoctorConfiguration, ElsheiekhHMS.Infrastructure.Configurations.Entities.DoctorScheduleConfiguration, ElsheiekhHMS.Infrastructure.Configurations.Entities.PatientConfiguration, ElsheiekhHMS.Infrastructure.Configurations.Entities.WalkInQueueEntryConfiguration, ElsheiekhHMS.Infrastructure.Identity.Configurations.ApplicationUserConfiguration, ElsheiekhHMS.Infrastructure.Persistence.Allocation.AppointmentCodeAllocationConfiguration, ElsheiekhHMS.Infrastructure.Persistence.Allocation.PatientCodeAllocationConfiguration, ElsheiekhHMS.Infrastructure.Persistence.Allocation.QueueTicketAllocationConfiguration
 - `Microsoft.Extensions.DependencyInjection.IServiceScope`
@@ -142,12 +145,20 @@ Derived -> base (includes private test helper types and resolved external bases)
 
 ## Tests
 
-11 classes; 76 methods; 113 statically enumerable cases. This is discovery from source, not an execution result.
+12 classes; 83 methods; 123 statically enumerable cases. This is discovery from source, not an execution result.
 
 - [ElsheiekhHMS.Tests.Unit.Application.Auditing.AuditVocabularyTests](../ElsheiekhHMS.Tests/Unit/Application/Auditing/AuditVocabularyTests.cs) — 3 cases
   - Uses/tests `ElsheiekhHMS.Application.Common.Auditing.AuditActions` (source type/member binding; includes inherited foundation dependencies)
   - Uses/tests `ElsheiekhHMS.Application.Common.Auditing.AuditActorKinds` (source type/member binding; includes inherited foundation dependencies)
   - Uses/tests `ElsheiekhHMS.Application.Common.Auditing.AuditCategories` (source type/member binding; includes inherited foundation dependencies)
+- [ElsheiekhHMS.Tests.Unit.Domain.Clinical.EncounterTests](../ElsheiekhHMS.Tests/Unit/Domain/Clinical/EncounterTests.cs) — 10 cases
+  - Uses/tests `ElsheiekhHMS.Core.Common.AuditableEntity` (source type/member binding; includes inherited foundation dependencies)
+  - Uses/tests `ElsheiekhHMS.Core.Common.BaseEntity` (source type/member binding; includes inherited foundation dependencies)
+  - Uses/tests `ElsheiekhHMS.Core.Domain.Clinical.Entities.Encounter` (source type/member binding; includes inherited foundation dependencies)
+  - Uses/tests `ElsheiekhHMS.Core.Domain.Clinical.Enums.EncounterStatus` (source type/member binding; includes inherited foundation dependencies)
+  - Uses/tests `ElsheiekhHMS.Core.Exceptions.BusinessRuleException` (source type/member binding; includes inherited foundation dependencies)
+  - Uses/tests `ElsheiekhHMS.Core.Exceptions.DomainException` (source type/member binding; includes inherited foundation dependencies)
+  - Uses/tests `ElsheiekhHMS.Core.Exceptions.DomainValidationException` (source type/member binding; includes inherited foundation dependencies)
 - [ElsheiekhHMS.Tests.Unit.Domain.Common.AuditableEntityTests](../ElsheiekhHMS.Tests/Unit/Domain/Common/AuditableEntityTests.cs) — 2 cases
   - Uses/tests `ElsheiekhHMS.Core.Common.AuditableEntity` (source type/member binding; includes inherited foundation dependencies)
   - Uses/tests `ElsheiekhHMS.Core.Common.BaseEntity` (source type/member binding; includes inherited foundation dependencies)
@@ -251,7 +262,7 @@ Evaluated direct PackageReference items only. Framework/SDK auto-references and 
 
 Declared by README; not inferred from the existence of classes:
 
-- > **Current development stage:** Pre-Phase13B — Development database inspection and safe test data seeding complete; Encounter implementation has not started — README.md:L5
+- > **Current development stage:** Phase13B complete — Encounter domain foundation implemented and verified; provider ownership remains the next clinical gate — README.md:L5
 - > **Phase 01:** ✅ Complete — README.md:L9
 - > **Phase 02 Setup:** ✅ Complete and verified — README.md:L11
 - > **Phase 03A / 03B / 03C:** ✅ Complete — README.md:L13
@@ -296,15 +307,16 @@ Declared by README; not inferred from the existence of classes:
 - > **Phase 12G:** ✅ Operational dashboard, cross-module UI hardening, accessibility source review, and consolidated QA handoff complete; external browser QA remains required — README.md:L92
 - > **Phase 12H:** ✅ Final UI acceptance, static-asset authentication-boundary fix, acceptance documentation, and frontend freeze complete; Antigravity and authenticated browser evidence remain environment-dependent — README.md:L94
 - > **Phase 13A:** ✅ Clinical Encounter architecture accepted; domain model and provider ownership decisions are documented, with implementation intentionally deferred to the Phase13B gate — README.md:L96
--  /  01  /  Solution & Architecture  /  ✅ Complete  /  — README.md:L415
--  /  02  /  Core Foundation  /  ✅ Complete  /  — README.md:L416
--  /  03  /  Domain Entities  /  ✅ Complete  /  — README.md:L417
--  /  04  /  EF Core & Database  /  ✅ Complete  /  — README.md:L418
--  /  05  /  Identity & Security  /  ✅ Complete (05A, 05B, 05C, 05C-A, 05D, and 05E)  /  — README.md:L419
--  /  06  /  DTOs & Validation  /  ✅ Complete (06A–06D)  /  — README.md:L420
--  /  07  /  Application Services  /  ✅ Complete for approved scope (07S, 07A, 07B, 07C-P, 07C, 07D; 07E deferred)  /  — README.md:L421
--  /  08  /  Business Workflows  /  ✅ Complete (08A, 08B-P, 08B)  /  — README.md:L422
--  /  09  /  Enterprise Infrastructure  /  ✅ Complete (09A, 09B)  /  — README.md:L423
+- > **Phase 13B:** ✅ Encounter domain model implemented and verified in Core with focused domain tests; persistence, provider ownership, and clinical workflows remain deferred — README.md:L98
+-  /  01  /  Solution & Architecture  /  ✅ Complete  /  — README.md:L417
+-  /  02  /  Core Foundation  /  ✅ Complete  /  — README.md:L418
+-  /  03  /  Domain Entities  /  ✅ Complete  /  — README.md:L419
+-  /  04  /  EF Core & Database  /  ✅ Complete  /  — README.md:L420
+-  /  05  /  Identity & Security  /  ✅ Complete (05A, 05B, 05C, 05C-A, 05D, and 05E)  /  — README.md:L421
+-  /  06  /  DTOs & Validation  /  ✅ Complete (06A–06D)  /  — README.md:L422
+-  /  07  /  Application Services  /  ✅ Complete for approved scope (07S, 07A, 07B, 07C-P, 07C, 07D; 07E deferred)  /  — README.md:L423
+-  /  08  /  Business Workflows  /  ✅ Complete (08A, 08B-P, 08B)  /  — README.md:L424
+-  /  09  /  Enterprise Infrastructure  /  ✅ Complete (09A, 09B)  /  — README.md:L425
 
 ## Important Files
 
@@ -397,6 +409,8 @@ Declared by README; not inferred from the existence of classes:
 - [ElsheiekhHMS.Core/Common/AuditableEntity.cs](../ElsheiekhHMS.Core/Common/AuditableEntity.cs) — ElsheiekhHMS.Core
 - [ElsheiekhHMS.Core/Common/BaseEntity.cs](../ElsheiekhHMS.Core/Common/BaseEntity.cs) — ElsheiekhHMS.Core
 - [ElsheiekhHMS.Core/Common/SoftDeletableEntity.cs](../ElsheiekhHMS.Core/Common/SoftDeletableEntity.cs) — ElsheiekhHMS.Core
+- [ElsheiekhHMS.Core/Domain/Clinical/Entities/Encounter.cs](../ElsheiekhHMS.Core/Domain/Clinical/Entities/Encounter.cs) — ElsheiekhHMS.Core
+- [ElsheiekhHMS.Core/Domain/Clinical/Enums/EncounterStatus.cs](../ElsheiekhHMS.Core/Domain/Clinical/Enums/EncounterStatus.cs) — ElsheiekhHMS.Core
 - [ElsheiekhHMS.Core/Domain/Organization/Entities/Department.cs](../ElsheiekhHMS.Core/Domain/Organization/Entities/Department.cs) — ElsheiekhHMS.Core
 - [ElsheiekhHMS.Core/Domain/Patients/Entities/Patient.cs](../ElsheiekhHMS.Core/Domain/Patients/Entities/Patient.cs) — ElsheiekhHMS.Core
 - [ElsheiekhHMS.Core/Domain/Patients/Enums/BloodGroup.cs](../ElsheiekhHMS.Core/Domain/Patients/Enums/BloodGroup.cs) — ElsheiekhHMS.Core
@@ -493,6 +507,7 @@ Declared by README; not inferred from the existence of classes:
 - [ElsheiekhHMS.Tests/Unit/Application/Security/SecurityVocabularyTests.cs](../ElsheiekhHMS.Tests/Unit/Application/Security/SecurityVocabularyTests.cs) — ElsheiekhHMS.Tests
 - [ElsheiekhHMS.Tests/Unit/Application/Workflows/AppointmentArrivalQueueServiceTests.cs](../ElsheiekhHMS.Tests/Unit/Application/Workflows/AppointmentArrivalQueueServiceTests.cs) — ElsheiekhHMS.Tests
 - [ElsheiekhHMS.Tests/Unit/Application/Workflows/PatientIntakeAppointmentServiceTests.cs](../ElsheiekhHMS.Tests/Unit/Application/Workflows/PatientIntakeAppointmentServiceTests.cs) — ElsheiekhHMS.Tests
+- [ElsheiekhHMS.Tests/Unit/Domain/Clinical/EncounterTests.cs](../ElsheiekhHMS.Tests/Unit/Domain/Clinical/EncounterTests.cs) — ElsheiekhHMS.Tests
 - [ElsheiekhHMS.Tests/Unit/Domain/Common/AuditableEntityTests.cs](../ElsheiekhHMS.Tests/Unit/Domain/Common/AuditableEntityTests.cs) — ElsheiekhHMS.Tests
 - [ElsheiekhHMS.Tests/Unit/Domain/Common/BaseEntityTests.cs](../ElsheiekhHMS.Tests/Unit/Domain/Common/BaseEntityTests.cs) — ElsheiekhHMS.Tests
 - [ElsheiekhHMS.Tests/Unit/Domain/Common/SoftDeletableEntityTests.cs](../ElsheiekhHMS.Tests/Unit/Domain/Common/SoftDeletableEntityTests.cs) — ElsheiekhHMS.Tests

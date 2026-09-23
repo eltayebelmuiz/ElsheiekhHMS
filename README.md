@@ -2,7 +2,7 @@
 
 Enterprise Hospital Management System built with **.NET 10, ASP.NET Core, Blazor, Entity Framework Core, SQL Server, and ASP.NET Core Identity**.
 
-> **Current development stage:** Pre-Phase13B — Development database inspection and safe test data seeding complete; Encounter implementation has not started
+> **Current development stage:** Phase13B complete — Encounter domain foundation implemented and verified; provider ownership remains the next clinical gate
 
 > **Pre-Manual-QA:** ✅ UI/UX enhancement and accessibility polish complete; consolidated browser handoff is in `docs/UI_PRE_MANUAL_QA.md`; backend and test-data boundaries remain frozen
 >
@@ -94,10 +94,12 @@ Enterprise Hospital Management System built with **.NET 10, ASP.NET Core, Blazor
 > **Phase 12H:** ✅ Final UI acceptance, static-asset authentication-boundary fix, acceptance documentation, and frontend freeze complete; Antigravity and authenticated browser evidence remain environment-dependent
 >
 > **Phase 13A:** ✅ Clinical Encounter architecture accepted; domain model and provider ownership decisions are documented, with implementation intentionally deferred to the Phase13B gate
+
+> **Phase 13B:** ✅ Encounter domain model implemented and verified in Core with focused domain tests; persistence, provider ownership, and clinical workflows remain deferred
 >
 > **Pre-Phase13B:** ✅ Development-only, idempotent demo data seeding is available for `ElsheiekhHMS_Dev`; no schema, migration, Core, Application, Identity, or Encounter changes were introduced
 >
-> **Next gate:** Manual browser testing against the seeded Development database, then the Phase13B Encounter domain-model gate; 07E remains deferred and provider ownership remains blocked
+> **Next gate:** Phase13C Provider Ownership & Clinical Authorization design; 07E remains deferred and no Encounter persistence or workflow has started
 
 ---
 
