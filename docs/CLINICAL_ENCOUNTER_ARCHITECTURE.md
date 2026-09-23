@@ -1,13 +1,14 @@
 # Clinical Encounter Architecture
 
-Status: Phase 13A discovery complete; no clinical production functionality is implemented.
+Status: Phase 13C provider ownership foundation complete; no clinical production functionality is implemented.
 
 ## 1. Purpose
 
 This document defines the minimum safe clinical boundary that can follow the frozen operational
 baseline. It records evidence, proposed Encounter semantics, authorization prerequisites, and a
-sequenced Phase 13 roadmap. It does not authorize or implement an Encounter, clinical child
-records, persistence mapping, migration, service, validator, or UI.
+sequenced Phase 13 roadmap. Phase13C has implemented the approved provider ownership mapping and
+resolution foundation; it does not authorize or implement an Encounter, clinical child records,
+Encounter persistence mapping, migration, clinical service, validator, or UI.
 
 Source code and project files are authoritative. Accepted source tests and approved specifications
 follow them; historical planning examples in DEVELOPMENT_ROADMAP.md are not source evidence when
@@ -15,14 +16,15 @@ they describe models that are absent from the current checkout.
 
 ## 2. Current HMS baseline
 
-The repository is at Phase 12H. The backend and frontend baselines are accepted and frozen at
-7cefe250c618e21b516e86a1ab64ba6a4e9efa43; the verified automated baseline is 418 passing tests.
+The repository has completed Phase 12H and Phase13C. The backend and frontend baselines were
+accepted and frozen before the clinical work; the current verified automated suite is 447 passing
+tests.
 The current operational path is:
 
 Patient -> Appointment or walk-in Queue -> appointment arrival/check-in handoff -> Queue operations
 
 The current system stops at operational queue history. It has no clinical Encounter or clinical
-authoring workflow. Patient self-service and provider ownership remain deferred.
+authoring workflow. Patient self-service and provider-scoped clinical authoring remain deferred.
 
 ## 3. Existing relevant domain inventory
 
@@ -60,8 +62,10 @@ Appointment.DoctorId is required and is validated by AppointmentService through
 DoctorIsActiveInDepartmentAsync. Queue routing may assign an optional DoctorId at the AtDoctor
 stage. These are operational scheduling/routing relationships.
 
-The source contains no Doctor.ApplicationUserId, no ApplicationUser.DoctorId, no mapping entity,
-no Doctor/Provider Application contract family, and no ownership-aware provider authorization.
+The source still contains no Doctor.ApplicationUserId or ApplicationUser.DoctorId. Phase13C adds
+an Infrastructure-owned DoctorApplicationUserLink mapping with unique DoctorId/UserId keys, a
+bounded Application assignment/resolution contract, and ownership-aware provider resolution;
+Identity remains unchanged and no Doctor/Provider CRUD service was introduced.
 The canonical Provider role exists, and CanAccessClinicalRecords currently names Provider and
 Patient, but that policy does not establish which Doctor a Provider owns. The current appointment
 and queue services authorize Administrator/Receptionist operational access; they do not infer
@@ -243,16 +247,13 @@ Billing is deferred. No financial fields or billing precondition belong on Encou
 
 ## 23. Provider identity/ownership analysis
 
-A Doctor record is not an authenticated account. The current Provider role cannot safely authorize
-My Encounters, clinical authorship, or assigned-doctor access because no ownership mapping
-exists. Ownership is required before clinical authoring, but it need not block a pure Phase 13B
-Core model review.
-
-Recommended future binding is an Infrastructure-owned mapping with a unique active DoctorId and
-UserId (for example, a DoctorApplicationUserLink record with explicit assignment lifecycle).
-This keeps Identity out of Core and ApplicationUser unchanged, supports administrator-controlled
-assignment, and leaves room for safe reassignment/history. The exact mapping table and migration
-must be separately approved before authoring services.
+A Doctor record is not an authenticated account. Phase13C now provides the approved
+Infrastructure-owned `DoctorApplicationUserLink` mapping with one-to-one DoctorId/UserId keys,
+administrator-controlled assignment/unassignment, Provider-role and active-account checks, and a
+bounded Application resolution contract. This keeps Identity out of Core and leaves
+`ApplicationUser` unchanged. Provider role membership alone still does not authorize clinical
+authoring: future clinical operations must resolve the mapped active Doctor and perform resource
+checks.
 
 ## 24. Authorization proposal
 
@@ -267,7 +268,8 @@ Use backend authorization and resource checks, not UI visibility:
   superusers and may not author, sign, or act as a Doctor.
 - Stable Identity UserId remains the audit actor. The clinical author is the mapped DoctorId;
   these identities must not be conflated.
-- Provider role membership alone is insufficient until ownership mapping and resource checks exist.
+- Provider role membership alone is insufficient; ownership resolution and resource checks are
+  required for every future clinical operation.
 
 ## 25. Audit model
 
@@ -341,7 +343,7 @@ remain future decisions. No HIPAA, GDPR, Rwanda-regulation, FHIR, or HL7 complia
 
 ## 32. Deferred scope
 
-Provider ownership mapping and ownership-aware policies, Patient self-service, rich vitals,
+Ownership-aware clinical resource policies, Patient self-service, rich vitals,
 clinical notes, diagnosis/coding, prescriptions, lab/radiology, billing, encounter amendments,
 read auditing, retention policy, Encounter code allocation, dashboards, notifications,
 interoperability, admissions, and all other clinical modules remain deferred until separately
@@ -349,8 +351,8 @@ designed and approved.
 
 ## 33. Risks
 
-- Without a Doctor<->ApplicationUser binding, Provider accounts could be incorrectly granted access
-  to another clinician's records.
+- Without an ownership-aware resource check on each clinical operation, a Provider account could
+  be incorrectly granted access to another clinician's records.
 - Duplicating AppointmentId alongside QueueEntryId could create contradictory provenance.
 - Treating Queue or Appointment completion as clinical completion would lose workflow boundaries.
 - Ordinary soft deletion or unrestricted edits would damage clinical history.
@@ -375,8 +377,9 @@ authoring:
 
 - 13A — Discovery & Architecture: this document; no production change.
 - 13B — Encounter Domain Model: Core Encounter invariants and tests only; no Identity/schema.
-- 13C — Provider Ownership & Clinical Authorization Design: approve mapping, resource checks,
-  author roles, and patient privacy boundaries.
+- 13C — Provider Ownership & Clinical Authorization: Infrastructure mapping, administrative
+  assignment/unassignment, active-account resolution, ownership audit events, and migration are
+  complete; clinical resource checks remain part of later clinical services.
 - 13D — Encounter Persistence & Migration: DbSet/configuration/FKs/indexes/RowVersion and an
   additive migration after 13B/13C approval; verify isolated and development targets safely.
 - 13E — Encounter Application Contracts & Validation: bounded DTOs, requests, validators,
@@ -411,7 +414,7 @@ ApplicationUser relationship, schema, migration, UI, or clinical child records.
 | Lab | Deferred | Later | No order/result contract |
 | Radiology | Deferred | Later | No imaging contract |
 | Billing | Deferred | Later | No financial coupling |
-| Provider ownership | Required before clinical authoring | 13C | Provider role has no resource binding |
+| Provider ownership | Required before clinical authoring | 13C | Mapping and ownership resolution foundation are present; clinical resource checks remain deferred |
 | Patient self-service | Deferred | Later | No Patient<->ApplicationUser ownership |
 | Encounter code | Not required initially | Later decision | Database Id is sufficient until operational need is proven |
 | Queue->Encounter | Explicit Start from AtDoctor | 13F | Preserves Queue as operational history |
@@ -428,10 +431,12 @@ The proposed initial Encounter is a non-soft-deletable clinical record with:
 - stable audit metadata and separate clinical author DoctorId semantics;
 - RowVersion concurrency token.
 
-This is a proposal only. No code or EF mapping exists.
+The Encounter model remains a proposal only. Phase13C provider ownership code and EF mapping exist,
+but no Encounter persistence mapping exists.
 
 ## Final discovery decision
 
-There are no Critical architecture ambiguities blocking Phase13B domain-model work. Provider
-ownership is a hard prerequisite before any authenticated clinical authoring or Start Encounter
-workflow. Phase13A does not modify the backend or frontend baselines.
+There are no Critical architecture ambiguities blocking the completed Phase13B model or Phase13C
+ownership foundation. Provider ownership is now available as a prerequisite, but authenticated
+clinical authoring and Start Encounter remain blocked until Encounter persistence, resource checks,
+and workflow contracts are separately approved. Phase13C does not add clinical workflow behavior.

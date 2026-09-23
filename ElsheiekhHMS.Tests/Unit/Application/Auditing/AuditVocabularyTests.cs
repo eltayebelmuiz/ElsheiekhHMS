@@ -50,7 +50,9 @@ public sealed class AuditVocabularyTests
                 "QUEUE_ENTRY_HELD",
                 "QUEUE_ENTRY_RESUMED",
                 "QUEUE_ENTRY_COMPLETED",
-                "QUEUE_ENTRY_CANCELLED"
+                "QUEUE_ENTRY_CANCELLED",
+                "PROVIDER_OWNERSHIP_ASSIGNED",
+                "PROVIDER_OWNERSHIP_UNASSIGNED"
             ],
             AuditActions.All);
     }

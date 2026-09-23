@@ -11,12 +11,12 @@
 <footer>Architectural index, not authoritative source. Check freshness with <code>tools/graphify.ps1 -Check</code> before relying on this snapshot. No network requests or external libraries.</footer>
 <script id="graph-data" type="application/json">{
   "schemaVersion": "1.0",
-  "generatedAtUtc": "2026-09-23T13:03:15.2346121\u002B00:00",
-  "gitCommit": "8a32e6396b0a199104bb9822d5a583b6ce261167",
+  "generatedAtUtc": "2026-09-23T13:45:12.8108650\u002B00:00",
+  "gitCommit": "eb92377777230fa378e4b7be095f2d7fa170b284",
   "gitBranch": "main",
   "workingTreeDirty": true,
-  "gitStatusAtGeneration": "M README.md\n?? ElsheiekhHMS.Core/Domain/Clinical/Entities/Encounter.cs\n?? ElsheiekhHMS.Core/Domain/Clinical/Enums/EncounterStatus.cs\n?? ElsheiekhHMS.Tests/Unit/Domain/Clinical/EncounterTests.cs",
-  "sourceFingerprint": "310ce858a3d933077453196997584f0d03414ef93711ddced8475c05b8884f17",
+  "gitStatusAtGeneration": "M ElsheiekhHMS.Application/Common/Auditing/AuditActions.cs\n M ElsheiekhHMS.Infrastructure/Development/DevelopmentDataSeeder.cs\n M ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs\n M ElsheiekhHMS.Infrastructure/Migrations/ElsheiekhHmsDbContextModelSnapshot.cs\n M ElsheiekhHMS.Infrastructure/Persistence/ElsheiekhHmsDbContext.cs\n M ElsheiekhHMS.Tests/Integration/Persistence/ElsheiekhHmsDbContextSqlServerTests.cs\n M ElsheiekhHMS.Tests/Unit/Application/Auditing/AuditVocabularyTests.cs\n M README.md\n M docs/CLINICAL_ENCOUNTER_ARCHITECTURE.md\n M graphify-out/GRAPH_REPORT.md\n M graphify-out/graph.html\n M graphify-out/graph.json\n?? ElsheiekhHMS.Application/Clinical/ProviderOwnership/Contracts/AssignProviderOwnershipRequest.cs\n?? ElsheiekhHMS.Application/Clinical/ProviderOwnership/Contracts/ProviderOwnershipDto.cs\n?? ElsheiekhHMS.Application/Clinical/ProviderOwnership/IProviderOwnershipService.cs\n?? ElsheiekhHMS.Application/Clinical/ProviderOwnership/Persistence/DoctorStatusSnapshot.cs\n?? ElsheiekhHMS.Application/Clinical/ProviderOwnership/Persistence/IProviderOwnershipPersistence.cs\n?? ElsheiekhHMS.Application/Clinical/ProviderOwnership/Persistence/ProviderAccountStatus.cs\n?? ElsheiekhHMS.Application/Clinical/ProviderOwnership/Persistence/ProviderOwnershipConflictException.cs\n?? ElsheiekhHMS.Application/Clinical/ProviderOwnership/ProviderOwnershipService.cs\n?? ElsheiekhHMS.Infrastructure/Identity/Configurations/DoctorApplicationUserLinkConfiguration.cs\n?? ElsheiekhHMS.Infrastructure/Identity/Entities/DoctorApplicationUserLink.cs\n?? ElsheiekhHMS.Infrastructure/Identity/ProviderOwnershipPersistence.cs\n?? ElsheiekhHMS.Infrastructure/Migrations/20260923133220_AddProviderOwnership.Designer.cs\n?? ElsheiekhHMS.Infrastructure/Migrations/20260923133220_AddProviderOwnership.cs\n?? ElsheiekhHMS.Tests/Integration/Persistence/ProviderOwnershipSqlServerTests.cs\n?? ElsheiekhHMS.Tests/Unit/Application/Clinical/ProviderOwnershipServiceTests.cs",
+  "sourceFingerprint": "8e0911e27b72cc8507e14a978f2699e9433276f17d83f820551d9ac7f06fb958",
   "generatorFingerprint": "03eee0a8853a7e84af6cbe571d34e6f7d820505ac8f5670a719d0d63b113840c",
   "fingerprintAlgorithm": "SHA-256 of ordinal path \u002B NUL \u002B content SHA-256 records joined with LF; sourceManifest defines inputs; graphify-out excluded everywhere",
   "sourceManifest": [
@@ -85,8 +85,40 @@
       "sha256": "2b9687178744e157ddce2468bc6ec79cf20b0afd809341b547a1b6772c14c557"
     },
     {
+      "path": "ElsheiekhHMS.Application/Clinical/ProviderOwnership/Contracts/AssignProviderOwnershipRequest.cs",
+      "sha256": "7bdf7096fa8bda1d9f72f5ccd7bceb26119aa38375c8f2adff5a014653b715ed"
+    },
+    {
+      "path": "ElsheiekhHMS.Application/Clinical/ProviderOwnership/Contracts/ProviderOwnershipDto.cs",
+      "sha256": "01842b9469235950ce9d4dd0a165c9aa8022084f8cba2bb6c32ce2840495d22e"
+    },
+    {
+      "path": "ElsheiekhHMS.Application/Clinical/ProviderOwnership/IProviderOwnershipService.cs",
+      "sha256": "54b55a294b0eb3ef7c03b98167bb87da7d1a836e3c5d67fb26b7078500b4dcee"
+    },
+    {
+      "path": "ElsheiekhHMS.Application/Clinical/ProviderOwnership/Persistence/DoctorStatusSnapshot.cs",
+      "sha256": "2b39ba5390bcb4477a1cfe2f30c98657ae5805874e186542425b74c095df96aa"
+    },
+    {
+      "path": "ElsheiekhHMS.Application/Clinical/ProviderOwnership/Persistence/IProviderOwnershipPersistence.cs",
+      "sha256": "c3853ce3132a25dd5d9d7bc6f923cdb18daa6e97d2bf8162e8ee11922b02ed00"
+    },
+    {
+      "path": "ElsheiekhHMS.Application/Clinical/ProviderOwnership/Persistence/ProviderAccountStatus.cs",
+      "sha256": "683f5fbb9a4e95fbb64af2b88ee5e72ac78c765b5e20589b81bb2ae28a0eb04c"
+    },
+    {
+      "path": "ElsheiekhHMS.Application/Clinical/ProviderOwnership/Persistence/ProviderOwnershipConflictException.cs",
+      "sha256": "fdd6c19116f878d552d5c1b5fe8fe65b6a2c40219f4075d28c94a602f0db9daa"
+    },
+    {
+      "path": "ElsheiekhHMS.Application/Clinical/ProviderOwnership/ProviderOwnershipService.cs",
+      "sha256": "07863e7046e3add5df838a585bc42419eb5e867ec640dead679d63cd9cc37e0a"
+    },
+    {
       "path": "ElsheiekhHMS.Application/Common/Auditing/AuditActions.cs",
-      "sha256": "0ca46d9f53739c133fd7624d6014d68f53100247f69a5a24200f59fb00a8839a"
+      "sha256": "06046fe0106fe38acf03a97af39913e169a24398a9430b8284589213193d4c51"
     },
     {
       "path": "ElsheiekhHMS.Application/Common/Auditing/AuditActorKinds.cs",
@@ -502,7 +534,7 @@
     },
     {
       "path": "ElsheiekhHMS.Infrastructure/Development/DevelopmentDataSeeder.cs",
-      "sha256": "812836fe36eace8a02c5a95a005773e34db9d1728f83bdb9f537f4aa3ba46350"
+      "sha256": "0e9b31cefae54e1af2cedcab61b811736cdd1fbb6252fbbf08fb445ff73444f6"
     },
     {
       "path": "ElsheiekhHMS.Infrastructure/ElsheiekhHMS.Infrastructure.csproj",
@@ -525,6 +557,10 @@
       "sha256": "a5f93601170a7dd72ff97f9e255461aba8ab29706cc01c0e004a6383814a12c0"
     },
     {
+      "path": "ElsheiekhHMS.Infrastructure/Identity/Configurations/DoctorApplicationUserLinkConfiguration.cs",
+      "sha256": "aba02cfd01f95c07e447174c93f83361053df0ee78afade6b0e8f28b8f42481e"
+    },
+    {
       "path": "ElsheiekhHMS.Infrastructure/Identity/Entities/AccountSecurityState.cs",
       "sha256": "4c9f58211031e4f2d0386dabf31b5e1860ff223bab4ca4295f4aa6be1e7ee453"
     },
@@ -533,12 +569,20 @@
       "sha256": "ac55c62beceaa484c9835c9147952cfbeda93b854fa31e27f658ee8202c06185"
     },
     {
+      "path": "ElsheiekhHMS.Infrastructure/Identity/Entities/DoctorApplicationUserLink.cs",
+      "sha256": "5338c0b345267248bcf81aef0fe5b4575a1889b72060bc525552dcf8f2fab63d"
+    },
+    {
       "path": "ElsheiekhHMS.Infrastructure/Identity/IdentityRoleSeeder.cs",
       "sha256": "c835f8306df30c252a6b227931cc40cf4b65010a23a7d8bc1f7cbf21c6dd7fbd"
     },
     {
+      "path": "ElsheiekhHMS.Infrastructure/Identity/ProviderOwnershipPersistence.cs",
+      "sha256": "cbb2d1c23a5bc0476a6956a07a782d9909e23ec7f5b67825b5208b086b922d59"
+    },
+    {
       "path": "ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs",
-      "sha256": "eea37b418da8f4c54dafe68ea46d6c23440fa623d4bc0aa91752d25f803adac1"
+      "sha256": "e2f0963581800b6fe2eafdc5d6a59cd054a7b29a56009557f49e586bb7955b46"
     },
     {
       "path": "ElsheiekhHMS.Infrastructure/Migrations/20260921111137_InitialCreate.Designer.cs",
@@ -581,8 +625,16 @@
       "sha256": "1d813f48da86cf79a7342aaabd99b0b368ae01297a91daaa35fef1d8fb31af8a"
     },
     {
+      "path": "ElsheiekhHMS.Infrastructure/Migrations/20260923133220_AddProviderOwnership.Designer.cs",
+      "sha256": "5e71faaa9ff14be9765d2d2afc868f68d40e79b5fffbaefc34efe52729b2b4e4"
+    },
+    {
+      "path": "ElsheiekhHMS.Infrastructure/Migrations/20260923133220_AddProviderOwnership.cs",
+      "sha256": "06cf42a1a2859228c8e2750c8276f40862c58e4e6edac126451f66866d67101f"
+    },
+    {
       "path": "ElsheiekhHMS.Infrastructure/Migrations/ElsheiekhHmsDbContextModelSnapshot.cs",
-      "sha256": "8b23e0c9ab4eea0e4b3ec7125bf53c0076894d2a7f3e611ff61515476a8909ee"
+      "sha256": "4ce70f955c9da24742a5c329307ef0bf7d21e0291d7b93e3986105ba0bd48e68"
     },
     {
       "path": "ElsheiekhHMS.Infrastructure/Observability/RequestObservabilityMiddleware.cs",
@@ -634,7 +686,7 @@
     },
     {
       "path": "ElsheiekhHMS.Infrastructure/Persistence/ElsheiekhHmsDbContext.cs",
-      "sha256": "cb3a2b1a719f6eedbc56624eb538373883ad455ae00eddb7d2615140f180697f"
+      "sha256": "1c4dd29f22fb2e34ba91d41d51602fb5e7e5fde1a61851be9d3120f0b4ed60c0"
     },
     {
       "path": "ElsheiekhHMS.Infrastructure/Persistence/Patients/PatientPersistence.cs",
@@ -666,7 +718,7 @@
     },
     {
       "path": "ElsheiekhHMS.Tests/Integration/Persistence/ElsheiekhHmsDbContextSqlServerTests.cs",
-      "sha256": "7afc1904643d2fc08f7228f40ee061cdde84f1e988a3c6a52cb38fae1fb49a79"
+      "sha256": "e366eb80f90ed3345e52f4cfcfd1f2350bc7a6150b21c36917764bb8da4fa707"
     },
     {
       "path": "ElsheiekhHMS.Tests/Integration/Persistence/HmsHealthEndpointHostTests.cs",
@@ -683,6 +735,10 @@
     {
       "path": "ElsheiekhHMS.Tests/Integration/Persistence/PerformanceSmokeSqlServerTests.cs",
       "sha256": "8f1c630d8fa40960fb5633bbf7dee48d18c2b410a0ce75a769e521baaf7ff22b"
+    },
+    {
+      "path": "ElsheiekhHMS.Tests/Integration/Persistence/ProviderOwnershipSqlServerTests.cs",
+      "sha256": "d03e3efbb8337e498e1bb5f6fa93ec68ea9ac9b035e635af3e9771d9514e8d94"
     },
     {
       "path": "ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs",
@@ -722,7 +778,11 @@
     },
     {
       "path": "ElsheiekhHMS.Tests/Unit/Application/Auditing/AuditVocabularyTests.cs",
-      "sha256": "aa86f6c85a7f810717f2bad576bba0b77babb52be0c2467646fce5a4ad426bb1"
+      "sha256": "32fc64e0febfb336e63664ff0ae2d4e69b5f627db6fcc4e867a88a5ef52ccc85"
+    },
+    {
+      "path": "ElsheiekhHMS.Tests/Unit/Application/Clinical/ProviderOwnershipServiceTests.cs",
+      "sha256": "032deba653089b0b94dd0e78ea6e2232f99bff167ead147cb0716b20a778fc42"
     },
     {
       "path": "ElsheiekhHMS.Tests/Unit/Application/Common/Contracts/PageRequestTests.cs",
@@ -1070,7 +1130,7 @@
     },
     {
       "path": "README.md",
-      "sha256": "2edbfb1e3c3e6635eb5a9c4ce18a07abffb2ec9c36871d19d5b7d97f5bedfc8b"
+      "sha256": "37d8d1d196a0d6e1d17d32fab2b4afaadbc389e3bbcf825717bcb84031675193"
     }
   ],
   "repository": {
@@ -1080,16 +1140,16 @@
   },
   "summary": {
     "projectCount": 5,
-    "sourceFileCount": 218,
+    "sourceFileCount": 233,
     "razorFileCount": 38,
-    "typeCount": 284,
-    "interfaceCount": 14,
-    "testClassCount": 12,
-    "testMethodCount": 83,
-    "testCount": 123,
+    "typeCount": 301,
+    "interfaceCount": 16,
+    "testClassCount": 14,
+    "testMethodCount": 101,
+    "testCount": 142,
     "dynamicTheoryCount": 0,
-    "nodeCount": 641,
-    "edgeCount": 1219
+    "nodeCount": 677,
+    "edgeCount": 1309
   },
   "projects": [
     {
@@ -1128,6 +1188,14 @@
         "ElsheiekhHMS.Application/Appointments/Validation/AppointmentSearchRequestValidator.cs",
         "ElsheiekhHMS.Application/Appointments/Validation/CancelAppointmentRequestValidator.cs",
         "ElsheiekhHMS.Application/Appointments/Validation/CreateAppointmentRequestValidator.cs",
+        "ElsheiekhHMS.Application/Clinical/ProviderOwnership/Contracts/AssignProviderOwnershipRequest.cs",
+        "ElsheiekhHMS.Application/Clinical/ProviderOwnership/Contracts/ProviderOwnershipDto.cs",
+        "ElsheiekhHMS.Application/Clinical/ProviderOwnership/IProviderOwnershipService.cs",
+        "ElsheiekhHMS.Application/Clinical/ProviderOwnership/Persistence/DoctorStatusSnapshot.cs",
+        "ElsheiekhHMS.Application/Clinical/ProviderOwnership/Persistence/IProviderOwnershipPersistence.cs",
+        "ElsheiekhHMS.Application/Clinical/ProviderOwnership/Persistence/ProviderAccountStatus.cs",
+        "ElsheiekhHMS.Application/Clinical/ProviderOwnership/Persistence/ProviderOwnershipConflictException.cs",
+        "ElsheiekhHMS.Application/Clinical/ProviderOwnership/ProviderOwnershipService.cs",
         "ElsheiekhHMS.Application/Common/Auditing/AuditActions.cs",
         "ElsheiekhHMS.Application/Common/Auditing/AuditActorKinds.cs",
         "ElsheiekhHMS.Application/Common/Auditing/AuditCategories.cs",
@@ -1287,9 +1355,12 @@
         "ElsheiekhHMS.Infrastructure/Identity/AccountLoginEligibility.cs",
         "ElsheiekhHMS.Infrastructure/Identity/AdministratorBootstrapper.cs",
         "ElsheiekhHMS.Infrastructure/Identity/Configurations/ApplicationUserConfiguration.cs",
+        "ElsheiekhHMS.Infrastructure/Identity/Configurations/DoctorApplicationUserLinkConfiguration.cs",
         "ElsheiekhHMS.Infrastructure/Identity/Entities/AccountSecurityState.cs",
         "ElsheiekhHMS.Infrastructure/Identity/Entities/ApplicationUser.cs",
+        "ElsheiekhHMS.Infrastructure/Identity/Entities/DoctorApplicationUserLink.cs",
         "ElsheiekhHMS.Infrastructure/Identity/IdentityRoleSeeder.cs",
+        "ElsheiekhHMS.Infrastructure/Identity/ProviderOwnershipPersistence.cs",
         "ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs",
         "ElsheiekhHMS.Infrastructure/Migrations/20260921111137_InitialCreate.cs",
         "ElsheiekhHMS.Infrastructure/Migrations/20260921111137_InitialCreate.Designer.cs",
@@ -1301,6 +1372,8 @@
         "ElsheiekhHMS.Infrastructure/Migrations/20260922013639_AddAppointmentCodeAllocator.Designer.cs",
         "ElsheiekhHMS.Infrastructure/Migrations/20260922115337_AddAppointmentQueueLink.cs",
         "ElsheiekhHMS.Infrastructure/Migrations/20260922115337_AddAppointmentQueueLink.Designer.cs",
+        "ElsheiekhHMS.Infrastructure/Migrations/20260923133220_AddProviderOwnership.cs",
+        "ElsheiekhHMS.Infrastructure/Migrations/20260923133220_AddProviderOwnership.Designer.cs",
         "ElsheiekhHMS.Infrastructure/Migrations/ElsheiekhHmsDbContextModelSnapshot.cs",
         "ElsheiekhHMS.Infrastructure/Observability/RequestObservabilityMiddleware.cs",
         "ElsheiekhHMS.Infrastructure/Persistence/Allocation/AppointmentCodeAllocation.cs",
@@ -1366,6 +1439,7 @@
         "ElsheiekhHMS.Tests/Integration/Persistence/IdentityAndAuditLogSqlServerTests.cs",
         "ElsheiekhHMS.Tests/Integration/Persistence/PatientServiceSqlServerTests.cs",
         "ElsheiekhHMS.Tests/Integration/Persistence/PerformanceSmokeSqlServerTests.cs",
+        "ElsheiekhHMS.Tests/Integration/Persistence/ProviderOwnershipSqlServerTests.cs",
         "ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs",
         "ElsheiekhHMS.Tests/Integration/Persistence/SqlServerReadinessHealthCheckTests.cs",
         "ElsheiekhHMS.Tests/Integration/Persistence/SqlServerTestDatabaseFixture.cs",
@@ -1376,6 +1450,7 @@
         "ElsheiekhHMS.Tests/Unit/Application/Appointments/AppointmentValidationTests.cs",
         "ElsheiekhHMS.Tests/Unit/Application/Architecture/ApplicationContractArchitectureTests.cs",
         "ElsheiekhHMS.Tests/Unit/Application/Auditing/AuditVocabularyTests.cs",
+        "ElsheiekhHMS.Tests/Unit/Application/Clinical/ProviderOwnershipServiceTests.cs",
         "ElsheiekhHMS.Tests/Unit/Application/Common/Contracts/PageRequestTests.cs",
         "ElsheiekhHMS.Tests/Unit/Application/Common/Results/ServiceResultTests.cs",
         "ElsheiekhHMS.Tests/Unit/Application/Common/Validation/ValidationResultTests.cs",
@@ -1698,6 +1773,134 @@
       "project": "ElsheiekhHMS.Application",
       "file": "ElsheiekhHMS.Application/Appointments/Validation/CreateAppointmentRequestValidator.cs",
       "source_file": "ElsheiekhHMS.Application/Appointments/Validation/CreateAppointmentRequestValidator.cs",
+      "external": false,
+      "community": 0,
+      "community_name": "ElsheiekhHMS.Application",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Clinical/ProviderOwnership/Contracts/AssignProviderOwnershipRequest.cs",
+      "name": "AssignProviderOwnershipRequest.cs",
+      "label": "AssignProviderOwnershipRequest.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Application",
+      "file": "ElsheiekhHMS.Application/Clinical/ProviderOwnership/Contracts/AssignProviderOwnershipRequest.cs",
+      "source_file": "ElsheiekhHMS.Application/Clinical/ProviderOwnership/Contracts/AssignProviderOwnershipRequest.cs",
+      "external": false,
+      "community": 0,
+      "community_name": "ElsheiekhHMS.Application",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Clinical/ProviderOwnership/Contracts/ProviderOwnershipDto.cs",
+      "name": "ProviderOwnershipDto.cs",
+      "label": "ProviderOwnershipDto.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Application",
+      "file": "ElsheiekhHMS.Application/Clinical/ProviderOwnership/Contracts/ProviderOwnershipDto.cs",
+      "source_file": "ElsheiekhHMS.Application/Clinical/ProviderOwnership/Contracts/ProviderOwnershipDto.cs",
+      "external": false,
+      "community": 0,
+      "community_name": "ElsheiekhHMS.Application",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Clinical/ProviderOwnership/IProviderOwnershipService.cs",
+      "name": "IProviderOwnershipService.cs",
+      "label": "IProviderOwnershipService.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Application",
+      "file": "ElsheiekhHMS.Application/Clinical/ProviderOwnership/IProviderOwnershipService.cs",
+      "source_file": "ElsheiekhHMS.Application/Clinical/ProviderOwnership/IProviderOwnershipService.cs",
+      "external": false,
+      "community": 0,
+      "community_name": "ElsheiekhHMS.Application",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Clinical/ProviderOwnership/Persistence/DoctorStatusSnapshot.cs",
+      "name": "DoctorStatusSnapshot.cs",
+      "label": "DoctorStatusSnapshot.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Application",
+      "file": "ElsheiekhHMS.Application/Clinical/ProviderOwnership/Persistence/DoctorStatusSnapshot.cs",
+      "source_file": "ElsheiekhHMS.Application/Clinical/ProviderOwnership/Persistence/DoctorStatusSnapshot.cs",
+      "external": false,
+      "community": 0,
+      "community_name": "ElsheiekhHMS.Application",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Clinical/ProviderOwnership/Persistence/IProviderOwnershipPersistence.cs",
+      "name": "IProviderOwnershipPersistence.cs",
+      "label": "IProviderOwnershipPersistence.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Application",
+      "file": "ElsheiekhHMS.Application/Clinical/ProviderOwnership/Persistence/IProviderOwnershipPersistence.cs",
+      "source_file": "ElsheiekhHMS.Application/Clinical/ProviderOwnership/Persistence/IProviderOwnershipPersistence.cs",
+      "external": false,
+      "community": 0,
+      "community_name": "ElsheiekhHMS.Application",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Clinical/ProviderOwnership/Persistence/ProviderAccountStatus.cs",
+      "name": "ProviderAccountStatus.cs",
+      "label": "ProviderAccountStatus.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Application",
+      "file": "ElsheiekhHMS.Application/Clinical/ProviderOwnership/Persistence/ProviderAccountStatus.cs",
+      "source_file": "ElsheiekhHMS.Application/Clinical/ProviderOwnership/Persistence/ProviderAccountStatus.cs",
+      "external": false,
+      "community": 0,
+      "community_name": "ElsheiekhHMS.Application",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Clinical/ProviderOwnership/Persistence/ProviderOwnershipConflictException.cs",
+      "name": "ProviderOwnershipConflictException.cs",
+      "label": "ProviderOwnershipConflictException.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Application",
+      "file": "ElsheiekhHMS.Application/Clinical/ProviderOwnership/Persistence/ProviderOwnershipConflictException.cs",
+      "source_file": "ElsheiekhHMS.Application/Clinical/ProviderOwnership/Persistence/ProviderOwnershipConflictException.cs",
+      "external": false,
+      "community": 0,
+      "community_name": "ElsheiekhHMS.Application",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Clinical/ProviderOwnership/ProviderOwnershipService.cs",
+      "name": "ProviderOwnershipService.cs",
+      "label": "ProviderOwnershipService.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Application",
+      "file": "ElsheiekhHMS.Application/Clinical/ProviderOwnership/ProviderOwnershipService.cs",
+      "source_file": "ElsheiekhHMS.Application/Clinical/ProviderOwnership/ProviderOwnershipService.cs",
       "external": false,
       "community": 0,
       "community_name": "ElsheiekhHMS.Application",
@@ -3418,6 +3621,22 @@
       "dynamicTheories": 0
     },
     {
+      "id": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Identity/Configurations/DoctorApplicationUserLinkConfiguration.cs",
+      "name": "DoctorApplicationUserLinkConfiguration.cs",
+      "label": "DoctorApplicationUserLinkConfiguration.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Infrastructure",
+      "file": "ElsheiekhHMS.Infrastructure/Identity/Configurations/DoctorApplicationUserLinkConfiguration.cs",
+      "source_file": "ElsheiekhHMS.Infrastructure/Identity/Configurations/DoctorApplicationUserLinkConfiguration.cs",
+      "external": false,
+      "community": 2,
+      "community_name": "ElsheiekhHMS.Infrastructure",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
       "id": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Identity/Entities/AccountSecurityState.cs",
       "name": "AccountSecurityState.cs",
       "label": "AccountSecurityState.cs",
@@ -3450,6 +3669,22 @@
       "dynamicTheories": 0
     },
     {
+      "id": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Identity/Entities/DoctorApplicationUserLink.cs",
+      "name": "DoctorApplicationUserLink.cs",
+      "label": "DoctorApplicationUserLink.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Infrastructure",
+      "file": "ElsheiekhHMS.Infrastructure/Identity/Entities/DoctorApplicationUserLink.cs",
+      "source_file": "ElsheiekhHMS.Infrastructure/Identity/Entities/DoctorApplicationUserLink.cs",
+      "external": false,
+      "community": 2,
+      "community_name": "ElsheiekhHMS.Infrastructure",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
       "id": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Identity/IdentityRoleSeeder.cs",
       "name": "IdentityRoleSeeder.cs",
       "label": "IdentityRoleSeeder.cs",
@@ -3458,6 +3693,22 @@
       "project": "ElsheiekhHMS.Infrastructure",
       "file": "ElsheiekhHMS.Infrastructure/Identity/IdentityRoleSeeder.cs",
       "source_file": "ElsheiekhHMS.Infrastructure/Identity/IdentityRoleSeeder.cs",
+      "external": false,
+      "community": 2,
+      "community_name": "ElsheiekhHMS.Infrastructure",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Identity/ProviderOwnershipPersistence.cs",
+      "name": "ProviderOwnershipPersistence.cs",
+      "label": "ProviderOwnershipPersistence.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Infrastructure",
+      "file": "ElsheiekhHMS.Infrastructure/Identity/ProviderOwnershipPersistence.cs",
+      "source_file": "ElsheiekhHMS.Infrastructure/Identity/ProviderOwnershipPersistence.cs",
       "external": false,
       "community": 2,
       "community_name": "ElsheiekhHMS.Infrastructure",
@@ -3634,6 +3885,38 @@
       "project": "ElsheiekhHMS.Infrastructure",
       "file": "ElsheiekhHMS.Infrastructure/Migrations/20260922115337_AddAppointmentQueueLink.cs",
       "source_file": "ElsheiekhHMS.Infrastructure/Migrations/20260922115337_AddAppointmentQueueLink.cs",
+      "external": false,
+      "community": 2,
+      "community_name": "ElsheiekhHMS.Infrastructure",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Migrations/20260923133220_AddProviderOwnership.Designer.cs",
+      "name": "20260923133220_AddProviderOwnership.Designer.cs",
+      "label": "20260923133220_AddProviderOwnership.Designer.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Infrastructure",
+      "file": "ElsheiekhHMS.Infrastructure/Migrations/20260923133220_AddProviderOwnership.Designer.cs",
+      "source_file": "ElsheiekhHMS.Infrastructure/Migrations/20260923133220_AddProviderOwnership.Designer.cs",
+      "external": false,
+      "community": 2,
+      "community_name": "ElsheiekhHMS.Infrastructure",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Migrations/20260923133220_AddProviderOwnership.cs",
+      "name": "20260923133220_AddProviderOwnership.cs",
+      "label": "20260923133220_AddProviderOwnership.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Infrastructure",
+      "file": "ElsheiekhHMS.Infrastructure/Migrations/20260923133220_AddProviderOwnership.cs",
+      "source_file": "ElsheiekhHMS.Infrastructure/Migrations/20260923133220_AddProviderOwnership.cs",
       "external": false,
       "community": 2,
       "community_name": "ElsheiekhHMS.Infrastructure",
@@ -4042,6 +4325,22 @@
       "dynamicTheories": 0
     },
     {
+      "id": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/ProviderOwnershipSqlServerTests.cs",
+      "name": "ProviderOwnershipSqlServerTests.cs",
+      "label": "ProviderOwnershipSqlServerTests.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Tests",
+      "file": "ElsheiekhHMS.Tests/Integration/Persistence/ProviderOwnershipSqlServerTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Integration/Persistence/ProviderOwnershipSqlServerTests.cs",
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
       "id": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs",
       "name": "QueueServiceSqlServerTests.cs",
       "label": "QueueServiceSqlServerTests.cs",
@@ -4194,6 +4493,22 @@
       "project": "ElsheiekhHMS.Tests",
       "file": "ElsheiekhHMS.Tests/Unit/Application/Auditing/AuditVocabularyTests.cs",
       "source_file": "ElsheiekhHMS.Tests/Unit/Application/Auditing/AuditVocabularyTests.cs",
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Clinical/ProviderOwnershipServiceTests.cs",
+      "name": "ProviderOwnershipServiceTests.cs",
+      "label": "ProviderOwnershipServiceTests.cs",
+      "kind": "file",
+      "type": "file",
+      "project": "ElsheiekhHMS.Tests",
+      "file": "ElsheiekhHMS.Tests/Unit/Application/Clinical/ProviderOwnershipServiceTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Unit/Application/Clinical/ProviderOwnershipServiceTests.cs",
       "external": false,
       "community": 3,
       "community_name": "ElsheiekhHMS.Tests",
@@ -5621,6 +5936,51 @@
       "dynamicTheories": 0
     },
     {
+      "id": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Clinical.ProviderOwnership",
+      "name": "ElsheiekhHMS.Application.Clinical.ProviderOwnership",
+      "label": "ElsheiekhHMS.Application.Clinical.ProviderOwnership",
+      "kind": "namespace",
+      "type": "namespace",
+      "project": "ElsheiekhHMS.Application",
+      "namespace": "ElsheiekhHMS.Application.Clinical.ProviderOwnership",
+      "external": false,
+      "community": 0,
+      "community_name": "ElsheiekhHMS.Application",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Clinical.ProviderOwnership.Contracts",
+      "name": "ElsheiekhHMS.Application.Clinical.ProviderOwnership.Contracts",
+      "label": "ElsheiekhHMS.Application.Clinical.ProviderOwnership.Contracts",
+      "kind": "namespace",
+      "type": "namespace",
+      "project": "ElsheiekhHMS.Application",
+      "namespace": "ElsheiekhHMS.Application.Clinical.ProviderOwnership.Contracts",
+      "external": false,
+      "community": 0,
+      "community_name": "ElsheiekhHMS.Application",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Clinical.ProviderOwnership.Persistence",
+      "name": "ElsheiekhHMS.Application.Clinical.ProviderOwnership.Persistence",
+      "label": "ElsheiekhHMS.Application.Clinical.ProviderOwnership.Persistence",
+      "kind": "namespace",
+      "type": "namespace",
+      "project": "ElsheiekhHMS.Application",
+      "namespace": "ElsheiekhHMS.Application.Clinical.ProviderOwnership.Persistence",
+      "external": false,
+      "community": 0,
+      "community_name": "ElsheiekhHMS.Application",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
       "id": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Common.Auditing",
       "name": "ElsheiekhHMS.Application.Common.Auditing",
       "label": "ElsheiekhHMS.Application.Common.Auditing",
@@ -6408,6 +6768,21 @@
       "type": "namespace",
       "project": "ElsheiekhHMS.Tests",
       "namespace": "ElsheiekhHMS.Tests.Unit.Application.Auditing",
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Application.Clinical",
+      "name": "ElsheiekhHMS.Tests.Unit.Application.Clinical",
+      "label": "ElsheiekhHMS.Tests.Unit.Application.Clinical",
+      "kind": "namespace",
+      "type": "namespace",
+      "project": "ElsheiekhHMS.Tests",
+      "namespace": "ElsheiekhHMS.Tests.Unit.Application.Clinical",
       "external": false,
       "community": 3,
       "community_name": "ElsheiekhHMS.Tests",
@@ -7243,6 +7618,198 @@
       "source_file": "ElsheiekhHMS.Application/Appointments/Validation/CreateAppointmentRequestValidator.cs",
       "source_location": "L6",
       "line": 6,
+      "accessibility": "public",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 0,
+      "community_name": "ElsheiekhHMS.Application",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Application.Clinical.ProviderOwnership.Contracts.AssignProviderOwnershipRequest",
+      "name": "AssignProviderOwnershipRequest",
+      "label": "AssignProviderOwnershipRequest",
+      "kind": "record",
+      "type": "record",
+      "fullName": "ElsheiekhHMS.Application.Clinical.ProviderOwnership.Contracts.AssignProviderOwnershipRequest",
+      "project": "ElsheiekhHMS.Application",
+      "namespace": "ElsheiekhHMS.Application.Clinical.ProviderOwnership.Contracts",
+      "file": "ElsheiekhHMS.Application/Clinical/ProviderOwnership/Contracts/AssignProviderOwnershipRequest.cs",
+      "source_file": "ElsheiekhHMS.Application/Clinical/ProviderOwnership/Contracts/AssignProviderOwnershipRequest.cs",
+      "source_location": "L3",
+      "line": 3,
+      "accessibility": "public",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 0,
+      "community_name": "ElsheiekhHMS.Application",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Application.Clinical.ProviderOwnership.Contracts.ProviderOwnershipDto",
+      "name": "ProviderOwnershipDto",
+      "label": "ProviderOwnershipDto",
+      "kind": "record",
+      "type": "record",
+      "fullName": "ElsheiekhHMS.Application.Clinical.ProviderOwnership.Contracts.ProviderOwnershipDto",
+      "project": "ElsheiekhHMS.Application",
+      "namespace": "ElsheiekhHMS.Application.Clinical.ProviderOwnership.Contracts",
+      "file": "ElsheiekhHMS.Application/Clinical/ProviderOwnership/Contracts/ProviderOwnershipDto.cs",
+      "source_file": "ElsheiekhHMS.Application/Clinical/ProviderOwnership/Contracts/ProviderOwnershipDto.cs",
+      "source_location": "L3",
+      "line": 3,
+      "accessibility": "public",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 0,
+      "community_name": "ElsheiekhHMS.Application",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Application.Clinical.ProviderOwnership.IProviderOwnershipService",
+      "name": "IProviderOwnershipService",
+      "label": "IProviderOwnershipService",
+      "kind": "interface",
+      "type": "interface",
+      "fullName": "ElsheiekhHMS.Application.Clinical.ProviderOwnership.IProviderOwnershipService",
+      "project": "ElsheiekhHMS.Application",
+      "namespace": "ElsheiekhHMS.Application.Clinical.ProviderOwnership",
+      "file": "ElsheiekhHMS.Application/Clinical/ProviderOwnership/IProviderOwnershipService.cs",
+      "source_file": "ElsheiekhHMS.Application/Clinical/ProviderOwnership/IProviderOwnershipService.cs",
+      "source_location": "L6",
+      "line": 6,
+      "accessibility": "public",
+      "abstract": true,
+      "sealed": false,
+      "static": false,
+      "external": false,
+      "community": 0,
+      "community_name": "ElsheiekhHMS.Application",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Application.Clinical.ProviderOwnership.Persistence.DoctorStatusSnapshot",
+      "name": "DoctorStatusSnapshot",
+      "label": "DoctorStatusSnapshot",
+      "kind": "record",
+      "type": "record",
+      "fullName": "ElsheiekhHMS.Application.Clinical.ProviderOwnership.Persistence.DoctorStatusSnapshot",
+      "project": "ElsheiekhHMS.Application",
+      "namespace": "ElsheiekhHMS.Application.Clinical.ProviderOwnership.Persistence",
+      "file": "ElsheiekhHMS.Application/Clinical/ProviderOwnership/Persistence/DoctorStatusSnapshot.cs",
+      "source_file": "ElsheiekhHMS.Application/Clinical/ProviderOwnership/Persistence/DoctorStatusSnapshot.cs",
+      "source_location": "L3",
+      "line": 3,
+      "accessibility": "public",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 0,
+      "community_name": "ElsheiekhHMS.Application",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Application.Clinical.ProviderOwnership.Persistence.IProviderOwnershipPersistence",
+      "name": "IProviderOwnershipPersistence",
+      "label": "IProviderOwnershipPersistence",
+      "kind": "interface",
+      "type": "interface",
+      "fullName": "ElsheiekhHMS.Application.Clinical.ProviderOwnership.Persistence.IProviderOwnershipPersistence",
+      "project": "ElsheiekhHMS.Application",
+      "namespace": "ElsheiekhHMS.Application.Clinical.ProviderOwnership.Persistence",
+      "file": "ElsheiekhHMS.Application/Clinical/ProviderOwnership/Persistence/IProviderOwnershipPersistence.cs",
+      "source_file": "ElsheiekhHMS.Application/Clinical/ProviderOwnership/Persistence/IProviderOwnershipPersistence.cs",
+      "source_location": "L5",
+      "line": 5,
+      "accessibility": "public",
+      "abstract": true,
+      "sealed": false,
+      "static": false,
+      "external": false,
+      "community": 0,
+      "community_name": "ElsheiekhHMS.Application",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Application.Clinical.ProviderOwnership.Persistence.ProviderAccountStatus",
+      "name": "ProviderAccountStatus",
+      "label": "ProviderAccountStatus",
+      "kind": "record",
+      "type": "record",
+      "fullName": "ElsheiekhHMS.Application.Clinical.ProviderOwnership.Persistence.ProviderAccountStatus",
+      "project": "ElsheiekhHMS.Application",
+      "namespace": "ElsheiekhHMS.Application.Clinical.ProviderOwnership.Persistence",
+      "file": "ElsheiekhHMS.Application/Clinical/ProviderOwnership/Persistence/ProviderAccountStatus.cs",
+      "source_file": "ElsheiekhHMS.Application/Clinical/ProviderOwnership/Persistence/ProviderAccountStatus.cs",
+      "source_location": "L3",
+      "line": 3,
+      "accessibility": "public",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 0,
+      "community_name": "ElsheiekhHMS.Application",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Application.Clinical.ProviderOwnership.Persistence.ProviderOwnershipConflictException",
+      "name": "ProviderOwnershipConflictException",
+      "label": "ProviderOwnershipConflictException",
+      "kind": "class",
+      "type": "class",
+      "fullName": "ElsheiekhHMS.Application.Clinical.ProviderOwnership.Persistence.ProviderOwnershipConflictException",
+      "project": "ElsheiekhHMS.Application",
+      "namespace": "ElsheiekhHMS.Application.Clinical.ProviderOwnership.Persistence",
+      "file": "ElsheiekhHMS.Application/Clinical/ProviderOwnership/Persistence/ProviderOwnershipConflictException.cs",
+      "source_file": "ElsheiekhHMS.Application/Clinical/ProviderOwnership/Persistence/ProviderOwnershipConflictException.cs",
+      "source_location": "L3",
+      "line": 3,
+      "accessibility": "public",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 0,
+      "community_name": "ElsheiekhHMS.Application",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Application.Clinical.ProviderOwnership.ProviderOwnershipService",
+      "name": "ProviderOwnershipService",
+      "label": "ProviderOwnershipService",
+      "kind": "class",
+      "type": "class",
+      "fullName": "ElsheiekhHMS.Application.Clinical.ProviderOwnership.ProviderOwnershipService",
+      "project": "ElsheiekhHMS.Application",
+      "namespace": "ElsheiekhHMS.Application.Clinical.ProviderOwnership",
+      "file": "ElsheiekhHMS.Application/Clinical/ProviderOwnership/ProviderOwnershipService.cs",
+      "source_file": "ElsheiekhHMS.Application/Clinical/ProviderOwnership/ProviderOwnershipService.cs",
+      "source_location": "L9",
+      "line": 9,
       "accessibility": "public",
       "abstract": false,
       "sealed": true,
@@ -9785,8 +10352,8 @@
       "namespace": "ElsheiekhHMS.Infrastructure.Development",
       "file": "ElsheiekhHMS.Infrastructure/Development/DevelopmentDataSeeder.cs",
       "source_file": "ElsheiekhHMS.Infrastructure/Development/DevelopmentDataSeeder.cs",
-      "source_location": "L39",
-      "line": 39,
+      "source_location": "L42",
+      "line": 42,
       "accessibility": "public",
       "abstract": false,
       "sealed": true,
@@ -9809,8 +10376,8 @@
       "namespace": "ElsheiekhHMS.Infrastructure.Development",
       "file": "ElsheiekhHMS.Infrastructure/Development/DevelopmentDataSeeder.cs",
       "source_file": "ElsheiekhHMS.Infrastructure/Development/DevelopmentDataSeeder.cs",
-      "source_location": "L425",
-      "line": 425,
+      "source_location": "L452",
+      "line": 452,
       "accessibility": "private",
       "abstract": false,
       "sealed": true,
@@ -9967,6 +10534,30 @@
       "dynamicTheories": 0
     },
     {
+      "id": "type:ElsheiekhHMS.Infrastructure.Identity.Configurations.DoctorApplicationUserLinkConfiguration",
+      "name": "DoctorApplicationUserLinkConfiguration",
+      "label": "DoctorApplicationUserLinkConfiguration",
+      "kind": "class",
+      "type": "class",
+      "fullName": "ElsheiekhHMS.Infrastructure.Identity.Configurations.DoctorApplicationUserLinkConfiguration",
+      "project": "ElsheiekhHMS.Infrastructure",
+      "namespace": "ElsheiekhHMS.Infrastructure.Identity.Configurations",
+      "file": "ElsheiekhHMS.Infrastructure/Identity/Configurations/DoctorApplicationUserLinkConfiguration.cs",
+      "source_file": "ElsheiekhHMS.Infrastructure/Identity/Configurations/DoctorApplicationUserLinkConfiguration.cs",
+      "source_location": "L8",
+      "line": 8,
+      "accessibility": "public",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 2,
+      "community_name": "ElsheiekhHMS.Infrastructure",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
       "id": "type:ElsheiekhHMS.Infrastructure.Identity.Entities.AccountSecurityState",
       "name": "AccountSecurityState",
       "label": "AccountSecurityState",
@@ -10015,6 +10606,30 @@
       "dynamicTheories": 0
     },
     {
+      "id": "type:ElsheiekhHMS.Infrastructure.Identity.Entities.DoctorApplicationUserLink",
+      "name": "DoctorApplicationUserLink",
+      "label": "DoctorApplicationUserLink",
+      "kind": "class",
+      "type": "class",
+      "fullName": "ElsheiekhHMS.Infrastructure.Identity.Entities.DoctorApplicationUserLink",
+      "project": "ElsheiekhHMS.Infrastructure",
+      "namespace": "ElsheiekhHMS.Infrastructure.Identity.Entities",
+      "file": "ElsheiekhHMS.Infrastructure/Identity/Entities/DoctorApplicationUserLink.cs",
+      "source_file": "ElsheiekhHMS.Infrastructure/Identity/Entities/DoctorApplicationUserLink.cs",
+      "source_location": "L3",
+      "line": 3,
+      "accessibility": "public",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 2,
+      "community_name": "ElsheiekhHMS.Infrastructure",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
       "id": "type:ElsheiekhHMS.Infrastructure.Identity.IdentityRoleSeeder",
       "name": "IdentityRoleSeeder",
       "label": "IdentityRoleSeeder",
@@ -10039,6 +10654,30 @@
       "dynamicTheories": 0
     },
     {
+      "id": "type:ElsheiekhHMS.Infrastructure.Identity.ProviderOwnershipPersistence",
+      "name": "ProviderOwnershipPersistence",
+      "label": "ProviderOwnershipPersistence",
+      "kind": "class",
+      "type": "class",
+      "fullName": "ElsheiekhHMS.Infrastructure.Identity.ProviderOwnershipPersistence",
+      "project": "ElsheiekhHMS.Infrastructure",
+      "namespace": "ElsheiekhHMS.Infrastructure.Identity",
+      "file": "ElsheiekhHMS.Infrastructure/Identity/ProviderOwnershipPersistence.cs",
+      "source_file": "ElsheiekhHMS.Infrastructure/Identity/ProviderOwnershipPersistence.cs",
+      "source_location": "L11",
+      "line": 11,
+      "accessibility": "public",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 2,
+      "community_name": "ElsheiekhHMS.Infrastructure",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
       "id": "type:ElsheiekhHMS.Infrastructure.InfrastructureServiceExtensions",
       "name": "InfrastructureServiceExtensions",
       "label": "InfrastructureServiceExtensions",
@@ -10049,8 +10688,8 @@
       "namespace": "ElsheiekhHMS.Infrastructure",
       "file": "ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs",
       "source_file": "ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs",
-      "source_location": "L37",
-      "line": 37,
+      "source_location": "L39",
+      "line": 39,
       "accessibility": "public",
       "abstract": false,
       "sealed": false,
@@ -10147,6 +10786,30 @@
       "source_file": "ElsheiekhHMS.Infrastructure/Migrations/20260921230714_AddPhase07AllocatorInfrastructure.cs",
       "source_location": "L9",
       "line": 9,
+      "accessibility": "public",
+      "abstract": false,
+      "sealed": false,
+      "static": false,
+      "external": false,
+      "community": 2,
+      "community_name": "ElsheiekhHMS.Infrastructure",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Infrastructure.Migrations.AddProviderOwnership",
+      "name": "AddProviderOwnership",
+      "label": "AddProviderOwnership",
+      "kind": "class",
+      "type": "class",
+      "fullName": "ElsheiekhHMS.Infrastructure.Migrations.AddProviderOwnership",
+      "project": "ElsheiekhHMS.Infrastructure",
+      "namespace": "ElsheiekhHMS.Infrastructure.Migrations",
+      "file": "ElsheiekhHMS.Infrastructure/Migrations/20260923133220_AddProviderOwnership.cs",
+      "source_file": "ElsheiekhHMS.Infrastructure/Migrations/20260923133220_AddProviderOwnership.cs",
+      "source_location": "L8",
+      "line": 8,
       "accessibility": "public",
       "abstract": false,
       "sealed": false,
@@ -10985,8 +11648,8 @@
       "namespace": "ElsheiekhHMS.Tests.Integration.Persistence",
       "file": "ElsheiekhHMS.Tests/Integration/Persistence/ElsheiekhHmsDbContextSqlServerTests.cs",
       "source_file": "ElsheiekhHMS.Tests/Integration/Persistence/ElsheiekhHmsDbContextSqlServerTests.cs",
-      "source_location": "L208",
-      "line": 208,
+      "source_location": "L209",
+      "line": 209,
       "accessibility": "private",
       "abstract": false,
       "sealed": true,
@@ -11009,8 +11672,8 @@
       "namespace": "ElsheiekhHMS.Tests.Integration.Persistence",
       "file": "ElsheiekhHMS.Tests/Integration/Persistence/ElsheiekhHmsDbContextSqlServerTests.cs",
       "source_file": "ElsheiekhHMS.Tests/Integration/Persistence/ElsheiekhHmsDbContextSqlServerTests.cs",
-      "source_location": "L196",
-      "line": 196,
+      "source_location": "L197",
+      "line": 197,
       "accessibility": "private",
       "abstract": false,
       "sealed": true,
@@ -11308,6 +11971,35 @@
       "community_name": "ElsheiekhHMS.Tests",
       "testMethods": [],
       "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Tests.Integration.Persistence.ProviderOwnershipSqlServerTests",
+      "name": "ProviderOwnershipSqlServerTests",
+      "label": "ProviderOwnershipSqlServerTests",
+      "kind": "test-class",
+      "type": "test-class",
+      "fullName": "ElsheiekhHMS.Tests.Integration.Persistence.ProviderOwnershipSqlServerTests",
+      "project": "ElsheiekhHMS.Tests",
+      "namespace": "ElsheiekhHMS.Tests.Integration.Persistence",
+      "file": "ElsheiekhHMS.Tests/Integration/Persistence/ProviderOwnershipSqlServerTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Integration/Persistence/ProviderOwnershipSqlServerTests.cs",
+      "source_location": "L10",
+      "line": 10,
+      "accessibility": "public",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [
+        "Doctor_primary_key_rejects_two_users_for_one_doctor",
+        "Ownership_roundtrips_and_unassignment_preserves_doctor_and_user",
+        "Restrictive_foreign_keys_preserve_history_when_principal_delete_is_attempted",
+        "Unique_user_index_rejects_two_doctors_for_one_user"
+      ],
+      "staticTestCases": 4,
       "dynamicTheories": 0
     },
     {
@@ -11744,6 +12436,117 @@
         "Categories_have_stable_persisted_values"
       ],
       "staticTestCases": 3,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Tests.Unit.Application.Clinical.ProviderOwnershipServiceTests",
+      "name": "ProviderOwnershipServiceTests",
+      "label": "ProviderOwnershipServiceTests",
+      "kind": "test-class",
+      "type": "test-class",
+      "fullName": "ElsheiekhHMS.Tests.Unit.Application.Clinical.ProviderOwnershipServiceTests",
+      "project": "ElsheiekhHMS.Tests",
+      "namespace": "ElsheiekhHMS.Tests.Unit.Application.Clinical",
+      "file": "ElsheiekhHMS.Tests/Unit/Application/Clinical/ProviderOwnershipServiceTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Unit/Application/Clinical/ProviderOwnershipServiceTests.cs",
+      "source_location": "L10",
+      "line": 10,
+      "accessibility": "public",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [
+        "Assign_is_idempotent_for_the_same_user_and_doctor",
+        "Assign_maps_active_provider_and_records_one_audit_write",
+        "Assign_rejects_a_doctor_that_is_already_owned",
+        "Assign_rejects_a_user_that_is_already_owned",
+        "Assign_rejects_a_user_without_the_provider_role",
+        "Assign_rejects_inactive_or_disabled_provider",
+        "Assign_rejects_missing_doctor",
+        "Assign_rejects_missing_user",
+        "Assign_requires_an_administrator_role_for_the_assigning_actor",
+        "Resolve_rejects_a_provider_without_a_mapping",
+        "Resolve_rejects_an_ineligible_provider_account",
+        "Resolve_rejects_anonymous_and_non_provider_accounts",
+        "Resolve_returns_the_active_mapped_doctor_id",
+        "Unassign_removes_only_the_mapping_and_audits_the_action"
+      ],
+      "staticTestCases": 15,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Tests.Unit.Application.Clinical.ProviderOwnershipServiceTests.FakeProviderOwnershipPersistence",
+      "name": "FakeProviderOwnershipPersistence",
+      "label": "FakeProviderOwnershipPersistence",
+      "kind": "class",
+      "type": "class",
+      "fullName": "ElsheiekhHMS.Tests.Unit.Application.Clinical.ProviderOwnershipServiceTests.FakeProviderOwnershipPersistence",
+      "project": "ElsheiekhHMS.Tests",
+      "namespace": "ElsheiekhHMS.Tests.Unit.Application.Clinical",
+      "file": "ElsheiekhHMS.Tests/Unit/Application/Clinical/ProviderOwnershipServiceTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Unit/Application/Clinical/ProviderOwnershipServiceTests.cs",
+      "source_location": "L250",
+      "line": 250,
+      "accessibility": "private",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Tests.Unit.Application.Clinical.ProviderOwnershipServiceTests.TestAuditWriter",
+      "name": "TestAuditWriter",
+      "label": "TestAuditWriter",
+      "kind": "class",
+      "type": "class",
+      "fullName": "ElsheiekhHMS.Tests.Unit.Application.Clinical.ProviderOwnershipServiceTests.TestAuditWriter",
+      "project": "ElsheiekhHMS.Tests",
+      "namespace": "ElsheiekhHMS.Tests.Unit.Application.Clinical",
+      "file": "ElsheiekhHMS.Tests/Unit/Application/Clinical/ProviderOwnershipServiceTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Unit/Application/Clinical/ProviderOwnershipServiceTests.cs",
+      "source_location": "L239",
+      "line": 239,
+      "accessibility": "private",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
+      "dynamicTheories": 0
+    },
+    {
+      "id": "type:ElsheiekhHMS.Tests.Unit.Application.Clinical.ProviderOwnershipServiceTests.TestCurrentUser",
+      "name": "TestCurrentUser",
+      "label": "TestCurrentUser",
+      "kind": "class",
+      "type": "class",
+      "fullName": "ElsheiekhHMS.Tests.Unit.Application.Clinical.ProviderOwnershipServiceTests.TestCurrentUser",
+      "project": "ElsheiekhHMS.Tests",
+      "namespace": "ElsheiekhHMS.Tests.Unit.Application.Clinical",
+      "file": "ElsheiekhHMS.Tests/Unit/Application/Clinical/ProviderOwnershipServiceTests.cs",
+      "source_file": "ElsheiekhHMS.Tests/Unit/Application/Clinical/ProviderOwnershipServiceTests.cs",
+      "source_location": "L228",
+      "line": 228,
+      "accessibility": "private",
+      "abstract": false,
+      "sealed": true,
+      "static": false,
+      "external": false,
+      "community": 3,
+      "community_name": "ElsheiekhHMS.Tests",
+      "testMethods": [],
+      "staticTestCases": 0,
       "dynamicTheories": 0
     },
     {
@@ -14123,6 +14926,78 @@
       "weight": 1
     },
     {
+      "source": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Clinical/ProviderOwnership/Contracts/AssignProviderOwnershipRequest.cs",
+      "target": "type:ElsheiekhHMS.Application.Clinical.ProviderOwnership.Contracts.AssignProviderOwnershipRequest",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Application/Clinical/ProviderOwnership/Contracts/AssignProviderOwnershipRequest.cs:L3",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Clinical/ProviderOwnership/Contracts/ProviderOwnershipDto.cs",
+      "target": "type:ElsheiekhHMS.Application.Clinical.ProviderOwnership.Contracts.ProviderOwnershipDto",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Application/Clinical/ProviderOwnership/Contracts/ProviderOwnershipDto.cs:L3",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Clinical/ProviderOwnership/IProviderOwnershipService.cs",
+      "target": "type:ElsheiekhHMS.Application.Clinical.ProviderOwnership.IProviderOwnershipService",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Application/Clinical/ProviderOwnership/IProviderOwnershipService.cs:L6",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Clinical/ProviderOwnership/Persistence/DoctorStatusSnapshot.cs",
+      "target": "type:ElsheiekhHMS.Application.Clinical.ProviderOwnership.Persistence.DoctorStatusSnapshot",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Application/Clinical/ProviderOwnership/Persistence/DoctorStatusSnapshot.cs:L3",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Clinical/ProviderOwnership/Persistence/IProviderOwnershipPersistence.cs",
+      "target": "type:ElsheiekhHMS.Application.Clinical.ProviderOwnership.Persistence.IProviderOwnershipPersistence",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Application/Clinical/ProviderOwnership/Persistence/IProviderOwnershipPersistence.cs:L5",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Clinical/ProviderOwnership/Persistence/ProviderAccountStatus.cs",
+      "target": "type:ElsheiekhHMS.Application.Clinical.ProviderOwnership.Persistence.ProviderAccountStatus",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Application/Clinical/ProviderOwnership/Persistence/ProviderAccountStatus.cs:L3",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Clinical/ProviderOwnership/Persistence/ProviderOwnershipConflictException.cs",
+      "target": "type:ElsheiekhHMS.Application.Clinical.ProviderOwnership.Persistence.ProviderOwnershipConflictException",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Application/Clinical/ProviderOwnership/Persistence/ProviderOwnershipConflictException.cs:L3",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Clinical/ProviderOwnership/ProviderOwnershipService.cs",
+      "target": "type:ElsheiekhHMS.Application.Clinical.ProviderOwnership.ProviderOwnershipService",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Application/Clinical/ProviderOwnership/ProviderOwnershipService.cs:L9",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
       "source": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Common/Auditing/AuditActions.cs",
       "target": "type:ElsheiekhHMS.Application.Common.Auditing.AuditActions",
       "type": "declares",
@@ -15071,7 +15946,7 @@
       "source": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Development/DevelopmentDataSeeder.cs",
       "target": "type:ElsheiekhHMS.Infrastructure.Development.DevelopmentDataSeeder",
       "type": "declares",
-      "evidence": "ElsheiekhHMS.Infrastructure/Development/DevelopmentDataSeeder.cs:L39",
+      "evidence": "ElsheiekhHMS.Infrastructure/Development/DevelopmentDataSeeder.cs:L42",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -15080,7 +15955,7 @@
       "source": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Development/DevelopmentDataSeeder.cs",
       "target": "type:ElsheiekhHMS.Infrastructure.Development.DevelopmentDataSeeder.SeedCurrentUser",
       "type": "declares",
-      "evidence": "ElsheiekhHMS.Infrastructure/Development/DevelopmentDataSeeder.cs:L425",
+      "evidence": "ElsheiekhHMS.Infrastructure/Development/DevelopmentDataSeeder.cs:L452",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -15140,6 +16015,15 @@
       "weight": 1
     },
     {
+      "source": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Identity/Configurations/DoctorApplicationUserLinkConfiguration.cs",
+      "target": "type:ElsheiekhHMS.Infrastructure.Identity.Configurations.DoctorApplicationUserLinkConfiguration",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Infrastructure/Identity/Configurations/DoctorApplicationUserLinkConfiguration.cs:L8",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
       "source": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Identity/Entities/AccountSecurityState.cs",
       "target": "type:ElsheiekhHMS.Infrastructure.Identity.Entities.AccountSecurityState",
       "type": "declares",
@@ -15158,6 +16042,15 @@
       "weight": 1
     },
     {
+      "source": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Identity/Entities/DoctorApplicationUserLink.cs",
+      "target": "type:ElsheiekhHMS.Infrastructure.Identity.Entities.DoctorApplicationUserLink",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Infrastructure/Identity/Entities/DoctorApplicationUserLink.cs:L3",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
       "source": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Identity/IdentityRoleSeeder.cs",
       "target": "type:ElsheiekhHMS.Infrastructure.Identity.IdentityRoleSeeder",
       "type": "declares",
@@ -15167,10 +16060,19 @@
       "weight": 1
     },
     {
+      "source": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Identity/ProviderOwnershipPersistence.cs",
+      "target": "type:ElsheiekhHMS.Infrastructure.Identity.ProviderOwnershipPersistence",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Infrastructure/Identity/ProviderOwnershipPersistence.cs:L11",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
       "source": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs",
       "target": "type:ElsheiekhHMS.Infrastructure.InfrastructureServiceExtensions",
       "type": "declares",
-      "evidence": "ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs:L37",
+      "evidence": "ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs:L39",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -15261,6 +16163,24 @@
       "target": "type:ElsheiekhHMS.Infrastructure.Migrations.AddAppointmentQueueLink",
       "type": "declares",
       "evidence": "ElsheiekhHMS.Infrastructure/Migrations/20260922115337_AddAppointmentQueueLink.cs:L8",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Migrations/20260923133220_AddProviderOwnership.Designer.cs",
+      "target": "type:ElsheiekhHMS.Infrastructure.Migrations.AddProviderOwnership",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Infrastructure/Migrations/20260923133220_AddProviderOwnership.Designer.cs:L8",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Migrations/20260923133220_AddProviderOwnership.cs",
+      "target": "type:ElsheiekhHMS.Infrastructure.Migrations.AddProviderOwnership",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Infrastructure/Migrations/20260923133220_AddProviderOwnership.cs:L8",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -15566,7 +16486,7 @@
       "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/ElsheiekhHmsDbContextSqlServerTests.cs",
       "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.ElsheiekhHmsDbContextSqlServerTests.FixedTimeProvider",
       "type": "declares",
-      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/ElsheiekhHmsDbContextSqlServerTests.cs:L208",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/ElsheiekhHmsDbContextSqlServerTests.cs:L209",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -15575,7 +16495,7 @@
       "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/ElsheiekhHmsDbContextSqlServerTests.cs",
       "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.ElsheiekhHmsDbContextSqlServerTests.TestCurrentUser",
       "type": "declares",
-      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/ElsheiekhHmsDbContextSqlServerTests.cs:L196",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/ElsheiekhHmsDbContextSqlServerTests.cs:L197",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -15684,6 +16604,15 @@
       "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.PerformanceSmokeSqlServerTests.TestCurrentUser",
       "type": "declares",
       "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/PerformanceSmokeSqlServerTests.cs:L245",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/ProviderOwnershipSqlServerTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.ProviderOwnershipSqlServerTests",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/ProviderOwnershipSqlServerTests.cs:L10",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -15846,6 +16775,42 @@
       "target": "type:ElsheiekhHMS.Tests.Unit.Application.Auditing.AuditVocabularyTests",
       "type": "declares",
       "evidence": "ElsheiekhHMS.Tests/Unit/Application/Auditing/AuditVocabularyTests.cs:L6",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Clinical/ProviderOwnershipServiceTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Application.Clinical.ProviderOwnershipServiceTests",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Clinical/ProviderOwnershipServiceTests.cs:L10",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Clinical/ProviderOwnershipServiceTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Application.Clinical.ProviderOwnershipServiceTests.FakeProviderOwnershipPersistence",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Clinical/ProviderOwnershipServiceTests.cs:L250",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Clinical/ProviderOwnershipServiceTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Application.Clinical.ProviderOwnershipServiceTests.TestAuditWriter",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Clinical/ProviderOwnershipServiceTests.cs:L239",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Clinical/ProviderOwnershipServiceTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Application.Clinical.ProviderOwnershipServiceTests.TestCurrentUser",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Clinical/ProviderOwnershipServiceTests.cs:L228",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -16725,6 +17690,78 @@
     },
     {
       "source": "project:ElsheiekhHMS.Application",
+      "target": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Clinical/ProviderOwnership/Contracts/AssignProviderOwnershipRequest.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Application/ElsheiekhHMS.Application.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Application",
+      "target": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Clinical/ProviderOwnership/Contracts/ProviderOwnershipDto.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Application/ElsheiekhHMS.Application.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Application",
+      "target": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Clinical/ProviderOwnership/IProviderOwnershipService.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Application/ElsheiekhHMS.Application.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Application",
+      "target": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Clinical/ProviderOwnership/Persistence/DoctorStatusSnapshot.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Application/ElsheiekhHMS.Application.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Application",
+      "target": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Clinical/ProviderOwnership/Persistence/IProviderOwnershipPersistence.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Application/ElsheiekhHMS.Application.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Application",
+      "target": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Clinical/ProviderOwnership/Persistence/ProviderAccountStatus.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Application/ElsheiekhHMS.Application.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Application",
+      "target": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Clinical/ProviderOwnership/Persistence/ProviderOwnershipConflictException.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Application/ElsheiekhHMS.Application.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Application",
+      "target": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Clinical/ProviderOwnership/ProviderOwnershipService.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Application/ElsheiekhHMS.Application.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Application",
       "target": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Common/Auditing/AuditActions.cs",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Application/ElsheiekhHMS.Application.csproj",
@@ -17400,6 +18437,33 @@
     },
     {
       "source": "project:ElsheiekhHMS.Application",
+      "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Clinical.ProviderOwnership",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Application/Clinical/ProviderOwnership/IProviderOwnershipService.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Application",
+      "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Clinical.ProviderOwnership.Contracts",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Application/Clinical/ProviderOwnership/Contracts/AssignProviderOwnershipRequest.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Application",
+      "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Clinical.ProviderOwnership.Persistence",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Application/Clinical/ProviderOwnership/Persistence/DoctorStatusSnapshot.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Application",
       "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Common.Auditing",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Application/Common/Auditing/AuditActions.cs",
@@ -18021,6 +19085,15 @@
     },
     {
       "source": "project:ElsheiekhHMS.Infrastructure",
+      "target": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Identity/Configurations/DoctorApplicationUserLinkConfiguration.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Infrastructure/ElsheiekhHMS.Infrastructure.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Infrastructure",
       "target": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Identity/Entities/AccountSecurityState.cs",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Infrastructure/ElsheiekhHMS.Infrastructure.csproj",
@@ -18039,7 +19112,25 @@
     },
     {
       "source": "project:ElsheiekhHMS.Infrastructure",
+      "target": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Identity/Entities/DoctorApplicationUserLink.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Infrastructure/ElsheiekhHMS.Infrastructure.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Infrastructure",
       "target": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Identity/IdentityRoleSeeder.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Infrastructure/ElsheiekhHMS.Infrastructure.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Infrastructure",
+      "target": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Identity/ProviderOwnershipPersistence.cs",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Infrastructure/ElsheiekhHMS.Infrastructure.csproj",
       "relation": "contains",
@@ -18139,6 +19230,24 @@
     {
       "source": "project:ElsheiekhHMS.Infrastructure",
       "target": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Migrations/20260922115337_AddAppointmentQueueLink.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Infrastructure/ElsheiekhHMS.Infrastructure.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Infrastructure",
+      "target": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Migrations/20260923133220_AddProviderOwnership.Designer.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Infrastructure/ElsheiekhHMS.Infrastructure.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Infrastructure",
+      "target": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Migrations/20260923133220_AddProviderOwnership.cs",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Infrastructure/ElsheiekhHMS.Infrastructure.csproj",
       "relation": "contains",
@@ -18552,6 +19661,15 @@
     },
     {
       "source": "project:ElsheiekhHMS.Tests",
+      "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/ProviderOwnershipSqlServerTests.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Tests",
       "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
@@ -18634,6 +19752,15 @@
     {
       "source": "project:ElsheiekhHMS.Tests",
       "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Auditing/AuditVocabularyTests.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Tests",
+      "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Clinical/ProviderOwnershipServiceTests.cs",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
       "relation": "contains",
@@ -19050,6 +20177,15 @@
       "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Application.Auditing",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Tests/Unit/Application/Auditing/AuditVocabularyTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Tests",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Application.Clinical",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Clinical/ProviderOwnershipServiceTests.cs",
       "relation": "contains",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -19986,6 +21122,132 @@
       "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Appointments.Validation",
       "type": "namespace-membership",
       "evidence": "ElsheiekhHMS.Application/Appointments/Validation/CreateAppointmentRequestValidator.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Application.Clinical.ProviderOwnership.Contracts.AssignProviderOwnershipRequest",
+      "target": "type:System.IEquatable\u003CT\u003E",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Application/Clinical/ProviderOwnership/Contracts/AssignProviderOwnershipRequest.cs:L3",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Application.Clinical.ProviderOwnership.Contracts.AssignProviderOwnershipRequest",
+      "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Clinical.ProviderOwnership.Contracts",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Application/Clinical/ProviderOwnership/Contracts/AssignProviderOwnershipRequest.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Application.Clinical.ProviderOwnership.Contracts.ProviderOwnershipDto",
+      "target": "type:System.IEquatable\u003CT\u003E",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Application/Clinical/ProviderOwnership/Contracts/ProviderOwnershipDto.cs:L3",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Application.Clinical.ProviderOwnership.Contracts.ProviderOwnershipDto",
+      "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Clinical.ProviderOwnership.Contracts",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Application/Clinical/ProviderOwnership/Contracts/ProviderOwnershipDto.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Application.Clinical.ProviderOwnership.IProviderOwnershipService",
+      "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Clinical.ProviderOwnership",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Application/Clinical/ProviderOwnership/IProviderOwnershipService.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Application.Clinical.ProviderOwnership.Persistence.DoctorStatusSnapshot",
+      "target": "type:System.IEquatable\u003CT\u003E",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Application/Clinical/ProviderOwnership/Persistence/DoctorStatusSnapshot.cs:L3",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Application.Clinical.ProviderOwnership.Persistence.DoctorStatusSnapshot",
+      "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Clinical.ProviderOwnership.Persistence",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Application/Clinical/ProviderOwnership/Persistence/DoctorStatusSnapshot.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Application.Clinical.ProviderOwnership.Persistence.IProviderOwnershipPersistence",
+      "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Clinical.ProviderOwnership.Persistence",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Application/Clinical/ProviderOwnership/Persistence/IProviderOwnershipPersistence.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Application.Clinical.ProviderOwnership.Persistence.ProviderAccountStatus",
+      "target": "type:System.IEquatable\u003CT\u003E",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Application/Clinical/ProviderOwnership/Persistence/ProviderAccountStatus.cs:L3",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Application.Clinical.ProviderOwnership.Persistence.ProviderAccountStatus",
+      "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Clinical.ProviderOwnership.Persistence",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Application/Clinical/ProviderOwnership/Persistence/ProviderAccountStatus.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Application.Clinical.ProviderOwnership.Persistence.ProviderOwnershipConflictException",
+      "target": "type:System.Exception",
+      "type": "inherits",
+      "evidence": "ElsheiekhHMS.Application/Clinical/ProviderOwnership/Persistence/ProviderOwnershipConflictException.cs:L3",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Application.Clinical.ProviderOwnership.Persistence.ProviderOwnershipConflictException",
+      "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Clinical.ProviderOwnership.Persistence",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Application/Clinical/ProviderOwnership/Persistence/ProviderOwnershipConflictException.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Application.Clinical.ProviderOwnership.ProviderOwnershipService",
+      "target": "type:ElsheiekhHMS.Application.Clinical.ProviderOwnership.IProviderOwnershipService",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Application/Clinical/ProviderOwnership/ProviderOwnershipService.cs:L9",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Application.Clinical.ProviderOwnership.ProviderOwnershipService",
+      "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Clinical.ProviderOwnership",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Application/Clinical/ProviderOwnership/ProviderOwnershipService.cs",
       "relation": "namespace-membership",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -21596,7 +22858,7 @@
       "source": "type:ElsheiekhHMS.Infrastructure.Development.DevelopmentDataSeeder.SeedCurrentUser",
       "target": "type:ElsheiekhHMS.Application.Common.Security.ICurrentUser",
       "type": "implements",
-      "evidence": "ElsheiekhHMS.Infrastructure/Development/DevelopmentDataSeeder.cs:L425",
+      "evidence": "ElsheiekhHMS.Infrastructure/Development/DevelopmentDataSeeder.cs:L452",
       "relation": "implements",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -21674,6 +22936,24 @@
       "weight": 1
     },
     {
+      "source": "type:ElsheiekhHMS.Infrastructure.Identity.Configurations.DoctorApplicationUserLinkConfiguration",
+      "target": "type:Microsoft.EntityFrameworkCore.IEntityTypeConfiguration\u003CTEntity\u003E",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Infrastructure/Identity/Configurations/DoctorApplicationUserLinkConfiguration.cs:L8",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Infrastructure.Identity.Configurations.DoctorApplicationUserLinkConfiguration",
+      "target": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Identity.Configurations",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Infrastructure/Identity/Configurations/DoctorApplicationUserLinkConfiguration.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
       "source": "type:ElsheiekhHMS.Infrastructure.Identity.Entities.AccountSecurityState",
       "target": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Identity.Entities",
       "type": "namespace-membership",
@@ -21692,10 +22972,37 @@
       "weight": 1
     },
     {
+      "source": "type:ElsheiekhHMS.Infrastructure.Identity.Entities.DoctorApplicationUserLink",
+      "target": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Identity.Entities",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Infrastructure/Identity/Entities/DoctorApplicationUserLink.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
       "source": "type:ElsheiekhHMS.Infrastructure.Identity.IdentityRoleSeeder",
       "target": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Identity",
       "type": "namespace-membership",
       "evidence": "ElsheiekhHMS.Infrastructure/Identity/IdentityRoleSeeder.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Infrastructure.Identity.ProviderOwnershipPersistence",
+      "target": "type:ElsheiekhHMS.Application.Clinical.ProviderOwnership.Persistence.IProviderOwnershipPersistence",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Infrastructure/Identity/ProviderOwnershipPersistence.cs:L11",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Infrastructure.Identity.ProviderOwnershipPersistence",
+      "target": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Identity",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Infrastructure/Identity/ProviderOwnershipPersistence.cs",
       "relation": "namespace-membership",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -21777,6 +23084,24 @@
       "target": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Migrations",
       "type": "namespace-membership",
       "evidence": "ElsheiekhHMS.Infrastructure/Migrations/20260921230714_AddPhase07AllocatorInfrastructure.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Infrastructure.Migrations.AddProviderOwnership",
+      "target": "type:Microsoft.EntityFrameworkCore.Migrations.Migration",
+      "type": "inherits",
+      "evidence": "ElsheiekhHMS.Infrastructure/Migrations/20260923133220_AddProviderOwnership.cs:L8",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Infrastructure.Migrations.AddProviderOwnership",
+      "target": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Migrations",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Infrastructure/Migrations/20260923133220_AddProviderOwnership.cs",
       "relation": "namespace-membership",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -22442,7 +23767,7 @@
       "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.ElsheiekhHmsDbContextSqlServerTests.FixedTimeProvider",
       "target": "type:System.TimeProvider",
       "type": "inherits",
-      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/ElsheiekhHmsDbContextSqlServerTests.cs:L208",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/ElsheiekhHmsDbContextSqlServerTests.cs:L209",
       "relation": "inherits",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -22460,7 +23785,7 @@
       "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.ElsheiekhHmsDbContextSqlServerTests.TestCurrentUser",
       "target": "type:ElsheiekhHMS.Application.Common.Security.ICurrentUser",
       "type": "implements",
-      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/ElsheiekhHmsDbContextSqlServerTests.cs:L196",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/ElsheiekhHmsDbContextSqlServerTests.cs:L197",
       "relation": "implements",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -22750,6 +24075,87 @@
       "type": "namespace-membership",
       "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/PerformanceSmokeSqlServerTests.cs",
       "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.ProviderOwnershipSqlServerTests",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Integration.Persistence",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/ProviderOwnershipSqlServerTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.ProviderOwnershipSqlServerTests",
+      "target": "type:ElsheiekhHMS.Core.Common.AuditableEntity",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/ProviderOwnershipSqlServerTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.ProviderOwnershipSqlServerTests",
+      "target": "type:ElsheiekhHMS.Core.Common.BaseEntity",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/ProviderOwnershipSqlServerTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.ProviderOwnershipSqlServerTests",
+      "target": "type:ElsheiekhHMS.Core.Common.SoftDeletableEntity",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/ProviderOwnershipSqlServerTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.ProviderOwnershipSqlServerTests",
+      "target": "type:ElsheiekhHMS.Core.Domain.Organization.Entities.Department",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/ProviderOwnershipSqlServerTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.ProviderOwnershipSqlServerTests",
+      "target": "type:ElsheiekhHMS.Core.Domain.Staff.Entities.Doctor",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/ProviderOwnershipSqlServerTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.ProviderOwnershipSqlServerTests",
+      "target": "type:ElsheiekhHMS.Infrastructure.Identity.Entities.ApplicationUser",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/ProviderOwnershipSqlServerTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.ProviderOwnershipSqlServerTests",
+      "target": "type:ElsheiekhHMS.Infrastructure.Identity.Entities.DoctorApplicationUserLink",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/ProviderOwnershipSqlServerTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.ProviderOwnershipSqlServerTests",
+      "target": "type:ElsheiekhHMS.Infrastructure.Persistence.ElsheiekhHmsDbContext",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/ProviderOwnershipSqlServerTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
       "confidence": "EXTRACTED",
       "weight": 1
     },
@@ -23074,6 +24480,213 @@
       "type": "test-target",
       "evidence": "ElsheiekhHMS.Tests/Unit/Application/Auditing/AuditVocabularyTests.cs (Roslyn-bound type/member use or base of test helper)",
       "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Clinical.ProviderOwnershipServiceTests",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Application.Clinical.ProviderOwnershipServiceTests.FakeProviderOwnershipPersistence",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Clinical/ProviderOwnershipServiceTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Clinical.ProviderOwnershipServiceTests",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Application.Clinical.ProviderOwnershipServiceTests.TestAuditWriter",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Clinical/ProviderOwnershipServiceTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Clinical.ProviderOwnershipServiceTests",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Application.Clinical.ProviderOwnershipServiceTests.TestCurrentUser",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Clinical/ProviderOwnershipServiceTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Clinical.ProviderOwnershipServiceTests",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Application.Clinical",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Clinical/ProviderOwnershipServiceTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Clinical.ProviderOwnershipServiceTests",
+      "target": "type:ElsheiekhHMS.Application.Clinical.ProviderOwnership.Contracts.AssignProviderOwnershipRequest",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Clinical/ProviderOwnershipServiceTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Clinical.ProviderOwnershipServiceTests",
+      "target": "type:ElsheiekhHMS.Application.Clinical.ProviderOwnership.Contracts.ProviderOwnershipDto",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Clinical/ProviderOwnershipServiceTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Clinical.ProviderOwnershipServiceTests",
+      "target": "type:ElsheiekhHMS.Application.Clinical.ProviderOwnership.Persistence.DoctorStatusSnapshot",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Clinical/ProviderOwnershipServiceTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Clinical.ProviderOwnershipServiceTests",
+      "target": "type:ElsheiekhHMS.Application.Clinical.ProviderOwnership.Persistence.IProviderOwnershipPersistence",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Clinical/ProviderOwnershipServiceTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Clinical.ProviderOwnershipServiceTests",
+      "target": "type:ElsheiekhHMS.Application.Clinical.ProviderOwnership.Persistence.ProviderAccountStatus",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Clinical/ProviderOwnershipServiceTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Clinical.ProviderOwnershipServiceTests",
+      "target": "type:ElsheiekhHMS.Application.Clinical.ProviderOwnership.ProviderOwnershipService",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Clinical/ProviderOwnershipServiceTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Clinical.ProviderOwnershipServiceTests",
+      "target": "type:ElsheiekhHMS.Application.Common.Auditing.AuditActions",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Clinical/ProviderOwnershipServiceTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Clinical.ProviderOwnershipServiceTests",
+      "target": "type:ElsheiekhHMS.Application.Common.Auditing.AuditEventRequest",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Clinical/ProviderOwnershipServiceTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Clinical.ProviderOwnershipServiceTests",
+      "target": "type:ElsheiekhHMS.Application.Common.Auditing.IAuditEventWriter",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Clinical/ProviderOwnershipServiceTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Clinical.ProviderOwnershipServiceTests",
+      "target": "type:ElsheiekhHMS.Application.Common.Results.ServiceError",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Clinical/ProviderOwnershipServiceTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Clinical.ProviderOwnershipServiceTests",
+      "target": "type:ElsheiekhHMS.Application.Common.Results.ServiceResult\u003CT\u003E",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Clinical/ProviderOwnershipServiceTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Clinical.ProviderOwnershipServiceTests",
+      "target": "type:ElsheiekhHMS.Application.Common.Security.ICurrentUser",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Clinical/ProviderOwnershipServiceTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Clinical.ProviderOwnershipServiceTests",
+      "target": "type:ElsheiekhHMS.Application.Common.Security.RoleNames",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Clinical/ProviderOwnershipServiceTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Clinical.ProviderOwnershipServiceTests.FakeProviderOwnershipPersistence",
+      "target": "type:ElsheiekhHMS.Application.Clinical.ProviderOwnership.Persistence.IProviderOwnershipPersistence",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Clinical/ProviderOwnershipServiceTests.cs:L250",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Clinical.ProviderOwnershipServiceTests.FakeProviderOwnershipPersistence",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Application.Clinical",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Clinical/ProviderOwnershipServiceTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Clinical.ProviderOwnershipServiceTests.TestAuditWriter",
+      "target": "type:ElsheiekhHMS.Application.Common.Auditing.IAuditEventWriter",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Clinical/ProviderOwnershipServiceTests.cs:L239",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Clinical.ProviderOwnershipServiceTests.TestAuditWriter",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Application.Clinical",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Clinical/ProviderOwnershipServiceTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Clinical.ProviderOwnershipServiceTests.TestCurrentUser",
+      "target": "type:ElsheiekhHMS.Application.Common.Security.ICurrentUser",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Clinical/ProviderOwnershipServiceTests.cs:L228",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Clinical.ProviderOwnershipServiceTests.TestCurrentUser",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Application.Clinical",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Clinical/ProviderOwnershipServiceTests.cs",
+      "relation": "namespace-membership",
       "confidence": "EXTRACTED",
       "weight": 1
     },
@@ -24990,7 +26603,7 @@
       "statusSource": "README.md declaration, not independently certified completion",
       "declaredStatus": [
         {
-          "text": "\u003E **Current development stage:** Phase13B complete \u2014 Encounter domain foundation implemented and verified; provider ownership remains the next clinical gate",
+          "text": "\u003E **Current development stage:** Phase13C complete \u2014 Provider ownership mapping and ownership-aware resolution foundation implemented and verified; Encounter persistence remains the next clinical gate",
           "source": "README.md:L5"
         },
         {
@@ -25170,44 +26783,48 @@
           "source": "README.md:L96"
         },
         {
-          "text": "\u003E **Phase 13B:** \u2705 Encounter domain model implemented and verified in Core with focused domain tests; persistence, provider ownership, and clinical workflows remain deferred",
+          "text": "\u003E **Phase 13B:** \u2705 Encounter domain model implemented and verified in Core with focused domain tests",
           "source": "README.md:L98"
         },
         {
+          "text": "\u003E **Phase 13C:** \u2705 Provider ownership mapping, administrative assignment/unassignment, active-account resolution, audit events, migration, isolated SQL verification, and development mapping seed complete; clinical authoring remains deferred",
+          "source": "README.md:L100"
+        },
+        {
           "text": "| 01 | Solution \u0026 Architecture | \u2705 Complete |",
-          "source": "README.md:L417"
-        },
-        {
-          "text": "| 02 | Core Foundation | \u2705 Complete |",
-          "source": "README.md:L418"
-        },
-        {
-          "text": "| 03 | Domain Entities | \u2705 Complete |",
           "source": "README.md:L419"
         },
         {
-          "text": "| 04 | EF Core \u0026 Database | \u2705 Complete |",
+          "text": "| 02 | Core Foundation | \u2705 Complete |",
           "source": "README.md:L420"
         },
         {
-          "text": "| 05 | Identity \u0026 Security | \u2705 Complete (05A, 05B, 05C, 05C-A, 05D, and 05E) |",
+          "text": "| 03 | Domain Entities | \u2705 Complete |",
           "source": "README.md:L421"
         },
         {
-          "text": "| 06 | DTOs \u0026 Validation | \u2705 Complete (06A\u201306D) |",
+          "text": "| 04 | EF Core \u0026 Database | \u2705 Complete |",
           "source": "README.md:L422"
         },
         {
-          "text": "| 07 | Application Services | \u2705 Complete for approved scope (07S, 07A, 07B, 07C-P, 07C, 07D; 07E deferred) |",
+          "text": "| 05 | Identity \u0026 Security | \u2705 Complete (05A, 05B, 05C, 05C-A, 05D, and 05E) |",
           "source": "README.md:L423"
         },
         {
-          "text": "| 08 | Business Workflows | \u2705 Complete (08A, 08B-P, 08B) |",
+          "text": "| 06 | DTOs \u0026 Validation | \u2705 Complete (06A\u201306D) |",
           "source": "README.md:L424"
         },
         {
-          "text": "| 09 | Enterprise Infrastructure | \u2705 Complete (09A, 09B) |",
+          "text": "| 07 | Application Services | \u2705 Complete for approved scope (07S, 07A, 07B, 07C-P, 07C, 07D; 07E deferred) |",
           "source": "README.md:L425"
+        },
+        {
+          "text": "| 08 | Business Workflows | \u2705 Complete (08A, 08B-P, 08B) |",
+          "source": "README.md:L426"
+        },
+        {
+          "text": "| 09 | Enterprise Infrastructure | \u2705 Complete (09A, 09B) |",
+          "source": "README.md:L427"
         }
       ]
     }
@@ -25385,6 +27002,78 @@
       "target": "type:ElsheiekhHMS.Application.Appointments.Validation.CreateAppointmentRequestValidator",
       "type": "declares",
       "evidence": "ElsheiekhHMS.Application/Appointments/Validation/CreateAppointmentRequestValidator.cs:L6",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Clinical/ProviderOwnership/Contracts/AssignProviderOwnershipRequest.cs",
+      "target": "type:ElsheiekhHMS.Application.Clinical.ProviderOwnership.Contracts.AssignProviderOwnershipRequest",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Application/Clinical/ProviderOwnership/Contracts/AssignProviderOwnershipRequest.cs:L3",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Clinical/ProviderOwnership/Contracts/ProviderOwnershipDto.cs",
+      "target": "type:ElsheiekhHMS.Application.Clinical.ProviderOwnership.Contracts.ProviderOwnershipDto",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Application/Clinical/ProviderOwnership/Contracts/ProviderOwnershipDto.cs:L3",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Clinical/ProviderOwnership/IProviderOwnershipService.cs",
+      "target": "type:ElsheiekhHMS.Application.Clinical.ProviderOwnership.IProviderOwnershipService",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Application/Clinical/ProviderOwnership/IProviderOwnershipService.cs:L6",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Clinical/ProviderOwnership/Persistence/DoctorStatusSnapshot.cs",
+      "target": "type:ElsheiekhHMS.Application.Clinical.ProviderOwnership.Persistence.DoctorStatusSnapshot",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Application/Clinical/ProviderOwnership/Persistence/DoctorStatusSnapshot.cs:L3",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Clinical/ProviderOwnership/Persistence/IProviderOwnershipPersistence.cs",
+      "target": "type:ElsheiekhHMS.Application.Clinical.ProviderOwnership.Persistence.IProviderOwnershipPersistence",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Application/Clinical/ProviderOwnership/Persistence/IProviderOwnershipPersistence.cs:L5",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Clinical/ProviderOwnership/Persistence/ProviderAccountStatus.cs",
+      "target": "type:ElsheiekhHMS.Application.Clinical.ProviderOwnership.Persistence.ProviderAccountStatus",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Application/Clinical/ProviderOwnership/Persistence/ProviderAccountStatus.cs:L3",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Clinical/ProviderOwnership/Persistence/ProviderOwnershipConflictException.cs",
+      "target": "type:ElsheiekhHMS.Application.Clinical.ProviderOwnership.Persistence.ProviderOwnershipConflictException",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Application/Clinical/ProviderOwnership/Persistence/ProviderOwnershipConflictException.cs:L3",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Clinical/ProviderOwnership/ProviderOwnershipService.cs",
+      "target": "type:ElsheiekhHMS.Application.Clinical.ProviderOwnership.ProviderOwnershipService",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Application/Clinical/ProviderOwnership/ProviderOwnershipService.cs:L9",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -26338,7 +28027,7 @@
       "source": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Development/DevelopmentDataSeeder.cs",
       "target": "type:ElsheiekhHMS.Infrastructure.Development.DevelopmentDataSeeder",
       "type": "declares",
-      "evidence": "ElsheiekhHMS.Infrastructure/Development/DevelopmentDataSeeder.cs:L39",
+      "evidence": "ElsheiekhHMS.Infrastructure/Development/DevelopmentDataSeeder.cs:L42",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -26347,7 +28036,7 @@
       "source": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Development/DevelopmentDataSeeder.cs",
       "target": "type:ElsheiekhHMS.Infrastructure.Development.DevelopmentDataSeeder.SeedCurrentUser",
       "type": "declares",
-      "evidence": "ElsheiekhHMS.Infrastructure/Development/DevelopmentDataSeeder.cs:L425",
+      "evidence": "ElsheiekhHMS.Infrastructure/Development/DevelopmentDataSeeder.cs:L452",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -26407,6 +28096,15 @@
       "weight": 1
     },
     {
+      "source": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Identity/Configurations/DoctorApplicationUserLinkConfiguration.cs",
+      "target": "type:ElsheiekhHMS.Infrastructure.Identity.Configurations.DoctorApplicationUserLinkConfiguration",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Infrastructure/Identity/Configurations/DoctorApplicationUserLinkConfiguration.cs:L8",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
       "source": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Identity/Entities/AccountSecurityState.cs",
       "target": "type:ElsheiekhHMS.Infrastructure.Identity.Entities.AccountSecurityState",
       "type": "declares",
@@ -26425,6 +28123,15 @@
       "weight": 1
     },
     {
+      "source": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Identity/Entities/DoctorApplicationUserLink.cs",
+      "target": "type:ElsheiekhHMS.Infrastructure.Identity.Entities.DoctorApplicationUserLink",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Infrastructure/Identity/Entities/DoctorApplicationUserLink.cs:L3",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
       "source": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Identity/IdentityRoleSeeder.cs",
       "target": "type:ElsheiekhHMS.Infrastructure.Identity.IdentityRoleSeeder",
       "type": "declares",
@@ -26434,10 +28141,19 @@
       "weight": 1
     },
     {
+      "source": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Identity/ProviderOwnershipPersistence.cs",
+      "target": "type:ElsheiekhHMS.Infrastructure.Identity.ProviderOwnershipPersistence",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Infrastructure/Identity/ProviderOwnershipPersistence.cs:L11",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
       "source": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs",
       "target": "type:ElsheiekhHMS.Infrastructure.InfrastructureServiceExtensions",
       "type": "declares",
-      "evidence": "ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs:L37",
+      "evidence": "ElsheiekhHMS.Infrastructure/InfrastructureServiceExtensions.cs:L39",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -26528,6 +28244,24 @@
       "target": "type:ElsheiekhHMS.Infrastructure.Migrations.AddAppointmentQueueLink",
       "type": "declares",
       "evidence": "ElsheiekhHMS.Infrastructure/Migrations/20260922115337_AddAppointmentQueueLink.cs:L8",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Migrations/20260923133220_AddProviderOwnership.Designer.cs",
+      "target": "type:ElsheiekhHMS.Infrastructure.Migrations.AddProviderOwnership",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Infrastructure/Migrations/20260923133220_AddProviderOwnership.Designer.cs:L8",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Migrations/20260923133220_AddProviderOwnership.cs",
+      "target": "type:ElsheiekhHMS.Infrastructure.Migrations.AddProviderOwnership",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Infrastructure/Migrations/20260923133220_AddProviderOwnership.cs:L8",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -26833,7 +28567,7 @@
       "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/ElsheiekhHmsDbContextSqlServerTests.cs",
       "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.ElsheiekhHmsDbContextSqlServerTests.FixedTimeProvider",
       "type": "declares",
-      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/ElsheiekhHmsDbContextSqlServerTests.cs:L208",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/ElsheiekhHmsDbContextSqlServerTests.cs:L209",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -26842,7 +28576,7 @@
       "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/ElsheiekhHmsDbContextSqlServerTests.cs",
       "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.ElsheiekhHmsDbContextSqlServerTests.TestCurrentUser",
       "type": "declares",
-      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/ElsheiekhHmsDbContextSqlServerTests.cs:L196",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/ElsheiekhHmsDbContextSqlServerTests.cs:L197",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -26951,6 +28685,15 @@
       "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.PerformanceSmokeSqlServerTests.TestCurrentUser",
       "type": "declares",
       "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/PerformanceSmokeSqlServerTests.cs:L245",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/ProviderOwnershipSqlServerTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Integration.Persistence.ProviderOwnershipSqlServerTests",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/ProviderOwnershipSqlServerTests.cs:L10",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -27113,6 +28856,42 @@
       "target": "type:ElsheiekhHMS.Tests.Unit.Application.Auditing.AuditVocabularyTests",
       "type": "declares",
       "evidence": "ElsheiekhHMS.Tests/Unit/Application/Auditing/AuditVocabularyTests.cs:L6",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Clinical/ProviderOwnershipServiceTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Application.Clinical.ProviderOwnershipServiceTests",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Clinical/ProviderOwnershipServiceTests.cs:L10",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Clinical/ProviderOwnershipServiceTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Application.Clinical.ProviderOwnershipServiceTests.FakeProviderOwnershipPersistence",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Clinical/ProviderOwnershipServiceTests.cs:L250",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Clinical/ProviderOwnershipServiceTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Application.Clinical.ProviderOwnershipServiceTests.TestAuditWriter",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Clinical/ProviderOwnershipServiceTests.cs:L239",
+      "relation": "declares",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Clinical/ProviderOwnershipServiceTests.cs",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Application.Clinical.ProviderOwnershipServiceTests.TestCurrentUser",
+      "type": "declares",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Clinical/ProviderOwnershipServiceTests.cs:L228",
       "relation": "declares",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -27992,6 +29771,78 @@
     },
     {
       "source": "project:ElsheiekhHMS.Application",
+      "target": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Clinical/ProviderOwnership/Contracts/AssignProviderOwnershipRequest.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Application/ElsheiekhHMS.Application.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Application",
+      "target": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Clinical/ProviderOwnership/Contracts/ProviderOwnershipDto.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Application/ElsheiekhHMS.Application.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Application",
+      "target": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Clinical/ProviderOwnership/IProviderOwnershipService.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Application/ElsheiekhHMS.Application.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Application",
+      "target": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Clinical/ProviderOwnership/Persistence/DoctorStatusSnapshot.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Application/ElsheiekhHMS.Application.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Application",
+      "target": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Clinical/ProviderOwnership/Persistence/IProviderOwnershipPersistence.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Application/ElsheiekhHMS.Application.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Application",
+      "target": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Clinical/ProviderOwnership/Persistence/ProviderAccountStatus.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Application/ElsheiekhHMS.Application.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Application",
+      "target": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Clinical/ProviderOwnership/Persistence/ProviderOwnershipConflictException.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Application/ElsheiekhHMS.Application.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Application",
+      "target": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Clinical/ProviderOwnership/ProviderOwnershipService.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Application/ElsheiekhHMS.Application.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Application",
       "target": "file:ElsheiekhHMS.Application:ElsheiekhHMS.Application/Common/Auditing/AuditActions.cs",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Application/ElsheiekhHMS.Application.csproj",
@@ -28667,6 +30518,33 @@
     },
     {
       "source": "project:ElsheiekhHMS.Application",
+      "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Clinical.ProviderOwnership",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Application/Clinical/ProviderOwnership/IProviderOwnershipService.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Application",
+      "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Clinical.ProviderOwnership.Contracts",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Application/Clinical/ProviderOwnership/Contracts/AssignProviderOwnershipRequest.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Application",
+      "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Clinical.ProviderOwnership.Persistence",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Application/Clinical/ProviderOwnership/Persistence/DoctorStatusSnapshot.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Application",
       "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Common.Auditing",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Application/Common/Auditing/AuditActions.cs",
@@ -29288,6 +31166,15 @@
     },
     {
       "source": "project:ElsheiekhHMS.Infrastructure",
+      "target": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Identity/Configurations/DoctorApplicationUserLinkConfiguration.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Infrastructure/ElsheiekhHMS.Infrastructure.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Infrastructure",
       "target": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Identity/Entities/AccountSecurityState.cs",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Infrastructure/ElsheiekhHMS.Infrastructure.csproj",
@@ -29306,7 +31193,25 @@
     },
     {
       "source": "project:ElsheiekhHMS.Infrastructure",
+      "target": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Identity/Entities/DoctorApplicationUserLink.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Infrastructure/ElsheiekhHMS.Infrastructure.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Infrastructure",
       "target": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Identity/IdentityRoleSeeder.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Infrastructure/ElsheiekhHMS.Infrastructure.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Infrastructure",
+      "target": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Identity/ProviderOwnershipPersistence.cs",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Infrastructure/ElsheiekhHMS.Infrastructure.csproj",
       "relation": "contains",
@@ -29406,6 +31311,24 @@
     {
       "source": "project:ElsheiekhHMS.Infrastructure",
       "target": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Migrations/20260922115337_AddAppointmentQueueLink.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Infrastructure/ElsheiekhHMS.Infrastructure.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Infrastructure",
+      "target": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Migrations/20260923133220_AddProviderOwnership.Designer.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Infrastructure/ElsheiekhHMS.Infrastructure.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Infrastructure",
+      "target": "file:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure/Migrations/20260923133220_AddProviderOwnership.cs",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Infrastructure/ElsheiekhHMS.Infrastructure.csproj",
       "relation": "contains",
@@ -29819,6 +31742,15 @@
     },
     {
       "source": "project:ElsheiekhHMS.Tests",
+      "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/ProviderOwnershipSqlServerTests.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Tests",
       "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Integration/Persistence/QueueServiceSqlServerTests.cs",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
@@ -29901,6 +31833,15 @@
     {
       "source": "project:ElsheiekhHMS.Tests",
       "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Auditing/AuditVocabularyTests.cs",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Tests",
+      "target": "file:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests/Unit/Application/Clinical/ProviderOwnershipServiceTests.cs",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Tests/ElsheiekhHMS.Tests.csproj",
       "relation": "contains",
@@ -30317,6 +32258,15 @@
       "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Application.Auditing",
       "type": "contains",
       "evidence": "ElsheiekhHMS.Tests/Unit/Application/Auditing/AuditVocabularyTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "project:ElsheiekhHMS.Tests",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Application.Clinical",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Clinical/ProviderOwnershipServiceTests.cs",
       "relation": "contains",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -31253,6 +33203,132 @@
       "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Appointments.Validation",
       "type": "namespace-membership",
       "evidence": "ElsheiekhHMS.Application/Appointments/Validation/CreateAppointmentRequestValidator.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Application.Clinical.ProviderOwnership.Contracts.AssignProviderOwnershipRequest",
+      "target": "type:System.IEquatable\u003CT\u003E",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Application/Clinical/ProviderOwnership/Contracts/AssignProviderOwnershipRequest.cs:L3",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Application.Clinical.ProviderOwnership.Contracts.AssignProviderOwnershipRequest",
+      "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Clinical.ProviderOwnership.Contracts",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Application/Clinical/ProviderOwnership/Contracts/AssignProviderOwnershipRequest.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Application.Clinical.ProviderOwnership.Contracts.ProviderOwnershipDto",
+      "target": "type:System.IEquatable\u003CT\u003E",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Application/Clinical/ProviderOwnership/Contracts/ProviderOwnershipDto.cs:L3",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Application.Clinical.ProviderOwnership.Contracts.ProviderOwnershipDto",
+      "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Clinical.ProviderOwnership.Contracts",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Application/Clinical/ProviderOwnership/Contracts/ProviderOwnershipDto.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Application.Clinical.ProviderOwnership.IProviderOwnershipService",
+      "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Clinical.ProviderOwnership",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Application/Clinical/ProviderOwnership/IProviderOwnershipService.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Application.Clinical.ProviderOwnership.Persistence.DoctorStatusSnapshot",
+      "target": "type:System.IEquatable\u003CT\u003E",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Application/Clinical/ProviderOwnership/Persistence/DoctorStatusSnapshot.cs:L3",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Application.Clinical.ProviderOwnership.Persistence.DoctorStatusSnapshot",
+      "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Clinical.ProviderOwnership.Persistence",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Application/Clinical/ProviderOwnership/Persistence/DoctorStatusSnapshot.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Application.Clinical.ProviderOwnership.Persistence.IProviderOwnershipPersistence",
+      "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Clinical.ProviderOwnership.Persistence",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Application/Clinical/ProviderOwnership/Persistence/IProviderOwnershipPersistence.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Application.Clinical.ProviderOwnership.Persistence.ProviderAccountStatus",
+      "target": "type:System.IEquatable\u003CT\u003E",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Application/Clinical/ProviderOwnership/Persistence/ProviderAccountStatus.cs:L3",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Application.Clinical.ProviderOwnership.Persistence.ProviderAccountStatus",
+      "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Clinical.ProviderOwnership.Persistence",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Application/Clinical/ProviderOwnership/Persistence/ProviderAccountStatus.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Application.Clinical.ProviderOwnership.Persistence.ProviderOwnershipConflictException",
+      "target": "type:System.Exception",
+      "type": "inherits",
+      "evidence": "ElsheiekhHMS.Application/Clinical/ProviderOwnership/Persistence/ProviderOwnershipConflictException.cs:L3",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Application.Clinical.ProviderOwnership.Persistence.ProviderOwnershipConflictException",
+      "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Clinical.ProviderOwnership.Persistence",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Application/Clinical/ProviderOwnership/Persistence/ProviderOwnershipConflictException.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Application.Clinical.ProviderOwnership.ProviderOwnershipService",
+      "target": "type:ElsheiekhHMS.Application.Clinical.ProviderOwnership.IProviderOwnershipService",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Application/Clinical/ProviderOwnership/ProviderOwnershipService.cs:L9",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Application.Clinical.ProviderOwnership.ProviderOwnershipService",
+      "target": "namespace:ElsheiekhHMS.Application:ElsheiekhHMS.Application.Clinical.ProviderOwnership",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Application/Clinical/ProviderOwnership/ProviderOwnershipService.cs",
       "relation": "namespace-membership",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -32863,7 +34939,7 @@
       "source": "type:ElsheiekhHMS.Infrastructure.Development.DevelopmentDataSeeder.SeedCurrentUser",
       "target": "type:ElsheiekhHMS.Application.Common.Security.ICurrentUser",
       "type": "implements",
-      "evidence": "ElsheiekhHMS.Infrastructure/Development/DevelopmentDataSeeder.cs:L425",
+      "evidence": "ElsheiekhHMS.Infrastructure/Development/DevelopmentDataSeeder.cs:L452",
       "relation": "implements",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -32941,6 +35017,24 @@
       "weight": 1
     },
     {
+      "source": "type:ElsheiekhHMS.Infrastructure.Identity.Configurations.DoctorApplicationUserLinkConfiguration",
+      "target": "type:Microsoft.EntityFrameworkCore.IEntityTypeConfiguration\u003CTEntity\u003E",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Infrastructure/Identity/Configurations/DoctorApplicationUserLinkConfiguration.cs:L8",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Infrastructure.Identity.Configurations.DoctorApplicationUserLinkConfiguration",
+      "target": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Identity.Configurations",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Infrastructure/Identity/Configurations/DoctorApplicationUserLinkConfiguration.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
       "source": "type:ElsheiekhHMS.Infrastructure.Identity.Entities.AccountSecurityState",
       "target": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Identity.Entities",
       "type": "namespace-membership",
@@ -32959,10 +35053,37 @@
       "weight": 1
     },
     {
+      "source": "type:ElsheiekhHMS.Infrastructure.Identity.Entities.DoctorApplicationUserLink",
+      "target": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Identity.Entities",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Infrastructure/Identity/Entities/DoctorApplicationUserLink.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
       "source": "type:ElsheiekhHMS.Infrastructure.Identity.IdentityRoleSeeder",
       "target": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Identity",
       "type": "namespace-membership",
       "evidence": "ElsheiekhHMS.Infrastructure/Identity/IdentityRoleSeeder.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Infrastructure.Identity.ProviderOwnershipPersistence",
+      "target": "type:ElsheiekhHMS.Application.Clinical.ProviderOwnership.Persistence.IProviderOwnershipPersistence",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Infrastructure/Identity/ProviderOwnershipPersistence.cs:L11",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Infrastructure.Identity.ProviderOwnershipPersistence",
+      "target": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Identity",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Infrastructure/Identity/ProviderOwnershipPersistence.cs",
       "relation": "namespace-membership",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -33044,6 +35165,24 @@
       "target": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Migrations",
       "type": "namespace-membership",
       "evidence": "ElsheiekhHMS.Infrastructure/Migrations/20260921230714_AddPhase07AllocatorInfrastructure.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Infrastructure.Migrations.AddProviderOwnership",
+      "target": "type:Microsoft.EntityFrameworkCore.Migrations.Migration",
+      "type": "inherits",
+      "evidence": "ElsheiekhHMS.Infrastructure/Migrations/20260923133220_AddProviderOwnership.cs:L8",
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Infrastructure.Migrations.AddProviderOwnership",
+      "target": "namespace:ElsheiekhHMS.Infrastructure:ElsheiekhHMS.Infrastructure.Migrations",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Infrastructure/Migrations/20260923133220_AddProviderOwnership.cs",
       "relation": "namespace-membership",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -33709,7 +35848,7 @@
       "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.ElsheiekhHmsDbContextSqlServerTests.FixedTimeProvider",
       "target": "type:System.TimeProvider",
       "type": "inherits",
-      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/ElsheiekhHmsDbContextSqlServerTests.cs:L208",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/ElsheiekhHmsDbContextSqlServerTests.cs:L209",
       "relation": "inherits",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -33727,7 +35866,7 @@
       "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.ElsheiekhHmsDbContextSqlServerTests.TestCurrentUser",
       "target": "type:ElsheiekhHMS.Application.Common.Security.ICurrentUser",
       "type": "implements",
-      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/ElsheiekhHmsDbContextSqlServerTests.cs:L196",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/ElsheiekhHmsDbContextSqlServerTests.cs:L197",
       "relation": "implements",
       "confidence": "EXTRACTED",
       "weight": 1
@@ -34017,6 +36156,87 @@
       "type": "namespace-membership",
       "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/PerformanceSmokeSqlServerTests.cs",
       "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.ProviderOwnershipSqlServerTests",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Integration.Persistence",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/ProviderOwnershipSqlServerTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.ProviderOwnershipSqlServerTests",
+      "target": "type:ElsheiekhHMS.Core.Common.AuditableEntity",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/ProviderOwnershipSqlServerTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.ProviderOwnershipSqlServerTests",
+      "target": "type:ElsheiekhHMS.Core.Common.BaseEntity",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/ProviderOwnershipSqlServerTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.ProviderOwnershipSqlServerTests",
+      "target": "type:ElsheiekhHMS.Core.Common.SoftDeletableEntity",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/ProviderOwnershipSqlServerTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.ProviderOwnershipSqlServerTests",
+      "target": "type:ElsheiekhHMS.Core.Domain.Organization.Entities.Department",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/ProviderOwnershipSqlServerTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.ProviderOwnershipSqlServerTests",
+      "target": "type:ElsheiekhHMS.Core.Domain.Staff.Entities.Doctor",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/ProviderOwnershipSqlServerTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.ProviderOwnershipSqlServerTests",
+      "target": "type:ElsheiekhHMS.Infrastructure.Identity.Entities.ApplicationUser",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/ProviderOwnershipSqlServerTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.ProviderOwnershipSqlServerTests",
+      "target": "type:ElsheiekhHMS.Infrastructure.Identity.Entities.DoctorApplicationUserLink",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/ProviderOwnershipSqlServerTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Integration.Persistence.ProviderOwnershipSqlServerTests",
+      "target": "type:ElsheiekhHMS.Infrastructure.Persistence.ElsheiekhHmsDbContext",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Integration/Persistence/ProviderOwnershipSqlServerTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
       "confidence": "EXTRACTED",
       "weight": 1
     },
@@ -34341,6 +36561,213 @@
       "type": "test-target",
       "evidence": "ElsheiekhHMS.Tests/Unit/Application/Auditing/AuditVocabularyTests.cs (Roslyn-bound type/member use or base of test helper)",
       "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Clinical.ProviderOwnershipServiceTests",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Application.Clinical.ProviderOwnershipServiceTests.FakeProviderOwnershipPersistence",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Clinical/ProviderOwnershipServiceTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Clinical.ProviderOwnershipServiceTests",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Application.Clinical.ProviderOwnershipServiceTests.TestAuditWriter",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Clinical/ProviderOwnershipServiceTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Clinical.ProviderOwnershipServiceTests",
+      "target": "type:ElsheiekhHMS.Tests.Unit.Application.Clinical.ProviderOwnershipServiceTests.TestCurrentUser",
+      "type": "contains",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Clinical/ProviderOwnershipServiceTests.cs",
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Clinical.ProviderOwnershipServiceTests",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Application.Clinical",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Clinical/ProviderOwnershipServiceTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Clinical.ProviderOwnershipServiceTests",
+      "target": "type:ElsheiekhHMS.Application.Clinical.ProviderOwnership.Contracts.AssignProviderOwnershipRequest",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Clinical/ProviderOwnershipServiceTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Clinical.ProviderOwnershipServiceTests",
+      "target": "type:ElsheiekhHMS.Application.Clinical.ProviderOwnership.Contracts.ProviderOwnershipDto",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Clinical/ProviderOwnershipServiceTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Clinical.ProviderOwnershipServiceTests",
+      "target": "type:ElsheiekhHMS.Application.Clinical.ProviderOwnership.Persistence.DoctorStatusSnapshot",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Clinical/ProviderOwnershipServiceTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Clinical.ProviderOwnershipServiceTests",
+      "target": "type:ElsheiekhHMS.Application.Clinical.ProviderOwnership.Persistence.IProviderOwnershipPersistence",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Clinical/ProviderOwnershipServiceTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Clinical.ProviderOwnershipServiceTests",
+      "target": "type:ElsheiekhHMS.Application.Clinical.ProviderOwnership.Persistence.ProviderAccountStatus",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Clinical/ProviderOwnershipServiceTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Clinical.ProviderOwnershipServiceTests",
+      "target": "type:ElsheiekhHMS.Application.Clinical.ProviderOwnership.ProviderOwnershipService",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Clinical/ProviderOwnershipServiceTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Clinical.ProviderOwnershipServiceTests",
+      "target": "type:ElsheiekhHMS.Application.Common.Auditing.AuditActions",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Clinical/ProviderOwnershipServiceTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Clinical.ProviderOwnershipServiceTests",
+      "target": "type:ElsheiekhHMS.Application.Common.Auditing.AuditEventRequest",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Clinical/ProviderOwnershipServiceTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Clinical.ProviderOwnershipServiceTests",
+      "target": "type:ElsheiekhHMS.Application.Common.Auditing.IAuditEventWriter",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Clinical/ProviderOwnershipServiceTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Clinical.ProviderOwnershipServiceTests",
+      "target": "type:ElsheiekhHMS.Application.Common.Results.ServiceError",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Clinical/ProviderOwnershipServiceTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Clinical.ProviderOwnershipServiceTests",
+      "target": "type:ElsheiekhHMS.Application.Common.Results.ServiceResult\u003CT\u003E",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Clinical/ProviderOwnershipServiceTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Clinical.ProviderOwnershipServiceTests",
+      "target": "type:ElsheiekhHMS.Application.Common.Security.ICurrentUser",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Clinical/ProviderOwnershipServiceTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Clinical.ProviderOwnershipServiceTests",
+      "target": "type:ElsheiekhHMS.Application.Common.Security.RoleNames",
+      "type": "test-target",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Clinical/ProviderOwnershipServiceTests.cs (Roslyn-bound type/member use or base of test helper)",
+      "relation": "test-target",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Clinical.ProviderOwnershipServiceTests.FakeProviderOwnershipPersistence",
+      "target": "type:ElsheiekhHMS.Application.Clinical.ProviderOwnership.Persistence.IProviderOwnershipPersistence",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Clinical/ProviderOwnershipServiceTests.cs:L250",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Clinical.ProviderOwnershipServiceTests.FakeProviderOwnershipPersistence",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Application.Clinical",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Clinical/ProviderOwnershipServiceTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Clinical.ProviderOwnershipServiceTests.TestAuditWriter",
+      "target": "type:ElsheiekhHMS.Application.Common.Auditing.IAuditEventWriter",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Clinical/ProviderOwnershipServiceTests.cs:L239",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Clinical.ProviderOwnershipServiceTests.TestAuditWriter",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Application.Clinical",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Clinical/ProviderOwnershipServiceTests.cs",
+      "relation": "namespace-membership",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Clinical.ProviderOwnershipServiceTests.TestCurrentUser",
+      "target": "type:ElsheiekhHMS.Application.Common.Security.ICurrentUser",
+      "type": "implements",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Clinical/ProviderOwnershipServiceTests.cs:L228",
+      "relation": "implements",
+      "confidence": "EXTRACTED",
+      "weight": 1
+    },
+    {
+      "source": "type:ElsheiekhHMS.Tests.Unit.Application.Clinical.ProviderOwnershipServiceTests.TestCurrentUser",
+      "target": "namespace:ElsheiekhHMS.Tests:ElsheiekhHMS.Tests.Unit.Application.Clinical",
+      "type": "namespace-membership",
+      "evidence": "ElsheiekhHMS.Tests/Unit/Application/Clinical/ProviderOwnershipServiceTests.cs",
+      "relation": "namespace-membership",
       "confidence": "EXTRACTED",
       "weight": 1
     },

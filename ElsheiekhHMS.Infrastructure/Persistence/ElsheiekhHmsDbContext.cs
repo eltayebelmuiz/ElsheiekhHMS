@@ -23,6 +23,7 @@ public sealed class ElsheiekhHmsDbContext(
     public DbSet<PatientCodeAllocation> PatientCodeAllocations => Set<PatientCodeAllocation>();
     public DbSet<QueueTicketAllocation> QueueTicketAllocations => Set<QueueTicketAllocation>();
     public DbSet<AppointmentCodeAllocation> AppointmentCodeAllocations => Set<AppointmentCodeAllocation>();
+    public DbSet<DoctorApplicationUserLink> DoctorApplicationUserLinks => Set<DoctorApplicationUserLink>();
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

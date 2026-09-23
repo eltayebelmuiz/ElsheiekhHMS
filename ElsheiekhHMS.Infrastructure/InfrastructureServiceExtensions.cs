@@ -13,6 +13,8 @@ using ElsheiekhHMS.Application.Workflows.PatientIntake;
 using ElsheiekhHMS.Application.Workflows.AppointmentArrival;
 using ElsheiekhHMS.Infrastructure.Identity;
 using ElsheiekhHMS.Infrastructure.Identity.Entities;
+using ElsheiekhHMS.Application.Clinical.ProviderOwnership;
+using ElsheiekhHMS.Application.Clinical.ProviderOwnership.Persistence;
 using ElsheiekhHMS.Infrastructure.Persistence.Allocation;
 using ElsheiekhHMS.Infrastructure.Persistence.Patients;
 using ElsheiekhHMS.Infrastructure.Persistence.Departments;
@@ -48,6 +50,8 @@ public static class InfrastructureServiceExtensions
         services.AddScoped<EntityAuditSaveChangesInterceptor>();
         services.AddScoped<IAuditEventWriter, AuditEventWriter>();
         services.AddScoped<AccountLoginEligibility>();
+        services.AddScoped<IProviderOwnershipPersistence, ProviderOwnershipPersistence>();
+        services.AddScoped<IProviderOwnershipService, ProviderOwnershipService>();
         services.AddScoped<AdministratorBootstrapper>();
         services.AddScoped<DevelopmentDataSeeder>();
         services.AddScoped<PatientCodeAllocator>();

@@ -35,6 +35,8 @@ public static class AuditActions
     public const string QueueEntryResumed = "QUEUE_ENTRY_RESUMED";
     public const string QueueEntryCompleted = "QUEUE_ENTRY_COMPLETED";
     public const string QueueEntryCancelled = "QUEUE_ENTRY_CANCELLED";
+    public const string ProviderOwnershipAssigned = "PROVIDER_OWNERSHIP_ASSIGNED";
+    public const string ProviderOwnershipUnassigned = "PROVIDER_OWNERSHIP_UNASSIGNED";
 
     public static IReadOnlyList<string> All { get; } =
     [
@@ -70,6 +72,8 @@ public static class AuditActions
         QueueEntryHeld,
         QueueEntryResumed,
         QueueEntryCompleted,
-        QueueEntryCancelled
+        QueueEntryCancelled,
+        ProviderOwnershipAssigned,
+        ProviderOwnershipUnassigned
     ];
 }

@@ -121,8 +121,8 @@ Run each applicable flow at 1440px, 1280px, 1024px, 768px, and 390px.
 | Empty/no-result states | IMPLEMENTED | KEEP | Shared states distinguish no data from no matches. |
 | Concurrency UX | IMPLEMENTED | KEEP | Existing stale-record recovery is preserved. |
 | Authorization UX | IMPLEMENTED | KEEP | Role-aware navigation remains non-authoritative. |
-| Provider ownership UI | SKIPPED | BLOCKED BY ACCEPTED BACKEND | Phase13C ownership is not approved. |
-| Encounter/clinical UI | SKIPPED | BLOCKED BY ACCEPTED BACKEND | Phase13B has not started. |
+| Provider ownership UI | SKIPPED | OUT OF CURRENT UI SCOPE | Phase13C provides the backend ownership foundation; no ownership-management UI is approved. |
+| Encounter/clinical UI | SKIPPED | BLOCKED BY ACCEPTED BACKEND | Encounter persistence and clinical workflow remain deferred after Phase13B/13C. |
 | Performance | IMPLEMENTED | KEEP | No unbounded query, library, or animation added. |
 | New packages | SKIPPED | NOT REQUIRED | Existing stack is sufficient. |
 | CSS organization | IMPLEMENTED | KEEP | Tokens and existing shared stylesheet remain authoritative. |

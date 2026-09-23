@@ -3,6 +3,9 @@ using ElsheiekhHMS.Application.Appointments.Contracts;
 using ElsheiekhHMS.Application.Appointments.Persistence;
 using ElsheiekhHMS.Application.Common.Auditing;
 using ElsheiekhHMS.Application.Common.Security;
+using ElsheiekhHMS.Application.Clinical.ProviderOwnership;
+using ElsheiekhHMS.Application.Clinical.ProviderOwnership.Contracts;
+using ElsheiekhHMS.Application.Clinical.ProviderOwnership.Persistence;
 using ElsheiekhHMS.Application.Departments;
 using ElsheiekhHMS.Application.Departments.Contracts;
 using ElsheiekhHMS.Application.Departments.Persistence;
@@ -47,6 +50,7 @@ public sealed class DevelopmentDataSeeder(
     IAppointmentPersistence appointmentPersistence,
     IQueuePersistence queuePersistence,
     IAuditEventWriter auditEventWriter,
+    IProviderOwnershipPersistence providerOwnershipPersistence,
     TimeProvider timeProvider,
     AppointmentCodeAllocator appointmentCodeAllocator,
     ILogger<DevelopmentDataSeeder> logger)
@@ -85,6 +89,7 @@ public sealed class DevelopmentDataSeeder(
 
         await SeedDepartmentsAsync(actor, cancellationToken);
         await SeedDoctorsAsync(actor, cancellationToken);
+        await SeedProviderOwnershipAsync(actor, users[RoleNames.Provider].Id, cancellationToken);
         var patients = await SeedPatientsAsync(actor, cancellationToken);
         var appointments = await SeedAppointmentsAsync(actor, patients, cancellationToken);
         await SeedQueueAsync(actor, patients, appointments, cancellationToken);
@@ -213,6 +218,28 @@ public sealed class DevelopmentDataSeeder(
         }
 
         await context.SaveChangesAsync(cancellationToken);
+    }
+
+    private async Task SeedProviderOwnershipAsync(
+        SeedCurrentUser actor,
+        string providerUserId,
+        CancellationToken cancellationToken)
+    {
+        var doctor = await context.Doctors
+            .SingleOrDefaultAsync(item => item.DoctorCode == "DOC-001", cancellationToken);
+        if (doctor is null)
+        {
+            throw new InvalidOperationException("The deterministic provider Doctor seed was not found.");
+        }
+
+        var service = new ProviderOwnershipService(
+            providerOwnershipPersistence,
+            auditEventWriter,
+            actor);
+        var result = await service.AssignAsync(
+            new AssignProviderOwnershipRequest(doctor.Id, providerUserId),
+            cancellationToken);
+        EnsureSuccess(result, "assign the Development Provider account to Doctor DOC-001");
     }
 
     private async Task<List<int>> SeedPatientsAsync(SeedCurrentUser actor, CancellationToken cancellationToken)
